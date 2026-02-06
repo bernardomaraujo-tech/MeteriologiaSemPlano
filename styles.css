@@ -168,12 +168,16 @@ body{
 .tbl td:first-child{
   position: sticky;
   left: 0;
-  z-index: 3;
-  width: 78px;
-  min-width: 78px;
-  background: rgba(0,0,0,.10);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  z-index: 4;
+  width: 86px;
+  min-width: 86px;
+
+  background: rgba(0,0,0,.28);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  font-weight: 700;
+  color: #fff;
 }
 
 /* segunda coluna (ícone) fica sticky a seguir à hora */
@@ -227,3 +231,4 @@ body{
 
 .small{font-size:12px}
 .best{font-size:15px;line-height:1.35}
+
