@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#f2f2f2" />
+  <title>SEM PLANO — Meteo</title>
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <header class="top">
+    <div class="brand">
+      <img src="./logo.png" alt="SEM PLANO" class="logo" />
+      <div>
+        <div class="title">Meteo</div>
+        <div class="subtitle" id="updated">—</div>
+      </div>
+    </div>
+
+    <select id="locationSelect" class="select"></select>
+  </header>
+
+  <main class="grid">
+    <section class="card">
+      <div class="cardTitle">Agora</div>
+      <div class="now">
+        <div class="nowRow">
+          <div class="big" id="nowTemp">—</div>
+          <div class="muted" id="nowFeels"></div>
+        </div>
+
+        <div class="kv">
+          <div class="k">Vento</div><div class="v" id="nowWind">—</div>
+          <div class="k">Rajadas</div><div class="v" id="nowGust">—</div>
+          <div class="k">Direção</div><div class="v inline">
+            <span id="nowDirTxt">—</span>
+            <span class="arrow" id="nowArrow" aria-label="Direção do vento"></span>
+          </div>
+          <div class="k">Chuva</div><div class="v" id="nowRain">—</div>
+          <div class="k">Prob.</div><div class="v" id="nowPop">—</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="cardTitle">Câmara (tenta embutir)</div>
+
+      <div id="camEmbedWrap" class="hidden" style="margin-top:10px;">
+        <iframe id="camFrame"
+          style="width:100%; height:420px; border:1px solid var(--line); border-radius:14px;"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+        </iframe>
+      </div>
+
+      <div id="camStatus" class="muted small" style="margin-top:10px;">—</div>
+
+      <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap;">
+        <a class="btn" id="camOpen" target="_blank" rel="noopener">Abrir câmara</a>
+        <button class="btn" id="camRetry" type="button">Tentar embutir</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="cardTitle">Melhor janela (2h nas próximas 24h)</div>
+      <div id="bestWindow" class="best">—</div>
+      <div class="muted small">Heurística: menos chuva + menos rajadas.</div>
+    </section>
+
+    <section class="card">
+      <div class="cardTitle">Sugestão de sentido</div>
+      <div id="windSuggestion" class="best">—</div>
+      <div class="muted small">Baseado na direção do vento (hora mais próxima).</div>
+    </section>
+
+    <section class="card">
+      <div class="cardTitle">Alertas (sem notificações)</div>
+      <div id="alerts" class="alerts">—</div>
+      <div class="muted small">Chuva iminente e rajadas fortes (próx. 2h).</div>
+    </section>
+
+    <section class="card">
+      <div class="cardTitle">Próximas 8h</div>
+      <div class="tableWrap">
+        <table class="tbl" id="table8"></table>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="cardTitle row">
+        <span>Próximas 48h</span>
+        <button class="btn" id="toggle48" type="button">Mostrar</button>
+      </div>
+      <div class="tableWrap hidden" id="wrap48">
+        <table class="tbl" id="table48"></table>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="cardTitle">Fonte</div>
+      <div class="muted" id="source">—</div>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
