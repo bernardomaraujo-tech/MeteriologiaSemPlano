@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#6fa7c6" />
   <title>SEM PLANO — Meteo</title>
 
-  <link rel="stylesheet" href="./styles.css?v=20260206b" />
+  <link rel="stylesheet" href="./styles.css?v=20260206c" />
 </head>
 
 <body>
@@ -25,21 +25,40 @@
       <div class="updated" id="updated">—</div>
 
       <div class="controls">
-        <select id="locationSelect" class="select" aria-label="Selecionar localidade"></select>
+        <select id="locationSelect" class="select"></select>
       </div>
     </header>
 
     <main class="stack">
 
-      <!-- AGORA (simples e estável) -->
+      <!-- AGORA -->
       <section class="card glass">
         <div class="cardTitle">Agora</div>
-        <div class="kv">
-          <div class="k">Vento</div><div class="v" id="nowWind">—</div>
-          <div class="k">Rajadas</div><div class="v" id="nowGust">—</div>
-          <div class="k">Direção</div><div class="v" id="nowDirTxt">—</div>
-          <div class="k">Chuva</div><div class="v" id="nowRain">—</div>
-          <div class="k">Prob.</div><div class="v" id="nowPop">—</div>
+
+        <div class="nowLayout">
+          <div class="kv">
+            <div class="k">Vento</div><div class="v" id="nowWind">—</div>
+            <div class="k">Rajadas</div><div class="v" id="nowGust">—</div>
+            <div class="k">Direção</div><div class="v" id="nowDirTxt">—</div>
+            <div class="k">Chuva</div><div class="v" id="nowRain">—</div>
+            <div class="k">Prob.</div><div class="v" id="nowPop">—</div>
+          </div>
+
+          <!-- Rosa dos ventos simples -->
+          <div class="dirCard">
+            <div class="dirTitle">Direção</div>
+            <div class="compass">
+              <div class="compassRing"></div>
+
+              <div class="compassLabel n">N</div>
+              <div class="compassLabel e">E</div>
+              <div class="compassLabel s">S</div>
+              <div class="compassLabel w">O</div>
+
+              <div class="needle" id="dirNeedle"></div>
+              <div class="needleDot"></div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -47,9 +66,18 @@
       <section class="card glass">
         <div class="dressTitle">O que vestir (sugestão)</div>
         <div class="dressGrid">
-          <div class="pillRow"><span class="pillLabel">Ciclismo</span><span class="pillValue" id="dressBike">—</span></div>
-          <div class="pillRow"><span class="pillLabel">Corrida</span><span class="pillValue" id="dressRun">—</span></div>
-          <div class="pillRow"><span class="pillLabel">Caminhada</span><span class="pillValue" id="dressWalk">—</span></div>
+          <div class="pillRow">
+            <span class="pillLabel">Ciclismo</span>
+            <span class="pillValue" id="dressBike">—</span>
+          </div>
+          <div class="pillRow">
+            <span class="pillLabel">Corrida</span>
+            <span class="pillValue" id="dressRun">—</span>
+          </div>
+          <div class="pillRow">
+            <span class="pillLabel">Caminhada</span>
+            <span class="pillValue" id="dressWalk">—</span>
+          </div>
         </div>
       </section>
 
@@ -71,7 +99,6 @@
       <section class="card glass">
         <div class="cardTitle">Melhor janela (2h / próximas 12h)</div>
         <div id="bestWindow" class="best">—</div>
-        <div class="muted small">Sugestões entre 07:00 e 22:00.</div>
       </section>
 
       <!-- Sugestão de sentido -->
@@ -91,7 +118,7 @@
         </div>
         <div class="muted small">
           Se o embed falhar:
-          <a class="camLink" id="windyLink" href="#" target="_blank" rel="noreferrer">ver webcams</a>
+          <a class="camLink" id="windyLink" href="#" target="_blank">ver webcams</a>
         </div>
       </section>
 
@@ -99,7 +126,7 @@
       <section class="card glass">
         <div class="row">
           <div class="cardTitle" style="margin:0;">Próximas 48h</div>
-          <button class="btn" id="toggle48" type="button">Mostrar</button>
+          <button class="btn" id="toggle48">Mostrar</button>
         </div>
         <div class="tableWrap hidden" id="wrap48" style="margin-top:10px;">
           <table class="tbl" id="table48"></table>
@@ -116,6 +143,6 @@
   </div>
 
   <script async src="https://webcams.windy.com/webcams/public/embed/v2/script/nearby.js"></script>
-  <script src="./app.js?v=20260206b"></script>
+  <script src="./app.js?v=20260206c"></script>
 </body>
 </html>
