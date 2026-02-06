@@ -55,12 +55,11 @@ function rotateArrow(deg){
   els.nowArrow.style.transform = `rotate(${rot}deg)`;
 }
 
-function hourLabel(iso){ return iso.slice(11,16); }
 function dayHourLabel(iso){
-  const d = iso.slice(8,10);
-  const m = iso.slice(5,7);
-  const h = iso.slice(11,16);
-  return `${d}/${m} ${h}`;
+  const d = new Date(iso);
+  const weekday = d.toLocaleDateString("pt-PT", { weekday: "short" });
+  const hour = d.toLocaleTimeString("pt-PT", { hour: "2-digit", minute: "2-digit" });
+  return `${weekday.charAt(0).toUpperCase() + weekday.slice(1)} ${hour}`;
 }
 
 function buildUrl(base, loc){
@@ -375,3 +374,4 @@ function init(){
 }
 
 init();
+
