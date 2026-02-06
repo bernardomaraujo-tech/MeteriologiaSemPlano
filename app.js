@@ -54,6 +54,7 @@ function windDirText(deg){
 
 function hourLabel(iso){ return iso.slice(11,16); }
 
+/* 48h: dia da semana + hora (ex.: "Sáb. 01:00") */
 function weekdayHourLabel(iso){
   const d = new Date(iso);
   let w = d.toLocaleDateString("pt-PT", { weekday: "short" }); // "sáb."
@@ -254,13 +255,13 @@ function buildGaugeTicks(){
   host.dataset.built = "1";
 }
 
-/* Nota: direção meteorológica é “de onde vem”.
-   Visualmente, a seta fica mais “Apple-like” se apontar PARA onde sopra.
-   Se quiseres que mostre “de onde vem”, remove o +180. */
+/* seta: por defeito aponta PARA onde sopra (+180).
+   Se quiseres “de onde vem”, troca por dirDeg. */
 function updateWindGauge(speedKmh, dirDeg){
   const needle = document.getElementById("gaugeNeedle");
   const speed = document.getElementById("gaugeSpeed");
-  if (needle) needle.setAttribute("transform", `rotate(${(dirDeg + 180) % 360} 100 100)`);
+  const rot = (dirDeg + 180) % 360;
+  if (needle) needle.setAttribute("transform", `rotate(${rot} 100 100)`);
   if (speed) speed.textContent = String(Math.round(speedKmh));
 }
 
@@ -307,131 +308,4 @@ function renderTables(data){
     tableEl.innerHTML = rows.join("");
   };
 
-  make(8,  els.table8,  (iso) => hourLabel(iso));
-  make(48, els.table48, (iso) => weekdayHourLabel(iso));
-}
-
-function renderAlerts(data){
-  const t = data.hourly.time;
-  const start = nearestHourIndex(t);
-  const next2 = [start, start+1].filter(x => x < t.length);
-
-  const pops  = data.hourly.precipitation_probability ?? Array(t.length).fill(0);
-  const prcps = data.hourly.precipitation ?? Array(t.length).fill(0);
-  const gusts = data.hourly.wind_gusts_10m ?? Array(t.length).fill(0);
-
-  const anyRainSoon = next2.some(k => (pops[k] ?? 0) >= 60 || (prcps[k] ?? 0) >= 0.4);
-  const anyGustSoon = next2.some(k => (gusts[k] ?? 0) >= 45);
-
-  const pills = [];
-  if (anyRainSoon) pills.push(`<div class="pill">☔ Chuva provável nas próximas 2h</div>`);
-  if (anyGustSoon) pills.push(`<div class="pill">💨 Rajadas fortes nas próximas 2h</div>`);
-  if (!pills.length) pills.push(`<div class="pill">✅ Sem alertas relevantes nas próximas 2h</div>`);
-
-  els.alerts.innerHTML = pills.join("");
-}
-
-function updateWindyCam(lat, lon){
-  const el = document.getElementById("windyCam");
-  if (!el) return;
-
-  el.setAttribute("data-params", JSON.stringify({ lat, lon, radius: 15, limit: 1 }));
-  el.innerHTML = "";
-  if (window.WindyWebcamsWidget?.reload) window.WindyWebcamsWidget.reload();
-
-  // link fallback (Windy webcams)
-  if (els.windyLink){
-    const url = `https://www.windy.com/webcams?${lat},${lon},12`;
-    els.windyLink.href = url;
-  }
-}
-
-function renderAll(data, sourceName, locName){
-  const t = data.hourly.time;
-  const i = nearestHourIndex(t);
-
-  const temp  = data.hourly.temperature_2m[i];
-  const feels = data.hourly.apparent_temperature?.[i];
-  const wind  = data.hourly.wind_speed_10m[i];
-  const gust  = data.hourly.wind_gusts_10m[i];
-  const dir   = data.hourly.wind_direction_10m[i];
-  const prcp  = data.hourly.precipitation?.[i] ?? 0;
-  const pop   = data.hourly.precipitation_probability?.[i] ?? 0;
-
-  const { min, max } = computeMinMaxNext24h(data.hourly.temperature_2m, i);
-  els.heroLoc.textContent = locName;
-  els.heroTemp.textContent = `${Math.round(temp)}°`;
-  els.heroMeta.textContent =
-    `Sensação: ${Math.round(feels ?? temp)}° · Máx: ${Math.round(max)}° · Mín: ${Math.round(min)}°`;
-
-  els.nowWind.textContent = fmtKmh(wind);
-  els.nowGust.textContent = fmtKmh(gust);
-  els.nowDirTxt.textContent = windDirText(dir);
-  els.nowRain.textContent = fmtMm(prcp);
-  els.nowPop.textContent = fmtPct(pop);
-
-  // Gauge
-  updateWindGauge(wind, dir);
-
-  // Vestir
-  els.dressBike.textContent = clothingSuggestion({ temp, wind, gust, pop, prcp, sport: "bike" });
-  els.dressRun.textContent  = clothingSuggestion({ temp, wind, gust, pop, prcp, sport: "run" });
-  els.dressWalk.textContent = clothingSuggestion({ temp, wind, gust, pop, prcp, sport: "walk" });
-
-  renderAlerts(data);
-  renderTables(data);
-
-  const bw = computeBestWindowNext12h(data);
-  const startLbl = weekdayHourLabel(t[bw.idx]);
-  const endLbl   = weekdayHourLabel(t[bw.idx + 2] ?? t[bw.idx + 1]);
-  els.bestWindow.textContent = `${startLbl} → ${endLbl}`;
-
-  els.windSuggestion.textContent = windDirectionSuggestion(dir);
-  els.source.textContent = sourceName;
-}
-
-async function refresh(){
-  const locId = els.select.value;
-  const loc = LOCATIONS.find(x => x.id === locId) ?? LOCATIONS[0];
-
-  updateWindyCam(loc.lat, loc.lon);
-  els.updated.textContent = "A atualizar…";
-
-  try{
-    const { json, source } = await fetchWithFallback(loc);
-    els.updated.textContent =
-      `Última atualização: ${new Date().toLocaleString("pt-PT", { dateStyle:"medium", timeStyle:"short" })}`;
-    renderAll(json, source, loc.name);
-  } catch (e){
-    els.updated.textContent =
-      `Última atualização: falhou (${new Date().toLocaleTimeString("pt-PT")})`;
-    els.source.textContent = `Erro a obter dados: ${String(e)}`;
-  }
-}
-
-function init(){
-  for (const l of LOCATIONS){
-    const opt = document.createElement("option");
-    opt.value = l.id;
-    opt.textContent = l.name;
-    els.select.appendChild(opt);
-  }
-
-  els.select.value = "alcabideche";
-
-  els.toggle48.addEventListener("click", () => {
-    const isHidden = els.wrap48.classList.contains("hidden");
-    els.wrap48.classList.toggle("hidden", !isHidden);
-    els.toggle48.textContent = isHidden ? "Esconder" : "Mostrar";
-  });
-
-  els.select.addEventListener("change", refresh);
-
-  // construir ticks 1 vez
-  buildGaugeTicks();
-
-  refresh();
-  setInterval(refresh, REFRESH_MS);
-}
-
-init();
+  make(8,  els.table8,  (iso) => hourLabel(iso
