@@ -6,7 +6,6 @@ const LOCATIONS = [
   { id:"cascais", name:"Cascais", lat:38.6979, lon:-9.4206 },
   { id:"peninha", name:"Peninha", lat:38.7692, lon:-9.4589 },
   { id:"culatra", name:"Ilha da Culatra", lat:36.9889, lon:-7.8336 },
-
   { id:"algueirao", name:"Algueirão", lat:38.7936, lon:-9.3417 },
   { id:"amadora", name:"Amadora", lat:38.7569, lon:-9.2308 },
   { id:"sintra", name:"Sintra", lat:38.8029, lon:-9.3817 }
@@ -24,7 +23,6 @@ const els = {
   nowWind: document.getElementById("nowWind"),
   nowGust: document.getElementById("nowGust"),
   nowDirTxt: document.getElementById("nowDirTxt"),
-  nowArrow: document.getElementById("nowArrow"),
   nowRain: document.getElementById("nowRain"),
   nowPop: document.getElementById("nowPop"),
 
@@ -40,6 +38,8 @@ const els = {
 
   bestWindow: document.getElementById("bestWindow"),
   windSuggestion: document.getElementById("windSuggestion"),
+
+  windyLink: document.getElementById("windyLink"),
 };
 
 function fmtKmh(x){ return `${Math.round(x)} km/h`; }
@@ -51,14 +51,9 @@ function windDirText(deg){
   const idx = Math.round(((deg % 360) / 45)) % 8;
   return `${dirs[idx]} (${Math.round(deg)}°)`;
 }
-function rotateArrow(deg){
-  const rot = (deg - 45);
-  els.nowArrow.style.transform = `rotate(${rot}deg)`;
-}
 
 function hourLabel(iso){ return iso.slice(11,16); }
 
-/* 48h: dia da semana + hora (ex.: "Sáb. 01:00") */
 function weekdayHourLabel(iso){
   const d = new Date(iso);
   let w = d.toLocaleDateString("pt-PT", { weekday: "short" }); // "sáb."
@@ -226,7 +221,6 @@ function clothingSuggestion({ temp, wind, gust, pop, prcp, sport }){
   return `${base}: leve e respirável + água.`;
 }
 
-/* Ícones (emoji) via weather_code Open-Meteo */
 function iconForWeatherCode(code, isDay){
   if (code === 0) return isDay ? "☀️" : "🌙";
   if (code === 1) return isDay ? "🌤️" : "🌙☁️";
@@ -242,6 +236,32 @@ function iconForWeatherCode(code, isDay){
   if (code === 85 || code === 86) return "❄️";
   if (code === 95 || code === 96 || code === 99) return "⛈️";
   return "•";
+}
+
+/* ===== Gauge (SVG) ===== */
+function buildGaugeTicks(){
+  const host = document.getElementById("tickRotate");
+  if (!host || host.dataset.built === "1") return;
+
+  let out = "";
+  for (let a = 0; a < 360; a += 10){
+    const len = (a % 30 === 0) ? 12 : 7;
+    out += `<g transform="rotate(${a} 100 100)">
+      <line x1="100" y1="16" x2="100" y2="${16+len}" />
+    </g>`;
+  }
+  host.innerHTML = out;
+  host.dataset.built = "1";
+}
+
+/* Nota: direção meteorológica é “de onde vem”.
+   Visualmente, a seta fica mais “Apple-like” se apontar PARA onde sopra.
+   Se quiseres que mostre “de onde vem”, remove o +180. */
+function updateWindGauge(speedKmh, dirDeg){
+  const needle = document.getElementById("gaugeNeedle");
+  const speed = document.getElementById("gaugeSpeed");
+  if (needle) needle.setAttribute("transform", `rotate(${(dirDeg + 180) % 360} 100 100)`);
+  if (speed) speed.textContent = String(Math.round(speedKmh));
 }
 
 function renderTables(data){
@@ -318,6 +338,12 @@ function updateWindyCam(lat, lon){
   el.setAttribute("data-params", JSON.stringify({ lat, lon, radius: 15, limit: 1 }));
   el.innerHTML = "";
   if (window.WindyWebcamsWidget?.reload) window.WindyWebcamsWidget.reload();
+
+  // link fallback (Windy webcams)
+  if (els.windyLink){
+    const url = `https://www.windy.com/webcams?${lat},${lon},12`;
+    els.windyLink.href = url;
+  }
 }
 
 function renderAll(data, sourceName, locName){
@@ -341,11 +367,13 @@ function renderAll(data, sourceName, locName){
   els.nowWind.textContent = fmtKmh(wind);
   els.nowGust.textContent = fmtKmh(gust);
   els.nowDirTxt.textContent = windDirText(dir);
-  rotateArrow(dir);
   els.nowRain.textContent = fmtMm(prcp);
   els.nowPop.textContent = fmtPct(pop);
 
-  /* vestir (mantém o layout pillRow do teu HTML/CSS) */
+  // Gauge
+  updateWindGauge(wind, dir);
+
+  // Vestir
   els.dressBike.textContent = clothingSuggestion({ temp, wind, gust, pop, prcp, sport: "bike" });
   els.dressRun.textContent  = clothingSuggestion({ temp, wind, gust, pop, prcp, sport: "run" });
   els.dressWalk.textContent = clothingSuggestion({ temp, wind, gust, pop, prcp, sport: "walk" });
@@ -398,6 +426,9 @@ function init(){
   });
 
   els.select.addEventListener("change", refresh);
+
+  // construir ticks 1 vez
+  buildGaugeTicks();
 
   refresh();
   setInterval(refresh, REFRESH_MS);
