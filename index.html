@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#6fa7c6" />
   <title>SEM PLANO — Meteo</title>
 
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./styles.css?v=20260206b" />
 </head>
 
 <body>
@@ -14,20 +14,16 @@
 
   <div class="phone">
     <header class="header">
-      <!-- 1 - Logo centrado -->
       <img src="./logo.png" alt="SEM PLANO" class="logo" />
 
-      <!-- Hero -->
       <div class="hero">
         <div class="heroLoc" id="heroLoc">Alcabideche</div>
         <div class="heroTemp" id="heroTemp">—°</div>
         <div class="heroMeta" id="heroMeta">Sensação: —° · Máx: —° · Mín: —°</div>
       </div>
 
-      <!-- 2 - última atualização -->
       <div class="updated" id="updated">—</div>
 
-      <!-- 2 - seletor -->
       <div class="controls">
         <select id="locationSelect" class="select" aria-label="Selecionar localidade"></select>
       </div>
@@ -35,87 +31,35 @@
 
     <main class="stack">
 
-      <!-- 3 - Agora (estilo Apple: stats + gauge) -->
+      <!-- AGORA (simples e estável) -->
       <section class="card glass">
         <div class="cardTitle">Agora</div>
-
-        <div class="nowWindCard">
-          <!-- Esquerda: valores -->
-          <div class="nowWindStats">
-            <div class="nowRow">
-              <div class="nowLabel">Vento</div>
-              <div class="nowValue" id="nowWind">—</div>
-            </div>
-            <div class="nowRow">
-              <div class="nowLabel">Rajadas</div>
-              <div class="nowValue" id="nowGust">—</div>
-            </div>
-            <div class="nowRow">
-              <div class="nowLabel">Direção</div>
-              <div class="nowValue" id="nowDirTxt">—</div>
-            </div>
-
-            <div class="nowMini">
-              <div class="nowMiniRow"><span class="nowMiniK">Chuva</span><span class="nowMiniV" id="nowRain">—</span></div>
-              <div class="nowMiniRow"><span class="nowMiniK">Prob.</span><span class="nowMiniV" id="nowPop">—</span></div>
-            </div>
-          </div>
-
-          <!-- Direita: mostrador -->
-          <div class="nowGauge">
-            <svg viewBox="0 0 200 200" class="gaugeSvg" aria-label="Mostrador do vento">
-              <circle cx="100" cy="100" r="74" class="gaugeRing"></circle>
-
-              <!-- ticks gerados por JS -->
-              <g id="tickRotate" class="gaugeTicks"></g>
-
-              <!-- cardinais -->
-              <text x="100" y="24" text-anchor="middle" class="gaugeCardinal">N</text>
-              <text x="178" y="106" text-anchor="middle" class="gaugeCardinal">E</text>
-              <text x="100" y="192" text-anchor="middle" class="gaugeCardinal">S</text>
-              <text x="22"  y="106" text-anchor="middle" class="gaugeCardinal">O</text>
-
-              <!-- seta rotativa -->
-              <g id="gaugeNeedle" transform="rotate(0 100 100)">
-                <circle cx="100" cy="100" r="7" class="needleHub"></circle>
-                <line x1="100" y1="100" x2="165" y2="100" class="needleLine"></line>
-                <polygon points="165,100 153,94 153,106" class="needleHead"></polygon>
-              </g>
-
-              <!-- texto central -->
-              <text x="100" y="104" text-anchor="middle" class="gaugeSpeed" id="gaugeSpeed">—</text>
-              <text x="100" y="128" text-anchor="middle" class="gaugeUnit">km/h</text>
-            </svg>
-          </div>
+        <div class="kv">
+          <div class="k">Vento</div><div class="v" id="nowWind">—</div>
+          <div class="k">Rajadas</div><div class="v" id="nowGust">—</div>
+          <div class="k">Direção</div><div class="v" id="nowDirTxt">—</div>
+          <div class="k">Chuva</div><div class="v" id="nowRain">—</div>
+          <div class="k">Prob.</div><div class="v" id="nowPop">—</div>
         </div>
       </section>
 
-      <!-- O que vestir (mantém a formatação boa) -->
+      <!-- O que vestir -->
       <section class="card glass">
         <div class="dressTitle">O que vestir (sugestão)</div>
         <div class="dressGrid">
-          <div class="pillRow">
-            <span class="pillLabel">Ciclismo</span>
-            <span class="pillValue" id="dressBike">—</span>
-          </div>
-          <div class="pillRow">
-            <span class="pillLabel">Corrida</span>
-            <span class="pillValue" id="dressRun">—</span>
-          </div>
-          <div class="pillRow">
-            <span class="pillLabel">Caminhada</span>
-            <span class="pillValue" id="dressWalk">—</span>
-          </div>
+          <div class="pillRow"><span class="pillLabel">Ciclismo</span><span class="pillValue" id="dressBike">—</span></div>
+          <div class="pillRow"><span class="pillLabel">Corrida</span><span class="pillValue" id="dressRun">—</span></div>
+          <div class="pillRow"><span class="pillLabel">Caminhada</span><span class="pillValue" id="dressWalk">—</span></div>
         </div>
       </section>
 
-      <!-- 4 - Alertas -->
+      <!-- Alertas -->
       <section class="card glass">
         <div class="cardTitle">Alertas</div>
         <div id="alerts" class="alerts">—</div>
       </section>
 
-      <!-- 5 - Próximas 8h -->
+      <!-- Próximas 8h -->
       <section class="card glass">
         <div class="cardTitle">Próximas 8h</div>
         <div class="tableWrap">
@@ -123,20 +67,20 @@
         </div>
       </section>
 
-      <!-- 6 - Melhor janela -->
+      <!-- Melhor janela -->
       <section class="card glass">
         <div class="cardTitle">Melhor janela (2h / próximas 12h)</div>
         <div id="bestWindow" class="best">—</div>
-        <div class="muted small">Menos chuva + menos rajadas. Sugestões entre 07:00 e 22:00.</div>
+        <div class="muted small">Sugestões entre 07:00 e 22:00.</div>
       </section>
 
-      <!-- 7 - Sugestão de sentido -->
+      <!-- Sugestão de sentido -->
       <section class="card glass">
         <div class="cardTitle">Sugestão de sentido</div>
         <div id="windSuggestion" class="best">—</div>
       </section>
 
-      <!-- 8 - Câmara -->
+      <!-- Câmara -->
       <section class="card glass">
         <div class="cardTitle">Câmara (Windy)</div>
         <div class="windyWrap">
@@ -146,12 +90,12 @@
           </a>
         </div>
         <div class="muted small">
-          Se o embed não mostrar nada, abre no Windy:
+          Se o embed falhar:
           <a class="camLink" id="windyLink" href="#" target="_blank" rel="noreferrer">ver webcams</a>
         </div>
       </section>
 
-      <!-- 9 - Próximas 48h -->
+      <!-- Próximas 48h -->
       <section class="card glass">
         <div class="row">
           <div class="cardTitle" style="margin:0;">Próximas 48h</div>
@@ -162,7 +106,7 @@
         </div>
       </section>
 
-      <!-- 10 - Fonte -->
+      <!-- Fonte -->
       <section class="card glass">
         <div class="cardTitle">Fonte</div>
         <div class="muted" id="source">—</div>
@@ -172,7 +116,6 @@
   </div>
 
   <script async src="https://webcams.windy.com/webcams/public/embed/v2/script/nearby.js"></script>
-  <script src="./app.js?v=20260206a"></script>
+  <script src="./app.js?v=20260206b"></script>
 </body>
 </html>
-
