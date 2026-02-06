@@ -2,13 +2,13 @@ const REFRESH_MS = 5 * 60 * 1000;
 
 const LOCATIONS = [
   { id:"alcabideche", name:"Alcabideche", lat:38.7330, lon:-9.4100 },
-  { id:"algueirao", name:"Algueirão", lat:38.7936, lon:-9.3417 },
-  { id:"amadora", name:"Amadora", lat:38.7569, lon:-9.2308 }
   { id:"guincho", name:"Guincho", lat:38.72948, lon:-9.47457 },
   { id:"cascais", name:"Cascais", lat:38.6979, lon:-9.4206 },
   { id:"peninha", name:"Peninha", lat:38.7692, lon:-9.4589 },
+  { id:"culatra", name:"Ilha da Culatra", lat:36.9889, lon:-7.8336 },
+  { id:"algueirao", name:"Algueirão", lat:38.7936, lon:-9.3417 },
+  { id:"amadora", name:"Amadora", lat:38.7569, lon:-9.2308 },
   { id:"sintra", name:"Sintra", lat:38.8029, lon:-9.3817 }
-  { id:"culatra", name:"Ilha da Culatra", lat:36.9889, lon:-7.8336 }
 ];
 
 const els = {
@@ -80,7 +80,9 @@ function buildUrl(base, loc){
       "wind_speed_10m",
       "wind_gusts_10m",
       "wind_direction_10m",
-      "precipitation_probability"
+      "precipitation_probability",
+      "weather_code",
+      "is_day"
     ].join(",")
   });
   return `${base}?${params.toString()}`;
@@ -143,11 +145,9 @@ function computeBestWindowNext12h(data){
       const prcpN = Math.min(Math.max(prcp[j] ?? 0, 0), 3) / 3;
       return (1 - (0.65*popN + 0.35*prcpN)) * 0.65 + (1 - gustN) * 0.35;
     };
-
     const s = (scoreHour(i) + scoreHour(i+1)) / 2;
     if (s > bestScore){ bestScore = s; bestI = i; }
   }
-
   return { idx: bestI, score: bestScore };
 }
 
@@ -194,6 +194,33 @@ function clothingSuggestion({ temp, wind, gust, pop, prcp, sport }){
   return `${base}: leve e respirável + água.`;
 }
 
+/* Ícones tipo “Weather” (emoji simples, funciona muito bem em iOS) */
+function iconForWeatherCode(code, isDay){
+  // Baseado nos weather codes do Open-Meteo
+  if (code === 0) return isDay ? "☀️" : "🌙";
+  if (code === 1) return isDay ? "🌤️" : "🌙☁️";
+  if (code === 2) return "⛅";
+  if (code === 3) return "☁️";
+
+  if (code === 45 || code === 48) return "🌫️";
+
+  if (code === 51 || code === 53 || code === 55) return "🌦️";
+  if (code === 56 || code === 57) return "🌧️";
+
+  if (code === 61 || code === 63 || code === 65) return "🌧️";
+  if (code === 66 || code === 67) return "🌧️";
+
+  if (code === 71 || code === 73 || code === 75 || code === 77) return "❄️";
+  if (code === 80 || code === 81 || code === 82) return "🌧️";
+
+  if (code === 85 || code === 86) return "❄️";
+
+  if (code === 95) return "⛈️";
+  if (code === 96 || code === 99) return "⛈️";
+
+  return "•";
+}
+
 function renderTables(data){
   const t = data.hourly.time;
   const temp = data.hourly.temperature_2m;
@@ -202,17 +229,29 @@ function renderTables(data){
   const dir  = data.hourly.wind_direction_10m;
   const prcp = data.hourly.precipitation;
   const pop  = data.hourly.precipitation_probability ?? Array(t.length).fill(null);
+  const wcode = data.hourly.weather_code ?? Array(t.length).fill(null);
+  const isDayArr = data.hourly.is_day ?? Array(t.length).fill(1);
 
   const start = nearestHourIndex(t);
 
   const make = (n, tableEl, labelFn) => {
     const rows = [];
     rows.push(`<tr>
-      <th>Hora</th><th>Temp</th><th>Vento</th><th>Raj.</th><th>Dir</th><th>Chuva</th><th>Prob.</th>
+      <th>Hora</th>
+      <th class="iconCell"></th>
+      <th>Temp</th>
+      <th>Vento</th>
+      <th>Raj.</th>
+      <th>Dir</th>
+      <th>Chuva</th>
+      <th>Prob.</th>
     </tr>`);
+
     for (let i=start; i<Math.min(start+n, t.length); i++){
+      const ico = iconForWeatherCode(wcode[i] ?? -1, (isDayArr[i] ?? 1) === 1);
       rows.push(`<tr>
         <td>${labelFn(t[i])}</td>
+        <td class="iconCell"><span class="icon">${ico}</span></td>
         <td>${Math.round(temp[i])}°</td>
         <td>${fmtKmh(wind[i])}</td>
         <td>${fmtKmh(gust[i])}</td>
@@ -221,6 +260,7 @@ function renderTables(data){
         <td>${pop[i] == null ? "—" : fmtPct(pop[i])}</td>
       </tr>`);
     }
+
     tableEl.innerHTML = rows.join("");
   };
 
@@ -242,7 +282,7 @@ function renderAlerts(data){
 
   const pills = [];
   if (anyRainSoon) pills.push(`<div class="pill">☔ Chuva provável nas próximas 2h</div>`);
-  if (anyGustSoon) pills.push(`<div class="pill">🌬️ Rajadas fortes nas próximas 2h</div>`);
+  if (anyGustSoon) pills.push(`<div class="pill">💨 Rajadas fortes nas próximas 2h</div>`);
   if (!pills.length) pills.push(`<div class="pill">✅ Sem alertas relevantes nas próximas 2h</div>`);
   els.alerts.innerHTML = pills.join("");
 }
@@ -268,14 +308,12 @@ function renderAll(data, sourceName, locName){
   const prcp  = data.hourly.precipitation?.[i] ?? 0;
   const pop   = data.hourly.precipitation_probability?.[i] ?? 0;
 
-  // hero
   const { min, max } = computeMinMaxNext24h(data.hourly.temperature_2m, i);
   els.heroLoc.textContent = locName;
   els.heroTemp.textContent = `${Math.round(temp)}°`;
   els.heroMeta.textContent =
     `Sensação: ${Math.round(feels ?? temp)}° · Máx: ${Math.round(max)}° · Mín: ${Math.round(min)}°`;
 
-  // agora
   els.nowWind.textContent = fmtKmh(wind);
   els.nowGust.textContent = fmtKmh(gust);
   els.nowDirTxt.textContent = windDirText(dir);
@@ -283,25 +321,17 @@ function renderAll(data, sourceName, locName){
   els.nowRain.textContent = fmtMm(prcp);
   els.nowPop.textContent = fmtPct(pop);
 
-  // vestir
   els.dressBike.textContent = clothingSuggestion({ temp, wind, gust, pop, prcp, sport: "bike" });
   els.dressRun.textContent  = clothingSuggestion({ temp, wind, gust, pop, prcp, sport: "run" });
   els.dressWalk.textContent = clothingSuggestion({ temp, wind, gust, pop, prcp, sport: "walk" });
 
-  // alertas
   renderAlerts(data);
-
-  // 8h/48h
   renderTables(data);
 
-  // melhor janela
   const bw = computeBestWindowNext12h(data);
   els.bestWindow.textContent = `${dayHourLabel(t[bw.idx])} → ${dayHourLabel(t[bw.idx + 2] ?? t[bw.idx + 1])}`;
 
-  // sentido
   els.windSuggestion.textContent = windDirectionSuggestion(dir);
-
-  // fonte
   els.source.textContent = sourceName;
 }
 
@@ -345,4 +375,3 @@ function init(){
 }
 
 init();
-
