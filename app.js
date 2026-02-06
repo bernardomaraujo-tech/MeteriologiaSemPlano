@@ -1,8 +1,3 @@
-/* =========================
-   SEM PLANO — Meteo (PWA)
-   app.js (ESTÁVEL + seta direção no "Agora")
-   ========================= */
-
 const REFRESH_MS = 5 * 60 * 1000;
 const FETCH_TIMEOUT_MS = 12000;
 
@@ -36,7 +31,6 @@ const els = {
   nowRain: $("nowRain"),
   nowPop: $("nowPop"),
 
-  // NOVO (para a rosa simples)
   dirNeedle: $("dirNeedle"),
 
   dressBike: $("dressBike"),
@@ -301,7 +295,7 @@ function renderTables(data){
 }
 
 function updateWindyCam(lat, lon){
-  const el = $("windyCam");
+  const el = document.getElementById("windyCam");
   if (el){
     el.setAttribute("data-params", JSON.stringify({ lat, lon, radius: 15, limit: 1 }));
     el.innerHTML = "";
@@ -336,9 +330,9 @@ function renderAll(data, sourceName, locName){
   setText(els.nowRain, fmtMm(prcp));
   setText(els.nowPop, fmtPct(pop));
 
-  // ✅ Seta simples: roda com a direção (mesma transform base do teu CSS)
+  /* seta (só direção) */
   if (els.dirNeedle){
-    els.dirNeedle.style.transform = `translate(-50%,-90%) rotate(${dir}deg)`;
+    els.dirNeedle.style.transform = `translate(-50%, -92%) rotate(${dir}deg)`;
   }
 
   setText(els.dressBike, clothingSuggestion({ temp, wind, gust, pop, prcp, sport:"bike" }));
@@ -351,7 +345,7 @@ function renderAll(data, sourceName, locName){
   const bw = computeBestWindowNext12h(data);
   const startLbl = weekdayHourLabel(t[bw.idx]);
   const endLbl   = weekdayHourLabel(t[bw.idx + 2] ?? t[bw.idx + 1]);
-  setText(els.bestWindow, `${startLbl} → ${endLbl}`);
+  setText(els.bestWindow, `${startLbl} → ${endLbl}\nMenos chuva + menos rajadas.`);
 
   setText(els.windSuggestion, windDirectionSuggestion(dir));
   setText(els.source, sourceName);
