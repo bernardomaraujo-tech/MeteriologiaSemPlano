@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#6fa7c6" />
   <title>SEM PLANO — Meteo</title>
 
-  <link rel="stylesheet" href="./styles.css?v=20260206c" />
+  <link rel="stylesheet" href="./styles.css?v=20260206_fix1" />
 </head>
 
 <body>
@@ -25,13 +25,13 @@
       <div class="updated" id="updated">—</div>
 
       <div class="controls">
-        <select id="locationSelect" class="select"></select>
+        <select id="locationSelect" class="select" aria-label="Selecionar localidade"></select>
       </div>
     </header>
 
     <main class="stack">
 
-      <!-- AGORA -->
+      <!-- AGORA (novo: valores mais perto + rosa simples só direção) -->
       <section class="card glass">
         <div class="cardTitle">Agora</div>
 
@@ -44,8 +44,7 @@
             <div class="k">Prob.</div><div class="v" id="nowPop">—</div>
           </div>
 
-          <!-- Rosa dos ventos simples -->
-          <div class="dirCard">
+          <div class="dirCard" aria-label="Direção do vento">
             <div class="dirTitle">Direção</div>
             <div class="compass">
               <div class="compassRing"></div>
@@ -62,7 +61,7 @@
         </div>
       </section>
 
-      <!-- O que vestir -->
+      <!-- O que vestir (antigo: com pills) -->
       <section class="card glass">
         <div class="dressTitle">O que vestir (sugestão)</div>
         <div class="dressGrid">
@@ -81,13 +80,13 @@
         </div>
       </section>
 
-      <!-- Alertas -->
+      <!-- Alertas (antigo: pills) -->
       <section class="card glass">
         <div class="cardTitle">Alertas</div>
         <div id="alerts" class="alerts">—</div>
       </section>
 
-      <!-- Próximas 8h -->
+      <!-- Próximas 8h (antigo: tabela com sticky hora+ícone) -->
       <section class="card glass">
         <div class="cardTitle">Próximas 8h</div>
         <div class="tableWrap">
@@ -99,6 +98,7 @@
       <section class="card glass">
         <div class="cardTitle">Melhor janela (2h / próximas 12h)</div>
         <div id="bestWindow" class="best">—</div>
+        <div class="muted small">Sugestões entre 07:00 e 22:00.</div>
       </section>
 
       <!-- Sugestão de sentido -->
@@ -118,16 +118,17 @@
         </div>
         <div class="muted small">
           Se o embed falhar:
-          <a class="camLink" id="windyLink" href="#" target="_blank">ver webcams</a>
+          <a class="camLink" id="windyLink" href="#" target="_blank" rel="noreferrer">ver webcams</a>
         </div>
       </section>
 
-      <!-- Próximas 48h -->
+      <!-- Próximas 48h (antigo: toggle + tabela com sticky) -->
       <section class="card glass">
         <div class="row">
           <div class="cardTitle" style="margin:0;">Próximas 48h</div>
-          <button class="btn" id="toggle48">Mostrar</button>
+          <button class="btn" id="toggle48" type="button">Mostrar</button>
         </div>
+
         <div class="tableWrap hidden" id="wrap48" style="margin-top:10px;">
           <table class="tbl" id="table48"></table>
         </div>
@@ -143,6 +144,6 @@
   </div>
 
   <script async src="https://webcams.windy.com/webcams/public/embed/v2/script/nearby.js"></script>
-  <script src="./app.js?v=20260206c"></script>
+  <script src="./app.js?v=20260206_fix1"></script>
 </body>
 </html>
