@@ -31,6 +31,7 @@ const els = {
   nowRain: $("nowRain"),
   nowPop: $("nowPop"),
 
+  // seta rosa dos ventos
   dirNeedle: $("dirNeedle"),
 
   dressBike: $("dressBike"),
@@ -178,38 +179,45 @@ function windDirectionSuggestion(deg){
   return `De ${from}. Favorece ir para leste; regresso para oeste é mais pesado.`;
 }
 
+/* =========================
+   O QUE VESTIR — NOVAS REGRAS (as tuas)
+========================= */
 function clothingSuggestion({ temp, wind, gust, pop, prcp, sport }){
-  const rainy = (pop ?? 0) >= 50 || (prcp ?? 0) >= 0.3;
+  const rainy = (pop ?? 0) >= 25 || (prcp ?? 0) >= 0.2;
   const windy = (wind ?? 0) >= 22 || (gust ?? 0) >= 35;
 
   let base = "";
-  if (temp <= 6) base = "Frio forte";
+  if (temp <= 6) base = "Muito Frio";
   else if (temp <= 11) base = "Frio";
   else if (temp <= 16) base = "Fresco";
   else if (temp <= 22) base = "Agradável";
   else base = "Quente";
 
+  const rainAddon = rainy ? " Leva sempre um casaco impermeável." : "";
+  const windAddon = windy ? " Recomenda-se um casaco ou colete corta-vento." : "";
+
   if (sport === "bike"){
-    if (temp <= 6) return `${base}: base layer + casaco corta-vento + luvas. ${rainy ? "Impermeável." : ""}`;
-    if (temp <= 11) return `${base}: manga comprida/colete + luvas finas. ${windy ? "Corta-vento ajuda." : ""} ${rainy ? "Capa leve." : ""}`;
-    if (temp <= 16) return `${base}: jersey normal + colete opcional. ${rainy ? "Capa leve." : ""}`;
-    if (temp <= 22) return `${base}: jersey leve. ${windy ? "Colete fino." : ""}`;
-    return `${base}: muito leve + proteção solar.`;
+    if (temp <= 6)  return `${base}: Base layer + Jersey Manga Comprida + Colete + Luvas Grossas + Calças + Proteção Sapatos.${rainAddon}${windAddon}`;
+    if (temp <= 11) return `${base}: Base Layer + Jersey Manga Comprida + Colete + Luvas finas + Calção.${rainAddon}${windAddon}`;
+    if (temp <= 16) return `${base}: Base Layer + Jersey Manga Comprida + Colete opcional.${rainAddon}${windAddon}`;
+    if (temp <= 22) return `${base}: Jersey Manga Curta.${rainAddon}${windAddon}`;
+    return `${base}: Jersey leve + proteção solar.${rainAddon}${windAddon}`;
   }
 
   if (sport === "run"){
-    if (temp <= 6) return `${base}: térmica + corta-vento leve.`;
-    if (temp <= 11) return `${base}: manga comprida leve. ${rainy ? "Corta-vento fino." : ""}`;
-    if (temp <= 16) return `${base}: t-shirt + camada fina opcional.`;
-    if (temp <= 22) return `${base}: t-shirt leve.`;
-    return `${base}: muito leve + hidratação.`;
+    if (temp <= 6)  return `${base}: Térmica Manga Comprida + Calças + Corta-vento leve.${rainAddon}${windAddon}`;
+    if (temp <= 11) return `${base}: Manga comprida leve.${rainAddon}${windAddon}`;
+    if (temp <= 16) return `${base}: T-shirt + camada fina opcional.${rainAddon}${windAddon}`;
+    if (temp <= 22) return `${base}: T-shirt leve.${rainAddon}${windAddon}`;
+    return `${base}: Muito leve + hidratação.${rainAddon}${windAddon}`;
   }
 
-  if (temp <= 6) return `${base}: camadas (térmica + casaco). ${rainy ? "Impermeável." : ""}`;
-  if (temp <= 11) return `${base}: casaco leve. ${rainy ? "Impermeável fino." : ""}`;
-  if (temp <= 16) return `${base}: camisola leve. ${rainy ? "Capa leve." : ""}`;
-  if (temp <= 22) return `${base}: confortável, camada leve opcional.`;
-  return `${base}: leve e respirável + água.`;
+  // walk
+  if (temp <= 6)  return `${base}: Camadas (térmica + casaco).${rainAddon}${windAddon}`;
+  if (temp <= 11) return `${base}: Casaco leve.${rainAddon}${windAddon}`;
+  if (temp <= 16) return `${base}: Camisola leve + camada extra opcional.${rainAddon}${windAddon}`;
+  if (temp <= 22) return `${base}: Confortável, camada leve opcional.${rainAddon}${windAddon}`;
+  return `${base}: Leve e respirável + água.${rainAddon}${windAddon}`;
 }
 
 function iconForWeatherCode(code, isDay){
@@ -330,14 +338,14 @@ function renderAll(data, sourceName, locName){
   setText(els.nowRain, fmtMm(prcp));
   setText(els.nowPop, fmtPct(pop));
 
-  /* seta (só direção) */
+  // seta: roda com a direção (mesma base do CSS)
   if (els.dirNeedle){
     els.dirNeedle.style.transform = `translate(-50%, -92%) rotate(${dir}deg)`;
   }
 
-  setText(els.dressBike, clothingSuggestion({ temp, wind, gust, pop, prcp, sport:"bike" }));
-  setText(els.dressRun,  clothingSuggestion({ temp, wind, gust, pop, prcp, sport:"run" }));
-  setText(els.dressWalk, clothingSuggestion({ temp, wind, gust, pop, prcp, sport:"walk" }));
+  setText(els.dressBike, clothingSuggestion({ temp: (feels ?? temp), wind, gust, pop, prcp, sport:"bike" }));
+  setText(els.dressRun,  clothingSuggestion({ temp: (feels ?? temp), wind, gust, pop, prcp, sport:"run" }));
+  setText(els.dressWalk, clothingSuggestion({ temp: (feels ?? temp), wind, gust, pop, prcp, sport:"walk" }));
 
   renderAlerts(data);
   renderTables(data);
@@ -361,7 +369,10 @@ async function refresh(){
 
   try{
     const { json, source } = await fetchWeather(loc);
-    setText(els.updated, `Última atualização: ${new Date().toLocaleString("pt-PT", { dateStyle:"medium", timeStyle:"short" })}`);
+    setText(
+      els.updated,
+      `Última atualização: ${new Date().toLocaleString("pt-PT", { dateStyle:"medium", timeStyle:"short" })}`
+    );
     renderAll(json, source, loc.name);
   } catch (e){
     const msg = String(e?.message ?? e);
