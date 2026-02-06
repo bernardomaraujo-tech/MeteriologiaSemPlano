@@ -169,4 +169,176 @@ function clothingSuggestion({ temp, wind, gust, pop, prcp, sport }){
   else base = "Quente";
 
   if (sport === "bike"){
-    if (temp <= 6) return `${base}: base layer + casaco corta-vento + luvas. ${rainy ? "Impermeável."
+    if (temp <= 6) return `${base}: base layer + casaco corta-vento + luvas. ${rainy ? "Impermeável." : ""}`;
+    if (temp <= 11) return `${base}: manga comprida/colete + luvas finas. ${windy ? "Corta-vento ajuda." : ""} ${rainy ? "Capa leve." : ""}`;
+    if (temp <= 16) return `${base}: jersey normal + colete opcional. ${rainy ? "Capa leve." : ""}`;
+    if (temp <= 22) return `${base}: jersey leve. ${windy ? "Colete fino em zonas expostas." : ""}`;
+    return `${base}: muito leve + água/proteção solar.`;
+  }
+
+  if (sport === "run"){
+    if (temp <= 6) return `${base}: térmica + corta-vento leve.`;
+    if (temp <= 11) return `${base}: manga comprida leve. ${rainy ? "Corta-vento fino." : ""}`;
+    if (temp <= 16) return `${base}: t-shirt + camada fina opcional.`;
+    if (temp <= 22) return `${base}: t-shirt leve.`;
+    return `${base}: muito leve + hidratação.`;
+  }
+
+  if (temp <= 6) return `${base}: camadas (térmica + casaco). ${rainy ? "Impermeável." : ""}`;
+  if (temp <= 11) return `${base}: casaco leve. ${rainy ? "Impermeável fino." : ""}`;
+  if (temp <= 16) return `${base}: camisola leve. ${rainy ? "Capa leve." : ""}`;
+  if (temp <= 22) return `${base}: confortável, camada leve opcional.`;
+  return `${base}: leve e respirável + água.`;
+}
+
+function renderTables(data){
+  const t = data.hourly.time;
+  const temp = data.hourly.temperature_2m;
+  const wind = data.hourly.wind_speed_10m;
+  const gust = data.hourly.wind_gusts_10m;
+  const dir  = data.hourly.wind_direction_10m;
+  const prcp = data.hourly.precipitation;
+  const pop  = data.hourly.precipitation_probability ?? Array(t.length).fill(null);
+
+  const start = nearestHourIndex(t);
+
+  const make = (n, tableEl, labelFn) => {
+    const rows = [];
+    rows.push(`<tr>
+      <th>Hora</th><th>Temp</th><th>Vento</th><th>Raj.</th><th>Dir</th><th>Chuva</th><th>Prob.</th>
+    </tr>`);
+    for (let i=start; i<Math.min(start+n, t.length); i++){
+      rows.push(`<tr>
+        <td>${labelFn(t[i])}</td>
+        <td>${Math.round(temp[i])}°</td>
+        <td>${fmtKmh(wind[i])}</td>
+        <td>${fmtKmh(gust[i])}</td>
+        <td>${windDirText(dir[i]).split(" ")[0]}</td>
+        <td>${fmtMm(prcp[i] ?? 0)}</td>
+        <td>${pop[i] == null ? "—" : fmtPct(pop[i])}</td>
+      </tr>`);
+    }
+    tableEl.innerHTML = rows.join("");
+  };
+
+  make(8,  els.table8,  (iso) => hourLabel(iso));
+  make(48, els.table48, (iso) => dayHourLabel(iso));
+}
+
+function renderAlerts(data){
+  const t = data.hourly.time;
+  const start = nearestHourIndex(t);
+  const next2 = [start, start+1].filter(x => x < t.length);
+
+  const pops  = data.hourly.precipitation_probability ?? Array(t.length).fill(0);
+  const prcps = data.hourly.precipitation ?? Array(t.length).fill(0);
+  const gusts = data.hourly.wind_gusts_10m ?? Array(t.length).fill(0);
+
+  const anyRainSoon = next2.some(k => (pops[k] ?? 0) >= 60 || (prcps[k] ?? 0) >= 0.4);
+  const anyGustSoon = next2.some(k => (gusts[k] ?? 0) >= 45);
+
+  const pills = [];
+  if (anyRainSoon) pills.push(`<div class="pill">☔ Chuva provável nas próximas 2h</div>`);
+  if (anyGustSoon) pills.push(`<div class="pill">🌬️ Rajadas fortes nas próximas 2h</div>`);
+  if (!pills.length) pills.push(`<div class="pill">✅ Sem alertas relevantes nas próximas 2h</div>`);
+  els.alerts.innerHTML = pills.join("");
+}
+
+function updateWindyCam(lat, lon){
+  const el = document.getElementById("windyCam");
+  if (!el) return;
+
+  el.setAttribute("data-params", JSON.stringify({ lat, lon, radius: 15, limit: 1 }));
+  el.innerHTML = "";
+  if (window.WindyWebcamsWidget?.reload) window.WindyWebcamsWidget.reload();
+}
+
+function renderAll(data, sourceName, locName){
+  const t = data.hourly.time;
+  const i = nearestHourIndex(t);
+
+  const temp  = data.hourly.temperature_2m[i];
+  const feels = data.hourly.apparent_temperature?.[i];
+  const wind  = data.hourly.wind_speed_10m[i];
+  const gust  = data.hourly.wind_gusts_10m[i];
+  const dir   = data.hourly.wind_direction_10m[i];
+  const prcp  = data.hourly.precipitation?.[i] ?? 0;
+  const pop   = data.hourly.precipitation_probability?.[i] ?? 0;
+
+  // hero
+  const { min, max } = computeMinMaxNext24h(data.hourly.temperature_2m, i);
+  els.heroLoc.textContent = locName;
+  els.heroTemp.textContent = `${Math.round(temp)}°`;
+  els.heroMeta.textContent =
+    `Sensação: ${Math.round(feels ?? temp)}° · Máx: ${Math.round(max)}° · Mín: ${Math.round(min)}°`;
+
+  // agora
+  els.nowWind.textContent = fmtKmh(wind);
+  els.nowGust.textContent = fmtKmh(gust);
+  els.nowDirTxt.textContent = windDirText(dir);
+  rotateArrow(dir);
+  els.nowRain.textContent = fmtMm(prcp);
+  els.nowPop.textContent = fmtPct(pop);
+
+  // vestir
+  els.dressBike.textContent = clothingSuggestion({ temp, wind, gust, pop, prcp, sport: "bike" });
+  els.dressRun.textContent  = clothingSuggestion({ temp, wind, gust, pop, prcp, sport: "run" });
+  els.dressWalk.textContent = clothingSuggestion({ temp, wind, gust, pop, prcp, sport: "walk" });
+
+  // alertas
+  renderAlerts(data);
+
+  // 8h/48h
+  renderTables(data);
+
+  // melhor janela
+  const bw = computeBestWindowNext12h(data);
+  els.bestWindow.textContent = `${dayHourLabel(t[bw.idx])} → ${dayHourLabel(t[bw.idx + 2] ?? t[bw.idx + 1])}`;
+
+  // sentido
+  els.windSuggestion.textContent = windDirectionSuggestion(dir);
+
+  // fonte
+  els.source.textContent = sourceName;
+}
+
+async function refresh(){
+  const locId = els.select.value;
+  const loc = LOCATIONS.find(x => x.id === locId) ?? LOCATIONS[0];
+
+  updateWindyCam(loc.lat, loc.lon);
+  els.updated.textContent = "A atualizar…";
+
+  try{
+    const { json, source } = await fetchWithFallback(loc);
+    els.updated.textContent = `Última atualização: ${new Date().toLocaleString("pt-PT", { dateStyle:"medium", timeStyle:"short" })}`;
+    renderAll(json, source, loc.name);
+  } catch (e){
+    els.updated.textContent = `Última atualização: falhou (${new Date().toLocaleTimeString("pt-PT")})`;
+    els.source.textContent = `Erro a obter dados: ${String(e)}`;
+  }
+}
+
+function init(){
+  for (const l of LOCATIONS){
+    const opt = document.createElement("option");
+    opt.value = l.id;
+    opt.textContent = l.name;
+    els.select.appendChild(opt);
+  }
+
+  els.select.value = "alcabideche";
+
+  els.toggle48.addEventListener("click", () => {
+    const isHidden = els.wrap48.classList.contains("hidden");
+    els.wrap48.classList.toggle("hidden", !isHidden);
+    els.toggle48.textContent = isHidden ? "Esconder" : "Mostrar";
+  });
+
+  els.select.addEventListener("change", refresh);
+
+  refresh();
+  setInterval(refresh, REFRESH_MS);
+}
+
+init();
