@@ -1,4 +1,10 @@
+/* =========================
+   SEM PLANO — Meteo (PWA)
+   app.js (COMPLETO, anti-crash + anti-cache)
+   ========================= */
+
 const REFRESH_MS = 5 * 60 * 1000;
+const FETCH_TIMEOUT_MS = 12000;
 
 const LOCATIONS = [
   { id:"alcabideche", name:"Alcabideche", lat:38.7330, lon:-9.4100 },
@@ -11,59 +17,70 @@ const LOCATIONS = [
   { id:"sintra", name:"Sintra", lat:38.8029, lon:-9.3817 }
 ];
 
+function $(id){ return document.getElementById(id); }
+
 const els = {
-  updated: document.getElementById("updated"),
-  select: document.getElementById("locationSelect"),
-  source: document.getElementById("source"),
+  updated: $("updated"),
+  select: $("locationSelect"),
+  source: $("source"),
 
-  heroLoc: document.getElementById("heroLoc"),
-  heroTemp: document.getElementById("heroTemp"),
-  heroMeta: document.getElementById("heroMeta"),
+  heroLoc: $("heroLoc"),
+  heroTemp: $("heroTemp"),
+  heroMeta: $("heroMeta"),
 
-  nowWind: document.getElementById("nowWind"),
-  nowGust: document.getElementById("nowGust"),
-  nowDirTxt: document.getElementById("nowDirTxt"),
-  nowRain: document.getElementById("nowRain"),
-  nowPop: document.getElementById("nowPop"),
+  nowWind: $("nowWind"),
+  nowGust: $("nowGust"),
+  nowDirTxt: $("nowDirTxt"),
+  nowRain: $("nowRain"),
+  nowPop: $("nowPop"),
 
-  dressBike: document.getElementById("dressBike"),
-  dressRun: document.getElementById("dressRun"),
-  dressWalk: document.getElementById("dressWalk"),
+  dressBike: $("dressBike"),
+  dressRun: $("dressRun"),
+  dressWalk: $("dressWalk"),
 
-  alerts: document.getElementById("alerts"),
-  table8: document.getElementById("table8"),
-  table48: document.getElementById("table48"),
-  toggle48: document.getElementById("toggle48"),
-  wrap48: document.getElementById("wrap48"),
+  alerts: $("alerts"),
+  table8: $("table8"),
+  table48: $("table48"),
+  toggle48: $("toggle48"),
+  wrap48: $("wrap48"),
 
-  bestWindow: document.getElementById("bestWindow"),
-  windSuggestion: document.getElementById("windSuggestion"),
+  bestWindow: $("bestWindow"),
+  windSuggestion: $("windSuggestion"),
 
-  windyLink: document.getElementById("windyLink"),
+  windyLink: $("windyLink"),
 };
 
-function fmtKmh(x){ return `${Math.round(x)} km/h`; }
-function fmtMm(x){ return `${(Math.round((x ?? 0) * 10) / 10).toFixed(1)} mm`; }
+function setText(el, txt){ if (el) el.textContent = txt; }
+function setHTML(el, html){ if (el) el.innerHTML = html; }
+
+function fatal(msg){
+  setText(els.updated, `ERRO: ${msg}`);
+  setText(els.source, "Verifica IDs no HTML e cache do Safari.");
+  console.error("[SEMPLANO] FATAL:", msg);
+}
+
+/* ---------- helpers ---------- */
+function fmtKmh(x){ return `${Math.round(x ?? 0)} km/h`; }
+function fmtMm(x){ return `${(Math.round(((x ?? 0) * 10)) / 10).toFixed(1)} mm`; }
 function fmtPct(x){ return `${Math.round(x ?? 0)}%`; }
 
 function windDirText(deg){
   const dirs = ["N","NE","E","SE","S","SO","O","NO"];
-  const idx = Math.round(((deg % 360) / 45)) % 8;
-  return `${dirs[idx]} (${Math.round(deg)}°)`;
+  const idx = Math.round((((deg ?? 0) % 360) / 45)) % 8;
+  return `${dirs[idx]} (${Math.round(deg ?? 0)}°)`;
 }
 
-function hourLabel(iso){ return iso.slice(11,16); }
+function hourLabel(iso){ return String(iso).slice(11,16); }
 
-/* 48h: dia da semana + hora (ex.: "Sáb. 01:00") */
 function weekdayHourLabel(iso){
   const d = new Date(iso);
-  let w = d.toLocaleDateString("pt-PT", { weekday: "short" }); // "sáb."
+  let w = d.toLocaleDateString("pt-PT", { weekday: "short" });
   w = w.charAt(0).toUpperCase() + w.slice(1);
   const h = d.toLocaleTimeString("pt-PT", { hour: "2-digit", minute: "2-digit" });
   return `${w} ${h}`;
 }
 
-function buildUrl(base, loc){
+function buildUrlForecast(loc){
   const params = new URLSearchParams({
     latitude: String(loc.lat),
     longitude: String(loc.lon),
@@ -85,22 +102,33 @@ function buildUrl(base, loc){
       "is_day"
     ].join(",")
   });
-  return `${base}?${params.toString()}`;
+  return `https://api.open-meteo.com/v1/forecast?${params.toString()}`;
 }
 
-async function fetchWithFallback(loc){
-  const ecmwfUrl = buildUrl("https://api.open-meteo.com/v1/ecmwf", loc);
-  const gfsUrl   = buildUrl("https://api.open-meteo.com/v1/gfs", loc);
+async function fetchWithTimeout(url){
+  const ctrl = new AbortController();
+  const t = setTimeout(() => ctrl.abort(), FETCH_TIMEOUT_MS);
 
-  try {
-    const r = await fetch(ecmwfUrl, { cache: "no-store" });
-    if (!r.ok) throw new Error(`ECMWF HTTP ${r.status}`);
-    return { json: await r.json(), source: "ECMWF (Open-Meteo)" };
-  } catch (_) {
-    const r = await fetch(gfsUrl, { cache: "no-store" });
-    if (!r.ok) throw new Error(`GFS HTTP ${r.status}`);
-    return { json: await r.json(), source: "GFS (Open-Meteo) — fallback" };
+  try{
+    const r = await fetch(url, {
+      cache: "no-store",
+      mode: "cors",
+      signal: ctrl.signal
+    });
+    return r;
+  } finally {
+    clearTimeout(t);
   }
+}
+
+async function fetchWeather(loc){
+  const url = buildUrlForecast(loc);
+  const r = await fetchWithTimeout(url);
+
+  if (!r.ok) throw new Error(`HTTP ${r.status}`);
+  const json = await r.json();
+  if (!json?.hourly?.time?.length) throw new Error("Resposta sem dados (hourly vazio)");
+  return { json, source: "Open-Meteo (forecast)" };
 }
 
 function nearestHourIndex(times){
@@ -126,7 +154,7 @@ function computeMinMaxNext24h(temps, startIndex){
   return { min, max };
 }
 
-/* Melhor janela: 2h nas próximas 12h, mas só 07:00–22:00 (início até 20:00) */
+/* Melhor janela 07–22 */
 function computeBestWindowNext12h(data){
   const times = data.hourly.time;
   const gust  = data.hourly.wind_gusts_10m ?? [];
@@ -152,27 +180,8 @@ function computeBestWindowNext12h(data){
   for (let i = start; i <= end; i++){
     const h = new Date(times[i]).getHours();
     if (h < START_H || h > LAST_START_H) continue;
-
     const s = (scoreHour(i) + scoreHour(i+1)) / 2;
-    if (s > bestScore){
-      bestScore = s;
-      bestI = i;
-    }
-  }
-
-  /* fallback: tenta até 24h mantendo 07–22 */
-  if (bestI === null){
-    const end24 = Math.min(start + 24, times.length - 2);
-    for (let i = start; i <= end24; i++){
-      const h = new Date(times[i]).getHours();
-      if (h < START_H || h > LAST_START_H) continue;
-
-      const s = (scoreHour(i) + scoreHour(i+1)) / 2;
-      if (s > bestScore){
-        bestScore = s;
-        bestI = i;
-      }
-    }
+    if (s > bestScore){ bestScore = s; bestI = i; }
   }
 
   if (bestI === null) bestI = start;
@@ -239,9 +248,9 @@ function iconForWeatherCode(code, isDay){
   return "•";
 }
 
-/* ===== Gauge (SVG) ===== */
+/* Gauge */
 function buildGaugeTicks(){
-  const host = document.getElementById("tickRotate");
+  const host = $("tickRotate");
   if (!host || host.dataset.built === "1") return;
 
   let out = "";
@@ -255,57 +264,30 @@ function buildGaugeTicks(){
   host.dataset.built = "1";
 }
 
-/* seta: por defeito aponta PARA onde sopra (+180).
-   Se quiseres “de onde vem”, troca por dirDeg. */
 function updateWindGauge(speedKmh, dirDeg){
-  const needle = document.getElementById("gaugeNeedle");
-  const speed = document.getElementById("gaugeSpeed");
-  const rot = (dirDeg + 180) % 360;
+  const needle = $("gaugeNeedle");
+  const speed = $("gaugeSpeed");
+  const rot = ((dirDeg ?? 0) + 180) % 360;
   if (needle) needle.setAttribute("transform", `rotate(${rot} 100 100)`);
-  if (speed) speed.textContent = String(Math.round(speedKmh));
+  if (speed) speed.textContent = String(Math.round(speedKmh ?? 0));
 }
 
-function renderTables(data){
+/* Render Alertas */
+function renderAlerts(data){
+  if (!els.alerts) return;
+
   const t = data.hourly.time;
-  const temp = data.hourly.temperature_2m;
-  const wind = data.hourly.wind_speed_10m;
-  const gust = data.hourly.wind_gusts_10m;
-  const dir  = data.hourly.wind_direction_10m;
-  const prcp = data.hourly.precipitation;
-  const pop  = data.hourly.precipitation_probability ?? Array(t.length).fill(null);
-  const wcode = data.hourly.weather_code ?? Array(t.length).fill(null);
-  const isDayArr = data.hourly.is_day ?? Array(t.length).fill(1);
-
   const start = nearestHourIndex(t);
+  const next2 = [start, start+1].filter(x => x < t.length);
 
-  const make = (n, tableEl, labelFn) => {
-    const rows = [];
-    rows.push(`<tr>
-      <th>Hora</th>
-      <th class="iconCell"></th>
-      <th>Temp</th>
-      <th>Vento</th>
-      <th>Raj.</th>
-      <th>Dir</th>
-      <th>Chuva</th>
-      <th>Prob.</th>
-    </tr>`);
+  const pops  = data.hourly.precipitation_probability ?? Array(t.length).fill(0);
+  const prcps = data.hourly.precipitation ?? Array(t.length).fill(0);
+  const gusts = data.hourly.wind_gusts_10m ?? Array(t.length).fill(0);
 
-    for (let i=start; i<Math.min(start+n, t.length); i++){
-      const ico = iconForWeatherCode(wcode[i] ?? -1, (isDayArr[i] ?? 1) === 1);
-      rows.push(`<tr>
-        <td>${labelFn(t[i])}</td>
-        <td class="iconCell"><span class="icon">${ico}</span></td>
-        <td>${Math.round(temp[i])}°</td>
-        <td>${fmtKmh(wind[i])}</td>
-        <td>${fmtKmh(gust[i])}</td>
-        <td>${windDirText(dir[i]).split(" ")[0]}</td>
-        <td>${fmtMm(prcp[i] ?? 0)}</td>
-        <td>${pop[i] == null ? "—" : fmtPct(pop[i])}</td>
-      </tr>`);
-    }
+  const anyRainSoon = next2.some(k => (pops[k] ?? 0) >= 60 || (prcps[k] ?? 0) >= 0.4);
+  const anyGustSoon = next2.some(k => (gusts[k] ?? 0) >= 45);
 
-    tableEl.innerHTML = rows.join("");
-  };
-
-  make(8,  els.table8,  (iso) => hourLabel(iso
+  const pills = [];
+  if (anyRainSoon) pills.push(`<div class="pill">☔ Chuva provável nas próximas 2h</div>`);
+  if (anyGustSoon) pills.push(`<div class="pill">💨 Rajadas fortes nas próximas 2h</div>`);
+ 
