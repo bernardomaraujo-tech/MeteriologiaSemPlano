@@ -6,6 +6,7 @@ const LOCATIONS = [
   { id:"cascais", name:"Cascais", lat:38.6979, lon:-9.4206 },
   { id:"peninha", name:"Peninha", lat:38.7692, lon:-9.4589 },
   { id:"culatra", name:"Ilha da Culatra", lat:36.9889, lon:-7.8336 },
+
   { id:"algueirao", name:"Algueirão", lat:38.7936, lon:-9.3417 },
   { id:"amadora", name:"Amadora", lat:38.7569, lon:-9.2308 },
   { id:"sintra", name:"Sintra", lat:38.8029, lon:-9.3817 }
@@ -50,16 +51,24 @@ function windDirText(deg){
   const idx = Math.round(((deg % 360) / 45)) % 8;
   return `${dirs[idx]} (${Math.round(deg)}°)`;
 }
+
 function rotateArrow(deg){
   const rot = (deg - 45);
   els.nowArrow.style.transform = `rotate(${rot}deg)`;
 }
 
-function dayHourLabel(iso){
+function hourLabel(iso){
+  // "HH:MM"
+  return iso.slice(11,16);
+}
+
+function weekdayHourLabel(iso){
+  // "Qui 14:00" (weekday short)
   const d = new Date(iso);
   const weekday = d.toLocaleDateString("pt-PT", { weekday: "short" });
   const hour = d.toLocaleTimeString("pt-PT", { hour: "2-digit", minute: "2-digit" });
-  return `${weekday.charAt(0).toUpperCase() + weekday.slice(1)} ${hour}`;
+  const w = weekday.charAt(0).toUpperCase() + weekday.slice(1);
+  return `${w} ${hour}`;
 }
 
 function buildUrl(base, loc){
@@ -106,7 +115,7 @@ function nearestHourIndex(times){
   const now = new Date();
   let best = 0;
   let bestDiff = Infinity;
-  for (let i=0;i<times.length;i++){
+  for (let i=0; i<times.length; i++){
     const t = new Date(times[i]);
     const diff = Math.abs(t.getTime() - now.getTime());
     if (diff < bestDiff){ bestDiff = diff; best = i; }
@@ -142,11 +151,14 @@ function computeBestWindowNext12h(data){
       const popN  = Math.min(Math.max(pop[j] ?? 0, 0), 100) / 100;
       const gustN = Math.min(Math.max(gust[j] ?? 0, 0), 60) / 60;
       const prcpN = Math.min(Math.max(prcp[j] ?? 0, 0), 3) / 3;
+      // chuva pesa mais
       return (1 - (0.65*popN + 0.35*prcpN)) * 0.65 + (1 - gustN) * 0.35;
     };
+
     const s = (scoreHour(i) + scoreHour(i+1)) / 2;
     if (s > bestScore){ bestScore = s; bestI = i; }
   }
+
   return { idx: bestI, score: bestScore };
 }
 
@@ -186,6 +198,7 @@ function clothingSuggestion({ temp, wind, gust, pop, prcp, sport }){
     return `${base}: muito leve + hidratação.`;
   }
 
+  // walk
   if (temp <= 6) return `${base}: camadas (térmica + casaco). ${rainy ? "Impermeável." : ""}`;
   if (temp <= 11) return `${base}: casaco leve. ${rainy ? "Impermeável fino." : ""}`;
   if (temp <= 16) return `${base}: camisola leve. ${rainy ? "Capa leve." : ""}`;
@@ -193,9 +206,8 @@ function clothingSuggestion({ temp, wind, gust, pop, prcp, sport }){
   return `${base}: leve e respirável + água.`;
 }
 
-/* Ícones tipo “Weather” (emoji simples, funciona muito bem em iOS) */
+/* Ícones tipo “Weather” (emoji simples, ótimos em iOS) */
 function iconForWeatherCode(code, isDay){
-  // Baseado nos weather codes do Open-Meteo
   if (code === 0) return isDay ? "☀️" : "🌙";
   if (code === 1) return isDay ? "🌤️" : "🌙☁️";
   if (code === 2) return "⛅";
@@ -264,7 +276,7 @@ function renderTables(data){
   };
 
   make(8,  els.table8,  (iso) => hourLabel(iso));
-  make(48, els.table48, (iso) => dayHourLabel(iso));
+  make(48, els.table48, (iso) => weekdayHourLabel(iso));
 }
 
 function renderAlerts(data){
@@ -283,6 +295,7 @@ function renderAlerts(data){
   if (anyRainSoon) pills.push(`<div class="pill">☔ Chuva provável nas próximas 2h</div>`);
   if (anyGustSoon) pills.push(`<div class="pill">💨 Rajadas fortes nas próximas 2h</div>`);
   if (!pills.length) pills.push(`<div class="pill">✅ Sem alertas relevantes nas próximas 2h</div>`);
+
   els.alerts.innerHTML = pills.join("");
 }
 
@@ -307,12 +320,14 @@ function renderAll(data, sourceName, locName){
   const prcp  = data.hourly.precipitation?.[i] ?? 0;
   const pop   = data.hourly.precipitation_probability?.[i] ?? 0;
 
+  // HERO
   const { min, max } = computeMinMaxNext24h(data.hourly.temperature_2m, i);
   els.heroLoc.textContent = locName;
   els.heroTemp.textContent = `${Math.round(temp)}°`;
   els.heroMeta.textContent =
     `Sensação: ${Math.round(feels ?? temp)}° · Máx: ${Math.round(max)}° · Mín: ${Math.round(min)}°`;
 
+  // AGORA
   els.nowWind.textContent = fmtKmh(wind);
   els.nowGust.textContent = fmtKmh(gust);
   els.nowDirTxt.textContent = windDirText(dir);
@@ -320,17 +335,25 @@ function renderAll(data, sourceName, locName){
   els.nowRain.textContent = fmtMm(prcp);
   els.nowPop.textContent = fmtPct(pop);
 
+  // VESTIR
   els.dressBike.textContent = clothingSuggestion({ temp, wind, gust, pop, prcp, sport: "bike" });
   els.dressRun.textContent  = clothingSuggestion({ temp, wind, gust, pop, prcp, sport: "run" });
   els.dressWalk.textContent = clothingSuggestion({ temp, wind, gust, pop, prcp, sport: "walk" });
 
+  // ALERTAS + TABELAS
   renderAlerts(data);
   renderTables(data);
 
+  // MELHOR JANELA
   const bw = computeBestWindowNext12h(data);
-  els.bestWindow.textContent = `${dayHourLabel(t[bw.idx])} → ${dayHourLabel(t[bw.idx + 2] ?? t[bw.idx + 1])}`;
+  const startLbl = weekdayHourLabel(t[bw.idx]);
+  const endLbl = weekdayHourLabel(t[bw.idx + 2] ?? t[bw.idx + 1]);
+  els.bestWindow.textContent = `${startLbl} → ${endLbl}`;
 
+  // SENTIDO
   els.windSuggestion.textContent = windDirectionSuggestion(dir);
+
+  // FONTE
   els.source.textContent = sourceName;
 }
 
@@ -343,10 +366,14 @@ async function refresh(){
 
   try{
     const { json, source } = await fetchWithFallback(loc);
-    els.updated.textContent = `Última atualização: ${new Date().toLocaleString("pt-PT", { dateStyle:"medium", timeStyle:"short" })}`;
+
+    els.updated.textContent =
+      `Última atualização: ${new Date().toLocaleString("pt-PT", { dateStyle:"medium", timeStyle:"short" })}`;
+
     renderAll(json, source, loc.name);
   } catch (e){
-    els.updated.textContent = `Última atualização: falhou (${new Date().toLocaleTimeString("pt-PT")})`;
+    els.updated.textContent =
+      `Última atualização: falhou (${new Date().toLocaleTimeString("pt-PT")})`;
     els.source.textContent = `Erro a obter dados: ${String(e)}`;
   }
 }
@@ -359,8 +386,10 @@ function init(){
     els.select.appendChild(opt);
   }
 
+  // default
   els.select.value = "alcabideche";
 
+  // toggle 48h
   els.toggle48.addEventListener("click", () => {
     const isHidden = els.wrap48.classList.contains("hidden");
     els.wrap48.classList.toggle("hidden", !isHidden);
@@ -374,4 +403,3 @@ function init(){
 }
 
 init();
-
