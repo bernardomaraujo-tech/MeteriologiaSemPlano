@@ -6,7 +6,6 @@
   <meta name="theme-color" content="#6fa7c6" />
   <title>SEM PLANO — Meteo</title>
 
-  <link rel="manifest" href="./manifest.json" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 
@@ -36,24 +35,63 @@
 
     <main class="stack">
 
-      <!-- 3 - Agora + vestir -->
+      <!-- 3 - Agora (estilo Apple: stats + gauge) -->
       <section class="card glass">
         <div class="cardTitle">Agora</div>
 
-        <div class="kv">
-          <div class="k">Vento</div><div class="v" id="nowWind">—</div>
-          <div class="k">Rajadas</div><div class="v" id="nowGust">—</div>
-          <div class="k">Direção</div>
-          <div class="v inline">
-            <span id="nowDirTxt">—</span>
-            <span class="arrow" id="nowArrow" aria-label="Direção do vento"></span>
+        <div class="nowWindCard">
+          <!-- Esquerda: valores -->
+          <div class="nowWindStats">
+            <div class="nowRow">
+              <div class="nowLabel">Vento</div>
+              <div class="nowValue" id="nowWind">—</div>
+            </div>
+            <div class="nowRow">
+              <div class="nowLabel">Rajadas</div>
+              <div class="nowValue" id="nowGust">—</div>
+            </div>
+            <div class="nowRow">
+              <div class="nowLabel">Direção</div>
+              <div class="nowValue" id="nowDirTxt">—</div>
+            </div>
+
+            <div class="nowMini">
+              <div class="nowMiniRow"><span class="nowMiniK">Chuva</span><span class="nowMiniV" id="nowRain">—</span></div>
+              <div class="nowMiniRow"><span class="nowMiniK">Prob.</span><span class="nowMiniV" id="nowPop">—</span></div>
+            </div>
           </div>
-          <div class="k">Chuva</div><div class="v" id="nowRain">—</div>
-          <div class="k">Prob.</div><div class="v" id="nowPop">—</div>
+
+          <!-- Direita: mostrador -->
+          <div class="nowGauge">
+            <svg viewBox="0 0 200 200" class="gaugeSvg" aria-label="Mostrador do vento">
+              <circle cx="100" cy="100" r="74" class="gaugeRing"></circle>
+
+              <!-- ticks gerados por JS -->
+              <g id="tickRotate" class="gaugeTicks"></g>
+
+              <!-- cardinais -->
+              <text x="100" y="24" text-anchor="middle" class="gaugeCardinal">N</text>
+              <text x="178" y="106" text-anchor="middle" class="gaugeCardinal">E</text>
+              <text x="100" y="192" text-anchor="middle" class="gaugeCardinal">S</text>
+              <text x="22"  y="106" text-anchor="middle" class="gaugeCardinal">O</text>
+
+              <!-- seta rotativa -->
+              <g id="gaugeNeedle" transform="rotate(0 100 100)">
+                <circle cx="100" cy="100" r="7" class="needleHub"></circle>
+                <line x1="100" y1="100" x2="165" y2="100" class="needleLine"></line>
+                <polygon points="165,100 153,94 153,106" class="needleHead"></polygon>
+              </g>
+
+              <!-- texto central -->
+              <text x="100" y="104" text-anchor="middle" class="gaugeSpeed" id="gaugeSpeed">—</text>
+              <text x="100" y="128" text-anchor="middle" class="gaugeUnit">km/h</text>
+            </svg>
+          </div>
         </div>
+      </section>
 
-        <div class="divider"></div>
-
+      <!-- O que vestir (mantém a formatação boa) -->
+      <section class="card glass">
         <div class="dressTitle">O que vestir (sugestão)</div>
         <div class="dressGrid">
           <div class="pillRow">
@@ -89,7 +127,7 @@
       <section class="card glass">
         <div class="cardTitle">Melhor janela (2h / próximas 12h)</div>
         <div id="bestWindow" class="best">—</div>
-        <div class="muted small">Menos chuva + menos rajadas.</div>
+        <div class="muted small">Menos chuva + menos rajadas. Sugestões entre 07:00 e 22:00.</div>
       </section>
 
       <!-- 7 - Sugestão de sentido -->
@@ -107,7 +145,10 @@
              data-params='{"lat":38.7330,"lon":-9.4100,"radius":15,"limit":1}'>
           </a>
         </div>
-        <div class="muted small">Se não houver webcam próxima, pode aparecer vazio.</div>
+        <div class="muted small">
+          Se o embed não mostrar nada, abre no Windy:
+          <a class="camLink" id="windyLink" href="#" target="_blank" rel="noreferrer">ver webcams</a>
+        </div>
       </section>
 
       <!-- 9 - Próximas 48h -->
