@@ -1,8 +1,3 @@
-/* =========================
-   SEM PLANO — Meteo (PWA)
-   app.js (COMPLETO, corrigido)
-   ========================= */
-
 const REFRESH_MS = 5 * 60 * 1000;
 
 const LOCATIONS = [
@@ -47,19 +42,19 @@ const els = {
   windyLink: document.getElementById("windyLink"),
 };
 
-/* ---------- helpers ---------- */
-function fmtKmh(x){ return `${Math.round(x ?? 0)} km/h`; }
-function fmtMm(x){ return `${(Math.round(((x ?? 0) * 10)) / 10).toFixed(1)} mm`; }
+function fmtKmh(x){ return `${Math.round(x)} km/h`; }
+function fmtMm(x){ return `${(Math.round((x ?? 0) * 10) / 10).toFixed(1)} mm`; }
 function fmtPct(x){ return `${Math.round(x ?? 0)}%`; }
 
 function windDirText(deg){
   const dirs = ["N","NE","E","SE","S","SO","O","NO"];
-  const idx = Math.round((((deg ?? 0) % 360) / 45)) % 8;
-  return `${dirs[idx]} (${Math.round(deg ?? 0)}°)`;
+  const idx = Math.round(((deg % 360) / 45)) % 8;
+  return `${dirs[idx]} (${Math.round(deg)}°)`;
 }
 
-function hourLabel(iso){ return String(iso).slice(11,16); }
+function hourLabel(iso){ return iso.slice(11,16); }
 
+/* 48h: dia da semana + hora (ex.: "Sáb. 01:00") */
 function weekdayHourLabel(iso){
   const d = new Date(iso);
   let w = d.toLocaleDateString("pt-PT", { weekday: "short" }); // "sáb."
@@ -131,7 +126,7 @@ function computeMinMaxNext24h(temps, startIndex){
   return { min, max };
 }
 
-/* ---------- melhor janela 07–22 ---------- */
+/* Melhor janela: 2h nas próximas 12h, mas só 07:00–22:00 (início até 20:00) */
 function computeBestWindowNext12h(data){
   const times = data.hourly.time;
   const gust  = data.hourly.wind_gusts_10m ?? [];
@@ -142,7 +137,7 @@ function computeBestWindowNext12h(data){
   const end = Math.min(start + 12, times.length - 2);
 
   const START_H = 7;
-  const LAST_START_H = 20; // 2h -> termina até às 22
+  const LAST_START_H = 20;
 
   let bestI = null;
   let bestScore = -1;
@@ -165,7 +160,7 @@ function computeBestWindowNext12h(data){
     }
   }
 
-  // fallback: tenta até 24h mantendo 07–22
+  /* fallback: tenta até 24h mantendo 07–22 */
   if (bestI === null){
     const end24 = Math.min(start + 24, times.length - 2);
     for (let i = start; i <= end24; i++){
@@ -184,7 +179,6 @@ function computeBestWindowNext12h(data){
   return { idx: bestI, score: bestScore };
 }
 
-/* ---------- sugestões ---------- */
 function windDirectionSuggestion(deg){
   const from = windDirText(deg);
   const d = ((deg % 360) + 360) % 360;
@@ -228,7 +222,6 @@ function clothingSuggestion({ temp, wind, gust, pop, prcp, sport }){
   return `${base}: leve e respirável + água.`;
 }
 
-/* ---------- ícones ---------- */
 function iconForWeatherCode(code, isDay){
   if (code === 0) return isDay ? "☀️" : "🌙";
   if (code === 1) return isDay ? "🌤️" : "🌙☁️";
@@ -246,7 +239,7 @@ function iconForWeatherCode(code, isDay){
   return "•";
 }
 
-/* ---------- Gauge (SVG) ---------- */
+/* ===== Gauge (SVG) ===== */
 function buildGaugeTicks(){
   const host = document.getElementById("tickRotate");
   if (!host || host.dataset.built === "1") return;
@@ -263,37 +256,15 @@ function buildGaugeTicks(){
 }
 
 /* seta: por defeito aponta PARA onde sopra (+180).
-   Se quiseres “de onde vem”, troca por: const rot = dirDeg; */
+   Se quiseres “de onde vem”, troca por dirDeg. */
 function updateWindGauge(speedKmh, dirDeg){
   const needle = document.getElementById("gaugeNeedle");
   const speed = document.getElementById("gaugeSpeed");
-  const rot = ((dirDeg ?? 0) + 180) % 360;
+  const rot = (dirDeg + 180) % 360;
   if (needle) needle.setAttribute("transform", `rotate(${rot} 100 100)`);
-  if (speed) speed.textContent = String(Math.round(speedKmh ?? 0));
+  if (speed) speed.textContent = String(Math.round(speedKmh));
 }
 
-/* ---------- render: alertas ---------- */
-function renderAlerts(data){
-  const t = data.hourly.time;
-  const start = nearestHourIndex(t);
-  const next2 = [start, start+1].filter(x => x < t.length);
-
-  const pops  = data.hourly.precipitation_probability ?? Array(t.length).fill(0);
-  const prcps = data.hourly.precipitation ?? Array(t.length).fill(0);
-  const gusts = data.hourly.wind_gusts_10m ?? Array(t.length).fill(0);
-
-  const anyRainSoon = next2.some(k => (pops[k] ?? 0) >= 60 || (prcps[k] ?? 0) >= 0.4);
-  const anyGustSoon = next2.some(k => (gusts[k] ?? 0) >= 45);
-
-  const pills = [];
-  if (anyRainSoon) pills.push(`<div class="pill">☔ Chuva provável nas próximas 2h</div>`);
-  if (anyGustSoon) pills.push(`<div class="pill">💨 Rajadas fortes nas próximas 2h</div>`);
-  if (!pills.length) pills.push(`<div class="pill">✅ Sem alertas relevantes nas próximas 2h</div>`);
-
-  els.alerts.innerHTML = pills.join("");
-}
-
-/* ---------- render: tabelas ---------- */
 function renderTables(data){
   const t = data.hourly.time;
   const temp = data.hourly.temperature_2m;
@@ -337,114 +308,4 @@ function renderTables(data){
     tableEl.innerHTML = rows.join("");
   };
 
-  make(8,  els.table8,  (iso) => hourLabel(iso));
-  make(48, els.table48, (iso) => weekdayHourLabel(iso));
-}
-
-/* ---------- windy ---------- */
-function updateWindyCam(lat, lon){
-  const el = document.getElementById("windyCam");
-  if (el){
-    el.setAttribute("data-params", JSON.stringify({ lat, lon, radius: 15, limit: 1 }));
-    el.innerHTML = "";
-    if (window.WindyWebcamsWidget?.reload) window.WindyWebcamsWidget.reload();
-  }
-
-  if (els.windyLink){
-    els.windyLink.href = `https://www.windy.com/webcams?${lat},${lon},12`;
-  }
-}
-
-/* ---------- render principal ---------- */
-function renderAll(data, sourceName, locName){
-  const t = data.hourly.time;
-  const i = nearestHourIndex(t);
-
-  const temp  = data.hourly.temperature_2m[i];
-  const feels = data.hourly.apparent_temperature?.[i];
-  const wind  = data.hourly.wind_speed_10m[i];
-  const gust  = data.hourly.wind_gusts_10m[i];
-  const dir   = data.hourly.wind_direction_10m[i];
-  const prcp  = data.hourly.precipitation?.[i] ?? 0;
-  const pop   = data.hourly.precipitation_probability?.[i] ?? 0;
-
-  const { min, max } = computeMinMaxNext24h(data.hourly.temperature_2m, i);
-
-  els.heroLoc.textContent = locName;
-  els.heroTemp.textContent = `${Math.round(temp)}°`;
-  els.heroMeta.textContent =
-    `Sensação: ${Math.round(feels ?? temp)}° · Máx: ${Math.round(max)}° · Mín: ${Math.round(min)}°`;
-
-  els.nowWind.textContent = fmtKmh(wind);
-  els.nowGust.textContent = fmtKmh(gust);
-  els.nowDirTxt.textContent = windDirText(dir);
-  els.nowRain.textContent = fmtMm(prcp);
-  els.nowPop.textContent = fmtPct(pop);
-
-  updateWindGauge(wind, dir);
-
-  els.dressBike.textContent = clothingSuggestion({ temp, wind, gust, pop, prcp, sport: "bike" });
-  els.dressRun.textContent  = clothingSuggestion({ temp, wind, gust, pop, prcp, sport: "run" });
-  els.dressWalk.textContent = clothingSuggestion({ temp, wind, gust, pop, prcp, sport: "walk" });
-
-  renderAlerts(data);
-  renderTables(data);
-
-  const bw = computeBestWindowNext12h(data);
-  const startLbl = weekdayHourLabel(t[bw.idx]);
-  const endLbl   = weekdayHourLabel(t[bw.idx + 2] ?? t[bw.idx + 1]);
-  els.bestWindow.textContent = `${startLbl} → ${endLbl}`;
-
-  els.windSuggestion.textContent = windDirectionSuggestion(dir);
-  els.source.textContent = sourceName;
-}
-
-/* ---------- ciclo de atualização ---------- */
-async function refresh(){
-  const locId = els.select.value;
-  const loc = LOCATIONS.find(x => x.id === locId) ?? LOCATIONS[0];
-
-  updateWindyCam(loc.lat, loc.lon);
-  els.updated.textContent = "A atualizar…";
-
-  try{
-    const { json, source } = await fetchWithFallback(loc);
-    els.updated.textContent =
-      `Última atualização: ${new Date().toLocaleString("pt-PT", { dateStyle:"medium", timeStyle:"short" })}`;
-    renderAll(json, source, loc.name);
-  } catch (e){
-    els.updated.textContent =
-      `Última atualização: falhou (${new Date().toLocaleTimeString("pt-PT")})`;
-    els.source.textContent = `Erro a obter dados: ${String(e)}`;
-  }
-}
-
-/* ---------- init ---------- */
-function init(){
-  // preencher select
-  for (const l of LOCATIONS){
-    const opt = document.createElement("option");
-    opt.value = l.id;
-    opt.textContent = l.name;
-    els.select.appendChild(opt);
-  }
-  els.select.value = "alcabideche";
-
-  // toggle 48h
-  if (els.toggle48 && els.wrap48){
-    els.toggle48.addEventListener("click", () => {
-      const willShow = els.wrap48.classList.contains("hidden");
-      els.wrap48.classList.toggle("hidden", !willShow);
-      els.toggle48.textContent = willShow ? "Esconder" : "Mostrar";
-    });
-  }
-
-  els.select.addEventListener("change", refresh);
-
-  buildGaugeTicks();
-
-  refresh();
-  setInterval(refresh, REFRESH_MS);
-}
-
-init();
+  make(8,  els.table8,  (iso) => hourLabel(iso
