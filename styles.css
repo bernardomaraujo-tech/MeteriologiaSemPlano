@@ -157,10 +157,10 @@ body{
   width:42px;
 }
 .icon{
-  font-size:16px;
+  font-size:20px;
   line-height:1;
   display:inline-block;
-  transform: translateY(1px);
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,.35));
 }
 
 /* ✅ Sticky: Hora/Data + Ícone (as 2 primeiras colunas) */
@@ -184,13 +184,14 @@ body{
 .tbl th:nth-child(2),
 .tbl td:nth-child(2){
   position: sticky;
-  left: 78px;           /* igual à largura da 1ª coluna */
-  z-index: 2;
-  width: 42px;
-  min-width: 42px;
-  background: rgba(0,0,0,.10);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  left: 86px; /* tem de bater com a largura da Hora */
+  z-index: 3;
+  width: 50px;
+  min-width: 50px;
+
+  background: rgba(0,0,0,.28);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 /* header mais acima */
@@ -231,4 +232,5 @@ body{
 
 .small{font-size:12px}
 .best{font-size:15px;line-height:1.35}
+
 
