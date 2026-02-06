@@ -2,13 +2,13 @@ const REFRESH_MS = 5 * 60 * 1000;
 
 const LOCATIONS = [
   { id:"alcabideche", name:"Alcabideche", lat:38.7330, lon:-9.4100 },
-  { id:"Algueirao", name:"Algueirão", lat:38.7936, lon:-9.3417 },
-  { id:"Amadora", name:"Amadora", lat:38.7569, lon:-9.2308 },  
-  { id:"Cascais", name:"Cascais", lat:38.6979, lon:-9.4206 },
-  { id:"Culatra", name:"Ilha da Culatra", lat:36.9889, lon:-7.8336 },  
-  { id:"Guincho", name:"Guincho", lat:38.72948, lon:-9.47457 },
-  { id:"Peninha", name:"Peninha", lat:38.7692, lon:-9.4589 },
-  { id:"Sintra", name:"Sintra", lat:38.8029, lon:-9.3817 }
+  { id:"guincho", name:"Guincho", lat:38.72948, lon:-9.47457 },
+  { id:"cascais", name:"Cascais", lat:38.6979, lon:-9.4206 },
+  { id:"peninha", name:"Peninha", lat:38.7692, lon:-9.4589 },
+  { id:"culatra", name:"Ilha da Culatra", lat:36.9889, lon:-7.8336 },
+  { id:"algueirao", name:"Algueirão", lat:38.7936, lon:-9.3417 },
+  { id:"amadora", name:"Amadora", lat:38.7569, lon:-9.2308 },
+  { id:"sintra", name:"Sintra", lat:38.8029, lon:-9.3817 }
 ];
 
 function computeBestWindowNext12h(data){
