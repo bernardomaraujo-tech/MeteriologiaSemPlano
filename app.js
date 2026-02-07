@@ -20,6 +20,9 @@ const LOCATIONS = [
   // novas localizações
   { id:"sdr", name:"São Domingos de Rana", lat:38.7019, lon:-9.3389 },
   { id:"carcavelos", name:"Carcavelos", lat:38.6910, lon:-9.3317 }
+  { id:"estoril", name:"Estoril", lat:38.7061, lon:-9.3977 },
+  { id:"columbeira", name:"Columbeira", lat:39.3056, lon:-9.2100 },
+  { id:"praiatocha", name:"Praia da Tocha", lat:40.3423, lon:-8.7958 }
 ];
 
 const $ = (id) => document.getElementById(id);
