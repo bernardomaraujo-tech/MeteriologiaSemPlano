@@ -1,13 +1,4 @@
-/* SEM PLANO Weather — app.js
-   - Atualiza de 5 em 5 minutos
-   - Open-Meteo (48h hourly)
-   - Alertas (chuva/rajadas próximas 2h)
-   - Próximas 8h + Próximas 48h (toggle)
-   - Melhor janela (2h / Próximos 12h) limitada a 07h–22h
-   - Sugestão de sentido
-   - O que vestir + ícones (SVG) pequenos (Safari OK)
-   - Webcam Windy (nearby)
-*/
+/* SEM PLANO Weather — app.js (revert: sem imagens na sugestão de roupa) */
 
 const REFRESH_MS = 5 * 60 * 1000;
 const FETCH_TIMEOUT_MS = 12000;
@@ -81,82 +72,6 @@ function weekdayHourLabel(iso){
 }
 
 /* =========================
-   ROUPA — SVGs (Safari OK)
-   ========================= */
-
-const CLOTHING_SVGS = {
-  baselayer: `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 4 5 6 3 8l3 3v9h12v-9l3-3-2-2-3-2-2 2H10L8 4z"/></svg>`,
-  jerseyML:  `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 4 5 6 3 8l2 2v10h3V12h2v8h4v-8h2v8h3V10l2-2-2-2-3-2-2 2H10L8 4z"/></svg>`,
-  jerseyMC:  `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 4 5 6 3 8l3 3v9h12v-9l3-3-2-2-3-2-2 2H10L8 4z"/></svg>`,
-  vest:      `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 3 7 6 4 8v13h16V8l-3-2-2-3h-2l1 4-2 2-2-2 1-4H9z"/></svg>`,
-  jacket:    `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 3 7 6 4 8v13h6v-8l2-2 2 2v8h6V8l-3-2-2-3h-1l1 5-3 3-3-3 1-5H9z"/></svg>`,
-  shorts:    `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 3h8l1 6-3 1-2-2-2 2-3-1 1-6zm-1 7 3 1-1 10H6L7 10zm10 0 1 11h-3l-1-10 3-1z"/></svg>`,
-  tights:    `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 3h8l-1 9 2 9h-4l-1-7-1 7H7l2-9-1-9z"/></svg>`,
-  legWarmers:`<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 3h6l-1 6h-4L9 3zm1 7h4l1 11h-3l-1-7-1 7H9l1-11z"/></svg>`,
-  gloves:    `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 11V6a2 2 0 1 1 4 0v5h1V7a2 2 0 1 1 4 0v6l2 2v6H9l-4-4v-6l2-2z"/></svg>`,
-  overshoes: `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 16c4-1 6-4 7-7l3 2c2 1 4 2 8 2v5H3v-2z"/></svg>`
-};
-
-const CLOTHING_LABELS = {
-  baselayer: "Base layer",
-  jerseyML: "Jersey ML",
-  jerseyMC: "Jersey MC",
-  vest: "Colete",
-  jacket: "Casaco/Impermeável",
-  shorts: "Calção",
-  tights: "Calças",
-  legWarmers: "Perneiras",
-  gloves: "Luvas",
-  overshoes: "Proteção sapatos"
-};
-
-const CLOTHING_ORDER = [
-  "baselayer","jerseyML","jerseyMC","vest","jacket","shorts","tights","legWarmers","gloves","overshoes"
-];
-
-function normalizeText(s){
-  return (s ?? "")
-    .toString()
-    .toLowerCase()
-    .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-}
-
-function detectClothingKeys(baseText, extrasText){
-  const t = normalizeText(`${baseText} ${extrasText}`);
-  const found = new Set();
-
-  if (t.includes("base layer") || t.includes("baselayer")) found.add("baselayer");
-
-  if (t.includes("jersey ml") || t.includes("manga comprida") || t.includes(" ml")) found.add("jerseyML");
-  if (t.includes("jersey mc") || t.includes("manga curta") || t.includes(" mc")) found.add("jerseyMC");
-
-  if (t.includes("colete")) found.add("vest");
-
-  if (t.includes("casaco") || t.includes("shell") || t.includes("imperme") || t.includes("repelente") || t.includes("corta-vento") || t.includes("corta vento")){
-    found.add("jacket");
-  }
-
-  if (t.includes("calção") || t.includes("calções") || t.includes("calcao") || t.includes("calcoes")) found.add("shorts");
-  if (t.includes("calças") || t.includes("calcas") || t.includes("tights")) found.add("tights");
-
-  if (t.includes("perneiras") || t.includes("leg warmers")) found.add("legWarmers");
-  if (t.includes("luvas")) found.add("gloves");
-
-  if (t.includes("proteção sapatos") || t.includes("proteçao sapatos") || t.includes("protecao sapatos") || t.includes("overshoes")) found.add("overshoes");
-
-  return CLOTHING_ORDER.filter(k => found.has(k));
-}
-
-function renderClothingIcons(keys){
-  if (!keys?.length) return "";
-  const icons = keys.map(k => {
-    const title = CLOTHING_LABELS[k] ?? k;
-    return `<span class="gearIcon" title="${title}">${CLOTHING_SVGS[k] ?? ""}</span>`;
-  }).join("");
-  return `<div class="gearIcons" aria-label="Roupa sugerida">${icons}</div>`;
-}
-
-/* =========================
    METEO — motor “o que vestir”
    ========================= */
 
@@ -196,7 +111,6 @@ function windLevel(windKmh, gustKmh){
   else if (w >= 29) lvl = 2;
   else if (w >= 20) lvl = 1;
 
-  // rajadas sobem o risco
   if (g >= w + 12) lvl = Math.min(4, lvl + 1);
   return lvl;
 }
@@ -205,22 +119,19 @@ function windLabel(lvl){
 }
 
 function applyWetPenalty(thermalIdx, precipLvl){
-  // se está húmido/chuva e a temperatura é até “Fresco”, trata como 1 escalão mais frio
   if (precipLvl >= 1 && thermalIdx <= 3) return Math.max(0, thermalIdx - 1);
   return thermalIdx;
 }
 
 function applySportBias(thermalIdx, sport, windLvl){
   if (sport === "bike"){
-    // ciclismo: vento/descidas => sensação mais fria
     if (windLvl >= 1) return Math.max(0, thermalIdx - 1);
     return thermalIdx;
   }
   if (sport === "run"){
-    // corrida: aqueces rápido
     return Math.min(7, thermalIdx + 1);
   }
-  return thermalIdx; // caminhada neutro
+  return thermalIdx;
 }
 
 function baseKitBySportAndBand(sport, bandIdx){
@@ -246,7 +157,6 @@ function baseKitBySportAndBand(sport, bandIdx){
     return "Muito leve + Evitar horas de maior calor + Hidratação/eletrólitos";
   }
 
-  // walk
   if (bandIdx <= 0) return "Base layer quente + Mid layer (fleece) + Shell impermeável/corta-vento + Calças adequadas + Gorro + Luvas";
   if (bandIdx === 1) return "Base layer + Mid layer + Shell na mochila/vestida + Calças + (gorro/luvas se necessário)";
   if (bandIdx === 2) return "Base layer média + Mid layer leve + Shell na mochila";
@@ -445,7 +355,6 @@ function computeBestWindowNext12h(data){
   const start = nearestHourIndex(times);
   const end = Math.min(start + 12, times.length - 2);
 
-  // Só entre 07h e 22h (início até 20h para janela 2h)
   const START_H = 7;
   const LAST_START_H = 20;
 
@@ -483,11 +392,7 @@ function windDirectionSuggestion(deg){
 function updateWindyCam(lat, lon){
   const el = document.getElementById("windyCam");
   if (el){
-    // Windy webcams nearby embed
     el.setAttribute("data-params", JSON.stringify({ lat, lon, radius: 15, limit: 1 }));
-    el.innerHTML = "";
-    // se o script do Windy tiver "reload"
-    if (window.WindyWebcamsWidget?.reload) window.WindyWebcamsWidget.reload();
   }
   if (els.windyLink){
     els.windyLink.href = `https://www.windy.com/webcams?${lat},${lon},12`;
@@ -526,39 +431,31 @@ function renderAll(data, sourceName, locName){
     els.dirNeedle.style.transform = `translate(-50%, -92%) rotate(${dir}deg)`;
   }
 
-  // O que vestir
   const tempEff = (feels ?? temp);
 
   const recBike = kitRecommendation({ sport:"bike", tempEff, windKmh: wind, gustKmh: gust, pop, precipMm: prcp });
   const recRun  = kitRecommendation({ sport:"run",  tempEff, windKmh: wind, gustKmh: gust, pop, precipMm: prcp });
   const recWalk = kitRecommendation({ sport:"walk", tempEff, windKmh: wind, gustKmh: gust, pop, precipMm: prcp });
 
-  const bikeKeys = detectClothingKeys(recBike.base, recBike.modsTxt);
-  const runKeys  = detectClothingKeys(recRun.base,  recRun.modsTxt);
-  const walkKeys = detectClothingKeys(recWalk.base, recWalk.modsTxt);
-
   setHTML(
     els.dressBike,
     `<div><b>${recBike.summary}</b></div>
      <div>Base: ${recBike.base}</div>
-     <div>${recBike.modsTxt}</div>
-     ${renderClothingIcons(bikeKeys)}`
+     <div>${recBike.modsTxt}</div>`
   );
 
   setHTML(
     els.dressRun,
     `<div><b>${recRun.summary}</b></div>
      <div>Base: ${recRun.base}</div>
-     <div>${recRun.modsTxt}</div>
-     ${renderClothingIcons(runKeys)}`
+     <div>${recRun.modsTxt}</div>`
   );
 
   setHTML(
     els.dressWalk,
     `<div><b>${recWalk.summary}</b></div>
      <div>Base: ${recWalk.base}</div>
-     <div>${recWalk.modsTxt}</div>
-     ${renderClothingIcons(walkKeys)}`
+     <div>${recWalk.modsTxt}</div>`
   );
 
   renderAlerts(data);
@@ -606,7 +503,6 @@ async function refresh(){
 function init(){
   if (!els.select || !els.updated) return;
 
-  // preencher localidades
   els.select.innerHTML = "";
   for (const l of LOCATIONS){
     const opt = document.createElement("option");
@@ -618,7 +514,6 @@ function init(){
   els.select.value = "alcabideche";
   els.select.addEventListener("change", refresh);
 
-  // toggle 48h
   if (els.toggle48 && els.wrap48){
     els.toggle48.addEventListener("click", () => {
       const willShow = els.wrap48.classList.contains("hidden");
