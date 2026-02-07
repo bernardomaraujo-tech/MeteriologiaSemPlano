@@ -7,23 +7,26 @@ const PREFERRED_MODELS = [
   "dmi_harmonie_arome_europe"
 ];
 
-const LOCATIONS = [
-  // Alcabideche mantém-se como pré-definida (fixa no topo)
-  { id:"alcabideche", name:"Alcabideche", lat:38.7330, lon:-9.4100 },
+// Duração assumida para a sugestão de sentido (só afeta a caixa "Sugestão de sentido")
+const DEFAULT_RIDE_HOURS = 3; // bicicleta ~3h (podes ajustar para 2..4)
+const SENSE_MIN_CONFIDENCE = 0.12; // abaixo disto diz "indiferente"
 
-  // restantes por ordem alfabética
+// Localizações (mantém como tinhas; se quiseres, depois ordenamos sem mexer em mais nada)
+const LOCATIONS = [
+  { id:"alcabideche", name:"Alcabideche", lat:38.7330, lon:-9.4100 },
+  { id:"guincho", name:"Guincho", lat:38.72948, lon:-9.47457 },
+  { id:"cascais", name:"Cascais", lat:38.6979, lon:-9.4206 },
+  { id:"peninha", name:"Peninha", lat:38.7692, lon:-9.4589 },
+  { id:"culatra", name:"Ilha da Culatra", lat:36.9889, lon:-7.8336 },
   { id:"algueirao", name:"Algueirão", lat:38.7936, lon:-9.3417 },
   { id:"amadora", name:"Amadora", lat:38.7569, lon:-9.2308 },
-  { id:"carcavelos", name:"Carcavelos", lat:38.6910, lon:-9.3317 },
-  { id:"cascais", name:"Cascais", lat:38.6979, lon:-9.4206 },
-  { id:"columbeira", name:"Columbeira", lat:39.3056, lon:-9.2100 },
-  { id:"culatra", name:"Ilha da Culatra", lat:36.9889, lon:-7.8336 },
-  { id:"estoril", name:"Estoril", lat:38.7061, lon:-9.3977 },
-  { id:"guincho", name:"Guincho", lat:38.72948, lon:-9.47457 },
-  { id:"peninha", name:"Peninha", lat:38.7692, lon:-9.4589 },
-  { id:"praiatocha", name:"Praia da Tocha", lat:40.3423, lon:-8.7958 },
+  { id:"sintra", name:"Sintra", lat:38.8029, lon:-9.3817 },
+
   { id:"sdr", name:"São Domingos de Rana", lat:38.7019, lon:-9.3389 },
-  { id:"sintra", name:"Sintra", lat:38.8029, lon:-9.3817 }
+  { id:"carcavelos", name:"Carcavelos", lat:38.6910, lon:-9.3317 },
+  { id:"estoril", name:"Estoril", lat:38.7057, lon:-9.39773 },
+  { id:"columbeira", name:"Columbeira", lat:39.2629, lon:-9.1888 },
+  { id:"praiatocha", name:"Praia da Tocha", lat:40.3334, lon:-8.8415 }
 ];
 
 const $ = (id) => document.getElementById(id);
@@ -72,6 +75,11 @@ function windDirText(deg){
   const idx = Math.round((((deg ?? 0) % 360) / 45)) % 8;
   return `${dirs[idx]} (${Math.round(deg ?? 0)}°)`;
 }
+function dirShort(deg){
+  const dirs = ["N","NE","E","SE","S","SO","O","NO"];
+  const idx = Math.round((((deg ?? 0) % 360) / 45)) % 8;
+  return dirs[idx];
+}
 
 function hourLabel(iso){ return String(iso).slice(11,16); }
 
@@ -107,7 +115,6 @@ function buildUrlForecast(loc, modelsCsv){
   });
 
   if (modelsCsv) params.set("models", modelsCsv);
-
   return `https://api.open-meteo.com/v1/forecast?${params.toString()}`;
 }
 
@@ -124,7 +131,7 @@ async function fetchWithTimeout(url){
 async function fetchWeather(loc){
   const modelsCsv = PREFERRED_MODELS.join(",");
 
-  // 1) tenta HARMONIE-AROME
+  // 1) tenta HARMONIE-AROME (Europa)
   try{
     const url1 = buildUrlForecast(loc, modelsCsv);
     const r1 = await fetchWithTimeout(url1);
@@ -136,7 +143,7 @@ async function fetchWeather(loc){
     }
   } catch (_) {}
 
-  // 2) fallback best match
+  // 2) fallback para best match (auto)
   const url2 = buildUrlForecast(loc);
   const r2 = await fetchWithTimeout(url2);
   if (!r2.ok) throw new Error(`HTTP ${r2.status}`);
@@ -201,7 +208,184 @@ function computeBestWindowNext12h(data){
   return { idx: bestI, score: bestScore };
 }
 
-function windDirectionSuggestion(deg){
+/* =========================
+   SUGESTÃO DE SENTIDO (NOVO)
+   Só isto afeta a caixa windSuggestion
+   ========================= */
+
+function degToRad(d){ return (d * Math.PI) / 180; }
+function clamp(x,a,b){ return Math.min(Math.max(x,a),b); }
+
+/**
+ * Converte vento "FROM" (graus) em vetor "TO" (para onde sopra),
+ * usando bearing meteorológico: 0=N, 90=E.
+ */
+function windVecTo(speedKmh, windFromDeg){
+  const toDeg = ((windFromDeg ?? 0) + 180) % 360;
+  const r = degToRad(toDeg);
+  // x=Este, y=Norte
+  return { x: (speedKmh ?? 0) * Math.sin(r), y: (speedKmh ?? 0) * Math.cos(r), toDeg };
+}
+
+/** unit vector do movimento (bearing) */
+function moveUnit(headingDeg){
+  const r = degToRad(((headingDeg ?? 0) % 360 + 360) % 360);
+  return { x: Math.sin(r), y: Math.cos(r) };
+}
+
+/**
+ * Componentes do vento relativo ao movimento:
+ * headKmh: positivo = vento contra; negativo = vento a favor
+ * crossKmh: magnitude do vento lateral
+ */
+function windComponents(speedKmh, windFromDeg, headingDeg){
+  const w = windVecTo(speedKmh, windFromDeg);
+  const m = moveUnit(headingDeg);
+
+  const dot = w.x*m.x + w.y*m.y;              // >0 = vento a favor (mesma direção do movimento)
+  const head = -dot;                          // >0 = contra
+  const cross = Math.abs(w.x*m.y - w.y*m.x);  // perpendicular
+  return { headKmh: head, crossKmh: cross, windToDeg: w.toDeg };
+}
+
+function avg(arr){
+  if (!arr.length) return 0;
+  return arr.reduce((a,b)=>a+b,0)/arr.length;
+}
+
+/**
+ * Score "dificuldade" por hora (0..~1.5)
+ * (vento conta bastante; rajadas e chuva entram como risco)
+ */
+function hourDifficulty({ wind, gust, windFromDeg, prcp, pop, headingDeg }){
+  const comp = windComponents(wind, windFromDeg, headingDeg);
+  const head = clamp(Math.max(0, comp.headKmh) / 40, 0, 1.5);   // contra
+  const cross = clamp(comp.crossKmh / 40, 0, 1.5);              // lateral
+  const gustN = clamp((gust ?? 0) / 70, 0, 1.5);
+  const rainN = clamp(((prcp ?? 0) / 3) + ((pop ?? 0) / 100)*0.6, 0, 1.5);
+
+  // pesos pensados para ciclismo (vento manda)
+  return 0.52*head + 0.20*cross + 0.18*gustN + 0.10*rainN;
+}
+
+/**
+ * Gera sugestão “pior no início / melhor no fim” para uma volta ~N horas.
+ * Compara:
+ *  - StartInto: 1ª metade heading = windFrom(start); 2ª metade = +180
+ *  - StartWith: 1ª metade heading = windFrom(start)+180; 2ª metade = +180
+ */
+function buildSenseSuggestion(data, startIdx, rideHours){
+  const t = data.hourly.time;
+  const wind = data.hourly.wind_speed_10m ?? [];
+  const gust = data.hourly.wind_gusts_10m ?? [];
+  const wdir = data.hourly.wind_direction_10m ?? []; // "from"
+  const prcp = data.hourly.precipitation ?? [];
+  const pop  = data.hourly.precipitation_probability ?? Array(t.length).fill(0);
+
+  const hours = Math.max(1, Math.min(6, Math.round(rideHours ?? DEFAULT_RIDE_HOURS)));
+  const half = Math.max(1, Math.floor(hours / 2));
+  const total = half * 2; // força 2 metades iguais (2h, 4h, 6h). Se hours=3 -> 2h (1+1) para consistência.
+
+  const maxIdx = t.length - 1;
+  const safeIdx = (k) => Math.min(Math.max(k, 0), maxIdx);
+
+  const baseFrom = (wdir[safeIdx(startIdx)] ?? 0);
+  const intoHeading = baseFrom;                // ir "para onde o vento vem" => contra
+  const withHeading = (baseFrom + 180) % 360;  // a favor
+
+  const evalOption = (firstHeadingDeg) => {
+    const secondHeadingDeg = (firstHeadingDeg + 180) % 360;
+    const firstScores = [];
+    const secondScores = [];
+
+    const firstHead = [];
+    const secondHead = [];
+    const firstCross = [];
+    const secondCross = [];
+
+    for (let h=0; h<total; h++){
+      const idx = safeIdx(startIdx + h);
+
+      const heading = (h < half) ? firstHeadingDeg : secondHeadingDeg;
+
+      const dif = hourDifficulty({
+        wind: wind[idx], gust: gust[idx],
+        windFromDeg: wdir[idx],
+        prcp: prcp[idx], pop: pop[idx],
+        headingDeg: heading
+      });
+
+      const comp = windComponents(wind[idx], wdir[idx], heading);
+
+      if (h < half){
+        firstScores.push(dif);
+        firstHead.push(comp.headKmh);
+        firstCross.push(comp.crossKmh);
+      } else {
+        secondScores.push(dif);
+        secondHead.push(comp.headKmh);
+        secondCross.push(comp.crossKmh);
+      }
+    }
+
+    const firstAvg = avg(firstScores);
+    const secondAvg = avg(secondScores);
+
+    return {
+      firstHeadingDeg: firstHeadingDeg,
+      secondHeadingDeg: (firstHeadingDeg + 180) % 360,
+      firstAvg,
+      secondAvg,
+      delta: firstAvg - secondAvg, // >0 = pior no início (bom para a tua preferência)
+      firstHeadAvg: avg(firstHead),
+      secondHeadAvg: avg(secondHead),
+      firstCrossAvg: avg(firstCross),
+      secondCrossAvg: avg(secondCross)
+    };
+  };
+
+  const optInto = evalOption(intoHeading);
+  const optWith = evalOption(withHeading);
+
+  // Escolhe o que dá "pior no início / melhor no fim"
+  const best = (optInto.delta >= optWith.delta) ? optInto : optWith;
+
+  // Confiança simples
+  const conf = Math.abs(best.delta);
+  const confTxt = conf >= 0.30 ? "Alta" : conf >= 0.18 ? "Média" : conf >= SENSE_MIN_CONFIDENCE ? "Baixa" : "Indiferente";
+
+  const firstDir = dirShort(best.firstHeadingDeg);
+  const secondDir = dirShort(best.secondHeadingDeg);
+
+  // resumo vento contra/a favor médio (positivo=contra, negativo=a favor)
+  const head1 = Math.round(best.firstHeadAvg);
+  const head2 = Math.round(best.secondHeadAvg);
+
+  const crossWarn = (best.firstCrossAvg >= 22 || best.secondCrossAvg >= 22) ? " Atenção a vento lateral." : "";
+
+  if (confTxt === "Indiferente"){
+    return `Sugestão de sentido: indiferente (mudança de vento pequena nas próximas ~${total}h). Mantém o plano do percurso.${crossWarn}`;
+  }
+
+  const phrHead = (x) => {
+    if (x > 3) return `~${x} km/h contra`;
+    if (x < -3) return `~${Math.abs(x)} km/h a favor`;
+    return `~0 (neutro)`;
+  };
+
+  return [
+    `Para uma volta ~${total}h: começa a apontar para ${firstDir} e volta para ${secondDir}.`,
+    `Objetivo: pior no início, melhor no fim.`,
+    `Vento (médio): 1ª metade ${phrHead(head1)} · 2ª metade ${phrHead(head2)}.`,
+    `Confiança: ${confTxt}.${crossWarn}`
+  ].join(" ");
+}
+
+/* =========================
+   FIM SUGESTÃO DE SENTIDO
+   ========================= */
+
+function windDirectionSuggestionFallback(deg){
   const from = windDirText(deg);
   const d = ((deg % 360) + 360) % 360;
   if (d >= 315 || d < 45) return `De ${from}. Favorece ir para sul; regresso para norte é mais pesado.`;
@@ -367,8 +551,9 @@ function renderAll(data, sourceName, locName){
   setText(els.nowRain, fmtMm(prcp));
   setText(els.nowPop, fmtPct(pop));
 
-  // Mantém como tinhas (seta aponta para o centro "de onde vem o vento")
   if (els.dirNeedle){
+    // a tua agulha aponta "para dentro" e queres direção do vento (FROM).
+    // Se a tua forma/triângulo estiver orientada para "cima", isto fica certo.
     els.dirNeedle.style.transform = `translate(-50%, -92%) rotate(${(dir + 180) % 360}deg)`;
   }
 
@@ -386,7 +571,16 @@ function renderAll(data, sourceName, locName){
   const endLbl   = weekdayHourLabel(t[bw.idx + 2] ?? t[bw.idx + 1]);
   setText(els.bestWindow, `${startLbl} → ${endLbl}\nMenos chuva + menos rajadas.`);
 
-  setText(els.windSuggestion, windDirectionSuggestion(dir));
+  // ✅ Só aqui é que alterámos o conteúdo da caixa "Sugestão de sentido"
+  // Usa o modelo novo; se falhar por algum motivo, cai no fallback antigo.
+  let senseTxt = "";
+  try{
+    senseTxt = buildSenseSuggestion(data, i, DEFAULT_RIDE_HOURS);
+  } catch (e){
+    senseTxt = windDirectionSuggestionFallback(dir);
+  }
+  setText(els.windSuggestion, senseTxt);
+
   setText(els.source, sourceName);
 }
 
@@ -416,9 +610,6 @@ async function refresh(){
 function init(){
   if (!els.select || !els.updated) return;
 
-  // garante que não duplica options em reloads
-  els.select.innerHTML = "";
-
   for (const l of LOCATIONS){
     const opt = document.createElement("option");
     opt.value = l.id;
@@ -426,7 +617,6 @@ function init(){
     els.select.appendChild(opt);
   }
 
-  // Alcabideche pré-definida
   els.select.value = "alcabideche";
   els.select.addEventListener("change", refresh);
 
