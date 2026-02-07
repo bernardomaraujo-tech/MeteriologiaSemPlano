@@ -14,6 +14,10 @@
   --radiusSm: 16px;
 
   --line: rgba(255,255,255,0.18);
+
+  /* TABELAS: colunas fixas */
+  --colTime: 128px; /* Hora / Dia */
+  --colIcon: 54px;  /* ícone */
 }
 
 *{ box-sizing:border-box; }
@@ -35,45 +39,55 @@ a:visited{ color: rgba(255,255,255,0.92); }
   padding: 14px 0 26px;
 }
 
+/* HERO */
 .hero{
   text-align:center;
-  padding: 18px 12px 8px;
+  padding: 18px 12px 10px;
 }
 
 .logo{
-  width: 92px;
+  width: 96px;
   height: auto;
   margin: 0 auto 10px;
   display:block;
 }
 
+.logoFallback{
+  font-weight: 900;
+  letter-spacing: 1px;
+  font-size: 18px;
+  opacity: 0.9;
+  margin-bottom: 10px;
+}
+
 .heroLoc{
   font-size: 34px;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: -0.4px;
   margin: 0;
 }
 
 .heroTemp{
-  font-size: 96px;
+  font-size: 92px; /* mais próximo do inicial */
   line-height: 1.02;
-  font-weight: 800;
+  font-weight: 900;
   margin: 6px 0 6px;
   letter-spacing: -2px;
 }
 
 .heroMeta{
-  font-size: 16px;
+  font-size: 15px;
   color: var(--muted);
   margin: 0 0 8px;
 }
 
 .updated{
-  font-size: 13px;
+  font-size: 12.5px;
   color: var(--muted2);
   margin-top: 4px;
 }
 
+/* CARDS */
 .card{
   background: var(--card);
   border: 1px solid var(--cardBorder);
@@ -86,9 +100,10 @@ a:visited{ color: rgba(255,255,255,0.92); }
 }
 
 .cardTitle{
-  font-size: 16px;
+  font-size: 15px;
   color: var(--muted);
   margin: 0 0 10px;
+  font-weight: 700;
 }
 
 .selectWrap{
@@ -102,13 +117,12 @@ select{
   outline: none;
   background: transparent;
   color: var(--text);
-  font-size: 18px;
+  font-size: 17px;
   padding: 14px 14px;
   appearance:none;
 }
 
-/* -------- Agora -------- */
-
+/* AGORA */
 .nowGrid{
   display:grid;
   grid-template-columns: 1fr 168px;
@@ -119,25 +133,25 @@ select{
 .nowRows{
   display:grid;
   grid-template-columns: 1fr auto;
-  gap: 10px 10px;
+  gap: 8px 10px;
   align-items:center;
   padding-right: 2px;
 }
 
 .nowLabel{
   color: var(--muted);
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .nowValue{
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 22px;
+  font-weight: 800;
   letter-spacing: -0.2px;
   text-align:right;
   white-space: nowrap;
 }
 
-/* Direção (rosa simples) */
+/* Rosa simples */
 .dirDial{
   width: 150px;
   height: 150px;
@@ -151,8 +165,8 @@ select{
 .dirDial .mark{
   position:absolute;
   font-size: 14px;
-  font-weight: 700;
-  color: rgba(255,255,255,0.72);
+  font-weight: 800;
+  color: rgba(255,255,255,0.74);
 }
 .dirDial .n{ top: 8px; left: 50%; transform: translateX(-50%); }
 .dirDial .e{ right: 10px; top: 50%; transform: translateY(-50%); }
@@ -189,8 +203,7 @@ select{
   background: rgba(255,255,255,0.88);
 }
 
-/* -------- “O que vestir” (formatação boa, sem imagens) -------- */
-
+/* VESTIR */
 .pillGroup{
   display:flex;
   flex-direction:column;
@@ -209,33 +222,31 @@ select{
 }
 
 .pillKey{
-  color: rgba(255,255,255,0.88);
-  font-weight: 800;
-  font-size: 18px;
+  color: rgba(255,255,255,0.90);
+  font-weight: 900;
+  font-size: 17px;
 }
 
 .pillValue{
-  color: rgba(255,255,255,0.85);
-  font-size: 15px;
+  color: rgba(255,255,255,0.86);
+  font-size: 14.5px;
   line-height: 1.32;
 }
 
-.pillValue b{
-  color: rgba(255,255,255,0.92);
-}
+.pillValue b{ color: rgba(255,255,255,0.93); }
 
-/* Alert pill */
+/* ALERTAS */
 .pill{
   background: rgba(255,255,255,0.10);
   border: 1px solid rgba(255,255,255,0.16);
   border-radius: var(--radiusSm);
   padding: 12px;
-  font-size: 16px;
+  font-size: 15px;
   color: rgba(255,255,255,0.86);
+  margin-bottom: 8px;
 }
 
-/* -------- Tabelas (hora + ícone fixos) -------- */
-
+/* TABELAS */
 .tableWrap{
   overflow:auto;
   border-radius: var(--radiusSm);
@@ -246,15 +257,16 @@ select{
 table{
   width: 100%;
   border-collapse: collapse;
-  min-width: 560px;
+  min-width: 620px;
 }
 
 th, td{
   padding: 12px 10px;
   border-bottom: 1px solid rgba(255,255,255,0.12);
   text-align: center;
-  font-size: 16px;
+  font-size: 15px;
   color: rgba(255,255,255,0.88);
+  white-space: nowrap;
 }
 
 th{
@@ -264,27 +276,33 @@ th{
   background: rgba(0,0,0,0.18);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  font-weight: 800;
-  color: rgba(255,255,255,0.94);
+  font-weight: 900;
+  color: rgba(255,255,255,0.95);
 }
 
-/* Hora fixa (coluna 1) */
-td:first-child, th:first-child{
+/* largura das colunas fixas (para o sticky ficar certo) */
+.colTime{ width: var(--colTime); }
+.colIcon{ width: var(--colIcon); }
+
+/* Hora/Dia FIXO */
+td.timeCell, th.timeCell{
   position: sticky;
   left: 0;
-  z-index: 4;
+  z-index: 5;
   text-align: left;
   padding-left: 14px;
   background: rgba(0,0,0,0.18);
+  font-weight: 900;
+  color: rgba(255,255,255,0.96);
 }
 
-/* Ícone fixo (coluna 2) */
-.iconCell{
-  width: 52px;
+/* ÍCONE FIXO colado à hora */
+td.iconCell, th.iconCell{
   position: sticky;
-  left: 120px; /* fica colado à coluna Hora */
-  z-index: 4;
+  left: var(--colTime);
+  z-index: 5;
   background: rgba(0,0,0,0.16);
+  width: var(--colIcon);
 }
 
 .icon{
@@ -292,6 +310,7 @@ td:first-child, th:first-child{
   opacity: 0.98;
 }
 
+/* Toggle 48h */
 .hidden{ display:none; }
 
 .toggleRow{
@@ -318,7 +337,6 @@ button{
   border: 1px solid rgba(255,255,255,0.16);
   background: rgba(0,0,0,0.08);
 }
-
 .camFooter{
   font-size: 13px;
   color: rgba(255,255,255,0.78);
@@ -326,6 +344,7 @@ button{
 }
 
 @media (max-width: 380px){
+  :root{ --colTime: 118px; --colIcon: 52px; }
   .heroTemp{ font-size: 84px; }
   .nowGrid{ grid-template-columns: 1fr 150px; }
   .dirDial{ width: 140px; height: 140px; }
