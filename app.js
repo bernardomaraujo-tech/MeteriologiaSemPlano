@@ -209,6 +209,206 @@ function windDirectionSuggestion(deg){
   return `De ${from}. Favorece ir para leste; regresso para oeste é mais pesado.`;
 }
 
+/* =========================================================
+   SUGESTÃO DE SENTIDO (NOVO) — só afeta a caixa "Sugestão de sentido"
+   ========================================================= */
+function routeSenseSuggestion(data, startIndex, opts = {}){
+  const sport = opts.sport ?? "bike"; // bike | run | walk
+  const durationH = opts.durationH ?? (sport === "bike" ? 3 : sport === "run" ? 1.5 : 1.5);
+  const blockMin = opts.blockMin ?? 15; // recomendado 10–15 min
+
+  const t = data.hourly.time ?? [];
+  if (!t.length) return "—";
+
+  const temp = data.hourly.temperature_2m ?? [];
+  const feels = data.hourly.apparent_temperature ?? temp;
+  const wind = data.hourly.wind_speed_10m ?? [];
+  const gust = data.hourly.wind_gusts_10m ?? [];
+  const wdirFrom = data.hourly.wind_direction_10m ?? [];
+  const prcp = data.hourly.precipitation ?? [];
+  const pop = data.hourly.precipitation_probability ?? [];
+  const wcode = data.hourly.weather_code ?? [];
+
+  const norm360 = (deg) => ((deg % 360) + 360) % 360;
+  const angDiff = (a, b) => {
+    const d = Math.abs(norm360(a) - norm360(b));
+    return d > 180 ? 360 - d : d;
+  };
+  const dir8 = (deg) => {
+    const dirs = ["N","NE","E","SE","S","SO","O","NO"];
+    const idx = Math.round(norm360(deg) / 45) % 8;
+    return dirs[idx];
+  };
+  const snapTo8 = (deg) => Math.round(norm360(deg) / 45) * 45;
+
+  const blocks = Math.max(2, Math.round((durationH * 60) / blockMin));
+  const half = Math.max(1, Math.floor(blocks / 2));
+
+  // índices por bloco (aproximação: um índice horário por bloco)
+  const idxForBlock = (b) => {
+    const hourOffset = (b * blockMin) / 60;
+    const idx = Math.min(startIndex + Math.round(hourOffset), t.length - 1);
+    return idx;
+  };
+
+  const isThunder = (code) => code === 95 || code === 96 || code === 99;
+
+  // pesos por modalidade (mais conservador para bike)
+  const WEIGHTS = {
+    bike: { head: 1.00, cross: 0.45, gust: 0.35, rain: 0.55, chill: 0.20 },
+    run:  { head: 0.35, cross: 0.15, gust: 0.15, rain: 0.60, chill: 0.45 },
+    walk: { head: 0.45, cross: 0.25, gust: 0.20, rain: 0.65, chill: 0.35 },
+  }[sport] ?? { head: 0.8, cross: 0.3, gust: 0.3, rain: 0.6, chill: 0.3 };
+
+  function windComponents(i, bearingDeg){
+    const ws = Math.max(0, wind[i] ?? 0);
+
+    // API dá direção "de onde vem"; convertemos para "para onde vai" (+180)
+    const from = norm360(wdirFrom[i] ?? 0);
+    const to = norm360(from + 180);
+
+    // diff = 0 => vento a favor; diff = 180 => vento contra
+    const diff = angDiff(to, bearingDeg);
+    const rad = (diff * Math.PI) / 180;
+
+    const along = ws * Math.cos(rad);            // + a favor; - contra
+    const cross = Math.abs(ws * Math.sin(rad));  // lateral
+
+    const head = Math.max(0, -along);            // penaliza vento contra
+    const tail = Math.max(0, along);             // ajuda (não penaliza)
+    return { head, tail, cross };
+  }
+
+  function rainPenalty(i){
+    const mm = Math.max(0, prcp[i] ?? 0);
+    const p  = Math.max(0, Math.min(100, pop[i] ?? 0)) / 100;
+    // mm/h domina; prob reforça risco
+    return (mm * 1.0) + (p * 0.6);
+  }
+
+  function chillPenalty(i){
+    const f = (feels[i] ?? temp[i] ?? 0);
+    if (f >= 12) return 0;
+    return (12 - f) / 6; // 0..~2
+  }
+
+  function blockScore(i, bearingDeg){
+    const { head, cross } = windComponents(i, bearingDeg);
+    const g = Math.max(0, gust[i] ?? 0);
+    const rp = rainPenalty(i);
+    const cp = chillPenalty(i);
+    const thunder = isThunder(wcode[i]) ? 6 : 0;
+
+    return (
+      WEIGHTS.head  * head +
+      WEIGHTS.cross * cross +
+      WEIGHTS.gust  * (g / 10) +
+      WEIGHTS.rain  * (rp * 3) +
+      WEIGHTS.chill * (cp * 2) +
+      thunder
+    );
+  }
+
+  function simulate(option){
+    const scores = [];
+    let thunderHit = false;
+
+    for (let b=0; b<blocks; b++){
+      const i = idxForBlock(b);
+      const bearing = (b < half) ? option.b1 : option.b2;
+      if (isThunder(wcode[i])) thunderHit = true;
+      scores.push(blockScore(i, bearing));
+    }
+
+    const avg = (arr) => arr.reduce((a,c)=>a+c,0) / Math.max(1, arr.length);
+    const first = scores.slice(0, half);
+    const second = scores.slice(half);
+
+    const firstAvg = avg(first);
+    const secondAvg = avg(second);
+    const totalAvg = avg(scores);
+    const improvement = firstAvg - secondAvg; // >0 => melhora no fim
+
+    const mean = totalAvg;
+    const variance = scores.reduce((a,c)=>a + (c-mean)*(c-mean), 0) / Math.max(1, scores.length);
+    const std = Math.sqrt(variance);
+
+    return { firstAvg, secondAvg, totalAvg, improvement, std, thunderHit };
+  }
+
+  // Sentidos “A” e “B” (sem geometria real do percurso):
+  // A: começa mais a favor do vento "para onde vai"
+  // B: começa mais contra (para garantir “castigo” no início e “prémio” no fim quando faz sentido)
+  const windFromNow = norm360(wdirFrom[startIndex] ?? 0);
+  const windToNow   = norm360(windFromNow + 180);
+
+  const bearingA1 = snapTo8(windToNow);
+  const bearingB1 = snapTo8(windFromNow);
+  const bearingA2 = norm360(bearingA1 + 180);
+  const bearingB2 = norm360(bearingB1 + 180);
+
+  const A = simulate({ b1: bearingA1, b2: bearingA2 });
+  const B = simulate({ b1: bearingB1, b2: bearingB2 });
+
+  // Trovoada: prioridade segurança
+  if (A.thunderHit && B.thunderHit){
+    return `⚠️ Trovoada prevista durante o período do treino. Evita uma volta longa agora (segurança > sentido).`;
+  }
+
+  const candidates = [
+    { key: "A", b1: bearingA1, b2: bearingA2, sim: A },
+    { key: "B", b1: bearingB1, b2: bearingB2, sim: B },
+  ].filter(c => !c.sim.thunderHit);
+
+  // Escolha: maximiza "pior→melhor"; em empate, menor total (mais confortável)
+  candidates.sort((c1, c2) => {
+    if (c2.sim.improvement !== c1.sim.improvement) return c2.sim.improvement - c1.sim.improvement;
+    return c1.sim.totalAvg - c2.sim.totalAvg;
+  });
+
+  const best = candidates[0] ?? { key:"A", b1:bearingA1, b2:bearingA2, sim:A };
+  const other = (best.key === "A") ? B : A;
+
+  // Confiança: diferença vs variabilidade
+  const diff = Math.abs(best.sim.improvement - other.improvement);
+  const denom = (best.sim.std + other.std) / 2 || 1;
+  const ratio = diff / denom;
+
+  let conf = "Baixa";
+  if (ratio >= 1.2) conf = "Alta";
+  else if (ratio >= 0.6) conf = "Média";
+
+  // Razões (curtas, úteis)
+  const reasons = [];
+  if (best.sim.improvement > 0.6) reasons.push("2ª metade claramente mais confortável");
+  else if (best.sim.improvement > 0.2) reasons.push("2ª metade ligeiramente melhor");
+  else reasons.push("diferenças pequenas (pouco impacto)");
+
+  const avgOf = (arr) => arr.reduce((a,c)=>a+c,0)/Math.max(1,arr.length);
+  const blocksIdx = Array.from({length: blocks}, (_,b)=>idxForBlock(b));
+  const firstIdx = blocksIdx.slice(0, half);
+  const secondIdx = blocksIdx.slice(half);
+
+  const gustFirst = avgOf(firstIdx.map(i=>gust[i] ?? 0));
+  const gustSecond = avgOf(secondIdx.map(i=>gust[i] ?? 0));
+  if (gustSecond < gustFirst - 3) reasons.push("rajadas descem no final");
+  else if (gustSecond > gustFirst + 3) reasons.push("rajadas sobem no final");
+
+  const rainFirst = avgOf(firstIdx.map(i=>prcp[i] ?? 0));
+  const rainSecond = avgOf(secondIdx.map(i=>prcp[i] ?? 0));
+  if (rainSecond < rainFirst - 0.2) reasons.push("menos chuva no final");
+  else if (rainSecond > rainFirst + 0.2) reasons.push("mais chuva no final");
+
+  const startDir = dir8(best.b1);
+  const endDir   = dir8(best.b2);
+
+  const sportLabel = (sport === "bike") ? "Bicicleta" : (sport === "run") ? "Corrida" : "Caminhada";
+
+  return `Sentido recomendado (${sportLabel} ~${durationH}h) — começa para ${startDir} e fecha para ${endDir}.
+Confiança: ${conf}.
+Razões: ${reasons.slice(0,3).join(" · ")}.`;
+}
+
 /* O que vestir — versão simples (as tuas regras) */
 function clothingSuggestion({ temp, wind, gust, pop, prcp, sport }){
   const rainy = (pop ?? 0) >= 25 || (prcp ?? 0) >= 0.2;
@@ -384,7 +584,12 @@ function renderAll(data, sourceName, locName){
   const endLbl   = weekdayHourLabel(t[bw.idx + 2] ?? t[bw.idx + 1]);
   setText(els.bestWindow, `${startLbl} → ${endLbl}\nMenos chuva + menos rajadas.`);
 
-  setText(els.windSuggestion, windDirectionSuggestion(dir));
+  // ✅ Só muda esta caixa (Sugestão de sentido)
+  setText(
+    els.windSuggestion,
+    routeSenseSuggestion(data, i, { sport: "bike", durationH: 3, blockMin: 15 })
+  );
+
   setText(els.source, sourceName);
 }
 
