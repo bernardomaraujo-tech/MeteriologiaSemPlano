@@ -1,4 +1,4 @@
-/* SEM PLANO Weather — styles.css */
+/* SEM PLANO Weather — styles.css (revert: sem imagens na secção de vestir) */
 
 :root{
   --bg1:#cfe0ea;
@@ -143,7 +143,7 @@ select{
   white-space: nowrap;
 }
 
-/* Direção (ponteiro simples, sem velocidade) */
+/* Direção (ponteiro simples) */
 .dirDial{
   width: 150px;
   height: 150px;
@@ -159,7 +159,6 @@ select{
   font-size: 14px;
   font-weight: 700;
   color: rgba(255,255,255,0.72);
-  opacity: 0.95;
 }
 
 .dirDial .n{ top: 8px; left: 50%; transform: translateX(-50%); }
@@ -199,7 +198,7 @@ select{
   background: rgba(255,255,255,0.88);
 }
 
-/* -------- O que vestir -------- */
+/* -------- O que vestir (texto bem formatado) -------- */
 
 .pillGroup{
   display:flex;
@@ -228,6 +227,10 @@ select{
   color: rgba(255,255,255,0.85);
   font-size: 15px;
   line-height: 1.32;
+}
+
+.pillValue b{
+  color: rgba(255,255,255,0.92);
 }
 
 /* -------- Alertas -------- */
@@ -289,7 +292,7 @@ td:first-child, th:first-child{
 .iconCell{
   width: 52px;
   position: sticky;
-  left: 120px; /* alinhado com a largura da coluna Hora */
+  left: 120px;
   z-index: 4;
   background: rgba(0,0,0,0.16);
 }
@@ -333,41 +336,9 @@ button{
   margin-top: 8px;
 }
 
-/* -------- Ícones de roupa (bem pequenos) -------- */
-
-.gearIcons{
-  display:flex;
-  flex-wrap:wrap;
-  gap: 6px;
-  margin-top: 8px;
-  opacity: 0.92;
-}
-
-.gearIcon{
-  width: 20px;
-  height: 20px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  border-radius: 7px;
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.14);
-  color: rgba(255,255,255,0.90);
-}
-
-.gearIcon svg{
-  width: 12px;
-  height: 12px;
-  display:block;
-  fill: currentColor; /* robusto Safari */
-}
-
-/* Mobile fine-tuning */
 @media (max-width: 380px){
   .heroTemp{ font-size: 84px; }
   .nowGrid{ grid-template-columns: 1fr 150px; }
   .dirDial{ width: 140px; height: 140px; }
   .pillRow{ grid-template-columns: 104px 1fr; }
-  .gearIcon{ width: 18px; height: 18px; }
-  .gearIcon svg{ width: 11px; height: 11px; }
 }
