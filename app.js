@@ -88,7 +88,7 @@ function iconForWeatherCode(code, isDay){
   return "•";
 }
 
-/* ===== Modelo “o que vestir” (o teu original, com Base + Extras) ===== */
+/* ===== Modelo simples de “o que vestir” (o teu original) ===== */
 
 function isRainy(pop, mm){
   return (pop ?? 0) >= 25 || (mm ?? 0) >= 0.2;
@@ -136,22 +136,48 @@ function dressRunning(label){
       return "—";
   }
 }
-function dressWalking(label){
+function dressWalking(){
   return "Vai por camadas e dá mais peso à chuva quando chove (impermeável fino).";
 }
 
-function buildDressBlock({ sportName, baseText, rainy, windy }){
-  const bits = [];
-  bits.push(`<b>${baseText}</b>`);
-  const extras = [];
-  if (windy) extras.push("Corta-vento/colete");
-  if (rainy) extras.push("Impermeável fino");
+function renderDress(now){
+  const tempEff = now.feels ?? now.temp;
+  const tLabel = thermalLabel(tempEff);
 
-  return `
-    <div><b>${sportName}</b></div>
-    <div>Base: ${baseText}${windy ? " (+ corta-vento)" : ""}${rainy ? " (+ impermeável)" : ""}</div>
-    <div>Extras: ${extras.length ? extras.join(" + ") : "—"}</div>
-  `;
+  const rainy = isRainy(now.pop, now.prcp);
+  const windy = isWindy(now.wind, now.gust);
+
+  const extrasCommon = [];
+  if (windy) extrasCommon.push("Corta-vento/colete");
+  if (rainy) extrasCommon.push("Impermeável fino");
+
+  const header = `${tLabel}${rainy ? " · Chuva provável" : ""}${windy ? " · Vento relevante" : ""}`;
+  const extrasTxt = extrasCommon.length ? extrasCommon.join(" + ") : "—";
+
+  // Ciclismo
+  const bikeBase = dressCycling(tLabel);
+  setHTML(els.dressBike, `
+    <div><b>${header}</b></div>
+    <div>Base: ${bikeBase}${windy ? " (+ corta-vento)" : ""}${rainy ? " (+ impermeável)" : ""}</div>
+    <div>Extras: ${extrasTxt}</div>
+  `);
+
+  // Corrida (bias leve)
+  const runLabel = (tLabel === "Muito Frio") ? "Frio" : tLabel;
+  const runBase = dressRunning(runLabel);
+  setHTML(els.dressRun, `
+    <div><b>${header}</b></div>
+    <div>Base: ${runBase}${windy ? " (+ corta-vento)" : ""}${rainy ? " (+ impermeável)" : ""}</div>
+    <div>Extras: ${extrasTxt}</div>
+  `);
+
+  // Caminhada
+  const walkBase = dressWalking();
+  setHTML(els.dressWalk, `
+    <div><b>${header}</b></div>
+    <div>Base: ${walkBase}</div>
+    <div>Extras: ${extrasTxt}</div>
+  `);
 }
 
 /* ===== Open-Meteo ===== */
@@ -235,14 +261,15 @@ function renderAlerts(data){
   const anyRainSoon = next2.some(k => (pops[k] ?? 0) >= 60 || (prcps[k] ?? 0) >= 0.4);
   const anyGustSoon = next2.some(k => (gusts[k] ?? 0) >= 45);
 
-  const pills = [];
-  if (anyRainSoon) pills.push(`<div class="pill">☔ Chuva provável nas próximas 2h</div>`);
-  if (anyGustSoon) pills.push(`<div class="pill">💨 Rajadas fortes nas próximas 2h</div>`);
-  if (!pills.length) pills.push(`<div class="pill">✅ Sem alertas relevantes nas próximas 2h</div>`);
+  const out = [];
+  if (anyRainSoon) out.push(`<div class="pill">☔ Chuva provável nas próximas 2h</div>`);
+  if (anyGustSoon) out.push(`<div class="pill">💨 Rajadas fortes nas próximas 2h</div>`);
+  if (!out.length) out.push(`<div class="pill">✅ Sem alertas relevantes nas próximas 2h</div>`);
 
-  setHTML(els.alerts, pills.join(""));
+  setHTML(els.alerts, out.join(""));
 }
 
+/* ✅ TABELAS: Hora/Dia + Ícone juntos e fixos */
 function renderTables(data){
   const t = data.hourly.time;
   const temp = data.hourly.temperature_2m;
@@ -258,31 +285,50 @@ function renderTables(data){
 
   const build = (n, tableEl, labelFn) => {
     const rows = [];
-    rows.push(`<tr>
-      <th>Hora</th>
-      <th class="iconCell"></th>
-      <th>Temp</th>
-      <th>Vento</th>
-      <th>Raj.</th>
-      <th>Dir</th>
-      <th>Chuva</th>
-      <th>Prob.</th>
-    </tr>`);
+
+    rows.push(`
+      <colgroup>
+        <col class="colTime" />
+        <col class="colIcon" />
+        <col />
+        <col />
+        <col />
+        <col />
+        <col />
+        <col />
+      </colgroup>
+      <thead>
+        <tr>
+          <th class="timeCell">Hora</th>
+          <th class="iconCell"></th>
+          <th>Temp</th>
+          <th>Vento</th>
+          <th>Raj.</th>
+          <th>Dir</th>
+          <th>Chuva</th>
+          <th>Prob.</th>
+        </tr>
+      </thead>
+      <tbody>
+    `);
 
     for (let i=start; i<Math.min(start+n, t.length); i++){
       const ico = iconForWeatherCode(wcode[i] ?? -1, (isDayArr[i] ?? 1) === 1);
-      rows.push(`<tr>
-        <td>${labelFn(t[i])}</td>
-        <td class="iconCell"><span class="icon">${ico}</span></td>
-        <td>${Math.round(temp[i])}°</td>
-        <td>${fmtKmh(wind[i])}</td>
-        <td>${fmtKmh(gust[i])}</td>
-        <td>${windDirShort(dir[i])}</td>
-        <td>${fmtMm(prcp[i] ?? 0)}</td>
-        <td>${pop[i] == null ? "—" : fmtPct(pop[i])}</td>
-      </tr>`);
+      rows.push(`
+        <tr>
+          <td class="timeCell">${labelFn(t[i])}</td>
+          <td class="iconCell"><span class="icon">${ico}</span></td>
+          <td>${Math.round(temp[i])}°</td>
+          <td>${fmtKmh(wind[i])}</td>
+          <td>${fmtKmh(gust[i])}</td>
+          <td>${windDirShort(dir[i])}</td>
+          <td>${fmtMm(prcp[i] ?? 0)}</td>
+          <td>${pop[i] == null ? "—" : fmtPct(pop[i])}</td>
+        </tr>
+      `);
     }
 
+    rows.push(`</tbody>`);
     tableEl.innerHTML = rows.join("");
   };
 
@@ -299,9 +345,8 @@ function computeBestWindowNext12h(data){
   const start = nearestHourIndex(times);
   const end = Math.min(start + 12, times.length - 2);
 
-  // regra: só sugerir janelas entre 07h e 22h
   const START_H = 7;
-  const LAST_START_H = 20; // 2h window -> última a começar às 20
+  const LAST_START_H = 20;
 
   let bestI = null;
   let bestScore = -1;
@@ -342,41 +387,6 @@ function updateWindyCam(lat, lon){
   if (els.windyLink){
     els.windyLink.href = `https://www.windy.com/webcams?${lat},${lon},12`;
   }
-}
-
-function renderDress(now){
-  const tempEff = now.feels ?? now.temp;
-  const tLabel = thermalLabel(tempEff);
-
-  const rainy = isRainy(now.pop, now.prcp);
-  const windy = isWindy(now.wind, now.gust);
-
-  // Ciclismo
-  const bikeBase = dressCycling(tLabel);
-  const bikeHeader = `${tLabel}${rainy ? " · Chuva provável" : ""}${windy ? " · Vento relevante" : ""}`;
-  setHTML(els.dressBike, `
-    <div><b>${bikeHeader}</b></div>
-    <div>Base: ${bikeBase}${windy ? " (+ corta-vento)" : ""}${rainy ? " (+ impermeável)" : ""}</div>
-    <div>Extras: ${(windy || rainy) ? `${rainy ? "Impermeável fino" : ""}${(rainy && windy) ? " + " : ""}${windy ? "Corta-vento/colete" : ""}` : "—"}</div>
-  `);
-
-  // Corrida (aqueces mais rápido)
-  const runBase = dressRunning(tLabel === "Muito Frio" ? "Frio" : tLabel); // leve bias simples
-  const runHeader = `${tLabel}${rainy ? " · Chuva provável" : ""}${windy ? " · Vento relevante" : ""}`;
-  setHTML(els.dressRun, `
-    <div><b>${runHeader}</b></div>
-    <div>Base: ${runBase}${windy ? " (+ corta-vento)" : ""}${rainy ? " (+ impermeável)" : ""}</div>
-    <div>Extras: ${(windy || rainy) ? `${rainy ? "Impermeável fino" : ""}${(rainy && windy) ? " + " : ""}${windy ? "Corta-vento leve" : ""}` : "—"}</div>
-  `);
-
-  // Caminhada
-  const walkBase = dressWalking(tLabel);
-  const walkHeader = `${tLabel}${rainy ? " · Chuva provável" : ""}${windy ? " · Vento relevante" : ""}`;
-  setHTML(els.dressWalk, `
-    <div><b>${walkHeader}</b></div>
-    <div>Base: ${walkBase}</div>
-    <div>Extras: ${(windy || rainy) ? `${rainy ? "Impermeável fino" : ""}${(rainy && windy) ? " + " : ""}${windy ? "Corta-vento" : ""}` : "—"}</div>
-  `);
 }
 
 function renderAll(data, sourceName, locName){
