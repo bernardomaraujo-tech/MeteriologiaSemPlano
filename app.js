@@ -58,8 +58,14 @@ function toDirText(deg){
 }
 
 function setNeedle(deg){
-  // bússola: 0° = Norte
   els.compassNeedle.style.transform = `translateY(-50%) rotate(${deg}deg)`;
+}
+
+function weekdayHourLabel(iso){
+  const d = new Date(iso);
+  const wd = d.toLocaleDateString("pt-PT", { weekday:"short" });
+  const hh = iso.slice(11,16);
+  return `${wd.charAt(0).toUpperCase()+wd.slice(1)} ${hh}`;
 }
 
 /* Ícones (emoji) via weather_code Open-Meteo */
@@ -83,16 +89,12 @@ function iconForWeatherCode(code, isDay){
 }
 
 /* ============================================================
-   ✅ ÚNICA ALTERAÇÃO: SUGESTÃO DO QUE VESTIR (ROBUSTA)
+   ✅ ÚNICA ALTERAÇÃO: SUGESTÃO DO QUE VESTIR
    ============================================================ */
 function clothingSuggestion({ temp, wind, gust, pop, prcp, sport }){
-  // rainy (há risco de chuva) se: probabilidade >= 25% ou precipitação >= 0.2 mm
   const rainy = (pop ?? 0) >= 25 || (prcp ?? 0) >= 0.2;
-
-  // windy (vento relevante) se: vento >= 22 km/h ou rajadas >= 35 km/h
   const windy = (wind ?? 0) >= 22 || (gust ?? 0) >= 35;
 
-  // rótulo por temperatura
   let band = "";
   if (temp <= 6) band = "Muito Frio";
   else if (temp <= 11) band = "Frio";
@@ -103,7 +105,6 @@ function clothingSuggestion({ temp, wind, gust, pop, prcp, sport }){
   const add = (t) => t ? ` ${t}` : "";
 
   if (sport === "bike"){
-    // Ciclismo (mais sensível a vento/descidas)
     if (temp <= 6){
       return `${band}: base layer + jersey ML + colete/casaco + luvas grossas + calças + proteção sapatos.${add(rainy ? "Impermeável." : "")}`;
     }
@@ -120,7 +121,6 @@ function clothingSuggestion({ temp, wind, gust, pop, prcp, sport }){
   }
 
   if (sport === "run"){
-    // Corrida (aqueces rápido)
     if (temp <= 6){
       return `${band}: térmica ML + calças + corta-vento leve.`;
     }
@@ -136,7 +136,6 @@ function clothingSuggestion({ temp, wind, gust, pop, prcp, sport }){
     return `${band}: muito leve + hidratação.`;
   }
 
-  // Caminhada (mais “casual”): vai por camadas e dá mais peso à chuva
   if (temp <= 6){
     return `${band}: vai por camadas.${add(rainy ? "Impermeável fino." : "")}`;
   }
@@ -185,7 +184,6 @@ function buildTable(el, rows, withWeekday){
 }
 
 function best2hWindow(hours){
-  // restringe entre 07h e 22h
   const filtered = hours.filter(h => {
     const hr = parseInt(h.iso.slice(11,13), 10);
     return hr >= 7 && hr <= 22;
@@ -193,7 +191,6 @@ function best2hWindow(hours){
 
   if (filtered.length < 3) return null;
 
-  // escolhe janela 2h nas próximas 12h com menos (chuva + rajadas)
   const slice = filtered.slice(0, 12);
   let best = null;
 
@@ -237,7 +234,6 @@ function renderAlerts(alerts){
 }
 
 function windLoopSuggestion(deg){
-  // simples: sugerir ir para o lado para onde o vento ajuda a voltar
   const dirs = [
     { name:"N", min:337.5, max:360 },
     { name:"N", min:0, max:22.5 },
@@ -252,13 +248,10 @@ function windLoopSuggestion(deg){
 
   const d = ((deg % 360) + 360) % 360;
   const hit = dirs.find(x => d >= x.min && d < x.max) || { name:"—" };
-
-  // vento "de O" (270) empurra para leste; sugere ir para leste e voltar a oeste
   return `De ${hit.name} (${Math.round(d)}°). Favorece ir para leste; regresso para oeste é mais pesado.`;
 }
 
 async function fetchWithFallback(loc){
-  // Open-Meteo (sem chave) + fallback simples
   const url = `https://api.open-meteo.com/v1/forecast?latitude=${loc.lat}&longitude=${loc.lon}&hourly=temperature_2m,apparent_temperature,precipitation,precipitation_probability,weather_code,wind_speed_10m,wind_gusts_10m,wind_direction_10m&daily=temperature_2m_max,temperature_2m_min&forecast_days=3&timezone=Europe%2FLisbon`;
 
   const r = await fetch(url, { cache: "no-store" });
@@ -293,7 +286,6 @@ function renderAll(json, source, locName){
   const updated = new Date().toLocaleString("pt-PT");
   els.heroUpdated.textContent = `Última atualização: ${updated}`;
 
-  // agora
   const wind = h.wind_speed_10m[nowIdx];
   const gust = h.wind_gusts_10m[nowIdx];
   const dirDeg = h.wind_direction_10m[nowIdx];
@@ -307,15 +299,12 @@ function renderAll(json, source, locName){
   els.nowRain.textContent = fmtMm(rain);
   els.nowPop.textContent = fmtPct(pop);
 
-  // vestir (usa a mesma hora do "agora")
   els.wearBike.textContent = clothingSuggestion({ temp: feels, wind, gust, pop, prcp: rain, sport:"bike" });
   els.wearRun.textContent  = clothingSuggestion({ temp: feels, wind, gust, pop, prcp: rain, sport:"run" });
   els.wearWalk.textContent = clothingSuggestion({ temp: feels, wind, gust, pop, prcp: rain, sport:"walk" });
 
-  // alertas
   renderAlerts(computeAlerts({ pop, rain, gust }));
 
-  // próximas 8h
   const rows8 = [];
   for (let i=0; i<8; i++){
     const idx = nowIdx + i;
@@ -332,7 +321,6 @@ function renderAll(json, source, locName){
   }
   buildTable(els.table8, rows8, false);
 
-  // melhor janela (2h / próximas 12h)
   const hours12 = [];
   for (let i=0; i<24; i++){
     const idx = nowIdx + i;
@@ -356,10 +344,8 @@ function renderAll(json, source, locName){
     els.bestWindow.textContent = "—";
   }
 
-  // sugestão de sentido
   els.windSuggestion.textContent = windLoopSuggestion(dirDeg);
 
-  // próximas 48h
   const rows48 = [];
   for (let i=0; i<48; i++){
     const idx = nowIdx + i;
@@ -376,7 +362,6 @@ function renderAll(json, source, locName){
   }
   buildTable(els.table48, rows48, true);
 
-  // webcam (windy)
   const params = JSON.stringify({ lat: json.latitude, lon: json.longitude });
   els.windyWebcamAnchor.setAttribute("data-params", params);
   els.windyWebcamLink.href = `https://www.windy.com/webcams?${json.latitude},${json.longitude},12`;
@@ -393,7 +378,6 @@ async function refresh(){
 }
 
 function init(){
-  // preencher select
   els.locationSelect.innerHTML = LOCATIONS.map(l => `<option value="${l.id}">${l.name}</option>`).join("");
   els.locationSelect.value = "alcabideche";
 
