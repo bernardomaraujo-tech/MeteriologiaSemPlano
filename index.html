@@ -3,147 +3,132 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="theme-color" content="#6fa7c6" />
-  <title>SEM PLANO — Meteo</title>
-
-  <link rel="stylesheet" href="./styles.css?v=20260206_fix1" />
+  <title>SEM PLANO — Tempo</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <div class="bg"></div>
+  <main class="container">
 
-  <div class="phone">
-    <header class="header">
-      <img src="./logo.png" alt="SEM PLANO" class="logo" />
-
-      <div class="hero">
-        <div class="heroLoc" id="heroLoc">Alcabideche</div>
-        <div class="heroTemp" id="heroTemp">—°</div>
-        <div class="heroMeta" id="heroMeta">Sensação: —° · Máx: —° · Mín: —°</div>
-      </div>
-
-      <div class="updated" id="updated">—</div>
-
-      <div class="controls">
-        <select id="locationSelect" class="select" aria-label="Selecionar localidade"></select>
-      </div>
+    <header class="hero">
+      <img class="logo" src="SemPlanoExploraoTeuMundo.png" alt="SEM PLANO" />
+      <h1 id="heroLoc" class="heroLoc">Alcabideche</h1>
+      <div id="heroTemp" class="heroTemp">—°</div>
+      <div id="heroMeta" class="heroMeta">Sensação: —° · Máx: —° · Mín: —°</div>
+      <div id="updated" class="updated">—</div>
     </header>
 
-    <main class="stack">
+    <section class="card selectWrap">
+      <select id="locationSelect" aria-label="Localidade"></select>
+    </section>
 
-      <!-- AGORA (novo: valores mais perto + rosa simples só direção) -->
-      <section class="card glass">
-        <div class="cardTitle">Agora</div>
+    <section class="card">
+      <div class="cardTitle">Agora</div>
 
-        <div class="nowLayout">
-          <div class="kv">
-            <div class="k">Vento</div><div class="v" id="nowWind">—</div>
-            <div class="k">Rajadas</div><div class="v" id="nowGust">—</div>
-            <div class="k">Direção</div><div class="v" id="nowDirTxt">—</div>
-            <div class="k">Chuva</div><div class="v" id="nowRain">—</div>
-            <div class="k">Prob.</div><div class="v" id="nowPop">—</div>
-          </div>
+      <div class="nowGrid">
+        <div class="nowRows">
+          <div class="nowLabel">Vento</div>
+          <div id="nowWind" class="nowValue">—</div>
 
-          <div class="dirCard" aria-label="Direção do vento">
-            <div class="dirTitle">Direção</div>
-            <div class="compass">
-              <div class="compassRing"></div>
+          <div class="nowLabel">Rajadas</div>
+          <div id="nowGust" class="nowValue">—</div>
 
-              <div class="compassLabel n">N</div>
-              <div class="compassLabel e">E</div>
-              <div class="compassLabel s">S</div>
-              <div class="compassLabel w">O</div>
+          <div class="nowLabel">Direção</div>
+          <div id="nowDirTxt" class="nowValue">—</div>
 
-              <div class="needle" id="dirNeedle"></div>
-              <div class="needleDot"></div>
-            </div>
-          </div>
+          <div class="nowLabel">Chuva</div>
+          <div id="nowRain" class="nowValue">—</div>
+
+          <div class="nowLabel">Prob.</div>
+          <div id="nowPop" class="nowValue">—</div>
         </div>
-      </section>
 
-      <!-- O que vestir (antigo: com pills) -->
-      <section class="card glass">
-        <div class="dressTitle">O que vestir (sugestão)</div>
-        <div class="dressGrid">
-          <div class="pillRow">
-            <span class="pillLabel">Ciclismo</span>
-            <span class="pillValue" id="dressBike">—</span>
-          </div>
-          <div class="pillRow">
-            <span class="pillLabel">Corrida</span>
-            <span class="pillValue" id="dressRun">—</span>
-          </div>
-          <div class="pillRow">
-            <span class="pillLabel">Caminhada</span>
-            <span class="pillValue" id="dressWalk">—</span>
-          </div>
+        <div class="dirDial" aria-label="Direção do vento">
+          <div class="mark n">N</div>
+          <div class="mark e">E</div>
+          <div class="mark s">S</div>
+          <div class="mark w">O</div>
+          <div id="dirNeedle" class="dirNeedle"></div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Alertas (antigo: pills) -->
-      <section class="card glass">
-        <div class="cardTitle">Alertas</div>
-        <div id="alerts" class="alerts">—</div>
-      </section>
+    <section class="card">
+      <div class="cardTitle">O que vestir (sugestão)</div>
 
-      <!-- Próximas 8h (antigo: tabela com sticky hora+ícone) -->
-      <section class="card glass">
-        <div class="cardTitle">Próximas 8h</div>
+      <div class="pillGroup">
+        <div class="pillRow">
+          <div class="pillKey">Ciclismo</div>
+          <div id="dressBike" class="pillValue">—</div>
+        </div>
+
+        <div class="pillRow">
+          <div class="pillKey">Corrida</div>
+          <div id="dressRun" class="pillValue">—</div>
+        </div>
+
+        <div class="pillRow">
+          <div class="pillKey">Caminhada</div>
+          <div id="dressWalk" class="pillValue">—</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="cardTitle">Alertas</div>
+      <div id="alerts" class="pillGroup"></div>
+    </section>
+
+    <section class="card">
+      <div class="cardTitle">Próximas 8h</div>
+      <div class="tableWrap">
+        <table id="table8" aria-label="Próximas 8 horas"></table>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="cardTitle">Melhor janela (2h / próximas 12h)</div>
+      <div id="bestWindow" class="pillValue">—</div>
+    </section>
+
+    <section class="card">
+      <div class="cardTitle">Sugestão de sentido</div>
+      <div id="windSuggestion" class="pillValue">—</div>
+    </section>
+
+    <section class="card">
+      <div class="cardTitle">Câmara</div>
+
+      <div class="camWrap">
+        <a id="windyCam" name="windy-webcam-nearby-embed" data-params='{"lat":38.7330,"lon":-9.4100,"radius":15,"limit":1}'></a>
+        <script async type="text/javascript" src="https://webcams.windy.com/webcams/public/embed/v2/script/nearby.js"></script>
+      </div>
+
+      <div class="camFooter">
+        Se o embed falhar: <a id="windyLink" href="#" target="_blank" rel="noopener">ver webcams</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="toggleRow">
+        <div class="cardTitle" style="margin:0;">Próximas 48h</div>
+        <button id="toggle48" type="button">Mostrar</button>
+      </div>
+
+      <div id="wrap48" class="hidden" style="margin-top:10px;">
         <div class="tableWrap">
-          <table class="tbl" id="table8"></table>
+          <table id="table48" aria-label="Próximas 48 horas"></table>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Melhor janela -->
-      <section class="card glass">
-        <div class="cardTitle">Melhor janela (2h / próximas 12h)</div>
-        <div id="bestWindow" class="best">—</div>
-        <div class="muted small">Sugestões entre 07:00 e 22:00.</div>
-      </section>
+    <footer class="card">
+      <div class="cardTitle">Fonte</div>
+      <div id="source" class="pillValue">—</div>
+    </footer>
 
-      <!-- Sugestão de sentido -->
-      <section class="card glass">
-        <div class="cardTitle">Sugestão de sentido</div>
-        <div id="windSuggestion" class="best">—</div>
-      </section>
+  </main>
 
-      <!-- Câmara -->
-      <section class="card glass">
-        <div class="cardTitle">Câmara (Windy)</div>
-        <div class="windyWrap">
-          <a name="windy-webcam-nearby-embed"
-             id="windyCam"
-             data-params='{"lat":38.7330,"lon":-9.4100,"radius":15,"limit":1}'>
-          </a>
-        </div>
-        <div class="muted small">
-          Se o embed falhar:
-          <a class="camLink" id="windyLink" href="#" target="_blank" rel="noreferrer">ver webcams</a>
-        </div>
-      </section>
-
-      <!-- Próximas 48h (antigo: toggle + tabela com sticky) -->
-      <section class="card glass">
-        <div class="row">
-          <div class="cardTitle" style="margin:0;">Próximas 48h</div>
-          <button class="btn" id="toggle48" type="button">Mostrar</button>
-        </div>
-
-        <div class="tableWrap hidden" id="wrap48" style="margin-top:10px;">
-          <table class="tbl" id="table48"></table>
-        </div>
-      </section>
-
-      <!-- Fonte -->
-      <section class="card glass">
-        <div class="cardTitle">Fonte</div>
-        <div class="muted" id="source">—</div>
-      </section>
-
-    </main>
-  </div>
-
-  <script async src="https://webcams.windy.com/webcams/public/embed/v2/script/nearby.js"></script>
-  <script src="./app.js?v=20260206_fix1"></script>
+  <script src="app.js"></script>
 </body>
 </html>
