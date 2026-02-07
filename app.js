@@ -15,7 +15,11 @@ const LOCATIONS = [
   { id:"culatra", name:"Ilha da Culatra", lat:36.9889, lon:-7.8336 },
   { id:"algueirao", name:"Algueirão", lat:38.7936, lon:-9.3417 },
   { id:"amadora", name:"Amadora", lat:38.7569, lon:-9.2308 },
-  { id:"sintra", name:"Sintra", lat:38.8029, lon:-9.3817 }
+  { id:"sintra", name:"Sintra", lat:38.8029, lon:-9.3817 },
+
+  // novas localizações
+  { id:"sdr", name:"São Domingos de Rana", lat:38.7019, lon:-9.3389 },
+  { id:"carcavelos", name:"Carcavelos", lat:38.6910, lon:-9.3317 }
 ];
 
 const $ = (id) => document.getElementById(id);
