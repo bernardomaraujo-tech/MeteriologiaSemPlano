@@ -194,10 +194,10 @@ function clothingSuggestion({ temp, wind, gust, pop, prcp, sport }){
   const windAddon = windy ? " + Corta-vento/Colete" : "";
 
   if (sport === "bike"){
-    if (temp <= 6)  return `${base}: Base layer + Jersey ML + Colete + Luvas grossas + Calças + Proteção sapatos${rainAddon}`;
-    if (temp <= 11) return `${base}: Base layer + Jersey ML + Colete + Luvas finas + Calção${windAddon}${rainAddon}`;
-    if (temp <= 16) return `${base}: Base layer + Jersey ML + Colete opcional${rainAddon}`;
-    if (temp <= 22) return `${base}: Jersey MC${windAddon}${rainAddon}`;
+    if (temp <= 6)  return `${base}: Base layer + Jersey M.Comp. + Colete + Luvas grossas + Calças + Proteção sapatos${rainAddon}`;
+    if (temp <= 11) return `${base}: Base layer + Jersey M.Comp. + Colete + Luvas finas + Calção${windAddon}${rainAddon}`;
+    if (temp <= 16) return `${base}: Base layer + Jersey M.Comp.. + Colete opcional${rainAddon}`;
+    if (temp <= 22) return `${base}: Jersey M.Comp.${windAddon}${rainAddon}`;
     return `${base}: Jersey leve + proteção solar${rainAddon}`;
   }
 
