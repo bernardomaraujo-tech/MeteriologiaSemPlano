@@ -173,10 +173,12 @@ body{
   width:2px;
   height:44px;
   transform-origin: 50% 92%;
+  /* base: seta aponta para CIMA */
   transform: translate(-50%, -92%) rotate(0deg);
   background: rgba(255,255,255,.95);
   border-radius:999px;
   box-shadow: 0 2px 8px rgba(0,0,0,.28);
+  will-change: transform;
 }
 .needle::after{
   content:"";
