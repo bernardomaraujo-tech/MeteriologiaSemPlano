@@ -11,7 +11,14 @@
   <main class="container">
 
     <header class="hero">
-      <img class="logo" src="SemPlanoExploraoTeuMundo.png" alt="SEM PLANO" />
+      <img
+        class="logo"
+        src="SemPlanoExploraoTeuMundo.png"
+        alt="SEM PLANO"
+        onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='block';"
+      />
+      <div id="logoFallback" class="logoFallback" style="display:none;">SEM PLANO</div>
+
       <h1 id="heroLoc" class="heroLoc">Alcabideche</h1>
       <div id="heroTemp" class="heroTemp">—°</div>
       <div id="heroMeta" class="heroMeta">Sensação: —° · Máx: —° · Mín: —°</div>
@@ -54,19 +61,17 @@
     </section>
 
     <section class="card">
-      <div class="cardTitle">O que vestir (sugestão)</div>
+      <div class="cardTitle">O que vestir</div>
 
       <div class="pillGroup">
         <div class="pillRow">
           <div class="pillKey">Ciclismo</div>
           <div id="dressBike" class="pillValue">—</div>
         </div>
-
         <div class="pillRow">
           <div class="pillKey">Corrida</div>
           <div id="dressRun" class="pillValue">—</div>
         </div>
-
         <div class="pillRow">
           <div class="pillKey">Caminhada</div>
           <div id="dressWalk" class="pillValue">—</div>
@@ -76,7 +81,7 @@
 
     <section class="card">
       <div class="cardTitle">Alertas</div>
-      <div id="alerts" class="pillGroup"></div>
+      <div id="alerts"></div>
     </section>
 
     <section class="card">
@@ -98,12 +103,10 @@
 
     <section class="card">
       <div class="cardTitle">Câmara</div>
-
       <div class="camWrap">
         <a id="windyCam" name="windy-webcam-nearby-embed" data-params='{"lat":38.7330,"lon":-9.4100,"radius":15,"limit":1}'></a>
         <script async type="text/javascript" src="https://webcams.windy.com/webcams/public/embed/v2/script/nearby.js"></script>
       </div>
-
       <div class="camFooter">
         Se o embed falhar: <a id="windyLink" href="#" target="_blank" rel="noopener">ver webcams</a>
       </div>
