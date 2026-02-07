@@ -336,7 +336,7 @@ function renderAll(data, sourceName, locName){
   setText(els.nowPop, fmtPct(pop));
 
   if (els.dirNeedle){
-    els.dirNeedle.style.transform = `translate(-50%, -92%) rotate(${dir}deg)`;
+    els.dirNeedle.style.transform = `translate(-50%, -92%) rotate(${(dir + 180) % 360}deg)`;
   }
 
   const tempEff = (feels ?? temp);
