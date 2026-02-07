@@ -1,11 +1,10 @@
-/* SEM PLANO Weather — styles.css (revert: sem imagens na secção de vestir) */
-
 :root{
   --bg1:#cfe0ea;
   --bg2:#7fb0c7;
 
   --card: rgba(255,255,255,0.18);
   --cardBorder: rgba(255,255,255,0.22);
+
   --text: rgba(255,255,255,0.92);
   --muted: rgba(255,255,255,0.78);
   --muted2: rgba(255,255,255,0.66);
@@ -19,6 +18,7 @@
 
 *{ box-sizing:border-box; }
 html,body{ height:100%; }
+
 body{
   margin:0;
   font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Arial,sans-serif;
@@ -107,12 +107,6 @@ select{
   appearance:none;
 }
 
-.divider{
-  height: 1px;
-  background: var(--line);
-  margin: 10px 0;
-}
-
 /* -------- Agora -------- */
 
 .nowGrid{
@@ -143,7 +137,7 @@ select{
   white-space: nowrap;
 }
 
-/* Direção (ponteiro simples) */
+/* Direção (rosa simples) */
 .dirDial{
   width: 150px;
   height: 150px;
@@ -160,7 +154,6 @@ select{
   font-weight: 700;
   color: rgba(255,255,255,0.72);
 }
-
 .dirDial .n{ top: 8px; left: 50%; transform: translateX(-50%); }
 .dirDial .e{ right: 10px; top: 50%; transform: translateY(-50%); }
 .dirDial .s{ bottom: 8px; left: 50%; transform: translateX(-50%); }
@@ -175,7 +168,6 @@ select{
   transform-origin: 50% 100%;
   transform: translate(-50%,-92%) rotate(0deg);
 }
-
 .dirNeedle:before{
   content:"";
   display:block;
@@ -186,7 +178,6 @@ select{
   border-top: 52px solid rgba(255,255,255,0.88);
   filter: drop-shadow(0 2px 2px rgba(0,0,0,0.15));
 }
-
 .dirNeedle:after{
   content:"";
   position:absolute;
@@ -198,7 +189,7 @@ select{
   background: rgba(255,255,255,0.88);
 }
 
-/* -------- O que vestir (texto bem formatado) -------- */
+/* -------- “O que vestir” (formatação boa, sem imagens) -------- */
 
 .pillGroup{
   display:flex;
@@ -233,8 +224,7 @@ select{
   color: rgba(255,255,255,0.92);
 }
 
-/* -------- Alertas -------- */
-
+/* Alert pill */
 .pill{
   background: rgba(255,255,255,0.10);
   border: 1px solid rgba(255,255,255,0.16);
@@ -244,7 +234,7 @@ select{
   color: rgba(255,255,255,0.86);
 }
 
-/* -------- Tabelas -------- */
+/* -------- Tabelas (hora + ícone fixos) -------- */
 
 .tableWrap{
   overflow:auto;
@@ -278,7 +268,7 @@ th{
   color: rgba(255,255,255,0.94);
 }
 
-/* Hora fixa (primeira coluna) */
+/* Hora fixa (coluna 1) */
 td:first-child, th:first-child{
   position: sticky;
   left: 0;
@@ -288,11 +278,11 @@ td:first-child, th:first-child{
   background: rgba(0,0,0,0.18);
 }
 
-/* Ícone fixo (segunda coluna) */
+/* Ícone fixo (coluna 2) */
 .iconCell{
   width: 52px;
   position: sticky;
-  left: 120px;
+  left: 120px; /* fica colado à coluna Hora */
   z-index: 4;
   background: rgba(0,0,0,0.16);
 }
@@ -321,8 +311,7 @@ button{
   border: 1px solid rgba(255,255,255,0.18);
 }
 
-/* -------- Webcam -------- */
-
+/* Webcam */
 .camWrap{
   border-radius: var(--radiusSm);
   overflow:hidden;
