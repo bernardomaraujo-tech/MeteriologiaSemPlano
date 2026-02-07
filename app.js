@@ -1,6 +1,12 @@
 const REFRESH_MS = 5 * 60 * 1000;
 const FETCH_TIMEOUT_MS = 12000;
 
+// Preferência: modelos HARMONIE-AROME (Europa) via Open-Meteo
+const PREFERRED_MODELS = [
+  "knmi_harmonie_arome_europe",
+  "dmi_harmonie_arome_europe"
+];
+
 const LOCATIONS = [
   { id:"alcabideche", name:"Alcabideche", lat:38.7330, lon:-9.4100 },
   { id:"guincho", name:"Guincho", lat:38.72948, lon:-9.47457 },
@@ -69,7 +75,7 @@ function weekdayHourLabel(iso){
   return `${w} ${h}`;
 }
 
-function buildUrlForecast(loc){
+function buildUrlForecast(loc, modelsCsv){
   const params = new URLSearchParams({
     latitude: String(loc.lat),
     longitude: String(loc.lon),
@@ -91,6 +97,10 @@ function buildUrlForecast(loc){
       "is_day"
     ].join(",")
   });
+
+  // Força modelos preferidos quando indicado
+  if (modelsCsv) params.set("models", modelsCsv);
+
   return `https://api.open-meteo.com/v1/forecast?${params.toString()}`;
 }
 
@@ -105,12 +115,29 @@ async function fetchWithTimeout(url){
 }
 
 async function fetchWeather(loc){
-  const url = buildUrlForecast(loc);
-  const r = await fetchWithTimeout(url);
-  if (!r.ok) throw new Error(`HTTP ${r.status}`);
-  const json = await r.json();
-  if (!json?.hourly?.time?.length) throw new Error("hourly vazio");
-  return { json, source: "Open-Meteo (forecast)" };
+  const modelsCsv = PREFERRED_MODELS.join(",");
+
+  // 1) tenta HARMONIE-AROME (Europa)
+  try{
+    const url1 = buildUrlForecast(loc, modelsCsv);
+    const r1 = await fetchWithTimeout(url1);
+    if (r1.ok){
+      const json1 = await r1.json();
+      if (json1?.hourly?.time?.length){
+        return { json: json1, source: "Open-Meteo (HARMONIE-AROME)" };
+      }
+    }
+  } catch (_) {
+    // ignora e faz fallback
+  }
+
+  // 2) fallback para best match (auto)
+  const url2 = buildUrlForecast(loc);
+  const r2 = await fetchWithTimeout(url2);
+  if (!r2.ok) throw new Error(`HTTP ${r2.status}`);
+  const json2 = await r2.json();
+  if (!json2?.hourly?.time?.length) throw new Error("hourly vazio");
+  return { json: json2, source: "Open-Meteo (Best match)" };
 }
 
 function nearestHourIndex(times){
