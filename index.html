@@ -12,10 +12,10 @@
 
     <header class="hero">
       <img
+        id="topLogo"
         class="logo"
         src="SemPlanoExploraoTeuMundo.png"
         alt="SEM PLANO"
-        onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='block';"
       />
       <div id="logoFallback" class="logoFallback" style="display:none;">SEM PLANO</div>
 
@@ -27,6 +27,7 @@
 
     <section class="card selectWrap">
       <select id="locationSelect" aria-label="Localidade"></select>
+      <div class="selectChevron" aria-hidden="true">▾</div>
     </section>
 
     <section class="card">
@@ -131,6 +132,38 @@
     </footer>
 
   </main>
+
+  <script>
+    // fallback do logo para evitar stresses com maiúsculas/minúsculas/extensões
+    (function () {
+      const img = document.getElementById('topLogo');
+      const fallback = document.getElementById('logoFallback');
+      if (!img) return;
+
+      const candidates = [
+        "SemPlanoExploraoTeuMundo.png",
+        "semplanoexploraoteumundo.png",
+        "SemPlanoExploraoTeuMundo.webp",
+        "SemPlanoExploraoTeuMundo.svg",
+        "logo.png",
+        "logo.svg"
+      ];
+
+      let idx = 0;
+
+      function tryNext() {
+        idx++;
+        if (idx >= candidates.length) {
+          img.style.display = "none";
+          if (fallback) fallback.style.display = "block";
+          return;
+        }
+        img.src = candidates[idx];
+      }
+
+      img.addEventListener("error", tryNext);
+    })();
+  </script>
 
   <script src="app.js"></script>
 </body>
