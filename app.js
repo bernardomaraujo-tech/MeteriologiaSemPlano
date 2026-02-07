@@ -31,9 +31,10 @@ const els = {
   nowRain: $("nowRain"),
   nowPop: $("nowPop"),
 
-  // seta rosa dos ventos
+  // rosa direção (seta)
   dirNeedle: $("dirNeedle"),
 
+  // vestir
   dressBike: $("dressBike"),
   dressRun: $("dressRun"),
   dressWalk: $("dressWalk"),
@@ -69,6 +70,150 @@ function weekdayHourLabel(iso){
   const h = d.toLocaleTimeString("pt-PT", { hour: "2-digit", minute: "2-digit" });
   return `${w} ${h}`;
 }
+
+/* =========================================================
+   VESTIR — MOTOR ROBUSTO (escalões + risco + kit + extras)
+   ========================================================= */
+
+function thermalBandFromEffectiveTemp(t){
+  if (t <= 0)  return 0; // Muito Frio
+  if (t <= 5)  return 1; // Frio
+  if (t <= 9)  return 2; // Fresco Frio
+  if (t <= 14) return 3; // Fresco
+  if (t <= 18) return 4; // Ameno
+  if (t <= 22) return 5; // Agradável
+  if (t <= 27) return 6; // Quente
+  return 7;            // Muito Quente
+}
+function thermalBandLabel(idx){
+  return ["Muito Frio","Frio","Fresco Frio","Fresco","Ameno","Agradável","Quente","Muito Quente"][idx] ?? "—";
+}
+
+// precip mm/h aproximado (open-meteo hourly precipitation é mm no período/hora)
+function precipLevel(mmHour, pop){
+  const mm = mmHour ?? 0;
+  const p  = pop ?? 0;
+
+  if (mm >= 4) return 3;                       // Chuva forte
+  if (mm >= 0.5 || p >= 40) return 2;          // Chuva provável
+  if (mm >= 0.1 || (p >= 20 && p <= 39)) return 1; // Piso húmido provável
+  return 0;                                    // Seco
+}
+function precipLabel(lvl){
+  return ["Seco","Piso húmido provável","Chuva provável","Chuva forte"][lvl] ?? "—";
+}
+
+// vento por níveis (Beaufort-ish) + upgrade por rajadas
+function windLevel(windKmh, gustKmh){
+  const w = windKmh ?? 0;
+  const g = gustKmh ?? 0;
+
+  let lvl = 0;
+  if (w >= 50) lvl = 4;        // Difícil
+  else if (w >= 39) lvl = 3;   // Muito forte
+  else if (w >= 29) lvl = 2;   // Forte
+  else if (w >= 20) lvl = 1;   // Relevante
+  else lvl = 0;                // Leve
+
+  // rajadas muito acima do vento médio => sobe 1 nível
+  if (g >= w + 12) lvl = Math.min(4, lvl + 1);
+
+  return lvl;
+}
+function windLabel(lvl){
+  return ["Leve","Relevante","Forte","Muito forte","Difícil"][lvl] ?? "—";
+}
+
+// penalização “molhado” (mais conservador em frio/fresco)
+function applyWetPenalty(thermalIdx, precipLvl){
+  // se piso húmido/chuva e estamos até Fresco (<= 14°C efetiva), empurra 1 escalão mais frio
+  if (precipLvl >= 1 && thermalIdx <= 3) return Math.max(0, thermalIdx - 1);
+  return thermalIdx;
+}
+
+// viés por modalidade (simples)
+function applySportBias(thermalIdx, sport, windLvl){
+  if (sport === "bike"){
+    // ciclismo: vento relevante+ => 1 escalão mais frio
+    if (windLvl >= 1) return Math.max(0, thermalIdx - 1);
+    return thermalIdx;
+  }
+  if (sport === "run"){
+    // corrida: 1 escalão mais quente para peça principal
+    return Math.min(7, thermalIdx + 1);
+  }
+  return thermalIdx; // walk neutro
+}
+
+function baseKitBySportAndBand(sport, bandIdx){
+  if (sport === "bike"){
+    if (bandIdx <= 0) return "Base layer térmica + Jersey ML térmica + Casaco corta-vento/impermeável + Calças + Luvas grossas + Proteção sapatos";
+    if (bandIdx === 1) return "Base layer + Jersey ML + Colete/Casaco corta-vento + (Calção+perneiras ou calças leves) + Luvas inverno + Proteção sapatos";
+    if (bandIdx === 2) return "Base layer média + Jersey ML (ou MC+manguitos) + Colete corta-vento + Luvas médias + (perneiras opcionais)";
+    if (bandIdx === 3) return "Base layer leve + Jersey ML (ou MC+manguitos) + Colete fino opcional + Luvas leves opcionais";
+    if (bandIdx === 4) return "Jersey MC + Calção + (Colete fino na bolsa se houver vento/descidas)";
+    if (bandIdx === 5) return "Jersey MC + Calção + Proteção solar";
+    if (bandIdx === 6) return "Jersey leve respirável + Calção + Hidratação + Proteção solar";
+    return "Muito leve + máxima hidratação/eletrólitos + Proteção solar";
+  }
+
+  if (sport === "run"){
+    if (bandIdx <= 0) return "Base layer ML + Camada extra + Corta-vento leve + Tights quentes + Gorro/Headband + Luvas";
+    if (bandIdx === 1) return "ML técnica + Corta-vento fino + Tights (ou calção+perneiras) + Luvas finas";
+    if (bandIdx === 2) return "ML leve (ou t-shirt+manga fina) + Tights leves/Calção + Luvas opcionais";
+    if (bandIdx === 3) return "T-shirt + Camada fina opcional (para o arranque)";
+    if (bandIdx === 4) return "T-shirt leve + Calção";
+    if (bandIdx === 5) return "T-shirt leve + Calção + Proteção solar";
+    if (bandIdx === 6) return "Muito leve + Hidratação";
+    return "Muito leve + Evitar horas de maior calor + Hidratação/eletrólitos";
+  }
+
+  // walk
+  if (bandIdx <= 0) return "Base layer quente + Mid layer (fleece) + Shell impermeável/corta-vento + Calças adequadas + Gorro + Luvas";
+  if (bandIdx === 1) return "Base layer + Mid layer + Shell na mochila/vestida + Calças + (gorro/luvas se necessário)";
+  if (bandIdx === 2) return "Base layer média + Mid layer leve + Shell na mochila";
+  if (bandIdx === 3) return "Camisola leve + Camada extra opcional + Shell se instável";
+  if (bandIdx === 4) return "Confortável por camadas + Shell leve se houver risco";
+  if (bandIdx === 5) return "Leve e respirável + Proteção solar";
+  if (bandIdx === 6) return "Muito leve + Água";
+  return "Muito leve + Evitar horas quentes + Água";
+}
+
+function modifiers(sport, precipLvl, windLvl, isNight){
+  const mods = [];
+
+  // regra “hard”: piso húmido provável ou superior => impermeável/repelente
+  if (precipLvl >= 1) mods.push("Impermeável/repelente packável");
+
+  // vento relevante+ => barreira ao vento no tronco
+  if (windLvl >= 1) mods.push("Colete ou corta-vento (tronco)");
+
+  // caminhada: em chuva provável/forte, reforçar calças impermeáveis
+  if (sport === "walk" && precipLvl >= 2) mods.push("Calças impermeáveis (opcional mas recomendado)");
+
+  // noite/crepúsculo (se ligares depois)
+  if (isNight) mods.push("Luz/Refletivos");
+
+  return mods;
+}
+
+function kitRecommendation({ sport, tempEff, windKmh, gustKmh, pop, precipMm, isNight=false }){
+  const pLvl = precipLevel(precipMm, pop);
+  const wLvl = windLevel(windKmh, gustKmh);
+
+  let band = thermalBandFromEffectiveTemp(tempEff);
+  band = applyWetPenalty(band, pLvl);
+  band = applySportBias(band, sport, wLvl);
+
+  const summary = `${thermalBandLabel(band)} · ${precipLabel(pLvl)} · Vento ${windLabel(wLvl)}`;
+  const base = baseKitBySportAndBand(sport, band);
+  const mods = modifiers(sport, pLvl, wLvl, isNight);
+  const modsTxt = mods.length ? `Extras: ${mods.join(" + ")}` : "Extras: —";
+
+  return { summary, base, modsTxt };
+}
+
+/* ========================================================= */
 
 function buildUrlForecast(loc){
   const params = new URLSearchParams({
@@ -177,47 +322,6 @@ function windDirectionSuggestion(deg){
   if (d >= 45 && d < 135) return `De ${from}. Favorece ir para oeste; regresso para leste é mais pesado.`;
   if (d >= 135 && d < 225) return `De ${from}. Favorece ir para norte; regresso para sul é mais pesado.`;
   return `De ${from}. Favorece ir para leste; regresso para oeste é mais pesado.`;
-}
-
-/* =========================
-   O QUE VESTIR — NOVAS REGRAS (as tuas)
-========================= */
-function clothingSuggestion({ temp, wind, gust, pop, prcp, sport }){
-  const rainy = (pop ?? 0) >= 25 || (prcp ?? 0) >= 0.2;
-  const windy = (wind ?? 0) >= 22 || (gust ?? 0) >= 35;
-
-  let base = "";
-  if (temp <= 6) base = "Muito Frio";
-  else if (temp <= 11) base = "Frio";
-  else if (temp <= 16) base = "Fresco";
-  else if (temp <= 22) base = "Agradável";
-  else base = "Quente";
-
-  const rainAddon = rainy ? " Leva sempre um casaco impermeável." : "";
-  const windAddon = windy ? " Recomenda-se um casaco ou colete corta-vento." : "";
-
-  if (sport === "bike"){
-    if (temp <= 6)  return `${base}: Base layer + Jersey Manga Comprida + Colete + Luvas Grossas + Calças + Proteção Sapatos.${rainAddon}${windAddon}`;
-    if (temp <= 11) return `${base}: Base Layer + Jersey Manga Comprida + Colete + Luvas finas + Calção.${rainAddon}${windAddon}`;
-    if (temp <= 16) return `${base}: Base Layer + Jersey Manga Comprida + Colete opcional.${rainAddon}${windAddon}`;
-    if (temp <= 22) return `${base}: Jersey Manga Curta.${rainAddon}${windAddon}`;
-    return `${base}: Jersey leve + proteção solar.${rainAddon}${windAddon}`;
-  }
-
-  if (sport === "run"){
-    if (temp <= 6)  return `${base}: Térmica Manga Comprida + Calças + Corta-vento leve.${rainAddon}${windAddon}`;
-    if (temp <= 11) return `${base}: Manga comprida leve.${rainAddon}${windAddon}`;
-    if (temp <= 16) return `${base}: T-shirt + camada fina opcional.${rainAddon}${windAddon}`;
-    if (temp <= 22) return `${base}: T-shirt leve.${rainAddon}${windAddon}`;
-    return `${base}: Muito leve + hidratação.${rainAddon}${windAddon}`;
-  }
-
-  // walk
-  if (temp <= 6)  return `${base}: Camadas (térmica + casaco).${rainAddon}${windAddon}`;
-  if (temp <= 11) return `${base}: Casaco leve.${rainAddon}${windAddon}`;
-  if (temp <= 16) return `${base}: Camisola leve + camada extra opcional.${rainAddon}${windAddon}`;
-  if (temp <= 22) return `${base}: Confortável, camada leve opcional.${rainAddon}${windAddon}`;
-  return `${base}: Leve e respirável + água.${rainAddon}${windAddon}`;
 }
 
 function iconForWeatherCode(code, isDay){
@@ -338,14 +442,46 @@ function renderAll(data, sourceName, locName){
   setText(els.nowRain, fmtMm(prcp));
   setText(els.nowPop, fmtPct(pop));
 
-  // seta: roda com a direção (mesma base do CSS)
+  // seta direção (rosa simples)
   if (els.dirNeedle){
     els.dirNeedle.style.transform = `translate(-50%, -92%) rotate(${dir}deg)`;
   }
 
-  setText(els.dressBike, clothingSuggestion({ temp: (feels ?? temp), wind, gust, pop, prcp, sport:"bike" }));
-  setText(els.dressRun,  clothingSuggestion({ temp: (feels ?? temp), wind, gust, pop, prcp, sport:"run" }));
-  setText(els.dressWalk, clothingSuggestion({ temp: (feels ?? temp), wind, gust, pop, prcp, sport:"walk" }));
+  // VESTIR (robusto)
+  const tempEff = (feels ?? temp);
+
+  const recBike = kitRecommendation({
+    sport: "bike",
+    tempEff,
+    windKmh: wind,
+    gustKmh: gust,
+    pop,
+    precipMm: prcp,
+    isNight: false
+  });
+  const recRun = kitRecommendation({
+    sport: "run",
+    tempEff,
+    windKmh: wind,
+    gustKmh: gust,
+    pop,
+    precipMm: prcp,
+    isNight: false
+  });
+  const recWalk = kitRecommendation({
+    sport: "walk",
+    tempEff,
+    windKmh: wind,
+    gustKmh: gust,
+    pop,
+    precipMm: prcp,
+    isNight: false
+  });
+
+  // Render em 3 linhas (mantém as pills atuais, só enriquece conteúdo)
+  setHTML(els.dressBike, `<div><b>${recBike.summary}</b></div><div>Base: ${recBike.base}</div><div>${recBike.modsTxt}</div>`);
+  setHTML(els.dressRun,  `<div><b>${recRun.summary}</b></div><div>Base: ${recRun.base}</div><div>${recRun.modsTxt}</div>`);
+  setHTML(els.dressWalk, `<div><b>${recWalk.summary}</b></div><div>Base: ${recWalk.base}</div><div>${recWalk.modsTxt}</div>`);
 
   renderAlerts(data);
   renderTables(data);
