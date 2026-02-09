@@ -65,10 +65,10 @@ body{
   background-size: cover;
 
   /* MOSTRA MAIS IMAGEM PARA BAIXO */
-  background-position: center 98%;
+  background-position: center 100%;
 
   /* MENOS CROP / MENOS ZOOM */
-  transform: scale(1.03);
+  transform: scale(1.0);
 
   animation: skyBreath 44s ease-in-out infinite;
   will-change: transform, filter;
