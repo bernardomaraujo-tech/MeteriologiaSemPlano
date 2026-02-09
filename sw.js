@@ -1,71 +1,103 @@
-/* app.js */
-const REFRESH_MS = 5 * 60 * 1000;
-const FETCH_TIMEOUT_MS = 12000;
+/* sw.js — SEM PLANO Meteo (stable) */
 
-// Preferência: modelos HARMONIE-AROME (Europa) via Open-Meteo
-const PREFERRED_MODELS = [
-  "knmi_harmonie_arome_europe",
-  "dmi_harmonie_arome_europe"
+const CACHE_VERSION = "semplano-meteo-v20260209_1";
+const APP_SHELL = [
+  "./",
+  "./index.html",
+  "./styles.css",
+  "./app.js",
+  "./logo.png",
+  "./favicon.ico",
+  "./manifest.webmanifest"
 ];
 
-const LOCATIONS = [
-  { id:"alcabideche", name:"Alcabideche", lat:38.7330, lon:-9.4100 },
+// Instala: guarda o “app shell”
+self.addEventListener("install", (event) => {
+  event.waitUntil((async () => {
+    const cache = await caches.open(CACHE_VERSION);
+    await cache.addAll(APP_SHELL);
+    // força o SW a ficar ativo logo
+    await self.skipWaiting();
+  })());
+});
 
-  { id:"algueirao", name:"Algueirão", lat:38.7936, lon:-9.3417 },
-  { id:"amadora", name:"Amadora", lat:38.7569, lon:-9.2308 },
-  { id:"carcavelos", name:"Carcavelos", lat:38.6910, lon:-9.3317 },
-  { id:"cascais", name:"Cascais", lat:38.6979, lon:-9.4206 },
-  { id:"columbeira", name:"Columbeira", lat:39.3439, lon:-9.1869 },
-  { id:"culatra", name:"Ilha da Culatra", lat:36.9889, lon:-7.8336 },
-  { id:"estoril", name:"Estoril", lat:38.7057, lon:-9.3976 },
-  { id:"guincho", name:"Guincho", lat:38.72948, lon:-9.47457 },
-  { id:"peninha", name:"Peninha", lat:38.7692, lon:-9.4589 },
-  { id:"sdr", name:"São Domingos de Rana", lat:38.7019, lon:-9.3389 },
-  { id:"sintra", name:"Sintra", lat:38.8029, lon:-9.3817 },
-  { id:"tocha", name:"Praia da Tocha", lat:40.3174, lon:-8.7984 }
-];
+// Ativa: limpa caches antigas e assume controlo
+self.addEventListener("activate", (event) => {
+  event.waitUntil((async () => {
+    const keys = await caches.keys();
+    await Promise.all(
+      keys
+        .filter((k) => k.startsWith("semplano-meteo-") && k !== CACHE_VERSION)
+        .map((k) => caches.delete(k))
+    );
+    await self.clients.claim();
+  })());
+});
 
-const $ = (id) => document.getElementById(id);
-const setText = (el, txt) => { if (el) el.textContent = txt; };
-const setHTML = (el, html) => { if (el) el.innerHTML = html; };
+// Fetch: network-first para HTML (sempre tentar ir buscar novo)
+//       stale-while-revalidate para css/js/img
+//       never-cache para APIs externas (open-meteo, windy, etc.)
+self.addEventListener("fetch", (event) => {
+  const req = event.request;
+  const url = new URL(req.url);
 
-const els = {
-  updated: $("updated"),
-  select: $("locationSelect"),
-  source: $("source"),
+  // Só tratamos do nosso origin
+  if (url.origin !== self.location.origin) return;
 
-  heroLoc: $("heroLoc"),
-  heroTemp: $("heroTemp"),
-  heroMeta: $("heroMeta"),
+  const isHTML = req.mode === "navigate" || req.headers.get("accept")?.includes("text/html");
+  const isAsset =
+    url.pathname.endsWith(".css") ||
+    url.pathname.endsWith(".js") ||
+    url.pathname.endsWith(".png") ||
+    url.pathname.endsWith(".jpg") ||
+    url.pathname.endsWith(".jpeg") ||
+    url.pathname.endsWith(".svg") ||
+    url.pathname.endsWith(".webp") ||
+    url.pathname.endsWith(".ico") ||
+    url.pathname.endsWith(".json") ||
+    url.pathname.endsWith(".webmanifest");
 
-  nowWind: $("nowWind"),
-  nowGust: $("nowGust"),
-  nowDirTxt: $("nowDirTxt"),
-  nowRain: $("nowRain"),
-  nowPop: $("nowPop"),
+  if (isHTML) {
+    // NETWORK FIRST (para apanhar updates)
+    event.respondWith((async () => {
+      try {
+        const fresh = await fetch(req);
+        const cache = await caches.open(CACHE_VERSION);
+        cache.put(req, fresh.clone());
+        return fresh;
+      } catch (e) {
+        const cached = await caches.match(req);
+        return cached || caches.match("./index.html");
+      }
+    })());
+    return;
+  }
 
-  dirNeedle: $("dirNeedle"),
+  if (isAsset) {
+    // STALE WHILE REVALIDATE (rápido e atualiza em background)
+    event.respondWith((async () => {
+      const cache = await caches.open(CACHE_VERSION);
+      const cached = await cache.match(req);
 
-  dressBike: $("dressBike"),
-  dressRun: $("dressRun"),
-  dressWalk: $("dressWalk"),
+      const fetchPromise = fetch(req)
+        .then((fresh) => {
+          cache.put(req, fresh.clone());
+          return fresh;
+        })
+        .catch(() => cached);
 
-  alerts: $("alerts"),
-  table8: $("table8"),
-  table48: $("table48"),
-  toggle48: $("toggle48"),
-  wrap48: $("wrap48"),
+      return cached || fetchPromise;
+    })());
+    return;
+  }
 
-  bestWindow: $("bestWindow"),
-  windSuggestion: $("windSuggestion"),
-
-  windyLink: $("windyLink"),
-};
-
-function fmtKmh(x){ return `${Math.round(x ?? 0)} km/h`; }
-function fmtMm(x){ return `${(Math.round(((x ?? 0) * 10)) / 10).toFixed(1)} mm`; }
-function fmtPct(x){ return `${Math.round(x ?? 0)}%`; }
-
-function windDirText(deg){
-  const dirs = ["N","NE","E","SE","S","SO","O","NO"];
-  const idx = Math.round((((deg ?? 0) % 360) / 45))
+  // Default: tenta rede, fallback para cache
+  event.respondWith((async () => {
+    try {
+      return await fetch(req);
+    } catch (e) {
+      const cached = await caches.match(req);
+      return cached || Response.error();
+    }
+  })());
+});
