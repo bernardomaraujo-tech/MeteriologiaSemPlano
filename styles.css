@@ -95,10 +95,22 @@ body{
 .skyFade{
   position:absolute;
   left:0; right:0; bottom:0;
-  height: 46%;
-  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.10) 35%, rgba(0,0,0,.18) 100%);
-  mix-blend-mode: multiply;
-  opacity: .85;
+
+  /* fade mais longo = transição mais bonita */
+  height: 62%;
+
+  /* em vez de “escurecer”, misturamos com a cor real do fundo */
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,.06) 35%,
+    rgba(0,0,0,.10) 55%,
+    rgba(0,0,0,.14) 100%
+  );
+
+  /* remove o multiply (tende a “sujar” a imagem) */
+  mix-blend-mode: normal;
+  opacity: .75;
 }
 
 /* dia/noite subtil (sem mexer na tua UI) */
