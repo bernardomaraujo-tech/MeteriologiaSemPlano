@@ -37,12 +37,23 @@ body{
 .bg{
   position:fixed;
   inset:0;
-  background:
-    radial-gradient(1200px 700px at 50% -10%, rgba(255,255,255,.22), rgba(255,255,255,0) 55%),
-    radial-gradient(900px 600px at 15% 20%, rgba(255,255,255,.14), rgba(255,255,255,0) 60%),
-    linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 35%, var(--bg3) 100%);
-  filter:saturate(1.05);
   z-index:-2;
+
+  /* A MESMA IMAGEM DO CÉU */
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.05) 0%,
+      rgba(0,0,0,.25) 60%,
+      rgba(0,0,0,.45) 100%
+    ),
+    var(--sky-bg-image);
+
+  background-size: cover;
+  background-position: center 100%;
+  background-repeat: no-repeat;
+
+  filter: saturate(1.05) blur(0px);
 }
 
 /* =========================
