@@ -468,8 +468,10 @@ function setSkyFromWeather(code, isDay){
 
   const file = skyFileFor(code, isDay);
   if (els.skyImg){
-    els.skyImg.style.backgroundImage = `url(./${file})`;
-  }
+    document.documentElement.style.setProperty(
+  "--sky-bg-image",
+  `url(./${file})`
+);
 
   // fundo homogéneo
   tintBackgroundFromImage(file);
