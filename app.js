@@ -102,9 +102,7 @@ function buildUrlForecast(loc, modelsCsv){
     ].join(",")
   });
 
-  // Força modelos preferidos quando indicado
   if (modelsCsv) params.set("models", modelsCsv);
-
   return `https://api.open-meteo.com/v1/forecast?${params.toString()}`;
 }
 
@@ -121,7 +119,7 @@ async function fetchWithTimeout(url){
 async function fetchWeather(loc){
   const modelsCsv = PREFERRED_MODELS.join(",");
 
-  // 1) tenta HARMONIE-AROME (Europa)
+  // 1) tenta HARMONIE-AROME
   try{
     const url1 = buildUrlForecast(loc, modelsCsv);
     const r1 = await fetchWithTimeout(url1);
@@ -131,11 +129,9 @@ async function fetchWeather(loc){
         return { json: json1, source: "Open-Meteo (HARMONIE-AROME)" };
       }
     }
-  } catch (_) {
-    // ignora e faz fallback
-  }
+  } catch (_) {}
 
-  // 2) fallback para best match (auto)
+  // 2) fallback best match
   const url2 = buildUrlForecast(loc);
   const r2 = await fetchWithTimeout(url2);
   if (!r2.ok) throw new Error(`HTTP ${r2.status}`);
@@ -263,27 +259,124 @@ function iconForWeatherCode(code, isDay){
   return "•";
 }
 
-/* ===========================
-   FUNDO DINÂMICO — ÚNICA ALTERAÇÃO NO JS
-   =========================== */
-function themeFromWeatherCode(code){
-  // Open-Meteo weather codes
-  if (code === 0 || code === 1) return "theme-clear";
-  if (code === 2 || code === 3) return "theme-cloudy";
-  if (code === 45 || code === 48) return "theme-fog";
-  if ((code >= 51 && code <= 67) || (code >= 80 && code <= 82)) return "theme-rain";
-  if (code >= 71 && code <= 77) return "theme-snow";
-  if (code === 95 || code === 96 || code === 99) return "theme-thunder";
-  return "theme-cloudy";
+/* =========================
+   FUNDO DINÂMICO (só tema)
+   ========================= */
+function applyDynamicBackground(weatherCode, isDay){
+  const body = document.body;
+  body.classList.remove("theme-clear","theme-cloudy","theme-rain","theme-snow","theme-fog","theme-thunder");
+
+  const root = document.documentElement.style;
+
+  const setVars = ({ cloudA, cloudB, skyTop, skyBottom }) => {
+    root.setProperty("--cloudA", cloudA);
+    root.setProperty("--cloudB", cloudB);
+    root.setProperty("--skyTintTop", skyTop);
+    root.setProperty("--skyTintBottom", skyBottom);
+  };
+
+  const code = Number(weatherCode ?? -1);
+
+  // mapeamento Open-Meteo weather_code
+  const isFog = (code === 45 || code === 48);
+  const isThunder = (code === 95 || code === 96 || code === 99);
+  const isSnow = ([71,73,75,77,85,86].includes(code));
+  const isRain = ([51,53,55,56,57,61,63,65,66,67,80,81,82].includes(code));
+  const isClear = (code === 0);
+  const isPartly = (code === 1 || code === 2);
+  const isCloudy = (code === 3);
+
+  // noite: ligeiramente mais escuro
+  const nightFactor = (isDay === 0) ? 0.85 : 1;
+
+  if (isThunder){
+    body.classList.add("theme-thunder");
+    setVars({
+      cloudA: `rgba(210,220,235,${0.55*nightFactor})`,
+      cloudB: `rgba(170,185,210,${0.45*nightFactor})`,
+      skyTop: `rgba(255,255,255,${0.10*nightFactor})`,
+      skyBottom: `rgba(0,0,0,${0.22*nightFactor})`
+    });
+    return;
+  }
+
+  if (isSnow){
+    body.classList.add("theme-snow");
+    setVars({
+      cloudA: `rgba(245,248,255,${0.60*nightFactor})`,
+      cloudB: `rgba(210,225,245,${0.42*nightFactor})`,
+      skyTop: `rgba(255,255,255,${0.16*nightFactor})`,
+      skyBottom: `rgba(0,0,0,${0.14*nightFactor})`
+    });
+    return;
+  }
+
+  if (isFog){
+    body.classList.add("theme-fog");
+    setVars({
+      cloudA: `rgba(235,240,245,${0.46*nightFactor})`,
+      cloudB: `rgba(210,220,230,${0.34*nightFactor})`,
+      skyTop: `rgba(255,255,255,${0.14*nightFactor})`,
+      skyBottom: `rgba(0,0,0,${0.12*nightFactor})`
+    });
+    return;
+  }
+
+  if (isRain){
+    body.classList.add("theme-rain");
+    setVars({
+      cloudA: `rgba(215,225,235,${0.52*nightFactor})`,
+      cloudB: `rgba(165,185,205,${0.40*nightFactor})`,
+      skyTop: `rgba(255,255,255,${0.10*nightFactor})`,
+      skyBottom: `rgba(0,0,0,${0.20*nightFactor})`
+    });
+    return;
+  }
+
+  if (isCloudy){
+    body.classList.add("theme-cloudy");
+    setVars({
+      cloudA: `rgba(230,235,240,${0.52*nightFactor})`,
+      cloudB: `rgba(190,205,220,${0.38*nightFactor})`,
+      skyTop: `rgba(255,255,255,${0.12*nightFactor})`,
+      skyBottom: `rgba(0,0,0,${0.14*nightFactor})`
+    });
+    return;
+  }
+
+  if (isClear || isPartly){
+    body.classList.add("theme-clear");
+    setVars({
+      cloudA: `rgba(255,255,255,${0.30*nightFactor})`,
+      cloudB: `rgba(255,255,255,${0.20*nightFactor})`,
+      skyTop: `rgba(255,255,255,${0.18*nightFactor})`,
+      skyBottom: `rgba(0,0,0,${0.08*nightFactor})`
+    });
+    return;
+  }
+
+  // fallback neutro
+  setVars({
+    cloudA: `rgba(255,255,255,${0.45*nightFactor})`,
+    cloudB: `rgba(255,255,255,${0.32*nightFactor})`,
+    skyTop: `rgba(255,255,255,${0.12*nightFactor})`,
+    skyBottom: `rgba(0,0,0,${0.12*nightFactor})`
+  });
 }
 
-function applyDynamicBackground(code){
-  const cls = themeFromWeatherCode(code);
-  const body = document.body;
-  if (!body) return;
+/* altura da janela animada: header + "Agora" + 20px */
+function updateSkyWindowHeight(){
+  const sky = document.getElementById("skyWindow");
+  if (!sky) return;
 
-  body.classList.remove("theme-clear","theme-cloudy","theme-rain","theme-fog","theme-snow","theme-thunder");
-  body.classList.add(cls);
+  const header = document.querySelector(".header");
+  const nowCard = document.querySelector("main.stack > section.card.glass"); // 1ª card ("Agora")
+
+  if (!header || !nowCard) return;
+
+  const pad = 34; // (14 base + 20 extra)
+  const h = Math.max(260, Math.round(header.offsetHeight + nowCard.offsetHeight + pad));
+  sky.style.height = `${h}px`;
 }
 
 function renderAlerts(data){
@@ -377,9 +470,12 @@ function renderAll(data, sourceName, locName){
   const prcp  = data.hourly.precipitation?.[i] ?? 0;
   const pop   = data.hourly.precipitation_probability?.[i] ?? 0;
 
-  // ✅ FUNDO DINÂMICO (só isto foi adicionado)
   const wcodeNow = data.hourly.weather_code?.[i];
-  applyDynamicBackground(wcodeNow);
+  const isDayNow = data.hourly.is_day?.[i] ?? 1;
+
+  // ✅ só altera o fundo (tema + altura janela topo)
+  applyDynamicBackground(wcodeNow, isDayNow);
+  updateSkyWindowHeight();
 
   const { min, max } = computeMinMaxNext24h(data.hourly.temperature_2m, i);
 
@@ -397,70 +493,4 @@ function renderAll(data, sourceName, locName){
     els.dirNeedle.style.transform = `translate(-50%, -92%) rotate(${(dir + 180) % 360}deg)`;
   }
 
-  const tempEff = (feels ?? temp);
-
-  setText(els.dressBike, clothingSuggestion({ temp: tempEff, wind, gust, pop, prcp, sport:"bike" }));
-  setText(els.dressRun,  clothingSuggestion({ temp: tempEff, wind, gust, pop, prcp, sport:"run" }));
-  setText(els.dressWalk, clothingSuggestion({ temp: tempEff, wind, gust, pop, prcp, sport:"walk" }));
-
-  renderAlerts(data);
-  renderTables(data);
-
-  const bw = computeBestWindowNext12h(data);
-  const startLbl = weekdayHourLabel(t[bw.idx]);
-  const endLbl   = weekdayHourLabel(t[bw.idx + 2] ?? t[bw.idx + 1]);
-  setText(els.bestWindow, `${startLbl} → ${endLbl}\nMenos chuva + menos rajadas.`);
-
-  setText(els.windSuggestion, windDirectionSuggestion(dir));
-  setText(els.source, sourceName);
-}
-
-async function refresh(){
-  const locId = els.select?.value;
-  const loc = LOCATIONS.find(x => x.id === locId) ?? LOCATIONS[0];
-
-  updateWindyCam(loc.lat, loc.lon);
-  setText(els.updated, "A atualizar…");
-  setText(els.source, "—");
-
-  try{
-    const { json, source } = await fetchWeather(loc);
-    setText(
-      els.updated,
-      `Última atualização: ${new Date().toLocaleString("pt-PT", { dateStyle:"medium", timeStyle:"short" })}`
-    );
-    renderAll(json, source, loc.name);
-  } catch (e){
-    const msg = String(e?.message ?? e);
-    setText(els.updated, `Erro ao atualizar (${new Date().toLocaleTimeString("pt-PT")}): ${msg}`);
-    setText(els.source, "Se persistir: cache do Safari. Recarrega e/ou limpa dados do site.");
-    console.error("[SEMPLANO] refresh failed:", e);
-  }
-}
-
-function init(){
-  if (!els.select || !els.updated) return;
-
-  for (const l of LOCATIONS){
-    const opt = document.createElement("option");
-    opt.value = l.id;
-    opt.textContent = l.name;
-    els.select.appendChild(opt);
-  }
-
-  els.select.value = "alcabideche";
-  els.select.addEventListener("change", refresh);
-
-  if (els.toggle48 && els.wrap48){
-    els.toggle48.addEventListener("click", () => {
-      const willShow = els.wrap48.classList.contains("hidden");
-      els.wrap48.classList.toggle("hidden", !willShow);
-      els.toggle48.textContent = willShow ? "Esconder" : "Mostrar";
-    });
-  }
-
-  refresh();
-  setInterval(refresh, REFRESH_MS);
-}
-
-init();
+ 
