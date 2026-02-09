@@ -1,3 +1,4 @@
+/* styles.css */
 :root{
   --text:#ffffff;
   --muted: rgba(255,255,255,.82);
@@ -7,7 +8,7 @@
   --glass2: rgba(255,255,255,.10);
   --shadow: 0 18px 44px rgba(0,0,0,.22);
 
-  /* dinâmico (janela topo) */
+  /* fundo dinâmico */
   --cloudA: rgba(255,255,255,.55);
   --cloudB: rgba(255,255,255,.40);
   --skyTintTop: rgba(255,255,255,.10);
@@ -320,20 +321,16 @@ body{
 }
 
 /* =========================
-   JANELA ANIMADA NO TOPO
-   (só até ao fim do "Agora")
+   FUNDO DINÂMICO NO TOPO
    ========================= */
-
 .skyWindow{
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
 
-  /* altura dinâmica via JS (fallback) */
-  height: 420px;
-
-  z-index: -1;           /* acima do .bg (-2) e atrás do conteúdo */
+  height: 420px; /* fallback; JS ajusta */
+  z-index: -1;
   pointer-events: none;
   overflow: hidden;
 
