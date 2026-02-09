@@ -351,14 +351,8 @@ function updateWindyCam(lat, lon){
 function updateSkyHeight(){
   const nowCard = document.getElementById("nowCard");
   if (!nowCard) return;
-
   const r = nowCard.getBoundingClientRect();
-
-  // Estica o céu mais para baixo para a transição ser natural
-  // Ajusta este valor (ex.: 120–220) conforme o gosto
-  const EXTRA = 180;
-
-  const h = Math.max(320, Math.round(r.bottom + EXTRA));
+  const h = Math.max(260, Math.round(r.bottom));
   document.documentElement.style.setProperty("--sky-height", `${h}px`);
 }
 
@@ -468,10 +462,8 @@ function setSkyFromWeather(code, isDay){
 
   const file = skyFileFor(code, isDay);
   if (els.skyImg){
-    document.documentElement.style.setProperty(
-  "--sky-bg-image",
-  `url(./${file})`
-);
+    els.skyImg.style.backgroundImage = `url(./${file})`;
+  }
 
   // fundo homogéneo
   tintBackgroundFromImage(file);
