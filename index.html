@@ -6,10 +6,18 @@
   <meta name="theme-color" content="#6fa7c6" />
   <title>SEM PLANO — Meteo</title>
 
+  <link rel="manifest" href="./manifest.json" />
   <link rel="stylesheet" href="./styles.css?v=20260209_v1" />
 </head>
 
 <body>
+  <!-- Sky (foto real) -->
+  <div class="skyReal" id="skyReal" aria-hidden="true">
+    <div class="skyImg" id="skyImg"></div>
+    <div class="skyClouds" id="skyClouds"></div>
+    <div class="skyFx" id="skyFx"></div>
+  </div>
+
   <div class="bg"></div>
 
   <div class="phone">
@@ -32,7 +40,7 @@
     <main class="stack">
 
       <!-- AGORA -->
-      <section class="card glass">
+      <section class="card glass" id="nowCard">
         <div class="cardTitle">Agora</div>
 
         <div class="nowLayout">
@@ -144,6 +152,6 @@
   </div>
 
   <script async src="https://webcams.windy.com/webcams/public/embed/v2/script/nearby.js"></script>
-  <script src="./app.js?v=20260209_v3"></script>
+  <script src="./app.js?v=20260209_v4"></script>
 </body>
 </html>
