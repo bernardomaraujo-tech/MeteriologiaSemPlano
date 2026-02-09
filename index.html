@@ -1,157 +1,444 @@
-<!doctype html>
-<html lang="pt-PT">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="theme-color" content="#6fa7c6" />
-  <title>SEM PLANO — Meteo</title>
+/* styles.css */
+:root{
+  --text:#ffffff;
+  --muted: rgba(255,255,255,.82);
+  --line: rgba(255,255,255,.22);
 
-  <link rel="stylesheet" href="./styles.css?v=20260209_v1" />
-</head>
+  --glass: rgba(255,255,255,.18);
+  --glass2: rgba(255,255,255,.10);
+  --shadow: 0 18px 44px rgba(0,0,0,.22);
 
-<body>
-  <!-- Céu real (imagem + overlays). Fica do topo até ao fim do cartão "Agora" -->
-  <div class="skyReal" id="skyReal" aria-hidden="true">
-    <div class="skyImg" id="skyImg"></div>
-    <div class="skyClouds" id="skyClouds"></div>
-    <div class="skyFx" id="skyFx"></div>
-    <div class="skyFade" id="skyFade"></div>
-  </div>
+  /* fundo dinâmico (antigo) */
+  --cloudA: rgba(255,255,255,.55);
+  --cloudB: rgba(255,255,255,.40);
+  --skyTintTop: rgba(255,255,255,.10);
+  --skyTintBottom: rgba(0,0,0,.10);
 
-  <div class="bg"></div>
+  /* NOVO: cores do fundo (JS ajusta a partir da imagem) */
+  --bg1: #6fa7c6;
+  --bg2: #4e8fb6;
+  --bg3: #2f6f98;
 
-  <div class="phone">
-    <header class="header">
-      <img src="./logo.png" alt="SEM PLANO" class="logo" />
+  /* NOVO: altura do céu até ao fim do Agora (JS ajusta) */
+  --sky-height: 420px;
+}
 
-      <div class="hero">
-        <div class="heroLoc" id="heroLoc">Alcabideche</div>
-        <div class="heroTemp" id="heroTemp">—°</div>
-        <div class="heroMeta" id="heroMeta">Sensação: —° · Máx: —° · Mín: —°</div>
-      </div>
+*{box-sizing:border-box}
+html,body{height:100%}
 
-      <div class="updated" id="updated">—</div>
+body{
+  margin:0;
+  font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+  color:var(--text);
+  background: var(--bg1);
+}
 
-      <div class="controls">
-        <select id="locationSelect" class="select" aria-label="Selecionar localidade"></select>
-      </div>
-    </header>
+/* FUNDO BASE — agora segue a imagem (homogéneo) */
+.bg{
+  position:fixed;
+  inset:0;
+  z-index:-2;
 
-    <main class="stack">
+  /* A MESMA IMAGEM DO CÉU */
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.05) 0%,
+      rgba(0,0,0,.25) 60%,
+      rgba(0,0,0,.45) 100%
+    ),
+    var(--sky-bg-image);
 
-      <!-- AGORA -->
-      <section class="card glass" id="nowCard">
-        <div class="cardTitle">Agora</div>
+  background-size: cover;
+  background-position: center 100%;
+  background-repeat: no-repeat;
 
-        <div class="nowLayout">
-          <div class="kv">
-            <div class="k">Vento</div><div class="v" id="nowWind">—</div>
-            <div class="k">Rajadas</div><div class="v" id="nowGust">—</div>
-            <div class="k">Direção</div><div class="v" id="nowDirTxt">—</div>
-            <div class="k">Chuva</div><div class="v" id="nowRain">—</div>
-            <div class="k">Prob.</div><div class="v" id="nowPop">—</div>
-          </div>
+  filter: saturate(1.05) blur(0px);
+}
 
-          <div class="dirCard" aria-label="Direção do vento">
-            <div class="dirTitle">Direção</div>
-            <div class="compass">
-              <div class="compassRing"></div>
+/* =========================
+   NOVO: CÉU REAL (IMAGEM)
+   ========================= */
+.skyReal{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: var(--sky-height);
+  z-index: -1; /* por cima do .bg */
+  pointer-events: none;
+  overflow: hidden;
+}
 
-              <div class="compassLabel n">N</div>
-              <div class="compassLabel e">E</div>
-              <div class="compassLabel s">S</div>
-              <div class="compassLabel w">O</div>
+.skyImg{
+  position:absolute;
+  inset:0;
+  background-size: cover;
 
-              <div class="needle" id="dirNeedle"></div>
-              <div class="needleDot"></div>
-            </div>
-          </div>
-        </div>
-      </section>
+  /* MOSTRA MAIS IMAGEM PARA BAIXO */
+  background-position: center 100%;
 
-      <!-- O que vestir -->
-      <section class="card glass">
-        <div class="dressTitle">O que vestir (sugestão)</div>
-        <div class="dressGrid">
-          <div class="pillRow">
-            <span class="pillLabel">Ciclismo</span>
-            <span class="pillValue" id="dressBike">—</span>
-          </div>
-          <div class="pillRow">
-            <span class="pillLabel">Corrida</span>
-            <span class="pillValue" id="dressRun">—</span>
-          </div>
-          <div class="pillRow">
-            <span class="pillLabel">Caminhada</span>
-            <span class="pillValue" id="dressWalk">—</span>
-          </div>
-        </div>
-      </section>
+  /* MENOS CROP / MENOS ZOOM */
+  transform: scale(1.0);
 
-      <!-- Alertas -->
-      <section class="card glass">
-        <div class="cardTitle">Alertas</div>
-        <div id="alerts" class="alerts">—</div>
-      </section>
+  animation: skyBreath 44s ease-in-out infinite;
+  will-change: transform, filter;
+}
 
-      <!-- Próximas 8h -->
-      <section class="card glass">
-        <div class="cardTitle">Próximas 8h</div>
-        <div class="tableWrap">
-          <table class="tbl" id="table8"></table>
-        </div>
-      </section>
+.skyClouds{
+  position:absolute;
+  inset:-20%;
+  background:
+    radial-gradient(closest-side at 20% 40%, rgba(255,255,255,.18), rgba(255,255,255,0) 70%),
+    radial-gradient(closest-side at 60% 30%, rgba(255,255,255,.14), rgba(255,255,255,0) 72%),
+    radial-gradient(closest-side at 85% 45%, rgba(255,255,255,.16), rgba(255,255,255,0) 70%);
+  filter: blur(10px);
+  opacity:.42;
+  animation: cloudsDrift 34s linear infinite;
+  will-change: transform;
+}
 
-      <!-- Melhor janela -->
-      <section class="card glass">
-        <div class="cardTitle">Melhor janela (2h / próximas 12h)</div>
-        <div id="bestWindow" class="best">—</div>
-        <div class="muted small">Sugestões entre 07:00 e 22:00.</div>
-      </section>
+.skyFx{
+  position:absolute;
+  inset:0;
+  opacity:0;
+  background:none;
+  animation:none;
+  will-change: transform, opacity;
+}
 
-      <!-- Sugestão de sentido -->
-      <section class="card glass">
-        <div class="cardTitle">Sugestão de sentido</div>
-        <div id="windSuggestion" class="best">—</div>
-      </section>
+/* fade no fundo do céu para “fundir” com o gradiente */
+.skyFade{
+  position:absolute;
+  left:0; right:0; bottom:0;
 
-      <!-- Câmara (Windy) -->
-      <section class="card glass">
-        <div class="cardTitle">Câmara (Windy)</div>
-        <div class="windyWrap">
-          <a name="windy-webcam-nearby-embed"
-             id="windyCam"
-             data-params='{"lat":38.7330,"lon":-9.4100,"radius":15,"limit":1}'>
-          </a>
-        </div>
-        <div class="muted small">
-          Se o embed falhar:
-          <a class="camLink" id="windyLink" href="#" target="_blank" rel="noreferrer">ver webcams</a>
-        </div>
-      </section>
+  /* fade mais longo = transição mais bonita */
+  height: 62%;
 
-      <!-- Próximas 48h -->
-      <section class="card glass">
-        <div class="row">
-          <div class="cardTitle" style="margin:0;">Próximas 48h</div>
-          <button class="btn" id="toggle48" type="button">Mostrar</button>
-        </div>
+  /* em vez de “escurecer”, misturamos com a cor real do fundo */
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,.06) 35%,
+    rgba(0,0,0,.10) 55%,
+    rgba(0,0,0,.14) 100%
+  );
 
-        <div class="tableWrap hidden" id="wrap48" style="margin-top:10px;">
-          <table class="tbl" id="table48"></table>
-        </div>
-      </section>
+  /* remove o multiply (tende a “sujar” a imagem) */
+  mix-blend-mode: normal;
+  opacity: .75;
+}
 
-      <!-- Fonte -->
-      <section class="card glass">
-        <div class="cardTitle">Fonte</div>
-        <div class="muted" id="source">—</div>
-      </section>
+/* dia/noite subtil (sem mexer na tua UI) */
+body.is-night .skyImg{
+  filter: brightness(.78) contrast(1.05) saturate(.95);
+}
+body.is-day .skyImg{
+  filter: brightness(1.02) contrast(1.02) saturate(1.02);
+}
 
-    </main>
-  </div>
+@keyframes skyBreath{
+  0%{ transform: scale(1.06) translateY(0); }
+  50%{ transform: scale(1.09) translateY(-1.2%); }
+  100%{ transform: scale(1.06) translateY(0); }
+}
+@keyframes cloudsDrift{
+  0%{ transform: translate3d(-2%, 0, 0) scale(1.02); }
+  100%{ transform: translate3d(2%, 0, 0) scale(1.02); }
+}
+@keyframes rainMove{
+  0%{ transform: translate3d(-2%, -3%, 0); }
+  100%{ transform: translate3d(2%, 3%, 0); }
+}
 
-  <script async src="https://webcams.windy.com/webcams/public/embed/v2/script/nearby.js"></script>
-  <script src="./app.js?v=20260209_v5"></script>
-</body>
-</html>
+@media (prefers-reduced-motion: reduce){
+  .skyImg, .skyClouds, .skyFx{ animation:none !important; }
+}
+
+/* -------------------------
+   RESTO DO TEU CSS (igual)
+   ------------------------- */
+
+.phone{
+  max-width:430px;
+  margin:0 auto;
+  padding:12px 12px 24px;
+}
+
+.header{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+  padding:8px 0 12px;
+}
+
+.logo{ height:62px; width:auto; display:block; }
+
+.hero{ width:100%; text-align:center; padding: 6px 0 2px; }
+.heroLoc{ font-size:22px; font-weight:650; letter-spacing:.2px; opacity:.95; }
+.heroTemp{ font-size:78px; font-weight:700; line-height:1; margin-top:4px; }
+.heroMeta{ font-size:14px; color:var(--muted); margin-top:4px; }
+
+.updated{ font-size:12px; color:var(--muted); }
+
+.controls{ width:100%; }
+
+.select{
+  width:100%;
+  padding:12px 12px;
+  border-radius:16px;
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.18);
+  color: var(--text);
+  font-size:14px;
+  outline:none;
+  -webkit-appearance:none;
+  appearance:none;
+}
+
+.stack{ display:flex; flex-direction:column; gap:12px; }
+
+.card{ border-radius:20px; padding:14px; }
+
+.glass{
+  background: linear-gradient(180deg, var(--glass), var(--glass2));
+  border:1px solid var(--line);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.cardTitle{
+  font-size:13px;
+  color:var(--muted);
+  margin-bottom:10px;
+  letter-spacing:.2px;
+}
+
+.row{ display:flex; align-items:center; justify-content:space-between; gap:10px; }
+
+.btn{
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.14);
+  color: var(--text);
+  border-radius:999px;
+  padding:8px 10px;
+  font-size:13px;
+}
+
+.hidden{ display:none; }
+.small{ font-size:12px; }
+.best{ font-size:15px; line-height:1.35; white-space:pre-line; }
+.muted{ color:var(--muted); }
+
+/* AGORA */
+.nowLayout{
+  display:grid;
+  grid-template-columns: 1fr 130px;
+  gap:12px;
+  align-items:center;
+}
+
+.kv{
+  display:grid;
+  grid-template-columns: 108px auto;
+  gap:10px 10px;
+  align-items:center;
+}
+.k{ color:var(--muted); font-size:13px; }
+.v{
+  font-size:16px;
+  font-weight:750;
+  text-align:left;
+}
+
+/* Rosa dos ventos simples */
+.dirCard{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  align-items:center;
+  justify-content:center;
+}
+
+.dirTitle{
+  font-size:12px;
+  color:var(--muted);
+  letter-spacing:.2px;
+}
+
+.compass{
+  position:relative;
+  width:110px;
+  height:110px;
+}
+
+.compassRing{
+  position:absolute;
+  inset:0;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.30);
+  background: rgba(0,0,0,.08);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.08);
+}
+
+.compassLabel{
+  position:absolute;
+  font-size:12px;
+  font-weight:750;
+  color: rgba(255,255,255,.92);
+  opacity:.95;
+  user-select:none;
+}
+.compassLabel.n{ top:6px; left:50%; transform:translateX(-50%); }
+.compassLabel.s{ bottom:6px; left:50%; transform:translateX(-50%); }
+.compassLabel.e{ right:8px; top:50%; transform:translateY(-50%); }
+.compassLabel.w{ left:8px; top:50%; transform:translateY(-50%); }
+
+.needle{
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:2px;
+  height:44px;
+  transform-origin: 50% 92%;
+  transform: translate(-50%, -92%) rotate(0deg);
+  background: rgba(255,255,255,.95);
+  border-radius:999px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.28);
+}
+.needle::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:-8px;
+  transform:translateX(-50%);
+  width:0;
+  height:0;
+  border-left:6px solid transparent;
+  border-right:6px solid transparent;
+  border-bottom:9px solid rgba(255,255,255,.95);
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,.25));
+}
+.needleDot{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:10px;
+  height:10px;
+  border-radius:999px;
+  background: rgba(255,255,255,.95);
+  box-shadow: 0 2px 8px rgba(0,0,0,.22);
+}
+
+/* O que vestir (pills) */
+.dressTitle{ font-size:13px; color:var(--muted); margin-bottom:8px; }
+.dressGrid{ display:flex; flex-direction:column; gap:8px; }
+
+.pillRow{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:10px 12px;
+  background: rgba(0,0,0,.08);
+}
+.pillLabel{ min-width:82px; font-size:13px; color:var(--muted); }
+.pillValue{
+  font-size:13px;
+  color: rgba(255,255,255,.96);
+  line-height:1.35;
+}
+
+/* Alertas */
+.alerts{display:flex;flex-direction:column;gap:8px}
+.pill{
+  padding:10px 12px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background: rgba(0,0,0,.10);
+  font-size:13px;
+}
+
+/* Tabelas */
+.tableWrap{ overflow:auto; -webkit-overflow-scrolling:touch; }
+
+.tbl{
+  width:100%;
+  border-collapse:collapse;
+  min-width:680px;
+}
+
+.tbl th,.tbl td{
+  padding:9px 8px;
+  border-bottom:1px solid var(--line);
+  font-size:13px;
+  text-align:left;
+  white-space:nowrap;
+}
+.tbl th{ color:var(--muted); font-weight:650; }
+
+.iconCell{ text-align:center !important; width:44px; }
+.icon{
+  font-size:20px;
+  line-height:1;
+  display:inline-block;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,.40));
+}
+
+/* Sticky: Hora + Ícone */
+.tbl th:first-child,
+.tbl td:first-child{
+  position:sticky;
+  left:0;
+  z-index:5;
+  width:92px;
+  min-width:92px;
+  background: rgba(0,0,0,.34);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  font-weight:750;
+  color:#fff;
+}
+.tbl th:nth-child(2),
+.tbl td:nth-child(2){
+  position:sticky;
+  left:92px;
+  z-index:4;
+  width:44px;
+  min-width:44px;
+  padding-left:4px;
+  padding-right:6px;
+  background: rgba(0,0,0,.34);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+.tbl th:first-child{ z-index:7; }
+.tbl th:nth-child(2){ z-index:6; }
+
+.tbl th:nth-child(2)::after,
+.tbl td:nth-child(2)::after{
+  content:"";
+  position:absolute;
+  top:0;
+  right:0;
+  width:1px;
+  height:100%;
+  background: rgba(255,255,255,.30);
+}
+
+/* Windy */
+.windyWrap{
+  border-radius:16px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  background:#000;
+}
+
+.camLink{
+  color: rgba(255,255,255,.95);
+  text-decoration: underline;
+}
