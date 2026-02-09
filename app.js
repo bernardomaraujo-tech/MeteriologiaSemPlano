@@ -7,21 +7,24 @@ const PREFERRED_MODELS = [
   "dmi_harmonie_arome_europe"
 ];
 
+// Localizações (Alcabideche mantém-se default)
 const LOCATIONS = [
   { id:"alcabideche", name:"Alcabideche", lat:38.7330, lon:-9.4100 },
-  { id:"guincho", name:"Guincho", lat:38.72948, lon:-9.47457 },
-  { id:"cascais", name:"Cascais", lat:38.6979, lon:-9.4206 },
-  { id:"peninha", name:"Peninha", lat:38.7692, lon:-9.4589 },
-  { id:"culatra", name:"Ilha da Culatra", lat:36.9889, lon:-7.8336 },
-  { id:"algueirao", name:"Algueirão", lat:38.7936, lon:-9.3417 },
-  { id:"amadora", name:"Amadora", lat:38.7569, lon:-9.2308 },
-  { id:"sintra", name:"Sintra", lat:38.8029, lon:-9.3817 },
 
-  // novas localizações
+  { id:"amadora", name:"Amadora", lat:38.7569, lon:-9.2308 },
+  { id:"carcavelos", name:"Carcavelos", lat:38.6910, lon:-9.3317 },
+  { id:"cascais", name:"Cascais", lat:38.6979, lon:-9.4206 },
+  { id:"columbeira", name:"Columbeira", lat:39.3149, lon:-9.2047 },
+  { id:"estoril", name:"Estoril", lat:38.7057, lon:-9.3977 },
+  { id:"guincho", name:"Guincho", lat:38.72948, lon:-9.47457 },
+  { id:"peninha", name:"Peninha", lat:38.7692, lon:-9.4589 },
+  { id:"praia_tocha", name:"Praia da Tocha", lat:40.3228, lon:-8.8014 },
   { id:"sdr", name:"São Domingos de Rana", lat:38.7019, lon:-9.3389 },
-  { id:"carcavelos", name:"Carcavelos", lat:38.6910, lon:-9.3317 }
+  { id:"sintra", name:"Sintra", lat:38.8029, lon:-9.3817 },
+  { id:"culatra", name:"Ilha da Culatra", lat:36.9889, lon:-7.8336 }
 ];
 
+// Helpers DOM
 const $ = (id) => document.getElementById(id);
 const setText = (el, txt) => { if (el) el.textContent = txt; };
 const setHTML = (el, html) => { if (el) el.innerHTML = html; };
@@ -56,29 +59,32 @@ const els = {
   bestWindow: $("bestWindow"),
   windSuggestion: $("windSuggestion"),
 
-  windyLink: $("windyLink"),
+  windyLink: $("windyLink")
 };
 
-function fmtKmh(x){ return `${Math.round(x ?? 0)} km/h`; }
-function fmtMm(x){ return `${(Math.round(((x ?? 0) * 10)) / 10).toFixed(1)} mm`; }
-function fmtPct(x){ return `${Math.round(x ?? 0)}%`; }
+// Formatadores
+const fmtKmh = (x) => `${Math.round(x ?? 0)} km/h`;
+const fmtMm  = (x) => `${(Math.round((x ?? 0) * 10) / 10).toFixed(1)} mm`;
+const fmtPct = (x) => `${Math.round(x ?? 0)}%`;
 
+// Direção do vento
 function windDirText(deg){
   const dirs = ["N","NE","E","SE","S","SO","O","NO"];
   const idx = Math.round((((deg ?? 0) % 360) / 45)) % 8;
   return `${dirs[idx]} (${Math.round(deg ?? 0)}°)`;
 }
 
-function hourLabel(iso){ return String(iso).slice(11,16); }
+const hourLabel = (iso) => String(iso).slice(11,16);
 
 function weekdayHourLabel(iso){
   const d = new Date(iso);
-  let w = d.toLocaleDateString("pt-PT", { weekday: "short" });
+  let w = d.toLocaleDateString("pt-PT", { weekday:"short" });
   w = w.charAt(0).toUpperCase() + w.slice(1);
-  const h = d.toLocaleTimeString("pt-PT", { hour: "2-digit", minute: "2-digit" });
+  const h = d.toLocaleTimeString("pt-PT", { hour:"2-digit", minute:"2-digit" });
   return `${w} ${h}`;
 }
 
+// URL Open-Meteo
 function buildUrlForecast(loc, modelsCsv){
   const params = new URLSearchParams({
     latitude: String(loc.lat),
@@ -106,382 +112,90 @@ function buildUrlForecast(loc, modelsCsv){
   return `https://api.open-meteo.com/v1/forecast?${params.toString()}`;
 }
 
+// Fetch com timeout
 async function fetchWithTimeout(url){
   const ctrl = new AbortController();
   const t = setTimeout(() => ctrl.abort(), FETCH_TIMEOUT_MS);
-  try{
-    return await fetch(url, { cache:"no-store", mode:"cors", signal: ctrl.signal });
+  try {
+    return await fetch(url, { cache:"no-store", signal: ctrl.signal });
   } finally {
     clearTimeout(t);
   }
 }
 
+// Fetch weather (AROME → fallback)
 async function fetchWeather(loc){
   const modelsCsv = PREFERRED_MODELS.join(",");
 
-  // 1) tenta HARMONIE-AROME
-  try{
-    const url1 = buildUrlForecast(loc, modelsCsv);
-    const r1 = await fetchWithTimeout(url1);
-    if (r1.ok){
-      const json1 = await r1.json();
-      if (json1?.hourly?.time?.length){
-        return { json: json1, source: "Open-Meteo (HARMONIE-AROME)" };
+  try {
+    const r = await fetchWithTimeout(buildUrlForecast(loc, modelsCsv));
+    if (r.ok){
+      const json = await r.json();
+      if (json?.hourly?.time?.length){
+        return { json, source:"Open-Meteo (HARMONIE-AROME)" };
       }
     }
-  } catch (_) {}
+  } catch {}
 
-  // 2) fallback best match
-  const url2 = buildUrlForecast(loc);
-  const r2 = await fetchWithTimeout(url2);
+  const r2 = await fetchWithTimeout(buildUrlForecast(loc));
   if (!r2.ok) throw new Error(`HTTP ${r2.status}`);
   const json2 = await r2.json();
-  if (!json2?.hourly?.time?.length) throw new Error("hourly vazio");
-  return { json: json2, source: "Open-Meteo (Best match)" };
+  return { json: json2, source:"Open-Meteo (Best match)" };
 }
 
+// Utilitários de tempo
 function nearestHourIndex(times){
-  const now = new Date();
-  let best = 0, bestDiff = Infinity;
-  for (let i=0;i<times.length;i++){
-    const t = new Date(times[i]);
-    const diff = Math.abs(t.getTime() - now.getTime());
-    if (diff < bestDiff){ bestDiff = diff; best = i; }
-  }
+  const now = Date.now();
+  let best = 0, diff = Infinity;
+  times.forEach((t,i)=>{
+    const d = Math.abs(new Date(t).getTime() - now);
+    if (d < diff){ diff = d; best = i; }
+  });
   return best;
 }
 
-function computeMinMaxNext24h(temps, startIndex){
-  const end = Math.min(startIndex + 24, temps.length);
+function computeMinMaxNext24h(temps, i){
   let min = Infinity, max = -Infinity;
-  for (let i=startIndex; i<end; i++){
-    const v = temps[i];
-    if (v < min) min = v;
-    if (v > max) max = v;
+  for (let k=i; k<Math.min(i+24, temps.length); k++){
+    min = Math.min(min, temps[k]);
+    max = Math.max(max, temps[k]);
   }
   return { min, max };
 }
 
-/* Melhor janela 07–22 */
-function computeBestWindowNext12h(data){
-  const times = data.hourly.time;
-  const gust  = data.hourly.wind_gusts_10m ?? [];
-  const pop   = data.hourly.precipitation_probability ?? Array(times.length).fill(0);
-  const prcp  = data.hourly.precipitation ?? Array(times.length).fill(0);
-
-  const start = nearestHourIndex(times);
-  const end = Math.min(start + 12, times.length - 2);
-
-  const START_H = 7;
-  const LAST_START_H = 20;
-
-  let bestI = null;
-  let bestScore = -1;
-
-  const scoreHour = (j) => {
-    const popN  = Math.min(Math.max(pop[j] ?? 0, 0), 100) / 100;
-    const gustN = Math.min(Math.max(gust[j] ?? 0, 0), 60) / 60;
-    const prcpN = Math.min(Math.max(prcp[j] ?? 0, 0), 3) / 3;
-    return (1 - (0.65*popN + 0.35*prcpN)) * 0.65 + (1 - gustN) * 0.35;
-  };
-
-  for (let i=start; i<=end; i++){
-    const h = new Date(times[i]).getHours();
-    if (h < START_H || h > LAST_START_H) continue;
-    const s = (scoreHour(i) + scoreHour(i+1)) / 2;
-    if (s > bestScore){ bestScore = s; bestI = i; }
-  }
-
-  if (bestI === null) bestI = start;
-  return { idx: bestI, score: bestScore };
-}
-
+// Sugestão simples de sentido (vamos evoluir depois)
 function windDirectionSuggestion(deg){
   const from = windDirText(deg);
   const d = ((deg % 360) + 360) % 360;
-  if (d >= 315 || d < 45) return `De ${from}. Favorece ir para sul; regresso para norte é mais pesado.`;
-  if (d >= 45 && d < 135) return `De ${from}. Favorece ir para oeste; regresso para leste é mais pesado.`;
-  if (d >= 135 && d < 225) return `De ${from}. Favorece ir para norte; regresso para sul é mais pesado.`;
-  return `De ${from}. Favorece ir para leste; regresso para oeste é mais pesado.`;
+
+  if (d >= 315 || d < 45)
+    return `Vento de ${from}. Começar contra vento (norte → sul) e terminar mais protegido.`;
+  if (d < 135)
+    return `Vento de ${from}. Começar contra vento (este → oeste) e terminar mais rápido.`;
+  if (d < 225)
+    return `Vento de ${from}. Começar contra vento (sul → norte) e terminar favorável.`;
+
+  return `Vento de ${from}. Começar contra vento (oeste → este) e guardar o melhor para o fim.`;
 }
 
-/* O que vestir — versão simples (as tuas regras) */
-function clothingSuggestion({ temp, wind, gust, pop, prcp, sport }){
-  const rainy = (pop ?? 0) >= 25 || (prcp ?? 0) >= 0.2;
-  const windy = (wind ?? 0) >= 22 || (gust ?? 0) >= 35;
-
-  let base = "";
-  if (temp <= 6) base = "Muito Frio";
-  else if (temp <= 11) base = "Frio";
-  else if (temp <= 16) base = "Fresco";
-  else if (temp <= 22) base = "Agradável";
-  else base = "Quente";
-
-  const rainAddon = rainy ? " + Impermeável" : "";
-  const windAddon = windy ? " + Corta-vento/Colete" : "";
-
-  if (sport === "bike"){
-    if (temp <= 6)  return `${base}: Base layer + Jersey M.Comp. + Colete + Luvas grossas + Calças + Proteção sapatos${rainAddon}`;
-    if (temp <= 11) return `${base}: Base layer + Jersey M.Comp. + Colete + Luvas finas + Calção${windAddon}${rainAddon}`;
-    if (temp <= 16) return `${base}: Base layer + Jersey M.Comp.. + Colete opcional${rainAddon}`;
-    if (temp <= 22) return `${base}: Jersey M.Comp.${windAddon}${rainAddon}`;
-    return `${base}: Jersey leve + proteção solar${rainAddon}`;
-  }
-
-  if (sport === "run"){
-    if (temp <= 6)  return `${base}: Térmica ML + Calças + Corta-vento leve${rainAddon}${windAddon}`;
-    if (temp <= 11) return `${base}: Manga comprida leve${rainAddon}${windAddon}`;
-    if (temp <= 16) return `${base}: T-shirt + camada fina opcional${rainAddon}${windAddon}`;
-    if (temp <= 22) return `${base}: T-shirt leve${rainAddon}${windAddon}`;
-    return `${base}: Muito leve + hidratação${rainAddon}${windAddon}`;
-  }
-
-  // walk
-  if (temp <= 6)  return `${base}: Camadas (térmica + casaco)${rainAddon}${windAddon}`;
-  if (temp <= 11) return `${base}: Casaco leve${rainAddon}${windAddon}`;
-  if (temp <= 16) return `${base}: Camisola leve + camada extra opcional${rainAddon}${windAddon}`;
-  if (temp <= 22) return `${base}: Confortável, camada leve opcional${rainAddon}${windAddon}`;
-  return `${base}: Leve e respirável + água${rainAddon}${windAddon}`;
-}
-
-function iconForWeatherCode(code, isDay){
-  if (code === 0) return isDay ? "☀️" : "🌙";
-  if (code === 1) return isDay ? "🌤️" : "🌙☁️";
-  if (code === 2) return "⛅";
-  if (code === 3) return "☁️";
-  if (code === 45 || code === 48) return "🌫️";
-  if (code === 51 || code === 53 || code === 55) return "🌦️";
-  if (code === 56 || code === 57) return "🌧️";
-  if (code === 61 || code === 63 || code === 65) return "🌧️";
-  if (code === 71 || code === 73 || code === 75 || code === 77) return "❄️";
-  if (code === 80 || code === 81 || code === 82) return "🌧️";
-  if (code === 95 || code === 96 || code === 99) return "⛈️";
-  return "•";
-}
-
-/* =========================
-   FUNDO DINÂMICO (só tema)
-   ========================= */
-function applyDynamicBackground(weatherCode, isDay){
-  const body = document.body;
-  body.classList.remove("theme-clear","theme-cloudy","theme-rain","theme-snow","theme-fog","theme-thunder");
-
-  const root = document.documentElement.style;
-
-  const setVars = ({ cloudA, cloudB, skyTop, skyBottom }) => {
-    root.setProperty("--cloudA", cloudA);
-    root.setProperty("--cloudB", cloudB);
-    root.setProperty("--skyTintTop", skyTop);
-    root.setProperty("--skyTintBottom", skyBottom);
-  };
-
-  const code = Number(weatherCode ?? -1);
-
-  // mapeamento Open-Meteo weather_code
-  const isFog = (code === 45 || code === 48);
-  const isThunder = (code === 95 || code === 96 || code === 99);
-  const isSnow = ([71,73,75,77,85,86].includes(code));
-  const isRain = ([51,53,55,56,57,61,63,65,66,67,80,81,82].includes(code));
-  const isClear = (code === 0);
-  const isPartly = (code === 1 || code === 2);
-  const isCloudy = (code === 3);
-
-  // noite: ligeiramente mais escuro
-  const nightFactor = (isDay === 0) ? 0.85 : 1;
-
-  if (isThunder){
-    body.classList.add("theme-thunder");
-    setVars({
-      cloudA: `rgba(210,220,235,${0.55*nightFactor})`,
-      cloudB: `rgba(170,185,210,${0.45*nightFactor})`,
-      skyTop: `rgba(255,255,255,${0.10*nightFactor})`,
-      skyBottom: `rgba(0,0,0,${0.22*nightFactor})`
-    });
-    return;
-  }
-
-  if (isSnow){
-    body.classList.add("theme-snow");
-    setVars({
-      cloudA: `rgba(245,248,255,${0.60*nightFactor})`,
-      cloudB: `rgba(210,225,245,${0.42*nightFactor})`,
-      skyTop: `rgba(255,255,255,${0.16*nightFactor})`,
-      skyBottom: `rgba(0,0,0,${0.14*nightFactor})`
-    });
-    return;
-  }
-
-  if (isFog){
-    body.classList.add("theme-fog");
-    setVars({
-      cloudA: `rgba(235,240,245,${0.46*nightFactor})`,
-      cloudB: `rgba(210,220,230,${0.34*nightFactor})`,
-      skyTop: `rgba(255,255,255,${0.14*nightFactor})`,
-      skyBottom: `rgba(0,0,0,${0.12*nightFactor})`
-    });
-    return;
-  }
-
-  if (isRain){
-    body.classList.add("theme-rain");
-    setVars({
-      cloudA: `rgba(215,225,235,${0.52*nightFactor})`,
-      cloudB: `rgba(165,185,205,${0.40*nightFactor})`,
-      skyTop: `rgba(255,255,255,${0.10*nightFactor})`,
-      skyBottom: `rgba(0,0,0,${0.20*nightFactor})`
-    });
-    return;
-  }
-
-  if (isCloudy){
-    body.classList.add("theme-cloudy");
-    setVars({
-      cloudA: `rgba(230,235,240,${0.52*nightFactor})`,
-      cloudB: `rgba(190,205,220,${0.38*nightFactor})`,
-      skyTop: `rgba(255,255,255,${0.12*nightFactor})`,
-      skyBottom: `rgba(0,0,0,${0.14*nightFactor})`
-    });
-    return;
-  }
-
-  if (isClear || isPartly){
-    body.classList.add("theme-clear");
-    setVars({
-      cloudA: `rgba(255,255,255,${0.30*nightFactor})`,
-      cloudB: `rgba(255,255,255,${0.20*nightFactor})`,
-      skyTop: `rgba(255,255,255,${0.18*nightFactor})`,
-      skyBottom: `rgba(0,0,0,${0.08*nightFactor})`
-    });
-    return;
-  }
-
-  // fallback neutro
-  setVars({
-    cloudA: `rgba(255,255,255,${0.45*nightFactor})`,
-    cloudB: `rgba(255,255,255,${0.32*nightFactor})`,
-    skyTop: `rgba(255,255,255,${0.12*nightFactor})`,
-    skyBottom: `rgba(0,0,0,${0.12*nightFactor})`
-  });
-}
-
-/* altura da janela animada: header + "Agora" + 20px */
-function updateSkyWindowHeight(){
-  const sky = document.getElementById("skyWindow");
-  if (!sky) return;
-
-  const header = document.querySelector(".header");
-  const nowCard = document.querySelector("main.stack > section.card.glass"); // 1ª card ("Agora")
-
-  if (!header || !nowCard) return;
-
-  const pad = 34; // (14 base + 20 extra)
-  const h = Math.max(260, Math.round(header.offsetHeight + nowCard.offsetHeight + pad));
-  sky.style.height = `${h}px`;
-}
-
-function renderAlerts(data){
-  const t = data.hourly.time;
-  const start = nearestHourIndex(t);
-  const next2 = [start, start+1].filter(x => x < t.length);
-
-  const pops  = data.hourly.precipitation_probability ?? Array(t.length).fill(0);
-  const prcps = data.hourly.precipitation ?? Array(t.length).fill(0);
-  const gusts = data.hourly.wind_gusts_10m ?? Array(t.length).fill(0);
-
-  const anyRainSoon = next2.some(k => (pops[k] ?? 0) >= 60 || (prcps[k] ?? 0) >= 0.4);
-  const anyGustSoon = next2.some(k => (gusts[k] ?? 0) >= 45);
-
-  const pills = [];
-  if (anyRainSoon) pills.push(`<div class="pill">☔ Chuva provável nas próximas 2h</div>`);
-  if (anyGustSoon) pills.push(`<div class="pill">💨 Rajadas fortes nas próximas 2h</div>`);
-  if (!pills.length) pills.push(`<div class="pill">✅ Sem alertas relevantes nas próximas 2h</div>`);
-
-  setHTML(els.alerts, pills.join(""));
-}
-
-function renderTables(data){
-  const t = data.hourly.time;
-  const temp = data.hourly.temperature_2m;
-  const wind = data.hourly.wind_speed_10m;
-  const gust = data.hourly.wind_gusts_10m;
-  const dir  = data.hourly.wind_direction_10m;
-  const prcp = data.hourly.precipitation;
-  const pop  = data.hourly.precipitation_probability ?? Array(t.length).fill(null);
-  const wcode = data.hourly.weather_code ?? Array(t.length).fill(null);
-  const isDayArr = data.hourly.is_day ?? Array(t.length).fill(1);
-
-  const start = nearestHourIndex(t);
-
-  const make = (n, tableEl, labelFn) => {
-    const rows = [];
-    rows.push(`<tr>
-      <th>Hora</th>
-      <th class="iconCell"></th>
-      <th>Temp</th>
-      <th>Vento</th>
-      <th>Raj.</th>
-      <th>Dir</th>
-      <th>Chuva</th>
-      <th>Prob.</th>
-    </tr>`);
-
-    for (let i=start; i<Math.min(start+n, t.length); i++){
-      const ico = iconForWeatherCode(wcode[i] ?? -1, (isDayArr[i] ?? 1) === 1);
-      rows.push(`<tr>
-        <td>${labelFn(t[i])}</td>
-        <td class="iconCell"><span class="icon">${ico}</span></td>
-        <td>${Math.round(temp[i])}°</td>
-        <td>${fmtKmh(wind[i])}</td>
-        <td>${fmtKmh(gust[i])}</td>
-        <td>${windDirText(dir[i]).split(" ")[0]}</td>
-        <td>${fmtMm(prcp[i] ?? 0)}</td>
-        <td>${pop[i] == null ? "—" : fmtPct(pop[i])}</td>
-      </tr>`);
-    }
-
-    tableEl.innerHTML = rows.join("");
-  };
-
-  make(8,  els.table8,  (iso) => hourLabel(iso));
-  make(48, els.table48, (iso) => weekdayHourLabel(iso));
-}
-
-function updateWindyCam(lat, lon){
-  const el = document.getElementById("windyCam");
-  if (el){
-    el.setAttribute("data-params", JSON.stringify({ lat, lon, radius: 15, limit: 1 }));
-    el.innerHTML = "";
-    if (window.WindyWebcamsWidget?.reload) window.WindyWebcamsWidget.reload();
-  }
-  if (els.windyLink){
-    els.windyLink.href = `https://www.windy.com/webcams?${lat},${lon},12`;
-  }
-}
-
+// Render principal
 function renderAll(data, sourceName, locName){
   const t = data.hourly.time;
   const i = nearestHourIndex(t);
 
   const temp  = data.hourly.temperature_2m[i];
-  const feels = data.hourly.apparent_temperature?.[i];
+  const feels = data.hourly.apparent_temperature?.[i] ?? temp;
   const wind  = data.hourly.wind_speed_10m[i];
   const gust  = data.hourly.wind_gusts_10m[i];
   const dir   = data.hourly.wind_direction_10m[i];
   const prcp  = data.hourly.precipitation?.[i] ?? 0;
   const pop   = data.hourly.precipitation_probability?.[i] ?? 0;
 
-  const wcodeNow = data.hourly.weather_code?.[i];
-  const isDayNow = data.hourly.is_day?.[i] ?? 1;
-
-  // ✅ só altera o fundo (tema + altura janela topo)
-  applyDynamicBackground(wcodeNow, isDayNow);
-  updateSkyWindowHeight();
-
   const { min, max } = computeMinMaxNext24h(data.hourly.temperature_2m, i);
 
   setText(els.heroLoc, locName);
   setText(els.heroTemp, `${Math.round(temp)}°`);
-  setText(els.heroMeta, `Sensação: ${Math.round(feels ?? temp)}° · Máx: ${Math.round(max)}° · Mín: ${Math.round(min)}°`);
+  setText(els.heroMeta, `Sensação: ${Math.round(feels)}° · Máx: ${Math.round(max)}° · Mín: ${Math.round(min)}°`);
 
   setText(els.nowWind, fmtKmh(wind));
   setText(els.nowGust, fmtKmh(gust));
@@ -490,7 +204,50 @@ function renderAll(data, sourceName, locName){
   setText(els.nowPop, fmtPct(pop));
 
   if (els.dirNeedle){
-    els.dirNeedle.style.transform = `translate(-50%, -92%) rotate(${(dir + 180) % 360}deg)`;
+    els.dirNeedle.style.transform =
+      `translate(-50%, -92%) rotate(${(dir + 180) % 360}deg)`;
   }
 
- 
+  setText(els.windSuggestion, windDirectionSuggestion(dir));
+  setText(els.source, sourceName);
+}
+
+// Refresh
+async function refresh(){
+  const loc = LOCATIONS.find(l => l.id === els.select.value) || LOCATIONS[0];
+  setText(els.updated, "A atualizar…");
+
+  try {
+    const { json, source } = await fetchWeather(loc);
+    setText(
+      els.updated,
+      `Última atualização: ${new Date().toLocaleString("pt-PT", {
+        dateStyle:"medium", timeStyle:"short"
+      })}`
+    );
+    renderAll(json, source, loc.name);
+  } catch (e){
+    setText(els.updated, "Erro ao atualizar dados.");
+    console.error(e);
+  }
+}
+
+// Init
+function init(){
+  if (!els.select) return;
+
+  LOCATIONS.forEach(l=>{
+    const o = document.createElement("option");
+    o.value = l.id;
+    o.textContent = l.name;
+    els.select.appendChild(o);
+  });
+
+  els.select.value = "alcabideche";
+  els.select.addEventListener("change", refresh);
+
+  refresh();
+  setInterval(refresh, REFRESH_MS);
+}
+
+init();
