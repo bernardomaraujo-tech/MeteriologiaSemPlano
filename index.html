@@ -6,7 +6,12 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#6fa7c6" />
   <title>SEM PLANO — Meteo</title>
-  <link rel="stylesheet" href="./styles.css?v=20260209_dynamic_sky_v1" />
+
+  <link rel="stylesheet" href="./styles.css?v=20260209_dynamic_sky_v2" />
+
+  <!-- scripts com defer para garantir DOM pronto (iOS/PWA friendly) -->
+  <script defer src="https://webcams.windy.com/webcams/public/embed/v2/script/nearby.js"></script>
+  <script defer src="./app.js?v=20260209_dynamic_sky_v2"></script>
 </head>
 
 <body>
@@ -145,8 +150,5 @@
 
     </main>
   </div>
-
-  <script async src="https://webcams.windy.com/webcams/public/embed/v2/script/nearby.js"></script>
-  <script src="./app.js?v=20260209_dynamic_sky_v1"></script>
 </body>
 </html>
