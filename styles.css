@@ -17,14 +17,16 @@
 
 *{box-sizing:border-box}
 html,body{height:100%}
-
 body{
   margin:0;
-  font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
   color:var(--text);
-  background:#6fa7c6;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x:hidden;
 }
 
+/* fundo “base” */
 .bg{
   position:fixed;
   inset:0;
@@ -36,420 +38,288 @@ body{
   z-index:-2;
 }
 
+/* content */
 .phone{
   max-width:430px;
   margin:0 auto;
-  padding:12px 12px 24px;
+  padding: 18px 14px 28px;
 }
 
 .header{
   display:flex;
   flex-direction:column;
   align-items:center;
-  gap:10px;
-  padding:8px 0 12px;
+  gap: 10px;
+  padding-top: 10px;
 }
 
-.logo{ height:62px; width:auto; display:block; }
+.logo{
+  width:min(260px, 70vw);
+  height:auto;
+  filter: drop-shadow(0 12px 18px rgba(0,0,0,.25));
+}
 
-.hero{ width:100%; text-align:center; padding: 6px 0 2px; }
-.heroLoc{ font-size:22px; font-weight:650; letter-spacing:.2px; opacity:.95; }
-.heroTemp{ font-size:78px; font-weight:700; line-height:1; margin-top:4px; }
-.heroMeta{ font-size:14px; color:var(--muted); margin-top:4px; }
+.hero{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap: 2px;
+  margin-top: 2px;
+}
 
-.updated{ font-size:12px; color:var(--muted); }
+.heroLoc{
+  font-weight: 700;
+  letter-spacing:.2px;
+  font-size: 22px;
+  text-align:center;
+}
 
-.controls{ width:100%; }
+.heroTemp{
+  font-size: 78px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing:-1px;
+  margin-top: 2px;
+  text-shadow: 0 14px 30px rgba(0,0,0,.25);
+}
+
+.heroMeta{
+  font-size: 13px;
+  color: var(--muted);
+  text-align:center;
+}
+
+.updated{
+  font-size: 12px;
+  color: var(--muted);
+  opacity:.95;
+}
+
+.controls{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  margin-top: 2px;
+}
 
 .select{
-  width:100%;
-  padding:12px 12px;
-  border-radius:16px;
-  border:1px solid var(--line);
+  width:min(320px, 100%);
+  padding: 10px 12px;
+  border-radius: 12px;
   background: rgba(255,255,255,.18);
-  color: var(--text);
-  font-size:14px;
+  border: 1px solid rgba(255,255,255,.25);
+  color: #fff;
   outline:none;
-  -webkit-appearance:none;
-  appearance:none;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 10px 24px rgba(0,0,0,.12);
 }
 
-.stack{ display:flex; flex-direction:column; gap:12px; }
+.stack{display:flex; flex-direction:column; gap: 12px; margin-top: 12px;}
 
-.card{ border-radius:20px; padding:14px; }
+.card{
+  border-radius: 18px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
 
 .glass{
-  background: linear-gradient(180deg, var(--glass), var(--glass2));
-  border:1px solid var(--line);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: linear-gradient(180deg, var(--glass) 0%, var(--glass2) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 .cardTitle{
-  font-size:13px;
-  color:var(--muted);
-  margin-bottom:10px;
+  font-weight: 800;
   letter-spacing:.2px;
+  margin-bottom: 10px;
 }
 
-.row{ display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.row{display:flex; align-items:center; justify-content:space-between; gap: 10px;}
+.muted{color: var(--muted);}
+.small{font-size: 12px;}
 
 .btn{
-  border:1px solid var(--line);
-  background: rgba(255,255,255,.14);
-  color: var(--text);
-  border-radius:999px;
-  padding:8px 10px;
-  font-size:13px;
+  background: rgba(0,0,0,.18);
+  color:#fff;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 12px;
+  padding: 8px 10px;
+  cursor:pointer;
 }
 
-.hidden{ display:none; }
-.small{ font-size:12px; }
-.best{ font-size:15px; line-height:1.35; white-space:pre-line; }
-.muted{ color:var(--muted); }
+.nowLayout{display:grid; grid-template-columns: 1fr 160px; gap: 12px; align-items: stretch;}
+.kv{display:grid; grid-template-columns: 1fr auto; gap: 6px 10px;}
+.k{color:var(--muted); font-size: 13px;}
+.v{font-weight: 800;}
 
-/* AGORA */
-.nowLayout{
-  display:grid;
-  grid-template-columns: 1fr 130px;
-  gap:12px;
-  align-items:center;
-}
-
-.kv{
-  display:grid;
-  grid-template-columns: 108px auto;
-  gap:10px 10px;
-  align-items:center;
-}
-.k{ color:var(--muted); font-size:13px; }
-.v{
-  font-size:16px;
-  font-weight:750;
-  text-align:left;
-}
-
-/* Rosa dos ventos simples */
 .dirCard{
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(0,0,0,.08);
+  padding: 10px;
   display:flex;
   flex-direction:column;
-  gap:8px;
   align-items:center;
   justify-content:center;
 }
 
-.dirTitle{
-  font-size:12px;
-  color:var(--muted);
-  letter-spacing:.2px;
-}
-
-.compass{
-  position:relative;
-  width:110px;
-  height:110px;
-}
-
+.dirTitle{font-size: 12px; color: var(--muted); margin-bottom: 8px;}
+.compass{position:relative; width: 120px; height: 120px;}
 .compassRing{
-  position:absolute;
-  inset:0;
-  border-radius:999px;
-  border:1px solid rgba(255,255,255,.30);
-  background: rgba(0,0,0,.08);
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,.08);
+  position:absolute; inset:0;
+  border-radius:50%;
+  border: 1px solid rgba(255,255,255,.20);
+  background: radial-gradient(circle at 50% 50%, rgba(255,255,255,.10), rgba(0,0,0,.08));
 }
-
-.compassLabel{
-  position:absolute;
-  font-size:12px;
-  font-weight:750;
-  color: rgba(255,255,255,.92);
-  opacity:.95;
-  user-select:none;
-}
-.compassLabel.n{ top:6px; left:50%; transform:translateX(-50%); }
-.compassLabel.s{ bottom:6px; left:50%; transform:translateX(-50%); }
-.compassLabel.e{ right:8px; top:50%; transform:translateY(-50%); }
-.compassLabel.w{ left:8px; top:50%; transform:translateY(-50%); }
+.compassLabel{position:absolute; font-size: 12px; color: rgba(255,255,255,.85); font-weight: 800;}
+.compassLabel.n{top:6px; left:50%; transform:translateX(-50%);}
+.compassLabel.s{bottom:6px; left:50%; transform:translateX(-50%);}
+.compassLabel.e{right:8px; top:50%; transform:translateY(-50%);}
+.compassLabel.w{left:8px; top:50%; transform:translateY(-50%);}
 
 .needle{
   position:absolute;
-  left:50%;
-  top:50%;
-  width:2px;
-  height:44px;
-  transform-origin: 50% 92%;
-  transform: translate(-50%, -92%) rotate(0deg);
-  background: rgba(255,255,255,.95);
-  border-radius:999px;
-  box-shadow: 0 2px 8px rgba(0,0,0,.28);
-}
-.needle::after{
-  content:"";
-  position:absolute;
-  left:50%;
-  top:-8px;
-  transform:translateX(-50%);
-  width:0;
-  height:0;
-  border-left:6px solid transparent;
-  border-right:6px solid transparent;
-  border-bottom:9px solid rgba(255,255,255,.95);
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,.25));
+  left:50%; top:50%;
+  width: 2px; height: 44px;
+  background: #fff;
+  transform-origin: bottom center;
+  transform: translate(-50%, -100%) rotate(0deg);
+  border-radius: 2px;
+  box-shadow: 0 10px 18px rgba(0,0,0,.30);
 }
 .needleDot{
   position:absolute;
-  left:50%;
-  top:50%;
-  transform:translate(-50%,-50%);
-  width:10px;
-  height:10px;
-  border-radius:999px;
+  left:50%; top:50%;
+  width: 8px; height: 8px;
   background: rgba(255,255,255,.95);
-  box-shadow: 0 2px 8px rgba(0,0,0,.22);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
 }
 
-/* O que vestir (pills) */
-.dressTitle{ font-size:13px; color:var(--muted); margin-bottom:8px; }
-.dressGrid{ display:flex; flex-direction:column; gap:8px; }
-
+.dressTitle{font-weight: 900; margin-bottom: 10px;}
+.dressGrid{display:flex; flex-direction:column; gap: 8px;}
 .pillRow{
-  display:flex;
-  gap:10px;
-  align-items:flex-start;
-  border:1px solid var(--line);
-  border-radius:16px;
-  padding:10px 12px;
+  display:flex; align-items:center; justify-content:space-between;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.18);
   background: rgba(0,0,0,.08);
 }
-.pillLabel{ min-width:82px; font-size:13px; color:var(--muted); }
-.pillValue{
-  font-size:13px;
-  color: rgba(255,255,255,.96);
-  line-height:1.35;
-}
+.pillLabel{font-weight: 900;}
+.pillValue{color: rgba(255,255,255,.92); font-weight: 800; text-align:right;}
 
-/* Alertas */
-.alerts{display:flex;flex-direction:column;gap:8px}
-.pill{
-  padding:10px 12px;
-  border-radius:999px;
-  border:1px solid var(--line);
-  background: rgba(0,0,0,.10);
-  font-size:13px;
-}
+.alerts{white-space:pre-wrap; line-height: 1.25; font-weight: 700;}
+.best{white-space:pre-wrap; line-height: 1.25; font-weight: 800;}
 
-/* Tabelas */
-.tableWrap{ overflow:auto; -webkit-overflow-scrolling:touch; }
+.tableWrap{overflow:auto; border-radius: 14px;}
+.tbl{width:100%; border-collapse:collapse; font-size: 13px;}
+.tbl th, .tbl td{padding: 10px 10px; border-bottom: 1px solid rgba(255,255,255,.14); vertical-align:middle;}
+.tbl th{position:sticky; top:0; background: rgba(0,0,0,.10); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); text-align:left;}
+.tbl tr:last-child td{border-bottom:none;}
+.tbl .iconCell{width: 34px;}
 
-.tbl{
-  width:100%;
-  border-collapse:collapse;
-  min-width:680px;
-}
+.hidden{display:none !important;}
 
-.tbl th,.tbl td{
-  padding:9px 8px;
-  border-bottom:1px solid var(--line);
-  font-size:13px;
-  text-align:left;
-  white-space:nowrap;
-}
-.tbl th{ color:var(--muted); font-weight:650; }
-
-.iconCell{ text-align:center !important; width:44px; }
-.icon{
-  font-size:20px;
-  line-height:1;
-  display:inline-block;
-  filter: drop-shadow(0 1px 2px rgba(0,0,0,.40));
-}
-
-/* Sticky: Hora + Ícone */
-.tbl th:first-child,
-.tbl td:first-child{
-  position:sticky;
-  left:0;
-  z-index:5;
-  width:92px;
-  min-width:92px;
-  background: rgba(0,0,0,.34);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  font-weight:750;
-  color:#fff;
-}
-.tbl th:nth-child(2),
-.tbl td:nth-child(2){
-  position:sticky;
-  left:92px;
-  z-index:4;
-  width:44px;
-  min-width:44px;
-  padding-left:4px;
-  padding-right:6px;
-  background: rgba(0,0,0,.34);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-}
-.tbl th:first-child{ z-index:7; }
-.tbl th:nth-child(2){ z-index:6; }
-
-.tbl th:nth-child(2)::after,
-.tbl td:nth-child(2)::after{
-  content:"";
-  position:absolute;
-  top:0;
-  right:0;
-  width:1px;
-  height:100%;
-  background: rgba(255,255,255,.30);
-}
-
-/* Windy */
 .windyWrap{
-  border-radius:16px;
+  border-radius: 14px;
   overflow:hidden;
-  border:1px solid var(--line);
-  background:#000;
+  background: rgba(0,0,0,.10);
+  border: 1px solid rgba(255,255,255,.18);
+}
+.camLink{color:#fff; text-decoration: underline;}
+
+/* responsivo */
+@media (max-width: 380px){
+  .nowLayout{grid-template-columns: 1fr 140px;}
+  .heroTemp{font-size: 70px;}
 }
 
-.camLink{
-  color: rgba(255,255,255,.95);
-  text-decoration: underline;
+/* --- Sky (foto real) + Dia/Noite --- */
+:root{
+  --sky-height: 420px; /* JS ajusta até ao fim do cartão "Agora" */
 }
 
-/* =========================
-   FUNDO DINÂMICO NO TOPO
-   ========================= */
-.skyWindow{
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-
-  height: 420px; /* JS ajusta */
-  z-index: -1;
-  pointer-events: none;
-  overflow: hidden;
-
-  background:
-    radial-gradient(900px 540px at 50% -10%, var(--skyTintTop), rgba(255,255,255,0) 60%),
-    linear-gradient(180deg, var(--skyTintBottom), rgba(0,0,0,0) 58%);
-}
-
-.skyWindow::before,
-.skyWindow::after{
-  content:"";
-  position:absolute;
-  inset:-25%;
-  transform: translate3d(0,0,0);
+/* janela do céu real (topo -> fim do Agora) */
+.skyReal{
+  position:fixed;
+  top:0; left:0; right:0;
+  height:var(--sky-height);
+  overflow:hidden;
+  z-index:-1; /* acima do .bg (-2), abaixo do conteúdo */
   pointer-events:none;
 }
 
-.skyWindow::before{
-  opacity:.85;
+.skyImg{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  transform:scale(1.06);
+  animation: skyBreath 42s ease-in-out infinite;
+  will-change: transform, filter;
+}
+
+/* nuvens leves (vida, muito subtil) */
+.skyClouds{
+  position:absolute;
+  inset:-20%;
   background:
-    radial-gradient(closest-side at 18% 30%, var(--cloudA), rgba(255,255,255,0) 70%),
-    radial-gradient(closest-side at 42% 22%, var(--cloudB), rgba(255,255,255,0) 72%),
-    radial-gradient(closest-side at 65% 34%, var(--cloudA), rgba(255,255,255,0) 70%),
-    radial-gradient(closest-side at 85% 26%, var(--cloudB), rgba(255,255,255,0) 72%);
+    radial-gradient(closest-side at 20% 40%, rgba(255,255,255,.22), rgba(255,255,255,0) 70%),
+    radial-gradient(closest-side at 60% 30%, rgba(255,255,255,.18), rgba(255,255,255,0) 72%),
+    radial-gradient(closest-side at 85% 45%, rgba(255,255,255,.20), rgba(255,255,255,0) 70%);
   filter: blur(10px);
-  animation: skyDrift 22s linear infinite;
-}
-
-.skyWindow::after{
   opacity:.55;
-  background:
-    radial-gradient(closest-side at 26% 50%, var(--cloudB), rgba(255,255,255,0) 75%),
-    radial-gradient(closest-side at 55% 52%, var(--cloudA), rgba(255,255,255,0) 75%),
-    radial-gradient(closest-side at 80% 48%, var(--cloudB), rgba(255,255,255,0) 75%);
-  filter: blur(14px);
-  animation: skyDrift2 30s linear infinite;
+  animation: cloudsDrift 34s linear infinite;
+  will-change: transform;
 }
 
-body.theme-rain .skyWindow::after{
-  background:
-    radial-gradient(closest-side at 26% 50%, var(--cloudB), rgba(255,255,255,0) 75%),
-    radial-gradient(closest-side at 55% 52%, var(--cloudA), rgba(255,255,255,0) 75%),
-    radial-gradient(closest-side at 80% 48%, var(--cloudB), rgba(255,255,255,0) 75%),
-    repeating-linear-gradient(115deg, rgba(255,255,255,.12) 0 2px, rgba(255,255,255,0) 2px 12px);
-  animation: skyDrift2 30s linear infinite, rainMove 1.05s linear infinite;
-  opacity:.75;
+/* FX (chuva/nevoeiro) controlado por JS */
+.skyFx{
+  position:absolute;
+  inset:0;
+  opacity:0;
+  background:none;
+  animation:none;
+  will-change: transform, opacity;
 }
 
-body.theme-snow .skyWindow::after{
-  background:
-    radial-gradient(closest-side at 26% 50%, var(--cloudB), rgba(255,255,255,0) 75%),
-    radial-gradient(closest-side at 55% 52%, var(--cloudA), rgba(255,255,255,0) 75%),
-    radial-gradient(closest-side at 80% 48%, var(--cloudB), rgba(255,255,255,0) 75%),
-    radial-gradient(circle at 10% 10%, rgba(255,255,255,.20) 0 2px, rgba(255,255,255,0) 3px),
-    radial-gradient(circle at 40% 20%, rgba(255,255,255,.16) 0 2px, rgba(255,255,255,0) 3px),
-    radial-gradient(circle at 70% 15%, rgba(255,255,255,.18) 0 2px, rgba(255,255,255,0) 3px);
-  animation: skyDrift2 30s linear infinite, snowMove 2.6s linear infinite;
-  opacity:.70;
+/* modo NOITE */
+body.is-night .skyImg{
+  filter: brightness(.78) contrast(1.05) saturate(.95);
 }
 
-body.theme-fog .skyWindow::before{
-  opacity:.65;
-  filter: blur(16px);
-  animation: fogDrift 38s linear infinite;
-}
-body.theme-fog .skyWindow::after{
-  opacity:.55;
-  filter: blur(18px);
-  animation: fogDrift2 52s linear infinite;
+/* ligeira afinação do UI à noite (mantém o teu design) */
+body.is-night{
+  --glass: rgba(255,255,255,.14);
+  --glass2: rgba(255,255,255,.08);
+  --line: rgba(255,255,255,.18);
 }
 
-body.theme-thunder .skyWindow{
-  animation: thunderFlash 8s ease-in-out infinite;
-}
-body.theme-thunder .skyWindow::after{
-  background:
-    radial-gradient(closest-side at 26% 50%, var(--cloudB), rgba(255,255,255,0) 75%),
-    radial-gradient(closest-side at 55% 52%, var(--cloudA), rgba(255,255,255,0) 75%),
-    radial-gradient(closest-side at 80% 48%, var(--cloudB), rgba(255,255,255,0) 75%),
-    repeating-linear-gradient(115deg, rgba(255,255,255,.12) 0 2px, rgba(255,255,255,0) 2px 12px);
-  animation: skyDrift2 30s linear infinite, rainMove 1.0s linear infinite;
-  opacity:.75;
+/* modo DIA */
+body.is-day .skyImg{
+  filter: brightness(1.02) contrast(1.02) saturate(1.02);
 }
 
-@keyframes skyDrift{
-  0%{ transform: translate3d(-3%, -1%, 0) scale(1.03); }
-  100%{ transform: translate3d(3%, 1%, 0) scale(1.03); }
-}
-@keyframes skyDrift2{
-  0%{ transform: translate3d(3%, 0%, 0) scale(1.04); }
-  100%{ transform: translate3d(-3%, 0%, 0) scale(1.04); }
+@keyframes skyBreath{
+  0%{ transform: scale(1.06) translateY(0); }
+  50%{ transform: scale(1.09) translateY(-1.2%); }
+  100%{ transform: scale(1.06) translateY(0); }
 }
 
+@keyframes cloudsDrift{
+  0%{ transform: translate3d(-2%, 0, 0) scale(1.02); }
+  100%{ transform: translate3d(2%, 0, 0) scale(1.02); }
+}
+
+/* animação simples de “chuva” (FX) */
 @keyframes rainMove{
-  0%{ background-position: 0 0, 0 0, 0 0, 0 0; }
-  100%{ background-position: 0 0, 0 0, 0 0, 120px 220px; }
-}
-
-@keyframes snowMove{
-  0%{ background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0; }
-  100%{ background-position: 0 0, 0 0, 0 0, 40px 140px, 80px 220px, 120px 180px; }
-}
-
-@keyframes fogDrift{
-  0%{ transform: translate3d(-2%, 0, 0) scale(1.05); }
-  100%{ transform: translate3d(2%, 0, 0) scale(1.05); }
-}
-@keyframes fogDrift2{
-  0%{ transform: translate3d(2%, 0, 0) scale(1.06); }
-  100%{ transform: translate3d(-2%, 0, 0) scale(1.06); }
-}
-
-@keyframes thunderFlash{
-  0%, 86%, 100%{ filter: none; }
-  88%{ filter: brightness(1.08); }
-  90%{ filter: brightness(1.18); }
-  92%{ filter: brightness(1.03); }
+  0%{ transform: translate3d(-2%, -3%, 0); }
+  100%{ transform: translate3d(2%, 3%, 0); }
 }
 
 @media (prefers-reduced-motion: reduce){
-  .skyWindow, .skyWindow::before, .skyWindow::after{ animation:none !important; }
+  .skyImg, .skyClouds, .skyFx{ animation:none !important; }
 }
