@@ -329,7 +329,7 @@ body{
   right: 0;
   top: 0;
 
-  height: 420px; /* fallback; JS ajusta */
+  height: 420px; /* JS ajusta */
   z-index: -1;
   pointer-events: none;
   overflow: hidden;
@@ -369,7 +369,6 @@ body{
   animation: skyDrift2 30s linear infinite;
 }
 
-/* chuva */
 body.theme-rain .skyWindow::after{
   background:
     radial-gradient(closest-side at 26% 50%, var(--cloudB), rgba(255,255,255,0) 75%),
@@ -380,7 +379,6 @@ body.theme-rain .skyWindow::after{
   opacity:.75;
 }
 
-/* neve */
 body.theme-snow .skyWindow::after{
   background:
     radial-gradient(closest-side at 26% 50%, var(--cloudB), rgba(255,255,255,0) 75%),
@@ -393,7 +391,6 @@ body.theme-snow .skyWindow::after{
   opacity:.70;
 }
 
-/* nevoeiro */
 body.theme-fog .skyWindow::before{
   opacity:.65;
   filter: blur(16px);
@@ -405,7 +402,6 @@ body.theme-fog .skyWindow::after{
   animation: fogDrift2 52s linear infinite;
 }
 
-/* trovoada */
 body.theme-thunder .skyWindow{
   animation: thunderFlash 8s ease-in-out infinite;
 }
@@ -419,7 +415,6 @@ body.theme-thunder .skyWindow::after{
   opacity:.75;
 }
 
-/* keyframes */
 @keyframes skyDrift{
   0%{ transform: translate3d(-3%, -1%, 0) scale(1.03); }
   100%{ transform: translate3d(3%, 1%, 0) scale(1.03); }
@@ -455,7 +450,6 @@ body.theme-thunder .skyWindow::after{
   92%{ filter: brightness(1.03); }
 }
 
-/* reduzir movimento */
 @media (prefers-reduced-motion: reduce){
   .skyWindow, .skyWindow::before, .skyWindow::after{ animation:none !important; }
 }
