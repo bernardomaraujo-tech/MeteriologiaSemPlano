@@ -351,8 +351,14 @@ function updateWindyCam(lat, lon){
 function updateSkyHeight(){
   const nowCard = document.getElementById("nowCard");
   if (!nowCard) return;
+
   const r = nowCard.getBoundingClientRect();
-  const h = Math.max(260, Math.round(r.bottom));
+
+  // Estica o céu mais para baixo para a transição ser natural
+  // Ajusta este valor (ex.: 120–220) conforme o gosto
+  const EXTRA = 180;
+
+  const h = Math.max(320, Math.round(r.bottom + EXTRA));
   document.documentElement.style.setProperty("--sky-height", `${h}px`);
 }
 
