@@ -21,6 +21,9 @@
 
   /* NOVO: altura do céu até ao fim do Agora (JS ajusta) */
   --sky-height: 420px;
+
+  /* NOVO: imagem atual (para o fundo fullscreen) */
+  --sky-bg-image: url("./night_clear.jpg");
 }
 
 *{box-sizing:border-box}
@@ -33,13 +36,12 @@ body{
   background: var(--bg1);
 }
 
-/* FUNDO BASE — agora segue a imagem (homogéneo) */
+/* FUNDO BASE — fullscreen com a mesma imagem do céu */
 .bg{
   position:fixed;
   inset:0;
   z-index:-2;
 
-  /* A MESMA IMAGEM DO CÉU */
   background-image:
     linear-gradient(
       180deg,
@@ -53,11 +55,11 @@ body{
   background-position: center 100%;
   background-repeat: no-repeat;
 
-  filter: saturate(1.05) blur(0px);
+  filter: saturate(1.05);
 }
 
 /* =========================
-   NOVO: CÉU REAL (IMAGEM)
+   CÉU REAL (CAMADA SUPERIOR)
    ========================= */
 .skyReal{
   position: fixed;
@@ -78,7 +80,7 @@ body{
   /* MOSTRA MAIS IMAGEM PARA BAIXO */
   background-position: center 100%;
 
-  /* MENOS CROP / MENOS ZOOM */
+  /* SEM ZOOM EXTRA */
   transform: scale(1.0);
 
   animation: skyBreath 44s ease-in-out infinite;
@@ -107,15 +109,11 @@ body{
   will-change: transform, opacity;
 }
 
-/* fade no fundo do céu para “fundir” com o gradiente */
+/* fade no fundo do céu para “fundir” com o fundo */
 .skyFade{
   position:absolute;
   left:0; right:0; bottom:0;
-
-  /* fade mais longo = transição mais bonita */
   height: 62%;
-
-  /* em vez de “escurecer”, misturamos com a cor real do fundo */
   background: linear-gradient(
     180deg,
     rgba(0,0,0,0) 0%,
@@ -123,13 +121,11 @@ body{
     rgba(0,0,0,.10) 55%,
     rgba(0,0,0,.14) 100%
   );
-
-  /* remove o multiply (tende a “sujar” a imagem) */
   mix-blend-mode: normal;
   opacity: .75;
 }
 
-/* dia/noite subtil (sem mexer na tua UI) */
+/* dia/noite subtil */
 body.is-night .skyImg{
   filter: brightness(.78) contrast(1.05) saturate(.95);
 }
@@ -137,15 +133,18 @@ body.is-day .skyImg{
   filter: brightness(1.02) contrast(1.02) saturate(1.02);
 }
 
+/* ANIMAÇÃO: mantém scale 1.0 e só mexe ligeiramente no Y */
 @keyframes skyBreath{
-  0%{ transform: scale(1.06) translateY(0); }
-  50%{ transform: scale(1.09) translateY(-1.2%); }
-  100%{ transform: scale(1.06) translateY(0); }
+  0%{ transform: scale(1.0) translateY(0); }
+  50%{ transform: scale(1.0) translateY(-1.2%); }
+  100%{ transform: scale(1.0) translateY(0); }
 }
+
 @keyframes cloudsDrift{
   0%{ transform: translate3d(-2%, 0, 0) scale(1.02); }
   100%{ transform: translate3d(2%, 0, 0) scale(1.02); }
 }
+
 @keyframes rainMove{
   0%{ transform: translate3d(-2%, -3%, 0); }
   100%{ transform: translate3d(2%, 3%, 0); }
