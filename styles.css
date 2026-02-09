@@ -63,8 +63,13 @@ body{
   position:absolute;
   inset:0;
   background-size: cover;
-  background-position: center;
-  transform: scale(1.06);
+
+  /* MOSTRA MAIS IMAGEM PARA BAIXO */
+  background-position: center 82%;
+
+  /* MENOS CROP / MENOS ZOOM */
+  transform: scale(1.03);
+
   animation: skyBreath 44s ease-in-out infinite;
   will-change: transform, filter;
 }
