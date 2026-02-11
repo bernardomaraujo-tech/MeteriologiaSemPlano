@@ -8,13 +8,25 @@ const PREFERRED_MODELS = [
 
 const LOCATIONS = [
   { id:"alcabideche", name:"Alcabideche", lat:38.7330, lon:-9.4100 },
+
   { id:"algueirao", name:"Algueirão", lat:38.7936, lon:-9.3417 },
   { id:"amadora", name:"Amadora", lat:38.7569, lon:-9.2308 },
+
+  { id:"azeitao", name:"Azeitão", lat:38.5180, lon:-9.0130 },
+  { id:"cais_sodre", name:"Cais do Sodré", lat:38.7069, lon:-9.1444 },
+
   { id:"carcavelos", name:"Carcavelos", lat:38.6910, lon:-9.3317 },
   { id:"cascais", name:"Cascais", lat:38.6979, lon:-9.4206 },
+
+  { id:"columbeira", name:"Columbeira", lat:39.2650, lon:-9.1800 },
   { id:"culatra", name:"Ilha da Culatra", lat:36.9889, lon:-7.8336 },
+
+  { id:"estoril", name:"Estoril", lat:38.7057, lon:-9.3977 },
   { id:"guincho", name:"Guincho", lat:38.72948, lon:-9.47457 },
+
   { id:"peninha", name:"Peninha", lat:38.7692, lon:-9.4589 },
+  { id:"praia_tocha", name:"Praia da Tocha", lat:40.3300, lon:-8.7860 },
+
   { id:"sdr", name:"São Domingos de Rana", lat:38.7019, lon:-9.3389 },
   { id:"sintra", name:"Sintra", lat:38.8029, lon:-9.3817 }
 ];
