@@ -15,15 +15,10 @@ const LOCATIONS = [
   { id:"carcavelos", name:"Carcavelos", lat:38.6910, lon:-9.3317 },
   { id:"cascais", name:"Cascais", lat:38.6979, lon:-9.4206 },
 
-  { id:"cais_sodre", name:"Cais do Sodré", lat:38.7069, lon:-9.1444 },
-  { id:"azeitao", name:"Azeitão", lat:38.5180, lon:-9.0130 },
-
-  { id:"columbeira", name:"Columbeira", lat:39.2650, lon:-9.1800 },
   { id:"culatra", name:"Ilha da Culatra", lat:36.9889, lon:-7.8336 },
-  { id:"estoril", name:"Estoril", lat:38.7057, lon:-9.3977 },
   { id:"guincho", name:"Guincho", lat:38.72948, lon:-9.47457 },
   { id:"peninha", name:"Peninha", lat:38.7692, lon:-9.4589 },
-  { id:"praia_tocha", name:"Praia da Tocha", lat:40.3300, lon:-8.7860 },
+
   { id:"sdr", name:"São Domingos de Rana", lat:38.7019, lon:-9.3389 },
   { id:"sintra", name:"Sintra", lat:38.8029, lon:-9.3817 }
 ];
@@ -64,7 +59,7 @@ const els = {
 
   windyLink: $("windyLink"),
 
-  // NOVO: céu real
+  // Céu real
   skyImg: $("skyImg"),
   skyFx: $("skyFx"),
 };
@@ -215,7 +210,7 @@ function windDirectionSuggestion(deg){
   return `De ${from}. Favorece ir para leste; regresso para oeste é mais pesado.`;
 }
 
-/* O que vestir — versão simples (as tuas regras) */
+/* O que vestir — versão simples */
 function clothingSuggestion({ temp, wind, gust, pop, prcp, sport }){
   const rainy = (pop ?? 0) >= 25 || (prcp ?? 0) >= 0.2;
   const windy = (wind ?? 0) >= 22 || (gust ?? 0) >= 35;
@@ -349,13 +344,12 @@ function updateWindyCam(lat, lon){
 }
 
 /* =========================
-   NOVO: CÉU REAL + TINT DO FUNDO
+   CÉU REAL + TINT DO FUNDO
    ========================= */
 
 function updateSkyHeight(){
-  // Queremos o fundo (skyReal) a ocupar SEMPRE a viewport inteira.
-  // Em mobile/iOS a altura pode variar com a barra do browser,
-  // por isso preferimos visualViewport quando existe.
+  // Fundo (skyReal) deve ocupar sempre a viewport inteira.
+  // Em mobile/iOS a altura pode variar com a barra do browser, por isso usamos visualViewport quando existe.
   const vh = Math.round(window.visualViewport?.height ?? window.innerHeight);
   document.documentElement.style.setProperty("--sky-height", `${vh}px`);
 }
@@ -363,12 +357,6 @@ function updateSkyHeight(){
 function applyDayNight(isDay){
   document.body.classList.toggle("is-day", !!isDay);
   document.body.classList.toggle("is-night", !isDay);
-
-  const meta = document.querySelector('meta[name="theme-color"]');
-  if (meta){
-    // só um tom aproximado: à noite escurece um pouco
-    meta.setAttribute("content", isDay ? "#6fa7c6" : "#1f2f44");
-  }
 }
 
 function skyFileFor(code, isDay){
@@ -421,7 +409,10 @@ function setSkyFx(code){
 }
 
 function tintBackgroundFromImage(path){
-  // calcula a cor média e define --bg1/--bg2/--bg3
+  // Calcula cor média da imagem e ajusta:
+  // - gradiente base (--bg1/--bg2/--bg3)
+  // - opacidade das caixas (--glass/--glass2/--line)
+  // - cor do texto (--text/--muted) + sombra (--textShadow)
   const img = new Image();
   img.crossOrigin = "anonymous";
   img.src = `./${path}`;
@@ -450,7 +441,7 @@ function tintBackgroundFromImage(path){
     g = Math.round(g/n);
     b = Math.round(b/n);
 
-    // 3 tons: topo (mais claro), meio, fundo (mais escuro)
+    // ===== Gradiente base =====
     const bg1 = `rgb(${Math.min(255, r+14)}, ${Math.min(255, g+14)}, ${Math.min(255, b+14)})`;
     const bg2 = `rgb(${r}, ${g}, ${b})`;
     const bg3 = `rgb(${Math.max(0, r-22)}, ${Math.max(0, g-22)}, ${Math.max(0, b-22)})`;
@@ -459,22 +450,37 @@ function tintBackgroundFromImage(path){
     document.documentElement.style.setProperty("--bg2", bg2);
     document.documentElement.style.setProperty("--bg3", bg3);
 
-    // ===============================
-    // NOVO: Opacidade adaptativa (glass)
-    // ===============================
-    // luminância perceptual (0..1)
+    // ===== Luminância (0..1) =====
     const lum = (0.2126*r + 0.7152*g + 0.0722*b) / 255;
     const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 
-    // Quanto mais claro o fundo, mais opacas ficam as caixas.
-    // Ajusta os limites se quiseres mais/menos contraste.
-    const glassA  = clamp(0.32 + lum * 0.25, 0.32, 0.60);
-    const glassA2 = clamp(glassA - 0.14, 0.18, 0.48);
-    const lineA   = clamp(0.22 + lum * 0.15, 0.22, 0.40);
+    // ===== Opacidade adaptativa das caixas =====
+    const glassA  = clamp(0.28 + lum * 0.34, 0.28, 0.66);
+    const glassA2 = clamp(glassA - 0.16, 0.16, 0.52);
+    const lineA   = clamp(0.20 + lum * 0.18, 0.20, 0.42);
 
     document.documentElement.style.setProperty("--glass",  `rgba(255,255,255,${glassA.toFixed(2)})`);
     document.documentElement.style.setProperty("--glass2", `rgba(255,255,255,${glassA2.toFixed(2)})`);
     document.documentElement.style.setProperty("--line",   `rgba(255,255,255,${lineA.toFixed(2)})`);
+
+    // ===== Texto adaptativo =====
+    const t = clamp((lum - 0.52) / 0.28, 0, 1); // 0..1
+
+    const mix = (a, b, t) => Math.round(a + (b - a) * t);
+
+    const tr = mix(255, 18, t);
+    const tg = mix(255, 18, t);
+    const tb = mix(255, 18, t);
+
+    const mr = mix(255, 60, t);
+    const mg = mix(255, 60, t);
+    const mb = mix(255, 60, t);
+
+    document.documentElement.style.setProperty("--text",  `rgb(${tr},${tg},${tb})`);
+    document.documentElement.style.setProperty("--muted", `rgba(${mr},${mg},${mb},0.88)`);
+
+    const shadowA = (1 - t) * 0.35;
+    document.documentElement.style.setProperty("--textShadow", `0 1px 3px rgba(0,0,0,${shadowA.toFixed(2)})`);
   };
 }
 
@@ -486,7 +492,7 @@ function setSkyFromWeather(code, isDay){
     els.skyImg.style.backgroundImage = `url(./${file})`;
   }
 
-  // fundo homogéneo + opacidade adaptativa
+  // fundo homogéneo + opacidade + texto adaptativo
   tintBackgroundFromImage(file);
 
   // FX
@@ -522,9 +528,7 @@ function renderAll(data, sourceName, locName){
   setText(els.nowRain, fmtMm(prcp));
   setText(els.nowPop, fmtPct(pop));
 
-  // Nota: a rotação visual depende do desenho da tua seta.
-  // Se a tua seta estiver a representar "para onde vai", usar dir+180.
-  // Se estiver a representar "de onde vem", usar dir.
+  // Seta: meteorologia = vento "de onde vem" (dir). Seta na UI costuma mostrar "para onde vai", por isso +180.
   if (els.dirNeedle){
     els.dirNeedle.style.transform = `translate(-50%, -92%) rotate(${(dir + 180) % 360}deg)`;
   }
@@ -546,7 +550,7 @@ function renderAll(data, sourceName, locName){
   setText(els.windSuggestion, windDirectionSuggestion(dir));
   setText(els.source, sourceName);
 
-  // NOVO: set do céu real
+  // Céu
   const code = data.hourly.weather_code?.[i] ?? 0;
   const isDay = (data.hourly.is_day?.[i] ?? 1) === 1;
   setSkyFromWeather(code, isDay);
@@ -570,7 +574,7 @@ async function refresh(){
   } catch (e){
     const msg = String(e?.message ?? e);
     setText(els.updated, `Erro ao atualizar (${new Date().toLocaleTimeString("pt-PT")}): ${msg}`);
-    setText(els.source, "Se persistir: cache do Safari. Recarrega e/ou limpa dados do site.");
+    setText(els.source, "Se persistir: recarrega e/ou limpa dados do site.");
     console.error("[SEMPLANO] refresh failed:", e);
   }
 }
@@ -578,7 +582,7 @@ async function refresh(){
 function init(){
   if (!els.select || !els.updated) return;
 
-  // Alcabideche sempre primeiro, resto por ordem alfabética pt-PT
+  // Alcabideche primeiro, resto por ordem alfabética pt-PT
   const alc = LOCATIONS.find(l => l.id === "alcabideche");
   const rest = LOCATIONS
     .filter(l => l.id !== "alcabideche")
