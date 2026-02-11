@@ -353,9 +353,9 @@ function updateWindyCam(lat, lon){
    ========================= */
 
 function updateSkyHeight(){
-  // Queremos a imagem de fundo a ocupar SEMPRE a tela inteira (não só até ao cartão "Agora").
-  // Em mobile/iOS, window.innerHeight pode variar com a barra do browser,
-  // por isso usamos visualViewport quando existe.
+  // Queremos o fundo (skyReal) a ocupar SEMPRE a viewport inteira.
+  // Em mobile/iOS a altura pode variar com a barra do browser,
+  // por isso preferimos visualViewport quando existe.
   const vh = Math.round(window.visualViewport?.height ?? window.innerHeight);
   document.documentElement.style.setProperty("--sky-height", `${vh}px`);
 }
@@ -458,6 +458,23 @@ function tintBackgroundFromImage(path){
     document.documentElement.style.setProperty("--bg1", bg1);
     document.documentElement.style.setProperty("--bg2", bg2);
     document.documentElement.style.setProperty("--bg3", bg3);
+
+    // ===============================
+    // NOVO: Opacidade adaptativa (glass)
+    // ===============================
+    // luminância perceptual (0..1)
+    const lum = (0.2126*r + 0.7152*g + 0.0722*b) / 255;
+    const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+
+    // Quanto mais claro o fundo, mais opacas ficam as caixas.
+    // Ajusta os limites se quiseres mais/menos contraste.
+    const glassA  = clamp(0.32 + lum * 0.25, 0.32, 0.60);
+    const glassA2 = clamp(glassA - 0.14, 0.18, 0.48);
+    const lineA   = clamp(0.22 + lum * 0.15, 0.22, 0.40);
+
+    document.documentElement.style.setProperty("--glass",  `rgba(255,255,255,${glassA.toFixed(2)})`);
+    document.documentElement.style.setProperty("--glass2", `rgba(255,255,255,${glassA2.toFixed(2)})`);
+    document.documentElement.style.setProperty("--line",   `rgba(255,255,255,${lineA.toFixed(2)})`);
   };
 }
 
@@ -469,7 +486,7 @@ function setSkyFromWeather(code, isDay){
     els.skyImg.style.backgroundImage = `url(./${file})`;
   }
 
-  // fundo homogéneo
+  // fundo homogéneo + opacidade adaptativa
   tintBackgroundFromImage(file);
 
   // FX
