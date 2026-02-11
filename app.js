@@ -353,11 +353,11 @@ function updateWindyCam(lat, lon){
    ========================= */
 
 function updateSkyHeight(){
-  const nowCard = document.getElementById("nowCard");
-  if (!nowCard) return;
-  const r = nowCard.getBoundingClientRect();
-  const h = Math.max(260, Math.round(r.bottom));
-  document.documentElement.style.setProperty("--sky-height", `${h}px`);
+  // Queremos a imagem de fundo a ocupar SEMPRE a tela inteira (não só até ao cartão "Agora").
+  // Em mobile/iOS, window.innerHeight pode variar com a barra do browser,
+  // por isso usamos visualViewport quando existe.
+  const vh = Math.round(window.visualViewport?.height ?? window.innerHeight);
+  document.documentElement.style.setProperty("--sky-height", `${vh}px`);
 }
 
 function applyDayNight(isDay){
