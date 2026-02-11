@@ -14,6 +14,10 @@ const LOCATIONS = [
   { id:"amadora", name:"Amadora", lat:38.7569, lon:-9.2308 },
   { id:"carcavelos", name:"Carcavelos", lat:38.6910, lon:-9.3317 },
   { id:"cascais", name:"Cascais", lat:38.6979, lon:-9.4206 },
+
+  { id:"cais_sodre", name:"Cais do Sodré", lat:38.7069, lon:-9.1444 },
+  { id:"azeitao", name:"Azeitão", lat:38.5180, lon:-9.0130 },
+
   { id:"columbeira", name:"Columbeira", lat:39.2650, lon:-9.1800 },
   { id:"culatra", name:"Ilha da Culatra", lat:36.9889, lon:-7.8336 },
   { id:"estoril", name:"Estoril", lat:38.7057, lon:-9.3977 },
