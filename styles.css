@@ -2,6 +2,7 @@
 :root{
   --text:#ffffff;
   --muted: rgba(255,255,255,.82);
+  --textShadow: 0 1px 3px rgba(0,0,0,.25);
   --line: rgba(255,255,255,.22);
 
   --glass: rgba(255,255,255,.18);
@@ -19,7 +20,7 @@
   --bg2: #4e8fb6;
   --bg3: #2f6f98;
 
-  /* NOVO: altura do céu até ao fim do Agora (JS ajusta) */
+  /* altura (agora usamos viewport inteira) */
   --sky-height: 420px;
 }
 
@@ -46,12 +47,11 @@ body{
 }
 
 /* =========================
-   NOVO: CÉU REAL (IMAGEM)
+   CÉU REAL (IMAGEM)
    ========================= */
 .skyReal{
   position: fixed;
   inset: 0; /* ocupa a viewport inteira */
-  /* fallback + correção para mobile (barra do Safari / iOS) */
   height: 100vh;
   height: 100dvh;
   z-index: -1; /* por cima do .bg */
@@ -101,7 +101,7 @@ body{
   opacity: .85;
 }
 
-/* dia/noite subtil (sem mexer na tua UI) */
+/* dia/noite subtil */
 body.is-night .skyImg{
   filter: brightness(.78) contrast(1.05) saturate(.95);
 }
@@ -128,7 +128,7 @@ body.is-day .skyImg{
 }
 
 /* -------------------------
-   RESTO DO TEU CSS (igual)
+   RESTO DO TEU CSS
    ------------------------- */
 
 .phone{
@@ -316,12 +316,12 @@ body.is-day .skyImg{
   border:1px solid var(--line);
   border-radius:16px;
   padding:10px 12px;
-  background: rgba(0,0,0,.08);
+  background: rgba(255,255,255,.22);
 }
 .pillLabel{ min-width:82px; font-size:13px; color:var(--muted); }
 .pillValue{
   font-size:13px;
-  color: rgba(255,255,255,.96);
+  color: var(--text);
   line-height:1.35;
 }
 
@@ -331,7 +331,7 @@ body.is-day .skyImg{
   padding:10px 12px;
   border-radius:999px;
   border:1px solid var(--line);
-  background: rgba(0,0,0,.10);
+  background: rgba(255,255,255,.22);
   font-size:13px;
 }
 
@@ -413,4 +413,10 @@ body.is-day .skyImg{
 .camLink{
   color: rgba(255,255,255,.95);
   text-decoration: underline;
+}
+
+/* Melhor legibilidade do texto (JS ajusta --textShadow) */
+.heroLoc, .heroTemp, .heroMeta, .updated,
+.cardTitle, .k, .v, .pillValue, .best{
+  text-shadow: var(--textShadow);
 }
