@@ -50,10 +50,10 @@ body{
    ========================= */
 .skyReal{
   position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: var(--sky-height);
+  inset: 0; /* ocupa a viewport inteira */
+  /* fallback + correção para mobile (barra do Safari / iOS) */
+  height: 100vh;
+  height: 100dvh;
   z-index: -1; /* por cima do .bg */
   pointer-events: none;
   overflow: hidden;
