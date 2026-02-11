@@ -1,7 +1,6 @@
 const REFRESH_MS = 5 * 60 * 1000;
 const FETCH_TIMEOUT_MS = 12000;
 
-// Preferência: modelos HARMONIE-AROME (Europa) via Open-Meteo
 const PREFERRED_MODELS = [
   "knmi_harmonie_arome_europe",
   "dmi_harmonie_arome_europe"
@@ -9,16 +8,13 @@ const PREFERRED_MODELS = [
 
 const LOCATIONS = [
   { id:"alcabideche", name:"Alcabideche", lat:38.7330, lon:-9.4100 },
-
   { id:"algueirao", name:"Algueirão", lat:38.7936, lon:-9.3417 },
   { id:"amadora", name:"Amadora", lat:38.7569, lon:-9.2308 },
   { id:"carcavelos", name:"Carcavelos", lat:38.6910, lon:-9.3317 },
   { id:"cascais", name:"Cascais", lat:38.6979, lon:-9.4206 },
-
   { id:"culatra", name:"Ilha da Culatra", lat:36.9889, lon:-7.8336 },
   { id:"guincho", name:"Guincho", lat:38.72948, lon:-9.47457 },
   { id:"peninha", name:"Peninha", lat:38.7692, lon:-9.4589 },
-
   { id:"sdr", name:"São Domingos de Rana", lat:38.7019, lon:-9.3389 },
   { id:"sintra", name:"Sintra", lat:38.8029, lon:-9.3817 }
 ];
@@ -59,7 +55,6 @@ const els = {
 
   windyLink: $("windyLink"),
 
-  // Céu real
   skyImg: $("skyImg"),
   skyFx: $("skyFx"),
 };
@@ -124,7 +119,6 @@ async function fetchWithTimeout(url){
 async function fetchWeather(loc){
   const modelsCsv = PREFERRED_MODELS.join(",");
 
-  // 1) tenta HARMONIE-AROME
   try{
     const url1 = buildUrlForecast(loc, modelsCsv);
     const r1 = await fetchWithTimeout(url1);
@@ -136,7 +130,6 @@ async function fetchWeather(loc){
     }
   } catch (_) {}
 
-  // 2) fallback best match
   const url2 = buildUrlForecast(loc);
   const r2 = await fetchWithTimeout(url2);
   if (!r2.ok) throw new Error(`HTTP ${r2.status}`);
@@ -167,7 +160,6 @@ function computeMinMaxNext24h(temps, startIndex){
   return { min, max };
 }
 
-/* Melhor janela 07–22 */
 function computeBestWindowNext12h(data){
   const times = data.hourly.time;
   const gust  = data.hourly.wind_gusts_10m ?? [];
@@ -210,7 +202,6 @@ function windDirectionSuggestion(deg){
   return `De ${from}. Favorece ir para leste; regresso para oeste é mais pesado.`;
 }
 
-/* O que vestir — versão simples */
 function clothingSuggestion({ temp, wind, gust, pop, prcp, sport }){
   const rainy = (pop ?? 0) >= 25 || (prcp ?? 0) >= 0.2;
   const windy = (wind ?? 0) >= 22 || (gust ?? 0) >= 35;
@@ -241,7 +232,6 @@ function clothingSuggestion({ temp, wind, gust, pop, prcp, sport }){
     return `${base}: Muito leve + hidratação${rainAddon}${windAddon}`;
   }
 
-  // walk
   if (temp <= 6)  return `${base}: Camadas (térmica + casaco)${rainAddon}${windAddon}`;
   if (temp <= 11) return `${base}: Casaco leve${rainAddon}${windAddon}`;
   if (temp <= 16) return `${base}: Camisola leve + camada extra opcional${rainAddon}${windAddon}`;
@@ -343,13 +333,7 @@ function updateWindyCam(lat, lon){
   }
 }
 
-/* =========================
-   CÉU REAL + TINT DO FUNDO
-   ========================= */
-
 function updateSkyHeight(){
-  // Fundo (skyReal) deve ocupar sempre a viewport inteira.
-  // Em mobile/iOS a altura pode variar com a barra do browser, por isso usamos visualViewport quando existe.
   const vh = Math.round(window.visualViewport?.height ?? window.innerHeight);
   document.documentElement.style.setProperty("--sky-height", `${vh}px`);
 }
@@ -409,10 +393,6 @@ function setSkyFx(code){
 }
 
 function tintBackgroundFromImage(path){
-  // Calcula cor média da imagem e ajusta:
-  // - gradiente base (--bg1/--bg2/--bg3)
-  // - opacidade das caixas (--glass/--glass2/--line)
-  // - cor do texto (--text/--muted) + sombra (--textShadow)
   const img = new Image();
   img.crossOrigin = "anonymous";
   img.src = `./${path}`;
@@ -426,13 +406,10 @@ function tintBackgroundFromImage(path){
     const data = ctx.getImageData(0, 0, 24, 24).data;
     let r=0,g=0,b=0,n=0;
 
-    // média simples (ignora alpha baixo)
     for (let i=0; i<data.length; i+=4){
       const a = data[i+3];
       if (a < 200) continue;
-      r += data[i];
-      g += data[i+1];
-      b += data[i+2];
+      r += data[i]; g += data[i+1]; b += data[i+2];
       n++;
     }
     if (!n) return;
@@ -441,46 +418,42 @@ function tintBackgroundFromImage(path){
     g = Math.round(g/n);
     b = Math.round(b/n);
 
-    // ===== Gradiente base =====
-    const bg1 = `rgb(${Math.min(255, r+14)}, ${Math.min(255, g+14)}, ${Math.min(255, b+14)})`;
-    const bg2 = `rgb(${r}, ${g}, ${b})`;
-    const bg3 = `rgb(${Math.max(0, r-22)}, ${Math.max(0, g-22)}, ${Math.max(0, b-22)})`;
+    // Gradiente base
+    document.documentElement.style.setProperty("--bg1", `rgb(${Math.min(255, r+14)}, ${Math.min(255, g+14)}, ${Math.min(255, b+14)})`);
+    document.documentElement.style.setProperty("--bg2", `rgb(${r}, ${g}, ${b})`);
+    document.documentElement.style.setProperty("--bg3", `rgb(${Math.max(0, r-22)}, ${Math.max(0, g-22)}, ${Math.max(0, b-22)})`);
 
-    document.documentElement.style.setProperty("--bg1", bg1);
-    document.documentElement.style.setProperty("--bg2", bg2);
-    document.documentElement.style.setProperty("--bg3", bg3);
-
-    // ===== Luminância (0..1) =====
+    // Luminosidade (0..1)
     const lum = (0.2126*r + 0.7152*g + 0.0722*b) / 255;
-    const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 
-    // ===== Opacidade adaptativa das caixas =====
-    const glassA  = clamp(0.28 + lum * 0.34, 0.28, 0.66);
-    const glassA2 = clamp(glassA - 0.16, 0.16, 0.52);
-    const lineA   = clamp(0.20 + lum * 0.18, 0.20, 0.42);
+    // ✅ Regra simples e eficaz:
+    // Imagem clara => caixas escuras
+    // Imagem escura => caixas claras
+    const isBright = lum > 0.58;
 
-    document.documentElement.style.setProperty("--glass",  `rgba(255,255,255,${glassA.toFixed(2)})`);
-    document.documentElement.style.setProperty("--glass2", `rgba(255,255,255,${glassA2.toFixed(2)})`);
-    document.documentElement.style.setProperty("--line",   `rgba(255,255,255,${lineA.toFixed(2)})`);
+    if (isBright){
+      // GLASS DARK
+      document.documentElement.style.setProperty("--cardBg",  "rgba(0,0,0,.42)");
+      document.documentElement.style.setProperty("--cardBg2", "rgba(0,0,0,.30)");
+      document.documentElement.style.setProperty("--pillBg",  "rgba(0,0,0,.22)");
+      document.documentElement.style.setProperty("--selectBg","rgba(0,0,0,.22)");
+      document.documentElement.style.setProperty("--stickyBg","rgba(0,0,0,.58)");
+      document.documentElement.style.setProperty("--line",    "rgba(255,255,255,.22)");
+      document.documentElement.style.setProperty("--textShadow","0 2px 10px rgba(0,0,0,.55)");
+    } else {
+      // GLASS LIGHT (para fundos escuros)
+      document.documentElement.style.setProperty("--cardBg",  "rgba(255,255,255,.22)");
+      document.documentElement.style.setProperty("--cardBg2", "rgba(255,255,255,.12)");
+      document.documentElement.style.setProperty("--pillBg",  "rgba(0,0,0,.10)");
+      document.documentElement.style.setProperty("--selectBg","rgba(255,255,255,.18)");
+      document.documentElement.style.setProperty("--stickyBg","rgba(0,0,0,.34)");
+      document.documentElement.style.setProperty("--line",    "rgba(255,255,255,.26)");
+      document.documentElement.style.setProperty("--textShadow","0 2px 8px rgba(0,0,0,.45)");
+    }
 
-    // ===== Texto adaptativo =====
-    const t = clamp((lum - 0.52) / 0.28, 0, 1); // 0..1
-
-    const mix = (a, b, t) => Math.round(a + (b - a) * t);
-
-    const tr = mix(255, 18, t);
-    const tg = mix(255, 18, t);
-    const tb = mix(255, 18, t);
-
-    const mr = mix(255, 60, t);
-    const mg = mix(255, 60, t);
-    const mb = mix(255, 60, t);
-
-    document.documentElement.style.setProperty("--text",  `rgb(${tr},${tg},${tb})`);
-    document.documentElement.style.setProperty("--muted", `rgba(${mr},${mg},${mb},0.88)`);
-
-    const shadowA = (1 - t) * 0.35;
-    document.documentElement.style.setProperty("--textShadow", `0 1px 3px rgba(0,0,0,${shadowA.toFixed(2)})`);
+    // Texto fica sempre branco (consistente)
+    document.documentElement.style.setProperty("--text", "#ffffff");
+    document.documentElement.style.setProperty("--muted","rgba(255,255,255,.82)");
   };
 }
 
@@ -492,17 +465,10 @@ function setSkyFromWeather(code, isDay){
     els.skyImg.style.backgroundImage = `url(./${file})`;
   }
 
-  // fundo homogéneo + opacidade + texto adaptativo
   tintBackgroundFromImage(file);
-
-  // FX
   setSkyFx(code);
-
-  // altura
   updateSkyHeight();
 }
-
-/* ========================= */
 
 function renderAll(data, sourceName, locName){
   const t = data.hourly.time;
@@ -528,13 +494,11 @@ function renderAll(data, sourceName, locName){
   setText(els.nowRain, fmtMm(prcp));
   setText(els.nowPop, fmtPct(pop));
 
-  // Seta: meteorologia = vento "de onde vem" (dir). Seta na UI costuma mostrar "para onde vai", por isso +180.
   if (els.dirNeedle){
     els.dirNeedle.style.transform = `translate(-50%, -92%) rotate(${(dir + 180) % 360}deg)`;
   }
 
   const tempEff = (feels ?? temp);
-
   setText(els.dressBike, clothingSuggestion({ temp: tempEff, wind, gust, pop, prcp, sport:"bike" }));
   setText(els.dressRun,  clothingSuggestion({ temp: tempEff, wind, gust, pop, prcp, sport:"run" }));
   setText(els.dressWalk, clothingSuggestion({ temp: tempEff, wind, gust, pop, prcp, sport:"walk" }));
@@ -550,7 +514,6 @@ function renderAll(data, sourceName, locName){
   setText(els.windSuggestion, windDirectionSuggestion(dir));
   setText(els.source, sourceName);
 
-  // Céu
   const code = data.hourly.weather_code?.[i] ?? 0;
   const isDay = (data.hourly.is_day?.[i] ?? 1) === 1;
   setSkyFromWeather(code, isDay);
@@ -582,7 +545,6 @@ async function refresh(){
 function init(){
   if (!els.select || !els.updated) return;
 
-  // Alcabideche primeiro, resto por ordem alfabética pt-PT
   const alc = LOCATIONS.find(l => l.id === "alcabideche");
   const rest = LOCATIONS
     .filter(l => l.id !== "alcabideche")
@@ -590,7 +552,6 @@ function init(){
     .sort((a,b) => a.name.localeCompare(b.name, "pt-PT", { sensitivity:"base" }));
   const ordered = [alc, ...rest].filter(Boolean);
 
-  // Popular select
   els.select.innerHTML = "";
   for (const l of ordered){
     const opt = document.createElement("option");
@@ -610,7 +571,6 @@ function init(){
     });
   }
 
-  // garantir altura certa logo no arranque e em resize
   updateSkyHeight();
   window.addEventListener("resize", updateSkyHeight);
 
