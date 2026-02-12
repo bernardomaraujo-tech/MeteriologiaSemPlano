@@ -197,6 +197,11 @@ body.is-day .skyImg{
 .hidden{ display:none; }
 .small{ font-size:12px; }
 .best{ font-size:15px; line-height:1.35; white-space:pre-line; }
+.sunTimes{
+  margin-top: 6px;
+  font-size: 12px;
+  opacity: .85;
+}
 .muted{ color:var(--muted); }
 
 /* AGORA */
