@@ -91,6 +91,21 @@ function weekdayHourLabel(iso){
   return `${w} ${h}`;
 }
 
+function fmtTimeFromISO(iso){
+  if (!iso) return "—";
+  const d = new Date(iso);
+  return d.toLocaleTimeString("pt-PT", { hour: "2-digit", minute: "2-digit" });
+}
+
+function getSunTimes(data){
+  const sunriseISO = data?.daily?.sunrise?.[0];
+  const sunsetISO  = data?.daily?.sunset?.[0];
+  return {
+    sunriseStr: fmtTimeFromISO(sunriseISO),
+    sunsetStr:  fmtTimeFromISO(sunsetISO)
+  };
+}
+
 function buildUrlForecast(loc, modelsCsv){
   const params = new URLSearchParams({
     latitude: String(loc.lat),
@@ -101,6 +116,8 @@ function buildUrlForecast(loc, modelsCsv){
     timeformat: "iso8601",
     past_hours: "1",
     forecast_hours: "48",
+    forecast_days: "2",
+    daily: "sunrise,sunset",
     hourly: [
       "temperature_2m",
       "apparent_temperature",
@@ -523,7 +540,12 @@ function renderAll(data, sourceName, locName){
   const endLbl   = weekdayHourLabel(t[bw.idx + 2] ?? t[bw.idx + 1]);
   setText(els.bestWindow, `${startLbl} → ${endLbl}\nMenos chuva + menos rajadas.`);
 
-  setText(els.windSuggestion, windDirectionSuggestion(dir));
+  const { sunriseStr, sunsetStr } = getSunTimes(data);
+  setHTML(
+    els.windSuggestion,
+    `<div>${windDirectionSuggestion(dir)}</div>` +
+    `<div class="sunTimes">🌅 ${sunriseStr} &nbsp;&nbsp; 🌇 ${sunsetStr}</div>`
+  );
   setText(els.source, sourceName);
 
   const code = data.hourly.weather_code?.[i] ?? 0;
