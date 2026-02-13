@@ -147,6 +147,7 @@ body.is-day .skyImg{
 .heroLoc{ font-size:22px; font-weight:650; letter-spacing:.2px; opacity:.95; }
 .heroTemp{ font-size:78px; font-weight:700; line-height:1; margin-top:4px; }
 .heroMeta{ font-size:14px; color:var(--muted); margin-top:4px; }
+.heroSun{ font-size:13px; color:var(--muted); margin-top:4px; opacity:.95; }
 
 .updated{ font-size:12px; color:var(--muted); }
 
@@ -218,169 +219,141 @@ body.is-day .skyImg{
   align-items:center;
 }
 .k{ color:var(--muted); font-size:13px; }
-.v{ font-size:16px; font-weight:750; text-align:left; }
+.v{ font-size:14px; font-weight:600; }
 
-/* Rosa dos ventos */
 .dirCard{
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-  align-items:center;
-  justify-content:center;
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:10px;
+  background: rgba(255,255,255,.06);
 }
-.dirTitle{ font-size:12px; color:var(--muted); letter-spacing:.2px; }
-.compass{ position:relative; width:110px; height:110px; }
+.dirTitle{ font-size:12px; color:var(--muted); margin-bottom:8px; text-align:center; }
+
+.compass{
+  position:relative;
+  width:110px;
+  height:110px;
+  margin:0 auto;
+}
 .compassRing{
   position:absolute; inset:0;
   border-radius:999px;
-  border:1px solid rgba(255,255,255,.30);
-  background: rgba(0,0,0,.10);
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,.08);
+  border:1px solid var(--line);
+  background: radial-gradient(circle at 50% 50%, rgba(255,255,255,.10), rgba(255,255,255,.02) 65%, rgba(0,0,0,.10));
 }
 .compassLabel{
   position:absolute;
-  font-size:12px;
-  font-weight:750;
-  color: rgba(255,255,255,.92);
-  opacity:.95;
-  user-select:none;
+  font-size:11px;
+  color:var(--muted);
+  transform: translate(-50%, -50%);
+  text-shadow: var(--textShadow);
 }
-.compassLabel.n{ top:6px; left:50%; transform:translateX(-50%); }
-.compassLabel.s{ bottom:6px; left:50%; transform:translateX(-50%); }
-.compassLabel.e{ right:8px; top:50%; transform:translateY(-50%); }
-.compassLabel.w{ left:8px; top:50%; transform:translateY(-50%); }
+.compassLabel.n{ left:50%; top:10%; }
+.compassLabel.e{ left:90%; top:50%; }
+.compassLabel.s{ left:50%; top:90%; }
+.compassLabel.w{ left:10%; top:50%; }
 
 .needle{
   position:absolute;
   left:50%;
   top:50%;
-  width:2px;
-  height:44px;
+  width:4px;
+  height:46px;
+  background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,255,255,.10));
+  border-radius:999px;
   transform-origin: 50% 92%;
   transform: translate(-50%, -92%) rotate(0deg);
-  background: rgba(255,255,255,.95);
-  border-radius:999px;
-  box-shadow: 0 2px 8px rgba(0,0,0,.28);
-}
-.needle::after{
-  content:"";
-  position:absolute;
-  left:50%;
-  top:-8px;
-  transform:translateX(-50%);
-  width:0; height:0;
-  border-left:6px solid transparent;
-  border-right:6px solid transparent;
-  border-bottom:9px solid rgba(255,255,255,.95);
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,.25));
+  box-shadow: 0 10px 18px rgba(0,0,0,.25);
 }
 .needleDot{
   position:absolute;
-  left:50%; top:50%;
-  transform:translate(-50%,-50%);
-  width:10px; height:10px;
+  left:50%;
+  top:50%;
+  width:10px;
+  height:10px;
   border-radius:999px;
-  background: rgba(255,255,255,.95);
-  box-shadow: 0 2px 8px rgba(0,0,0,.22);
+  background: rgba(255,255,255,.92);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 8px 16px rgba(0,0,0,.25);
 }
 
-/* O que vestir */
-.dressTitle{ font-size:13px; color:var(--muted); margin-bottom:8px; }
-.dressGrid{ display:flex; flex-direction:column; gap:8px; }
-
+/* O QUE VESTIR */
+.dressTitle{
+  font-size:13px;
+  color:var(--muted);
+  margin-bottom:10px;
+  letter-spacing:.2px;
+}
+.dressGrid{
+  display:grid;
+  gap:10px;
+}
 .pillRow{
   display:flex;
+  align-items:center;
+  justify-content:space-between;
   gap:10px;
-  align-items:flex-start;
-  border:1px solid var(--line);
+  padding:10px 12px;
   border-radius:16px;
-  padding:10px 12px;
-  background: var(--pillBg);
-}
-.pillLabel{ min-width:82px; font-size:13px; color:var(--muted); }
-.pillValue{ font-size:13px; color: rgba(255,255,255,.96); line-height:1.35; }
-
-/* Alertas */
-.alerts{display:flex;flex-direction:column;gap:8px}
-.pill{
-  padding:10px 12px;
-  border-radius:999px;
   border:1px solid var(--line);
   background: var(--pillBg);
+}
+.pillLabel{
+  font-size:12px;
+  color:var(--muted);
+  white-space:nowrap;
+}
+.pillValue{
   font-size:13px;
+  font-weight:600;
+  text-align:right;
 }
 
-/* Tabelas */
-.tableWrap{ overflow:auto; -webkit-overflow-scrolling:touch; }
-.tbl{ width:100%; border-collapse:collapse; min-width:680px; }
-.tbl th,.tbl td{
-  padding:9px 8px;
-  border-bottom:1px solid var(--line);
+/* ALERTAS */
+.alerts{ display:flex; flex-wrap:wrap; gap:8px; }
+.pill{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 10px;
+  border-radius:999px;
+  background: var(--pillBg);
+  border:1px solid var(--line);
+  font-size:12px;
+}
+
+/* TABELAS */
+.tableWrap{ width:100%; overflow:auto; }
+.tbl{
+  width:100%;
+  border-collapse:collapse;
   font-size:13px;
+}
+.tbl th, .tbl td{
+  padding:10px 10px;
+  border-bottom:1px solid rgba(255,255,255,.12);
   text-align:left;
   white-space:nowrap;
 }
-.tbl th{ color:var(--muted); font-weight:650; }
+.tbl th{
+  font-size:12px;
+  color:var(--muted);
+  font-weight:650;
+}
+.iconCell{ width:28px; }
+.icon{ font-size:16px; }
 
-.iconCell{ text-align:center !important; width:44px; }
-.icon{
-  font-size:20px; line-height:1;
-  display:inline-block;
-  filter: drop-shadow(0 1px 2px rgba(0,0,0,.40));
-}
-
-/* Sticky: Hora + Ícone */
-.tbl th:first-child,
-.tbl td:first-child{
-  position:sticky;
-  left:0;
-  z-index:5;
-  width:92px;
-  min-width:92px;
-  background: var(--stickyBg);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  font-weight:750;
-  color:#fff;
-}
-.tbl th:nth-child(2),
-.tbl td:nth-child(2){
-  position:sticky;
-  left:92px;
-  z-index:4;
-  width:44px;
-  min-width:44px;
-  padding-left:4px;
-  padding-right:6px;
-  background: var(--stickyBg);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-}
-.tbl th:first-child{ z-index:7; }
-.tbl th:nth-child(2){ z-index:6; }
-.tbl th:nth-child(2)::after,
-.tbl td:nth-child(2)::after{
-  content:"";
-  position:absolute;
-  top:0; right:0;
-  width:1px; height:100%;
-  background: rgba(255,255,255,.30);
-}
-
-/* Windy */
+/* WINDY */
 .windyWrap{
   border-radius:16px;
   overflow:hidden;
   border:1px solid var(--line);
-  background:#000;
+  background: rgba(0,0,0,.10);
 }
-.camLink{
-  color: rgba(255,255,255,.95);
-  text-decoration: underline;
-}
+.camLink{ color:var(--text); text-decoration:underline; }
 
-/* Sombra do texto (para legibilidade no céu) */
-.heroLoc, .heroTemp, .heroMeta, .updated,
-.cardTitle, .k, .v, .pillValue, .best{
-  text-shadow: var(--textShadow);
+/* Pequenos ajustes mobile */
+@media (max-width: 380px){
+  .heroTemp{ font-size:70px; }
+  .nowLayout{ grid-template-columns: 1fr 120px; }
 }
