@@ -245,7 +245,6 @@ function clothingSuggestion({ temp, wind, gust, pop, prcp, sport }){
   else if (temp <= 22) base = "Agradável";
   else base = "Quente";
 
-  // Addons (sem pontuação antes)
   const rainAddon = rainy ? " · Leva impermeável" : "";
   const windAddon = windy ? " · Protege do vento" : "";
 
@@ -265,7 +264,6 @@ function clothingSuggestion({ temp, wind, gust, pop, prcp, sport }){
     return `${base}: Muito leve + hidratação. Corre com cabeça${windAddon}${rainAddon}`;
   }
 
-  // walk
   if (temp <= 6)  return `${base}: Camadas quentes e casaco. Explora, mas mantém conforto${windAddon}${rainAddon}`;
   if (temp <= 11) return `${base}: Manga comprida + calças. Temperatura perfeita para trilho${windAddon}${rainAddon}`;
   if (temp <= 16) return `${base}: Camada leve. Ideal para ganhar altitude${windAddon}${rainAddon}`;
@@ -463,7 +461,6 @@ function tintBackgroundFromImage(path){
     const isDayImage = path.startsWith("day_");
 
     if (isDayImage){
-      // 🌤️ DIA → Modo Escuro (caixas escuras) + texto cinzento escuro
       document.documentElement.style.setProperty("--cardBg",  "rgba(0,0,0,.65)");
       document.documentElement.style.setProperty("--cardBg2", "rgba(0,0,0,.50)");
       document.documentElement.style.setProperty("--pillBg",  "rgba(0,0,0,.35)");
@@ -475,7 +472,6 @@ function tintBackgroundFromImage(path){
       document.documentElement.style.setProperty("--muted","rgba(20,20,20,.68)");
       document.documentElement.style.setProperty("--textShadow","0 2px 8px rgba(255,255,255,.25)");
     } else {
-      // 🌙 NOITE → Modo Claro (caixas claras) + texto branco
       document.documentElement.style.setProperty("--cardBg",  "rgba(255,255,255,.45)");
       document.documentElement.style.setProperty("--cardBg2", "rgba(255,255,255,.30)");
       document.documentElement.style.setProperty("--pillBg",  "rgba(0,0,0,.18)");
@@ -530,7 +526,6 @@ function renderAll(data, sourceName, locName){
   setText(els.nowRain, fmtMm(prcp));
   setText(els.nowPop, fmtPct(pop));
 
-  // ✅ Bússola: ponteiro centrado (atravessa o círculo) + mantém lógica anterior (+180)
   if (els.dirNeedle){
     els.dirNeedle.style.transform = `translate(-50%, -50%) rotate(${(dir + 180) % 360}deg)`;
   }
