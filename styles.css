@@ -102,12 +102,8 @@ body{
   opacity: .85;
 }
 
-body.is-night .skyImg{
-  filter: brightness(.78) contrast(1.05) saturate(.95);
-}
-body.is-day .skyImg{
-  filter: brightness(1.02) contrast(1.02) saturate(1.02);
-}
+body.is-night .skyImg{ filter: brightness(.78) contrast(1.05) saturate(.95); }
+body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
 
 @keyframes skyBreath{
   0%{ transform: scale(1.06) translateY(0); }
@@ -207,12 +203,6 @@ body.is-day .skyImg{
 .hidden{ display:none; }
 .small{ font-size:12px; }
 .best{ font-size:15px; line-height:1.35; white-space:pre-line; text-shadow: var(--textShadow); }
-.sunTimes{
-  margin-top: 6px;
-  font-size: 12px;
-  opacity: .85;
-  text-shadow: var(--textShadow);
-}
 .muted{ color:var(--muted); text-shadow: var(--textShadow); }
 
 /* AGORA */
@@ -267,7 +257,6 @@ body.is-day .skyImg{
 .compassLabel.s{ left:50%; top:90%; }
 .compassLabel.w{ left:10%; top:50%; }
 
-/* Ponteiro (atravessa o círculo) + ponta */
 .needle{
   position:absolute;
   left:50%;
@@ -278,7 +267,6 @@ body.is-day .skyImg{
   transform-origin: 50% 50%;
   transform: translate(-50%, -50%) rotate(0deg);
   box-shadow: 0 10px 18px rgba(0,0,0,.25);
-
   background: linear-gradient(
     180deg,
     rgba(255,255,255,.95) 0%,
@@ -286,8 +274,6 @@ body.is-day .skyImg{
     rgba(255,255,255,.95) 100%
   );
 }
-
-/* ponta (triângulo) */
 .needle::after{
   content:"";
   position:absolute;
@@ -301,7 +287,6 @@ body.is-day .skyImg{
   border-bottom:12px solid rgba(255,255,255,.95);
   filter: drop-shadow(0 6px 10px rgba(0,0,0,.25));
 }
-
 .needleDot{
   position:absolute;
   left:50%;
@@ -327,33 +312,40 @@ body.is-day .skyImg{
   gap:10px;
 }
 
-/* ✅ Alteração: layout em coluna e alinhado à esquerda */
+/* ✅ alinhamento à esquerda + destaque no label */
 .pillRow{
   display:flex;
   flex-direction:column;
   align-items:flex-start;
-  gap:4px;
+  gap:6px;
   padding:10px 12px;
   border-radius:16px;
   border:1px solid var(--line);
   background: var(--pillBg);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
+  text-align:left;
 }
 
 .pillLabel{
   font-size:12px;
-  color:var(--muted);
+  color:var(--text);
+  font-weight:750;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
   white-space:nowrap;
   text-shadow: var(--textShadow);
 }
 
 .pillValue{
-  font-size:13px;
-  font-weight:600;
-  text-align:left;
-  line-height:1.4;
+  display:block;            /* 🔑 força o alinhamento no iOS */
   width:100%;
+  font-size:13px;
+  font-weight:500;          /* ✅ sem “destaque” no texto */
+  text-align:left;
+  line-height:1.35;
+  color: rgba(255,255,255,.92);
   text-shadow: var(--textShadow);
 }
 
