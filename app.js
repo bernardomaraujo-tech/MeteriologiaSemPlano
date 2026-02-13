@@ -448,33 +448,48 @@ function tintBackgroundFromImage(path){
     g = Math.round(g/n);
     b = Math.round(b/n);
 
+    // Gradiente base
     document.documentElement.style.setProperty("--bg1", `rgb(${Math.min(255, r+14)}, ${Math.min(255, g+14)}, ${Math.min(255, b+14)})`);
     document.documentElement.style.setProperty("--bg2", `rgb(${r}, ${g}, ${b})`);
     document.documentElement.style.setProperty("--bg3", `rgb(${Math.max(0, r-22)}, ${Math.max(0, g-22)}, ${Math.max(0, b-22)})`);
 
+    // Luminosidade (0..1)
     const lum = (0.2126*r + 0.7152*g + 0.0722*b) / 255;
+
+    // Imagem clara => caixas escuras
+    // Imagem escura => caixas claras
     const isBright = lum > 0.58;
 
     if (isBright){
+      // GLASS DARK (caixas mais escuras)
       document.documentElement.style.setProperty("--cardBg",  "rgba(0,0,0,.42)");
       document.documentElement.style.setProperty("--cardBg2", "rgba(0,0,0,.30)");
       document.documentElement.style.setProperty("--pillBg",  "rgba(0,0,0,.22)");
       document.documentElement.style.setProperty("--selectBg","rgba(0,0,0,.22)");
       document.documentElement.style.setProperty("--stickyBg","rgba(0,0,0,.58)");
       document.documentElement.style.setProperty("--line",    "rgba(255,255,255,.22)");
-      document.documentElement.style.setProperty("--textShadow","0 2px 10px rgba(0,0,0,.55)");
     } else {
+      // GLASS LIGHT (para fundos escuros)
       document.documentElement.style.setProperty("--cardBg",  "rgba(255,255,255,.22)");
       document.documentElement.style.setProperty("--cardBg2", "rgba(255,255,255,.12)");
       document.documentElement.style.setProperty("--pillBg",  "rgba(0,0,0,.10)");
       document.documentElement.style.setProperty("--selectBg","rgba(255,255,255,.18)");
       document.documentElement.style.setProperty("--stickyBg","rgba(0,0,0,.34)");
       document.documentElement.style.setProperty("--line",    "rgba(255,255,255,.26)");
-      document.documentElement.style.setProperty("--textShadow","0 2px 8px rgba(0,0,0,.45)");
     }
 
-    document.documentElement.style.setProperty("--text", "#ffffff");
-    document.documentElement.style.setProperty("--muted","rgba(255,255,255,.82)");
+    // ✅ TEXTO ADAPTATIVO (pedido):
+    // Fundo claro => texto cinzento escuro (não preto)
+    // Fundo escuro => texto branco (como está agora)
+    if (isBright){
+      document.documentElement.style.setProperty("--text", "rgba(20,20,20,.92)");
+      document.documentElement.style.setProperty("--muted","rgba(20,20,20,.68)");
+      document.documentElement.style.setProperty("--textShadow","0 2px 8px rgba(255,255,255,.25)");
+    } else {
+      document.documentElement.style.setProperty("--text", "#ffffff");
+      document.documentElement.style.setProperty("--muted","rgba(255,255,255,.82)");
+      document.documentElement.style.setProperty("--textShadow","0 2px 8px rgba(0,0,0,.45)");
+    }
   };
 }
 
@@ -517,9 +532,7 @@ function renderAll(data, sourceName, locName){
   setText(els.nowRain, fmtMm(prcp));
   setText(els.nowPop, fmtPct(pop));
 
-  // ✅ ALTERAÇÃO ÚNICA NO JS (apenas bússola):
-  // antes: translate(-50%, -92%)
-  // agora: começa no centro e atravessa o círculo
+  // BÚSSOLA: centrado (atravessa o círculo) + mantém lógica anterior (+180)
   if (els.dirNeedle){
     els.dirNeedle.style.transform = `translate(-50%, -50%) rotate(${(dir + 180) % 360}deg)`;
   }
