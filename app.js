@@ -32,32 +32,37 @@ const LOCATIONS = [
   { id:"sintra", name:"Sintra", lat:38.8029, lon:-9.3817 }
 ];
 
-// Marcos de referência (POIs) para tornar a sugestão de sentido mais “real”.
-// Nota: esta lista é fixa e não depende das localizações; a seleção é feita por coordenadas.
+/**
+ * POIs/Âncoras com tipo e “margem” para evitar sugestões parvas (ex.: Lisboa -> Azeitão).
+ * type:
+ *  - "serra"  (serra/montanha)
+ *  - "costa"  (linha atlântica / marginal / costa)
+ *  - "rio"    (rio / estuário)
+ *  - "cidade" (fallback urbano)
+ *
+ * bank:
+ *  - "N" Norte do Tejo (Lisboa/linha/Serra de Sintra)
+ *  - "S" Sul do Tejo (Almada/Caparica/Arrábida/Azeitão)
+ *  - "X" indiferente/sem margem
+ */
 const POIS = [
-  // Grande Lisboa / Linha / Sintra
-  { name:"Serra de Sintra", lat:38.7770, lon:-9.3900 },
-  { name:"Sintra (Vila)", lat:38.8029, lon:-9.3817 },
-  { name:"Cabo da Roca", lat:38.7804, lon:-9.4989 },
-  { name:"Guincho", lat:38.7295, lon:-9.4746 },
-  { name:"Cascais", lat:38.6979, lon:-9.4206 },
-  { name:"Oeiras", lat:38.6910, lon:-9.3110 },
-  { name:"Belém", lat:38.6969, lon:-9.2066 },
-  { name:"Lisboa", lat:38.7223, lon:-9.1393 },
+  // NORTE (Lisboa / Linha / Sintra)
+  { name:"Serra",   label:"Serra (Sintra)", type:"serra",  bank:"N", lat:38.7760, lon:-9.3900 },
+  { name:"Costa",   label:"Costa (Marginal)", type:"costa", bank:"N", lat:38.6920, lon:-9.3300 }, // Carcavelos como âncora “costa”
+  { name:"Rio",     label:"Rio (Tejo)", type:"rio",        bank:"N", lat:38.7070, lon:-9.1500 },   // Cais do Sodré como âncora “rio”
+  { name:"Lisboa",  label:"Lisboa", type:"cidade",         bank:"N", lat:38.7223, lon:-9.1393 },
+  { name:"Cascais", label:"Cascais", type:"cidade",        bank:"N", lat:38.6979, lon:-9.4206 },
 
-  // Margem Sul / Arrábida
-  { name:"Costa da Caparica", lat:38.6440, lon:-9.2350 },
-  { name:"Almada", lat:38.6790, lon:-9.1569 },
-  { name:"Azeitão", lat:38.5180, lon:-9.0130 },
-  { name:"Serra da Arrábida", lat:38.4890, lon:-9.0280 },
-  { name:"Sesimbra", lat:38.4445, lon:-9.1015 },
-  { name:"Setúbal", lat:38.5244, lon:-8.8882 },
-  { name:"Cabo Espichel", lat:38.4153, lon:-9.2188 },
+  // SUL (Margem Sul / Arrábida)
+  { name:"Costa",   label:"Costa (Caparica)", type:"costa", bank:"S", lat:38.6440, lon:-9.2350 },
+  { name:"Serra",   label:"Serra (Arrábida)", type:"serra", bank:"S", lat:38.4890, lon:-9.0280 },
+  { name:"Rio",     label:"Rio (Tejo)", type:"rio",         bank:"S", lat:38.6800, lon:-9.1600 },  // Almada como âncora “rio”
+  { name:"Almada",  label:"Almada", type:"cidade",          bank:"S", lat:38.6790, lon:-9.1569 },
+  { name:"Azeitão", label:"Azeitão", type:"cidade",         bank:"S", lat:38.5180, lon:-9.0130 },
 
-  // Centro litoral (útil para locais como Praia da Tocha)
-  { name:"Coimbra", lat:40.2033, lon:-8.4103 },
-  { name:"Figueira da Foz", lat:40.1508, lon:-8.8618 },
-  { name:"Aveiro", lat:40.6405, lon:-8.6538 }
+  // X (indiferente/fora destas zonas, para evitar inventar)
+  { name:"Costa",   label:"Costa", type:"costa",            bank:"X", lat:40.1508, lon:-8.8618 }, // Figueira (ancora genérica centro)
+  { name:"Cidade",  label:"Centro urbano", type:"cidade",   bank:"X", lat:40.2033, lon:-8.4103 }  // Coimbra
 ];
 
 const $ = (id) => document.getElementById(id);
@@ -256,7 +261,6 @@ function toRad(d){ return d * Math.PI / 180; }
 function toDeg(r){ return r * 180 / Math.PI; }
 
 function angleDiff(a, b){
-  // Diferença mínima entre ângulos (0..180)
   return Math.abs(((a - b + 540) % 360) - 180);
 }
 
@@ -270,7 +274,6 @@ function haversineKm(lat1, lon1, lat2, lon2){
   return 2 * R * Math.asin(Math.sqrt(a));
 }
 
-// Bearing: direção para onde vais (0=N,90=E...), entre dois pontos
 function bearingBetween(lat1, lon1, lat2, lon2){
   const φ1 = toRad(lat1), φ2 = toRad(lat2);
   const Δλ = toRad(lon2 - lon1);
@@ -291,23 +294,32 @@ function dirBucket(deg){
   return "noroeste";
 }
 
-function pickPOIForBearing(userLat, userLon, targetBearing, pois){
-  // Guardas para não “inventar” quando estamos longe dos POIs
-  const MAX_KM = 65;   // raio útil
-  const MAX_DEG = 45;  // alinhamento mínimo para usar um POI
+// Regra simples para margem do Tejo (boa o suficiente para Lisboa/linha vs margem sul)
+function inferBank(loc){
+  // Lisboa/Cais do Sodré/linha: ~38.69+; margem sul típica: <38.67
+  if ((loc?.lat ?? 0) < 38.67) return "S";
+  return "N";
+}
+
+function pickPOIForBearing(userLat, userLon, targetBearing, pois, bank){
+  const MAX_KM  = 20; // ✅ raio máximo (pedido: 15-20km)
+  const MAX_DEG = 50; // tolerância angular (mantém alguma flexibilidade)
 
   let best = null;
   let bestScore = Infinity;
 
   for (const p of pois){
+    // ✅ não sugerir atravessar o rio: filtra por margem quando aplicável
+    if (bank && p.bank !== "X" && p.bank !== bank) continue;
+
     const km = haversineKm(userLat, userLon, p.lat, p.lon);
     if (km > MAX_KM) continue;
 
     const b = bearingBetween(userLat, userLon, p.lat, p.lon);
     const a = angleDiff(b, targetBearing);
 
-    // peso: primeiro alinhamento, depois distância
-    const score = a + km * 0.35;
+    // score: prioriza alinhamento, depois distância
+    const score = a + km * 0.55;
     if (score < bestScore){
       bestScore = score;
       best = { ...p, km, bearing: b, ang: a };
@@ -319,29 +331,51 @@ function pickPOIForBearing(userLat, userLon, targetBearing, pois){
   return best;
 }
 
+function poiLabel(p){
+  if (!p) return null;
+  // ✅ preferir “Serra / Costa / Rio”
+  if (p.type === "serra") return p.label || "Serra";
+  if (p.type === "costa") return p.label || "Costa";
+  if (p.type === "rio")   return p.label || "Rio";
+  // cidade: usa nome
+  return p.label || p.name;
+}
+
 // windDir = “de onde vem” (meteorologia)
 function windDirectionSuggestionSmart(windDir, loc){
   const fromTxt = windDirText(windDir);
 
-  // Estratégia ciclista:
-  // - começar a apontar para “onde o vento vem” (contra o vento)
-  // - regressar a apontar para “onde o vento vai” (vento de costas)
-  const headBearing = windDir;
-  const tailBearing = (windDir + 180) % 360;
+  const headBearing = windDir;               // contra o vento
+  const tailBearing = (windDir + 180) % 360; // vento de costas
 
-  const goPOI = pickPOIForBearing(loc.lat, loc.lon, headBearing, POIS);
-  const backPOI = pickPOIForBearing(loc.lat, loc.lon, tailBearing, POIS);
+  const bank = inferBank(loc);
 
-  if (goPOI && backPOI && goPOI.name !== backPOI.name){
-    return `Vento de ${fromTxt}. Arranca contra o vento na direção de ${goPOI.name} e guarda o regresso com vento de costas por ${backPOI.name}.`;
+  const goPOI   = pickPOIForBearing(loc.lat, loc.lon, headBearing, POIS, bank);
+  const backPOI = pickPOIForBearing(loc.lat, loc.lon, tailBearing, POIS, bank);
+
+  const goLbl = poiLabel(goPOI);
+  const backLbl = poiLabel(backPOI);
+
+  if (goLbl && backLbl){
+    // evita repetir exatamente a mesma label
+    if (goLbl === backLbl){
+      const goDir = dirBucket(headBearing);
+      const backDir = dirBucket(tailBearing);
+      return `Vento de ${fromTxt}. Arranca contra o vento para ${goDir} e regressa para ${backDir} com vento de costas.`;
+    }
+
+    // texto mais “ciclista”
+    return `Vento de ${fromTxt}. Arranca contra o vento na direção de ${goLbl} e guarda o regresso com vento de costas pela ${backLbl}.`;
   }
 
-  // Fallback sempre coerente (sem POI)
+  // fallback direcional
   const goDir = dirBucket(headBearing);
   const backDir = dirBucket(tailBearing);
+  shown = true;
   return `Vento de ${fromTxt}. Arranca contra o vento para ${goDir} e regressa para ${backDir} com vento de costas.`;
 }
 
+// ===== O que vestir (mantém lógica; textos revistos) =====
 function clothingSuggestion({ temp, wind, gust, pop, prcp, sport }){
   const rainy = (pop ?? 0) >= 25 || (prcp ?? 0) >= 0.2;
   const windy = (wind ?? 0) >= 22 || (gust ?? 0) >= 35;
@@ -353,7 +387,6 @@ function clothingSuggestion({ temp, wind, gust, pop, prcp, sport }){
   else if (temp <= 22) base = "Agradável";
   else base = "Quente";
 
-  // Add-ons (sem pontuação “pesada” e sem duplicar lógica)
   const rainAddon = rainy ? " · Leva impermeável" : "";
   const windAddon = windy ? " · Protege do vento" : "";
 
@@ -373,7 +406,6 @@ function clothingSuggestion({ temp, wind, gust, pop, prcp, sport }){
     return `${base}: Muito leve + hidratação. Corre com cabeça${windAddon}${rainAddon}`;
   }
 
-  // walk
   if (temp <= 6)  return `${base}: Camadas quentes e casaco. Explora, mas mantém conforto${windAddon}${rainAddon}`;
   if (temp <= 11) return `${base}: Manga comprida + calças. Temperatura perfeita para trilho${windAddon}${rainAddon}`;
   if (temp <= 16) return `${base}: Camada leve. Ideal para ganhar altitude${windAddon}${rainAddon}`;
@@ -534,7 +566,6 @@ function setSkyFx(code){
   els.skyFx.style.animation = "none";
 }
 
-// MODO FORÇADO POR NOME DA IMAGEM
 function tintBackgroundFromImage(path){
   const img = new Image();
   img.crossOrigin = "anonymous";
@@ -563,7 +594,6 @@ function tintBackgroundFromImage(path){
     g = Math.round(g/n);
     b = Math.round(b/n);
 
-    // Gradiente base
     document.documentElement.style.setProperty("--bg1", `rgb(${Math.min(255, r+14)}, ${Math.min(255, g+14)}, ${Math.min(255, b+14)})`);
     document.documentElement.style.setProperty("--bg2", `rgb(${r}, ${g}, ${b})`);
     document.documentElement.style.setProperty("--bg3", `rgb(${Math.max(0, r-22)}, ${Math.max(0, g-22)}, ${Math.max(0, b-22)})`);
@@ -571,7 +601,6 @@ function tintBackgroundFromImage(path){
     const isDayImage = path.startsWith("day_");
 
     if (isDayImage){
-      // DIA → caixas escuras + texto escuro
       document.documentElement.style.setProperty("--cardBg",  "rgba(0,0,0,.65)");
       document.documentElement.style.setProperty("--cardBg2", "rgba(0,0,0,.50)");
       document.documentElement.style.setProperty("--pillBg",  "rgba(0,0,0,.35)");
@@ -583,7 +612,6 @@ function tintBackgroundFromImage(path){
       document.documentElement.style.setProperty("--muted","rgba(20,20,20,.68)");
       document.documentElement.style.setProperty("--textShadow","0 2px 8px rgba(255,255,255,.25)");
     } else {
-      // NOITE → caixas claras + texto branco
       document.documentElement.style.setProperty("--cardBg",  "rgba(255,255,255,.45)");
       document.documentElement.style.setProperty("--cardBg2", "rgba(255,255,255,.30)");
       document.documentElement.style.setProperty("--pillBg",  "rgba(0,0,0,.18)");
@@ -638,12 +666,10 @@ function renderAll(data, sourceName, loc){
   setText(els.nowRain, fmtMm(prcp));
   setText(els.nowPop, fmtPct(pop));
 
-  // Bússola: ponteiro centrado (atravessa o círculo) + mantém lógica anterior (+180)
   if (els.dirNeedle){
     els.dirNeedle.style.transform = `translate(-50%, -50%) rotate(${(dir + 180) % 360}deg)`;
   }
 
-  // Sugestão “o que vestir” usa sensação térmica quando disponível
   const tempEff = (feels ?? temp);
   setText(els.dressBike, clothingSuggestion({ temp: tempEff, wind, gust, pop, prcp, sport:"bike" }));
   setText(els.dressRun,  clothingSuggestion({ temp: tempEff, wind, gust, pop, prcp, sport:"run" }));
