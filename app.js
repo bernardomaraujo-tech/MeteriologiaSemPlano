@@ -233,6 +233,7 @@ function windDirectionSuggestion(deg){
   return `De ${from}. Favorece ir para leste; regresso para oeste é mais pesado.`;
 }
 
+// ✅ Textos revistos (lógica mantida)
 function clothingSuggestion({ temp, wind, gust, pop, prcp, sport }){
   const rainy = (pop ?? 0) >= 25 || (prcp ?? 0) >= 0.2;
   const windy = (wind ?? 0) >= 22 || (gust ?? 0) >= 35;
@@ -244,30 +245,32 @@ function clothingSuggestion({ temp, wind, gust, pop, prcp, sport }){
   else if (temp <= 22) base = "Agradável";
   else base = "Quente";
 
-  const rainAddon = rainy ? " + Impermeável" : "";
-  const windAddon = windy ? " + Corta-vento/Colete" : "";
+  // Addons (sem pontuação antes)
+  const rainAddon = rainy ? " · Leva impermeável" : "";
+  const windAddon = windy ? " · Protege do vento" : "";
 
   if (sport === "bike"){
-    if (temp <= 6)  return `${base}: Base layer + Jersey M.Comp. + Colete + Luvas grossas + Calças + Proteção sapatos${rainAddon}`;
-    if (temp <= 11) return `${base}: Base layer + Jersey M.Comp. + Colete + Luvas finas + Calção${windAddon}${rainAddon}`;
-    if (temp <= 16) return `${base}: Base layer + Jersey M.Comp. + Colete opcional${rainAddon}`;
-    if (temp <= 22) return `${base}: Jersey Manga Curta${windAddon}${rainAddon}`;
-    return `${base}: Jersey leve + proteção solar${rainAddon}`;
+    if (temp <= 6)  return `${base}: Protege bem o corpo — base layer quente + manga comprida + colete + gola + luvas grossas + calças + proteções de sapatos${windAddon}${rainAddon}`;
+    if (temp <= 11) return `${base}: Manga comprida + colete + gola + luvas leves. Mantém o conforto e deixa o ritmo aquecer${windAddon}${rainAddon}`;
+    if (temp <= 16) return `${base}: Manga comprida leve + calção. Começa protegido, ajusta ao longo da volta${windAddon}${rainAddon}`;
+    if (temp <= 22) return `${base}: Manga curta + colete opcional. Clima perfeito para rolar sem pressa${windAddon}${rainAddon}`;
+    return `${base}: Equipamento leve + proteção solar. Hidrata e aproveita a estrada${rainAddon}`;
   }
 
   if (sport === "run"){
-    if (temp <= 6)  return `${base}: Térmica ML + Calças + Corta-vento leve${rainAddon}${windAddon}`;
-    if (temp <= 11) return `${base}: Manga comprida leve${rainAddon}${windAddon}`;
-    if (temp <= 16) return `${base}: T-shirt + camada fina opcional${rainAddon}${windAddon}`;
-    if (temp <= 22) return `${base}: T-shirt leve${rainAddon}${windAddon}`;
-    return `${base}: Muito leve + hidratação${rainAddon}${windAddon}`;
+    if (temp <= 6)  return `${base}: Camada térmica + proteção leve contra o vento. O frio faz parte do desafio${windAddon}${rainAddon}`;
+    if (temp <= 11) return `${base}: Manga comprida leve. Começa fresco, termina quente${windAddon}${rainAddon}`;
+    if (temp <= 16) return `${base}: T-shirt + calções. Ritmo confortável${windAddon}${rainAddon}`;
+    if (temp <= 22) return `${base}: Leve e solto. Ideal para alongar a passada${windAddon}${rainAddon}`;
+    return `${base}: Muito leve + hidratação. Corre com cabeça${windAddon}${rainAddon}`;
   }
 
-  if (temp <= 6)  return `${base}: Camadas (térmica + casaco)${rainAddon}${windAddon}`;
-  if (temp <= 11) return `${base}: Casaco leve${rainAddon}${windAddon}`;
-  if (temp <= 16) return `${base}: Camisola leve + camada extra opcional${rainAddon}${windAddon}`;
-  if (temp <= 22) return `${base}: Confortável, camada leve opcional${rainAddon}${windAddon}`;
-  return `${base}: Leve e respirável + água${rainAddon}${windAddon}`;
+  // walk
+  if (temp <= 6)  return `${base}: Camadas quentes e casaco. Explora, mas mantém conforto${windAddon}${rainAddon}`;
+  if (temp <= 11) return `${base}: Manga comprida + calças. Temperatura perfeita para trilho${windAddon}${rainAddon}`;
+  if (temp <= 16) return `${base}: Camada leve. Ideal para ganhar altitude${windAddon}${rainAddon}`;
+  if (temp <= 22) return `${base}: T-shirt confortável. Dia convidativo${windAddon}${rainAddon}`;
+  return `${base}: Roupa leve e respirável. Aproveita o ar livre${windAddon}${rainAddon}`;
 }
 
 function iconForWeatherCode(code, isDay){
