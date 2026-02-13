@@ -43,6 +43,7 @@ const els = {
   heroLoc: $("heroLoc"),
   heroTemp: $("heroTemp"),
   heroMeta: $("heroMeta"),
+  heroSun: $("heroSun"),
 
   nowWind: $("nowWind"),
   nowGust: $("nowGust"),
@@ -516,6 +517,8 @@ function renderAll(data, sourceName, locName){
   setText(els.heroLoc, locName);
   setText(els.heroTemp, `${Math.round(temp)}°`);
   setText(els.heroMeta, `Sensação: ${Math.round(feels ?? temp)}° · Máx: ${Math.round(max)}° · Mín: ${Math.round(min)}°`);
+  const { sunriseStr, sunsetStr } = getSunTimes(data);
+  setText(els.heroSun, `Nascer: ${sunriseStr} · Pôr: ${sunsetStr}`);
 
   setText(els.nowWind, fmtKmh(wind));
   setText(els.nowGust, fmtKmh(gust));
@@ -540,12 +543,7 @@ function renderAll(data, sourceName, locName){
   const endLbl   = weekdayHourLabel(t[bw.idx + 2] ?? t[bw.idx + 1]);
   setText(els.bestWindow, `${startLbl} → ${endLbl}\nMenos chuva + menos rajadas.`);
 
-  const { sunriseStr, sunsetStr } = getSunTimes(data);
-  setHTML(
-    els.windSuggestion,
-    `<div>${windDirectionSuggestion(dir)}</div>` +
-    `<div class="sunTimes">🌅 ${sunriseStr} &nbsp;&nbsp; 🌇 ${sunsetStr}</div>`
-  );
+  setHTML(els.windSuggestion, `<div>${windDirectionSuggestion(dir)}</div>`);
   setText(els.source, sourceName);
 
   const code = data.hourly.weather_code?.[i] ?? 0;
