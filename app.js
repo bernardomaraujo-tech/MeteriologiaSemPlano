@@ -1,6 +1,7 @@
 const REFRESH_MS = 5 * 60 * 1000;
 const FETCH_TIMEOUT_MS = 12000;
 
+// Preferência: modelos HARMONIE-AROME (Europa) via Open-Meteo
 const PREFERRED_MODELS = [
   "knmi_harmonie_arome_europe",
   "dmi_harmonie_arome_europe"
@@ -422,6 +423,7 @@ function setSkyFx(code){
   els.skyFx.style.animation = "none";
 }
 
+// ✅ MODO FORÇADO POR NOME DA IMAGEM (conforme a tua lista)
 function tintBackgroundFromImage(path){
   const img = new Image();
   img.crossOrigin = "anonymous";
@@ -439,7 +441,9 @@ function tintBackgroundFromImage(path){
     for (let i=0; i<data.length; i+=4){
       const a = data[i+3];
       if (a < 200) continue;
-      r += data[i]; g += data[i+1]; b += data[i+2];
+      r += data[i];
+      g += data[i+1];
+      b += data[i+2];
       n++;
     }
     if (!n) return;
@@ -453,39 +457,29 @@ function tintBackgroundFromImage(path){
     document.documentElement.style.setProperty("--bg2", `rgb(${r}, ${g}, ${b})`);
     document.documentElement.style.setProperty("--bg3", `rgb(${Math.max(0, r-22)}, ${Math.max(0, g-22)}, ${Math.max(0, b-22)})`);
 
-    // Luminosidade (0..1)
-    const lum = (0.2126*r + 0.7152*g + 0.0722*b) / 255;
+    const isDayImage = path.startsWith("day_");
 
-    // Imagem clara => caixas escuras
-    // Imagem escura => caixas claras
-    const isBright = lum > 0.58;
-
-    if (isBright){
-      // GLASS DARK (caixas mais escuras)
-      document.documentElement.style.setProperty("--cardBg",  "rgba(0,0,0,.42)");
-      document.documentElement.style.setProperty("--cardBg2", "rgba(0,0,0,.30)");
-      document.documentElement.style.setProperty("--pillBg",  "rgba(0,0,0,.22)");
-      document.documentElement.style.setProperty("--selectBg","rgba(0,0,0,.22)");
-      document.documentElement.style.setProperty("--stickyBg","rgba(0,0,0,.58)");
+    if (isDayImage){
+      // 🌤️ DIA → Modo Escuro (caixas escuras) + texto cinzento escuro
+      document.documentElement.style.setProperty("--cardBg",  "rgba(0,0,0,.65)");
+      document.documentElement.style.setProperty("--cardBg2", "rgba(0,0,0,.50)");
+      document.documentElement.style.setProperty("--pillBg",  "rgba(0,0,0,.35)");
+      document.documentElement.style.setProperty("--selectBg","rgba(0,0,0,.60)");
+      document.documentElement.style.setProperty("--stickyBg","rgba(0,0,0,.75)");
       document.documentElement.style.setProperty("--line",    "rgba(255,255,255,.22)");
-    } else {
-      // GLASS LIGHT (para fundos escuros)
-      document.documentElement.style.setProperty("--cardBg",  "rgba(255,255,255,.22)");
-      document.documentElement.style.setProperty("--cardBg2", "rgba(255,255,255,.12)");
-      document.documentElement.style.setProperty("--pillBg",  "rgba(0,0,0,.10)");
-      document.documentElement.style.setProperty("--selectBg","rgba(255,255,255,.18)");
-      document.documentElement.style.setProperty("--stickyBg","rgba(0,0,0,.34)");
-      document.documentElement.style.setProperty("--line",    "rgba(255,255,255,.26)");
-    }
 
-    // ✅ TEXTO ADAPTATIVO (pedido):
-    // Fundo claro => texto cinzento escuro (não preto)
-    // Fundo escuro => texto branco (como está agora)
-    if (isBright){
       document.documentElement.style.setProperty("--text", "rgba(20,20,20,.92)");
       document.documentElement.style.setProperty("--muted","rgba(20,20,20,.68)");
       document.documentElement.style.setProperty("--textShadow","0 2px 8px rgba(255,255,255,.25)");
     } else {
+      // 🌙 NOITE → Modo Claro (caixas claras) + texto branco
+      document.documentElement.style.setProperty("--cardBg",  "rgba(255,255,255,.45)");
+      document.documentElement.style.setProperty("--cardBg2", "rgba(255,255,255,.30)");
+      document.documentElement.style.setProperty("--pillBg",  "rgba(0,0,0,.18)");
+      document.documentElement.style.setProperty("--selectBg","rgba(255,255,255,.50)");
+      document.documentElement.style.setProperty("--stickyBg","rgba(0,0,0,.55)");
+      document.documentElement.style.setProperty("--line",    "rgba(255,255,255,.26)");
+
       document.documentElement.style.setProperty("--text", "#ffffff");
       document.documentElement.style.setProperty("--muted","rgba(255,255,255,.82)");
       document.documentElement.style.setProperty("--textShadow","0 2px 8px rgba(0,0,0,.45)");
@@ -523,6 +517,7 @@ function renderAll(data, sourceName, locName){
   setText(els.heroLoc, locName);
   setText(els.heroTemp, `${Math.round(temp)}°`);
   setText(els.heroMeta, `Sensação: ${Math.round(feels ?? temp)}° · Máx: ${Math.round(max)}° · Mín: ${Math.round(min)}°`);
+
   const { sunriseStr, sunsetStr } = getSunTimes(data);
   setText(els.heroSun, `Nascer: ${sunriseStr} · Pôr: ${sunsetStr}`);
 
@@ -532,7 +527,7 @@ function renderAll(data, sourceName, locName){
   setText(els.nowRain, fmtMm(prcp));
   setText(els.nowPop, fmtPct(pop));
 
-  // BÚSSOLA: centrado (atravessa o círculo) + mantém lógica anterior (+180)
+  // ✅ Bússola: ponteiro centrado (atravessa o círculo) + mantém lógica anterior (+180)
   if (els.dirNeedle){
     els.dirNeedle.style.transform = `translate(-50%, -50%) rotate(${(dir + 180) % 360}deg)`;
   }
