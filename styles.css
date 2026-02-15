@@ -22,6 +22,11 @@
   --bg3: #2f6f98;
 
   --sky-height: 420px;
+
+  /* Bússola (JS ajusta no modo dia/noite) */
+  --needleStrong: rgba(255,255,255,.95);
+  --needleMid: rgba(255,255,255,.35);
+  --needleDot: rgba(255,255,255,.92);
 }
 
 *{box-sizing:border-box}
@@ -271,9 +276,9 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
 
   background: linear-gradient(
     180deg,
-    rgba(255,255,255,.95) 0%,
-    rgba(255,255,255,.35) 50%,
-    rgba(255,255,255,.95) 100%
+    var(--needleStrong, rgba(255,255,255,.95)) 0%,
+    var(--needleMid, rgba(255,255,255,.35)) 50%,
+    var(--needleStrong, rgba(255,255,255,.95)) 100%
   );
 }
 
@@ -288,7 +293,7 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
   height:0;
   border-left:7px solid transparent;
   border-right:7px solid transparent;
-  border-bottom:12px solid rgba(255,255,255,.95);
+  border-bottom:12px solid var(--needleStrong, rgba(255,255,255,.95));
   filter: drop-shadow(0 6px 10px rgba(0,0,0,.25));
 }
 
@@ -299,7 +304,7 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
   width:10px;
   height:10px;
   border-radius:999px;
-  background: rgba(255,255,255,.92);
+  background: var(--needleDot, rgba(255,255,255,.92));
   transform: translate(-50%, -50%);
   box-shadow: 0 8px 16px rgba(0,0,0,.25);
 }
@@ -350,7 +355,7 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
   font-weight:500;
   text-align:left;
   line-height:1.35;
-  color: rgba(255,255,255,.92);
+  color: var(--text);
   text-shadow: var(--textShadow);
 }
 
@@ -379,7 +384,7 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
 }
 .tbl th, .tbl td{
   padding:10px 10px;
-  border-bottom:1px solid rgba(255,255,255,.14);
+  border-bottom:1px solid var(--line);
   text-align:left;
   white-space:nowrap;
   text-shadow: var(--textShadow);
