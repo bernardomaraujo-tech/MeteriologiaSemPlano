@@ -418,124 +418,151 @@ function iconForWeatherCode(code, isDay){
   if (code === 1) return isDay ? "🌤️" : "🌙☁️";
   if (code === 2) return "⛅";
   if (code === 3) return "☁️";
+
   if (code === 45 || code === 48) return "🌫️";
+
   if (code === 51 || code === 53 || code === 55) return "🌦️";
   if (code === 56 || code === 57) return "🌧️";
+
   if (code === 61 || code === 63 || code === 65) return "🌧️";
-  if (code === 71 || code === 73 || code === 75 || code === 77) return "❄️";
+  if (code === 66 || code === 67) return "🌧️";
   if (code === 80 || code === 81 || code === 82) return "🌧️";
-  if (code === 95 || code === 96 || code === 99) return "⛈️";
-  return "•";
-}
 
-function renderAlerts(data){
-  const t = data.hourly.time;
-  const start = nearestHourIndex(t);
-  const next2 = [start, start+1].filter(x => x < t.length);
+  if (code === 71 || code === 73 || code === 75) return "🌨️";
+  if (code === 77) return "🌨️";
+  if (code === 85 || code === 86) return "🌨️";
 
-  const pops  = data.hourly.precipitation_probability ?? Array(t.length).fill(0);
-  const prcps = data.hourly.precipitation ?? Array(t.length).fill(0);
-  const gusts = data.hourly.wind_gusts_10m ?? Array(t.length).fill(0);
+  if (code === 95) return "⛈️";
+  if (code === 96 || code === 99) return "⛈️";
 
-  const anyRainSoon = next2.some(k => (pops[k] ?? 0) >= 60 || (prcps[k] ?? 0) >= 0.4);
-  const anyGustSoon = next2.some(k => (gusts[k] ?? 0) >= 45);
-
-  const pills = [];
-  if (anyRainSoon) pills.push(`<div class="pill">☔ Chuva provável nas próximas 2h</div>`);
-  if (anyGustSoon) pills.push(`<div class="pill">💨 Rajadas fortes nas próximas 2h</div>`);
-  if (!pills.length) pills.push(`<div class="pill">✅ Sem alertas relevantes nas próximas 2h</div>`);
-
-  setHTML(els.alerts, pills.join(""));
-}
-
-function renderTables(data){
-  const t = data.hourly.time;
-  const temp = data.hourly.temperature_2m;
-  const wind = data.hourly.wind_speed_10m;
-  const gust = data.hourly.wind_gusts_10m;
-  const dir  = data.hourly.wind_direction_10m;
-  const prcp = data.hourly.precipitation;
-  const pop  = data.hourly.precipitation_probability ?? Array(t.length).fill(null);
-  const wcode = data.hourly.weather_code ?? Array(t.length).fill(null);
-  const isDayArr = data.hourly.is_day ?? Array(t.length).fill(1);
-
-  const start = nearestHourIndex(t);
-
-  const make = (n, tableEl, labelFn) => {
-    const rows = [];
-    rows.push(`<tr>
-      <th>Hora</th>
-      <th class="iconCell"></th>
-      <th>Temp</th>
-      <th>Vento</th>
-      <th>Raj.</th>
-      <th>Dir</th>
-      <th>Chuva</th>
-      <th>Prob.</th>
-    </tr>`);
-
-    for (let i=start; i<Math.min(start+n, t.length); i++){
-      const ico = iconForWeatherCode(wcode[i] ?? -1, (isDayArr[i] ?? 1) === 1);
-      rows.push(`<tr>
-        <td>${labelFn(t[i])}</td>
-        <td class="iconCell"><span class="icon">${ico}</span></td>
-        <td>${Math.round(temp[i])}°</td>
-        <td>${fmtKmh(wind[i])}</td>
-        <td>${fmtKmh(gust[i])}</td>
-        <td>${windDirText(dir[i]).split(" ")[0]}</td>
-        <td>${fmtMm(prcp[i] ?? 0)}</td>
-        <td>${pop[i] == null ? "—" : fmtPct(pop[i])}</td>
-      </tr>`);
-    }
-
-    tableEl.innerHTML = rows.join("");
-  };
-
-  make(8,  els.table8,  (iso) => hourLabel(iso));
-  make(48, els.table48, (iso) => weekdayHourLabel(iso));
-}
-
-function updateWindyCam(lat, lon){
-  const el = document.getElementById("windyCam");
-  if (el){
-    el.setAttribute("data-params", JSON.stringify({ lat, lon, radius: 15, limit: 1 }));
-    el.innerHTML = "";
-    if (window.WindyWebcamsWidget?.reload) window.WindyWebcamsWidget.reload();
-  }
-  if (els.windyLink){
-    els.windyLink.href = `https://www.windy.com/webcams?${lat},${lon},12`;
-  }
-}
-
-function updateSkyHeight(){
-  const vh = Math.round(window.visualViewport?.height ?? window.innerHeight);
-  document.documentElement.style.setProperty("--sky-height", `${vh}px`);
-}
-
-function applyDayNight(isDay){
-  document.body.classList.toggle("is-day", !!isDay);
-  document.body.classList.toggle("is-night", !isDay);
+  return isDay ? "🌤️" : "🌙";
 }
 
 function skyFileFor(code, isDay){
+  const rainy = [51,53,55,56,57,61,63,65,66,67,80,81,82].includes(code);
   const storm = [95,96,99].includes(code);
-  const rain  = [61,63,65,80,81,82].includes(code);
   const fog   = [45,48].includes(code);
-  const cloud = [2,3].includes(code);
+  const cloudy= [2,3].includes(code);
 
   if (isDay){
     if (storm) return "day_storm.jpg";
-    if (rain)  return "day_rain.jpg";
-    if (fog)   return "day_fog.jpg";
-    if (cloud) return "day_cloudy.jpg";
+    if (rainy) return "day_rain.jpg";
+    if (fog)   return "Day_fog.jpg";
+    if (cloudy) return "day_cloudy.jpg";
     return "day_clear.jpg";
-  } else {
-    if (storm) return "night_storm.jpg";
-    if (rain)  return "night_rain.jpg";
-    if (fog)   return "night_fog.jpg";
-    if (cloud) return "night_cloudy.jpg";
-    return "night_clear.jpg";
   }
+
+  if (storm) return "Night_storm.jpg";
+  if (rainy) return "night_rain.jpg";
+  if (fog)   return "night_fog.jpg";
+  if (cloudy) return "night_cloudy.jpg";
+  return "night_clear.jpg";
+}
+
+function applyDayNight(isDay){
+  document.body.classList.toggle("is-day", isDay);
+  document.body.classList.toggle("is-night", !isDay);
+}
+
+function updateSkyHeight(){
+  // Mantém o céu full-screen (via CSS) — esta função pode evoluir.
+}
+
+function updateWindyCam(lat, lon){
+  if (!els.windyLink) return;
+  const url = `https://www.windy.com/?${lat},${lon},11`;
+  els.windyLink.href = url;
+}
+
+function renderAlerts(_data){
+  // Reservado para alertas futuros (IPMA / MeteoAlarm, etc.)
+  if (!els.alerts) return;
+  els.alerts.innerHTML = "";
+}
+
+function renderTables(data){
+  render8h(data);
+  render48h(data);
+}
+
+function render8h(data){
+  if (!els.table8) return;
+
+  const t = data.hourly.time;
+  const i0 = nearestHourIndex(t);
+  const rows = [];
+
+  for (let i=i0; i<Math.min(i0+8, t.length); i++){
+    const temp = data.hourly.temperature_2m[i];
+    const pop  = data.hourly.precipitation_probability?.[i] ?? 0;
+    const prcp = data.hourly.precipitation?.[i] ?? 0;
+    const wind = data.hourly.wind_speed_10m[i];
+    const code = data.hourly.weather_code?.[i] ?? 0;
+    const isDay = (data.hourly.is_day?.[i] ?? 1) === 1;
+
+    rows.push(`
+      <tr>
+        <td>${hourLabel(t[i])}</td>
+        <td class="iconCell"><span class="icon">${iconForWeatherCode(code, isDay)}</span></td>
+        <td>${Math.round(temp)}°</td>
+        <td>${fmtPct(pop)}</td>
+        <td>${fmtMm(prcp)}</td>
+        <td>${fmtKmh(wind)}</td>
+      </tr>
+    `);
+  }
+
+  els.table8.innerHTML = `
+    <table class="tbl">
+      <thead>
+        <tr>
+          <th>Hora</th><th></th><th>Temp</th><th>Prob.</th><th>Chuva</th><th>Vento</th>
+        </tr>
+      </thead>
+      <tbody>${rows.join("")}</tbody>
+    </table>
+  `;
+}
+
+function render48h(data){
+  if (!els.table48 || !els.wrap48) return;
+
+  const t = data.hourly.time;
+  const i0 = nearestHourIndex(t);
+  const rows = [];
+
+  for (let i=i0; i<Math.min(i0+48, t.length); i++){
+    const temp = data.hourly.temperature_2m[i];
+    const pop  = data.hourly.precipitation_probability?.[i] ?? 0;
+    const prcp = data.hourly.precipitation?.[i] ?? 0;
+    const wind = data.hourly.wind_speed_10m[i];
+    const gust = data.hourly.wind_gusts_10m[i];
+    const code = data.hourly.weather_code?.[i] ?? 0;
+    const isDay = (data.hourly.is_day?.[i] ?? 1) === 1;
+
+    rows.push(`
+      <tr>
+        <td>${weekdayHourLabel(t[i])}</td>
+        <td class="iconCell"><span class="icon">${iconForWeatherCode(code, isDay)}</span></td>
+        <td>${Math.round(temp)}°</td>
+        <td>${fmtPct(pop)}</td>
+        <td>${fmtMm(prcp)}</td>
+        <td>${fmtKmh(wind)}</td>
+        <td>${fmtKmh(gust)}</td>
+      </tr>
+    `);
+  }
+
+  els.table48.innerHTML = `
+    <table class="tbl">
+      <thead>
+        <tr>
+          <th>Dia/Hora</th><th></th><th>Temp</th><th>Prob.</th><th>Chuva</th><th>Vento</th><th>Rajadas</th>
+        </tr>
+      </thead>
+      <tbody>${rows.join("")}</tbody>
+    </table>
+  `;
 }
 
 function setSkyFx(code){
@@ -601,17 +628,24 @@ function tintBackgroundFromImage(path){
     const isDayImage = path.startsWith("day_");
 
     if (isDayImage){
-      document.documentElement.style.setProperty("--cardBg",  "rgba(0,0,0,.65)");
-      document.documentElement.style.setProperty("--cardBg2", "rgba(0,0,0,.50)");
-      document.documentElement.style.setProperty("--pillBg",  "rgba(0,0,0,.35)");
-      document.documentElement.style.setProperty("--selectBg","rgba(0,0,0,.60)");
-      document.documentElement.style.setProperty("--stickyBg","rgba(0,0,0,.75)");
-      document.documentElement.style.setProperty("--line",    "rgba(255,255,255,.22)");
+      // DIA → cartões claros (glass) + texto escuro consistente
+      document.documentElement.style.setProperty("--cardBg",  "rgba(255,255,255,.55)");
+      document.documentElement.style.setProperty("--cardBg2", "rgba(255,255,255,.35)");
+      document.documentElement.style.setProperty("--pillBg",  "rgba(255,255,255,.28)");
+      document.documentElement.style.setProperty("--selectBg","rgba(255,255,255,.75)");
+      document.documentElement.style.setProperty("--stickyBg","rgba(255,255,255,.70)");
+      document.documentElement.style.setProperty("--line",    "rgba(0,0,0,.12)");
 
       document.documentElement.style.setProperty("--text", "rgba(20,20,20,.92)");
-      document.documentElement.style.setProperty("--muted","rgba(20,20,20,.68)");
-      document.documentElement.style.setProperty("--textShadow","0 2px 8px rgba(255,255,255,.25)");
+      document.documentElement.style.setProperty("--muted","rgba(20,20,20,.65)");
+      document.documentElement.style.setProperty("--textShadow","0 2px 6px rgba(255,255,255,.35)");
+
+      // Bússola (dia): ponteiro mais forte, letras mais suaves (via --muted)
+      document.documentElement.style.setProperty("--needleStrong","rgba(0,0,0,.85)");
+      document.documentElement.style.setProperty("--needleMid","rgba(0,0,0,.55)");
+      document.documentElement.style.setProperty("--needleDot","rgba(0,0,0,.85)");
     } else {
+      // NOITE → mantém como está no teu layout atual (não alterar o aspeto)
       document.documentElement.style.setProperty("--cardBg",  "rgba(255,255,255,.45)");
       document.documentElement.style.setProperty("--cardBg2", "rgba(255,255,255,.30)");
       document.documentElement.style.setProperty("--pillBg",  "rgba(0,0,0,.18)");
@@ -622,6 +656,11 @@ function tintBackgroundFromImage(path){
       document.documentElement.style.setProperty("--text", "#ffffff");
       document.documentElement.style.setProperty("--muted","rgba(255,255,255,.82)");
       document.documentElement.style.setProperty("--textShadow","0 2px 8px rgba(0,0,0,.45)");
+
+      // Bússola (noite): mantém como está (branco)
+      document.documentElement.style.setProperty("--needleStrong","rgba(255,255,255,.95)");
+      document.documentElement.style.setProperty("--needleMid","rgba(255,255,255,.35)");
+      document.documentElement.style.setProperty("--needleDot","rgba(255,255,255,.92)");
     }
   };
 }
@@ -717,37 +756,22 @@ async function refresh(){
 function init(){
   if (!els.select || !els.updated) return;
 
-  const alc = LOCATIONS.find(l => l.id === "alcabideche");
-  const rest = LOCATIONS
-    .filter(l => l.id !== "alcabideche")
-    .slice()
-    .sort((a,b) => a.name.localeCompare(b.name, "pt-PT", { sensitivity:"base" }));
-  const ordered = [alc, ...rest].filter(Boolean);
-
-  els.select.innerHTML = "";
-  for (const l of ordered){
-    const opt = document.createElement("option");
-    opt.value = l.id;
-    opt.textContent = l.name;
-    els.select.appendChild(opt);
-  }
-
+  // popular select
+  els.select.innerHTML = LOCATIONS.map(l => `<option value="${l.id}">${l.name}</option>`).join("");
   els.select.value = "alcabideche";
-  els.select.addEventListener("change", refresh);
 
+  // toggle 48h
   if (els.toggle48 && els.wrap48){
     els.toggle48.addEventListener("click", () => {
-      const willShow = els.wrap48.classList.contains("hidden");
-      els.wrap48.classList.toggle("hidden", !willShow);
-      els.toggle48.textContent = willShow ? "Esconder" : "Mostrar";
+      const hidden = els.wrap48.classList.toggle("hidden");
+      els.toggle48.textContent = hidden ? "Mostrar 48h" : "Ocultar 48h";
     });
   }
 
-  updateSkyHeight();
-  window.addEventListener("resize", updateSkyHeight);
+  els.select.addEventListener("change", () => refresh());
 
   refresh();
   setInterval(refresh, REFRESH_MS);
 }
 
-init();
+window.addEventListener("DOMContentLoaded", init);
