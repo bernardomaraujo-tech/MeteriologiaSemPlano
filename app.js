@@ -628,19 +628,19 @@ function tintBackgroundFromImage(path){
     const isDayImage = path.startsWith("day_");
 
     if (isDayImage){
-      // DIA → cartões claros (glass) + texto escuro consistente
+      // DIA → mantém cartões claros, mas texto sempre branco com sombra forte (definida no CSS)
       document.documentElement.style.setProperty("--cardBg",  "rgba(255,255,255,.55)");
       document.documentElement.style.setProperty("--cardBg2", "rgba(255,255,255,.35)");
       document.documentElement.style.setProperty("--pillBg",  "rgba(255,255,255,.28)");
       document.documentElement.style.setProperty("--selectBg","rgba(255,255,255,.75)");
       document.documentElement.style.setProperty("--stickyBg","rgba(255,255,255,.70)");
-      document.documentElement.style.setProperty("--line",    "rgba(0,0,0,.12)");
+      document.documentElement.style.setProperty("--line",    "rgba(255,255,255,.25)");
 
-      document.documentElement.style.setProperty("--text", "rgba(20,20,20,.92)");
-      document.documentElement.style.setProperty("--muted","rgba(20,20,20,.65)");
-      document.documentElement.style.setProperty("--textShadow","0 2px 6px rgba(255,255,255,.35)");
+      // Texto sempre branco (dia/noite)
+      document.documentElement.style.setProperty("--text", "#ffffff");
+      document.documentElement.style.setProperty("--muted","rgba(255,255,255,.92)");
 
-      // Bússola (dia): ponteiro mais forte, letras mais suaves (via --muted)
+      // Bússola (dia): ponteiro mais forte para se distinguir das letras
       document.documentElement.style.setProperty("--needleStrong","rgba(0,0,0,.85)");
       document.documentElement.style.setProperty("--needleMid","rgba(0,0,0,.55)");
       document.documentElement.style.setProperty("--needleDot","rgba(0,0,0,.85)");
