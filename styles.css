@@ -1,11 +1,18 @@
 /* styles.css */
 :root{
   --text:#ffffff;
-  --muted: rgba(255,255,255,.82);
-  --textShadow: 0 2px 8px rgba(0,0,0,.45);
+  --muted: rgba(255,255,255,.92);
+
+  /* sombra profunda + volume */
+  --textShadow:
+    0 1px 0 rgba(0,0,0,.6),
+    0 2px 0 rgba(0,0,0,.55),
+    0 3px 0 rgba(0,0,0,.45),
+    0 4px 8px rgba(0,0,0,.55),
+    0 8px 22px rgba(0,0,0,.45);
 
   /* Bordas */
-  --line: rgba(255,255,255,.22);
+  --line: rgba(255,255,255,.25);
 
   /* Fundos glass (JS ajusta por imagem) */
   --cardBg:  rgba(255,255,255,.45);
@@ -39,6 +46,33 @@ body{
   background: var(--bg1);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== FORÇAR TEXTO BRANCO GLOBAL (MODO DIA/NOITE) ===== */
+body,
+.card,
+.select,
+.btn,
+.tbl,
+.k,
+.v,
+.best,
+.muted,
+.pill,
+.pillLabel,
+.pillValue,
+.cardTitle,
+.dressTitle,
+.heroLoc,
+.heroTemp,
+.heroMeta,
+.heroSun,
+.updated,
+.compassLabel,
+.dirTitle,
+.camLink {
+  color: #ffffff !important;
+  text-shadow: var(--textShadow);
 }
 
 /* FUNDO BASE */
@@ -148,7 +182,21 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
 
 .hero{ width:100%; text-align:center; padding: 6px 0 2px; }
 .heroLoc{ font-size:22px; font-weight:650; letter-spacing:.2px; opacity:.95; text-shadow: var(--textShadow); }
-.heroTemp{ font-size:78px; font-weight:700; line-height:1; margin-top:4px; text-shadow: var(--textShadow); }
+
+.heroTemp{
+  font-size:78px;
+  font-weight:800;
+  line-height:1;
+  margin-top:4px;
+  letter-spacing:.5px;
+  text-shadow:
+    0 2px 0 rgba(0,0,0,.65),
+    0 4px 0 rgba(0,0,0,.55),
+    0 6px 0 rgba(0,0,0,.45),
+    0 8px 16px rgba(0,0,0,.6),
+    0 18px 40px rgba(0,0,0,.45);
+}
+
 .heroMeta{ font-size:14px; color:var(--muted); margin-top:4px; text-shadow: var(--textShadow); }
 .heroSun{ font-size:13px; color:var(--muted); margin-top:4px; opacity:.95; text-shadow: var(--textShadow); }
 
@@ -250,13 +298,19 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 }
+
 .compassLabel{
   position:absolute;
   font-size:11px;
-  color:var(--muted);
+  font-weight:600;
+  color:#ffffff;
   transform: translate(-50%, -50%);
-  text-shadow: var(--textShadow);
+  text-shadow:
+    0 1px 0 rgba(0,0,0,.7),
+    0 2px 4px rgba(0,0,0,.6),
+    0 6px 12px rgba(0,0,0,.4);
 }
+
 .compassLabel.n{ left:50%; top:10%; }
 .compassLabel.e{ left:90%; top:50%; }
 .compassLabel.s{ left:50%; top:90%; }
@@ -391,8 +445,9 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
 }
 .tbl th{
   font-size:12px;
-  color:var(--muted);
-  font-weight:650;
+  font-weight:700;
+  color:#ffffff;
+  text-shadow: var(--textShadow);
 }
 .iconCell{ width:28px; }
 .icon{ font-size:16px; }
