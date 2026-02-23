@@ -263,14 +263,34 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
   position:absolute;
   left:50%;
   top:50%;
+
   width:4px;
-  height:52px;
-  border-radius:8px;
+  height:58px;
+  border-radius:999px;
+
+  /* linha clean */
   background: linear-gradient(180deg, var(--needleStrong), var(--needleMid));
-  transform-origin: 50% 85%;
-  box-shadow: 0 10px 22px rgba(0,0,0,.22);
-  transform: translate(-50%, -50%) rotate(180deg);
+
+  /* IMPORTANTE: sem transform default aqui (o JS é que roda) */
+  transform-origin: 50% 88%;
+  box-shadow: 0 10px 22px rgba(0,0,0,.18);
 }
+
+/* ponta tipo seta (muito subtil, iOS-like) */
+.needle::after{
+  content:"";
+  position:absolute;
+  top:-10px;
+  left:50%;
+  transform:translateX(-50%);
+  width:0;
+  height:0;
+  border-left:6px solid transparent;
+  border-right:6px solid transparent;
+  border-bottom:10px solid var(--needleStrong);
+  opacity:.85;
+}
+
 .needleDot{
   position:absolute;
   left:50%;
@@ -280,7 +300,12 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
   border-radius:999px;
   background: var(--needleDot);
   transform: translate(-50%, -50%);
-  box-shadow: 0 8px 18px rgba(0,0,0,.25);
+  box-shadow: 0 8px 18px rgba(0,0,0,.18);
+}
+
+/* ===== Best window: permitir \n (duas linhas) ===== */
+.best{
+  white-space: pre-line;
 }
 
 /* DRESS */
