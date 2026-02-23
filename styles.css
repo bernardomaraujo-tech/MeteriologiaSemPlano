@@ -3,7 +3,7 @@
   --text:#ffffff;
   --muted: rgba(255,255,255,.92);
 
-  /* sombra profunda + volume */
+  /* sombra profunda + volume (NOITE por defeito; JS ajusta no DIA) */
   --textShadow:
     0 1px 0 rgba(0,0,0,.6),
     0 2px 0 rgba(0,0,0,.55),
@@ -48,8 +48,7 @@ body{
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ===== FORÇAR TEXTO BRANCO GLOBAL (MODO DIA/NOITE) ===== */
-body,
+/* ===== TIPOGRAFIA GLOBAL (agora controlada por variáveis) ===== */
 .card,
 .select,
 .btn,
@@ -70,8 +69,8 @@ body,
 .updated,
 .compassLabel,
 .dirTitle,
-.camLink {
-  color: #ffffff !important;
+.camLink{
+  color: var(--text);
   text-shadow: var(--textShadow);
 }
 
@@ -181,7 +180,7 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
 .logo{ height:62px; width:auto; display:block; }
 
 .hero{ width:100%; text-align:center; padding: 6px 0 2px; }
-.heroLoc{ font-size:22px; font-weight:650; letter-spacing:.2px; opacity:.95; text-shadow: var(--textShadow); }
+.heroLoc{ font-size:22px; font-weight:650; letter-spacing:.2px; opacity:.95; }
 
 .heroTemp{
   font-size:78px;
@@ -189,18 +188,12 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
   line-height:1;
   margin-top:4px;
   letter-spacing:.5px;
-  text-shadow:
-    0 2px 0 rgba(0,0,0,.65),
-    0 4px 0 rgba(0,0,0,.55),
-    0 6px 0 rgba(0,0,0,.45),
-    0 8px 16px rgba(0,0,0,.6),
-    0 18px 40px rgba(0,0,0,.45);
 }
 
-.heroMeta{ font-size:14px; color:var(--muted); margin-top:4px; text-shadow: var(--textShadow); }
-.heroSun{ font-size:13px; color:var(--muted); margin-top:4px; opacity:.95; text-shadow: var(--textShadow); }
+.heroMeta{ font-size:14px; color:var(--muted); margin-top:4px; }
+.heroSun{ font-size:13px; color:var(--muted); margin-top:4px; opacity:.95; }
 
-.updated{ font-size:12px; color:var(--muted); text-shadow: var(--textShadow); }
+.updated{ font-size:12px; color:var(--muted); }
 
 .controls{ width:100%; }
 
@@ -236,7 +229,6 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
   color:var(--muted);
   margin-bottom:10px;
   letter-spacing:.2px;
-  text-shadow: var(--textShadow);
 }
 
 .row{ display:flex; align-items:center; justify-content:space-between; gap:10px; }
@@ -255,8 +247,8 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
 
 .hidden{ display:none; }
 .small{ font-size:12px; }
-.best{ font-size:15px; line-height:1.35; white-space:pre-line; text-shadow: var(--textShadow); }
-.muted{ color:var(--muted); text-shadow: var(--textShadow); }
+.best{ font-size:15px; line-height:1.35; white-space:pre-line; }
+.muted{ color:var(--muted); }
 
 /* AGORA */
 .nowLayout{
@@ -271,8 +263,8 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
   gap:10px 10px;
   align-items:center;
 }
-.k{ color:var(--muted); font-size:13px; text-shadow: var(--textShadow); }
-.v{ font-size:14px; font-weight:600; text-shadow: var(--textShadow); }
+.k{ color:var(--muted); font-size:13px; }
+.v{ font-size:14px; font-weight:600; }
 
 .dirCard{
   border:1px solid var(--line);
@@ -282,7 +274,7 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 }
-.dirTitle{ font-size:12px; color:var(--muted); margin-bottom:8px; text-align:center; text-shadow: var(--textShadow); }
+.dirTitle{ font-size:12px; color:var(--muted); margin-bottom:8px; text-align:center; }
 
 .compass{
   position:relative;
@@ -303,12 +295,9 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
   position:absolute;
   font-size:11px;
   font-weight:600;
-  color:#ffffff;
+  color:var(--text);
   transform: translate(-50%, -50%);
-  text-shadow:
-    0 1px 0 rgba(0,0,0,.7),
-    0 2px 4px rgba(0,0,0,.6),
-    0 6px 12px rgba(0,0,0,.4);
+  text-shadow: var(--textShadow);
 }
 
 .compassLabel.n{ left:50%; top:10%; }
@@ -369,7 +358,6 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
   color:var(--muted);
   margin-bottom:10px;
   letter-spacing:.2px;
-  text-shadow: var(--textShadow);
 }
 .dressGrid{
   display:grid;
@@ -399,7 +387,6 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
   text-underline-offset: 4px;
   text-decoration-thickness: 2px;
   white-space:nowrap;
-  text-shadow: var(--textShadow);
 }
 
 .pillValue{
@@ -410,7 +397,6 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
   text-align:left;
   line-height:1.35;
   color: var(--text);
-  text-shadow: var(--textShadow);
 }
 
 /* ALERTAS */
@@ -426,7 +412,6 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
   font-size:12px;
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  text-shadow: var(--textShadow);
 }
 
 /* TABELAS */
@@ -441,13 +426,11 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
   border-bottom:1px solid var(--line);
   text-align:left;
   white-space:nowrap;
-  text-shadow: var(--textShadow);
 }
 .tbl th{
   font-size:12px;
   font-weight:700;
-  color:#ffffff;
-  text-shadow: var(--textShadow);
+  color:var(--text);
 }
 .iconCell{ width:28px; }
 .icon{ font-size:16px; }
@@ -461,7 +444,7 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 }
-.camLink{ color:var(--text); text-decoration:underline; text-shadow: var(--textShadow); }
+.camLink{ color:var(--text); text-decoration:underline; }
 
 /* Pequenos ajustes mobile */
 @media (max-width: 380px){
