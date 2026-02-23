@@ -1,9 +1,7 @@
-/* styles.css */
 :root{
   --text:#ffffff;
   --muted: rgba(255,255,255,.92);
 
-  /* sombra profunda + volume (NOITE por defeito; JS ajusta no DIA) */
   --textShadow:
     0 1px 0 rgba(0,0,0,.6),
     0 2px 0 rgba(0,0,0,.55),
@@ -11,10 +9,8 @@
     0 4px 8px rgba(0,0,0,.55),
     0 8px 22px rgba(0,0,0,.45);
 
-  /* Bordas */
   --line: rgba(255,255,255,.25);
 
-  /* Fundos glass (JS ajusta por imagem) */
   --cardBg:  rgba(255,255,255,.45);
   --cardBg2: rgba(255,255,255,.30);
   --pillBg:  rgba(0,0,0,.18);
@@ -23,14 +19,10 @@
 
   --shadow: 0 18px 44px rgba(0,0,0,.22);
 
-  /* Cores do fundo (JS ajusta a partir da imagem) */
   --bg1: #6fa7c6;
   --bg2: #4e8fb6;
   --bg3: #2f6f98;
 
-  --sky-height: 420px;
-
-  /* Bússola (JS ajusta no modo dia/noite) */
   --needleStrong: rgba(255,255,255,.95);
   --needleMid: rgba(255,255,255,.35);
   --needleDot: rgba(255,255,255,.92);
@@ -41,40 +33,16 @@ html,body{height:100%}
 
 body{
   margin:0;
-  font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+  font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
   color:var(--text);
   background: var(--bg1);
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-/* ===== TIPOGRAFIA GLOBAL (agora controlada por variáveis) ===== */
-.card,
-.select,
-.btn,
-.tbl,
-.k,
-.v,
-.best,
-.muted,
-.pill,
-.pillLabel,
-.pillValue,
-.cardTitle,
-.dressTitle,
-.heroLoc,
-.heroTemp,
-.heroMeta,
-.heroSun,
-.updated,
-.compassLabel,
-.dirTitle,
-.camLink{
-  color: var(--text);
-  text-shadow: var(--textShadow);
-}
+/* =========================
+   FUNDO
+   ========================= */
 
-/* FUNDO BASE */
 .bg{
   position:fixed;
   inset:0;
@@ -82,87 +50,43 @@ body{
     radial-gradient(1200px 700px at 50% -10%, rgba(255,255,255,.22), rgba(255,255,255,0) 55%),
     radial-gradient(900px 600px at 15% 20%, rgba(255,255,255,.14), rgba(255,255,255,0) 60%),
     linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 35%, var(--bg3) 100%);
-  filter:saturate(1.05);
   z-index:-2;
 }
 
 /* =========================
-   CÉU REAL (IMAGEM)
+   MODO DIA — iOS CLEAN
    ========================= */
-.skyReal{
-  position: fixed;
-  inset: 0;
-  height: 100vh;
-  height: 100dvh;
-  z-index: -1;
-  pointer-events: none;
-  overflow: hidden;
+
+body.is-day{
+  --text: #1C1C1E;
+  --muted: rgba(60,60,67,.72);
+  --line: rgba(0,0,0,.08);
+
+  --cardBg: rgba(255,255,255,.95);
+  --cardBg2: rgba(255,255,255,.92);
+  --selectBg: rgba(255,255,255,.95);
+  --pillBg: rgba(0,0,0,.05);
+  --stickyBg: rgba(255,255,255,.92);
+
+  --shadow: 0 10px 30px rgba(0,0,0,.10);
+
+  --needleStrong: rgba(0,0,0,.75);
+  --needleMid: rgba(0,0,0,.25);
+  --needleDot: rgba(0,0,0,.65);
+
+  color: var(--text);
 }
 
-.skyImg{
-  position:absolute;
-  inset:0;
-  background-size: cover;
-  background-position: center;
-  transform: scale(1.06);
-  animation: skyBreath 44s ease-in-out infinite;
-  will-change: transform, filter;
+/* Remove QUALQUER sombra de texto no modo dia */
+body.is-day,
+body.is-day *{
+  text-shadow: none !important;
 }
 
-.skyClouds{
-  position:absolute;
-  inset:-20%;
-  background:
-    radial-gradient(closest-side at 20% 40%, rgba(255,255,255,.18), rgba(255,255,255,0) 70%),
-    radial-gradient(closest-side at 60% 30%, rgba(255,255,255,.14), rgba(255,255,255,0) 72%),
-    radial-gradient(closest-side at 85% 45%, rgba(255,255,255,.16), rgba(255,255,255,0) 70%);
-  filter: blur(10px);
-  opacity:.42;
-  animation: cloudsDrift 34s linear infinite;
-  will-change: transform;
-}
+/* =========================
+   LAYOUT
+   ========================= */
 
-.skyFx{
-  position:absolute;
-  inset:0;
-  opacity:0;
-  background:none;
-  animation:none;
-  will-change: transform, opacity;
-}
-
-.skyFade{
-  position:absolute;
-  left:0; right:0; bottom:0;
-  height: 46%;
-  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.10) 35%, rgba(0,0,0,.18) 100%);
-  mix-blend-mode: multiply;
-  opacity: .85;
-}
-
-body.is-night .skyImg{ filter: brightness(.78) contrast(1.05) saturate(.95); }
-body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
-
-@keyframes skyBreath{
-  0%{ transform: scale(1.06) translateY(0); }
-  50%{ transform: scale(1.09) translateY(-1.2%); }
-  100%{ transform: scale(1.06) translateY(0); }
-}
-@keyframes cloudsDrift{
-  0%{ transform: translate3d(-2%, 0, 0) scale(1.02); }
-  100%{ transform: translate3d(2%, 0, 0) scale(1.02); }
-}
-@keyframes rainMove{
-  0%{ transform: translate3d(-2%, -3%, 0); }
-  100%{ transform: translate3d(2%, 3%, 0); }
-}
-@media (prefers-reduced-motion: reduce){
-  .skyImg, .skyClouds, .skyFx{ animation:none !important; }
-}
-
-/* -------------------------
-   UI
-   ------------------------- */
 .phone{
   max-width:430px;
   margin:0 auto;
@@ -177,277 +101,121 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
   padding:8px 0 12px;
 }
 
-.logo{ height:62px; width:auto; display:block; }
+.logo{ height:62px; }
 
-.hero{ width:100%; text-align:center; padding: 6px 0 2px; }
-.heroLoc{ font-size:22px; font-weight:650; letter-spacing:.2px; opacity:.95; }
+.hero{text-align:center;}
+
+.heroLoc{
+  font-size:22px;
+  font-weight:600;
+}
 
 .heroTemp{
   font-size:78px;
   font-weight:800;
   line-height:1;
   margin-top:4px;
-  letter-spacing:.5px;
 }
 
-.heroMeta{ font-size:14px; color:var(--muted); margin-top:4px; }
-.heroSun{ font-size:13px; color:var(--muted); margin-top:4px; opacity:.95; }
+.heroMeta,
+.heroSun,
+.updated{
+  font-size:13px;
+  color:var(--muted);
+}
 
-.updated{ font-size:12px; color:var(--muted); }
+/* =========================
+   CARTÕES
+   ========================= */
 
-.controls{ width:100%; }
+.card{
+  margin-top:12px;
+  padding:14px;
+  border-radius:20px;
+  border:1px solid var(--line);
+  background: var(--cardBg);
+  box-shadow: var(--shadow);
+}
+
+.cardTitle{
+  font-size:13px;
+  font-weight:700;
+  margin-bottom:10px;
+}
 
 .select{
   width:100%;
-  padding:12px 12px;
+  padding:12px;
   border-radius:16px;
   border:1px solid var(--line);
   background: var(--selectBg);
   color: var(--text);
   font-size:14px;
-  outline:none;
-  -webkit-appearance:none;
-  appearance:none;
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  box-shadow: var(--shadow);
 }
 
-.stack{ display:flex; flex-direction:column; gap:12px; }
-.card{ border-radius:20px; padding:14px; }
-
-.glass{
-  background: linear-gradient(180deg, var(--cardBg), var(--cardBg2));
+.tbl{
+  width:100%;
+  border-collapse: collapse;
+  border-radius:14px;
+  overflow:hidden;
   border:1px solid var(--line);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  background: var(--cardBg2);
 }
 
-.cardTitle{
+.tbl th,
+.tbl td{
+  padding:10px;
   font-size:13px;
-  color:var(--muted);
-  margin-bottom:10px;
-  letter-spacing:.2px;
+  border-bottom:1px solid rgba(0,0,0,.06);
 }
-
-.row{ display:flex; align-items:center; justify-content:space-between; gap:10px; }
 
 .btn{
+  margin-top:10px;
+  width:100%;
+  padding:12px;
+  border-radius:16px;
   border:1px solid var(--line);
-  background: rgba(255,255,255,.18);
+  background: var(--stickyBg);
   color: var(--text);
-  border-radius:999px;
-  padding:8px 10px;
-  font-size:13px;
+  font-weight:600;
+  cursor:pointer;
   box-shadow: var(--shadow);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
 }
 
-.hidden{ display:none; }
-.small{ font-size:12px; }
-.best{ font-size:15px; line-height:1.35; white-space:pre-line; }
-.muted{ color:var(--muted); }
-
-/* AGORA */
-.nowLayout{
-  display:grid;
-  grid-template-columns: 1fr 130px;
-  gap:12px;
-  align-items:center;
-}
-.kv{
-  display:grid;
-  grid-template-columns: 108px auto;
-  gap:10px 10px;
-  align-items:center;
-}
-.k{ color:var(--muted); font-size:13px; }
-.v{ font-size:14px; font-weight:600; }
-
-.dirCard{
-  border:1px solid var(--line);
-  border-radius:18px;
-  padding:10px;
-  background: rgba(255,255,255,.10);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-}
-.dirTitle{ font-size:12px; color:var(--muted); margin-bottom:8px; text-align:center; }
+/* =========================
+   BÚSSOLA
+   ========================= */
 
 .compass{
   position:relative;
-  width:110px;
-  height:110px;
-  margin:0 auto;
-}
-.compassRing{
-  position:absolute; inset:0;
+  width:130px;
+  height:130px;
   border-radius:999px;
   border:1px solid var(--line);
-  background: radial-gradient(circle at 50% 50%, rgba(255,255,255,.16), rgba(255,255,255,.06) 65%, rgba(0,0,0,.14));
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  background: rgba(255,255,255,.10);
+  box-shadow: var(--shadow);
 }
 
-.compassLabel{
+.compassNeedle{
   position:absolute;
-  font-size:11px;
-  font-weight:600;
-  color:var(--text);
-  transform: translate(-50%, -50%);
-  text-shadow: var(--textShadow);
+  width:4px;
+  height:52px;
+  border-radius:8px;
+  background: linear-gradient(180deg, var(--needleStrong), var(--needleMid));
 }
 
-.compassLabel.n{ left:50%; top:10%; }
-.compassLabel.e{ left:90%; top:50%; }
-.compassLabel.s{ left:50%; top:90%; }
-.compassLabel.w{ left:10%; top:50%; }
-
-/* Ponteiro (atravessa o círculo) + ponta */
-.needle{
+.compassDot{
   position:absolute;
-  left:50%;
-  top:50%;
-  width:3px;
-  height:92px;
-  border-radius:999px;
-  transform-origin: 50% 50%;
-  transform: translate(-50%, -50%) rotate(0deg);
-  box-shadow: 0 10px 18px rgba(0,0,0,.25);
-
-  background: linear-gradient(
-    180deg,
-    var(--needleStrong, rgba(255,255,255,.95)) 0%,
-    var(--needleMid, rgba(255,255,255,.35)) 50%,
-    var(--needleStrong, rgba(255,255,255,.95)) 100%
-  );
-}
-
-/* ponta (triângulo) */
-.needle::after{
-  content:"";
-  position:absolute;
-  left:50%;
-  top:-8px;
-  transform: translateX(-50%);
-  width:0;
-  height:0;
-  border-left:7px solid transparent;
-  border-right:7px solid transparent;
-  border-bottom:12px solid var(--needleStrong, rgba(255,255,255,.95));
-  filter: drop-shadow(0 6px 10px rgba(0,0,0,.25));
-}
-
-.needleDot{
-  position:absolute;
-  left:50%;
-  top:50%;
   width:10px;
   height:10px;
   border-radius:999px;
-  background: var(--needleDot, rgba(255,255,255,.92));
-  transform: translate(-50%, -50%);
-  box-shadow: 0 8px 16px rgba(0,0,0,.25);
+  background: var(--needleDot);
 }
 
-/* O QUE VESTIR */
-.dressTitle{
-  font-size:13px;
-  color:var(--muted);
-  margin-bottom:10px;
-  letter-spacing:.2px;
-}
-.dressGrid{
-  display:grid;
-  gap:10px;
-}
+/* =========================
+   MODO NOITE
+   ========================= */
 
-/* ✅ alinhamento à esquerda + destaque no label */
-.pillRow{
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-  gap:6px;
-  padding:10px 12px;
-  border-radius:16px;
-  border:1px solid var(--line);
-  background: var(--pillBg);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  text-align:left;
-}
-
-.pillLabel{
-  font-size:12px;
-  color:var(--text);
-  font-weight:750;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  text-decoration-thickness: 2px;
-  white-space:nowrap;
-}
-
-.pillValue{
-  display:block;
-  width:100%;
-  font-size:13px;
-  font-weight:500;
-  text-align:left;
-  line-height:1.35;
-  color: var(--text);
-}
-
-/* ALERTAS */
-.alerts{ display:flex; flex-wrap:wrap; gap:8px; }
-.pill{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  padding:8px 10px;
-  border-radius:999px;
-  background: var(--pillBg);
-  border:1px solid var(--line);
-  font-size:12px;
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-}
-
-/* TABELAS */
-.tableWrap{ width:100%; overflow:auto; border-radius:16px; }
-.tbl{
-  width:100%;
-  border-collapse:collapse;
-  font-size:13px;
-}
-.tbl th, .tbl td{
-  padding:10px 10px;
-  border-bottom:1px solid var(--line);
-  text-align:left;
-  white-space:nowrap;
-}
-.tbl th{
-  font-size:12px;
-  font-weight:700;
-  color:var(--text);
-}
-.iconCell{ width:28px; }
-.icon{ font-size:16px; }
-
-/* WINDY */
-.windyWrap{
-  border-radius:16px;
-  overflow:hidden;
-  border:1px solid var(--line);
-  background: rgba(0,0,0,.14);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-}
-.camLink{ color:var(--text); text-decoration:underline; }
-
-/* Pequenos ajustes mobile */
-@media (max-width: 380px){
-  .heroTemp{ font-size:70px; }
-  .nowLayout{ grid-template-columns: 1fr 120px; }
+body.is-night{
+  color:#fff;
 }
