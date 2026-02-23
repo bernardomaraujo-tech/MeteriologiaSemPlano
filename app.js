@@ -1,12 +1,6 @@
 const REFRESH_MS = 5 * 60 * 1000;
 const FETCH_TIMEOUT_MS = 12000;
 
-// Preferência: modelos HARMONIE-AROME (Europa) via Open-Meteo
-const PREFERRED_MODELS = [
-  "knmi_harmonie_arome_europe",
-  "dmi_harmonie_arome_europe"
-];
-
 const LOCATIONS = [
   { id:"alcabideche", name:"Alcabideche", lat:38.7330, lon:-9.4100 },
 
@@ -32,24 +26,8 @@ const LOCATIONS = [
   { id:"sintra", name:"Sintra", lat:38.8029, lon:-9.3817 }
 ];
 
-/**
- * POIs/Âncoras com tipo e “margem” para evitar sugestões parvas (ex.: Lisboa -> Azeitão).
- * type:
- *  - "serra"  (serra/montanha)
- *  - "costa"  (linha atlântica / marginal / costa)
- *  - "rio"    (rio / estuário)
- */
-const POIS = [
-  { name:"Serra de Sintra", type:"serra", lat:38.797, lon:-9.390 },
-  { name:"Peninha", type:"serra", lat:38.7692, lon:-9.4589 },
-  { name:"Cabo da Roca", type:"costa", lat:38.7804, lon:-9.4989 },
-  { name:"Guincho", type:"costa", lat:38.72948, lon:-9.47457 },
-  { name:"Marginal", type:"costa", lat:38.700, lon:-9.350 },
-  { name:"Rio Tejo", type:"rio", lat:38.705, lon:-9.150 },
-];
-
 const els = {
-  select: document.getElementById("locSelect"),
+  select: document.getElementById("locationSelect"),
   updated: document.getElementById("updated"),
 
   heroLoc: document.getElementById("heroLoc"),
@@ -65,16 +43,19 @@ const els = {
 
   dirNeedle: document.getElementById("dirNeedle"),
 
-  dressCycling: document.getElementById("dressCycling"),
+  dressBike: document.getElementById("dressBike"),
   dressRun: document.getElementById("dressRun"),
   dressWalk: document.getElementById("dressWalk"),
 
   alerts: document.getElementById("alerts"),
 
-  table8: document.getElementById("tbl8"),
-  table48: document.getElementById("tbl48"),
+  table8: document.getElementById("table8"),
+  table48: document.getElementById("table48"),
   wrap48: document.getElementById("wrap48"),
   toggle48: document.getElementById("toggle48"),
+
+  bestWindow: document.getElementById("bestWindow"),
+  windSuggestion: document.getElementById("windSuggestion"),
 
   windyLink: document.getElementById("windyLink"),
   source: document.getElementById("source"),
@@ -83,17 +64,9 @@ const els = {
   skyFx: document.getElementById("skyFx"),
 };
 
-function byId(id){
-  return document.getElementById(id);
-}
-
 function setText(el, txt){
   if (!el) return;
   el.textContent = txt;
-}
-
-function sleep(ms){
-  return new Promise(r => setTimeout(r, ms));
 }
 
 function withTimeout(promise, ms){
@@ -182,64 +155,51 @@ async function fetchWeather(loc){
       "weather_code",
       "is_day"
     ].join(","),
-    daily: [
-      "sunrise",
-      "sunset"
-    ].join(","),
-    timezone: "auto",
-    models: PREFERRED_MODELS.join(",")
+    daily: ["sunrise","sunset"].join(","),
+    timezone: "auto"
   });
 
   const url = `https://api.open-meteo.com/v1/forecast?${params.toString()}`;
-
   const res = await withTimeout(fetch(url, { cache:"no-store" }), FETCH_TIMEOUT_MS);
-  if (!res.ok){
-    throw new Error(`HTTP ${res.status}`);
-  }
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const json = await res.json();
-  const source = json?.model ?? (PREFERRED_MODELS[0] ?? "Open-Meteo");
-  return { json, source };
+  return { json, source: "Open-Meteo" };
 }
 
 function getSunTimes(data){
   const sunrise = data?.daily?.sunrise?.[0];
   const sunset  = data?.daily?.sunset?.[0];
-  const sunriseStr = sunrise ? hourLabel(sunrise) : "—";
-  const sunsetStr  = sunset ? hourLabel(sunset)  : "—";
-  return { sunriseStr, sunsetStr };
+  return {
+    sunriseStr: sunrise ? hourLabel(sunrise) : "—",
+    sunsetStr:  sunset  ? hourLabel(sunset)  : "—"
+  };
 }
 
-/* ===== Sugestões de vestuário (simples) ===== */
-
+/* ===== Sugestões simples ===== */
 function cyclingSuggestion(temp, wind, rain){
   const windAddon = wind >= 25 ? " + atenção ao vento" : "";
   const rainAddon = rain > 0 ? " + impermeável leve" : "";
   const base = "Agradável";
-
-  if (temp <= 8) return `${base}: Camadas (manga comprida + corta-vento)${windAddon}${rainAddon}`;
+  if (temp <= 8)  return `${base}: Camadas (manga comprida + corta-vento)${windAddon}${rainAddon}`;
   if (temp <= 13) return `${base}: Manga comprida + colete opcional${windAddon}${rainAddon}`;
   if (temp <= 17) return `${base}: Manga curta + colete opcional. Clima perfeito${windAddon}${rainAddon}`;
   if (temp <= 22) return `${base}: Manga curta. Ideal para rolar sem pressa${windAddon}${rainAddon}`;
   return `${base}: Leve e respirável. Hidrata bem${windAddon}${rainAddon}`;
 }
-
 function runSuggestion(temp, wind, rain){
   const windAddon = wind >= 25 ? " + corta-vento fino" : "";
   const rainAddon = rain > 0 ? " + impermeável leve" : "";
   const base = "Agradável";
-
-  if (temp <= 8) return `${base}: Manga comprida + camada térmica${windAddon}${rainAddon}`;
+  if (temp <= 8)  return `${base}: Manga comprida + camada térmica${windAddon}${rainAddon}`;
   if (temp <= 13) return `${base}: Manga comprida leve${windAddon}${rainAddon}`;
   if (temp <= 17) return `${base}: T-shirt + manga fina opcional${windAddon}${rainAddon}`;
   if (temp <= 23) return `${base}: T-shirt + calções. Bom para soltar${windAddon}${rainAddon}`;
   return `${base}: Muito leve. Hidratação extra${windAddon}${rainAddon}`;
 }
-
 function walkSuggestion(temp, wind, rain){
   const windAddon = wind >= 25 ? " + corta-vento" : "";
   const rainAddon = rain > 0 ? " + impermeável leve" : "";
   const base = "Agradável";
-
   if (temp <= 11) return `${base}: Manga comprida + calças. Temperatura perfeita para trilho${windAddon}${rainAddon}`;
   if (temp <= 16) return `${base}: Camada leve. Ideal para ganhar altitude${windAddon}${rainAddon}`;
   if (temp <= 22) return `${base}: T-shirt confortável. Dia convidativo${windAddon}${rainAddon}`;
@@ -251,23 +211,11 @@ function iconForWeatherCode(code, isDay){
   if (code === 1) return isDay ? "🌤️" : "🌙☁️";
   if (code === 2) return "⛅";
   if (code === 3) return "☁️";
-
   if (code === 45 || code === 48) return "🌫️";
-
-  if (code === 51 || code === 53 || code === 55) return "🌦️";
-  if (code === 56 || code === 57) return "🌧️";
-
-  if (code === 61 || code === 63 || code === 65) return "🌧️";
-  if (code === 66 || code === 67) return "🌧️";
-  if (code === 80 || code === 81 || code === 82) return "🌧️";
-
-  if (code === 71 || code === 73 || code === 75) return "🌨️";
-  if (code === 77) return "🌨️";
-  if (code === 85 || code === 86) return "🌨️";
-
-  if (code === 95) return "⛈️";
-  if (code === 96 || code === 99) return "⛈️";
-
+  if ([51,53,55].includes(code)) return "🌦️";
+  if ([56,57,61,63,65,66,67,80,81,82].includes(code)) return "🌧️";
+  if ([71,73,75,77,85,86].includes(code)) return "🌨️";
+  if ([95,96,99].includes(code)) return "⛈️";
   return isDay ? "🌤️" : "🌙";
 }
 
@@ -280,125 +228,21 @@ function skyFileFor(code, isDay){
   if (isDay){
     if (storm) return "day_storm.jpg";
     if (rainy) return "day_rain.jpg";
-    if (fog)   return "Day_fog.jpg";
+    if (fog)   return "day_fog.jpg";
     if (cloudy) return "day_cloudy.jpg";
     return "day_clear.jpg";
+  } else {
+    if (storm) return "night_storm.jpg";
+    if (rainy) return "night_rain.jpg";
+    if (fog)   return "night_fog.jpg";
+    if (cloudy) return "night_cloudy.jpg";
+    return "night_clear.jpg";
   }
-
-  if (storm) return "Night_storm.jpg";
-  if (rainy) return "night_rain.jpg";
-  if (fog)   return "night_fog.jpg";
-  if (cloudy) return "night_cloudy.jpg";
-  return "night_clear.jpg";
 }
 
 function applyDayNight(isDay){
   document.body.classList.toggle("is-day", isDay);
   document.body.classList.toggle("is-night", !isDay);
-}
-
-function updateSkyHeight(){
-  // Mantém o céu full-screen (via CSS) — esta função pode evoluir.
-}
-
-function updateWindyCam(lat, lon){
-  if (!els.windyLink) return;
-  const url = `https://www.windy.com/?${lat},${lon},11`;
-  els.windyLink.href = url;
-}
-
-function renderAlerts(_data){
-  // Reservado para alertas futuros (IPMA / MeteoAlarm, etc.)
-  if (!els.alerts) return;
-  els.alerts.innerHTML = "";
-}
-
-function renderTables(data){
-  render8h(data);
-  render48h(data);
-}
-
-function render8h(data){
-  if (!els.table8) return;
-
-  const t = data.hourly.time;
-  const i0 = nearestHourIndex(t);
-  const rows = [];
-
-  for (let i=i0; i<Math.min(i0+8, t.length); i++){
-    const temp = data.hourly.temperature_2m[i];
-    const pop  = data.hourly.precipitation_probability?.[i] ?? 0;
-    const prcp = data.hourly.precipitation?.[i] ?? 0;
-    const wind = data.hourly.wind_speed_10m[i];
-    const code = data.hourly.weather_code?.[i] ?? 0;
-    const isDay = (data.hourly.is_day?.[i] ?? 1) === 1;
-
-    rows.push(`
-      <tr>
-        <td>${hourLabel(t[i])}</td>
-        <td class="iconCell"><span class="icon">${iconForWeatherCode(code, isDay)}</span></td>
-        <td>${Math.round(temp)}°</td>
-        <td>${fmtPct(pop)}</td>
-        <td>${fmtMm(prcp)}</td>
-        <td>${fmtKmh(wind)}</td>
-      </tr>
-    `);
-  }
-
-  els.table8.innerHTML = `
-    <table class="tbl">
-      <thead>
-        <tr>
-          <th>Hora</th><th></th><th>Temp</th><th>Prob.</th><th>Chuva</th><th>Vento</th>
-        </tr>
-      </thead>
-      <tbody>
-        ${rows.join("")}
-      </tbody>
-    </table>
-  `;
-}
-
-function render48h(data){
-  if (!els.table48) return;
-
-  const t = data.hourly.time;
-  const i0 = nearestHourIndex(t);
-  const rows = [];
-
-  for (let i=i0; i<Math.min(i0+48, t.length); i+=2){
-    const temp = data.hourly.temperature_2m[i];
-    const pop  = data.hourly.precipitation_probability?.[i] ?? 0;
-    const prcp = data.hourly.precipitation?.[i] ?? 0;
-    const wind = data.hourly.wind_speed_10m[i];
-    const code = data.hourly.weather_code?.[i] ?? 0;
-    const isDay = (data.hourly.is_day?.[i] ?? 1) === 1;
-
-    rows.push(`
-      <tr>
-        <td>${dayLabel(t[i])}</td>
-        <td>${hourLabel(t[i])}</td>
-        <td class="iconCell"><span class="icon">${iconForWeatherCode(code, isDay)}</span></td>
-        <td>${Math.round(temp)}°</td>
-        <td>${fmtPct(pop)}</td>
-        <td>${fmtMm(prcp)}</td>
-        <td>${fmtKmh(wind)}</td>
-      </tr>
-    `);
-  }
-
-  els.table48.innerHTML = `
-    <table class="tbl">
-      <thead>
-        <tr>
-          <th>Dia</th><th>Hora</th><th></th><th>Temp</th><th>Prob.</th><th>Chuva</th><th>Vento</th>
-        </tr>
-      </thead>
-      <tbody>
-        ${rows.join("")}
-      </tbody>
-    </table>
-  `;
 }
 
 function setSkyFx(code){
@@ -444,90 +288,96 @@ function setSkyFx(code){
   els.skyFx.style.animation = "none";
 }
 
-function tintBackgroundFromImage(path){
-  const img = new Image();
-  img.crossOrigin = "anonymous";
-  img.src = `./${path}`;
-
-  img.onload = () => {
-    const c = document.createElement("canvas");
-    const ctx = c.getContext("2d", { willReadFrequently: true });
-    c.width = 24; c.height = 24;
-    ctx.drawImage(img, 0, 0, 24, 24);
-
-    const data = ctx.getImageData(0, 0, 24, 24).data;
-    let r=0,g=0,b=0,n=0;
-
-    for (let i=0; i<data.length; i+=4){
-      const a = data[i+3];
-      if (a < 200) continue;
-      r += data[i];
-      g += data[i+1];
-      b += data[i+2];
-      n++;
-    }
-    if (!n) return;
-
-    r = Math.round(r/n);
-    g = Math.round(g/n);
-    b = Math.round(b/n);
-
-    document.documentElement.style.setProperty("--bg1", `rgb(${Math.min(255, r+14)}, ${Math.min(255, g+14)}, ${Math.min(255, b+14)})`);
-    document.documentElement.style.setProperty("--bg2", `rgb(${r}, ${g}, ${b})`);
-    document.documentElement.style.setProperty("--bg3", `rgb(${Math.max(0, r-22)}, ${Math.max(0, g-22)}, ${Math.max(0, b-22)})`);
-
-    const isDayImage = path.startsWith("day_");
-
-    if (isDayImage){
-      // DIA → iOS clean: cartões “branco sujo” bem opacos + texto cinzento escuro
-      document.documentElement.style.setProperty("--cardBg",  "rgba(255,255,255,.95)");
-      document.documentElement.style.setProperty("--cardBg2", "rgba(255,255,255,.92)");
-      document.documentElement.style.setProperty("--pillBg",  "rgba(0,0,0,.06)");
-      document.documentElement.style.setProperty("--selectBg","rgba(255,255,255,.95)");
-      document.documentElement.style.setProperty("--stickyBg","rgba(255,255,255,.92)");
-      document.documentElement.style.setProperty("--line",    "rgba(0,0,0,.08)");
-
-      // Texto (dia)
-      document.documentElement.style.setProperty("--text", "#1c1c1e"); // iOS primary
-      document.documentElement.style.setProperty("--muted","rgba(60,60,67,.72)"); // iOS secondary
-      document.documentElement.style.setProperty("--textShadow","none");
-
-      // Bússola (dia): ponteiro escuro para se distinguir do fundo claro
-      document.documentElement.style.setProperty("--needleStrong","rgba(0,0,0,.75)");
-      document.documentElement.style.setProperty("--needleMid","rgba(0,0,0,.35)");
-      document.documentElement.style.setProperty("--needleDot","rgba(0,0,0,.65)");
-    } else {
-      // NOITE → mantém como está no teu layout atual (não alterar o aspeto)
-      document.documentElement.style.setProperty("--cardBg",  "rgba(255,255,255,.45)");
-      document.documentElement.style.setProperty("--cardBg2", "rgba(255,255,255,.30)");
-      document.documentElement.style.setProperty("--pillBg",  "rgba(0,0,0,.18)");
-      document.documentElement.style.setProperty("--selectBg","rgba(255,255,255,.50)");
-      document.documentElement.style.setProperty("--stickyBg","rgba(0,0,0,.55)");
-      document.documentElement.style.setProperty("--line",    "rgba(255,255,255,.26)");
-
-      document.documentElement.style.setProperty("--text", "#ffffff");
-      document.documentElement.style.setProperty("--muted","rgba(255,255,255,.82)");
-      document.documentElement.style.setProperty("--textShadow","0 2px 8px rgba(0,0,0,.45)");
-
-      // Bússola (noite): mantém como está (branco)
-      document.documentElement.style.setProperty("--needleStrong","rgba(255,255,255,.95)");
-      document.documentElement.style.setProperty("--needleMid","rgba(255,255,255,.35)");
-      document.documentElement.style.setProperty("--needleDot","rgba(255,255,255,.92)");
-    }
-  };
-}
-
 function setSkyFromWeather(code, isDay){
   applyDayNight(isDay);
-
   const file = skyFileFor(code, isDay);
-  if (els.skyImg){
-    els.skyImg.style.backgroundImage = `url(./${file})`;
+  if (els.skyImg) els.skyImg.style.backgroundImage = `url(./${file})`;
+  setSkyFx(code);
+}
+
+function renderAlerts(){
+  if (!els.alerts) return;
+  els.alerts.textContent = "—";
+}
+
+function render8h(data){
+  if (!els.table8) return;
+
+  const t = data.hourly.time;
+  const i0 = nearestHourIndex(t);
+  const rows = [];
+
+  for (let i=i0; i<Math.min(i0+8, t.length); i++){
+    const temp = data.hourly.temperature_2m[i];
+    const pop  = data.hourly.precipitation_probability?.[i] ?? 0;
+    const prcp = data.hourly.precipitation?.[i] ?? 0;
+    const wind = data.hourly.wind_speed_10m[i];
+    const code = data.hourly.weather_code?.[i] ?? 0;
+    const isDay = (data.hourly.is_day?.[i] ?? 1) === 1;
+
+    rows.push(`
+      <tr>
+        <td>${hourLabel(t[i])}</td>
+        <td class="iconCell">${iconForWeatherCode(code, isDay)}</td>
+        <td>${Math.round(temp)}°</td>
+        <td>${fmtPct(pop)}</td>
+        <td>${fmtMm(prcp)}</td>
+        <td>${fmtKmh(wind)}</td>
+      </tr>
+    `);
   }
 
-  tintBackgroundFromImage(file);
-  setSkyFx(code);
-  updateSkyHeight();
+  els.table8.innerHTML = `
+    <thead>
+      <tr>
+        <th>Hora</th><th></th><th>Temp</th><th>Prob.</th><th>Chuva</th><th>Vento</th>
+      </tr>
+    </thead>
+    <tbody>${rows.join("")}</tbody>
+  `;
+}
+
+function render48h(data){
+  if (!els.table48) return;
+
+  const t = data.hourly.time;
+  const i0 = nearestHourIndex(t);
+  const rows = [];
+
+  for (let i=i0; i<Math.min(i0+48, t.length); i+=2){
+    const temp = data.hourly.temperature_2m[i];
+    const pop  = data.hourly.precipitation_probability?.[i] ?? 0;
+    const prcp = data.hourly.precipitation?.[i] ?? 0;
+    const wind = data.hourly.wind_speed_10m[i];
+    const code = data.hourly.weather_code?.[i] ?? 0;
+    const isDay = (data.hourly.is_day?.[i] ?? 1) === 1;
+
+    rows.push(`
+      <tr>
+        <td>${dayLabel(t[i])}</td>
+        <td>${hourLabel(t[i])}</td>
+        <td class="iconCell">${iconForWeatherCode(code, isDay)}</td>
+        <td>${Math.round(temp)}°</td>
+        <td>${fmtPct(pop)}</td>
+        <td>${fmtMm(prcp)}</td>
+        <td>${fmtKmh(wind)}</td>
+      </tr>
+    `);
+  }
+
+  els.table48.innerHTML = `
+    <thead>
+      <tr>
+        <th>Dia</th><th>Hora</th><th></th><th>Temp</th><th>Prob.</th><th>Chuva</th><th>Vento</th>
+      </tr>
+    </thead>
+    <tbody>${rows.join("")}</tbody>
+  `;
+}
+
+function updateWindyLink(lat, lon){
+  if (!els.windyLink) return;
+  els.windyLink.href = `https://www.windy.com/?${lat},${lon},11`;
 }
 
 function renderAll(data, sourceName, loc){
@@ -543,12 +393,11 @@ function renderAll(data, sourceName, loc){
   const pop   = data.hourly.precipitation_probability?.[i] ?? 0;
 
   const { min, max } = computeMinMaxNext24h(data.hourly.temperature_2m, i);
+  const { sunriseStr, sunsetStr } = getSunTimes(data);
 
   setText(els.heroLoc, loc.name);
   setText(els.heroTemp, `${Math.round(temp)}°`);
   setText(els.heroMeta, `Sensação: ${Math.round(feels ?? temp)}° · Máx: ${Math.round(max)}° · Mín: ${Math.round(min)}°`);
-
-  const { sunriseStr, sunsetStr } = getSunTimes(data);
   setText(els.heroSun, `Nascer: ${sunriseStr} · Pôr: ${sunsetStr}`);
 
   setText(els.nowWind, fmtKmh(wind));
@@ -557,25 +406,30 @@ function renderAll(data, sourceName, loc){
   setText(els.nowRain, fmtMm(prcp));
   setText(els.nowPop, fmtPct(pop));
 
+  // Needle (HTML usa transform em translate/rotate)
   if (els.dirNeedle){
     els.dirNeedle.style.transform = `translate(-50%, -50%) rotate(${(dir + 180) % 360}deg)`;
   }
 
-  const rainNow = prcp;
-  setText(els.dressCycling, cyclingSuggestion(temp, wind, rainNow));
-  setText(els.dressRun, runSuggestion(temp, wind, rainNow));
-  setText(els.dressWalk, walkSuggestion(temp, wind, rainNow));
+  setText(els.dressBike, cyclingSuggestion(temp, wind, prcp));
+  setText(els.dressRun, runSuggestion(temp, wind, prcp));
+  setText(els.dressWalk, walkSuggestion(temp, wind, prcp));
 
   setText(els.source, sourceName || "—");
 
   const code = data.hourly.weather_code?.[i] ?? 0;
   const isDay = (data.hourly.is_day?.[i] ?? 1) === 1;
-
   setSkyFromWeather(code, isDay);
-  updateWindyCam(loc.lat, loc.lon);
 
-  renderTables(data);
-  renderAlerts(data);
+  updateWindyLink(loc.lat, loc.lon);
+
+  renderAlerts();
+  render8h(data);
+  render48h(data);
+
+  // placeholders (não mexo na tua lógica aqui — só para não ficar “vazio”)
+  if (els.bestWindow) setText(els.bestWindow, "—");
+  if (els.windSuggestion) setText(els.windSuggestion, "—");
 }
 
 async function refresh(){
@@ -599,21 +453,22 @@ async function refresh(){
 }
 
 function init(){
-  if (!els.select || !els.updated) return;
+  if (!els.select || !els.updated) {
+    console.error("[SEMPLANO] IDs do HTML não encontrados. Verifica index.html.");
+    return;
+  }
 
-  // popular select
   els.select.innerHTML = LOCATIONS.map(l => `<option value="${l.id}">${l.name}</option>`).join("");
   els.select.value = "alcabideche";
 
-  // toggle 48h
+  els.select.addEventListener("change", () => refresh());
+
   if (els.toggle48 && els.wrap48){
     els.toggle48.addEventListener("click", () => {
       const hidden = els.wrap48.classList.toggle("hidden");
-      els.toggle48.textContent = hidden ? "Mostrar 48h" : "Ocultar 48h";
+      els.toggle48.textContent = hidden ? "Mostrar" : "Ocultar";
     });
   }
-
-  els.select.addEventListener("change", () => refresh());
 
   refresh();
   setInterval(refresh, REFRESH_MS);
