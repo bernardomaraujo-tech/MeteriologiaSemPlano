@@ -3,6 +3,7 @@
   --text:#ffffff;
   --muted: rgba(255,255,255,.92);
 
+  /* sombra profunda + volume */
   --textShadow:
     0 1px 0 rgba(0,0,0,.6),
     0 2px 0 rgba(0,0,0,.55),
@@ -10,8 +11,10 @@
     0 4px 8px rgba(0,0,0,.55),
     0 8px 22px rgba(0,0,0,.45);
 
+  /* Bordas */
   --line: rgba(255,255,255,.25);
 
+  /* Fundos glass (JS ajusta por imagem) */
   --cardBg:  rgba(255,255,255,.45);
   --cardBg2: rgba(255,255,255,.30);
   --pillBg:  rgba(0,0,0,.18);
@@ -20,17 +23,21 @@
 
   --shadow: 0 18px 44px rgba(0,0,0,.22);
 
+  /* Cores do fundo (JS ajusta a partir da imagem) */
   --bg1: #6fa7c6;
   --bg2: #4e8fb6;
   --bg3: #2f6f98;
 
+  --sky-height: 420px;
+
+  /* Bússola (JS ajusta no modo dia/noite) */
   --needleStrong: rgba(255,255,255,.95);
   --needleMid: rgba(255,255,255,.35);
   --needleDot: rgba(255,255,255,.92);
 }
 
-*{ box-sizing:border-box; }
-html,body{ height:100%; }
+*{box-sizing:border-box}
+html,body{height:100%}
 
 body{
   margin:0;
@@ -41,7 +48,7 @@ body{
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* FUNDO */
+/* FUNDO BASE */
 .bg{
   position:fixed;
   inset:0;
@@ -53,7 +60,9 @@ body{
   z-index:-2;
 }
 
-/* CÉU */
+/* =========================
+   CÉU REAL (IMAGEM)
+   ========================= */
 .skyReal{
   position: fixed;
   inset: 0;
@@ -63,6 +72,7 @@ body{
   pointer-events: none;
   overflow: hidden;
 }
+
 .skyImg{
   position:absolute;
   inset:0;
@@ -72,6 +82,7 @@ body{
   animation: skyBreath 44s ease-in-out infinite;
   will-change: transform, filter;
 }
+
 .skyClouds{
   position:absolute;
   inset:-20%;
@@ -82,14 +93,18 @@ body{
   filter: blur(10px);
   opacity:.42;
   animation: cloudsDrift 34s linear infinite;
+  will-change: transform;
 }
+
 .skyFx{
   position:absolute;
   inset:0;
   opacity:0;
   background:none;
   animation:none;
+  will-change: transform, opacity;
 }
+
 .skyFade{
   position:absolute;
   left:0; right:0; bottom:0;
@@ -98,6 +113,7 @@ body{
   mix-blend-mode: multiply;
   opacity: .85;
 }
+
 body.is-night .skyImg{ filter: brightness(.78) contrast(1.05) saturate(.95); }
 body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
 
@@ -118,12 +134,15 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
   .skyImg, .skyClouds, .skyFx{ animation:none !important; }
 }
 
-/* LAYOUT */
+/* -------------------------
+   UI
+   ------------------------- */
 .phone{
   max-width:430px;
   margin:0 auto;
   padding:12px 12px 24px;
 }
+
 .header{
   display:flex;
   flex-direction:column;
@@ -131,12 +150,19 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
   gap:10px;
   padding:8px 0 12px;
 }
+
 .logo{ height:62px; width:auto; display:block; }
 
-.stack{ display:flex; flex-direction:column; gap:12px; }
+.hero{text-align:center;}
 
-.hero{ width:100%; text-align:center; padding: 6px 0 2px; }
-.heroLoc{ font-size:22px; font-weight:650; letter-spacing:.2px; opacity:.95; text-shadow: var(--textShadow); }
+.heroLoc{
+  font-size:22px;
+  font-weight:650;
+  letter-spacing:.2px;
+  opacity:.95;
+  text-shadow: var(--textShadow);
+}
+
 .heroTemp{
   font-size:78px;
   font-weight:800;
@@ -150,12 +176,18 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
     0 8px 16px rgba(0,0,0,.6),
     0 18px 40px rgba(0,0,0,.45);
 }
-.heroMeta{ font-size:14px; color:var(--muted); margin-top:4px; text-shadow: var(--textShadow); }
-.heroSun{ font-size:13px; color:var(--muted); margin-top:4px; opacity:.95; text-shadow: var(--textShadow); }
-.updated{ font-size:12px; color:var(--muted); text-shadow: var(--textShadow); }
 
-/* CONTROLS */
+.heroMeta,
+.heroSun,
+.updated{
+  font-size:13px;
+  color:var(--muted);
+  margin-top:4px;
+  text-shadow: var(--textShadow);
+}
+
 .controls{ width:100%; }
+
 .select{
   width:100%;
   padding:12px 12px;
@@ -172,9 +204,10 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
   box-shadow: var(--shadow);
 }
 
-/* CARD */
+/* Cartões */
 .card{
-  padding:14px 14px;
+  margin-top:12px;
+  padding:14px;
   border-radius:18px;
   border:1px solid var(--line);
   background: var(--cardBg);
@@ -182,6 +215,7 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
   -webkit-backdrop-filter: blur(18px);
   box-shadow: var(--shadow);
 }
+
 .cardTitle{
   font-size:13px;
   font-weight:700;
@@ -190,20 +224,14 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
   margin-bottom:10px;
   text-shadow: var(--textShadow);
 }
-.row{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:10px;
-}
 
-/* AGORA */
-.nowLayout{
+.grid2{
   display:grid;
-  grid-template-columns: 1fr 150px;
+  grid-template-columns: 1fr 130px;
   gap:12px;
   align-items:stretch;
 }
+
 .kv{
   display:grid;
   grid-template-columns: 110px 1fr;
@@ -211,146 +239,40 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
   column-gap:10px;
   align-content:start;
 }
-.k{ opacity:.85; font-size:13px; text-shadow: var(--textShadow); }
-.v{ font-weight:700; font-size:13px; text-shadow: var(--textShadow); }
-
-.dirCard{
-  border:1px solid var(--line);
-  border-radius:16px;
-  background: rgba(255,255,255,.10);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 12px 30px rgba(0,0,0,.12);
-  padding:10px;
-}
-.dirTitle{
-  font-size:12px;
-  font-weight:700;
+.k{
   opacity:.85;
-  margin-bottom:8px;
-  text-shadow: var(--textShadow);
-}
-
-/* COMPASS (ajustado às classes do teu HTML: .needle e .needleDot) */
-.compass{
-  position:relative;
-  width:130px;
-  height:130px;
-  border-radius:999px;
-  border:1px solid var(--line);
-  background: rgba(255,255,255,.10);
-  box-shadow: var(--shadow);
-}
-.compassRing{
-  position:absolute;
-  inset:10px;
-  border-radius:999px;
-  border:1px solid var(--line);
-  opacity:.6;
-}
-.compassLabel{
-  position:absolute;
-  font-size:11px;
-  opacity:.85;
-  text-shadow: var(--textShadow);
-}
-.compassLabel.n{ top:8px; left:50%; transform:translateX(-50%); }
-.compassLabel.s{ bottom:8px; left:50%; transform:translateX(-50%); }
-.compassLabel.e{ right:10px; top:50%; transform:translateY(-50%); }
-.compassLabel.w{ left:10px; top:50%; transform:translateY(-50%); }
-
-.needle{
-  position:absolute;
-  left:50%;
-  top:50%;
-
-  width:4px;
-  height:58px;
-  border-radius:999px;
-
-  /* linha clean */
-  background: linear-gradient(180deg, var(--needleStrong), var(--needleMid));
-
-  /* IMPORTANTE: sem transform default aqui (o JS é que roda) */
-  transform-origin: 50% 88%;
-  box-shadow: 0 10px 22px rgba(0,0,0,.18);
-}
-
-/* ponta tipo seta (muito subtil, iOS-like) */
-.needle::after{
-  content:"";
-  position:absolute;
-  top:-10px;
-  left:50%;
-  transform:translateX(-50%);
-  width:0;
-  height:0;
-  border-left:6px solid transparent;
-  border-right:6px solid transparent;
-  border-bottom:10px solid var(--needleStrong);
-  opacity:.85;
-}
-
-.needleDot{
-  position:absolute;
-  left:50%;
-  top:50%;
-  width:10px;
-  height:10px;
-  border-radius:999px;
-  background: var(--needleDot);
-  transform: translate(-50%, -50%);
-  box-shadow: 0 8px 18px rgba(0,0,0,.18);
-}
-
-/* ===== Best window: permitir \n (duas linhas) ===== */
-.best{
-  white-space: pre-line;
-}
-
-/* DRESS */
-.dressTitle{
   font-size:13px;
-  font-weight:800;
-  letter-spacing:.2px;
-  opacity:.95;
-  margin-bottom:10px;
   text-shadow: var(--textShadow);
 }
-.dressGrid{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-}
-.pillRow{
-  display:flex;
-  gap:10px;
-  align-items:flex-start;
-}
-.pillLabel{
-  min-width:92px;
-  font-weight:800;
-  opacity:.92;
-  text-shadow: var(--textShadow);
-}
-.pillValue{
-  flex:1;
-  opacity:.92;
+.v{
+  font-weight:700;
+  font-size:13px;
+  text-align:left;
   text-shadow: var(--textShadow);
 }
 
-/* TABLES */
-.tableWrap{ width:100%; overflow:hidden; border-radius:14px; }
+.pill{
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  padding:8px 10px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  background: var(--pillBg);
+  text-shadow: var(--textShadow);
+}
+
 .tbl{
   width:100%;
   border-collapse: collapse;
-  border-radius:14px;
   overflow:hidden;
+  border-radius:14px;
   border:1px solid var(--line);
   background: var(--cardBg2);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 }
+
 .tbl th, .tbl td{
   padding:10px 10px;
   font-size:13px;
@@ -358,29 +280,22 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
   border-bottom:1px solid var(--line);
   text-shadow: var(--textShadow);
 }
+
 .tbl thead th{
   font-size:12px;
   opacity:.85;
 }
-.iconCell{ width:32px; }
 
-/* BEST / ALERTS / SMALL */
-.best{
-  padding:10px 12px;
-  border-radius:14px;
-  border:1px solid var(--line);
-  background: rgba(255,255,255,.08);
-  box-shadow: 0 12px 30px rgba(0,0,0,.12);
-  text-shadow: var(--textShadow);
-}
-.alerts{ opacity:.92; text-shadow: var(--textShadow); }
-.small{ font-size:12px; }
+.iconCell{ width:32px; }
+.icon{ font-size:16px; }
 
 .hidden{ display:none; }
 
 .btn{
-  padding:10px 12px;
-  border-radius:14px;
+  margin-top:10px;
+  width:100%;
+  padding:12px 12px;
+  border-radius:16px;
   border:1px solid var(--line);
   background: var(--stickyBg);
   color: var(--text);
@@ -392,16 +307,106 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
   text-shadow: var(--textShadow);
 }
 
+/* Compass */
+.compass{
+  position:relative;
+  width:110px;
+  height:110px;
+  margin:0 auto;
+}
+
+.compassRing{
+  position:absolute;
+  inset:6px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  opacity:.55;
+}
+
+.compassLabel{
+  position:absolute;
+  font-size:11px;
+  opacity:.85;
+  text-shadow: var(--textShadow);
+}
+.compassLabel.n{ top:-2px; left:50%; transform:translateX(-50%); }
+.compassLabel.s{ bottom:-2px; left:50%; transform:translateX(-50%); }
+.compassLabel.e{ right:-2px; top:50%; transform:translateY(-50%); }
+.compassLabel.w{ left:-2px; top:50%; transform:translateY(-50%); }
+
+/* ====== NEEDLE (FIX iOS: 4px + translate3d) ====== */
+.needle{
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:4px; /* FIX: par para não desalinha no iOS */
+  height:92px;
+  border-radius:999px;
+  transform-origin: 50% 50%;
+  transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  box-shadow: 0 10px 18px rgba(0,0,0,.25);
+
+  background: linear-gradient(
+    180deg,
+    var(--needleStrong, rgba(255,255,255,.95)) 0%,
+    var(--needleMid, rgba(255,255,255,.35)) 50%,
+    var(--needleStrong, rgba(255,255,255,.95)) 100%
+  );
+  will-change: transform;
+}
+
+.needle::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:-8px;
+  transform: translateX(-50%);
+  width:0;
+  height:0;
+  border-left:7px solid transparent;
+  border-right:7px solid transparent;
+  border-bottom:12px solid var(--needleStrong, rgba(255,255,255,.95));
+  filter: drop-shadow(0 6px 10px rgba(0,0,0,.18));
+}
+
+.needleDot{
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:10px;
+  height:10px;
+  border-radius:999px;
+  background: var(--needleDot, rgba(255,255,255,.92));
+  transform: translate3d(-50%, -50%, 0);
+  box-shadow: 0 8px 16px rgba(0,0,0,.25);
+}
+
+.dressTitle{
+  font-weight:800;
+  font-size:12px;
+  opacity:.92;
+  text-shadow: var(--textShadow);
+}
+.muted{
+  font-size:13px;
+  opacity:.92;
+  text-shadow: var(--textShadow);
+}
+
+/* Links */
 .camLink{
   display:inline-block;
-  margin-top:6px;
+  margin-top:10px;
   font-size:13px;
   opacity:.92;
   text-shadow: var(--textShadow);
 }
 
 /* =========================================================
-   iOS clean — MODO DIA
+   iOS clean — overrides MODO DIA
+   - Cartões branco sujo 95% opaco
+   - Texto cinzento escuro (estilo iOS)
+   - Sem sombras no texto no modo diurno
    ========================================================= */
 body.is-day{
   --text: #1C1C1E;
@@ -415,12 +420,39 @@ body.is-day{
   --stickyBg: rgba(255,255,255,.92);
 
   --shadow: 0 10px 30px rgba(0,0,0,.10);
+
+  /* mata sombras no texto (a maioria dos elementos usa var(--textShadow)) */
   --textShadow: none;
 
+  /* Bússola: ponteiro escuro para contrastar em fundo claro */
   --needleStrong: rgba(0,0,0,.75);
   --needleMid: rgba(0,0,0,.28);
   --needleDot: rgba(0,0,0,.65);
 }
 
-/* no dia: flat */
-body.is-day .heroTemp{ text-shadow:none; }
+/* Número grande: no dia fica mesmo flat (sem 3D) */
+body.is-day .heroTemp{
+  text-shadow: none;
+}
+
+/* Garantia extra: se algum sítio tiver sombra fixa */
+body.is-day .heroLoc,
+body.is-day .heroMeta,
+body.is-day .heroSun,
+body.is-day .updated,
+body.is-day .cardTitle,
+body.is-day .k,
+body.is-day .v,
+body.is-day .tbl th,
+body.is-day .tbl td,
+body.is-day .btn,
+body.is-day .select,
+body.is-day .muted,
+body.is-day .camLink{
+  text-shadow: none;
+}
+
+/* Melhor janela / sugestões: respeitar quebras de linha do JS */
+.best{
+  white-space: pre-line;
+}
