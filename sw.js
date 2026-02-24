@@ -1,6 +1,6 @@
 /* sw.js — SEM PLANO Meteo */
 
-const CACHE_VERSION = "semplano-meteo-v20260223_1";
+const CACHE_VERSION = "semplano-meteo-v20260224_1";
 
 const APP_SHELL = [
   "./",
@@ -105,5 +105,6 @@ self.addEventListener("fetch", (event) => {
     }
   })());
 });
+
 
 
