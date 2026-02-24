@@ -352,7 +352,7 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
 }
 .tbl{
   width:100%;
-  min-width: 740px;
+  min-width: 680px;
   border-collapse: collapse;
   border-radius:14px;
   overflow:hidden;
@@ -362,17 +362,19 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
   -webkit-backdrop-filter: blur(16px);
 }
 .tbl th, .tbl td{
-  padding:10px 10px;
-  font-size:13px;
+  padding:6px 8px;          /* mais compacto */
+  font-size:12px;
+  line-height:1.15;
   text-align:left;
   border-bottom:1px solid var(--line);
   text-shadow: var(--textShadow);
+  white-space:nowrap;
 }
 .tbl thead th{
-  font-size:12px;
+  font-size:11px;
   opacity:.85;
 }
-.iconCell{ width:32px; }
+.iconCell{ width:28px; }
 
 /* BEST / ALERTS / SMALL */
 .best{
