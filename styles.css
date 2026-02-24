@@ -343,9 +343,16 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
 }
 
 /* TABLES */
-.tableWrap{ width:100%; overflow:hidden; border-radius:14px; }
+.tableWrap{
+  width:100%;
+  overflow-x:auto;
+  overflow-y:hidden;
+  border-radius:14px;
+  -webkit-overflow-scrolling: touch;
+}
 .tbl{
   width:100%;
+  min-width: 740px;
   border-collapse: collapse;
   border-radius:14px;
   overflow:hidden;
