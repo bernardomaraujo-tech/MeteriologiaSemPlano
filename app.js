@@ -116,6 +116,14 @@ function windDirText(deg){
   return `${dirs[idx]} (${Math.round(deg ?? 0)}°)`;
 }
 
+
+function windDirShort(deg){
+  const dirs = ["N","NE","E","SE","S","SO","O","NO"];
+  const idx = Math.round((((deg ?? 0) % 360) / 45)) % 8;
+  return `${dirs[idx]}`;
+}
+
+
 function hourLabel(iso){ return String(iso).slice(11,16); }
 
 function weekdayHourLabel(iso){
@@ -419,7 +427,7 @@ function iconForWeatherCode(code, isDay){
   if (code === 2) return "⛅";
   if (code === 3) return "☁️";
 
-  if (code === 45 || code === 48) return "🌫️";
+  if (code === 45 || code === 48) return "☁️";
 
   if (code === 51 || code === 53 || code === 55) return "🌦️";
   if (code === 56 || code === 57) return "🌧️";
@@ -524,7 +532,9 @@ function render8h(data){
     const temp = data.hourly.temperature_2m[i];
     const pop  = data.hourly.precipitation_probability?.[i] ?? 0;
     const prcp = data.hourly.precipitation?.[i] ?? 0;
-    const wind = data.hourly.wind_speed_10m[i];
+    const wind = data.hourly.wind_speed_10m?.[i] ?? 0;
+    const gust = data.hourly.wind_gusts_10m?.[i] ?? 0;
+    const dir  = data.hourly.wind_direction_10m?.[i] ?? 0;
     const code = data.hourly.weather_code?.[i] ?? 0;
     const isDay = (data.hourly.is_day?.[i] ?? 1) === 1;
 
@@ -536,19 +546,27 @@ function render8h(data){
         <td>${fmtPct(pop)}</td>
         <td>${fmtMm(prcp)}</td>
         <td>${fmtKmh(wind)}</td>
+        <td>${fmtKmh(gust)}</td>
+        <td>${windDirShort(dir)}</td>
       </tr>
     `);
   }
 
+  // o #table8 já é uma <table>, por isso só metemos thead/tbody (sem criar outra <table>)
   els.table8.innerHTML = `
-    <table class="tbl">
-      <thead>
-        <tr>
-          <th>Hora</th><th></th><th>Temp</th><th>Prob.</th><th>Chuva</th><th>Vento</th>
-        </tr>
-      </thead>
-      <tbody>${rows.join("")}</tbody>
-    </table>
+    <thead>
+      <tr>
+        <th>Hora</th>
+        <th></th>
+        <th>Temp.</th>
+        <th>Prob.</th>
+        <th>Chuva</th>
+        <th>Vento</th>
+        <th>Rajadas</th>
+        <th>Dir. Vento</th>
+      </tr>
+    </thead>
+    <tbody>${rows.join("")}</tbody>
   `;
 }
 
@@ -563,8 +581,9 @@ function render48h(data){
     const temp = data.hourly.temperature_2m[i];
     const pop  = data.hourly.precipitation_probability?.[i] ?? 0;
     const prcp = data.hourly.precipitation?.[i] ?? 0;
-    const wind = data.hourly.wind_speed_10m[i];
-    const gust = data.hourly.wind_gusts_10m[i];
+    const wind = data.hourly.wind_speed_10m?.[i] ?? 0;
+    const gust = data.hourly.wind_gusts_10m?.[i] ?? 0;
+    const dir  = data.hourly.wind_direction_10m?.[i] ?? 0;
     const code = data.hourly.weather_code?.[i] ?? 0;
     const isDay = (data.hourly.is_day?.[i] ?? 1) === 1;
 
@@ -577,19 +596,26 @@ function render48h(data){
         <td>${fmtMm(prcp)}</td>
         <td>${fmtKmh(wind)}</td>
         <td>${fmtKmh(gust)}</td>
+        <td>${windDirShort(dir)}</td>
       </tr>
     `);
   }
 
+  // o #table48 já é uma <table>, por isso só metemos thead/tbody (sem criar outra <table>)
   els.table48.innerHTML = `
-    <table class="tbl">
-      <thead>
-        <tr>
-          <th>Dia/Hora</th><th></th><th>Temp</th><th>Prob.</th><th>Chuva</th><th>Vento</th><th>Rajadas</th>
-        </tr>
-      </thead>
-      <tbody>${rows.join("")}</tbody>
-    </table>
+    <thead>
+      <tr>
+        <th>Dia/Hora</th>
+        <th></th>
+        <th>Temp.</th>
+        <th>Prob.</th>
+        <th>Chuva</th>
+        <th>Vento</th>
+        <th>Rajadas</th>
+        <th>Dir. Vento</th>
+      </tr>
+    </thead>
+    <tbody>${rows.join("")}</tbody>
   `;
 }
 
