@@ -259,18 +259,46 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
 .compassLabel.e{ right:10px; top:50%; transform:translateY(-50%); }
 .compassLabel.w{ left:10px; top:50%; transform:translateY(-50%); }
 
+/* ===== Compass needle (centrada corretamente) ===== */
 .needle{
   position:absolute;
   left:50%;
   top:50%;
-  width:4px;
-  height:52px;
-  border-radius:8px;
-  background: linear-gradient(180deg, var(--needleStrong), var(--needleMid));
-  transform-origin: 50% 85%;
-  box-shadow: 0 10px 22px rgba(0,0,0,.22);
-  transform: translate(-50%, -50%) rotate(180deg);
+
+  width:4px;              /* largura par evita desalinhamento no iOS */
+  height:60px;            /* ligeiro ajuste para ficar visualmente perfeito */
+  border-radius:999px;
+
+  background: linear-gradient(
+    180deg,
+    var(--needleStrong),
+    var(--needleMid)
+  );
+
+  /* AGORA roda exatamente pelo centro */
+  transform-origin: 50% 50%;
+
+  /* NÃO colocar transform aqui (o JS aplica translate + rotate) */
+
+  box-shadow: 0 8px 18px rgba(0,0,0,.18);
 }
+
+/* ponta tipo seta */
+.needle::after{
+  content:"";
+  position:absolute;
+  top:-10px;
+  left:50%;
+  transform:translateX(-50%);
+  width:0;
+  height:0;
+  border-left:6px solid transparent;
+  border-right:6px solid transparent;
+  border-bottom:10px solid var(--needleStrong);
+  opacity:.9;
+}
+
+/* ponto central */
 .needleDot{
   position:absolute;
   left:50%;
@@ -280,7 +308,7 @@ body.is-day .skyImg{ filter: brightness(1.02) contrast(1.02) saturate(1.02); }
   border-radius:999px;
   background: var(--needleDot);
   transform: translate(-50%, -50%);
-  box-shadow: 0 8px 18px rgba(0,0,0,.25);
+  box-shadow: 0 6px 14px rgba(0,0,0,.18);
 }
 
 /* DRESS */
