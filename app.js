@@ -30,6 +30,7 @@ const LOCATIONS = [
 
   { id:"sdr", name:"São Domingos de Rana", lat:38.7019, lon:-9.3389 },
   { id:"sintra", name:"Sintra", lat:38.8029, lon:-9.3817 }
+  { id:"santacombadao", name:"Santa Comba Dão", lat:40.3979, lon:-8.1304 }
 ];
 
 /**
