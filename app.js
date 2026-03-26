@@ -29,8 +29,7 @@ const LOCATIONS = [
   { id:"praia_tocha", name:"Praia da Tocha", lat:40.3300, lon:-8.7860 },
 
   { id:"sdr", name:"São Domingos de Rana", lat:38.7019, lon:-9.3389 },
-  { id:"sintra", name:"Sintra", lat:38.8029, lon:-9.3817 }
-  
+  { id:"sintra", name:"Sintra", lat:38.8029, lon:-9.3817 },
   { id:"santacombadao", name:"Santa Comba Dão", lat:40.3979, lon:-8.1304 }
 ];
 
