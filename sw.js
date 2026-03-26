@@ -1,6 +1,6 @@
 /* sw.js — SEM PLANO Meteo */
 
-const CACHE_VERSION = "semplano-meteo-v20260224_3";
+const CACHE_VERSION = "semplano-meteo-v20260326_3";
 
 const APP_SHELL = [
   "./",
