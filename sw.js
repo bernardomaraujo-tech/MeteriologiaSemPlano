@@ -1,112 +1,70 @@
-/* sw.js — SEM PLANO Meteo */
-
-const CACHE_VERSION = "semplano-meteo-v20260326_4";
+const CACHE_NAME = "sem-plano-meteo-v20260515-01";
 
 const APP_SHELL = [
   "./",
   "./index.html",
   "./styles.css",
   "./app.js",
-  "./logo.png",
   "./manifest.json",
-
-  "./day_clear.jpg",
-  "./day_cloudy.jpg",
-  "./day_fog.jpg",
-  "./day_rain.jpg",
-  "./day_storm.jpg",
-
-  "./night_clear.jpg",
-  "./night_cloudy.jpg",
-  "./night_fog.jpg",
-  "./night_rain.jpg",
-  "./night_storm.jpg"
+  "./logo.png",
+  "./icon-180.png",
+  "./icon.svg"
 ];
 
 self.addEventListener("install", (event) => {
-  event.waitUntil((async () => {
-    const cache = await caches.open(CACHE_VERSION);
-    await cache.addAll(APP_SHELL);
-    await self.skipWaiting();
-  })());
+  self.skipWaiting();
+
+  event.waitUntil(
+    caches
+      .open(CACHE_NAME)
+      .then((cache) => cache.addAll(APP_SHELL))
+      .catch(() => null)
+  );
 });
 
 self.addEventListener("activate", (event) => {
-  event.waitUntil((async () => {
-    const keys = await caches.keys();
-    await Promise.all(
-      keys
-        .filter((k) => k.startsWith("semplano-meteo-") && k !== CACHE_VERSION)
-        .map((k) => caches.delete(k))
-    );
-    await self.clients.claim();
-  })());
+  event.waitUntil(
+    caches
+      .keys()
+      .then((keys) =>
+        Promise.all(
+          keys
+            .filter((key) => key !== CACHE_NAME)
+            .map((key) => caches.delete(key))
+        )
+      )
+      .then(() => self.clients.claim())
+  );
 });
 
 self.addEventListener("fetch", (event) => {
-  const req = event.request;
-  const url = new URL(req.url);
+  const request = event.request;
+  const url = new URL(request.url);
 
-  // Só tratamos do nosso origin
-  if (url.origin !== self.location.origin) return;
-
-  const isHTML = req.mode === "navigate" || req.headers.get("accept")?.includes("text/html");
-  const isAsset =
-    url.pathname.endsWith(".css") ||
-    url.pathname.endsWith(".js") ||
-    url.pathname.endsWith(".png") ||
-    url.pathname.endsWith(".jpg") ||
-    url.pathname.endsWith(".jpeg") ||
-    url.pathname.endsWith(".svg") ||
-    url.pathname.endsWith(".webp") ||
-    url.pathname.endsWith(".ico") ||
-    url.pathname.endsWith(".json");
-
-  if (isHTML) {
-    // NETWORK FIRST
-    event.respondWith((async () => {
-      try {
-        const fresh = await fetch(req);
-        const cache = await caches.open(CACHE_VERSION);
-        cache.put(req, fresh.clone());
-        return fresh;
-      } catch (e) {
-        const cached = await caches.match(req);
-        return cached || caches.match("./index.html");
-      }
-    })());
+  if (request.method !== "GET") {
     return;
   }
 
-  if (isAsset) {
-    // STALE WHILE REVALIDATE
-    event.respondWith((async () => {
-      const cache = await caches.open(CACHE_VERSION);
-      const cached = await cache.match(req);
+  if (url.hostname.includes("api.open-meteo.com")) {
+    event.respondWith(fetch(request));
+    return;
+  }
 
-      const fetchPromise = fetch(req)
-        .then((fresh) => {
-          cache.put(req, fresh.clone());
-          return fresh;
+  event.respondWith(
+    caches.match(request).then((cached) => {
+      if (cached) return cached;
+
+      return fetch(request)
+        .then((response) => {
+          const copy = response.clone();
+
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(request, copy);
+          });
+
+          return response;
         })
-        .catch(() => cached);
-
-      return cached || fetchPromise;
-    })());
-    return;
-  }
-
-  event.respondWith((async () => {
-    try {
-      return await fetch(req);
-    } catch (e) {
-      const cached = await caches.match(req);
-      return cached || Response.error();
-    }
-  })());
+        .catch(() => caches.match("./index.html"));
+    })
+  );
 });
-
-
-
-
-
