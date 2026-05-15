@@ -3,355 +3,298 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="theme-color" content="#f5f7fb" />
+  <meta name="theme-color" content="#f4f6fb" />
+
   <title>SEM PLANO — Meteo</title>
 
-  <link rel="stylesheet" href="./styles.css?v=20260515_iphone" />
-  <link rel="apple-touch-icon" sizes="180x180" href="icon-180.png">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="apple-mobile-web-app-title" content="SEM PLANO">
+  <link rel="stylesheet" href="./styles.css?v=20260515_01" />
+
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png" />
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="SEM PLANO" />
 </head>
 
 <body>
-  <div class="ambientBg" aria-hidden="true"></div>
+  <div class="app-bg" aria-hidden="true"></div>
 
-  <div class="phone">
-    <div class="iosStatus" aria-hidden="true">
-      <span id="statusTime">09:35</span>
-      <span class="statusIcons">⌁ 5G ▰</span>
-    </div>
+  <div class="app-shell">
 
-    <header class="topBar">
-      <img src="./logo.png" alt="SEM PLANO" class="logo" />
-      <button class="topBtn" id="toggle48" type="button" aria-expanded="false">
-        <span class="btnIcon">▦</span>
-        <span>Próximas 48h</span>
-      </button>
-    </header>
+    <header class="app-header">
+      <div class="header-top">
+        <img src="./logo.png" alt="SEM PLANO" class="logo" />
 
-    <section class="heroGrid">
-      <div class="heroBlock">
-        <div class="heroLoc">
-          <span class="locIcon">⌖</span>
-          <span id="heroLoc">Alcabideche</span>
-        </div>
-
-        <div class="tempLine">
-          <div class="heroTemp" id="heroTemp">—°</div>
-          <div class="weatherIcon" id="heroIcon">🌤️</div>
-        </div>
-
-        <div class="heroMeta" id="heroMeta">
-          Sensação: —° · Máx: —° · Mín: —°
-        </div>
-
-        <div class="heroSun" id="heroSun">
-          Nascer: — · Pôr: —
-        </div>
-
-        <div class="updated" id="updated">—</div>
+        <button class="top-action" id="toggle48" type="button" aria-expanded="false">
+          <span class="top-action-icon"></span>
+          <span>Próximas 48h</span>
+        </button>
       </div>
 
-      <section class="card quickCard">
-        <div class="sectionKicker green">
-          <span class="checkIcon">✓</span>
-          Resumo rápido
-        </div>
-
-        <div class="quickText" id="quickText">
-          A calcular condições...
-        </div>
-
-        <div class="quickLabel">Melhor janela:</div>
-
-        <div class="quickWindow" id="quickWindow">
-          —
-        </div>
-      </section>
-    </section>
-
-    <div class="controls">
-      <select
-        id="locationSelect"
-        class="select"
-        aria-label="Selecionar localidade">
-      </select>
-    </div>
-
-    <main class="stack">
-
-      <div class="splitGrid nowAlertGrid">
-
-        <section class="card nowCard" id="nowCard">
-
-          <div class="sectionKicker">
-            <span class="dot greenDot"></span>
-            Agora
+      <section class="hero-card">
+        <div class="hero-main">
+          <div class="location-line">
+            <span class="pin-icon"></span>
+            <span id="heroLoc">Alcabideche</span>
           </div>
 
-          <div class="nowLayout">
-
-            <div class="kv">
-
-              <div class="kvRow">
-                <span>Vento</span>
-                <strong id="nowWind">—</strong>
-              </div>
-
-              <div class="kvRow">
-                <span>Rajadas</span>
-                <strong id="nowGust">—</strong>
-              </div>
-
-              <div class="kvRow">
-                <span>Direção</span>
-                <strong id="nowDirTxt">—</strong>
-              </div>
-
-              <div class="kvRow">
-                <span>Chuva</span>
-                <strong id="nowRain">—</strong>
-              </div>
-
-              <div class="kvRow">
-                <span>Prob.</span>
-                <strong id="nowPop">—</strong>
-              </div>
-
-            </div>
-
-            <div class="compass" aria-label="Direção do vento">
-
-              <span class="compassLabel n">N</span>
-              <span class="compassLabel e">E</span>
-              <span class="compassLabel s">S</span>
-              <span class="compassLabel w">O</span>
-
-              <div class="needle" id="dirNeedle"></div>
-              <div class="needleDot"></div>
-
-            </div>
-
-          </div>
-        </section>
-
-        <section class="card alertCard">
-
-          <div class="sectionKicker orange">
-            <span class="warnIcon">△</span>
-            Alertas
+          <div class="temp-row">
+            <div class="hero-temp" id="heroTemp">—°</div>
+            <div class="weather-badge" id="heroIcon">—</div>
           </div>
 
-          <div class="alertBody">
-
-            <div class="alertIcon">≋</div>
-
-            <div>
-              <div class="alertHeadline" id="alertHeadline">
-                Sem alertas relevantes
-              </div>
-
-              <div class="alertAdvice" id="alertAdvice">
-                Condições estáveis para outdoor.
-              </div>
-            </div>
-
+          <div class="hero-meta" id="heroMeta">
+            Sensação: —° · Máx: —° · Mín: —°
           </div>
 
-          <div id="alerts" class="alerts"></div>
+          <div class="hero-sun" id="heroSun">
+            Nascer: — · Pôr: —
+          </div>
 
-        </section>
-
-      </div>
-
-      <section class="card bestCard">
-
-        <div class="sectionKicker green">
-          ◷ Melhor janela (2h / próximas 12h)
+          <div class="updated" id="updated">
+            A atualizar…
+          </div>
         </div>
 
-        <div class="bestGrid">
-
-          <div>
-            <div id="bestWindow" class="bestWindowText">
-              —
-            </div>
-
-            <div class="muted small">
-              Sugestões entre 07:00 e 22:00.
-            </div>
+        <div class="quick-card">
+          <div class="section-title green">
+            <span class="check-dot">✓</span>
+            <span>Resumo rápido</span>
           </div>
 
-          <div class="miniChart" id="bestChart" aria-hidden="true"></div>
+          <div class="quick-copy" id="quickText">
+            A calcular condições...
+          </div>
 
-        </div>
+          <div class="quick-label">
+            Melhor janela:
+          </div>
 
-      </section>
-
-      <section class="card directionCard">
-
-        <div class="sectionKicker blue">
-          ⌁ Sugestão de atividade e sentido
-        </div>
-
-        <div class="directionGrid">
-
-          <div id="windSuggestion" class="directionText">
+          <div class="quick-window" id="quickWindow">
             —
           </div>
-
-          <div class="routeSketch" aria-hidden="true">
-
-            <span class="routeLabel top">Serra</span>
-            <span class="routeLabel bottom">Cascais</span>
-
-            <svg viewBox="0 0 140 90" role="img">
-
-              <path
-                d="M25 72 C48 58, 38 34, 61 31 C84 27, 77 10, 111 18"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="7"
-                stroke-linecap="round"
-                opacity=".20"/>
-
-              <path
-                d="M25 72 C48 58, 38 34, 61 31 C84 27, 77 10, 111 18"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-dasharray="8 7"/>
-
-              <circle cx="25" cy="72" r="5"/>
-
-              <path d="M108 18 l-12 -3 l6 11 z"/>
-
-            </svg>
-
-            <span class="bikeIcon">🚴</span>
-
-          </div>
-
         </div>
-
       </section>
 
-      <section class="card dressCard">
+      <div class="location-control">
+        <select id="locationSelect" aria-label="Selecionar localidade"></select>
+      </div>
+    </header>
 
-        <div class="sectionKicker blue">
-          ▣ O que vestir (sugestão)
+    <main class="content-stack">
+
+      <section class="card now-card">
+        <div class="section-title">
+          <span class="status-dot"></span>
+          <span>Agora</span>
         </div>
 
-        <div class="dressGrid">
+        <div class="now-grid">
+          <div class="metrics-list">
+            <div class="metric-row">
+              <span>Vento</span>
+              <strong id="nowWind">—</strong>
+            </div>
 
-          <div class="dressItem">
-            <span class="activityIcon bike">🚴</span>
+            <div class="metric-row">
+              <span>Rajadas</span>
+              <strong id="nowGust">—</strong>
+            </div>
 
+            <div class="metric-row">
+              <span>Direção</span>
+              <strong id="nowDirTxt">—</strong>
+            </div>
+
+            <div class="metric-row">
+              <span>Chuva</span>
+              <strong id="nowRain">—</strong>
+            </div>
+
+            <div class="metric-row">
+              <span>Prob.</span>
+              <strong id="nowPop">—</strong>
+            </div>
+          </div>
+
+          <div class="compass-wrap">
+            <div class="compass">
+              <span class="compass-label compass-n">N</span>
+              <span class="compass-label compass-e">E</span>
+              <span class="compass-label compass-s">S</span>
+              <span class="compass-label compass-w">O</span>
+
+              <div class="needle" id="dirNeedle"></div>
+              <div class="needle-center"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card alert-card" id="alertCard">
+        <div class="section-title orange">
+          <span class="alert-triangle"></span>
+          <span>Alertas</span>
+        </div>
+
+        <div class="alert-layout">
+          <div class="alert-icon"></div>
+
+          <div>
+            <div class="alert-headline" id="alertHeadline">
+              Sem alertas relevantes
+            </div>
+
+            <div class="alert-advice" id="alertAdvice">
+              Condições estáveis para outdoor.
+            </div>
+          </div>
+        </div>
+
+        <div class="alert-tags" id="alerts"></div>
+      </section>
+
+      <section class="card best-card">
+        <div class="section-title green">
+          <span class="clock-icon"></span>
+          <span>Melhor janela (2h / próximas 12h)</span>
+        </div>
+
+        <div class="best-grid">
+          <div>
+            <div class="best-window-text" id="bestWindow">—</div>
+            <div class="small-muted">Sugestões entre 07:00 e 22:00.</div>
+          </div>
+
+          <div class="mini-chart" id="bestChart"></div>
+        </div>
+      </section>
+
+      <section class="card direction-card">
+        <div class="section-title blue">
+          <span class="route-icon"></span>
+          <span>Sugestão de atividade e sentido</span>
+        </div>
+
+        <div class="direction-grid">
+          <div class="direction-text" id="windSuggestion">—</div>
+
+          <div class="route-visual" aria-hidden="true">
+            <span class="route-label route-label-top">Serra</span>
+            <span class="route-label route-label-bottom">Cascais</span>
+
+            <svg viewBox="0 0 160 110" class="route-svg">
+              <path
+                d="M25 86 C50 70, 43 42, 72 38 C101 34, 94 14, 132 22"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="12"
+                stroke-linecap="round"
+                opacity=".14" />
+
+              <path
+                d="M25 86 C50 70, 43 42, 72 38 C101 34, 94 14, 132 22"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="5"
+                stroke-linecap="round"
+                stroke-dasharray="13 12" />
+
+              <circle cx="25" cy="86" r="8" fill="currentColor" />
+              <path d="M132 22 l-17 -5 l8 17 z" fill="currentColor" />
+            </svg>
+
+            <div class="bike-mark">🚴</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card dress-card">
+        <div class="section-title blue">
+          <span class="shirt-icon"></span>
+          <span>O que vestir (sugestão)</span>
+        </div>
+
+        <div class="dress-grid">
+          <div class="dress-item">
+            <div class="activity-icon bike-icon">🚴</div>
             <div>
               <strong>Ciclismo</strong>
               <span id="dressBike">—</span>
             </div>
           </div>
 
-          <div class="dressItem">
-            <span class="activityIcon run">🏃</span>
-
+          <div class="dress-item">
+            <div class="activity-icon run-icon">🏃</div>
             <div>
               <strong>Corrida</strong>
               <span id="dressRun">—</span>
             </div>
           </div>
 
-          <div class="dressItem">
-            <span class="activityIcon walk">🚶</span>
-
+          <div class="dress-item">
+            <div class="activity-icon walk-icon">🚶</div>
             <div>
               <strong>Caminhada</strong>
               <span id="dressWalk">—</span>
             </div>
           </div>
-
         </div>
-
       </section>
 
-      <section class="card hourlyCard">
-
-        <div class="sectionKicker">
-          ◷ Próximas 8h
+      <section class="card hourly-card">
+        <div class="section-title">
+          <span class="clock-icon dark"></span>
+          <span>Próximas 8h</span>
         </div>
 
-        <div class="hourlyStrip" id="hourlyCards"></div>
+        <div class="hourly-strip" id="hourlyCards"></div>
 
         <table class="hidden" id="table8"></table>
-
       </section>
 
-      <section class="card cameraCard">
-
-        <div class="sectionKicker">
-          ▣ Câmara (Windy)
+      <section class="card camera-card">
+        <div class="section-title">
+          <span class="camera-icon"></span>
+          <span>Câmara (Windy)</span>
         </div>
 
-        <div class="windyWrap">
-
+        <div class="windy-frame">
           <a
             name="windy-webcam-nearby-embed"
             id="windyCam"
             data-params='{"lat":38.7330,"lon":-9.4100,"radius":15,"limit":1}'>
           </a>
 
-          <div class="liveBadge">
-            ● Ao vivo
-          </div>
-
+          <span class="live-badge">Ao vivo</span>
         </div>
 
-        <a
-          class="camLink"
-          id="windyLink"
-          href="#"
-          target="_blank"
-          rel="noreferrer">
-
+        <a class="cam-link" id="windyLink" href="#" target="_blank" rel="noreferrer">
           Ver webcams próximas
-
         </a>
-
       </section>
 
-      <section class="card detailsCard hidden" id="wrap48">
-
-        <div class="sectionKicker">
-          ▦ Próximas 48h
+      <section class="card details-card hidden" id="wrap48">
+        <div class="section-title">
+          <span class="calendar-icon"></span>
+          <span>Próximas 48h</span>
         </div>
 
-        <div class="tableWrap">
-          <table class="tbl" id="table48"></table>
+        <div class="table-scroll">
+          <table class="forecast-table" id="table48"></table>
         </div>
-
       </section>
 
-      <section class="card sourceCard">
-
-        <div class="sectionKicker">
-          Fonte
-        </div>
-
-        <div class="muted" id="source">
-          —
-        </div>
-
+      <section class="card source-card">
+        <div class="section-title">Fonte</div>
+        <div class="source-text" id="source">—</div>
       </section>
 
     </main>
   </div>
 
   <script async src="https://webcams.windy.com/webcams/public/embed/v2/script/nearby.js"></script>
-
-  <script src="./app.js?v=20260515_iphone"></script>
-
+  <script src="./app.js?v=20260515_01"></script>
 </body>
 </html>
