@@ -437,43 +437,11 @@
             <button type="button" id="tpSaveSetup">Guardar setup</button>
           </div>
 
-          <div class="tp-setup-list">
-            <button type="button" class="tp-setup is-active" data-tp-preset="kona">
-              <span class="tp-bike-icon">🚴</span>
-              <span>
-                <strong>Kona Rove DL</strong>
-                <small>Gravel 45 mm · Zipp 303 XPLR</small>
-              </span>
-              <em>Ativo</em>
-            </button>
+          <p class="tp-empty-setups" id="tpEmptySetups">
+            Ainda não tens setups guardados. Ajusta a calculadora e usa “Guardar setup” para criares o primeiro.
+          </p>
 
-            <button type="button" class="tp-setup" data-tp-preset="dt">
-              <span class="tp-bike-icon">🚴</span>
-              <span>
-                <strong>DT Swiss ARC 1600</strong>
-                <small>Estrada 28 mm · Tubeless</small>
-              </span>
-              <em></em>
-            </button>
-
-            <button type="button" class="tp-setup" data-tp-preset="zipp">
-              <span class="tp-bike-icon">🚴</span>
-              <span>
-                <strong>Zipp 303 XPLR</strong>
-                <small>Gravel rápido 45 mm</small>
-              </span>
-              <em></em>
-            </button>
-
-            <button type="button" class="tp-setup tp-setup-custom" data-tp-preset="custom">
-              <span class="tp-bike-icon">＋</span>
-              <span>
-                <strong>Novo setup personalizado</strong>
-                <small>Usa os valores atuais da calculadora</small>
-              </span>
-              <em></em>
-            </button>
-          </div>
+          <div class="tp-setup-list" id="tpSetupList" aria-live="polite"></div>
         </section>
       </section>
     </main>
