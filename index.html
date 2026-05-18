@@ -4,24 +4,18 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#f4f6fb" />
-
   <title>SEM PLANO — Meteo</title>
-
-  <link rel="stylesheet" href="./styles.css?v=20260515_02" />
-
+  <link rel="stylesheet" href="./styles.css?v=20260518_01" />
   <link rel="manifest" href="./manifest.json" />
   <link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png" />
-
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <meta name="apple-mobile-web-app-title" content="SEM PLANO" />
 </head>
-
 <body>
   <div class="app-bg" aria-hidden="true"></div>
 
   <div class="app-shell">
-
     <header class="app-header">
       <div class="header-top">
         <img src="./logo.png" alt="SEM PLANO" class="logo" />
@@ -83,7 +77,6 @@
     </header>
 
     <main class="content-stack">
-
       <section class="card now-card">
         <div class="section-title">
           <span class="status-dot"></span>
@@ -124,7 +117,6 @@
               <span class="compass-label compass-e">E</span>
               <span class="compass-label compass-s">S</span>
               <span class="compass-label compass-w">O</span>
-
               <div class="needle" id="dirNeedle"></div>
               <div class="needle-center"></div>
             </div>
@@ -192,7 +184,6 @@
                 stroke-width="12"
                 stroke-linecap="round"
                 opacity=".14" />
-
               <path
                 d="M25 86 C50 70, 43 42, 72 38 C101 34, 94 14, 132 22"
                 fill="none"
@@ -200,12 +191,11 @@
                 stroke-width="5"
                 stroke-linecap="round"
                 stroke-dasharray="13 12" />
-
               <circle cx="25" cy="86" r="8" fill="currentColor" />
               <path d="M132 22 l-17 -5 l8 17 z" fill="currentColor" />
             </svg>
 
-            <div class="bike-mark">🚴</div>
+            <div class="bike-mark"></div>
           </div>
         </div>
       </section>
@@ -218,7 +208,8 @@
 
         <div class="dress-grid">
           <div class="dress-item">
-            <div class="activity-icon bike-icon">🚴</div>
+            <div class="activity-icon bike-icon"></div>
+
             <div>
               <strong>Ciclismo</strong>
               <span id="dressBike">—</span>
@@ -226,7 +217,8 @@
           </div>
 
           <div class="dress-item">
-            <div class="activity-icon run-icon">🏃</div>
+            <div class="activity-icon run-icon"></div>
+
             <div>
               <strong>Corrida</strong>
               <span id="dressRun">—</span>
@@ -234,7 +226,8 @@
           </div>
 
           <div class="dress-item">
-            <div class="activity-icon walk-icon">🚶</div>
+            <div class="activity-icon walk-icon"></div>
+
             <div>
               <strong>Caminhada</strong>
               <span id="dressWalk">—</span>
@@ -250,7 +243,6 @@
         </div>
 
         <div class="hourly-strip" id="hourlyCards"></div>
-
         <table class="hidden" id="table8"></table>
       </section>
 
@@ -266,7 +258,6 @@
             id="windyCam"
             data-params='{"lat":38.7330,"lon":-9.4100,"radius":15,"limit":1}'>
           </a>
-
           <span class="live-badge">Ao vivo</span>
         </div>
 
@@ -291,10 +282,226 @@
         <div class="source-text" id="source">—</div>
       </section>
 
+      <section id="pressureView" class="pressure-view is-hidden" aria-labelledby="pressureTitle">
+        <header class="tp-header-card">
+          <button class="tp-back" type="button" data-app-view="meteo" aria-label="Voltar à meteorologia">‹</button>
+
+          <div class="tp-title-wrap">
+            <div class="tp-title-icon">◉</div>
+            <h1 id="pressureTitle">Pressão Pneus</h1>
+          </div>
+
+          <button class="tp-info" type="button" aria-label="Informação">i</button>
+        </header>
+
+        <div class="tp-tabs" role="tablist" aria-label="Secções de pressão">
+          <button class="tp-tab is-active" type="button">Calculadora</button>
+          <button class="tp-tab" type="button" data-scroll-target="tpSetups">Meus setups</button>
+          <button class="tp-tab" type="button">Histórico</button>
+        </div>
+
+        <section class="tp-card">
+          <h2>1. Ajusta os parâmetros</h2>
+
+          <div class="tp-form">
+            <label class="tp-row">
+              <span>Peso do ciclista equipado</span>
+              <div class="tp-control">
+                <button type="button" data-tp-step="-1" data-tp-target="tpRider">−</button>
+                <input id="tpRider" type="number" value="75" min="35" max="140" step="1">
+                <button type="button" data-tp-step="1" data-tp-target="tpRider">+</button>
+              </div>
+              <small>kg</small>
+            </label>
+
+            <label class="tp-row">
+              <span>Peso da bicicleta</span>
+              <div class="tp-control">
+                <button type="button" data-tp-step="-0.5" data-tp-target="tpBike">−</button>
+                <input id="tpBike" type="number" value="10.5" min="5" max="30" step="0.5">
+                <button type="button" data-tp-step="0.5" data-tp-target="tpBike">+</button>
+              </div>
+              <small>kg</small>
+            </label>
+
+            <label class="tp-row">
+              <span>Carga extra</span>
+              <div class="tp-control">
+                <button type="button" data-tp-step="-0.5" data-tp-target="tpCargo">−</button>
+                <input id="tpCargo" type="number" value="1" min="0" max="25" step="0.5">
+                <button type="button" data-tp-step="0.5" data-tp-target="tpCargo">+</button>
+              </div>
+              <small>kg</small>
+            </label>
+
+            <label class="tp-row">
+              <span>Tipo de piso</span>
+              <select id="tpSurface">
+                <option value="road">Estrada lisa</option>
+                <option value="allroad">All-road</option>
+                <option value="gravel" selected>Gravel misto</option>
+                <option value="rough">Gravel mau piso</option>
+              </select>
+            </label>
+
+            <label class="tp-row">
+              <span>Condição</span>
+              <select id="tpCondition">
+                <option value="dry" selected>Seco</option>
+                <option value="wet">Molhado</option>
+              </select>
+            </label>
+
+            <label class="tp-row">
+              <span>Preferência</span>
+              <select id="tpPreference">
+                <option value="comfort">Conforto</option>
+                <option value="balanced" selected>Equilíbrio</option>
+                <option value="performance">Performance</option>
+              </select>
+            </label>
+
+            <div class="tp-row">
+              <span>Sistema</span>
+              <div class="tp-segmented" role="group" aria-label="Sistema">
+                <button type="button" class="tp-segment is-active" data-tp-system="tubeless">Tubeless</button>
+                <button type="button" class="tp-segment" data-tp-system="tube">Câmara</button>
+              </div>
+            </div>
+
+            <label class="tp-row">
+              <span>Largura pneu frente</span>
+              <div class="tp-control">
+                <button type="button" data-tp-step="-1" data-tp-target="tpFrontWidth">−</button>
+                <input id="tpFrontWidth" type="number" value="45" min="23" max="60" step="1">
+                <button type="button" data-tp-step="1" data-tp-target="tpFrontWidth">+</button>
+              </div>
+              <small>mm</small>
+            </label>
+
+            <label class="tp-row">
+              <span>Largura pneu trás</span>
+              <div class="tp-control">
+                <button type="button" data-tp-step="-1" data-tp-target="tpRearWidth">−</button>
+                <input id="tpRearWidth" type="number" value="45" min="23" max="60" step="1">
+                <button type="button" data-tp-step="1" data-tp-target="tpRearWidth">+</button>
+              </div>
+              <small>mm</small>
+            </label>
+
+            <label class="tp-row">
+              <span>Largura int. da jante</span>
+              <div class="tp-control">
+                <button type="button" data-tp-step="-1" data-tp-target="tpRimWidth">−</button>
+                <input id="tpRimWidth" type="number" value="27" min="15" max="35" step="1">
+                <button type="button" data-tp-step="1" data-tp-target="tpRimWidth">+</button>
+              </div>
+              <small>mm</small>
+            </label>
+          </div>
+        </section>
+
+        <section class="tp-card">
+          <h2>2. Pressão recomendada</h2>
+
+          <div class="tp-result-grid">
+            <article class="tp-result tp-result-front">
+              <span>Frente</span>
+              <strong><span id="tpFrontBar">—</span> <small>bar</small></strong>
+              <em id="tpFrontPsi">— psi</em>
+            </article>
+
+            <article class="tp-result tp-result-rear">
+              <span>Trás</span>
+              <strong><span id="tpRearBar">—</span> <small>bar</small></strong>
+              <em id="tpRearPsi">— psi</em>
+            </article>
+          </div>
+
+          <div class="tp-balance">
+            <span>Conforto</span>
+            <div class="tp-balance-line">
+              <i id="tpBalanceDot"></i>
+            </div>
+            <span>Performance</span>
+          </div>
+
+          <div class="tp-tip" id="tpTip">
+            Ponto de partida recomendado. Ajusta ±0.1–0.2 bar conforme o terreno e a tua sensação.
+          </div>
+        </section>
+
+        <section class="tp-card" id="tpSetups">
+          <div class="tp-section-title">
+            <h2>3. Meus setups</h2>
+            <button type="button" id="tpSaveSetup">Guardar setup</button>
+          </div>
+
+          <div class="tp-setup-list">
+            <button type="button" class="tp-setup is-active" data-tp-preset="kona">
+              <span class="tp-bike-icon">🚴</span>
+              <span>
+                <strong>Kona Rove DL</strong>
+                <small>Gravel 45 mm · Zipp 303 XPLR</small>
+              </span>
+              <em>Ativo</em>
+            </button>
+
+            <button type="button" class="tp-setup" data-tp-preset="dt">
+              <span class="tp-bike-icon">🚴</span>
+              <span>
+                <strong>DT Swiss ARC 1600</strong>
+                <small>Estrada 28 mm · Tubeless</small>
+              </span>
+              <em></em>
+            </button>
+
+            <button type="button" class="tp-setup" data-tp-preset="zipp">
+              <span class="tp-bike-icon">🚴</span>
+              <span>
+                <strong>Zipp 303 XPLR</strong>
+                <small>Gravel rápido 45 mm</small>
+              </span>
+              <em></em>
+            </button>
+
+            <button type="button" class="tp-setup tp-setup-custom" data-tp-preset="custom">
+              <span class="tp-bike-icon">＋</span>
+              <span>
+                <strong>Novo setup personalizado</strong>
+                <small>Usa os valores atuais da calculadora</small>
+              </span>
+              <em></em>
+            </button>
+          </div>
+        </section>
+      </section>
     </main>
   </div>
 
+  <nav class="bottom-nav" aria-label="Navegação principal">
+    <button type="button" class="bottom-nav-btn is-active" data-app-view="meteo">
+      <span>☁️</span>
+      <strong>Meteo</strong>
+    </button>
+
+    <button type="button" class="bottom-nav-btn" data-app-view="pressure">
+      <span>◉</span>
+      <strong>Pressão Pneus</strong>
+    </button>
+
+    <button type="button" class="bottom-nav-btn" disabled>
+      <span>△</span>
+      <strong>Rotas</strong>
+    </button>
+
+    <button type="button" class="bottom-nav-btn" disabled>
+      <span>⚙</span>
+      <strong>Definições</strong>
+    </button>
+  </nav>
+
   <script async src="https://webcams.windy.com/webcams/public/embed/v2/script/nearby.js"></script>
-  <script src="./app.js?v=20260515_01"></script>
+  <script src="./app.js?v=20260518_01"></script>
 </body>
 </html>
