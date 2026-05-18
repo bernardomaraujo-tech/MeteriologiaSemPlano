@@ -855,59 +855,21 @@ window.addEventListener("DOMContentLoaded", init);
    SEM PLANO — Pressão Pneus
    ============================== */
 
-const TP_PRESETS = {
-  kona: {
-    riderWeight: 75,
-    bikeWeight: 10.5,
-    cargoWeight: 1,
-    surface: "gravel",
-    condition: "dry",
-    preference: "balanced",
-    system: "tubeless",
-    frontWidth: 45,
-    rearWidth: 45,
-    rimWidth: 27
-  },
-  dt: {
-    riderWeight: 75,
-    bikeWeight: 9.5,
-    cargoWeight: 0.5,
-    surface: "road",
-    condition: "dry",
-    preference: "balanced",
-    system: "tubeless",
-    frontWidth: 28,
-    rearWidth: 28,
-    rimWidth: 22
-  },
-  zipp: {
-    riderWeight: 75,
-    bikeWeight: 10.5,
-    cargoWeight: 1,
-    surface: "allroad",
-    condition: "dry",
-    preference: "balanced",
-    system: "tubeless",
-    frontWidth: 45,
-    rearWidth: 45,
-    rimWidth: 27
-  },
-  custom: {
-    riderWeight: 75,
-    bikeWeight: 10.5,
-    cargoWeight: 1,
-    surface: "gravel",
-    condition: "dry",
-    preference: "balanced",
-    system: "tubeless",
-    frontWidth: 45,
-    rearWidth: 45,
-    rimWidth: 27
-  }
+const TP_DEFAULT_VALUES = {
+  riderWeight: 75,
+  bikeWeight: 10.5,
+  cargoWeight: 1,
+  surface: "gravel",
+  condition: "dry",
+  preference: "balanced",
+  system: "tubeless",
+  frontWidth: 45,
+  rearWidth: 45,
+  rimWidth: 27
 };
 
-const TP_STORAGE_KEY = "semPlanoTirePressureSetup";
-const TP_ACTIVE_PRESET_KEY = "semPlanoTirePressureActivePreset";
+const TP_SETUPS_KEY = "semPlanoTirePressureSetupsV2";
+const TP_ACTIVE_SETUP_KEY = "semPlanoTirePressureActiveSetupV2";
 
 function tpEl(id) {
   return document.getElementById(id);
@@ -935,32 +897,34 @@ function tpSetSystem(system) {
 
 function tpReadValues() {
   return {
-    riderWeight: tpNumber("tpRider", 75),
-    bikeWeight: tpNumber("tpBike", 10.5),
-    cargoWeight: tpNumber("tpCargo", 1),
-    surface: tpEl("tpSurface")?.value || "gravel",
-    condition: tpEl("tpCondition")?.value || "dry",
-    preference: tpEl("tpPreference")?.value || "balanced",
+    riderWeight: tpNumber("tpRider", TP_DEFAULT_VALUES.riderWeight),
+    bikeWeight: tpNumber("tpBike", TP_DEFAULT_VALUES.bikeWeight),
+    cargoWeight: tpNumber("tpCargo", TP_DEFAULT_VALUES.cargoWeight),
+    surface: tpEl("tpSurface")?.value || TP_DEFAULT_VALUES.surface,
+    condition: tpEl("tpCondition")?.value || TP_DEFAULT_VALUES.condition,
+    preference: tpEl("tpPreference")?.value || TP_DEFAULT_VALUES.preference,
     system: tpGetSystem(),
-    frontWidth: tpNumber("tpFrontWidth", 45),
-    rearWidth: tpNumber("tpRearWidth", 45),
-    rimWidth: tpNumber("tpRimWidth", 27)
+    frontWidth: tpNumber("tpFrontWidth", TP_DEFAULT_VALUES.frontWidth),
+    rearWidth: tpNumber("tpRearWidth", TP_DEFAULT_VALUES.rearWidth),
+    rimWidth: tpNumber("tpRimWidth", TP_DEFAULT_VALUES.rimWidth)
   };
 }
 
 function tpApplyValues(values) {
-  tpSetValue("tpRider", values.riderWeight);
-  tpSetValue("tpBike", values.bikeWeight);
-  tpSetValue("tpCargo", values.cargoWeight);
-  tpSetValue("tpFrontWidth", values.frontWidth);
-  tpSetValue("tpRearWidth", values.rearWidth);
-  tpSetValue("tpRimWidth", values.rimWidth);
+  const next = { ...TP_DEFAULT_VALUES, ...(values || {}) };
 
-  if (tpEl("tpSurface")) tpEl("tpSurface").value = values.surface;
-  if (tpEl("tpCondition")) tpEl("tpCondition").value = values.condition;
-  if (tpEl("tpPreference")) tpEl("tpPreference").value = values.preference;
+  tpSetValue("tpRider", next.riderWeight);
+  tpSetValue("tpBike", next.bikeWeight);
+  tpSetValue("tpCargo", next.cargoWeight);
+  tpSetValue("tpFrontWidth", next.frontWidth);
+  tpSetValue("tpRearWidth", next.rearWidth);
+  tpSetValue("tpRimWidth", next.rimWidth);
 
-  tpSetSystem(values.system);
+  if (tpEl("tpSurface")) tpEl("tpSurface").value = next.surface;
+  if (tpEl("tpCondition")) tpEl("tpCondition").value = next.condition;
+  if (tpEl("tpPreference")) tpEl("tpPreference").value = next.preference;
+
+  tpSetSystem(next.system);
   tpRenderPressure();
 }
 
@@ -1058,50 +1022,171 @@ function tpRenderPressure() {
   }
 }
 
-function tpSetActivePreset(presetId) {
-  document.querySelectorAll("[data-tp-preset]").forEach((button) => {
-    const active = button.dataset.tpPreset === presetId;
-    button.classList.toggle("is-active", active);
+function tpGetSavedSetups() {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(TP_SETUPS_KEY) || "[]");
+    if (!Array.isArray(parsed)) return [];
 
-    const badge = button.querySelector("em");
-    if (badge) badge.textContent = active ? "Ativo" : "";
-  });
-
-  localStorage.setItem(TP_ACTIVE_PRESET_KEY, presetId);
+    return parsed.filter((setup) => {
+      return setup && typeof setup.id === "string" && setup.values;
+    });
+  } catch (_) {
+    return [];
+  }
 }
 
-function tpLoadPreset(presetId) {
-  if (presetId === "custom") {
-    const saved = localStorage.getItem(TP_STORAGE_KEY);
+function tpSetSavedSetups(setups) {
+  localStorage.setItem(TP_SETUPS_KEY, JSON.stringify(setups));
+}
 
-    if (saved) {
-      try {
-        tpApplyValues(JSON.parse(saved));
-      } catch (_) {
-        tpApplyValues(TP_PRESETS.custom);
-      }
-    } else {
-      tpApplyValues(tpReadValues());
-    }
+function tpSurfaceLabel(value) {
+  const labels = {
+    road: "Estrada lisa",
+    allroad: "All-road",
+    gravel: "Gravel misto",
+    rough: "Gravel mau piso"
+  };
 
-    tpSetActivePreset("custom");
-    return;
+  return labels[value] || "Gravel misto";
+}
+
+function tpSystemLabel(value) {
+  return value === "tube" ? "Câmara" : "Tubeless";
+}
+
+function tpFormatSetupSummary(values) {
+  const front = Number(values.frontWidth || TP_DEFAULT_VALUES.frontWidth);
+  const rear = Number(values.rearWidth || TP_DEFAULT_VALUES.rearWidth);
+  const tyreText = front === rear ? `${front} mm` : `${front}/${rear} mm`;
+
+  return `${tpSurfaceLabel(values.surface)} · ${tyreText} · ${tpSystemLabel(values.system)}`;
+}
+
+function tpDefaultSetupName(values) {
+  const now = new Date();
+  const date = now.toLocaleDateString("pt-PT", {
+    day: "2-digit",
+    month: "2-digit"
+  });
+
+  return `${tpSurfaceLabel(values.surface)} ${values.frontWidth}/${values.rearWidth} mm · ${date}`;
+}
+
+function tpSetActiveSetup(setupId) {
+  if (setupId) {
+    localStorage.setItem(TP_ACTIVE_SETUP_KEY, setupId);
+  } else {
+    localStorage.removeItem(TP_ACTIVE_SETUP_KEY);
   }
 
-  const preset = TP_PRESETS[presetId] || TP_PRESETS.kona;
-  tpApplyValues(preset);
-  tpSetActivePreset(presetId);
+  tpRenderSavedSetups();
+}
+
+function tpEscapeHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+function tpRenderSavedSetups() {
+  const list = tpEl("tpSetupList");
+  const empty = tpEl("tpEmptySetups");
+  if (!list || !empty) return;
+
+  const setups = tpGetSavedSetups();
+  const activeSetupId = localStorage.getItem(TP_ACTIVE_SETUP_KEY);
+
+  empty.classList.toggle("is-hidden", setups.length > 0);
+  list.innerHTML = setups
+    .map((setup) => {
+      const active = setup.id === activeSetupId;
+      const safeName = tpEscapeHtml(setup.name || "Setup sem nome");
+      const safeSummary = tpEscapeHtml(tpFormatSetupSummary(setup.values || TP_DEFAULT_VALUES));
+
+      return `
+        <article class="tp-setup ${active ? "is-active" : ""}" data-tp-setup-id="${setup.id}">
+          <button type="button" class="tp-setup-main" data-tp-load-setup="${setup.id}">
+            <span class="tp-bike-icon">🚴</span>
+            <span class="tp-setup-text">
+              <strong>${safeName}</strong>
+              <small>${safeSummary}</small>
+            </span>
+          </button>
+          <em>${active ? "Ativo" : ""}</em>
+          <button type="button" class="tp-delete-setup" data-tp-delete-setup="${setup.id}" aria-label="Apagar setup ${safeName}">Apagar</button>
+        </article>
+      `;
+    })
+    .join("");
+}
+
+function tpLoadSavedSetup(setupId) {
+  const setup = tpGetSavedSetups().find((item) => item.id === setupId);
+  if (!setup) return;
+
+  tpApplyValues(setup.values);
+  tpSetActiveSetup(setup.id);
+
+  const tip = tpEl("tpTip");
+  if (tip) {
+    tip.textContent = `Setup “${setup.name}” carregado. Podes ajustar os valores e guardar como novo setup.`;
+  }
 }
 
 function tpSaveCurrentSetup() {
   const values = tpReadValues();
-  localStorage.setItem(TP_STORAGE_KEY, JSON.stringify(values));
-  tpSetActivePreset("custom");
+  const defaultName = tpDefaultSetupName(values);
+  const name = window.prompt("Nome do setup", defaultName);
+
+  if (!name || !name.trim()) return;
+
+  const setup = {
+    id: `setup-${Date.now()}`,
+    name: name.trim(),
+    createdAt: new Date().toISOString(),
+    values
+  };
+
+  const setups = tpGetSavedSetups();
+  setups.push(setup);
+  tpSetSavedSetups(setups);
+  tpSetActiveSetup(setup.id);
 
   const tip = tpEl("tpTip");
   if (tip) {
-    tip.textContent = "Setup guardado neste dispositivo. Podes voltar a ele através de “Novo setup personalizado”.";
+    tip.textContent = `Setup “${setup.name}” guardado neste dispositivo.`;
   }
+}
+
+function tpDeleteSavedSetup(setupId) {
+  const setups = tpGetSavedSetups();
+  const setup = setups.find((item) => item.id === setupId);
+  if (!setup) return;
+
+  const confirmed = window.confirm(`Apagar o setup “${setup.name}”?`);
+  if (!confirmed) return;
+
+  const nextSetups = setups.filter((item) => item.id !== setupId);
+  tpSetSavedSetups(nextSetups);
+
+  if (localStorage.getItem(TP_ACTIVE_SETUP_KEY) === setupId) {
+    localStorage.removeItem(TP_ACTIVE_SETUP_KEY);
+  }
+
+  tpRenderSavedSetups();
+
+  const tip = tpEl("tpTip");
+  if (tip) {
+    tip.textContent = `Setup “${setup.name}” apagado. A calculadora mantém os valores atuais.`;
+  }
+}
+
+function tpMarkCalculatorAsCustom() {
+  localStorage.removeItem(TP_ACTIVE_SETUP_KEY);
+  tpRenderSavedSetups();
 }
 
 function setAppView(view) {
@@ -1150,19 +1235,19 @@ function initPressureTool() {
       const next = tpClamp(current + step, min, max);
 
       target.value = Number.isInteger(step) ? Math.round(next) : next.toFixed(1);
-      tpSetActivePreset("custom");
+      tpMarkCalculatorAsCustom();
       tpRenderPressure();
     });
   });
 
   document.querySelectorAll("#pressureView input, #pressureView select").forEach((field) => {
     field.addEventListener("input", () => {
-      tpSetActivePreset("custom");
+      tpMarkCalculatorAsCustom();
       tpRenderPressure();
     });
 
     field.addEventListener("change", () => {
-      tpSetActivePreset("custom");
+      tpMarkCalculatorAsCustom();
       tpRenderPressure();
     });
   });
@@ -1170,15 +1255,23 @@ function initPressureTool() {
   document.querySelectorAll("[data-tp-system]").forEach((button) => {
     button.addEventListener("click", () => {
       tpSetSystem(button.dataset.tpSystem);
-      tpSetActivePreset("custom");
+      tpMarkCalculatorAsCustom();
       tpRenderPressure();
     });
   });
 
-  document.querySelectorAll("[data-tp-preset]").forEach((button) => {
-    button.addEventListener("click", () => {
-      tpLoadPreset(button.dataset.tpPreset);
-    });
+  tpEl("tpSetupList")?.addEventListener("click", (event) => {
+    const loadButton = event.target.closest("[data-tp-load-setup]");
+    const deleteButton = event.target.closest("[data-tp-delete-setup]");
+
+    if (deleteButton) {
+      tpDeleteSavedSetup(deleteButton.dataset.tpDeleteSetup);
+      return;
+    }
+
+    if (loadButton) {
+      tpLoadSavedSetup(loadButton.dataset.tpLoadSetup);
+    }
   });
 
   document.querySelectorAll("[data-scroll-target]").forEach((button) => {
@@ -1190,8 +1283,18 @@ function initPressureTool() {
 
   tpEl("tpSaveSetup")?.addEventListener("click", tpSaveCurrentSetup);
 
-  const activePreset = localStorage.getItem(TP_ACTIVE_PRESET_KEY) || "kona";
-  tpLoadPreset(activePreset);
+  const setups = tpGetSavedSetups();
+  const activeSetupId = localStorage.getItem(TP_ACTIVE_SETUP_KEY);
+  const activeSetup = setups.find((setup) => setup.id === activeSetupId);
+
+  if (activeSetup) {
+    tpApplyValues(activeSetup.values);
+  } else {
+    localStorage.removeItem(TP_ACTIVE_SETUP_KEY);
+    tpApplyValues(TP_DEFAULT_VALUES);
+  }
+
+  tpRenderSavedSetups();
   setAppView("meteo");
 }
 
