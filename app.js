@@ -748,7 +748,7 @@ function renderAll(data, sourceName, loc) {
   }
 
   if (els.dirNeedle) {
-    els.dirNeedle.style.transform = `translate(-50%, -50%) rotate(${(dir + 180) % 360}deg)`;
+    els.dirNeedle.style.transform = `translate(-50%, -50%) rotate(${dir}deg)`;
   }
 
   const best = computeBestWindowNext12h(data);
