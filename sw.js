@@ -1,4 +1,4 @@
-const CACHE_NAME = "sem-plano-meteo-v20260518-01";
+const CACHE_NAME = "sem-plano-meteo-v20260518-04";
 
 const APP_SHELL = [
   "./",
