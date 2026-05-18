@@ -849,3 +849,350 @@ function init() {
 }
 
 window.addEventListener("DOMContentLoaded", init);
+
+
+/* ==============================
+   SEM PLANO — Pressão Pneus
+   ============================== */
+
+const TP_PRESETS = {
+  kona: {
+    riderWeight: 75,
+    bikeWeight: 10.5,
+    cargoWeight: 1,
+    surface: "gravel",
+    condition: "dry",
+    preference: "balanced",
+    system: "tubeless",
+    frontWidth: 45,
+    rearWidth: 45,
+    rimWidth: 27
+  },
+  dt: {
+    riderWeight: 75,
+    bikeWeight: 9.5,
+    cargoWeight: 0.5,
+    surface: "road",
+    condition: "dry",
+    preference: "balanced",
+    system: "tubeless",
+    frontWidth: 28,
+    rearWidth: 28,
+    rimWidth: 22
+  },
+  zipp: {
+    riderWeight: 75,
+    bikeWeight: 10.5,
+    cargoWeight: 1,
+    surface: "allroad",
+    condition: "dry",
+    preference: "balanced",
+    system: "tubeless",
+    frontWidth: 45,
+    rearWidth: 45,
+    rimWidth: 27
+  },
+  custom: {
+    riderWeight: 75,
+    bikeWeight: 10.5,
+    cargoWeight: 1,
+    surface: "gravel",
+    condition: "dry",
+    preference: "balanced",
+    system: "tubeless",
+    frontWidth: 45,
+    rearWidth: 45,
+    rimWidth: 27
+  }
+};
+
+const TP_STORAGE_KEY = "semPlanoTirePressureSetup";
+const TP_ACTIVE_PRESET_KEY = "semPlanoTirePressureActivePreset";
+
+function tpEl(id) {
+  return document.getElementById(id);
+}
+
+function tpNumber(id, fallback = 0) {
+  const value = Number(tpEl(id)?.value);
+  return Number.isFinite(value) ? value : fallback;
+}
+
+function tpSetValue(id, value) {
+  const el = tpEl(id);
+  if (el) el.value = value;
+}
+
+function tpGetSystem() {
+  return document.querySelector(".tp-segment.is-active")?.dataset.tpSystem || "tubeless";
+}
+
+function tpSetSystem(system) {
+  document.querySelectorAll("[data-tp-system]").forEach((button) => {
+    button.classList.toggle("is-active", button.dataset.tpSystem === system);
+  });
+}
+
+function tpReadValues() {
+  return {
+    riderWeight: tpNumber("tpRider", 75),
+    bikeWeight: tpNumber("tpBike", 10.5),
+    cargoWeight: tpNumber("tpCargo", 1),
+    surface: tpEl("tpSurface")?.value || "gravel",
+    condition: tpEl("tpCondition")?.value || "dry",
+    preference: tpEl("tpPreference")?.value || "balanced",
+    system: tpGetSystem(),
+    frontWidth: tpNumber("tpFrontWidth", 45),
+    rearWidth: tpNumber("tpRearWidth", 45),
+    rimWidth: tpNumber("tpRimWidth", 27)
+  };
+}
+
+function tpApplyValues(values) {
+  tpSetValue("tpRider", values.riderWeight);
+  tpSetValue("tpBike", values.bikeWeight);
+  tpSetValue("tpCargo", values.cargoWeight);
+  tpSetValue("tpFrontWidth", values.frontWidth);
+  tpSetValue("tpRearWidth", values.rearWidth);
+  tpSetValue("tpRimWidth", values.rimWidth);
+
+  if (tpEl("tpSurface")) tpEl("tpSurface").value = values.surface;
+  if (tpEl("tpCondition")) tpEl("tpCondition").value = values.condition;
+  if (tpEl("tpPreference")) tpEl("tpPreference").value = values.preference;
+
+  tpSetSystem(values.system);
+  tpRenderPressure();
+}
+
+function tpClamp(value, min, max) {
+  return Math.min(Math.max(value, min), max);
+}
+
+function tpRoundBar(value) {
+  return Math.round(value * 10) / 10;
+}
+
+function tpBarToPsi(value) {
+  return Math.round(value * 14.5038);
+}
+
+function tpCalculate(values) {
+  const totalWeight = Math.max(
+    45,
+    values.riderWeight + values.bikeWeight + values.cargoWeight
+  );
+
+  const referenceWeight = 86.5;
+  const referenceWidth = 45;
+  const widthExponent = 1.45;
+
+  const weightFactor = totalWeight / referenceWeight;
+
+  let frontBar =
+    1.75 *
+    weightFactor *
+    Math.pow(referenceWidth / Math.max(values.frontWidth, 20), widthExponent);
+
+  let rearBar =
+    2.0 *
+    weightFactor *
+    Math.pow(referenceWidth / Math.max(values.rearWidth, 20), widthExponent);
+
+  const surfaceAdjustment = {
+    road: 0.35,
+    allroad: 0.15,
+    gravel: 0,
+    rough: -0.12
+  };
+
+  const preferenceAdjustment = {
+    comfort: -0.1,
+    balanced: 0,
+    performance: 0.12
+  };
+
+  const systemAdjustment = values.system === "tube" ? 0.25 : 0;
+  const conditionAdjustment = values.condition === "wet" ? -0.1 : 0;
+
+  const finalAdjustment =
+    (surfaceAdjustment[values.surface] || 0) +
+    (preferenceAdjustment[values.preference] || 0) +
+    systemAdjustment +
+    conditionAdjustment;
+
+  frontBar += finalAdjustment;
+  rearBar += finalAdjustment;
+
+  const minPressure = values.system === "tube" ? 1.8 : 1.2;
+  const maxPressure = values.frontWidth <= 30 || values.rearWidth <= 30 ? 7.0 : 4.0;
+
+  return {
+    frontBar: tpRoundBar(tpClamp(frontBar, minPressure, maxPressure)),
+    rearBar: tpRoundBar(tpClamp(rearBar, minPressure, maxPressure))
+  };
+}
+
+function tpPreferencePosition(preference) {
+  if (preference === "comfort") return "25%";
+  if (preference === "performance") return "75%";
+  return "50%";
+}
+
+function tpRenderPressure() {
+  const values = tpReadValues();
+  const result = tpCalculate(values);
+
+  if (tpEl("tpFrontBar")) tpEl("tpFrontBar").textContent = result.frontBar.toFixed(1);
+  if (tpEl("tpRearBar")) tpEl("tpRearBar").textContent = result.rearBar.toFixed(1);
+  if (tpEl("tpFrontPsi")) tpEl("tpFrontPsi").textContent = `${tpBarToPsi(result.frontBar)} psi`;
+  if (tpEl("tpRearPsi")) tpEl("tpRearPsi").textContent = `${tpBarToPsi(result.rearBar)} psi`;
+
+  const dot = tpEl("tpBalanceDot");
+  if (dot) dot.style.left = tpPreferencePosition(values.preference);
+
+  const tip = tpEl("tpTip");
+  if (tip) {
+    const wetText = values.condition === "wet" ? " Como está molhado, a app reduz ligeiramente a pressão." : "";
+    const tubeText = values.system === "tube" ? " Com câmara, a pressão sobe para reduzir risco de snake bite." : "";
+    tip.textContent = `Ponto de partida recomendado. Ajusta ±0.1–0.2 bar conforme o terreno e a tua sensação.${wetText}${tubeText}`;
+  }
+}
+
+function tpSetActivePreset(presetId) {
+  document.querySelectorAll("[data-tp-preset]").forEach((button) => {
+    const active = button.dataset.tpPreset === presetId;
+    button.classList.toggle("is-active", active);
+
+    const badge = button.querySelector("em");
+    if (badge) badge.textContent = active ? "Ativo" : "";
+  });
+
+  localStorage.setItem(TP_ACTIVE_PRESET_KEY, presetId);
+}
+
+function tpLoadPreset(presetId) {
+  if (presetId === "custom") {
+    const saved = localStorage.getItem(TP_STORAGE_KEY);
+
+    if (saved) {
+      try {
+        tpApplyValues(JSON.parse(saved));
+      } catch (_) {
+        tpApplyValues(TP_PRESETS.custom);
+      }
+    } else {
+      tpApplyValues(tpReadValues());
+    }
+
+    tpSetActivePreset("custom");
+    return;
+  }
+
+  const preset = TP_PRESETS[presetId] || TP_PRESETS.kona;
+  tpApplyValues(preset);
+  tpSetActivePreset(presetId);
+}
+
+function tpSaveCurrentSetup() {
+  const values = tpReadValues();
+  localStorage.setItem(TP_STORAGE_KEY, JSON.stringify(values));
+  tpSetActivePreset("custom");
+
+  const tip = tpEl("tpTip");
+  if (tip) {
+    tip.textContent = "Setup guardado neste dispositivo. Podes voltar a ele através de “Novo setup personalizado”.";
+  }
+}
+
+function setAppView(view) {
+  const main = document.querySelector("main");
+  const pressureView = tpEl("pressureView");
+  const showPressure = view === "pressure";
+
+  document.body.classList.toggle("view-pressure", showPressure);
+
+  if (main && pressureView) {
+    Array.from(main.children).forEach((child) => {
+      if (child === pressureView) {
+        child.classList.toggle("is-hidden", !showPressure);
+      } else {
+        child.classList.toggle("is-hidden", showPressure);
+      }
+    });
+  }
+
+  document.querySelectorAll(".bottom-nav-btn[data-app-view]").forEach((button) => {
+    button.classList.toggle("is-active", button.dataset.appView === view);
+  });
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function initPressureTool() {
+  if (!tpEl("pressureView")) return;
+
+  document.querySelectorAll("[data-app-view]").forEach((button) => {
+    button.addEventListener("click", () => {
+      if (button.disabled) return;
+      setAppView(button.dataset.appView);
+    });
+  });
+
+  document.querySelectorAll("[data-tp-step]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const target = tpEl(button.dataset.tpTarget);
+      if (!target) return;
+
+      const step = Number(button.dataset.tpStep || target.step || 1);
+      const min = Number(target.min || -Infinity);
+      const max = Number(target.max || Infinity);
+      const current = Number(target.value || 0);
+      const next = tpClamp(current + step, min, max);
+
+      target.value = Number.isInteger(step) ? Math.round(next) : next.toFixed(1);
+      tpSetActivePreset("custom");
+      tpRenderPressure();
+    });
+  });
+
+  document.querySelectorAll("#pressureView input, #pressureView select").forEach((field) => {
+    field.addEventListener("input", () => {
+      tpSetActivePreset("custom");
+      tpRenderPressure();
+    });
+
+    field.addEventListener("change", () => {
+      tpSetActivePreset("custom");
+      tpRenderPressure();
+    });
+  });
+
+  document.querySelectorAll("[data-tp-system]").forEach((button) => {
+    button.addEventListener("click", () => {
+      tpSetSystem(button.dataset.tpSystem);
+      tpSetActivePreset("custom");
+      tpRenderPressure();
+    });
+  });
+
+  document.querySelectorAll("[data-tp-preset]").forEach((button) => {
+    button.addEventListener("click", () => {
+      tpLoadPreset(button.dataset.tpPreset);
+    });
+  });
+
+  document.querySelectorAll("[data-scroll-target]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const target = tpEl(button.dataset.scrollTarget);
+      if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+
+  tpEl("tpSaveSetup")?.addEventListener("click", tpSaveCurrentSetup);
+
+  const activePreset = localStorage.getItem(TP_ACTIVE_PRESET_KEY) || "kona";
+  tpLoadPreset(activePreset);
+  setAppView("meteo");
+}
+
+window.addEventListener("DOMContentLoaded", initPressureTool);
