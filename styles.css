@@ -328,6 +328,13 @@ select {
   font-size: 15px;
 }
 
+.location-hint {
+  margin: 8px 4px 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
 .content-stack {
   display: flex;
   flex-direction: column;
