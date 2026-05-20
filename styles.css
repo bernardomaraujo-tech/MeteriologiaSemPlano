@@ -1528,3 +1528,37 @@ body.view-pressure .app-header {
     width: 100%;
   }
 }
+
+/* Correção v20260520_03 — ícones da secção "O que vestir" */
+.activity-icon::before,
+.shirt-icon::before {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+  line-height: 1;
+}
+
+.bike-icon::before {
+  content: "🚴";
+}
+
+.run-icon::before {
+  content: "🏃";
+}
+
+.walk-icon::before {
+  content: "🚶";
+}
+
+.shirt-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.shirt-icon::before {
+  content: "👕";
+  font-size: 16px;
+}
