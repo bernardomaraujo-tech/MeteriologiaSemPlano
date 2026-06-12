@@ -21,13 +21,17 @@ const LOCATIONS = [
   { id: "columbeira", name: "Columbeira", lat: 39.2650, lon: -9.1800 },
   { id: "culatra", name: "Ilha da Culatra", lat: 36.9889, lon: -7.8336 },
   { id: "estoril", name: "Estoril", lat: 38.7057, lon: -9.3977 },
+  { id: "fatima", name: "Fátima", lat: 39.6172, lon: -8.6521 },
   { id: "guincho", name: "Guincho", lat: 38.72948, lon: -9.47457 },
+  { id: "minde", name: "Minde", lat: 39.5153, lon: -8.6871 },
   { id: "peninha", name: "Peninha", lat: 38.7692, lon: -9.4589 },
   { id: "praia_tocha", name: "Praia da Tocha", lat: 40.3300, lon: -8.7860 },
+  { id: "santarem", name: "Santarém", lat: 39.2369, lon: -8.6850 },
+  { id: "santacombadao", name: "Santa Comba Dão", lat: 40.3979, lon: -8.1304 },
   { id: "sdr", name: "São Domingos de Rana", lat: 38.7019, lon: -9.3389 },
-  { id: "sintra", name: "Sintra", lat: 38.8029, lon: -9.3817 },
   { id: "setubal", name: "Setúbal", lat: 38.5244, lon: -8.8882 },
-  { id: "santacombadao", name: "Santa Comba Dão", lat: 40.3979, lon: -8.1304 }
+  { id: "sintra", name: "Sintra", lat: 38.8029, lon: -9.3817 },
+  { id: "vila_franca_xira", name: "Vila Franca de Xira", lat: 38.9553, lon: -8.9897 }
 ];
 
 const POIS = [
