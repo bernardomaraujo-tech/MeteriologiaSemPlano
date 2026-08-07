@@ -1,4 +1,4 @@
-const CACHE_NAME = "sem-plano-meteo-v20260520-03";
+const CACHE_NAME = "sem-plano-meteo-v20260807-01";
 
 const APP_SHELL = [
   "./",
@@ -45,7 +45,7 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  if (url.hostname.includes("api.open-meteo.com")) {
+  if (url.hostname.includes("open-meteo.com")) {
     event.respondWith(fetch(request));
     return;
   }
