@@ -1,476 +1,266 @@
 <!doctype html>
 <html lang="pt-PT">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="theme-color" content="#f4f6fb" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f6f7f5">
+  <meta name="description" content="Meteorologia técnica para ciclismo e calculadora de pressão de pneus.">
   <title>SEM PLANO — Meteo</title>
-  <link rel="stylesheet" href="./styles.css?v=20260520_03" />
-  <link rel="manifest" href="./manifest.json" />
-  <link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-  <meta name="apple-mobile-web-app-title" content="SEM PLANO" />
+  <link rel="stylesheet" href="./styles.css?v=20260807_01">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="SEM PLANO">
 </head>
 <body>
-  <div class="app-bg" aria-hidden="true"></div>
+  <svg class="svg-defs" aria-hidden="true">
+    <defs>
+      <symbol id="i-current" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="7"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></symbol>
+      <symbol id="i-forecast" viewBox="0 0 24 24"><path d="M7.5 18.5h9a4 4 0 0 0 .5-8 5.5 5.5 0 0 0-10.6 1.7A3.2 3.2 0 0 0 7.5 18.5Z"/></symbol>
+      <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M4.5 18a8.5 8.5 0 1 1 15 0"/><path d="m12 14 4-5"/><circle cx="12" cy="14" r="1"/></symbol>
+      <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 7v5h-5"/><path d="M18.5 16a8 8 0 1 1 .5-9l1 1"/></symbol>
+      <symbol id="i-location" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="7"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></symbol>
+      <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m7 9 5 5 5-5"/></symbol>
+      <symbol id="i-wind" viewBox="0 0 24 24"><path d="M3 8h11a3 3 0 1 0-3-3"/><path d="M3 12h16a3 3 0 1 1-3 3"/><path d="M3 16h8"/></symbol>
+      <symbol id="i-rain" viewBox="0 0 24 24"><path d="M7 15h10a4 4 0 0 0 .5-8A5.5 5.5 0 0 0 7 8.7 3.2 3.2 0 0 0 7 15Z"/><path d="m8 18-1 2M12 18l-1 2M16 18l-1 2"/></symbol>
+      <symbol id="i-temp" viewBox="0 0 24 24"><path d="M10 14.5V5a2 2 0 1 1 4 0v9.5a4 4 0 1 1-4 0Z"/><path d="M12 10v7"/></symbol>
+      <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3s6 6.4 6 11a6 6 0 0 1-12 0c0-4.6 6-11 6-11Z"/><path d="M9 15.5a3 3 0 0 0 3 2.5"/></symbol>
+      <symbol id="i-uv" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></symbol>
+      <symbol id="i-shirt" viewBox="0 0 24 24"><path d="m8 4-5 3 2 5 3-1v9h8v-9l3 1 2-5-5-3a4.5 4.5 0 0 1-8 0Z"/></symbol>
+      <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+      <symbol id="i-save" viewBox="0 0 24 24"><path d="M5 3h12l2 2v16H5Z"/><path d="M8 3v6h8V3M8 21v-7h8v7"/></symbol>
+      <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M7 7l1 14h8l1-14M10 11v6M14 11v6"/></symbol>
+      <symbol id="i-history" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/></symbol>
+      <symbol id="i-bike" viewBox="0 0 24 24"><circle cx="6" cy="17" r="4"/><circle cx="18" cy="17" r="4"/><path d="m6 17 4-8h4l4 8M9 12h7M8 7h3"/></symbol>
+      <symbol id="i-jersey" viewBox="0 0 32 32"><path d="m11 5-7 5 3 7 4-2v12h10V15l4 2 3-7-7-5c-1 3-9 3-10 0Z"/><path d="M16 8v19M12 18h8"/></symbol>
+      <symbol id="i-vest" viewBox="0 0 32 32"><path d="M11 5 7 8l3 7v12h12V15l3-7-4-3c-1 3-9 3-10 0Z"/><path d="M16 8v19"/></symbol>
+      <symbol id="i-sleeve" viewBox="0 0 32 32"><path d="M10 5h5l-2 22H6Z"/><path d="M22 5h-5l2 22h7Z"/></symbol>
+      <symbol id="i-shorts" viewBox="0 0 32 32"><path d="M8 6h16l2 20h-8l-2-10-2 10H6Z"/><path d="M8 10h16"/></symbol>
+      <symbol id="i-tights" viewBox="0 0 32 32"><path d="M8 5h16l-2 22h-6l0-12-2 12H8Z"/></symbol>
+      <symbol id="i-gloves" viewBox="0 0 32 32"><path d="M7 15V7c0-2 2-2 2 0v5-7c0-2 2-2 2 0v7-6c0-2 2-2 2 0v7l2-3c1-2 3 0 2 2l-3 7v8H8l-3-7c-1-3 2-4 3-1"/><path d="M22 9v11M20 12h5l2 8v7h-8v-7"/></symbol>
+    </defs>
+  </svg>
 
   <div class="app-shell">
-    <header class="app-header">
-      <div class="header-top">
-        <img src="./logo.png" alt="SEM PLANO" class="logo" />
-
-        <button class="top-action" id="toggle48" type="button" aria-label="Ver previsão das próximas 48 horas">
-          <span class="top-action-icon"></span>
-          <span>Ver 48h</span>
-        </button>
-      </div>
-
-      <section class="hero-card">
-        <div class="hero-main">
-          <div class="location-line">
-            <span class="pin-icon"></span>
-            <span id="heroLoc">Alcabideche</span>
-          </div>
-
-          <div class="temp-row">
-            <div class="hero-temp" id="heroTemp">—°</div>
-            <div class="weather-badge" id="heroIcon">—</div>
-          </div>
-
-          <div class="hero-meta" id="heroMeta">
-            Sensação: —° · Máx: —° · Mín: —°
-          </div>
-
-          <div class="hero-sun" id="heroSun">
-            Nascer: — · Pôr: —
-          </div>
-
-          <div class="updated" id="updated">
-            A atualizar…
-          </div>
-        </div>
-
-        <div class="quick-card">
-          <div class="section-title green">
-            <span class="check-dot">✓</span>
-            <span>Resumo rápido</span>
-          </div>
-
-          <div class="quick-copy" id="quickText">
-            A calcular condições...
-          </div>
-
-          <div class="quick-label">
-            Melhor janela:
-          </div>
-
-          <div class="quick-window" id="quickWindow">
-            —
-          </div>
-        </div>
-      </section>
-
-      <div class="location-control">
-        <select id="locationSelect" aria-label="Selecionar localidade"></select>
-        <div class="location-hint" id="locationHint">A tentar usar a localização atual do dispositivo…</div>
-      </div>
-    </header>
-
-    <main class="content-stack">
-      <section class="card now-card">
-        <div class="section-title">
-          <span class="status-dot"></span>
-          <span>Agora</span>
-        </div>
-
-        <div class="now-grid">
-          <div class="metrics-list">
-            <div class="metric-row">
-              <span>Vento</span>
-              <strong id="nowWind">—</strong>
-            </div>
-
-            <div class="metric-row">
-              <span>Rajadas</span>
-              <strong id="nowGust">—</strong>
-            </div>
-
-            <div class="metric-row">
-              <span>Direção</span>
-              <strong id="nowDirTxt">—</strong>
-            </div>
-
-            <div class="metric-row">
-              <span>Chuva</span>
-              <strong id="nowRain">—</strong>
-            </div>
-
-            <div class="metric-row">
-              <span>Prob.</span>
-              <strong id="nowPop">—</strong>
-            </div>
-          </div>
-
-          <div class="compass-wrap">
-            <div class="compass">
-              <span class="compass-label compass-n">N</span>
-              <span class="compass-label compass-e">E</span>
-              <span class="compass-label compass-s">S</span>
-              <span class="compass-label compass-w">O</span>
-              <div class="needle" id="dirNeedle"></div>
-              <div class="needle-center"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="card alert-card" id="alertCard">
-        <div class="section-title orange">
-          <span class="alert-triangle"></span>
-          <span>Alertas</span>
-        </div>
-
-        <div class="alert-layout">
-          <div class="alert-icon"></div>
-
+    <main id="appMain">
+      <section class="app-view is-active" id="viewCurrent" data-view-panel="current" aria-labelledby="currentTitle">
+        <header class="page-header">
           <div>
-            <div class="alert-headline" id="alertHeadline">
-              Sem alertas relevantes
-            </div>
-
-            <div class="alert-advice" id="alertAdvice">
-              Condições estáveis para outdoor.
-            </div>
+            <p class="brand">SEM PLANO</p>
+            <h1 id="currentTitle">Atual</h1>
           </div>
-        </div>
-
-        <div class="alert-tags" id="alerts"></div>
-      </section>
-
-      <section class="card best-card">
-        <div class="section-title green">
-          <span class="clock-icon"></span>
-          <span>Melhor janela (2h / próximas 12h)</span>
-        </div>
-
-        <div class="best-grid">
-          <div>
-            <div class="best-window-text" id="bestWindow">—</div>
-            <div class="small-muted">Sugestões entre 07:00 e 22:00.</div>
-          </div>
-
-          <div class="mini-chart" id="bestChart"></div>
-        </div>
-      </section>
-
-      <section class="card direction-card">
-        <div class="section-title blue">
-          <span class="route-icon"></span>
-          <span>Sugestão de atividade e sentido</span>
-        </div>
-
-        <div class="direction-grid">
-          <div class="direction-text" id="windSuggestion">—</div>
-
-          <div class="route-visual" aria-hidden="true">
-            <span class="route-label route-label-top">Serra</span>
-            <span class="route-label route-label-bottom">Cascais</span>
-
-            <svg viewBox="0 0 160 110" class="route-svg">
-              <path
-                d="M25 86 C50 70, 43 42, 72 38 C101 34, 94 14, 132 22"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="12"
-                stroke-linecap="round"
-                opacity=".14" />
-              <path
-                d="M25 86 C50 70, 43 42, 72 38 C101 34, 94 14, 132 22"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="5"
-                stroke-linecap="round"
-                stroke-dasharray="13 12" />
-              <circle cx="25" cy="86" r="8" fill="currentColor" />
-              <path d="M132 22 l-17 -5 l8 17 z" fill="currentColor" />
-            </svg>
-
-            <div class="bike-mark"></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="card dress-card">
-        <div class="section-title blue">
-          <span class="shirt-icon"></span>
-          <span>O que vestir (sugestão)</span>
-        </div>
-
-        <div class="dress-grid">
-          <div class="dress-item">
-            <div class="activity-icon bike-icon"></div>
-
-            <div>
-              <strong>Ciclismo</strong>
-              <span id="dressBike">—</span>
-            </div>
-          </div>
-
-          <div class="dress-item">
-            <div class="activity-icon run-icon"></div>
-
-            <div>
-              <strong>Corrida</strong>
-              <span id="dressRun">—</span>
-            </div>
-          </div>
-
-          <div class="dress-item">
-            <div class="activity-icon walk-icon"></div>
-
-            <div>
-              <strong>Caminhada</strong>
-              <span id="dressWalk">—</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="card hourly-card">
-        <div class="section-title">
-          <span class="clock-icon dark"></span>
-          <span>Próximas 8h</span>
-        </div>
-
-        <div class="hourly-strip" id="hourlyCards"></div>
-        <table class="hidden" id="table8"></table>
-      </section>
-
-      <section class="card camera-card">
-        <div class="section-title">
-          <span class="camera-icon"></span>
-          <span>Câmara (Windy)</span>
-        </div>
-
-        <div class="windy-frame">
-          <a
-            name="windy-webcam-nearby-embed"
-            id="windyCam"
-            data-params='{"lat":38.7330,"lon":-9.4100,"radius":15,"limit":1}'>
-          </a>
-          <span class="live-badge">Ao vivo</span>
-        </div>
-
-        <a class="cam-link" id="windyLink" href="#" target="_blank" rel="noreferrer">
-          Ver webcams próximas
-        </a>
-      </section>
-
-      <section class="card source-card">
-        <div class="section-title">Fonte</div>
-        <div class="source-text" id="source">—</div>
-      </section>
-
-      <section class="card details-card" id="wrap48">
-        <div class="section-title">
-          <span class="calendar-icon"></span>
-          <span>Próximas 48h</span>
-        </div>
-
-        <div class="table-scroll">
-          <table class="forecast-table" id="table48"></table>
-        </div>
-      </section>
-
-      <section id="pressureView" class="pressure-view is-hidden" aria-labelledby="pressureTitle">
-        <header class="tp-header-card">
-          <button class="tp-back" type="button" data-app-view="meteo" aria-label="Voltar à meteorologia">‹</button>
-
-          <div class="tp-title-wrap">
-            <div class="tp-title-icon">◉</div>
-            <h1 id="pressureTitle">Pressão Pneus</h1>
-          </div>
-
-          <button class="tp-info" type="button" aria-label="Informação">i</button>
+          <button class="icon-button" id="refreshCurrent" type="button" aria-label="Atualizar meteorologia">
+            <svg><use href="#i-refresh"/></svg>
+          </button>
         </header>
 
-        <div class="tp-tabs" role="tablist" aria-label="Secções de pressão">
-          <button class="tp-tab is-active" type="button">Calculadora</button>
-          <button class="tp-tab" type="button" data-scroll-target="tpSetups">Meus setups</button>
-          <button class="tp-tab" type="button">Histórico</button>
+        <button class="location-selector" type="button" data-open-location>
+          <span class="soft-icon green"><svg><use href="#i-location"/></svg></span>
+          <strong data-location-label>Localização atual</strong>
+          <svg class="chevron"><use href="#i-chevron"/></svg>
+        </button>
+
+        <p class="update-line" id="updated">A obter as condições atuais…</p>
+
+        <section class="card wind-card" aria-labelledby="windTitle">
+          <div class="card-heading">
+            <h2 id="windTitle"><svg><use href="#i-wind"/></svg> Vento e rajadas</h2>
+            <span class="priority-pill">PRIORIDADE 1</span>
+          </div>
+
+          <div class="wind-layout">
+            <div class="compass-block">
+              <div class="compass" aria-label="Direção visual do vento">
+                <span class="north">N</span><span class="east">E</span><span class="south">S</span><span class="west">W</span>
+                <div class="wind-arrow" id="currentWindArrow"><span></span></div>
+              </div>
+              <strong class="direction-flow" id="currentDirection">— → —</strong>
+              <small>Direção do vento</small>
+            </div>
+
+            <div class="hero-metric">
+              <strong id="currentWind">—</strong><span>km/h</span><small>vento</small>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="hero-metric gust">
+              <strong id="currentGust">—</strong><span>km/h</span><small>rajadas</small>
+            </div>
+          </div>
+        </section>
+
+        <section class="metric-card precipitation-card">
+          <span class="soft-icon blue"><svg><use href="#i-rain"/></svg></span>
+          <div>
+            <p>PRECIPITAÇÃO</p>
+            <strong id="currentPrecipitation">—% · — mm</strong>
+            <small id="currentRainState">A calcular…</small>
+          </div>
+        </section>
+
+        <section class="metric-card temperature-card">
+          <span class="soft-icon orange"><svg><use href="#i-temp"/></svg></span>
+          <div>
+            <p>TEMPERATURA</p>
+            <strong id="currentTemperature">— °C</strong>
+            <small id="currentTempMeta">Máx. —° · Mín. —° · Sensação —°</small>
+          </div>
+        </section>
+
+        <div class="metric-pair">
+          <section class="metric-card compact-card">
+            <span class="soft-icon blue"><svg><use href="#i-drop"/></svg></span>
+            <div><p>HUMIDADE</p><strong id="currentHumidity">—%</strong><small id="humidityState">—</small></div>
+          </section>
+          <section class="metric-card compact-card">
+            <span class="soft-icon purple"><svg><use href="#i-uv"/></svg></span>
+            <div><p>UV</p><strong id="currentUv">—</strong><small id="uvState">—</small></div>
+          </section>
         </div>
 
-        <section class="tp-card">
-          <h2>1. Ajusta os parâmetros</h2>
+        <section class="card clothing-card">
+          <div class="clothing-title">
+            <span class="soft-icon green"><svg><use href="#i-shirt"/></svg></span>
+            <div><h2>Roupa sugerida</h2><p id="clothingReason">A calcular sugestão técnica…</p></div>
+          </div>
+          <div class="clothing-list" id="clothingList"></div>
+        </section>
 
-          <div class="tp-form">
-            <label class="tp-row">
-              <span>Peso do ciclista equipado</span>
-              <div class="tp-control">
-                <button type="button" data-tp-step="-1" data-tp-target="tpRider">−</button>
-                <input id="tpRider" type="number" value="75" min="35" max="140" step="1">
-                <button type="button" data-tp-step="1" data-tp-target="tpRider">+</button>
-              </div>
-              <small>kg</small>
-            </label>
+        <section class="card quality-card">
+          <div>
+            <p>QUALIDADE DA CONDIÇÃO</p>
+            <strong><span id="conditionScore">—</span> / 100</strong>
+            <small id="conditionLabel">Síntese após análise dos dados</small>
+          </div>
+          <div class="quality-ring" id="qualityRing"><span id="qualityRingValue">—</span></div>
+        </section>
 
-            <label class="tp-row">
-              <span>Peso da bicicleta</span>
-              <div class="tp-control">
-                <button type="button" data-tp-step="-0.5" data-tp-target="tpBike">−</button>
-                <input id="tpBike" type="number" value="10.5" min="5" max="30" step="0.5">
-                <button type="button" data-tp-step="0.5" data-tp-target="tpBike">+</button>
-              </div>
-              <small>kg</small>
-            </label>
+        <p class="source-line" id="source">Fonte meteorológica: —</p>
+      </section>
 
-            <label class="tp-row">
-              <span>Carga extra</span>
-              <div class="tp-control">
-                <button type="button" data-tp-step="-0.5" data-tp-target="tpCargo">−</button>
-                <input id="tpCargo" type="number" value="1" min="0" max="25" step="0.5">
-                <button type="button" data-tp-step="0.5" data-tp-target="tpCargo">+</button>
-              </div>
-              <small>kg</small>
-            </label>
+      <section class="app-view" id="viewForecast" data-view-panel="forecast" aria-labelledby="forecastTitle" hidden>
+        <header class="page-header">
+          <div><p class="brand">SEM PLANO</p><h1 id="forecastTitle">Previsão</h1></div>
+          <span class="page-icon"><svg><use href="#i-uv"/></svg></span>
+        </header>
 
-            <label class="tp-row">
-              <span>Tipo de piso</span>
-              <select id="tpSurface">
-                <option value="road">Estrada lisa</option>
-                <option value="allroad">All-road</option>
-                <option value="gravel" selected>Gravel misto</option>
-                <option value="rough">Gravel mau piso</option>
-              </select>
-            </label>
+        <button class="location-selector" type="button" data-open-location>
+          <span class="soft-icon green"><svg><use href="#i-location"/></svg></span>
+          <strong data-location-label>Localização atual</strong>
+          <svg class="chevron"><use href="#i-chevron"/></svg>
+        </button>
 
-            <label class="tp-row">
-              <span>Condição</span>
-              <select id="tpCondition">
-                <option value="dry" selected>Seco</option>
-                <option value="wet">Molhado</option>
-              </select>
-            </label>
+        <div class="segmented-control forecast-mode" role="tablist" aria-label="Período da previsão">
+          <button class="is-active" type="button" data-forecast-mode="48h">48 horas</button>
+          <button type="button" data-forecast-mode="7d">7 dias</button>
+        </div>
 
-            <label class="tp-row">
-              <span>Preferência</span>
-              <select id="tpPreference">
-                <option value="comfort">Conforto</option>
-                <option value="balanced" selected>Equilíbrio</option>
-                <option value="performance">Performance</option>
-              </select>
-            </label>
+        <section class="card forecast-summary">
+          <div><p id="forecastEyebrow">PRÓXIMAS 48 HORAS</p><strong id="forecastHeadline">A calcular…</strong><small id="forecastSubline">—</small></div>
+          <div class="summary-wind"><span class="mini-wind-arrow" id="summaryWindArrow">↓</span><strong id="summaryWind">—</strong><small>km/h</small></div>
+        </section>
 
-            <div class="tp-row">
-              <span>Sistema</span>
-              <div class="tp-segmented" role="group" aria-label="Sistema">
-                <button type="button" class="tp-segment is-active" data-tp-system="tubeless">Tubeless</button>
-                <button type="button" class="tp-segment" data-tp-system="tube">Câmara</button>
-              </div>
+        <section class="card forecast-table-card" id="forecast48Panel">
+          <div class="forecast-heading"><div><h2>Previsão por hora</h2><p>Intervalos de 3 horas · desliza para todos os dados</p></div><span>48 h</span></div>
+          <div class="table-scroll">
+            <table class="forecast-table" id="forecast48Table">
+              <thead><tr><th>Hora</th><th>Direção</th><th>Vento</th><th>Rajadas</th><th>Chuva</th><th>Temp.</th><th>Hum.</th><th>UV</th><th>Qual.</th></tr></thead>
+              <tbody><tr><td colspan="9" class="loading-cell">A carregar previsão…</td></tr></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="card daily-panel" id="forecast7Panel" hidden>
+          <div class="forecast-heading"><div><h2>Resumo de 7 dias</h2><p>Dados dominantes e extremos diários</p></div><span>7 dias</span></div>
+          <div class="daily-list" id="dailyList"></div>
+        </section>
+
+        <p class="source-line" id="forecastSource">Fonte meteorológica: —</p>
+      </section>
+
+      <section class="app-view" id="viewPressure" data-view-panel="pressure" aria-labelledby="pressureTitle" hidden>
+        <header class="page-header">
+          <div><p class="brand">SEM PLANO</p><h1 id="pressureTitle">Pressão Pneus</h1></div>
+          <span class="page-icon"><svg><use href="#i-gauge"/></svg></span>
+        </header>
+
+        <div class="segmented-control pressure-tabs" role="tablist" aria-label="Secções da pressão de pneus">
+          <button class="is-active" type="button" data-pressure-tab="calculator">Calculadora</button>
+          <button type="button" data-pressure-tab="setups">Meus setups</button>
+          <button type="button" data-pressure-tab="history">Histórico</button>
+        </div>
+
+        <div class="pressure-panel" data-pressure-panel="calculator">
+          <section class="card pressure-form-card">
+            <div class="numbered-heading"><span>1</span><h2>Ajusta os parâmetros</h2></div>
+            <div class="pressure-form">
+              <label class="pressure-row"><span>Peso do ciclista equipado</span><div class="stepper"><button type="button" data-tp-step="-1" data-tp-target="tpRider">−</button><input id="tpRider" type="number" value="75" min="35" max="140" step="1"><button type="button" data-tp-step="1" data-tp-target="tpRider">+</button></div><small>kg</small></label>
+              <label class="pressure-row"><span>Peso da bicicleta</span><div class="stepper"><button type="button" data-tp-step="-0.5" data-tp-target="tpBike">−</button><input id="tpBike" type="number" value="10.5" min="5" max="30" step="0.5"><button type="button" data-tp-step="0.5" data-tp-target="tpBike">+</button></div><small>kg</small></label>
+              <label class="pressure-row"><span>Carga extra</span><div class="stepper"><button type="button" data-tp-step="-0.5" data-tp-target="tpCargo">−</button><input id="tpCargo" type="number" value="1" min="0" max="25" step="0.5"><button type="button" data-tp-step="0.5" data-tp-target="tpCargo">+</button></div><small>kg</small></label>
+              <label class="pressure-row"><span>Tipo de piso</span><select id="tpSurface"><option value="road">Estrada lisa</option><option value="allroad">All-road</option><option value="gravel" selected>Gravel misto</option><option value="rough">Gravel mau piso</option></select></label>
+              <label class="pressure-row"><span>Condição</span><select id="tpCondition"><option value="dry" selected>Seco</option><option value="wet">Molhado</option></select></label>
+              <label class="pressure-row"><span>Preferência</span><select id="tpPreference"><option value="comfort">Conforto</option><option value="balanced" selected>Equilíbrio</option><option value="performance">Performance</option></select></label>
+              <div class="pressure-row"><span>Sistema</span><div class="small-segmented" role="group" aria-label="Sistema"><button class="is-active" type="button" data-tp-system="tubeless">Tubeless</button><button type="button" data-tp-system="tube">Câmara</button></div></div>
+              <label class="pressure-row"><span>Largura pneu frente</span><div class="stepper"><button type="button" data-tp-step="-1" data-tp-target="tpFrontWidth">−</button><input id="tpFrontWidth" type="number" value="45" min="23" max="60" step="1"><button type="button" data-tp-step="1" data-tp-target="tpFrontWidth">+</button></div><small>mm</small></label>
+              <label class="pressure-row"><span>Largura pneu trás</span><div class="stepper"><button type="button" data-tp-step="-1" data-tp-target="tpRearWidth">−</button><input id="tpRearWidth" type="number" value="45" min="23" max="60" step="1"><button type="button" data-tp-step="1" data-tp-target="tpRearWidth">+</button></div><small>mm</small></label>
+              <label class="pressure-row"><span>Largura interna da jante</span><div class="stepper"><button type="button" data-tp-step="-1" data-tp-target="tpRimWidth">−</button><input id="tpRimWidth" type="number" value="27" min="15" max="35" step="1"><button type="button" data-tp-step="1" data-tp-target="tpRimWidth">+</button></div><small>mm</small></label>
             </div>
+          </section>
 
-            <label class="tp-row">
-              <span>Largura pneu frente</span>
-              <div class="tp-control">
-                <button type="button" data-tp-step="-1" data-tp-target="tpFrontWidth">−</button>
-                <input id="tpFrontWidth" type="number" value="45" min="23" max="60" step="1">
-                <button type="button" data-tp-step="1" data-tp-target="tpFrontWidth">+</button>
-              </div>
-              <small>mm</small>
-            </label>
-
-            <label class="tp-row">
-              <span>Largura pneu trás</span>
-              <div class="tp-control">
-                <button type="button" data-tp-step="-1" data-tp-target="tpRearWidth">−</button>
-                <input id="tpRearWidth" type="number" value="45" min="23" max="60" step="1">
-                <button type="button" data-tp-step="1" data-tp-target="tpRearWidth">+</button>
-              </div>
-              <small>mm</small>
-            </label>
-
-            <label class="tp-row">
-              <span>Largura int. da jante</span>
-              <div class="tp-control">
-                <button type="button" data-tp-step="-1" data-tp-target="tpRimWidth">−</button>
-                <input id="tpRimWidth" type="number" value="27" min="15" max="35" step="1">
-                <button type="button" data-tp-step="1" data-tp-target="tpRimWidth">+</button>
-              </div>
-              <small>mm</small>
-            </label>
-          </div>
-        </section>
-
-        <section class="tp-card">
-          <h2>2. Pressão recomendada</h2>
-
-          <div class="tp-result-grid">
-            <article class="tp-result tp-result-front">
-              <span>Frente</span>
-              <strong><span id="tpFrontBar">—</span> <small>bar</small></strong>
-              <em id="tpFrontPsi">— psi</em>
-            </article>
-
-            <article class="tp-result tp-result-rear">
-              <span>Trás</span>
-              <strong><span id="tpRearBar">—</span> <small>bar</small></strong>
-              <em id="tpRearPsi">— psi</em>
-            </article>
-          </div>
-
-          <div class="tp-balance">
-            <span>Conforto</span>
-            <div class="tp-balance-line">
-              <i id="tpBalanceDot"></i>
+          <section class="card pressure-result-card">
+            <div class="numbered-heading"><span>2</span><h2>Pressão recomendada</h2></div>
+            <div class="pressure-results">
+              <article><p>FRENTE</p><strong><span id="tpFrontBar">—</span><small> bar</small></strong><em id="tpFrontPsi">— psi</em></article>
+              <article><p>TRÁS</p><strong><span id="tpRearBar">—</span><small> bar</small></strong><em id="tpRearPsi">— psi</em></article>
             </div>
-            <span>Performance</span>
-          </div>
+            <div class="balance-scale"><div><span>CONFORTO</span><span>PERFORMANCE</span></div><div class="balance-line"><i id="tpBalanceDot"></i></div></div>
+            <p class="technical-note" id="tpTip">Ponto de partida recomendado. Ajusta ±0,1–0,2 bar conforme o terreno e a tua sensação.</p>
+            <div class="result-actions"><button class="secondary-button" type="button" id="tpAddHistory"><svg><use href="#i-history"/></svg> Registar resultado</button><button class="primary-button" type="button" id="tpSaveSetupFromCalc"><svg><use href="#i-save"/></svg> Guardar setup</button></div>
+          </section>
+        </div>
 
-          <div class="tp-tip" id="tpTip">
-            Ponto de partida recomendado. Ajusta ±0.1–0.2 bar conforme o terreno e a tua sensação.
-          </div>
-        </section>
+        <div class="pressure-panel" data-pressure-panel="setups" hidden>
+          <section class="card saved-card">
+            <div class="numbered-heading"><span><svg><use href="#i-save"/></svg></span><div><h2>Meus setups</h2><p>Configurações guardadas neste dispositivo</p></div></div>
+            <button class="primary-button full-button" type="button" id="tpSaveSetup">Guardar setup atual</button>
+            <p class="empty-state" id="tpEmptySetups">Ainda não tens setups guardados.</p>
+            <div class="saved-list" id="tpSetupList" aria-live="polite"></div>
+          </section>
+        </div>
 
-        <section class="tp-card" id="tpSetups">
-          <div class="tp-section-title">
-            <h2>3. Meus setups</h2>
-            <button type="button" id="tpSaveSetup">Guardar setup</button>
-          </div>
-
-          <p class="tp-empty-setups" id="tpEmptySetups">
-            Ainda não tens setups guardados. Ajusta a calculadora e usa “Guardar setup” para criares o primeiro.
-          </p>
-
-          <div class="tp-setup-list" id="tpSetupList" aria-live="polite"></div>
-        </section>
+        <div class="pressure-panel" data-pressure-panel="history" hidden>
+          <section class="card saved-card">
+            <div class="numbered-heading"><span><svg><use href="#i-history"/></svg></span><div><h2>Histórico</h2><p>Resultados registados para comparação</p></div></div>
+            <p class="empty-state" id="tpEmptyHistory">Ainda não registaste resultados.</p>
+            <div class="saved-list" id="tpHistoryList" aria-live="polite"></div>
+            <button class="text-button danger-text" type="button" id="tpClearHistory">Limpar histórico</button>
+          </section>
+        </div>
       </section>
     </main>
   </div>
 
   <nav class="bottom-nav" aria-label="Navegação principal">
-    <button type="button" class="bottom-nav-btn is-active" data-app-view="meteo">
-      <span>☁️</span>
-      <strong>Meteo</strong>
-    </button>
-
-    <button type="button" class="bottom-nav-btn" data-app-view="pressure">
-      <span>◉</span>
-      <strong>Pressão Pneus</strong>
-    </button>
-
-    <button type="button" class="bottom-nav-btn" disabled>
-      <span>△</span>
-      <strong>Rotas</strong>
-    </button>
-
-    <button type="button" class="bottom-nav-btn" disabled>
-      <span>⚙</span>
-      <strong>Definições</strong>
-    </button>
+    <button class="is-active" type="button" data-app-view="current"><svg><use href="#i-current"/></svg><span>Atual</span></button>
+    <button type="button" data-app-view="forecast"><svg><use href="#i-forecast"/></svg><span>Previsão</span></button>
+    <button type="button" data-app-view="pressure"><svg><use href="#i-gauge"/></svg><span>Pressão Pneus</span></button>
   </nav>
 
-  <script async src="https://webcams.windy.com/webcams/public/embed/v2/script/nearby.js"></script>
-  <script src="./app.js?v=20260520_03"></script>
+  <div class="modal-backdrop" id="locationModal" hidden>
+    <section class="location-sheet" role="dialog" aria-modal="true" aria-labelledby="locationModalTitle">
+      <div class="sheet-handle"></div>
+      <header><div><p class="brand">LOCALIZAÇÃO</p><h2 id="locationModalTitle">Escolher localização</h2></div><button class="icon-button" type="button" id="closeLocation" aria-label="Fechar"><svg><use href="#i-close"/></svg></button></header>
+      <label class="search-box"><svg><use href="#i-search"/></svg><input id="locationSearch" type="search" placeholder="Procurar cidade ou localidade" autocomplete="off"></label>
+      <div class="location-results" id="locationResults"></div>
+      <p class="search-help">A pesquisa inclui localidades em Portugal através da Open-Meteo.</p>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="./app.js?v=20260807_01"></script>
 </body>
 </html>
