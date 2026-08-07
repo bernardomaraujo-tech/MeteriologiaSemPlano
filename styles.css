@@ -189,8 +189,8 @@ h1, h2, p { margin-top: 0; }
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(248, 252, 249, .18), rgba(252, 254, 252, .3) 48%, rgba(255, 255, 255, .52)),
-    linear-gradient(180deg, rgba(255, 255, 255, .08), rgba(244, 251, 246, .18));
+    linear-gradient(90deg, rgba(248, 252, 249, .06), rgba(252, 254, 252, .16) 48%, rgba(255, 255, 255, .38)),
+    linear-gradient(180deg, rgba(255, 255, 255, .02), rgba(244, 251, 246, .1));
 }
 .wind-map-tiles { position: absolute; inset: 0; }
 .wind-map-tile {
@@ -199,11 +199,11 @@ h1, h2, p { margin-top: 0; }
   height: 256px;
   max-width: none;
   opacity: 0;
-  filter: grayscale(.82) saturate(.55) contrast(.98) brightness(1.02);
+  filter: grayscale(.5) saturate(.8) contrast(1.08) brightness(.98);
   transition: opacity .25s ease;
   user-select: none;
 }
-.wind-map-tile.is-loaded { opacity: .72; }
+.wind-map-tile.is-loaded { opacity: .82; }
 .map-attribution {
   position: absolute;
   z-index: 4;
@@ -239,9 +239,9 @@ h1, h2, p { margin-top: 0; }
     linear-gradient(90deg, transparent 49.5%, #e7ece8 50%, transparent 50.5%),
     linear-gradient(transparent 49.5%, #e7ece8 50%, transparent 50.5%),
     repeating-conic-gradient(from 0deg, #dfe7e1 0 1deg, transparent 1deg 15deg),
-    rgba(255, 255, 255, .7);
-  box-shadow: inset 0 0 0 8px rgba(247, 249, 247, .66), 0 3px 16px rgba(40, 72, 53, .07);
-  backdrop-filter: blur(1px);
+    rgba(255, 255, 255, .62);
+  box-shadow: inset 0 0 0 8px rgba(247, 249, 247, .56), 0 3px 16px rgba(40, 72, 53, .07);
+  backdrop-filter: blur(.5px);
 }
 .compass::after { content: ""; position: absolute; inset: 20px; border: 1px solid #edf0ed; border-radius: 50%; }
 .compass > span { position: absolute; z-index: 2; color: #7f8981; font-size: .56rem; font-weight: 700; }
