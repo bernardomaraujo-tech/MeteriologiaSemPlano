@@ -1,81 +1,109 @@
 const REFRESH_MS = 5 * 60 * 1000;
-const FETCH_TIMEOUT_MS = 12000;
+const FETCH_TIMEOUT_MS = 15000;
 const GEO_TIMEOUT_MS = 10000;
 const AUTO_LOCATION_ID = "device_location";
 const DEFAULT_LOCATION_ID = "alcabideche";
-const LOCATION_STORAGE_KEY = "semPlanoMeteoLocationModeV1";
-
-const PREFERRED_MODELS = [
-  "knmi_harmonie_arome_europe",
-  "dmi_harmonie_arome_europe"
-];
+const LOCATION_STORAGE_KEY = "semPlanoMeteoLocationV2";
 
 const LOCATIONS = [
-  { id: "alcabideche", name: "Alcabideche", lat: 38.7330, lon: -9.4100 },
-  { id: "algueirao", name: "Algueirão", lat: 38.7936, lon: -9.3417 },
-  { id: "amadora", name: "Amadora", lat: 38.7569, lon: -9.2308 },
-  { id: "azeitao", name: "Azeitão", lat: 38.5180, lon: -9.0130 },
-  { id: "cais_sodre", name: "Cais do Sodré", lat: 38.7069, lon: -9.1444 },
-  { id: "carcavelos", name: "Carcavelos", lat: 38.6910, lon: -9.3317 },
-  { id: "cascais", name: "Cascais", lat: 38.6979, lon: -9.4206 },
-  { id: "columbeira", name: "Columbeira", lat: 39.2650, lon: -9.1800 },
-  { id: "culatra", name: "Ilha da Culatra", lat: 36.9889, lon: -7.8336 },
-  { id: "estoril", name: "Estoril", lat: 38.7057, lon: -9.3977 },
-  { id: "fatima", name: "Fátima", lat: 39.6172, lon: -8.6521 },
-  { id: "guincho", name: "Guincho", lat: 38.72948, lon: -9.47457 },
-  { id: "minde", name: "Minde", lat: 39.5153, lon: -8.6871 },
-  { id: "peninha", name: "Peninha", lat: 38.7692, lon: -9.4589 },
-  { id: "praia_tocha", name: "Praia da Tocha", lat: 40.3300, lon: -8.7860 },
-  { id: "santarem", name: "Santarém", lat: 39.2369, lon: -8.6850 },
-  { id: "santacombadao", name: "Santa Comba Dão", lat: 40.3979, lon: -8.1304 },
-  { id: "sdr", name: "São Domingos de Rana", lat: 38.7019, lon: -9.3389 },
-  { id: "setubal", name: "Setúbal", lat: 38.5244, lon: -8.8882 },
-  { id: "sintra", name: "Sintra", lat: 38.8029, lon: -9.3817 },
-  { id: "vila_franca_xira", name: "Vila Franca de Xira", lat: 38.9553, lon: -8.9897 }
+  { id: "alcabideche", name: "Alcabideche", region: "Cascais", lat: 38.7330, lon: -9.4100 },
+  { id: "algueirao", name: "Algueirão", region: "Sintra", lat: 38.7936, lon: -9.3417 },
+  { id: "amadora", name: "Amadora", region: "Lisboa", lat: 38.7569, lon: -9.2308 },
+  { id: "azeitao", name: "Azeitão", region: "Setúbal", lat: 38.5180, lon: -9.0130 },
+  { id: "cais_sodre", name: "Cais do Sodré", region: "Lisboa", lat: 38.7069, lon: -9.1444 },
+  { id: "carcavelos", name: "Carcavelos", region: "Cascais", lat: 38.6910, lon: -9.3317 },
+  { id: "cascais", name: "Cascais", region: "Lisboa", lat: 38.6979, lon: -9.4206 },
+  { id: "columbeira", name: "Columbeira", region: "Bombarral", lat: 39.2650, lon: -9.1800 },
+  { id: "culatra", name: "Ilha da Culatra", region: "Faro", lat: 36.9889, lon: -7.8336 },
+  { id: "estoril", name: "Estoril", region: "Cascais", lat: 38.7057, lon: -9.3977 },
+  { id: "fatima", name: "Fátima", region: "Santarém", lat: 39.6172, lon: -8.6521 },
+  { id: "guincho", name: "Guincho", region: "Cascais", lat: 38.72948, lon: -9.47457 },
+  { id: "minde", name: "Minde", region: "Alcanena", lat: 39.5153, lon: -8.6871 },
+  { id: "peninha", name: "Peninha", region: "Sintra", lat: 38.7692, lon: -9.4589 },
+  { id: "praia_tocha", name: "Praia da Tocha", region: "Cantanhede", lat: 40.3300, lon: -8.7860 },
+  { id: "santarem", name: "Santarém", region: "Santarém", lat: 39.2369, lon: -8.6850 },
+  { id: "santacombadao", name: "Santa Comba Dão", region: "Viseu", lat: 40.3979, lon: -8.1304 },
+  { id: "sdr", name: "São Domingos de Rana", region: "Cascais", lat: 38.7019, lon: -9.3389 },
+  { id: "setubal", name: "Setúbal", region: "Setúbal", lat: 38.5244, lon: -8.8882 },
+  { id: "sintra", name: "Sintra", region: "Lisboa", lat: 38.8029, lon: -9.3817 },
+  { id: "vila_franca_xira", name: "Vila Franca de Xira", region: "Lisboa", lat: 38.9553, lon: -8.9897 }
 ];
 
-const POIS = [
-  { name: "Serra", label: "Serra (Sintra)", type: "serra", bank: "N", lat: 38.7760, lon: -9.3900 },
-  { name: "Costa", label: "Costa (Marginal)", type: "costa", bank: "N", lat: 38.6920, lon: -9.3300 },
-  { name: "Rio", label: "Rio (Tejo)", type: "rio", bank: "N", lat: 38.7070, lon: -9.1500 },
-  { name: "Lisboa", label: "Lisboa", type: "cidade", bank: "N", lat: 38.7223, lon: -9.1393 },
-  { name: "Cascais", label: "Cascais", type: "cidade", bank: "N", lat: 38.6979, lon: -9.4206 },
+const $ = (id) => document.getElementById(id);
+const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
 
-  { name: "Costa", label: "Costa (Caparica)", type: "costa", bank: "S", lat: 38.6440, lon: -9.2350 },
-  { name: "Serra", label: "Serra (Arrábida)", type: "serra", bank: "S", lat: 38.4890, lon: -9.0280 },
-  { name: "Rio", label: "Rio (Tejo)", type: "rio", bank: "S", lat: 38.6800, lon: -9.1600 },
-  { name: "Almada", label: "Almada", type: "cidade", bank: "S", lat: 38.6790, lon: -9.1569 },
-  { name: "Azeitão", label: "Azeitão", type: "cidade", bank: "S", lat: 38.5180, lon: -9.0130 },
+let weatherData = null;
+let weatherSource = "—";
+let selectedLocation = loadLocationPreference();
+let resolvedLocation = null;
+let refreshRunId = 0;
+let searchTimer = null;
+let toastTimer = null;
 
-  { name: "Costa", label: "Costa", type: "costa", bank: "X", lat: 40.1508, lon: -8.8618 },
-  { name: "Cidade", label: "Centro urbano", type: "cidade", bank: "X", lat: 40.2033, lon: -8.4103 }
-];
+function setText(idOrElement, value) {
+  const element = typeof idOrElement === "string" ? $(idOrElement) : idOrElement;
+  if (element) element.textContent = value;
+}
+
+function setHTML(idOrElement, value) {
+  const element = typeof idOrElement === "string" ? $(idOrElement) : idOrElement;
+  if (element) element.innerHTML = value;
+}
+
+function clamp(value, min, max) {
+  return Math.min(Math.max(value, min), max);
+}
+
+function finite(value, fallback = 0) {
+  const number = Number(value);
+  return Number.isFinite(number) ? number : fallback;
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+function showToast(message) {
+  const toast = $("toast");
+  if (!toast) return;
+  clearTimeout(toastTimer);
+  toast.textContent = message;
+  toast.classList.add("is-visible");
+  toastTimer = setTimeout(() => toast.classList.remove("is-visible"), 2600);
+}
+
+function loadLocationPreference() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(LOCATION_STORAGE_KEY) || "null");
+    if (saved && saved.id && Number.isFinite(Number(saved.lat)) && Number.isFinite(Number(saved.lon))) {
+      return saved;
+    }
+    if (saved?.id === AUTO_LOCATION_ID) return { id: AUTO_LOCATION_ID, name: "Localização atual" };
+  } catch (_) {}
+  return { id: AUTO_LOCATION_ID, name: "Localização atual" };
+}
+
+function saveLocationPreference(location) {
+  try {
+    localStorage.setItem(LOCATION_STORAGE_KEY, JSON.stringify(location));
+  } catch (_) {}
+}
 
 function getDefaultLocation() {
-  return LOCATIONS.find((loc) => loc.id === DEFAULT_LOCATION_ID) || LOCATIONS[0];
-}
-
-function getSavedLocationId() {
-  try {
-    return localStorage.getItem(LOCATION_STORAGE_KEY) || AUTO_LOCATION_ID;
-  } catch (_) {
-    return AUTO_LOCATION_ID;
-  }
-}
-
-function saveLocationId(locationId) {
-  try {
-    localStorage.setItem(LOCATION_STORAGE_KEY, locationId);
-  } catch (_) {}
+  return LOCATIONS.find((location) => location.id === DEFAULT_LOCATION_ID) || LOCATIONS[0];
 }
 
 function getDevicePosition() {
   return new Promise((resolve, reject) => {
     if (!navigator.geolocation) {
-      reject(new Error("Geolocalização indisponível neste dispositivo"));
+      reject(new Error("Geolocalização indisponível"));
       return;
     }
-
     navigator.geolocation.getCurrentPosition(resolve, reject, {
       enableHighAccuracy: true,
       timeout: GEO_TIMEOUT_MS,
@@ -84,892 +112,513 @@ function getDevicePosition() {
   });
 }
 
-function nearestKnownLocation(lat, lon) {
-  let best = null;
-  let bestKm = Infinity;
-
-  for (const loc of LOCATIONS) {
-    const km = haversineKm(lat, lon, loc.lat, loc.lon);
-
-    if (km < bestKm) {
-      bestKm = km;
-      best = loc;
-    }
-  }
-
-  if (!best) return null;
-
-  return {
-    ...best,
-    km: bestKm
-  };
-}
-
-async function resolveSelectedLocation() {
-  const selectedLocId = els.select?.value || AUTO_LOCATION_ID;
-
-  if (selectedLocId !== AUTO_LOCATION_ID) {
-    const manualLoc = LOCATIONS.find((item) => item.id === selectedLocId) || getDefaultLocation();
-    setText(els.locationHint, "Localidade escolhida manualmente. Podes voltar a usar a localização atual no topo da lista.");
-    return manualLoc;
-  }
+async function resolveActiveLocation() {
+  if (selectedLocation.id !== AUTO_LOCATION_ID) return { ...selectedLocation, isDeviceLocation: false };
 
   try {
-    setText(els.locationHint, "A usar a localização atual do dispositivo…");
-
     const position = await getDevicePosition();
-    const lat = position.coords.latitude;
-    const lon = position.coords.longitude;
-    const nearest = nearestKnownLocation(lat, lon);
-    const accuracy = Number(position.coords.accuracy || 0);
-    const accuracyText = accuracy > 0 ? ` · precisão aprox. ${Math.round(accuracy)} m` : "";
-    const nearText = nearest?.km <= 12 ? ` · perto de ${nearest.name}` : "";
-
-    setText(els.locationHint, `Localização automática ativa${nearText}${accuracyText}.`);
-
     return {
       id: AUTO_LOCATION_ID,
-      name: nearest?.km <= 12 ? `Atual · ${nearest.name}` : "Localização atual",
-      lat,
-      lon,
+      name: "Localização atual",
+      lat: position.coords.latitude,
+      lon: position.coords.longitude,
+      accuracy: finite(position.coords.accuracy),
       isDeviceLocation: true
     };
-  } catch (error) {
+  } catch (_) {
     const fallback = getDefaultLocation();
-    const reason = error?.code === 1
-      ? "permissão recusada"
-      : "não foi possível obter a posição";
-
-    setText(
-      els.locationHint,
-      `Localização automática indisponível (${reason}). A usar ${fallback.name}.`
-    );
-
-    return fallback;
+    return { ...fallback, name: `${fallback.name} · localização de recurso`, isFallback: true };
   }
 }
 
-
-const $ = (id) => document.getElementById(id);
-
-const els = {
-  heroLoc: $("heroLoc"),
-  heroTemp: $("heroTemp"),
-  heroIcon: $("heroIcon"),
-  heroMeta: $("heroMeta"),
-  heroSun: $("heroSun"),
-  updated: $("updated"),
-
-  quickText: $("quickText"),
-  quickWindow: $("quickWindow"),
-
-  select: $("locationSelect"),
-  locationHint: $("locationHint"),
-  source: $("source"),
-
-  nowWind: $("nowWind"),
-  nowGust: $("nowGust"),
-  nowDirTxt: $("nowDirTxt"),
-  nowRain: $("nowRain"),
-  nowPop: $("nowPop"),
-  dirNeedle: $("dirNeedle"),
-
-  alertCard: $("alertCard"),
-  alertHeadline: $("alertHeadline"),
-  alertAdvice: $("alertAdvice"),
-  alerts: $("alerts"),
-
-  bestWindow: $("bestWindow"),
-  bestChart: $("bestChart"),
-
-  windSuggestion: $("windSuggestion"),
-
-  dressBike: $("dressBike"),
-  dressRun: $("dressRun"),
-  dressWalk: $("dressWalk"),
-
-  hourlyCards: $("hourlyCards"),
-  table8: $("table8"),
-  table48: $("table48"),
-
-  toggle48: $("toggle48"),
-  wrap48: $("wrap48"),
-
-  windyCam: $("windyCam"),
-  windyLink: $("windyLink")
-};
-
-function setText(el, value) {
-  if (el) el.textContent = value;
+function updateLocationLabels(location) {
+  const label = location?.isDeviceLocation ? "Localização atual" : (location?.name || "Localização atual");
+  $$('[data-location-label]').forEach((element) => setText(element, label));
 }
 
-function setHTML(el, value) {
-  if (el) el.innerHTML = value;
-}
-
-function fmtKmh(value) {
-  return `${Math.round(value ?? 0)} km/h`;
-}
-
-function fmtMm(value) {
-  return `${(Math.round(((value ?? 0) * 10)) / 10).toFixed(1)} mm`;
-}
-
-function fmtPct(value) {
-  return `${Math.round(value ?? 0)}%`;
-}
-
-function fmtDateTime(date = new Date()) {
-  return date.toLocaleString("pt-PT", {
-    day: "2-digit",
-    month: "2-digit",
-    year: "numeric",
-    hour: "2-digit",
-    minute: "2-digit"
-  });
-}
-
-function fmtHour(iso) {
-  return String(iso).slice(11, 16);
-}
-
-function fmtTimeFromISO(iso) {
-  if (!iso) return "—";
-  return new Date(iso).toLocaleTimeString("pt-PT", {
-    hour: "2-digit",
-    minute: "2-digit"
-  });
-}
-
-function weekdayHourLabel(iso) {
-  if (!iso) return "—";
-  const date = new Date(iso);
-
-  let weekday = date.toLocaleDateString("pt-PT", { weekday: "short" });
-  weekday = weekday.charAt(0).toUpperCase() + weekday.slice(1);
-
-  const hour = date.toLocaleTimeString("pt-PT", {
-    hour: "2-digit",
-    minute: "2-digit"
-  });
-
-  return `${weekday} ${hour}`;
-}
-
-function windDirShort(deg) {
-  const dirs = ["N", "NE", "E", "SE", "S", "SO", "O", "NO"];
-  const idx = Math.round((((deg ?? 0) % 360) / 45)) % 8;
-  return dirs[idx];
-}
-
-function windDirText(deg) {
-  return `${windDirShort(deg)} (${Math.round(deg ?? 0)}°)`;
-}
-
-function iconForWeatherCode(code, isDay) {
-  if (code === 0) return isDay ? "☀️" : "🌙";
-  if (code === 1) return isDay ? "🌤️" : "🌙";
-  if (code === 2) return "⛅";
-  if (code === 3) return "☁️";
-
-  if (code === 45 || code === 48) return "🌫️";
-
-  if ([51, 53, 55, 56, 57].includes(code)) return "🌦️";
-  if ([61, 63, 65, 66, 67, 80, 81, 82].includes(code)) return "🌧️";
-
-  if ([71, 73, 75, 77, 85, 86].includes(code)) return "🌨️";
-  if ([95, 96, 99].includes(code)) return "⛈️";
-
-  return isDay ? "🌤️" : "🌙";
-}
-
-function buildUrlForecast(loc, modelsCsv) {
+function buildWeatherUrl(location) {
   const params = new URLSearchParams({
-    latitude: String(loc.lat),
-    longitude: String(loc.lon),
+    latitude: String(location.lat),
+    longitude: String(location.lon),
     timezone: "Europe/Lisbon",
     wind_speed_unit: "kmh",
     precipitation_unit: "mm",
     timeformat: "iso8601",
-    past_hours: "1",
-    forecast_hours: "48",
-    forecast_days: "2",
-    daily: "sunrise,sunset",
+    forecast_days: "7",
     hourly: [
       "temperature_2m",
       "apparent_temperature",
+      "relative_humidity_2m",
       "precipitation",
+      "precipitation_probability",
+      "weather_code",
       "wind_speed_10m",
       "wind_gusts_10m",
       "wind_direction_10m",
-      "precipitation_probability",
-      "weather_code",
+      "uv_index",
       "is_day"
+    ].join(","),
+    daily: [
+      "temperature_2m_max",
+      "temperature_2m_min",
+      "precipitation_sum",
+      "precipitation_probability_max",
+      "weather_code",
+      "wind_speed_10m_max",
+      "wind_gusts_10m_max",
+      "wind_direction_10m_dominant",
+      "uv_index_max",
+      "sunrise",
+      "sunset"
     ].join(",")
   });
-
-  if (modelsCsv) {
-    params.set("models", modelsCsv);
-  }
-
   return `https://api.open-meteo.com/v1/forecast?${params.toString()}`;
 }
 
 async function fetchWithTimeout(url) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
-
   try {
-    return await fetch(url, {
-      cache: "no-store",
-      mode: "cors",
-      signal: controller.signal
-    });
+    return await fetch(url, { cache: "no-store", mode: "cors", signal: controller.signal });
   } finally {
     clearTimeout(timeout);
   }
 }
 
-async function fetchWeather(loc) {
-  const modelsCsv = PREFERRED_MODELS.join(",");
-
-  try {
-    const responsePreferred = await fetchWithTimeout(buildUrlForecast(loc, modelsCsv));
-
-    if (responsePreferred.ok) {
-      const json = await responsePreferred.json();
-
-      if (json?.hourly?.time?.length) {
-        return {
-          json,
-          source: "Open-Meteo (HARMONIE-AROME)"
-        };
-      }
-    }
-  } catch (_) {}
-
-  const responseFallback = await fetchWithTimeout(buildUrlForecast(loc));
-
-  if (!responseFallback.ok) {
-    throw new Error(`HTTP ${responseFallback.status}`);
-  }
-
-  const json = await responseFallback.json();
-
-  if (!json?.hourly?.time?.length) {
-    throw new Error("Sem dados horários");
-  }
-
-  return {
-    json,
-    source: "Open-Meteo (Best match)"
-  };
+async function fetchWeather(location) {
+  const response = await fetchWithTimeout(buildWeatherUrl(location));
+  if (!response.ok) throw new Error(`serviço meteorológico indisponível (${response.status})`);
+  const data = await response.json();
+  if (!data?.hourly?.time?.length) throw new Error("sem dados horários disponíveis");
+  return { data, source: "Open-Meteo · melhor modelo disponível" };
 }
 
 function nearestHourIndex(times) {
-  const now = new Date();
-  let bestIndex = 0;
-  let bestDiff = Infinity;
-
-  for (let i = 0; i < times.length; i++) {
-    const diff = Math.abs(new Date(times[i]).getTime() - now.getTime());
-
-    if (diff < bestDiff) {
-      bestDiff = diff;
-      bestIndex = i;
+  const now = Date.now();
+  let best = 0;
+  let distance = Infinity;
+  times.forEach((time, index) => {
+    const nextDistance = Math.abs(new Date(time).getTime() - now);
+    if (nextDistance < distance) {
+      distance = nextDistance;
+      best = index;
     }
-  }
-
-  return bestIndex;
-}
-
-function computeMinMaxNext24h(temps, startIndex) {
-  const endIndex = Math.min(startIndex + 24, temps.length);
-  let min = Infinity;
-  let max = -Infinity;
-
-  for (let i = startIndex; i < endIndex; i++) {
-    const value = temps[i];
-
-    if (value < min) min = value;
-    if (value > max) max = value;
-  }
-
-  return { min, max };
-}
-
-function getSunTimes(data) {
-  return {
-    sunriseStr: fmtTimeFromISO(data?.daily?.sunrise?.[0]),
-    sunsetStr: fmtTimeFromISO(data?.daily?.sunset?.[0])
-  };
-}
-
-function computeBestWindowNext12h(data) {
-  const times = data.hourly.time;
-  const gust = data.hourly.wind_gusts_10m ?? [];
-  const pop = data.hourly.precipitation_probability ?? Array(times.length).fill(0);
-  const prcp = data.hourly.precipitation ?? Array(times.length).fill(0);
-
-  const start = nearestHourIndex(times);
-  const end = Math.min(start + 12, times.length - 2);
-
-  const START_HOUR = 7;
-  const LAST_START_HOUR = 20;
-
-  let bestIndex = null;
-  let bestScore = -1;
-
-  function scoreHour(index) {
-    const popN = Math.min(Math.max(pop[index] ?? 0, 0), 100) / 100;
-    const gustN = Math.min(Math.max(gust[index] ?? 0, 0), 70) / 70;
-    const prcpN = Math.min(Math.max(prcp[index] ?? 0, 0), 4) / 4;
-
-    return (1 - (0.58 * popN + 0.42 * prcpN)) * 0.62 + (1 - gustN) * 0.38;
-  }
-
-  for (let i = start; i <= end; i++) {
-    const hour = new Date(times[i]).getHours();
-
-    if (hour < START_HOUR || hour > LAST_START_HOUR) {
-      continue;
-    }
-
-    const score = (scoreHour(i) + scoreHour(i + 1)) / 2;
-
-    if (score > bestScore) {
-      bestScore = score;
-      bestIndex = i;
-    }
-  }
-
-  if (bestIndex === null) {
-    bestIndex = start;
-  }
-
-  return {
-    idx: bestIndex,
-    score: bestScore
-  };
-}
-
-function quickSummary({ wind, gust, pop, prcp }) {
-  const rainy = (pop ?? 0) >= 45 || (prcp ?? 0) >= 0.8;
-  const veryWindy = (gust ?? 0) >= 55 || (wind ?? 0) >= 32;
-  const windy = (gust ?? 0) >= 42 || (wind ?? 0) >= 25;
-
-  if (rainy && veryWindy) {
-    return {
-      title: "Evitar sair",
-      desc: "chuva e vento forte."
-    };
-  }
-
-  if (veryWindy) {
-    return {
-      title: "Sair com cuidado",
-      desc: "rajadas fortes."
-    };
-  }
-
-  if (windy) {
-    return {
-      title: "Bom para sair",
-      desc: "mas atenção ao vento."
-    };
-  }
-
-  if (rainy) {
-    return {
-      title: "Possível sair",
-      desc: "mas há risco de chuva."
-    };
-  }
-
-  return {
-    title: "Bom para sair",
-    desc: "condições favoráveis."
-  };
-}
-
-function renderQuickSummary({ wind, gust, pop, prcp, bestStart, bestEnd }) {
-  const summary = quickSummary({ wind, gust, pop, prcp });
-
-  setHTML(
-    els.quickText,
-    `<strong>${summary.title}</strong>${summary.desc}`
-  );
-
-  setText(els.quickWindow, `${bestStart} – ${bestEnd}`);
-}
-
-function renderAlerts({ wind, gust, pop, prcp }) {
-  const alertItems = [];
-
-  if ((gust ?? 0) >= 45) {
-    alertItems.push(`Rajadas fortes: até ${Math.round(gust)} km/h`);
-  } else if ((gust ?? 0) >= 35) {
-    alertItems.push(`Rajadas moderadas: até ${Math.round(gust)} km/h`);
-  }
-
-  if ((wind ?? 0) >= 25) {
-    alertItems.push(`Vento sustentado: ${Math.round(wind)} km/h`);
-  }
-
-  if ((pop ?? 0) >= 70) {
-    alertItems.push(`Elevada probabilidade de chuva: ${Math.round(pop)}%`);
-  } else if ((pop ?? 0) >= 40) {
-    alertItems.push(`Possibilidade de chuva: ${Math.round(pop)}%`);
-  }
-
-  if ((prcp ?? 0) >= 2) {
-    alertItems.push(`Chuva moderada: ${fmtMm(prcp)}`);
-  }
-
-  if (!alertItems.length) {
-    els.alertCard?.classList.add("is-ok");
-
-    setText(els.alertHeadline, "Sem alertas relevantes");
-    setText(els.alertAdvice, "Condições estáveis para outdoor.");
-    setHTML(els.alerts, "");
-    return;
-  }
-
-  els.alertCard?.classList.remove("is-ok");
-
-  const main = alertItems[0];
-
-  if (main.toLowerCase().includes("rajadas")) {
-    setHTML(els.alertHeadline, `Rajadas fortes:<br><strong>até ${Math.round(gust)} km/h</strong>`);
-    setText(els.alertAdvice, "Evita zonas expostas, descidas rápidas e regressos contra vento.");
-  } else if (main.toLowerCase().includes("vento")) {
-    setHTML(els.alertHeadline, `Vento forte:<br><strong>${Math.round(wind)} km/h</strong>`);
-    setText(els.alertAdvice, "Planeia o sentido da volta e evita zonas muito expostas.");
-  } else {
-    setHTML(els.alertHeadline, `Atenção:<br><strong>${main}</strong>`);
-    setText(els.alertAdvice, "Leva proteção adequada e confirma a evolução antes de sair.");
-  }
-
-  setHTML(
-    els.alerts,
-    alertItems.map(item => `<span class="alert-tag">${item}</span>`).join("")
-  );
-}
-
-function renderHourly(data) {
-  if (!els.hourlyCards) return;
-
-  const times = data.hourly.time;
-  const start = nearestHourIndex(times);
-  const rows = [];
-
-  for (let i = start; i < Math.min(start + 8, times.length); i++) {
-    const temp = data.hourly.temperature_2m?.[i] ?? 0;
-    const pop = data.hourly.precipitation_probability?.[i] ?? 0;
-    const wind = data.hourly.wind_speed_10m?.[i] ?? 0;
-    const code = data.hourly.weather_code?.[i] ?? 0;
-    const isDay = (data.hourly.is_day?.[i] ?? 1) === 1;
-
-    rows.push(`
-      <div class="hour-card">
-        <div class="hour-time">${fmtHour(times[i])}</div>
-        <div class="hour-icon">${iconForWeatherCode(code, isDay)}</div>
-        <div class="hour-temp">${Math.round(temp)}°</div>
-        <div class="hour-extra">
-          <span>${fmtPct(pop)}</span>
-          <span>${fmtKmh(wind)}</span>
-        </div>
-      </div>
-    `);
-  }
-
-  setHTML(els.hourlyCards, rows.join(""));
-}
-
-function render48h(data) {
-  if (!els.table48) return;
-
-  const times = data.hourly.time;
-  const start = nearestHourIndex(times);
-  const rows = [];
-
-  for (let i = start; i < Math.min(start + 48, times.length); i++) {
-    const temp = data.hourly.temperature_2m?.[i] ?? 0;
-    const pop = data.hourly.precipitation_probability?.[i] ?? 0;
-    const prcp = data.hourly.precipitation?.[i] ?? 0;
-    const wind = data.hourly.wind_speed_10m?.[i] ?? 0;
-    const gust = data.hourly.wind_gusts_10m?.[i] ?? 0;
-    const dir = data.hourly.wind_direction_10m?.[i] ?? 0;
-    const code = data.hourly.weather_code?.[i] ?? 0;
-    const isDay = (data.hourly.is_day?.[i] ?? 1) === 1;
-
-    rows.push(`
-      <tr>
-        <td>${weekdayHourLabel(times[i])}</td>
-        <td>${iconForWeatherCode(code, isDay)}</td>
-        <td>${Math.round(temp)}°</td>
-        <td>${fmtPct(pop)}</td>
-        <td>${fmtMm(prcp)}</td>
-        <td>${fmtKmh(wind)}</td>
-        <td>${fmtKmh(gust)}</td>
-        <td>${windDirShort(dir)}</td>
-      </tr>
-    `);
-  }
-
-  setHTML(
-    els.table48,
-    `
-      <thead>
-        <tr>
-          <th>Dia/Hora</th>
-          <th></th>
-          <th>Temp.</th>
-          <th>Prob.</th>
-          <th>Chuva</th>
-          <th>Vento</th>
-          <th>Rajadas</th>
-          <th>Dir.</th>
-        </tr>
-      </thead>
-      <tbody>${rows.join("")}</tbody>
-    `
-  );
-}
-
-function clothingSuggestion({ temp, wind, gust, pop, prcp, sport }) {
-  const rainy = (pop ?? 0) >= 25 || (prcp ?? 0) >= 0.2;
-  const windy = (wind ?? 0) >= 22 || (gust ?? 0) >= 35;
-
-  let base = "";
-
-  if (temp <= 6) base = "Muito frio";
-  else if (temp <= 11) base = "Frio";
-  else if (temp <= 16) base = "Fresco";
-  else if (temp <= 22) base = "Agradável";
-  else base = "Quente";
-
-  const rainAddon = rainy ? " Leva impermeável." : "";
-  const windAddon = windy ? " Protege do vento." : "";
-
-  if (sport === "bike") {
-    if (temp <= 6) return `${base}: base layer quente, manga comprida, colete, gola, luvas grossas e calças.${windAddon}${rainAddon}`;
-    if (temp <= 11) return `${base}: manga comprida, colete, gola e luvas leves.${windAddon}${rainAddon}`;
-    if (temp <= 16) return `${base}: manga comprida leve e calção. Começa protegido e ajusta ao longo da volta.${windAddon}${rainAddon}`;
-    if (temp <= 22) return `${base}: manga curta e colete opcional.${windAddon}${rainAddon}`;
-    return `${base}: equipamento leve, proteção solar e hidratação.${rainAddon}`;
-  }
-
-  if (sport === "run") {
-    if (temp <= 6) return `${base}: camada térmica e corta-vento leve.${windAddon}${rainAddon}`;
-    if (temp <= 11) return `${base}: manga comprida leve.${windAddon}${rainAddon}`;
-    if (temp <= 16) return `${base}: T-shirt e calções. Ritmo confortável.${windAddon}${rainAddon}`;
-    if (temp <= 22) return `${base}: roupa leve e respirável.${windAddon}${rainAddon}`;
-    return `${base}: muito leve, hidratação e evitar horas de maior calor.${rainAddon}`;
-  }
-
-  if (temp <= 6) return `${base}: camadas quentes e casaco.${windAddon}${rainAddon}`;
-  if (temp <= 11) return `${base}: manga comprida e calças.${windAddon}${rainAddon}`;
-  if (temp <= 16) return `${base}: camada leve. Ideal para ganhar altitude.${windAddon}${rainAddon}`;
-  if (temp <= 22) return `${base}: T-shirt confortável.${windAddon}${rainAddon}`;
-  return `${base}: roupa leve e respirável.${rainAddon}`;
-}
-
-function toRad(deg) {
-  return deg * Math.PI / 180;
-}
-
-function toDeg(rad) {
-  return rad * 180 / Math.PI;
-}
-
-function angleDiff(a, b) {
-  return Math.abs(((a - b + 540) % 360) - 180);
-}
-
-function haversineKm(lat1, lon1, lat2, lon2) {
-  const R = 6371;
-  const dLat = toRad(lat2 - lat1);
-  const dLon = toRad(lon2 - lon1);
-  const la1 = toRad(lat1);
-  const la2 = toRad(lat2);
-
-  const a =
-    Math.sin(dLat / 2) ** 2 +
-    Math.cos(la1) * Math.cos(la2) * Math.sin(dLon / 2) ** 2;
-
-  return 2 * R * Math.asin(Math.sqrt(a));
-}
-
-function bearingBetween(lat1, lon1, lat2, lon2) {
-  const φ1 = toRad(lat1);
-  const φ2 = toRad(lat2);
-  const Δλ = toRad(lon2 - lon1);
-
-  const y = Math.sin(Δλ) * Math.cos(φ2);
-  const x =
-    Math.cos(φ1) * Math.sin(φ2) -
-    Math.sin(φ1) * Math.cos(φ2) * Math.cos(Δλ);
-
-  return (toDeg(Math.atan2(y, x)) + 360) % 360;
-}
-
-function dirBucket(deg) {
-  const d = ((deg % 360) + 360) % 360;
-
-  if (d >= 337.5 || d < 22.5) return "norte";
-  if (d < 67.5) return "nordeste";
-  if (d < 112.5) return "este";
-  if (d < 157.5) return "sudeste";
-  if (d < 202.5) return "sul";
-  if (d < 247.5) return "sudoeste";
-  if (d < 292.5) return "oeste";
-  return "noroeste";
-}
-
-function inferBank(loc) {
-  if ((loc?.lat ?? 0) < 38.67) return "S";
-  return "N";
-}
-
-function pickPOIForBearing(userLat, userLon, targetBearing, pois, bank) {
-  const MAX_KM = 22;
-  const MAX_DEG = 55;
-
-  let best = null;
-  let bestScore = Infinity;
-
-  for (const poi of pois) {
-    if (bank && poi.bank !== "X" && poi.bank !== bank) {
-      continue;
-    }
-
-    const km = haversineKm(userLat, userLon, poi.lat, poi.lon);
-
-    if (km > MAX_KM) {
-      continue;
-    }
-
-    const bearing = bearingBetween(userLat, userLon, poi.lat, poi.lon);
-    const angle = angleDiff(bearing, targetBearing);
-    const score = angle + km * 0.55;
-
-    if (score < bestScore) {
-      bestScore = score;
-      best = {
-        ...poi,
-        km,
-        bearing,
-        angle
-      };
-    }
-  }
-
-  if (!best || best.angle > MAX_DEG) {
-    return null;
-  }
-
+  });
   return best;
 }
 
-function poiLabel(poi) {
-  if (!poi) return null;
-  return poi.label || poi.name;
+function formatUpdated(date = new Date()) {
+  return date.toLocaleTimeString("pt-PT", { hour: "2-digit", minute: "2-digit" });
 }
 
-function windDirectionSuggestionSmart(windDir, loc) {
-  const fromText = windDirText(windDir);
-
-  const headBearing = windDir;
-  const tailBearing = (windDir + 180) % 360;
-
-  const bank = inferBank(loc);
-
-  const goPOI = pickPOIForBearing(loc.lat, loc.lon, headBearing, POIS, bank);
-  const backPOI = pickPOIForBearing(loc.lat, loc.lon, tailBearing, POIS, bank);
-
-  const goLabel = poiLabel(goPOI);
-  const backLabel = poiLabel(backPOI);
-
-  if (goLabel && backLabel && goLabel !== backLabel) {
-    return `<strong>Vento de ${fromText}.</strong> Arranca contra o vento na direção de ${goLabel} e guarda o regresso com vento de costas pela ${backLabel}.`;
-  }
-
-  const goDir = dirBucket(headBearing);
-  const backDir = dirBucket(tailBearing);
-
-  return `<strong>Vento de ${fromText}.</strong> Arranca contra o vento para ${goDir} e regressa para ${backDir} com vento de costas.`;
+function formatHour(iso) {
+  return new Date(iso).toLocaleTimeString("pt-PT", { hour: "2-digit", minute: "2-digit" });
 }
 
-function updateWindyCam(loc) {
-  if (els.windyLink) {
-    els.windyLink.href = `https://www.windy.com/?${loc.lat},${loc.lon},11`;
-  }
-
-  if (els.windyCam) {
-    els.windyCam.setAttribute(
-      "data-params",
-      JSON.stringify({
-        lat: loc.lat,
-        lon: loc.lon,
-        radius: 15,
-        limit: 1
-      })
-    );
-  }
+function formatWeekday(iso, long = false) {
+  const text = new Date(iso).toLocaleDateString("pt-PT", { weekday: long ? "long" : "short" });
+  return text.charAt(0).toUpperCase() + text.slice(1).replace(".", "");
 }
 
-function renderAll(data, sourceName, loc) {
+function formatShortDate(iso) {
+  return new Date(iso).toLocaleDateString("pt-PT", { day: "2-digit", month: "2-digit" });
+}
+
+function windDirection(degrees) {
+  const fromDirections = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"];
+  const normalized = ((finite(degrees) % 360) + 360) % 360;
+  const index = Math.round(normalized / 45) % 8;
+  return { from: fromDirections[index], to: fromDirections[(index + 4) % 8], degrees: normalized };
+}
+
+function humidityLabel(value) {
+  if (value < 35) return "Baixa";
+  if (value <= 70) return "Moderada";
+  if (value <= 85) return "Elevada";
+  return "Muito elevada";
+}
+
+function uvLabel(value) {
+  if (value < 3) return "Baixo";
+  if (value < 6) return "Moderado";
+  if (value < 8) return "Alto";
+  return "Muito Alto";
+}
+
+function rainLabel(probability, precipitation) {
+  if (precipitation >= 2) return "Chuva relevante";
+  if (precipitation >= .2 || probability >= 45) return "Possibilidade de chuva";
+  if (probability >= 20) return "Baixa possibilidade de chuva";
+  return "Sem chuva relevante";
+}
+
+function conditionQuality({ wind, gust, probability, precipitation, apparent, humidity, uv }) {
+  let score = 100;
+  score -= clamp((wind - 12) * 1.15, 0, 25);
+  score -= clamp((gust - 22) * .8, 0, 25);
+  score -= clamp(probability * .18, 0, 18);
+  score -= clamp(precipitation * 5, 0, 18);
+  if (apparent < 7) score -= clamp((7 - apparent) * 2, 0, 16);
+  if (apparent > 28) score -= clamp((apparent - 28) * 2, 0, 16);
+  if (humidity > 82) score -= clamp((humidity - 82) * .4, 0, 7);
+  if (uv > 7) score -= clamp((uv - 7) * 1.2, 0, 6);
+  const rounded = Math.round(clamp(score, 0, 100));
+  const label = rounded >= 85 ? "Muito boa" : rounded >= 70 ? "Boa" : rounded >= 50 ? "Razoável" : rounded >= 30 ? "Exigente" : "Desfavorável";
+  return { score: rounded, label };
+}
+
+function clothingRecommendation({ temp, apparent, wind, gust, probability, precipitation, humidity }) {
+  const feels = finite(apparent, temp);
+  const wet = precipitation >= .2 || probability >= 35;
+  const windy = wind >= 20 || gust >= 34;
+  const veryWindy = wind >= 28 || gust >= 45;
+  const humid = humidity >= 80;
+  const items = [];
+
+  const add = (label, icon, optional = false) => {
+    if (!items.some((item) => item.label === label)) items.push({ label, icon, optional });
+  };
+
+  if (feels <= 4) {
+    add("Base layer térmica", "jersey");
+    add("Jersey manga longa", "jersey");
+    add(wet ? "Casaco impermeável" : "Casaco térmico", "vest");
+    add("Calças compridas", "tights");
+    add("Luvas térmicas", "gloves");
+  } else if (feels <= 9) {
+    add("Base layer", "jersey");
+    add("Jersey manga longa", "jersey");
+    add(wet ? "Impermeável" : "Colete corta-vento", "vest");
+    add("Calças compridas", "tights");
+    add("Luvas térmicas", "gloves");
+  } else if (feels <= 13) {
+    add("Base layer leve", "jersey");
+    add("Jersey manga longa", "jersey");
+    add(wet ? "Impermeável" : "Colete corta-vento", "vest");
+    add("Calções + pernitos", "tights");
+    if (veryWindy || feels <= 11) add("Luvas térmicas", "gloves");
+  } else if (feels <= 17) {
+    add("Jersey manga curta", "jersey");
+    add("Base layer leve", "jersey", true);
+    if (windy) add("Colete corta-vento", "vest");
+    add("Manguitos", "sleeve", feels >= 16);
+    add("Calções", "shorts");
+    if (wet) add("Impermeável compacto", "vest");
+  } else if (feels <= 22) {
+    add("Jersey manga curta", "jersey");
+    if (windy) add("Colete corta-vento", "vest");
+    if (feels < 19) add("Manguitos", "sleeve", true);
+    add("Calções", "shorts");
+    if (wet) add("Impermeável compacto", "vest");
+  } else {
+    add("Jersey leve", "jersey");
+    add("Calções", "shorts");
+    if (veryWindy) add("Colete corta-vento", "vest", true);
+    if (wet) add("Impermeável compacto", "vest");
+  }
+
+  const reasonParts = [`${Math.round(temp)} °C`, `sensação ${Math.round(feels)} °C`];
+  reasonParts.push(veryWindy ? "vento forte" : windy ? "vento moderado" : "vento fraco");
+  if (wet) reasonParts.push("risco de chuva");
+  if (humid) reasonParts.push("humidade elevada");
+
+  return { items: items.slice(0, 6), reason: `Sugestão técnica para ${reasonParts.join(", ")}.` };
+}
+
+function renderClothing(values) {
+  const recommendation = clothingRecommendation(values);
+  setText("clothingReason", recommendation.reason);
+  setHTML("clothingList", recommendation.items.map((item) => `
+    <article class="clothing-item${item.optional ? " optional" : ""}">
+      <svg aria-hidden="true"><use href="#i-${item.icon}"/></svg>
+      <strong>${escapeHtml(item.label)}</strong>
+    </article>
+  `).join(""));
+}
+
+function computeNext24MinMax(temperatures, start) {
+  const values = temperatures.slice(start, start + 24).map(Number).filter(Number.isFinite);
+  return { min: values.length ? Math.min(...values) : 0, max: values.length ? Math.max(...values) : 0 };
+}
+
+function currentValues(data, index) {
+  return {
+    temp: finite(data.hourly.temperature_2m?.[index]),
+    apparent: finite(data.hourly.apparent_temperature?.[index]),
+    humidity: finite(data.hourly.relative_humidity_2m?.[index]),
+    precipitation: finite(data.hourly.precipitation?.[index]),
+    probability: finite(data.hourly.precipitation_probability?.[index]),
+    wind: finite(data.hourly.wind_speed_10m?.[index]),
+    gust: finite(data.hourly.wind_gusts_10m?.[index]),
+    direction: finite(data.hourly.wind_direction_10m?.[index]),
+    uv: finite(data.hourly.uv_index?.[index])
+  };
+}
+
+function renderCurrent(data) {
+  const index = nearestHourIndex(data.hourly.time);
+  const values = currentValues(data, index);
+  const direction = windDirection(values.direction);
+  const temperatures = computeNext24MinMax(data.hourly.temperature_2m || [], index);
+  const quality = conditionQuality(values);
+
+  setText("currentWind", Math.round(values.wind));
+  setText("currentGust", Math.round(values.gust));
+  setText("currentDirection", `${direction.from} → ${direction.to}`);
+  $("currentWindArrow").style.transform = `rotate(${direction.degrees}deg)`;
+
+  setText("currentPrecipitation", `${Math.round(values.probability)}% · ${values.precipitation.toFixed(1)} mm`);
+  setText("currentRainState", rainLabel(values.probability, values.precipitation));
+  setText("currentTemperature", `${Math.round(values.temp)} °C`);
+  setText("currentTempMeta", `Máx. ${Math.round(temperatures.max)}° · Mín. ${Math.round(temperatures.min)}° · Sensação ${Math.round(values.apparent)}°`);
+  setText("currentHumidity", `${Math.round(values.humidity)}%`);
+  setText("humidityState", humidityLabel(values.humidity));
+  setText("currentUv", values.uv.toFixed(1));
+  setText("uvState", uvLabel(values.uv));
+
+  renderClothing(values);
+  setText("conditionScore", quality.score);
+  setText("qualityRingValue", quality.score);
+  setText("conditionLabel", quality.label);
+  $("qualityRing").style.setProperty("--score", quality.score);
+}
+
+function rangeStats(data, start, count) {
+  const end = Math.min(start + count, data.hourly.time.length);
+  const slice = (key) => (data.hourly[key] || []).slice(start, end).map(Number).filter(Number.isFinite);
+  const winds = slice("wind_speed_10m");
+  const gusts = slice("wind_gusts_10m");
+  const probabilities = slice("precipitation_probability");
+  const precipitation = slice("precipitation");
+  const directions = slice("wind_direction_10m");
+  return {
+    averageWind: winds.length ? winds.reduce((sum, value) => sum + value, 0) / winds.length : 0,
+    maxGust: gusts.length ? Math.max(...gusts) : 0,
+    maxProbability: probabilities.length ? Math.max(...probabilities) : 0,
+    precipitation: precipitation.reduce((sum, value) => sum + value, 0),
+    direction: directions.length ? directions[Math.floor(directions.length / 2)] : 0
+  };
+}
+
+function renderForecastSummary(data) {
+  const start = nearestHourIndex(data.hourly.time);
+  const stats = rangeStats(data, start, 48);
+  const direction = windDirection(stats.direction);
+  const headline = stats.precipitation >= 3 || stats.maxProbability >= 60
+    ? "Chuva provável em alguns períodos"
+    : stats.precipitation >= .5 || stats.maxProbability >= 35
+      ? "Possibilidade de chuva pontual"
+      : "Sem chuva relevante";
+
+  setText("forecastHeadline", headline);
+  setText("forecastSubline", `Vento dominante ${direction.from} · rajadas até ${Math.round(stats.maxGust)} km/h`);
+  setText("summaryWind", Math.round(stats.averageWind));
+  $("summaryWindArrow").style.transform = `rotate(${direction.degrees}deg)`;
+}
+
+function renderForecast48(data) {
   const times = data.hourly.time;
-  const index = nearestHourIndex(times);
-
-  const temp = data.hourly.temperature_2m?.[index] ?? 0;
-  const feels = data.hourly.apparent_temperature?.[index] ?? temp;
-  const wind = data.hourly.wind_speed_10m?.[index] ?? 0;
-  const gust = data.hourly.wind_gusts_10m?.[index] ?? 0;
-  const dir = data.hourly.wind_direction_10m?.[index] ?? 0;
-  const prcp = data.hourly.precipitation?.[index] ?? 0;
-  const pop = data.hourly.precipitation_probability?.[index] ?? 0;
-  const code = data.hourly.weather_code?.[index] ?? 0;
-  const isDay = (data.hourly.is_day?.[index] ?? 1) === 1;
-
-  const { min, max } = computeMinMaxNext24h(data.hourly.temperature_2m, index);
-  const { sunriseStr, sunsetStr } = getSunTimes(data);
-
-  setText(els.heroLoc, loc.name);
-  setText(els.heroTemp, `${Math.round(temp)}°`);
-  setText(els.heroIcon, iconForWeatherCode(code, isDay));
-  setText(
-    els.heroMeta,
-    `Sensação: ${Math.round(feels)}° · Máx: ${Math.round(max)}° · Mín: ${Math.round(min)}°`
-  );
-  setText(els.heroSun, `Nascer: ${sunriseStr} · Pôr: ${sunsetStr}`);
-
-  setText(els.nowWind, fmtKmh(wind));
-  setText(els.nowGust, fmtKmh(gust));
-  setText(els.nowDirTxt, windDirText(dir));
-  setText(els.nowRain, fmtMm(prcp));
-  setText(els.nowPop, fmtPct(pop));
-
-  if (els.nowGust) {
-    els.nowGust.classList.toggle("danger", gust >= 45);
+  const start = nearestHourIndex(times);
+  const rows = [];
+  for (let index = start, row = 0; index < Math.min(start + 48, times.length); index += 3, row += 1) {
+    const values = currentValues(data, index);
+    const direction = windDirection(values.direction);
+    const quality = conditionQuality(values);
+    const timeLabel = row === 0 ? "Agora" : formatHour(times[index]);
+    rows.push(`
+      <tr class="${row === 0 ? "is-now" : ""}">
+        <td class="time-cell"><strong>${timeLabel}</strong><small>${formatWeekday(times[index])}, ${formatShortDate(times[index])}</small></td>
+        <td class="direction-cell"><span class="table-arrow" style="transform:rotate(${direction.degrees}deg)">↓</span>${direction.from}<small>→ ${direction.to}</small></td>
+        <td class="number-cell"><strong>${Math.round(values.wind)}</strong><small>km/h</small></td>
+        <td class="number-cell gust-cell"><strong>${Math.round(values.gust)}</strong><small>km/h</small></td>
+        <td class="number-cell rain-cell"><strong>${Math.round(values.probability)}%</strong><small>${values.precipitation.toFixed(1)} mm</small></td>
+        <td class="number-cell temp-cell"><strong>${Math.round(values.temp)}°</strong><small>sens. ${Math.round(values.apparent)}°</small></td>
+        <td class="number-cell"><strong>${Math.round(values.humidity)}%</strong><small>${humidityLabel(values.humidity)}</small></td>
+        <td class="number-cell uv-cell"><strong>${values.uv.toFixed(1)}</strong><small>${uvLabel(values.uv)}</small></td>
+        <td><span class="quality-badge">${quality.score}</span></td>
+      </tr>
+    `);
   }
-
-  if (els.dirNeedle) {
-    els.dirNeedle.style.transform = `translate(-50%, -50%) rotate(${dir}deg)`;
-  }
-
-  const best = computeBestWindowNext12h(data);
-  const bestStart = fmtHour(times[best.idx]);
-  const bestEnd = fmtHour(times[best.idx + 2] ?? times[best.idx + 1]);
-
-  renderQuickSummary({
-    wind,
-    gust,
-    pop,
-    prcp,
-    bestStart,
-    bestEnd
-  });
-
-  setText(
-    els.bestWindow,
-    `${weekdayHourLabel(times[best.idx])} → ${weekdayHourLabel(times[best.idx + 2] ?? times[best.idx + 1])}\nMenos chuva + menos rajadas.`
-  );
-
-  renderAlerts({ wind, gust, pop, prcp });
-
-  setHTML(els.windSuggestion, windDirectionSuggestionSmart(dir, loc));
-
-  setText(
-    els.dressBike,
-    clothingSuggestion({ temp: feels, wind, gust, pop, prcp, sport: "bike" })
-  );
-
-  setText(
-    els.dressRun,
-    clothingSuggestion({ temp: feels, wind, gust, pop, prcp, sport: "run" })
-  );
-
-  setText(
-    els.dressWalk,
-    clothingSuggestion({ temp: feels, wind, gust, pop, prcp, sport: "walk" })
-  );
-
-  renderHourly(data);
-  render48h(data);
-
-  setText(els.source, sourceName);
-
-  updateWindyCam(loc);
+  const tableBody = $("forecast48Table")?.querySelector("tbody");
+  if (tableBody) tableBody.innerHTML = rows.join("");
 }
 
-let refreshRunId = 0;
+function hourlyDayAverage(data, isoDay, key) {
+  const values = [];
+  data.hourly.time.forEach((time, index) => {
+    if (time.slice(0, 10) === isoDay) {
+      const value = Number(data.hourly[key]?.[index]);
+      if (Number.isFinite(value)) values.push(value);
+    }
+  });
+  return values.length ? values.reduce((sum, value) => sum + value, 0) / values.length : 0;
+}
 
-async function refresh() {
+function renderForecast7(data) {
+  const daily = data.daily || {};
+  const rows = (daily.time || []).slice(0, 7).map((day, index) => {
+    const direction = windDirection(daily.wind_direction_10m_dominant?.[index]);
+    const humidity = hourlyDayAverage(data, day, "relative_humidity_2m");
+    const wind = finite(daily.wind_speed_10m_max?.[index]);
+    const gust = finite(daily.wind_gusts_10m_max?.[index]);
+    const rain = finite(daily.precipitation_sum?.[index]);
+    const probability = finite(daily.precipitation_probability_max?.[index]);
+    const min = finite(daily.temperature_2m_min?.[index]);
+    const max = finite(daily.temperature_2m_max?.[index]);
+    const uv = finite(daily.uv_index_max?.[index]);
+    return `
+      <article class="daily-row">
+        <div class="daily-day"><strong>${index === 0 ? "Hoje" : formatWeekday(day, true)}</strong><small>${formatShortDate(day)}</small></div>
+        <div class="daily-metric daily-wind"><strong><span class="table-arrow" style="display:inline-block;transform:rotate(${direction.degrees}deg)">↓</span> ${direction.from} · ${Math.round(wind)}</strong><small>Rajadas ${Math.round(gust)} km/h</small></div>
+        <div class="daily-metric daily-rain"><strong>${Math.round(probability)}% · ${rain.toFixed(1)} mm</strong><small>Precipitação</small></div>
+        <div class="daily-metric daily-temp"><strong>${Math.round(min)}° / ${Math.round(max)}°</strong><small>Hum. ${Math.round(humidity)}% · UV ${uv.toFixed(1)}</small></div>
+      </article>
+    `;
+  });
+  setHTML("dailyList", rows.join(""));
+}
+
+function renderWeather(data, source, location) {
+  renderCurrent(data);
+  renderForecastSummary(data);
+  renderForecast48(data);
+  renderForecast7(data);
+  const fallbackNote = location.isFallback ? " · geolocalização indisponível" : "";
+  setText("updated", `Atualizado às ${formatUpdated()}${fallbackNote}`);
+  setText("source", `Fonte meteorológica: ${source}`);
+  setText("forecastSource", `Fonte meteorológica: ${source}`);
+}
+
+async function refreshWeather() {
   const runId = ++refreshRunId;
-
-  setText(els.updated, "A atualizar…");
-  setText(els.source, "—");
-
+  const refreshButton = $("refreshCurrent");
+  refreshButton?.classList.add("is-spinning");
+  setText("updated", "A atualizar as condições…");
   try {
-    const loc = await resolveSelectedLocation();
-    const { json, source } = await fetchWeather(loc);
-
+    const location = await resolveActiveLocation();
     if (runId !== refreshRunId) return;
-
-    setText(els.updated, `Última atualização: ${fmtDateTime(new Date())}`);
-    renderAll(json, source, loc);
+    resolvedLocation = location;
+    updateLocationLabels(location);
+    const response = await fetchWeather(location);
+    if (runId !== refreshRunId) return;
+    weatherData = response.data;
+    weatherSource = response.source;
+    renderWeather(weatherData, weatherSource, resolvedLocation);
   } catch (error) {
     if (runId !== refreshRunId) return;
-
-    const message = String(error?.message ?? error);
-
-    setText(
-      els.updated,
-      `Erro ao atualizar (${new Date().toLocaleTimeString("pt-PT")}): ${message}`
-    );
-
-    setText(els.source, "Se persistir, recarrega a página ou limpa os dados do site.");
-
-    console.error("[SEM PLANO] refresh failed:", error);
+    setText("updated", `Não foi possível atualizar: ${error?.message || error}`);
+    setText("forecastHeadline", "Dados temporariamente indisponíveis");
+    showToast("Não foi possível obter a meteorologia. Tenta novamente.");
+  } finally {
+    if (runId === refreshRunId) refreshButton?.classList.remove("is-spinning");
   }
 }
 
-function init() {
-  if (!els.select) return;
-
-  els.select.innerHTML = [
-    `<option value="${AUTO_LOCATION_ID}">📍 Localização atual</option>`,
-    ...LOCATIONS.map(loc => `<option value="${loc.id}">${loc.name}</option>`)
-  ].join("");
-
-  const savedLocationId = getSavedLocationId();
-  const isValidSavedLocation = savedLocationId === AUTO_LOCATION_ID || LOCATIONS.some((loc) => loc.id === savedLocationId);
-
-  els.select.value = isValidSavedLocation ? savedLocationId : AUTO_LOCATION_ID;
-
-  els.select.addEventListener("change", () => {
-    saveLocationId(els.select.value || AUTO_LOCATION_ID);
-    refresh();
+function setAppView(view) {
+  $$('[data-view-panel]').forEach((panel) => {
+    const active = panel.dataset.viewPanel === view;
+    panel.hidden = !active;
+    panel.classList.toggle("is-active", active);
   });
-
-  if (els.toggle48 && els.wrap48) {
-    els.toggle48.addEventListener("click", () => {
-      els.wrap48.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-  }
-
-  refresh();
-  setInterval(refresh, REFRESH_MS);
+  $$('[data-app-view]').forEach((button) => button.classList.toggle("is-active", button.dataset.appView === view));
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-window.addEventListener("DOMContentLoaded", init);
+function setForecastMode(mode) {
+  $$('[data-forecast-mode]').forEach((button) => button.classList.toggle("is-active", button.dataset.forecastMode === mode));
+  $("forecast48Panel").hidden = mode !== "48h";
+  $("forecast7Panel").hidden = mode !== "7d";
+  setText("forecastEyebrow", mode === "48h" ? "PRÓXIMAS 48 HORAS" : "PRÓXIMOS 7 DIAS");
+}
 
+function locationOptionButton(location, selected) {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = `location-option${selected ? " is-selected" : ""}`;
+  const icon = document.createElement("span");
+  icon.className = "soft-icon green";
+  icon.innerHTML = '<svg><use href="#i-location"/></svg>';
+  const text = document.createElement("span");
+  const title = document.createElement("strong");
+  title.textContent = location.name;
+  const subtitle = document.createElement("small");
+  subtitle.textContent = location.id === AUTO_LOCATION_ID ? "Usar a posição deste dispositivo" : (location.region || "Portugal");
+  text.append(title, subtitle);
+  const check = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  check.innerHTML = '<use href="#i-check"/>';
+  button.append(icon, text, check);
+  button.addEventListener("click", () => selectLocation(location));
+  return button;
+}
 
-/* ==============================
-   SEM PLANO — Pressão Pneus
-   ============================== */
+function renderLocationResults(locations) {
+  const container = $("locationResults");
+  if (!container) return;
+  container.innerHTML = "";
+  locations.forEach((location) => {
+    const selected = selectedLocation.id === location.id;
+    container.appendChild(locationOptionButton(location, selected));
+  });
+  if (!locations.length) {
+    const empty = document.createElement("p");
+    empty.className = "empty-state";
+    empty.textContent = "Não foram encontradas localidades.";
+    container.appendChild(empty);
+  }
+}
+
+function openLocationModal() {
+  const modal = $("locationModal");
+  modal.hidden = false;
+  document.body.style.overflow = "hidden";
+  $("locationSearch").value = "";
+  renderLocationResults([{ id: AUTO_LOCATION_ID, name: "Localização atual" }, ...LOCATIONS]);
+  setTimeout(() => $("locationSearch")?.focus(), 80);
+}
+
+function closeLocationModal() {
+  $("locationModal").hidden = true;
+  document.body.style.overflow = "";
+}
+
+async function selectLocation(location) {
+  selectedLocation = location.id === AUTO_LOCATION_ID
+    ? { id: AUTO_LOCATION_ID, name: "Localização atual" }
+    : { id: location.id, name: location.name, region: location.region || "Portugal", lat: finite(location.lat), lon: finite(location.lon) };
+  saveLocationPreference(selectedLocation);
+  updateLocationLabels(selectedLocation);
+  closeLocationModal();
+  await refreshWeather();
+}
+
+async function searchLocations(query) {
+  const normalized = query.trim().toLocaleLowerCase("pt-PT");
+  if (!normalized) {
+    renderLocationResults([{ id: AUTO_LOCATION_ID, name: "Localização atual" }, ...LOCATIONS]);
+    return;
+  }
+  const localMatches = LOCATIONS.filter((location) => `${location.name} ${location.region}`.toLocaleLowerCase("pt-PT").includes(normalized));
+  renderLocationResults(localMatches);
+  if (normalized.length < 2) return;
+
+  try {
+    const url = `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(query.trim())}&count=8&language=pt&format=json&countryCode=PT`;
+    const response = await fetchWithTimeout(url);
+    if (!response.ok) return;
+    const data = await response.json();
+    const remote = (data.results || []).map((result) => ({
+      id: `geo_${result.id}`,
+      name: result.name,
+      region: [result.admin2, result.admin1].filter(Boolean).join(" · ") || "Portugal",
+      lat: result.latitude,
+      lon: result.longitude
+    }));
+    const unique = [...localMatches, ...remote].filter((location, index, all) => all.findIndex((candidate) => candidate.name === location.name && Math.abs(finite(candidate.lat) - finite(location.lat)) < .02) === index);
+    if ($("locationSearch").value.trim() === query.trim()) renderLocationResults(unique);
+  } catch (_) {}
+}
+
+/* Pressão Pneus — fórmula preservada da versão anterior */
 
 const TP_DEFAULT_VALUES = {
   riderWeight: 75,
@@ -986,29 +635,19 @@ const TP_DEFAULT_VALUES = {
 
 const TP_SETUPS_KEY = "semPlanoTirePressureSetupsV2";
 const TP_ACTIVE_SETUP_KEY = "semPlanoTirePressureActiveSetupV2";
-
-function tpEl(id) {
-  return document.getElementById(id);
-}
+const TP_HISTORY_KEY = "semPlanoTirePressureHistoryV1";
 
 function tpNumber(id, fallback = 0) {
-  const value = Number(tpEl(id)?.value);
+  const value = Number($(id)?.value);
   return Number.isFinite(value) ? value : fallback;
 }
 
-function tpSetValue(id, value) {
-  const el = tpEl(id);
-  if (el) el.value = value;
-}
-
 function tpGetSystem() {
-  return document.querySelector(".tp-segment.is-active")?.dataset.tpSystem || "tubeless";
+  return document.querySelector('[data-tp-system].is-active')?.dataset.tpSystem || "tubeless";
 }
 
 function tpSetSystem(system) {
-  document.querySelectorAll("[data-tp-system]").forEach((button) => {
-    button.classList.toggle("is-active", button.dataset.tpSystem === system);
-  });
+  $$('[data-tp-system]').forEach((button) => button.classList.toggle("is-active", button.dataset.tpSystem === system));
 }
 
 function tpReadValues() {
@@ -1016,9 +655,9 @@ function tpReadValues() {
     riderWeight: tpNumber("tpRider", TP_DEFAULT_VALUES.riderWeight),
     bikeWeight: tpNumber("tpBike", TP_DEFAULT_VALUES.bikeWeight),
     cargoWeight: tpNumber("tpCargo", TP_DEFAULT_VALUES.cargoWeight),
-    surface: tpEl("tpSurface")?.value || TP_DEFAULT_VALUES.surface,
-    condition: tpEl("tpCondition")?.value || TP_DEFAULT_VALUES.condition,
-    preference: tpEl("tpPreference")?.value || TP_DEFAULT_VALUES.preference,
+    surface: $("tpSurface")?.value || TP_DEFAULT_VALUES.surface,
+    condition: $("tpCondition")?.value || TP_DEFAULT_VALUES.condition,
+    preference: $("tpPreference")?.value || TP_DEFAULT_VALUES.preference,
     system: tpGetSystem(),
     frontWidth: tpNumber("tpFrontWidth", TP_DEFAULT_VALUES.frontWidth),
     rearWidth: tpNumber("tpRearWidth", TP_DEFAULT_VALUES.rearWidth),
@@ -1028,24 +667,17 @@ function tpReadValues() {
 
 function tpApplyValues(values) {
   const next = { ...TP_DEFAULT_VALUES, ...(values || {}) };
-
-  tpSetValue("tpRider", next.riderWeight);
-  tpSetValue("tpBike", next.bikeWeight);
-  tpSetValue("tpCargo", next.cargoWeight);
-  tpSetValue("tpFrontWidth", next.frontWidth);
-  tpSetValue("tpRearWidth", next.rearWidth);
-  tpSetValue("tpRimWidth", next.rimWidth);
-
-  if (tpEl("tpSurface")) tpEl("tpSurface").value = next.surface;
-  if (tpEl("tpCondition")) tpEl("tpCondition").value = next.condition;
-  if (tpEl("tpPreference")) tpEl("tpPreference").value = next.preference;
-
+  $("tpRider").value = next.riderWeight;
+  $("tpBike").value = next.bikeWeight;
+  $("tpCargo").value = next.cargoWeight;
+  $("tpFrontWidth").value = next.frontWidth;
+  $("tpRearWidth").value = next.rearWidth;
+  $("tpRimWidth").value = next.rimWidth;
+  $("tpSurface").value = next.surface;
+  $("tpCondition").value = next.condition;
+  $("tpPreference").value = next.preference;
   tpSetSystem(next.system);
   tpRenderPressure();
-}
-
-function tpClamp(value, min, max) {
-  return Math.min(Math.max(value, min), max);
 }
 
 function tpRoundBar(value) {
@@ -1057,58 +689,28 @@ function tpBarToPsi(value) {
 }
 
 function tpCalculate(values) {
-  const totalWeight = Math.max(
-    45,
-    values.riderWeight + values.bikeWeight + values.cargoWeight
-  );
-
+  const totalWeight = Math.max(45, values.riderWeight + values.bikeWeight + values.cargoWeight);
   const referenceWeight = 86.5;
   const referenceWidth = 45;
   const widthExponent = 1.45;
-
   const weightFactor = totalWeight / referenceWeight;
 
-  let frontBar =
-    1.75 *
-    weightFactor *
-    Math.pow(referenceWidth / Math.max(values.frontWidth, 20), widthExponent);
+  let frontBar = 1.75 * weightFactor * Math.pow(referenceWidth / Math.max(values.frontWidth, 20), widthExponent);
+  let rearBar = 2.0 * weightFactor * Math.pow(referenceWidth / Math.max(values.rearWidth, 20), widthExponent);
 
-  let rearBar =
-    2.0 *
-    weightFactor *
-    Math.pow(referenceWidth / Math.max(values.rearWidth, 20), widthExponent);
-
-  const surfaceAdjustment = {
-    road: 0.35,
-    allroad: 0.15,
-    gravel: 0,
-    rough: -0.12
-  };
-
-  const preferenceAdjustment = {
-    comfort: -0.1,
-    balanced: 0,
-    performance: 0.12
-  };
-
-  const systemAdjustment = values.system === "tube" ? 0.25 : 0;
-  const conditionAdjustment = values.condition === "wet" ? -0.1 : 0;
-
-  const finalAdjustment =
-    (surfaceAdjustment[values.surface] || 0) +
-    (preferenceAdjustment[values.preference] || 0) +
-    systemAdjustment +
-    conditionAdjustment;
+  const surfaceAdjustment = { road: .35, allroad: .15, gravel: 0, rough: -.12 };
+  const preferenceAdjustment = { comfort: -.1, balanced: 0, performance: .12 };
+  const systemAdjustment = values.system === "tube" ? .25 : 0;
+  const conditionAdjustment = values.condition === "wet" ? -.1 : 0;
+  const finalAdjustment = (surfaceAdjustment[values.surface] || 0) + (preferenceAdjustment[values.preference] || 0) + systemAdjustment + conditionAdjustment;
 
   frontBar += finalAdjustment;
   rearBar += finalAdjustment;
-
   const minPressure = values.system === "tube" ? 1.8 : 1.2;
-  const maxPressure = values.frontWidth <= 30 || values.rearWidth <= 30 ? 7.0 : 4.0;
-
+  const maxPressure = values.frontWidth <= 30 || values.rearWidth <= 30 ? 7 : 4;
   return {
-    frontBar: tpRoundBar(tpClamp(frontBar, minPressure, maxPressure)),
-    rearBar: tpRoundBar(tpClamp(rearBar, minPressure, maxPressure))
+    frontBar: tpRoundBar(clamp(frontBar, minPressure, maxPressure)),
+    rearBar: tpRoundBar(clamp(rearBar, minPressure, maxPressure))
   };
 }
 
@@ -1121,297 +723,197 @@ function tpPreferencePosition(preference) {
 function tpRenderPressure() {
   const values = tpReadValues();
   const result = tpCalculate(values);
-
-  if (tpEl("tpFrontBar")) tpEl("tpFrontBar").textContent = result.frontBar.toFixed(1);
-  if (tpEl("tpRearBar")) tpEl("tpRearBar").textContent = result.rearBar.toFixed(1);
-  if (tpEl("tpFrontPsi")) tpEl("tpFrontPsi").textContent = `${tpBarToPsi(result.frontBar)} psi`;
-  if (tpEl("tpRearPsi")) tpEl("tpRearPsi").textContent = `${tpBarToPsi(result.rearBar)} psi`;
-
-  const dot = tpEl("tpBalanceDot");
-  if (dot) dot.style.left = tpPreferencePosition(values.preference);
-
-  const tip = tpEl("tpTip");
-  if (tip) {
-    const wetText = values.condition === "wet" ? " Como está molhado, a app reduz ligeiramente a pressão." : "";
-    const tubeText = values.system === "tube" ? " Com câmara, a pressão sobe para reduzir risco de snake bite." : "";
-    tip.textContent = `Ponto de partida recomendado. Ajusta ±0.1–0.2 bar conforme o terreno e a tua sensação.${wetText}${tubeText}`;
-  }
+  setText("tpFrontBar", result.frontBar.toFixed(1).replace(".", ","));
+  setText("tpRearBar", result.rearBar.toFixed(1).replace(".", ","));
+  setText("tpFrontPsi", `${tpBarToPsi(result.frontBar)} psi`);
+  setText("tpRearPsi", `${tpBarToPsi(result.rearBar)} psi`);
+  $("tpBalanceDot").style.left = tpPreferencePosition(values.preference);
+  const wetText = values.condition === "wet" ? " Em piso molhado, a pressão é ligeiramente reduzida." : "";
+  const tubeText = values.system === "tube" ? " Com câmara, a pressão sobe para reduzir o risco de snake bite." : "";
+  setText("tpTip", `Ponto de partida recomendado. Ajusta ±0,1–0,2 bar conforme o terreno e a tua sensação.${wetText}${tubeText}`);
+  return { values, result };
 }
 
-function tpGetSavedSetups() {
+function tpGetJson(key) {
   try {
-    const parsed = JSON.parse(localStorage.getItem(TP_SETUPS_KEY) || "[]");
-    if (!Array.isArray(parsed)) return [];
-
-    return parsed.filter((setup) => {
-      return setup && typeof setup.id === "string" && setup.values;
-    });
+    const value = JSON.parse(localStorage.getItem(key) || "[]");
+    return Array.isArray(value) ? value : [];
   } catch (_) {
     return [];
   }
 }
 
-function tpSetSavedSetups(setups) {
-  localStorage.setItem(TP_SETUPS_KEY, JSON.stringify(setups));
+function tpSetJson(key, value) {
+  try { localStorage.setItem(key, JSON.stringify(value)); } catch (_) {}
 }
 
 function tpSurfaceLabel(value) {
-  const labels = {
-    road: "Estrada lisa",
-    allroad: "All-road",
-    gravel: "Gravel misto",
-    rough: "Gravel mau piso"
-  };
-
-  return labels[value] || "Gravel misto";
+  return { road: "Estrada lisa", allroad: "All-road", gravel: "Gravel misto", rough: "Gravel mau piso" }[value] || "Gravel misto";
 }
 
 function tpSystemLabel(value) {
   return value === "tube" ? "Câmara" : "Tubeless";
 }
 
-function tpFormatSetupSummary(values) {
-  const front = Number(values.frontWidth || TP_DEFAULT_VALUES.frontWidth);
-  const rear = Number(values.rearWidth || TP_DEFAULT_VALUES.rearWidth);
-  const tyreText = front === rear ? `${front} mm` : `${front}/${rear} mm`;
-
-  return `${tpSurfaceLabel(values.surface)} · ${tyreText} · ${tpSystemLabel(values.system)}`;
+function tpSetupSummary(values) {
+  const width = values.frontWidth === values.rearWidth ? `${values.frontWidth} mm` : `${values.frontWidth}/${values.rearWidth} mm`;
+  return `${tpSurfaceLabel(values.surface)} · ${width} · ${tpSystemLabel(values.system)}`;
 }
 
 function tpDefaultSetupName(values) {
-  const now = new Date();
-  const date = now.toLocaleDateString("pt-PT", {
-    day: "2-digit",
-    month: "2-digit"
-  });
-
-  return `${tpSurfaceLabel(values.surface)} ${values.frontWidth}/${values.rearWidth} mm · ${date}`;
+  return `${tpSurfaceLabel(values.surface)} ${values.frontWidth}/${values.rearWidth} mm`;
 }
 
-function tpSetActiveSetup(setupId) {
-  if (setupId) {
-    localStorage.setItem(TP_ACTIVE_SETUP_KEY, setupId);
-  } else {
-    localStorage.removeItem(TP_ACTIVE_SETUP_KEY);
-  }
-
-  tpRenderSavedSetups();
-}
-
-function tpEscapeHtml(value) {
-  return String(value)
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;");
-}
-
-function tpRenderSavedSetups() {
-  const list = tpEl("tpSetupList");
-  const empty = tpEl("tpEmptySetups");
-  if (!list || !empty) return;
-
-  const setups = tpGetSavedSetups();
-  const activeSetupId = localStorage.getItem(TP_ACTIVE_SETUP_KEY);
-
-  empty.classList.toggle("is-hidden", setups.length > 0);
-  list.innerHTML = setups
-    .map((setup) => {
-      const active = setup.id === activeSetupId;
-      const safeName = tpEscapeHtml(setup.name || "Setup sem nome");
-      const safeSummary = tpEscapeHtml(tpFormatSetupSummary(setup.values || TP_DEFAULT_VALUES));
-
-      return `
-        <article class="tp-setup ${active ? "is-active" : ""}" data-tp-setup-id="${setup.id}">
-          <button type="button" class="tp-setup-main" data-tp-load-setup="${setup.id}">
-            <span class="tp-bike-icon">🚴</span>
-            <span class="tp-setup-text">
-              <strong>${safeName}</strong>
-              <small>${safeSummary}</small>
-            </span>
-          </button>
-          <em>${active ? "Ativo" : ""}</em>
-          <button type="button" class="tp-delete-setup" data-tp-delete-setup="${setup.id}" aria-label="Apagar setup ${safeName}">Apagar</button>
-        </article>
-      `;
-    })
-    .join("");
-}
-
-function tpLoadSavedSetup(setupId) {
-  const setup = tpGetSavedSetups().find((item) => item.id === setupId);
-  if (!setup) return;
-
-  tpApplyValues(setup.values);
-  tpSetActiveSetup(setup.id);
-
-  const tip = tpEl("tpTip");
-  if (tip) {
-    tip.textContent = `Setup “${setup.name}” carregado. Podes ajustar os valores e guardar como novo setup.`;
-  }
+function tpRenderSetups() {
+  const setups = tpGetJson(TP_SETUPS_KEY).filter((setup) => setup?.id && setup?.values);
+  const activeId = localStorage.getItem(TP_ACTIVE_SETUP_KEY);
+  $("tpEmptySetups").hidden = setups.length > 0;
+  setHTML("tpSetupList", setups.map((setup) => `
+    <article class="saved-item${setup.id === activeId ? " is-active" : ""}">
+      <button class="saved-main" type="button" data-load-setup="${escapeHtml(setup.id)}">
+        <strong>${escapeHtml(setup.name || "Setup sem nome")}</strong>
+        <small>${escapeHtml(tpSetupSummary(setup.values))}</small>
+      </button>
+      <div class="saved-actions">${setup.id === activeId ? "<span>ATIVO</span>" : ""}<button class="tiny-button" type="button" data-delete-setup="${escapeHtml(setup.id)}" aria-label="Apagar setup"><svg><use href="#i-trash"/></svg></button></div>
+    </article>
+  `).join(""));
 }
 
 function tpSaveCurrentSetup() {
   const values = tpReadValues();
-  const defaultName = tpDefaultSetupName(values);
-  const name = window.prompt("Nome do setup", defaultName);
-
-  if (!name || !name.trim()) return;
-
-  const setup = {
-    id: `setup-${Date.now()}`,
-    name: name.trim(),
-    createdAt: new Date().toISOString(),
-    values
-  };
-
-  const setups = tpGetSavedSetups();
+  const name = window.prompt("Nome do setup", tpDefaultSetupName(values));
+  if (!name?.trim()) return;
+  const setup = { id: `setup-${Date.now()}`, name: name.trim(), createdAt: new Date().toISOString(), values };
+  const setups = tpGetJson(TP_SETUPS_KEY);
   setups.push(setup);
-  tpSetSavedSetups(setups);
-  tpSetActiveSetup(setup.id);
-
-  const tip = tpEl("tpTip");
-  if (tip) {
-    tip.textContent = `Setup “${setup.name}” guardado neste dispositivo.`;
-  }
+  tpSetJson(TP_SETUPS_KEY, setups);
+  localStorage.setItem(TP_ACTIVE_SETUP_KEY, setup.id);
+  tpRenderSetups();
+  showToast(`Setup “${setup.name}” guardado.`);
 }
 
-function tpDeleteSavedSetup(setupId) {
-  const setups = tpGetSavedSetups();
-  const setup = setups.find((item) => item.id === setupId);
+function tpLoadSetup(id) {
+  const setup = tpGetJson(TP_SETUPS_KEY).find((item) => item.id === id);
   if (!setup) return;
-
-  const confirmed = window.confirm(`Apagar o setup “${setup.name}”?`);
-  if (!confirmed) return;
-
-  const nextSetups = setups.filter((item) => item.id !== setupId);
-  tpSetSavedSetups(nextSetups);
-
-  if (localStorage.getItem(TP_ACTIVE_SETUP_KEY) === setupId) {
-    localStorage.removeItem(TP_ACTIVE_SETUP_KEY);
-  }
-
-  tpRenderSavedSetups();
-
-  const tip = tpEl("tpTip");
-  if (tip) {
-    tip.textContent = `Setup “${setup.name}” apagado. A calculadora mantém os valores atuais.`;
-  }
+  tpApplyValues(setup.values);
+  localStorage.setItem(TP_ACTIVE_SETUP_KEY, id);
+  tpRenderSetups();
+  setPressureTab("calculator");
+  showToast(`Setup “${setup.name}” carregado.`);
 }
 
-function tpMarkCalculatorAsCustom() {
+function tpDeleteSetup(id) {
+  const setups = tpGetJson(TP_SETUPS_KEY);
+  const setup = setups.find((item) => item.id === id);
+  if (!setup || !window.confirm(`Apagar o setup “${setup.name}”?`)) return;
+  tpSetJson(TP_SETUPS_KEY, setups.filter((item) => item.id !== id));
+  if (localStorage.getItem(TP_ACTIVE_SETUP_KEY) === id) localStorage.removeItem(TP_ACTIVE_SETUP_KEY);
+  tpRenderSetups();
+}
+
+function tpMarkCustom() {
   localStorage.removeItem(TP_ACTIVE_SETUP_KEY);
-  tpRenderSavedSetups();
+  tpRenderSetups();
 }
 
-function setAppView(view) {
-  const main = document.querySelector("main");
-  const pressureView = tpEl("pressureView");
-  const showPressure = view === "pressure";
+function tpAddHistory() {
+  const { values, result } = tpRenderPressure();
+  const history = tpGetJson(TP_HISTORY_KEY);
+  history.unshift({ id: `history-${Date.now()}`, createdAt: new Date().toISOString(), values, result });
+  tpSetJson(TP_HISTORY_KEY, history.slice(0, 40));
+  tpRenderHistory();
+  showToast("Resultado registado no histórico.");
+}
 
-  document.body.classList.toggle("view-pressure", showPressure);
+function tpRenderHistory() {
+  const history = tpGetJson(TP_HISTORY_KEY).filter((entry) => entry?.result && entry?.values);
+  $("tpEmptyHistory").hidden = history.length > 0;
+  setHTML("tpHistoryList", history.map((entry) => {
+    const date = new Date(entry.createdAt).toLocaleString("pt-PT", { day: "2-digit", month: "2-digit", year: "2-digit", hour: "2-digit", minute: "2-digit" });
+    return `
+      <article class="history-item">
+        <div class="history-main"><strong>${escapeHtml(tpSetupSummary(entry.values))}</strong><small>${date} · ${entry.values.riderWeight + entry.values.bikeWeight + entry.values.cargoWeight} kg total</small></div>
+        <div class="history-result"><strong>${entry.result.frontBar.toFixed(1).replace(".", ",")} / ${entry.result.rearBar.toFixed(1).replace(".", ",")} bar</strong><small>frente / trás</small></div>
+      </article>
+    `;
+  }).join(""));
+  $("tpClearHistory").hidden = history.length === 0;
+}
 
-  if (main && pressureView) {
-    Array.from(main.children).forEach((child) => {
-      if (child === pressureView) {
-        child.classList.toggle("is-hidden", !showPressure);
-      } else {
-        child.classList.toggle("is-hidden", showPressure);
-      }
-    });
+function setPressureTab(tab) {
+  $$('[data-pressure-tab]').forEach((button) => button.classList.toggle("is-active", button.dataset.pressureTab === tab));
+  $$('[data-pressure-panel]').forEach((panel) => panel.hidden = panel.dataset.pressurePanel !== tab);
+}
+
+function initPressure() {
+  $$('[data-tp-step]').forEach((button) => button.addEventListener("click", () => {
+    const input = $(button.dataset.tpTarget);
+    if (!input) return;
+    const step = Number(button.dataset.tpStep || input.step || 1);
+    const next = clamp(Number(input.value || 0) + step, Number(input.min || -Infinity), Number(input.max || Infinity));
+    input.value = Number.isInteger(step) ? Math.round(next) : next.toFixed(1);
+    tpMarkCustom();
+    tpRenderPressure();
+  }));
+
+  $$('.pressure-form input, .pressure-form select').forEach((field) => {
+    field.addEventListener("input", () => { tpMarkCustom(); tpRenderPressure(); });
+    field.addEventListener("change", () => { tpMarkCustom(); tpRenderPressure(); });
+  });
+
+  $$('[data-tp-system]').forEach((button) => button.addEventListener("click", () => {
+    tpSetSystem(button.dataset.tpSystem);
+    tpMarkCustom();
+    tpRenderPressure();
+  }));
+
+  $$('[data-pressure-tab]').forEach((button) => button.addEventListener("click", () => setPressureTab(button.dataset.pressureTab)));
+  $("tpSaveSetup")?.addEventListener("click", tpSaveCurrentSetup);
+  $("tpSaveSetupFromCalc")?.addEventListener("click", tpSaveCurrentSetup);
+  $("tpAddHistory")?.addEventListener("click", tpAddHistory);
+  $("tpClearHistory")?.addEventListener("click", () => {
+    if (!window.confirm("Limpar todo o histórico de pressões?")) return;
+    tpSetJson(TP_HISTORY_KEY, []);
+    tpRenderHistory();
+  });
+  $("tpSetupList")?.addEventListener("click", (event) => {
+    const load = event.target.closest("[data-load-setup]");
+    const remove = event.target.closest("[data-delete-setup]");
+    if (remove) tpDeleteSetup(remove.dataset.deleteSetup);
+    else if (load) tpLoadSetup(load.dataset.loadSetup);
+  });
+
+  const activeId = localStorage.getItem(TP_ACTIVE_SETUP_KEY);
+  const activeSetup = tpGetJson(TP_SETUPS_KEY).find((setup) => setup.id === activeId);
+  tpApplyValues(activeSetup?.values || TP_DEFAULT_VALUES);
+  tpRenderSetups();
+  tpRenderHistory();
+}
+
+function init() {
+  $$('[data-app-view]').forEach((button) => button.addEventListener("click", () => setAppView(button.dataset.appView)));
+  $$('[data-forecast-mode]').forEach((button) => button.addEventListener("click", () => setForecastMode(button.dataset.forecastMode)));
+  $$('[data-open-location]').forEach((button) => button.addEventListener("click", openLocationModal));
+  $("closeLocation")?.addEventListener("click", closeLocationModal);
+  $("locationModal")?.addEventListener("click", (event) => { if (event.target === $("locationModal")) closeLocationModal(); });
+  $("locationSearch")?.addEventListener("input", (event) => {
+    clearTimeout(searchTimer);
+    const query = event.target.value;
+    searchTimer = setTimeout(() => searchLocations(query), 280);
+  });
+  $("refreshCurrent")?.addEventListener("click", refreshWeather);
+  document.addEventListener("keydown", (event) => { if (event.key === "Escape" && !$("locationModal").hidden) closeLocationModal(); });
+
+  initPressure();
+  updateLocationLabels(selectedLocation);
+  setAppView("current");
+  setForecastMode("48h");
+  refreshWeather();
+  setInterval(refreshWeather, REFRESH_MS);
+
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => navigator.serviceWorker.register("./sw.js").catch(() => {}));
   }
-
-  document.querySelectorAll(".bottom-nav-btn[data-app-view]").forEach((button) => {
-    button.classList.toggle("is-active", button.dataset.appView === view);
-  });
-
-  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-function initPressureTool() {
-  if (!tpEl("pressureView")) return;
-
-  document.querySelectorAll("[data-app-view]").forEach((button) => {
-    button.addEventListener("click", () => {
-      if (button.disabled) return;
-      setAppView(button.dataset.appView);
-    });
-  });
-
-  document.querySelectorAll("[data-tp-step]").forEach((button) => {
-    button.addEventListener("click", () => {
-      const target = tpEl(button.dataset.tpTarget);
-      if (!target) return;
-
-      const step = Number(button.dataset.tpStep || target.step || 1);
-      const min = Number(target.min || -Infinity);
-      const max = Number(target.max || Infinity);
-      const current = Number(target.value || 0);
-      const next = tpClamp(current + step, min, max);
-
-      target.value = Number.isInteger(step) ? Math.round(next) : next.toFixed(1);
-      tpMarkCalculatorAsCustom();
-      tpRenderPressure();
-    });
-  });
-
-  document.querySelectorAll("#pressureView input, #pressureView select").forEach((field) => {
-    field.addEventListener("input", () => {
-      tpMarkCalculatorAsCustom();
-      tpRenderPressure();
-    });
-
-    field.addEventListener("change", () => {
-      tpMarkCalculatorAsCustom();
-      tpRenderPressure();
-    });
-  });
-
-  document.querySelectorAll("[data-tp-system]").forEach((button) => {
-    button.addEventListener("click", () => {
-      tpSetSystem(button.dataset.tpSystem);
-      tpMarkCalculatorAsCustom();
-      tpRenderPressure();
-    });
-  });
-
-  tpEl("tpSetupList")?.addEventListener("click", (event) => {
-    const loadButton = event.target.closest("[data-tp-load-setup]");
-    const deleteButton = event.target.closest("[data-tp-delete-setup]");
-
-    if (deleteButton) {
-      tpDeleteSavedSetup(deleteButton.dataset.tpDeleteSetup);
-      return;
-    }
-
-    if (loadButton) {
-      tpLoadSavedSetup(loadButton.dataset.tpLoadSetup);
-    }
-  });
-
-  document.querySelectorAll("[data-scroll-target]").forEach((button) => {
-    button.addEventListener("click", () => {
-      const target = tpEl(button.dataset.scrollTarget);
-      if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-  });
-
-  tpEl("tpSaveSetup")?.addEventListener("click", tpSaveCurrentSetup);
-
-  const setups = tpGetSavedSetups();
-  const activeSetupId = localStorage.getItem(TP_ACTIVE_SETUP_KEY);
-  const activeSetup = setups.find((setup) => setup.id === activeSetupId);
-
-  if (activeSetup) {
-    tpApplyValues(activeSetup.values);
-  } else {
-    localStorage.removeItem(TP_ACTIVE_SETUP_KEY);
-    tpApplyValues(TP_DEFAULT_VALUES);
-  }
-
-  tpRenderSavedSetups();
-  setAppView("meteo");
-}
-
-window.addEventListener("DOMContentLoaded", initPressureTool);
+window.addEventListener("DOMContentLoaded", init);
