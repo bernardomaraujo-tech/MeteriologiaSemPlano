@@ -5,12 +5,13 @@ PWA mobile-first para avaliar condições de ciclismo e calcular pressão de pne
 ## Estrutura
 
 - **Atual** — vento, rajadas e direção visual em destaque; precipitação, temperatura, humidade, UV, roupa técnica sugerida e qualidade da condição.
-- **Previsão** — evolução hora a hora das próximas 24 horas e resumo de 7 dias, com direção do vento em todos os períodos.
+- **Previsão** — evolução hora a hora das próximas 48 horas e resumo de 7 dias, com direção do vento em todos os períodos.
 - **Pressão Pneus** — calculadora completa, setups guardados e histórico local de resultados.
 
 ## Dados e armazenamento
 
 - Meteorologia e geocodificação: [Open-Meteo](https://open-meteo.com/).
+- Mapa discreto do cartão de vento: [OpenStreetMap](https://www.openstreetmap.org/copyright), centrado automaticamente na localização selecionada.
 - Localização, setups e histórico: guardados apenas no `localStorage` do dispositivo.
 - Atualização automática: a cada 5 minutos.
 

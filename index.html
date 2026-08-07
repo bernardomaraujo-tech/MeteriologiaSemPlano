@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#f6f7f5">
   <meta name="description" content="Meteorologia técnica para ciclismo e calculadora de pressão de pneus.">
   <title>SEM PLANO — Meteo</title>
-  <link rel="stylesheet" href="./styles.css?v=20260807_01">
+  <link rel="stylesheet" href="./styles.css?v=20260807_03">
   <link rel="manifest" href="./manifest.json">
   <link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -67,6 +67,11 @@
         <p class="update-line" id="updated">A obter as condições atuais…</p>
 
         <section class="card wind-card" aria-labelledby="windTitle">
+          <div class="wind-map" aria-hidden="true">
+            <div class="wind-map-tiles" id="windMapTiles"></div>
+          </div>
+          <a class="map-attribution" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a>
+
           <div class="card-heading">
             <h2 id="windTitle"><svg><use href="#i-wind"/></svg> Vento e rajadas</h2>
           </div>
@@ -155,19 +160,19 @@
         </button>
 
         <div class="segmented-control forecast-mode" role="tablist" aria-label="Período da previsão">
-          <button class="is-active" type="button" data-forecast-mode="24h">24 horas</button>
+          <button class="is-active" type="button" data-forecast-mode="48h">48 horas</button>
           <button type="button" data-forecast-mode="7d">7 dias</button>
         </div>
 
         <section class="card forecast-summary">
-          <div><p id="forecastEyebrow">PRÓXIMAS 24 HORAS</p><strong id="forecastHeadline">A calcular…</strong><small id="forecastSubline">—</small></div>
+          <div><p id="forecastEyebrow">PRÓXIMAS 48 HORAS</p><strong id="forecastHeadline">A calcular…</strong><small id="forecastSubline">—</small></div>
           <div class="summary-wind"><span class="mini-wind-arrow" id="summaryWindArrow">↓</span><strong id="summaryWind">—</strong><small>km/h</small></div>
         </section>
 
-        <section class="card forecast-table-card" id="forecast24Panel">
-          <div class="forecast-heading"><div><h2>Previsão hora a hora</h2><p>Próximas 24 horas · desliza para todos os dados</p></div><span>24 h</span></div>
+        <section class="card forecast-table-card" id="forecast48Panel">
+          <div class="forecast-heading"><div><h2>Previsão hora a hora</h2><p>Próximas 48 horas · desliza para todos os dados</p></div><span>48 h</span></div>
           <div class="table-scroll">
-            <table class="forecast-table" id="forecast24Table">
+            <table class="forecast-table" id="forecast48Table">
               <thead><tr><th>Hora</th><th>Direção</th><th>Vento</th><th>Rajadas</th><th>Chuva</th><th>Temp.</th><th>Hum.</th><th>UV</th><th>Qual.</th></tr></thead>
               <tbody><tr><td colspan="9" class="loading-cell">A carregar previsão…</td></tr></tbody>
             </table>
@@ -256,12 +261,12 @@
       <header><div><p class="brand">LOCALIZAÇÃO</p><h2 id="locationModalTitle">Escolher localização</h2></div><button class="icon-button" type="button" id="closeLocation" aria-label="Fechar"><svg><use href="#i-close"/></svg></button></header>
       <label class="search-box"><svg><use href="#i-search"/></svg><input id="locationSearch" type="search" placeholder="Procurar cidade ou localidade" autocomplete="off"></label>
       <div class="location-results" id="locationResults"></div>
-      <p class="search-help">A pesquisa inclui localidades em Portugal através da Open-Meteo.</p>
+      <p class="search-help">Pesquisa de localidades em todo o mundo através da Open-Meteo.</p>
     </section>
   </div>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="./app.js?v=20260807_01"></script>
+  <script src="./app.js?v=20260807_03"></script>
 </body>
 </html>
