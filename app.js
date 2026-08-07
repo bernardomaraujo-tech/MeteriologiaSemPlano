@@ -298,6 +298,43 @@ function rainLabel(probability, precipitation) {
   return "Sem chuva relevante";
 }
 
+function weatherConditionLabel(code) {
+  const value = Math.round(finite(code, -1));
+  if (value === 0) return "Céu limpo";
+  if (value === 1) return "Pouco nublado";
+  if (value === 2) return "Parcialmente nublado";
+  if (value === 3) return "Céu muito nublado";
+  if (value === 45 || value === 48) return "Nevoeiro";
+  if ([51, 53, 55, 56, 57].includes(value)) return "Chuvisco";
+  if ([61, 63, 66].includes(value)) return "Chuva";
+  if ([65, 67].includes(value)) return "Chuva forte";
+  if ([71, 73, 75, 77].includes(value)) return "Neve";
+  if ([80, 81].includes(value)) return "Aguaceiros";
+  if (value === 82) return "Aguaceiros fortes";
+  if ([85, 86].includes(value)) return "Aguaceiros de neve";
+  if (value === 95) return "Trovoada";
+  if ([96, 99].includes(value)) return "Trovoada com granizo";
+  return "Condições variáveis";
+}
+
+function windStrengthLabel(wind) {
+  if (wind < 12) return "Vento fraco";
+  if (wind < 20) return "Vento moderado";
+  if (wind < 28) return "Vento forte";
+  return "Vento muito forte";
+}
+
+function gustStrengthLabel(gust) {
+  if (gust < 25) return "rajadas fracas";
+  if (gust < 40) return "rajadas moderadas";
+  if (gust < 55) return "rajadas fortes";
+  return "rajadas muito fortes";
+}
+
+function currentWeatherDescription(values, direction) {
+  return `${weatherConditionLabel(values.weatherCode)} · ${windStrengthLabel(values.wind)} de ${direction.from}, com ${gustStrengthLabel(values.gust)} · ${rainLabel(values.probability, values.precipitation)}.`;
+}
+
 function conditionQuality({ wind, gust, probability, precipitation, apparent, humidity, uv }) {
   let score = 100;
   score -= clamp((wind - 12) * 1.15, 0, 25);
@@ -406,7 +443,8 @@ function currentValues(data, index) {
     wind: finite(data.hourly.wind_speed_10m?.[index]),
     gust: finite(data.hourly.wind_gusts_10m?.[index]),
     direction: finite(data.hourly.wind_direction_10m?.[index]),
-    uv: finite(data.hourly.uv_index?.[index])
+    uv: finite(data.hourly.uv_index?.[index]),
+    weatherCode: finite(data.hourly.weather_code?.[index], -1)
   };
 }
 
@@ -421,6 +459,7 @@ function renderCurrent(data) {
   setText("currentGust", Math.round(values.gust));
   setText("currentDirection", `${direction.from} → ${direction.to}`);
   $("currentWindArrow").style.transform = `rotate(${direction.degrees}deg)`;
+  setText("currentWeatherDescription", currentWeatherDescription(values, direction));
 
   setText("currentPrecipitation", `${Math.round(values.probability)}% · ${values.precipitation.toFixed(1)} mm`);
   setText("currentRainState", rainLabel(values.probability, values.precipitation));
@@ -483,9 +522,10 @@ function renderForecast48(data) {
     rows.push(`
       <tr class="${row === 0 ? "is-now" : ""}">
         <td class="time-cell"><strong>${timeLabel}</strong><small>${formatWeekday(times[index])}, ${formatShortDate(times[index])}</small></td>
-        <td class="direction-cell"><span class="table-arrow" style="transform:rotate(${direction.degrees}deg)">↓</span>${direction.from}<small>→ ${direction.to}</small></td>
-        <td class="number-cell"><strong>${Math.round(values.wind)}</strong><small>km/h</small></td>
-        <td class="number-cell gust-cell"><strong>${Math.round(values.gust)}</strong><small>km/h</small></td>
+        <td class="wind-summary-cell">
+          <div class="wind-summary-direction"><span class="table-arrow" style="transform:rotate(${direction.degrees}deg)">↓</span><strong>${direction.from} → ${direction.to}</strong></div>
+          <div class="wind-summary-speeds"><span><b>${Math.round(values.wind)}</b><small>vento</small></span><i>·</i><span class="gust"><b>${Math.round(values.gust)}</b><small>rajadas</small></span><em>km/h</em></div>
+        </td>
         <td class="number-cell rain-cell"><strong>${Math.round(values.probability)}%</strong><small>${values.precipitation.toFixed(1)} mm</small></td>
         <td class="number-cell temp-cell"><strong>${Math.round(values.temp)}°</strong><small>sens. ${Math.round(values.apparent)}°</small></td>
         <td class="number-cell"><strong>${Math.round(values.humidity)}%</strong><small>${humidityLabel(values.humidity)}</small></td>
