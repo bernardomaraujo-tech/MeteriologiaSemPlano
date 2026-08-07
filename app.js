@@ -402,7 +402,7 @@ function rangeStats(data, start, count) {
 
 function renderForecastSummary(data) {
   const start = nearestHourIndex(data.hourly.time);
-  const stats = rangeStats(data, start, 48);
+  const stats = rangeStats(data, start, 24);
   const direction = windDirection(stats.direction);
   const headline = stats.precipitation >= 3 || stats.maxProbability >= 60
     ? "Chuva provável em alguns períodos"
@@ -416,11 +416,11 @@ function renderForecastSummary(data) {
   $("summaryWindArrow").style.transform = `rotate(${direction.degrees}deg)`;
 }
 
-function renderForecast48(data) {
+function renderForecast24(data) {
   const times = data.hourly.time;
   const start = nearestHourIndex(times);
   const rows = [];
-  for (let index = start, row = 0; index < Math.min(start + 48, times.length); index += 3, row += 1) {
+  for (let index = start, row = 0; index < Math.min(start + 24, times.length); index += 1, row += 1) {
     const values = currentValues(data, index);
     const direction = windDirection(values.direction);
     const quality = conditionQuality(values);
@@ -439,7 +439,7 @@ function renderForecast48(data) {
       </tr>
     `);
   }
-  const tableBody = $("forecast48Table")?.querySelector("tbody");
+  const tableBody = $("forecast24Table")?.querySelector("tbody");
   if (tableBody) tableBody.innerHTML = rows.join("");
 }
 
@@ -481,7 +481,7 @@ function renderForecast7(data) {
 function renderWeather(data, source, location) {
   renderCurrent(data);
   renderForecastSummary(data);
-  renderForecast48(data);
+  renderForecast24(data);
   renderForecast7(data);
   const fallbackNote = location.isFallback ? " · geolocalização indisponível" : "";
   setText("updated", `Atualizado às ${formatUpdated()}${fallbackNote}`);
@@ -526,9 +526,9 @@ function setAppView(view) {
 
 function setForecastMode(mode) {
   $$('[data-forecast-mode]').forEach((button) => button.classList.toggle("is-active", button.dataset.forecastMode === mode));
-  $("forecast48Panel").hidden = mode !== "48h";
+  $("forecast24Panel").hidden = mode !== "24h";
   $("forecast7Panel").hidden = mode !== "7d";
-  setText("forecastEyebrow", mode === "48h" ? "PRÓXIMAS 48 HORAS" : "PRÓXIMOS 7 DIAS");
+  setText("forecastEyebrow", mode === "24h" ? "PRÓXIMAS 24 HORAS" : "PRÓXIMOS 7 DIAS");
 }
 
 function locationOptionButton(location, selected) {
@@ -907,7 +907,7 @@ function init() {
   initPressure();
   updateLocationLabels(selectedLocation);
   setAppView("current");
-  setForecastMode("48h");
+  setForecastMode("24h");
   refreshWeather();
   setInterval(refreshWeather, REFRESH_MS);
 
