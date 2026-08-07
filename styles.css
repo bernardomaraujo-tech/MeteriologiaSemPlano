@@ -167,8 +167,6 @@ h1, h2, p { margin-top: 0; }
 }
 .card-heading h2 { display: flex; align-items: center; gap: 8px; margin: 0; color: var(--green-dark); font-size: .9rem; font-weight: 700; }
 .card-heading h2 svg { width: 18px; }
-.priority-pill { padding: 6px 9px; border-radius: 99px; background: #f2f4f2; color: var(--muted); font-size: .59rem; font-weight: 800; letter-spacing: .08em; }
-
 .wind-card {
   padding: 18px;
   background: linear-gradient(135deg, #fff 20%, #f4fcf7 100%);
@@ -246,6 +244,12 @@ h1, h2, p { margin-top: 0; }
 .metric-card small { color: var(--muted); font-size: .75rem; }
 .precipitation-card strong { color: #146a9b; }
 .temperature-card strong { color: var(--orange); }
+
+.weather-pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; }
+.weather-pair .metric-card { min-width: 0; min-height: 132px; flex-direction: column; align-items: flex-start; gap: 11px; padding: 15px; }
+.weather-pair .metric-card > div { min-width: 0; }
+.weather-pair .metric-card strong { font-size: clamp(1.22rem, 5vw, 1.65rem); white-space: nowrap; }
+.weather-pair .metric-card small { display: block; line-height: 1.35; }
 
 .metric-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .compact-card { min-width: 0; min-height: 107px; margin-bottom: 13px; padding: 15px; }
@@ -457,6 +461,10 @@ h1, h2, p { margin-top: 0; }
 @media (min-width: 900px) {
   .app-shell { margin-block: 22px 120px; min-height: calc(100vh - 44px); border: 1px solid var(--line); border-radius: 34px; box-shadow: 0 30px 90px rgba(21, 39, 28, .08); overflow: hidden; }
   main { padding-inline: 28px; }
+}
+
+@media (min-width: 560px) {
+  .weather-pair .metric-card { min-height: 110px; flex-direction: row; align-items: center; }
 }
 
 @media (prefers-reduced-motion: reduce) {

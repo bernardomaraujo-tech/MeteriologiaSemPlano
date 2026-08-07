@@ -69,7 +69,6 @@
         <section class="card wind-card" aria-labelledby="windTitle">
           <div class="card-heading">
             <h2 id="windTitle"><svg><use href="#i-wind"/></svg> Vento e rajadas</h2>
-            <span class="priority-pill">PRIORIDADE 1</span>
           </div>
 
           <div class="wind-layout">
@@ -92,23 +91,25 @@
           </div>
         </section>
 
-        <section class="metric-card precipitation-card">
-          <span class="soft-icon blue"><svg><use href="#i-rain"/></svg></span>
-          <div>
-            <p>PRECIPITAÇÃO</p>
-            <strong id="currentPrecipitation">—% · — mm</strong>
-            <small id="currentRainState">A calcular…</small>
-          </div>
-        </section>
+        <div class="weather-pair">
+          <section class="metric-card precipitation-card">
+            <span class="soft-icon blue"><svg><use href="#i-rain"/></svg></span>
+            <div>
+              <p>PRECIPITAÇÃO</p>
+              <strong id="currentPrecipitation">—% · — mm</strong>
+              <small id="currentRainState">A calcular…</small>
+            </div>
+          </section>
 
-        <section class="metric-card temperature-card">
-          <span class="soft-icon orange"><svg><use href="#i-temp"/></svg></span>
-          <div>
-            <p>TEMPERATURA</p>
-            <strong id="currentTemperature">— °C</strong>
-            <small id="currentTempMeta">Máx. —° · Mín. —° · Sensação —°</small>
-          </div>
-        </section>
+          <section class="metric-card temperature-card">
+            <span class="soft-icon orange"><svg><use href="#i-temp"/></svg></span>
+            <div>
+              <p>TEMPERATURA</p>
+              <strong id="currentTemperature">— °C</strong>
+              <small id="currentTempMeta">Máx. —° · Mín. —° · Sensação —°</small>
+            </div>
+          </section>
+        </div>
 
         <div class="metric-pair">
           <section class="metric-card compact-card">
@@ -154,19 +155,19 @@
         </button>
 
         <div class="segmented-control forecast-mode" role="tablist" aria-label="Período da previsão">
-          <button class="is-active" type="button" data-forecast-mode="48h">48 horas</button>
+          <button class="is-active" type="button" data-forecast-mode="24h">24 horas</button>
           <button type="button" data-forecast-mode="7d">7 dias</button>
         </div>
 
         <section class="card forecast-summary">
-          <div><p id="forecastEyebrow">PRÓXIMAS 48 HORAS</p><strong id="forecastHeadline">A calcular…</strong><small id="forecastSubline">—</small></div>
+          <div><p id="forecastEyebrow">PRÓXIMAS 24 HORAS</p><strong id="forecastHeadline">A calcular…</strong><small id="forecastSubline">—</small></div>
           <div class="summary-wind"><span class="mini-wind-arrow" id="summaryWindArrow">↓</span><strong id="summaryWind">—</strong><small>km/h</small></div>
         </section>
 
-        <section class="card forecast-table-card" id="forecast48Panel">
-          <div class="forecast-heading"><div><h2>Previsão por hora</h2><p>Intervalos de 3 horas · desliza para todos os dados</p></div><span>48 h</span></div>
+        <section class="card forecast-table-card" id="forecast24Panel">
+          <div class="forecast-heading"><div><h2>Previsão hora a hora</h2><p>Próximas 24 horas · desliza para todos os dados</p></div><span>24 h</span></div>
           <div class="table-scroll">
-            <table class="forecast-table" id="forecast48Table">
+            <table class="forecast-table" id="forecast24Table">
               <thead><tr><th>Hora</th><th>Direção</th><th>Vento</th><th>Rajadas</th><th>Chuva</th><th>Temp.</th><th>Hum.</th><th>UV</th><th>Qual.</th></tr></thead>
               <tbody><tr><td colspan="9" class="loading-cell">A carregar previsão…</td></tr></tbody>
             </table>
