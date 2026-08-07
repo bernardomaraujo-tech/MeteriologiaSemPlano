@@ -1,4 +1,4 @@
-const CACHE_NAME = "sem-plano-meteo-v20260807-02";
+const CACHE_NAME = "sem-plano-meteo-v20260807-03";
 
 const APP_SHELL = [
   "./",
@@ -45,7 +45,7 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  if (url.hostname.includes("open-meteo.com")) {
+  if (url.hostname.includes("open-meteo.com") || url.hostname === "tile.openstreetmap.org") {
     event.respondWith(fetch(request));
     return;
   }

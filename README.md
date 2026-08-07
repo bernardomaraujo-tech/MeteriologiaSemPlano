@@ -11,6 +11,7 @@ PWA mobile-first para avaliar condições de ciclismo e calcular pressão de pne
 ## Dados e armazenamento
 
 - Meteorologia e geocodificação: [Open-Meteo](https://open-meteo.com/).
+- Mapa discreto do cartão de vento: [OpenStreetMap](https://www.openstreetmap.org/copyright), centrado automaticamente na localização selecionada.
 - Localização, setups e histórico: guardados apenas no `localStorage` do dispositivo.
 - Atualização automática: a cada 5 minutos.
 
