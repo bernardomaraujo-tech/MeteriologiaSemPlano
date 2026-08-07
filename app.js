@@ -1,6 +1,7 @@
 const REFRESH_MS = 5 * 60 * 1000;
 const FETCH_TIMEOUT_MS = 15000;
 const GEO_TIMEOUT_MS = 10000;
+const FORECAST_HOURS = 48;
 const AUTO_LOCATION_ID = "device_location";
 const DEFAULT_LOCATION_ID = "alcabideche";
 const LOCATION_STORAGE_KEY = "semPlanoMeteoLocationV2";
@@ -336,8 +337,17 @@ function renderClothing(values) {
   `).join(""));
 }
 
-function computeNext24MinMax(temperatures, start) {
-  const values = temperatures.slice(start, start + 24).map(Number).filter(Number.isFinite);
+function currentDayMinMax(data, hourlyIndex) {
+  const currentDay = data.hourly.time?.[hourlyIndex]?.slice(0, 10);
+  const dailyIndex = (data.daily?.time || []).indexOf(currentDay);
+  const dailyMin = Number(data.daily?.temperature_2m_min?.[dailyIndex]);
+  const dailyMax = Number(data.daily?.temperature_2m_max?.[dailyIndex]);
+  if (Number.isFinite(dailyMin) && Number.isFinite(dailyMax)) return { min: dailyMin, max: dailyMax };
+
+  const values = (data.hourly.temperature_2m || [])
+    .slice(hourlyIndex, hourlyIndex + 24)
+    .map(Number)
+    .filter(Number.isFinite);
   return { min: values.length ? Math.min(...values) : 0, max: values.length ? Math.max(...values) : 0 };
 }
 
@@ -359,7 +369,7 @@ function renderCurrent(data) {
   const index = nearestHourIndex(data.hourly.time);
   const values = currentValues(data, index);
   const direction = windDirection(values.direction);
-  const temperatures = computeNext24MinMax(data.hourly.temperature_2m || [], index);
+  const temperatures = currentDayMinMax(data, index);
   const quality = conditionQuality(values);
 
   setText("currentWind", Math.round(values.wind));
@@ -402,7 +412,7 @@ function rangeStats(data, start, count) {
 
 function renderForecastSummary(data) {
   const start = nearestHourIndex(data.hourly.time);
-  const stats = rangeStats(data, start, 24);
+  const stats = rangeStats(data, start, FORECAST_HOURS);
   const direction = windDirection(stats.direction);
   const headline = stats.precipitation >= 3 || stats.maxProbability >= 60
     ? "Chuva provável em alguns períodos"
@@ -416,11 +426,11 @@ function renderForecastSummary(data) {
   $("summaryWindArrow").style.transform = `rotate(${direction.degrees}deg)`;
 }
 
-function renderForecast24(data) {
+function renderForecast48(data) {
   const times = data.hourly.time;
   const start = nearestHourIndex(times);
   const rows = [];
-  for (let index = start, row = 0; index < Math.min(start + 24, times.length); index += 1, row += 1) {
+  for (let index = start, row = 0; index < Math.min(start + FORECAST_HOURS, times.length); index += 1, row += 1) {
     const values = currentValues(data, index);
     const direction = windDirection(values.direction);
     const quality = conditionQuality(values);
@@ -439,7 +449,7 @@ function renderForecast24(data) {
       </tr>
     `);
   }
-  const tableBody = $("forecast24Table")?.querySelector("tbody");
+  const tableBody = $("forecast48Table")?.querySelector("tbody");
   if (tableBody) tableBody.innerHTML = rows.join("");
 }
 
@@ -481,7 +491,7 @@ function renderForecast7(data) {
 function renderWeather(data, source, location) {
   renderCurrent(data);
   renderForecastSummary(data);
-  renderForecast24(data);
+  renderForecast48(data);
   renderForecast7(data);
   const fallbackNote = location.isFallback ? " · geolocalização indisponível" : "";
   setText("updated", `Atualizado às ${formatUpdated()}${fallbackNote}`);
@@ -526,9 +536,9 @@ function setAppView(view) {
 
 function setForecastMode(mode) {
   $$('[data-forecast-mode]').forEach((button) => button.classList.toggle("is-active", button.dataset.forecastMode === mode));
-  $("forecast24Panel").hidden = mode !== "24h";
+  $("forecast48Panel").hidden = mode !== "48h";
   $("forecast7Panel").hidden = mode !== "7d";
-  setText("forecastEyebrow", mode === "24h" ? "PRÓXIMAS 24 HORAS" : "PRÓXIMOS 7 DIAS");
+  setText("forecastEyebrow", mode === "48h" ? "PRÓXIMAS 48 HORAS" : "PRÓXIMOS 7 DIAS");
 }
 
 function locationOptionButton(location, selected) {
@@ -602,7 +612,7 @@ async function searchLocations(query) {
   if (normalized.length < 2) return;
 
   try {
-    const url = `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(query.trim())}&count=8&language=pt&format=json&countryCode=PT`;
+    const url = `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(query.trim())}&count=8&language=pt&format=json`;
     const response = await fetchWithTimeout(url);
     if (!response.ok) return;
     const data = await response.json();
@@ -907,7 +917,7 @@ function init() {
   initPressure();
   updateLocationLabels(selectedLocation);
   setAppView("current");
-  setForecastMode("24h");
+  setForecastMode("48h");
   refreshWeather();
   setInterval(refreshWeather, REFRESH_MS);
 
