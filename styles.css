@@ -225,6 +225,17 @@ h1, h2, p { margin-top: 0; }
   align-items: center;
   gap: clamp(10px, 3vw, 20px);
 }
+.wind-description {
+  margin: 10px 0 0;
+  padding: 10px 12px;
+  border: 1px solid rgba(109, 132, 116, .2);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, .72);
+  color: #55645b;
+  font-size: .69rem;
+  font-weight: 540;
+  line-height: 1.45;
+}
 .compass-block { display: flex; min-width: 125px; flex-direction: column; align-items: center; }
 .compass-block small, .hero-metric small { color: var(--muted); font-size: .68rem; }
 
@@ -340,16 +351,42 @@ h1, h2, p { margin-top: 0; }
 .forecast-heading p { margin: 0; color: var(--muted); font-size: .7rem; }
 .forecast-heading > span { padding: 6px 8px; border-radius: 99px; background: var(--green-soft); color: var(--green-dark); font-size: .61rem; font-weight: 750; }
 .table-scroll { overflow-x: auto; overscroll-behavior-inline: contain; scrollbar-width: thin; }
-.forecast-table { width: 100%; min-width: 850px; border-collapse: collapse; }
+.forecast-table { --time-column-width: 76px; width: 100%; min-width: 720px; border-collapse: separate; border-spacing: 0; }
 .forecast-table th, .forecast-table td { padding: 12px 10px; border-top: 1px solid var(--line); text-align: left; vertical-align: middle; white-space: nowrap; }
 .forecast-table th { color: var(--muted); font-size: .58rem; font-weight: 750; letter-spacing: .07em; text-transform: uppercase; }
 .forecast-table td { font-size: .78rem; }
-.forecast-table tr.is-now { background: #f7fcf9; }
+.forecast-table th:first-child, .forecast-table td:first-child {
+  position: sticky;
+  z-index: 3;
+  left: 0;
+  width: var(--time-column-width);
+  min-width: var(--time-column-width);
+  max-width: var(--time-column-width);
+  background: var(--surface);
+}
+.forecast-table th:nth-child(2), .forecast-table td:nth-child(2) {
+  position: sticky;
+  z-index: 3;
+  left: var(--time-column-width);
+  width: 170px;
+  min-width: 170px;
+  max-width: 170px;
+  background: var(--surface);
+  box-shadow: 12px 0 14px -15px rgba(29, 54, 39, .62);
+}
+.forecast-table th:nth-child(2) { white-space: normal; line-height: 1.25; }
+.forecast-table thead th:first-child, .forecast-table thead th:nth-child(2) { z-index: 5; background: #fbfcfb; }
+.forecast-table tr.is-now > td { background: #f7fcf9; }
 .time-cell strong { display: block; font-size: .78rem; }
 .time-cell small { color: var(--muted); font-size: .62rem; }
-.direction-cell { color: var(--green-dark); font-weight: 700; }
-.direction-cell .table-arrow { display: inline-block; margin-right: 5px; color: var(--green); font-size: 1.25rem; transition: transform .3s ease; }
-.direction-cell small { display: block; padding-left: 24px; color: var(--muted); font-size: .55rem; font-weight: 500; }
+.wind-summary-direction { display: flex; align-items: center; gap: 5px; color: var(--green-dark); }
+.wind-summary-direction .table-arrow { display: inline-block; color: var(--green); font-size: 1.16rem; line-height: 1; transition: transform .3s ease; }
+.wind-summary-direction strong { font-size: .7rem; }
+.wind-summary-speeds { display: flex; align-items: baseline; gap: 4px; margin-top: 4px; }
+.wind-summary-speeds span { display: inline-flex; align-items: baseline; gap: 2px; }
+.wind-summary-speeds b { font-size: .75rem; }
+.wind-summary-speeds .gust b { color: var(--green-dark); }
+.wind-summary-speeds small, .wind-summary-speeds em, .wind-summary-speeds i { color: var(--muted); font-size: .49rem; font-style: normal; font-weight: 500; }
 .number-cell strong { display: block; font-size: .84rem; }
 .number-cell small { color: var(--muted); font-size: .55rem; }
 .gust-cell strong { color: var(--green-dark); }

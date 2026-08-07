@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#f6f7f5">
   <meta name="description" content="Meteorologia técnica para ciclismo e calculadora de pressão de pneus.">
   <title>SEM PLANO — Meteo</title>
-  <link rel="stylesheet" href="./styles.css?v=20260807_07">
+  <link rel="stylesheet" href="./styles.css?v=20260807_08">
   <link rel="manifest" href="./manifest.json">
   <link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -94,6 +94,7 @@
               <strong id="currentGust">—</strong><span>km/h</span><small>rajadas</small>
             </div>
           </div>
+          <p class="wind-description" id="currentWeatherDescription">A interpretar as condições atuais…</p>
         </section>
 
         <div class="weather-pair">
@@ -173,8 +174,8 @@
           <div class="forecast-heading"><div><h2>Previsão hora a hora</h2><p>Próximas 48 horas · desliza para todos os dados</p></div><span>48 h</span></div>
           <div class="table-scroll">
             <table class="forecast-table" id="forecast48Table">
-              <thead><tr><th>Hora</th><th>Direção</th><th>Vento</th><th>Rajadas</th><th>Chuva</th><th>Temp.</th><th>Hum.</th><th>UV</th><th>Qual.</th></tr></thead>
-              <tbody><tr><td colspan="9" class="loading-cell">A carregar previsão…</td></tr></tbody>
+              <thead><tr><th>Hora</th><th>Direção | vento | rajadas</th><th>Chuva</th><th>Temp.</th><th>Hum.</th><th>UV</th><th>Qual.</th></tr></thead>
+              <tbody><tr><td colspan="7" class="loading-cell">A carregar previsão…</td></tr></tbody>
             </table>
           </div>
         </section>
@@ -267,6 +268,6 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="./app.js?v=20260807_07"></script>
+  <script src="./app.js?v=20260807_08"></script>
 </body>
 </html>
