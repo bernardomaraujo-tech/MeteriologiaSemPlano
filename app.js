@@ -4,6 +4,7 @@ const GEO_TIMEOUT_MS = 10000;
 const FORECAST_HOURS = 48;
 const OSM_TILE_SIZE = 256;
 const OSM_ZOOM = 11;
+const PREFERRED_WEATHER_MODEL = "knmi_seamless";
 const AUTO_LOCATION_ID = "device_location";
 const DEFAULT_LOCATION_ID = "alcabideche";
 const LOCATION_STORAGE_KEY = "semPlanoMeteoLocationV2";
@@ -182,7 +183,7 @@ function renderWindMap(location) {
   }
 }
 
-function buildWeatherUrl(location) {
+function buildWeatherUrl(location, model = "") {
   const params = new URLSearchParams({
     latitude: String(location.lat),
     longitude: String(location.lon),
@@ -218,6 +219,7 @@ function buildWeatherUrl(location) {
       "sunset"
     ].join(",")
   });
+  if (model) params.set("models", model);
   return `https://api.open-meteo.com/v1/forecast?${params.toString()}`;
 }
 
@@ -231,12 +233,66 @@ async function fetchWithTimeout(url) {
   }
 }
 
-async function fetchWeather(location) {
-  const response = await fetchWithTimeout(buildWeatherUrl(location));
+function hasCompleteWeatherData(data) {
+  const hourlyFields = [
+    "temperature_2m",
+    "apparent_temperature",
+    "relative_humidity_2m",
+    "precipitation",
+    "precipitation_probability",
+    "weather_code",
+    "wind_speed_10m",
+    "wind_gusts_10m",
+    "wind_direction_10m",
+    "uv_index",
+    "is_day"
+  ];
+  const dailyFields = [
+    "temperature_2m_max",
+    "temperature_2m_min",
+    "precipitation_sum",
+    "precipitation_probability_max",
+    "weather_code",
+    "wind_speed_10m_max",
+    "wind_gusts_10m_max",
+    "wind_direction_10m_dominant",
+    "uv_index_max"
+  ];
+  const hourlyTimes = data?.hourly?.time;
+  const dailyTimes = data?.daily?.time;
+  if (!Array.isArray(hourlyTimes) || hourlyTimes.length < FORECAST_HOURS) return false;
+  if (!Array.isArray(dailyTimes) || dailyTimes.length < 7) return false;
+  const completeHourly = hourlyFields.every((field) => {
+    const values = data.hourly?.[field];
+    return Array.isArray(values)
+      && values.length >= FORECAST_HOURS
+      && values.slice(0, FORECAST_HOURS).every((value) => Number.isFinite(Number(value)));
+  });
+  const completeDaily = dailyFields.every((field) => {
+    const values = data.daily?.[field];
+    return Array.isArray(values)
+      && values.length >= 7
+      && values.slice(0, 7).every((value) => Number.isFinite(Number(value)));
+  });
+  return completeHourly && completeDaily;
+}
+
+async function requestWeather(location, model = "") {
+  const response = await fetchWithTimeout(buildWeatherUrl(location, model));
   if (!response.ok) throw new Error(`serviço meteorológico indisponível (${response.status})`);
   const data = await response.json();
-  if (!data?.hourly?.time?.length) throw new Error("sem dados horários disponíveis");
-  return { data, source: "Open-Meteo · melhor modelo disponível" };
+  if (!hasCompleteWeatherData(data)) throw new Error("dados meteorológicos incompletos");
+  return data;
+}
+
+async function fetchWeather(location) {
+  try {
+    const data = await requestWeather(location, PREFERRED_WEATHER_MODEL);
+    return { data, source: "Open-Meteo · KNMI Seamless (HARMONIE + ECMWF)" };
+  } catch (_) {
+    const data = await requestWeather(location);
+    return { data, source: "Open-Meteo · Best Match (fallback automático)" };
+  }
 }
 
 function nearestHourIndex(times) {
