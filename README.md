@@ -5,7 +5,7 @@ PWA mobile-first para avaliar condições de ciclismo e calcular pressão de pne
 ## Estrutura
 
 - **Atual** — vento, rajadas e direção visual em destaque; precipitação, temperatura, humidade, UV, roupa técnica sugerida e qualidade da condição.
-- **Previsão** — evolução hora a hora das próximas 48 horas e resumo de 7 dias, com direção do vento em todos os períodos.
+- **Previsão** — evolução hora a hora das próximas 48 horas, resumo de 7 dias e análise de rotas GPX com meteorologia prevista ao longo do percurso.
 - **Pressão Pneus** — calculadora completa, acesso rápido aos 3 setups mais recentes, gestão de setups guardados e histórico local de resultados.
 
 ## Dados e armazenamento
@@ -14,6 +14,7 @@ PWA mobile-first para avaliar condições de ciclismo e calcular pressão de pne
 - Modelo preferencial: **KNMI Seamless**, combinando HARMONIE-AROME na sua área de cobertura com ECMWF; se os dados estiverem indisponíveis ou incompletos, a aplicação utiliza automaticamente o **Open-Meteo Best Match**.
 - Mapa discreto do cartão de vento: [OpenStreetMap](https://www.openstreetmap.org/copyright), centrado automaticamente na localização selecionada.
 - Localização, setups e histórico: guardados apenas no `localStorage` do dispositivo.
+- Ficheiros GPX: processados localmente no dispositivo e não guardados pela aplicação.
 - Atualização automática: a cada 5 minutos.
 
 ## Executar localmente

@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#f6f7f5">
   <meta name="description" content="Meteorologia técnica para ciclismo e calculadora de pressão de pneus.">
   <title>SEM PLANO — Meteo</title>
-  <link rel="stylesheet" href="./styles.css?v=20260814_04">
+  <link rel="stylesheet" href="./styles.css?v=20260814_05">
   <link rel="manifest" href="./manifest.json">
   <link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -36,6 +36,8 @@
       <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M7 7l1 14h8l1-14M10 11v6M14 11v6"/></symbol>
       <symbol id="i-history" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/></symbol>
       <symbol id="i-bike" viewBox="0 0 24 24"><circle cx="6" cy="17" r="4"/><circle cx="18" cy="17" r="4"/><path d="m6 17 4-8h4l4 8M9 12h7M8 7h3"/></symbol>
+      <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/><path d="M8 18h3a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h7"/></symbol>
+      <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M5 14v5h14v-5"/></symbol>
       <symbol id="i-jersey" viewBox="0 0 32 32"><path d="m11 5-7 5 3 7 4-2v12h10V15l4 2 3-7-7-5c-1 3-9 3-10 0Z"/><path d="M16 8v19M12 18h8"/></symbol>
       <symbol id="i-vest" viewBox="0 0 32 32"><path d="M11 5 7 8l3 7v12h12V15l3-7-4-3c-1 3-9 3-10 0Z"/><path d="M16 8v19"/></symbol>
       <symbol id="i-sleeve" viewBox="0 0 32 32"><path d="M10 5h5l-2 22H6Z"/><path d="M22 5h-5l2 22h7Z"/></symbol>
@@ -154,38 +156,106 @@
           <span class="page-icon"><svg><use href="#i-uv"/></svg></span>
         </header>
 
-        <button class="location-selector" type="button" data-open-location>
-          <span class="soft-icon green"><svg><use href="#i-location"/></svg></span>
-          <strong data-location-label>Localização atual</strong>
-          <svg class="chevron"><use href="#i-chevron"/></svg>
-        </button>
-
-        <div class="segmented-control forecast-mode" role="tablist" aria-label="Período da previsão">
-          <button class="is-active" type="button" data-forecast-mode="48h">48 horas</button>
-          <button type="button" data-forecast-mode="7d">7 dias</button>
+        <div class="segmented-control forecast-context" role="tablist" aria-label="Tipo de previsão">
+          <button class="is-active" type="button" data-forecast-context="local">Local</button>
+          <button type="button" data-forecast-context="route">Rota GPX</button>
         </div>
 
-        <section class="card forecast-summary">
-          <div><p id="forecastEyebrow">PRÓXIMAS 48 HORAS</p><strong id="forecastHeadline">A calcular…</strong><small id="forecastSubline">—</small></div>
-          <div class="summary-wind"><span class="mini-wind-arrow" id="summaryWindArrow">↓</span><strong id="summaryWind">—</strong><small>km/h</small></div>
-        </section>
+        <div id="forecastLocalContent">
+          <button class="location-selector" type="button" data-open-location>
+            <span class="soft-icon green"><svg><use href="#i-location"/></svg></span>
+            <strong data-location-label>Localização atual</strong>
+            <svg class="chevron"><use href="#i-chevron"/></svg>
+          </button>
 
-        <section class="card forecast-table-card" id="forecast48Panel">
-          <div class="forecast-heading"><div><h2>Previsão hora a hora</h2><p>Próximas 48 horas · desliza para todos os dados</p></div><span>48 h</span></div>
-          <div class="table-scroll">
-            <table class="forecast-table" id="forecast48Table">
-              <thead><tr><th>Hora</th><th class="wind-column-heading">Direção<small>Vento | Rajadas · km/h</small></th><th>Chuva</th><th>Temp.</th><th>Hum.</th><th>UV</th><th>Qual.</th></tr></thead>
-              <tbody><tr><td colspan="7" class="loading-cell">A carregar previsão…</td></tr></tbody>
-            </table>
+          <div class="segmented-control forecast-mode" role="tablist" aria-label="Período da previsão">
+            <button class="is-active" type="button" data-forecast-mode="48h">48 horas</button>
+            <button type="button" data-forecast-mode="7d">7 dias</button>
           </div>
-        </section>
 
-        <section class="card daily-panel" id="forecast7Panel" hidden>
-          <div class="forecast-heading"><div><h2>Resumo de 7 dias</h2><p>Dados dominantes e extremos diários</p></div><span>7 dias</span></div>
-          <div class="daily-list" id="dailyList"></div>
-        </section>
+          <section class="card forecast-summary">
+            <div><p id="forecastEyebrow">PRÓXIMAS 48 HORAS</p><strong id="forecastHeadline">A calcular…</strong><small id="forecastSubline">—</small></div>
+            <div class="summary-wind"><span class="mini-wind-arrow" id="summaryWindArrow">↓</span><strong id="summaryWind">—</strong><small>km/h</small></div>
+          </section>
 
-        <p class="source-line" id="forecastSource">Fonte meteorológica: —</p>
+          <section class="card forecast-table-card" id="forecast48Panel">
+            <div class="forecast-heading"><div><h2>Previsão hora a hora</h2><p>Próximas 48 horas · desliza para todos os dados</p></div><span>48 h</span></div>
+            <div class="table-scroll">
+              <table class="forecast-table" id="forecast48Table">
+                <thead><tr><th>Hora</th><th class="wind-column-heading">Direção<small>Vento | Rajadas · km/h</small></th><th>Chuva</th><th>Temp.</th><th>Hum.</th><th>UV</th><th>Qual.</th></tr></thead>
+                <tbody><tr><td colspan="7" class="loading-cell">A carregar previsão…</td></tr></tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="card daily-panel" id="forecast7Panel" hidden>
+            <div class="forecast-heading"><div><h2>Resumo de 7 dias</h2><p>Dados dominantes e extremos diários</p></div><span>7 dias</span></div>
+            <div class="daily-list" id="dailyList"></div>
+          </section>
+
+          <p class="source-line" id="forecastSource">Fonte meteorológica: —</p>
+        </div>
+
+        <div class="route-panel" id="forecastRouteContent" hidden>
+          <section class="card route-import-card">
+            <div class="route-title">
+              <span class="soft-icon green"><svg><use href="#i-route"/></svg></span>
+              <div><h2>Analisar uma rota</h2><p>Importa um GPX para prever as condições no ponto e hora em que lá vais passar.</p></div>
+            </div>
+            <label class="route-upload-button" id="routeUploadLabel" for="routeGpxInput" tabindex="0">
+              <input id="routeGpxInput" type="file" accept=".gpx,application/gpx+xml" hidden>
+              <svg><use href="#i-upload"/></svg>
+              <span><strong>Escolher ficheiro GPX</strong><small>Exportado do Strava, Garmin, Komoot ou outra aplicação</small></span>
+            </label>
+            <p class="route-privacy">O ficheiro é processado apenas neste dispositivo e não fica guardado.</p>
+          </section>
+
+          <section class="card route-settings-card" id="routeSettings" hidden>
+            <div class="route-file-summary">
+              <div><p>ROTA CARREGADA</p><strong id="routeName">—</strong></div>
+              <div class="route-file-metrics"><span><strong id="routeDistance">—</strong><small>km</small></span><span><strong id="routeElevation">—</strong><small>m D+</small></span></div>
+            </div>
+            <div class="route-settings-grid">
+              <label><span>Data</span><input id="routeStartDate" type="date"></label>
+              <label><span>Partida</span><input id="routeStartTime" type="time" step="900"></label>
+              <label><span>Velocidade média</span><div><input id="routeAverageSpeed" type="number" min="8" max="50" step="1" value="24"><small>km/h</small></div></label>
+            </div>
+            <button class="primary-button full-button" type="button" id="routeAnalyze"><svg><use href="#i-route"/></svg> Analisar condições da rota</button>
+            <p class="route-analysis-state" id="routeAnalysisState" aria-live="polite"></p>
+          </section>
+
+          <div class="route-results" id="routeResults" hidden>
+            <section class="card route-result-summary">
+              <div class="route-result-heading"><div><p>ANÁLISE DA ROTA</p><strong id="routeHeadline">—</strong><small id="routeSubline">—</small></div><span id="routeDepartureBadge">—</span></div>
+              <div class="route-result-metrics">
+                <div><small>DURAÇÃO</small><strong id="routeDuration">—</strong></div>
+                <div><small>TEMPERATURA</small><strong class="orange" id="routeTempRange">—</strong></div>
+                <div><small>RAJADAS MÁX.</small><strong id="routeMaxGust">—</strong></div>
+                <div><small>CHUVA MÁX.</small><strong class="blue" id="routeRainRisk">—</strong></div>
+              </div>
+              <div class="route-wind-breakdown">
+                <div class="route-wind-bar" id="routeWindBar"><span class="headwind"></span><span class="crosswind"></span><span class="tailwind"></span></div>
+                <div class="route-wind-legend"><span><i class="headwind"></i>Frontal <strong id="routeHeadwind">—</strong></span><span><i class="crosswind"></i>Lateral <strong id="routeCrosswind">—</strong></span><span><i class="tailwind"></i>Favorável <strong id="routeTailwind">—</strong></span></div>
+              </div>
+            </section>
+
+            <section class="card route-map-card">
+              <div class="forecast-heading"><div><h2>Condições ao longo da rota</h2><p>Cor relativa ao sentido da deslocação</p></div><span>MAPA</span></div>
+              <div class="route-map" id="routeMap" aria-label="Mapa da rota e exposição ao vento">
+                <div class="route-map-tiles" id="routeMapTiles" aria-hidden="true"></div>
+                <svg class="route-map-overlay" id="routeMapOverlay" aria-hidden="true"></svg>
+                <a class="map-attribution" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap</a>
+              </div>
+            </section>
+
+            <section class="card route-timeline-card">
+              <div class="forecast-heading"><div><h2>Evolução durante a volta</h2><p>Hora prevista de passagem em cada ponto</p></div><span id="routePointCount">—</span></div>
+              <div class="route-timeline" id="routeTimeline"></div>
+            </section>
+
+            <p class="source-line" id="routeSource">Fonte meteorológica: —</p>
+          </div>
+        </div>
       </section>
 
       <section class="app-view" id="viewPressure" data-view-panel="pressure" aria-labelledby="pressureTitle" hidden>
@@ -276,6 +346,6 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="./app.js?v=20260814_04"></script>
+  <script src="./app.js?v=20260814_05"></script>
 </body>
 </html>
