@@ -4,6 +4,9 @@ const GEO_TIMEOUT_MS = 10000;
 const FORECAST_HOURS = 48;
 const OSM_TILE_SIZE = 256;
 const OSM_ZOOM = 11;
+const ROUTE_SAMPLE_MINUTES = 15;
+const ROUTE_MAX_SAMPLES = 48;
+const ROUTE_MAX_FILE_BYTES = 10 * 1024 * 1024;
 const PREFERRED_WEATHER_MODEL = "knmi_seamless";
 const AUTO_LOCATION_ID = "device_location";
 const DEFAULT_LOCATION_ID = "alcabideche";
@@ -43,6 +46,9 @@ let resolvedLocation = null;
 let refreshRunId = 0;
 let searchTimer = null;
 let toastTimer = null;
+let routeData = null;
+let routeAnalysis = null;
+let routeAnalysisRunId = 0;
 
 function setText(idOrElement, value) {
   const element = typeof idOrElement === "string" ? $(idOrElement) : idOrElement;
@@ -692,6 +698,528 @@ function setForecastMode(mode) {
   setText("forecastEyebrow", mode === "48h" ? "PRÓXIMAS 48 HORAS" : "PRÓXIMOS 7 DIAS");
 }
 
+function setForecastContext(context) {
+  const routeActive = context === "route";
+  $$('[data-forecast-context]').forEach((button) => button.classList.toggle("is-active", button.dataset.forecastContext === context));
+  $("forecastLocalContent").hidden = routeActive;
+  $("forecastRouteContent").hidden = !routeActive;
+  if (routeActive && routeAnalysis) requestAnimationFrame(() => renderRouteMap(routeData, routeAnalysis.samples));
+}
+
+function routeDateInputValue(date) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+function routeTimeInputValue(date) {
+  return `${String(date.getHours()).padStart(2, "0")}:${String(date.getMinutes()).padStart(2, "0")}`;
+}
+
+function initRouteDefaults() {
+  const departure = new Date(Date.now() + 60 * 60 * 1000);
+  departure.setMinutes(Math.ceil(departure.getMinutes() / ROUTE_SAMPLE_MINUTES) * ROUTE_SAMPLE_MINUTES, 0, 0);
+  const maximum = new Date();
+  maximum.setDate(maximum.getDate() + 6);
+  $("routeStartDate").value = routeDateInputValue(departure);
+  $("routeStartDate").min = routeDateInputValue(new Date());
+  $("routeStartDate").max = routeDateInputValue(maximum);
+  $("routeStartTime").value = routeTimeInputValue(departure);
+}
+
+function routeChildText(parent, localName) {
+  if (!parent) return "";
+  const child = Array.from(parent.children || []).find((element) => element.localName === localName);
+  return child?.textContent?.trim() || "";
+}
+
+function haversineKm(first, second) {
+  const earthRadiusKm = 6371;
+  const toRadians = (value) => value * Math.PI / 180;
+  const latitudeDelta = toRadians(second.lat - first.lat);
+  const longitudeDelta = toRadians(second.lon - first.lon);
+  const firstLatitude = toRadians(first.lat);
+  const secondLatitude = toRadians(second.lat);
+  const haversine = Math.sin(latitudeDelta / 2) ** 2
+    + Math.cos(firstLatitude) * Math.cos(secondLatitude) * Math.sin(longitudeDelta / 2) ** 2;
+  return earthRadiusKm * 2 * Math.atan2(Math.sqrt(haversine), Math.sqrt(1 - haversine));
+}
+
+function routeBearing(first, second) {
+  const toRadians = (value) => value * Math.PI / 180;
+  const firstLatitude = toRadians(first.lat);
+  const secondLatitude = toRadians(second.lat);
+  const longitudeDelta = toRadians(second.lon - first.lon);
+  const y = Math.sin(longitudeDelta) * Math.cos(secondLatitude);
+  const x = Math.cos(firstLatitude) * Math.sin(secondLatitude)
+    - Math.sin(firstLatitude) * Math.cos(secondLatitude) * Math.cos(longitudeDelta);
+  return (Math.atan2(y, x) * 180 / Math.PI + 360) % 360;
+}
+
+function parseGpx(text, fallbackName = "Rota GPX") {
+  const xml = new DOMParser().parseFromString(text, "application/xml");
+  if (xml.getElementsByTagName("parsererror").length) throw new Error("O ficheiro GPX não é válido.");
+  const trackNodes = Array.from(xml.getElementsByTagNameNS("*", "trkpt"));
+  const routeNodes = Array.from(xml.getElementsByTagNameNS("*", "rtept"));
+  const pointNodes = trackNodes.length ? trackNodes : routeNodes;
+  if (pointNodes.length < 2) throw new Error("O GPX não contém pontos suficientes para formar uma rota.");
+
+  const rawPoints = pointNodes.map((node) => {
+    const lat = Number(node.getAttribute("lat"));
+    const lon = Number(node.getAttribute("lon"));
+    const elevationNode = Array.from(node.children || []).find((element) => element.localName === "ele");
+    const elevation = Number(elevationNode?.textContent);
+    return { lat, lon, elevation: Number.isFinite(elevation) ? elevation : null };
+  }).filter((point) => Number.isFinite(point.lat) && Number.isFinite(point.lon));
+
+  const points = [];
+  let distanceKm = 0;
+  let elevationGain = 0;
+  rawPoints.forEach((point) => {
+    const previous = points.at(-1);
+    if (previous) {
+      const segmentDistance = haversineKm(previous, point);
+      if (segmentDistance < .0005) return;
+      distanceKm += segmentDistance;
+      if (point.elevation !== null && previous.elevation !== null) {
+        const gain = point.elevation - previous.elevation;
+        if (gain > .5 && gain < 100) elevationGain += gain;
+      }
+    }
+    points.push({ ...point, distanceKm });
+  });
+  if (points.length < 2 || distanceKm < .1) throw new Error("A rota do GPX é demasiado curta para analisar.");
+
+  const metadata = Array.from(xml.documentElement?.children || []).find((element) => element.localName === "metadata");
+  const track = Array.from(xml.documentElement?.children || []).find((element) => element.localName === "trk");
+  const route = Array.from(xml.documentElement?.children || []).find((element) => element.localName === "rte");
+  const name = routeChildText(metadata, "name") || routeChildText(track, "name") || routeChildText(route, "name") || fallbackName;
+  return { name, points, distanceKm, elevationGain: Math.round(elevationGain) };
+}
+
+function routePointAtDistance(route, targetDistanceKm) {
+  const points = route.points;
+  const target = clamp(targetDistanceKm, 0, route.distanceKm);
+  let low = 0;
+  let high = points.length - 1;
+  while (low < high) {
+    const middle = Math.floor((low + high) / 2);
+    if (points[middle].distanceKm < target) low = middle + 1;
+    else high = middle;
+  }
+  const nextIndex = clamp(low, 1, points.length - 1);
+  const previous = points[nextIndex - 1];
+  const next = points[nextIndex];
+  const segmentDistance = Math.max(next.distanceKm - previous.distanceKm, .000001);
+  const ratio = clamp((target - previous.distanceKm) / segmentDistance, 0, 1);
+  const elevation = previous.elevation !== null && next.elevation !== null
+    ? previous.elevation + (next.elevation - previous.elevation) * ratio
+    : (previous.elevation ?? next.elevation);
+  return {
+    lat: previous.lat + (next.lat - previous.lat) * ratio,
+    lon: previous.lon + (next.lon - previous.lon) * ratio,
+    elevation,
+    distanceKm: target,
+    bearing: routeBearing(previous, next)
+  };
+}
+
+function buildRouteSamples(route, departure, averageSpeed) {
+  const durationMinutes = route.distanceKm / averageSpeed * 60;
+  const intervalMinutes = Math.max(
+    ROUTE_SAMPLE_MINUTES,
+    Math.ceil(durationMinutes / (ROUTE_MAX_SAMPLES - 1) / ROUTE_SAMPLE_MINUTES) * ROUTE_SAMPLE_MINUTES
+  );
+  const elapsedMinutes = [];
+  for (let minute = 0; minute < durationMinutes; minute += intervalMinutes) elapsedMinutes.push(minute);
+  if (elapsedMinutes.at(-1) !== durationMinutes) elapsedMinutes.push(durationMinutes);
+  return elapsedMinutes.map((minute) => ({
+    ...routePointAtDistance(route, Math.min(route.distanceKm, averageSpeed * minute / 60)),
+    elapsedMinutes: minute,
+    arrivalEpoch: Math.round((departure.getTime() + minute * 60 * 1000) / 1000)
+  }));
+}
+
+function buildRouteWeatherUrl(samples, model = "") {
+  const utcHour = (epoch) => {
+    const date = new Date(epoch * 1000);
+    date.setUTCMinutes(0, 0, 0);
+    return date.toISOString().slice(0, 16);
+  };
+  const params = new URLSearchParams({
+    latitude: samples.map((sample) => sample.lat.toFixed(5)).join(","),
+    longitude: samples.map((sample) => sample.lon.toFixed(5)).join(","),
+    start_hour: utcHour(samples[0].arrivalEpoch - 60 * 60),
+    end_hour: utcHour(samples.at(-1).arrivalEpoch + 2 * 60 * 60),
+    hourly: [
+      "temperature_2m",
+      "apparent_temperature",
+      "relative_humidity_2m",
+      "precipitation",
+      "precipitation_probability",
+      "weather_code",
+      "wind_speed_10m",
+      "wind_gusts_10m",
+      "wind_direction_10m",
+      "uv_index"
+    ].join(","),
+    wind_speed_unit: "kmh",
+    precipitation_unit: "mm",
+    timeformat: "unixtime"
+  });
+  if (model) params.set("models", model);
+  return `https://api.open-meteo.com/v1/forecast?${params.toString()}`;
+}
+
+function nearestEpochIndex(times, target) {
+  let closestIndex = 0;
+  let closestDistance = Infinity;
+  times.forEach((time, index) => {
+    const distance = Math.abs(Number(time) - target);
+    if (distance < closestDistance) {
+      closestDistance = distance;
+      closestIndex = index;
+    }
+  });
+  return closestDistance <= 90 * 60 ? closestIndex : -1;
+}
+
+function routeWeatherAt(dataset, arrivalEpoch) {
+  const times = dataset?.hourly?.time;
+  if (!Array.isArray(times) || !times.length) throw new Error("Previsão horária incompleta para a rota.");
+  const index = nearestEpochIndex(times, arrivalEpoch);
+  if (index < 0) throw new Error("A partida selecionada está fora do período de previsão disponível.");
+  const read = (key, fallback = NaN) => {
+    const raw = dataset.hourly?.[key]?.[index];
+    if (raw === null || raw === undefined || raw === "") return fallback;
+    const value = Number(raw);
+    return Number.isFinite(value) ? value : fallback;
+  };
+  const values = {
+    temp: read("temperature_2m"),
+    apparent: read("apparent_temperature"),
+    humidity: read("relative_humidity_2m"),
+    precipitation: read("precipitation"),
+    probability: read("precipitation_probability"),
+    weatherCode: read("weather_code", -1),
+    wind: read("wind_speed_10m"),
+    gust: read("wind_gusts_10m"),
+    direction: read("wind_direction_10m"),
+    uv: read("uv_index", 0)
+  };
+  const required = [values.temp, values.apparent, values.humidity, values.precipitation, values.probability, values.wind, values.gust, values.direction];
+  if (!required.every(Number.isFinite)) throw new Error("Dados meteorológicos incompletos num dos pontos da rota.");
+  return values;
+}
+
+async function requestRouteWeather(samples, model = "") {
+  const response = await fetchWithTimeout(buildRouteWeatherUrl(samples, model));
+  if (!response.ok) throw new Error(`serviço meteorológico indisponível (${response.status})`);
+  const payload = await response.json();
+  const datasets = Array.isArray(payload) ? payload : [payload];
+  if (datasets.length !== samples.length) throw new Error("Resposta meteorológica incompleta para a rota.");
+  return datasets.map((dataset, index) => routeWeatherAt(dataset, samples[index].arrivalEpoch));
+}
+
+async function fetchRouteWeather(samples) {
+  try {
+    const values = await requestRouteWeather(samples, PREFERRED_WEATHER_MODEL);
+    return { values, source: "Open-Meteo · KNMI Seamless (HARMONIE + ECMWF)" };
+  } catch (_) {
+    const values = await requestRouteWeather(samples);
+    return { values, source: "Open-Meteo · Best Match (fallback automático)" };
+  }
+}
+
+function routeWindRelative(travelBearing, windFrom) {
+  const difference = Math.abs(((windFrom - travelBearing + 540) % 360) - 180);
+  const category = difference <= 60 ? "headwind" : difference >= 120 ? "tailwind" : "crosswind";
+  return { category, difference };
+}
+
+function routeWindBreakdown(samples, totalDistanceKm) {
+  const distances = { headwind: 0, crosswind: 0, tailwind: 0 };
+  samples.slice(0, -1).forEach((sample, index) => {
+    distances[sample.relative.category] += Math.max(0, samples[index + 1].distanceKm - sample.distanceKm);
+  });
+  const percentage = (value) => Math.round(value / Math.max(totalDistanceKm, .001) * 100);
+  return {
+    distances,
+    percentages: {
+      headwind: percentage(distances.headwind),
+      crosswind: percentage(distances.crosswind),
+      tailwind: percentage(distances.tailwind)
+    }
+  };
+}
+
+function routeDurationLabel(minutes) {
+  const rounded = Math.round(minutes);
+  const hours = Math.floor(rounded / 60);
+  const remainder = rounded % 60;
+  return hours ? `${hours} h ${String(remainder).padStart(2, "0")}` : `${remainder} min`;
+}
+
+function routeWindHeadline(percentages) {
+  const entries = [
+    ["headwind", percentages.headwind, "Vento frontal"],
+    ["crosswind", percentages.crosswind, "Vento lateral"],
+    ["tailwind", percentages.tailwind, "Vento favorável"]
+  ];
+  const dominant = entries.sort((first, second) => second[1] - first[1])[0];
+  return `${dominant[2]} em ${dominant[1]}% da rota`;
+}
+
+function routeCategoryLabel(category) {
+  return { headwind: "Frontal", crosswind: "Lateral", tailwind: "Favorável" }[category] || "Variável";
+}
+
+function routeTimeLabel(epoch) {
+  return new Date(epoch * 1000).toLocaleTimeString("pt-PT", { hour: "2-digit", minute: "2-digit" });
+}
+
+function renderRouteTimeline(samples) {
+  setText("routePointCount", `${samples.length} pontos`);
+  setHTML("routeTimeline", samples.map((sample) => {
+    const direction = windDirection(sample.weather.direction);
+    return `
+      <article class="route-point">
+        <div class="route-point-time"><strong>${routeTimeLabel(sample.arrivalEpoch)}</strong><small>km ${sample.distanceKm.toFixed(1).replace(".", ",")}</small></div>
+        <div class="route-point-wind">
+          <span class="route-wind-state ${sample.relative.category}">${routeCategoryLabel(sample.relative.category)}</span>
+          <div><span class="route-wind-arrow" style="transform:rotate(${direction.degrees}deg)">↓</span><strong>${direction.from} · ${Math.round(sample.weather.wind)}</strong><small>raj. ${Math.round(sample.weather.gust)} km/h</small></div>
+        </div>
+        <div class="route-point-weather"><strong>${Math.round(sample.weather.probability)}%</strong><small>${sample.weather.precipitation.toFixed(1)} mm</small></div>
+        <div class="route-point-temp"><strong>${Math.round(sample.weather.temp)}°</strong><small>sens. ${Math.round(sample.weather.apparent)}°</small></div>
+        <p class="route-point-details">${weatherConditionLabel(sample.weather.weatherCode)} · Hum. ${Math.round(sample.weather.humidity)}% · UV ${sample.weather.uv.toFixed(1)}</p>
+      </article>
+    `;
+  }).join(""));
+}
+
+function routeMapPixel(point, zoom) {
+  const tile = osmTileCoordinates(point.lat, point.lon, zoom);
+  return { x: tile.x * OSM_TILE_SIZE, y: tile.y * OSM_TILE_SIZE };
+}
+
+function routeMapZoom(route, width, height) {
+  const bounds = route.points.reduce((result, point) => ({
+    minLat: Math.min(result.minLat, point.lat),
+    maxLat: Math.max(result.maxLat, point.lat),
+    minLon: Math.min(result.minLon, point.lon),
+    maxLon: Math.max(result.maxLon, point.lon)
+  }), { minLat: Infinity, maxLat: -Infinity, minLon: Infinity, maxLon: -Infinity });
+  const corners = [
+    { lat: bounds.minLat, lon: bounds.minLon },
+    { lat: bounds.maxLat, lon: bounds.maxLon }
+  ];
+  for (let zoom = 15; zoom >= 3; zoom -= 1) {
+    const first = routeMapPixel(corners[0], zoom);
+    const second = routeMapPixel(corners[1], zoom);
+    if (Math.abs(second.x - first.x) <= width - 48 && Math.abs(second.y - first.y) <= height - 48) return zoom;
+  }
+  return 3;
+}
+
+function routeMapCategoryAtDistance(samples, distanceKm) {
+  for (let index = 0; index < samples.length - 1; index += 1) {
+    if (distanceKm <= samples[index + 1].distanceKm) return samples[index].relative.category;
+  }
+  return samples.at(-1)?.relative.category || "crosswind";
+}
+
+function renderRouteMap(route, samples) {
+  const container = $("routeMap");
+  const tileLayer = $("routeMapTiles");
+  const overlay = $("routeMapOverlay");
+  if (!container || !tileLayer || !overlay || !route?.points?.length || !samples?.length) return;
+  const width = container.clientWidth || 360;
+  const height = container.clientHeight || 230;
+  const zoom = routeMapZoom(route, width, height);
+  const pixels = route.points.map((point) => ({ ...routeMapPixel(point, zoom), distanceKm: point.distanceKm }));
+  const bounds = pixels.reduce((result, point) => ({
+    minX: Math.min(result.minX, point.x),
+    maxX: Math.max(result.maxX, point.x),
+    minY: Math.min(result.minY, point.y),
+    maxY: Math.max(result.maxY, point.y)
+  }), { minX: Infinity, maxX: -Infinity, minY: Infinity, maxY: -Infinity });
+  const { minX, maxX, minY, maxY } = bounds;
+  const centerX = (minX + maxX) / 2;
+  const centerY = (minY + maxY) / 2;
+  const originX = centerX - width / 2;
+  const originY = centerY - height / 2;
+  const scale = 2 ** zoom;
+  tileLayer.innerHTML = "";
+  for (let tileY = Math.floor(originY / OSM_TILE_SIZE) - 1; tileY <= Math.floor((originY + height) / OSM_TILE_SIZE) + 1; tileY += 1) {
+    if (tileY < 0 || tileY >= scale) continue;
+    for (let tileX = Math.floor(originX / OSM_TILE_SIZE) - 1; tileX <= Math.floor((originX + width) / OSM_TILE_SIZE) + 1; tileX += 1) {
+      const image = document.createElement("img");
+      const wrappedX = ((tileX % scale) + scale) % scale;
+      image.alt = "";
+      image.decoding = "async";
+      image.draggable = false;
+      image.src = `https://tile.openstreetmap.org/${zoom}/${wrappedX}/${tileY}.png`;
+      image.style.left = `${tileX * OSM_TILE_SIZE - originX}px`;
+      image.style.top = `${tileY * OSM_TILE_SIZE - originY}px`;
+      tileLayer.appendChild(image);
+    }
+  }
+
+  overlay.innerHTML = "";
+  overlay.setAttribute("viewBox", `0 0 ${width} ${height}`);
+  const namespace = "http://www.w3.org/2000/svg";
+  const displayed = pixels.filter((_, index) => index % Math.max(1, Math.ceil(pixels.length / 700)) === 0 || index === pixels.length - 1);
+  const routeLine = document.createElementNS(namespace, "polyline");
+  routeLine.setAttribute("class", "route-map-base");
+  routeLine.setAttribute("points", displayed.map((point) => `${point.x - originX},${point.y - originY}`).join(" "));
+  overlay.appendChild(routeLine);
+
+  let currentCategory = "";
+  let segmentPoints = [];
+  const appendSegment = () => {
+    if (segmentPoints.length < 2) return;
+    const line = document.createElementNS(namespace, "polyline");
+    line.setAttribute("class", `route-map-line ${currentCategory}`);
+    line.setAttribute("points", segmentPoints.join(" "));
+    overlay.appendChild(line);
+  };
+  displayed.forEach((point) => {
+    const category = routeMapCategoryAtDistance(samples, point.distanceKm);
+    const coordinates = `${point.x - originX},${point.y - originY}`;
+    if (currentCategory && category !== currentCategory) {
+      segmentPoints.push(coordinates);
+      appendSegment();
+      segmentPoints = [coordinates];
+    } else {
+      segmentPoints.push(coordinates);
+    }
+    currentCategory = category;
+  });
+  appendSegment();
+
+  [displayed[0], displayed.at(-1)].forEach((point, index) => {
+    const marker = document.createElementNS(namespace, "circle");
+    marker.setAttribute("class", `route-map-marker ${index ? "finish" : "start"}`);
+    marker.setAttribute("cx", point.x - originX);
+    marker.setAttribute("cy", point.y - originY);
+    marker.setAttribute("r", 5);
+    overlay.appendChild(marker);
+  });
+}
+
+function renderRouteAnalysis(analysis) {
+  const { samples, breakdown, source, durationMinutes } = analysis;
+  const temperatures = samples.map((sample) => sample.weather.temp);
+  const gusts = samples.map((sample) => sample.weather.gust);
+  const probabilities = samples.map((sample) => sample.weather.probability);
+  const precipitation = samples.map((sample) => sample.weather.precipitation);
+  const maxGust = Math.max(...gusts);
+  const maxProbability = Math.max(...probabilities);
+  const maxPrecipitation = Math.max(...precipitation);
+  setText("routeHeadline", routeWindHeadline(breakdown.percentages));
+  setText("routeSubline", `Rajadas até ${Math.round(maxGust)} km/h · precipitação máxima ${maxPrecipitation.toFixed(1)} mm/h`);
+  setText("routeDepartureBadge", routeTimeLabel(samples[0].arrivalEpoch));
+  setText("routeDuration", routeDurationLabel(durationMinutes));
+  setText("routeTempRange", `${Math.round(Math.min(...temperatures))}–${Math.round(Math.max(...temperatures))}°`);
+  setText("routeMaxGust", `${Math.round(maxGust)} km/h`);
+  setText("routeRainRisk", `${Math.round(maxProbability)}%`);
+  setText("routeHeadwind", `${breakdown.percentages.headwind}%`);
+  setText("routeCrosswind", `${breakdown.percentages.crosswind}%`);
+  setText("routeTailwind", `${breakdown.percentages.tailwind}%`);
+  const bars = $$("#routeWindBar span");
+  if (bars[0]) bars[0].style.width = `${breakdown.percentages.headwind}%`;
+  if (bars[1]) bars[1].style.width = `${breakdown.percentages.crosswind}%`;
+  if (bars[2]) bars[2].style.width = `${breakdown.percentages.tailwind}%`;
+  setText("routeSource", `Fonte meteorológica: ${source}`);
+  renderRouteTimeline(samples);
+  $("routeResults").hidden = false;
+  requestAnimationFrame(() => renderRouteMap(routeData, samples));
+}
+
+async function handleRouteFile(event) {
+  const file = event.target.files?.[0];
+  if (!file) return;
+  const runId = ++routeAnalysisRunId;
+  $("routeAnalyze").disabled = false;
+  if (file.size > ROUTE_MAX_FILE_BYTES) {
+    showToast("O ficheiro GPX não pode exceder 10 MB.");
+    event.target.value = "";
+    return;
+  }
+  try {
+    setText("routeAnalysisState", "A ler o ficheiro GPX…");
+    const parsedRoute = parseGpx(await file.text(), file.name.replace(/\.gpx$/i, ""));
+    if (runId !== routeAnalysisRunId) return;
+    routeData = parsedRoute;
+    routeAnalysis = null;
+    setText("routeName", routeData.name);
+    setText("routeDistance", routeData.distanceKm.toFixed(1).replace(".", ","));
+    setText("routeElevation", routeData.elevationGain);
+    $("routeSettings").hidden = false;
+    $("routeResults").hidden = true;
+    setText("routeAnalysisState", "Rota pronta. Confirma a partida e a velocidade média.");
+    showToast("Rota GPX carregada.");
+  } catch (error) {
+    routeData = null;
+    $("routeSettings").hidden = true;
+    $("routeResults").hidden = true;
+    showToast(error?.message || "Não foi possível ler o ficheiro GPX.");
+  } finally {
+    event.target.value = "";
+  }
+}
+
+async function analyseRoute() {
+  if (!routeData) return;
+  const date = $("routeStartDate").value;
+  const time = $("routeStartTime").value;
+  const speed = Number($("routeAverageSpeed").value);
+  const departure = new Date(`${date}T${time || "00:00"}:00`);
+  if (!date || !time || !Number.isFinite(departure.getTime())) {
+    showToast("Seleciona uma data e hora de partida válidas.");
+    return;
+  }
+  if (!Number.isFinite(speed) || speed < 8 || speed > 50) {
+    showToast("A velocidade média deve estar entre 8 e 50 km/h.");
+    return;
+  }
+  if (departure.getTime() < Date.now() - 15 * 60 * 1000) {
+    showToast("Seleciona uma hora de partida futura.");
+    return;
+  }
+
+  const runId = ++routeAnalysisRunId;
+  const button = $("routeAnalyze");
+  button.disabled = true;
+  $("routeResults").hidden = true;
+  setText("routeAnalysisState", "A cruzar a rota com a previsão meteorológica…");
+  try {
+    const samples = buildRouteSamples(routeData, departure, speed);
+    const response = await fetchRouteWeather(samples);
+    if (runId !== routeAnalysisRunId) return;
+    const enrichedSamples = samples.map((sample, index) => ({
+      ...sample,
+      weather: response.values[index],
+      relative: routeWindRelative(sample.bearing, response.values[index].direction)
+    }));
+    routeAnalysis = {
+      samples: enrichedSamples,
+      breakdown: routeWindBreakdown(enrichedSamples, routeData.distanceKm),
+      source: response.source,
+      durationMinutes: routeData.distanceKm / speed * 60
+    };
+    renderRouteAnalysis(routeAnalysis);
+    setText("routeAnalysisState", `Análise concluída para ${enrichedSamples.length} pontos da rota.`);
+  } catch (error) {
+    if (runId !== routeAnalysisRunId) return;
+    setText("routeAnalysisState", `Não foi possível analisar: ${error?.message || error}`);
+    showToast("Não foi possível obter a previsão da rota.");
+  } finally {
+    if (runId === routeAnalysisRunId) button.disabled = false;
+  }
+}
+
 function locationOptionButton(location, selected) {
   const button = document.createElement("button");
   button.type = "button";
@@ -1088,6 +1616,7 @@ function initPressure() {
 
 function init() {
   $$('[data-app-view]').forEach((button) => button.addEventListener("click", () => setAppView(button.dataset.appView)));
+  $$('[data-forecast-context]').forEach((button) => button.addEventListener("click", () => setForecastContext(button.dataset.forecastContext)));
   $$('[data-forecast-mode]').forEach((button) => button.addEventListener("click", () => setForecastMode(button.dataset.forecastMode)));
   $$('[data-open-location]').forEach((button) => button.addEventListener("click", openLocationModal));
   $("closeLocation")?.addEventListener("click", closeLocationModal);
@@ -1098,11 +1627,20 @@ function init() {
     searchTimer = setTimeout(() => searchLocations(query), 280);
   });
   $("refreshCurrent")?.addEventListener("click", refreshWeather);
+  $("routeGpxInput")?.addEventListener("change", handleRouteFile);
+  $("routeUploadLabel")?.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    event.preventDefault();
+    $("routeGpxInput")?.click();
+  });
+  $("routeAnalyze")?.addEventListener("click", analyseRoute);
   document.addEventListener("keydown", (event) => { if (event.key === "Escape" && !$("locationModal").hidden) closeLocationModal(); });
 
   initPressure();
+  initRouteDefaults();
   updateLocationLabels(selectedLocation);
   setAppView("current");
+  setForecastContext("local");
   setForecastMode("48h");
   refreshWeather();
   setInterval(refreshWeather, REFRESH_MS);
