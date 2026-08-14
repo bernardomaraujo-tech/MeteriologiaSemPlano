@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#f6f7f5">
   <meta name="description" content="Meteorologia técnica para ciclismo e calculadora de pressão de pneus.">
   <title>SEM PLANO — Meteo</title>
-  <link rel="stylesheet" href="./styles.css?v=20260814_03">
+  <link rel="stylesheet" href="./styles.css?v=20260814_04">
   <link rel="manifest" href="./manifest.json">
   <link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -201,6 +201,14 @@
         </div>
 
         <div class="pressure-panel" data-pressure-panel="calculator">
+          <section class="card recent-setups-card" id="tpRecentSetups" aria-labelledby="tpRecentSetupsTitle" hidden>
+            <div class="recent-setups-heading">
+              <div><p id="tpRecentSetupsTitle">SETUPS RECENTES</p><span>Toque para carregar e recalcular</span></div>
+              <button type="button" id="tpOpenSetups">Ver todos</button>
+            </div>
+            <div class="recent-setups-list" id="tpRecentSetupList" aria-live="polite"></div>
+          </section>
+
           <section class="card pressure-form-card">
             <div class="numbered-heading"><span>1</span><h2>Ajusta os parâmetros</h2></div>
             <div class="pressure-form">
@@ -268,6 +276,6 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="./app.js?v=20260814_03"></script>
+  <script src="./app.js?v=20260814_04"></script>
 </body>
 </html>
