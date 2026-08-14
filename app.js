@@ -531,9 +531,9 @@ function renderForecast48(data) {
     rows.push(`
       <tr class="${row === 0 ? "is-now" : ""}">
         <td class="time-cell"><strong>${timeLabel}</strong><small>${formatWeekday(times[index])}, ${formatShortDate(times[index])}</small></td>
-        <td class="wind-summary-cell">
+        <td class="wind-summary-cell" aria-label="Direção ${direction.from} para ${direction.to}; vento ${Math.round(values.wind)} quilómetros por hora; rajadas ${Math.round(values.gust)} quilómetros por hora">
           <div class="wind-summary-direction"><span class="table-arrow" style="transform:rotate(${direction.degrees}deg)">↓</span><strong>${direction.from} → ${direction.to}</strong></div>
-          <div class="wind-summary-speeds"><span><b>${Math.round(values.wind)}</b><small>vento</small></span><i>·</i><span class="gust"><b>${Math.round(values.gust)}</b><small>rajadas</small></span><em>km/h</em></div>
+          <div class="wind-summary-speeds"><b>${Math.round(values.wind)}</b><i>|</i><b class="gust">${Math.round(values.gust)}</b><small>km/h</small></div>
         </td>
         <td class="number-cell rain-cell"><strong>${Math.round(values.probability)}%</strong><small>${values.precipitation.toFixed(1)} mm</small></td>
         <td class="number-cell temp-cell"><strong>${Math.round(values.temp)}°</strong><small>sens. ${Math.round(values.apparent)}°</small></td>
