@@ -301,9 +301,9 @@ function rainLabel(probability, precipitation) {
 function weatherConditionLabel(code) {
   const value = Math.round(finite(code, -1));
   if (value === 0) return "Céu limpo";
-  if (value === 1) return "Pouco nublado";
-  if (value === 2) return "Parcialmente nublado";
-  if (value === 3) return "Céu muito nublado";
+  if (value === 1) return "Céu pouco nublado";
+  if (value === 2) return "Céu com nuvens";
+  if (value === 3) return "Céu nublado";
   if (value === 45 || value === 48) return "Nevoeiro";
   if ([51, 53, 55, 56, 57].includes(value)) return "Chuvisco";
   if ([61, 63, 66].includes(value)) return "Chuva";
@@ -331,8 +331,17 @@ function gustStrengthLabel(gust) {
   return "rajadas muito fortes";
 }
 
+function relevantRainDescription(probability, precipitation) {
+  if (precipitation >= 2) return `Chuva relevante: ${Math.round(probability)}% · ${precipitation.toFixed(1)} mm`;
+  if (precipitation >= .2 || probability >= 45) return `Possibilidade de chuva: ${Math.round(probability)}% · ${precipitation.toFixed(1)} mm`;
+  if (probability >= 20) return `Baixa possibilidade de chuva: ${Math.round(probability)}%`;
+  return "";
+}
+
 function currentWeatherDescription(values, direction) {
-  return `${weatherConditionLabel(values.weatherCode)} · ${windStrengthLabel(values.wind)} de ${direction.from}, com ${gustStrengthLabel(values.gust)} · ${rainLabel(values.probability, values.precipitation)}.`;
+  const rain = relevantRainDescription(values.probability, values.precipitation);
+  const overview = `${weatherConditionLabel(values.weatherCode)}, ${windStrengthLabel(values.wind).toLowerCase()} de ${direction.from}, com ${gustStrengthLabel(values.gust)}`;
+  return `${overview}${rain ? `. ${rain}` : ""}.`;
 }
 
 function conditionQuality({ wind, gust, probability, precipitation, apparent, humidity, uv }) {
@@ -497,15 +506,15 @@ function rangeStats(data, start, count) {
 function renderForecastSummary(data) {
   const start = nearestHourIndex(data.hourly.time);
   const stats = rangeStats(data, start, FORECAST_HOURS);
+  const current = currentValues(data, start);
   const direction = windDirection(stats.direction);
-  const headline = stats.precipitation >= 3 || stats.maxProbability >= 60
-    ? "Chuva provável em alguns períodos"
-    : stats.precipitation >= .5 || stats.maxProbability >= 35
-      ? "Possibilidade de chuva pontual"
-      : "Sem chuva relevante";
+  const headline = `${weatherConditionLabel(current.weatherCode)}, ${windStrengthLabel(stats.averageWind).toLowerCase()}`;
+  const rainDetail = stats.precipitation >= .2 || stats.maxProbability >= 20
+    ? ` · chuva máx. ${Math.round(stats.maxProbability)}% · ${stats.precipitation.toFixed(1)} mm/48 h`
+    : "";
 
   setText("forecastHeadline", headline);
-  setText("forecastSubline", `Vento dominante ${direction.from} · rajadas até ${Math.round(stats.maxGust)} km/h`);
+  setText("forecastSubline", `Vento dominante ${direction.from} · rajadas até ${Math.round(stats.maxGust)} km/h${rainDetail}`);
   setText("summaryWind", Math.round(stats.averageWind));
   $("summaryWindArrow").style.transform = `rotate(${direction.degrees}deg)`;
 }
