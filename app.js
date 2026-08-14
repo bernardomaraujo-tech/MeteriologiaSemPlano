@@ -925,10 +925,36 @@ function tpDefaultSetupName(values) {
   return `${tpSurfaceLabel(values.surface)} ${values.frontWidth}/${values.rearWidth} mm`;
 }
 
+function tpSetupTimestamp(setup) {
+  const timestamp = Date.parse(setup.lastUsedAt || setup.createdAt || "");
+  return Number.isFinite(timestamp) ? timestamp : 0;
+}
+
+function tpRenderRecentSetups(setups, activeId) {
+  const recentSetups = [...setups]
+    .sort((first, second) => tpSetupTimestamp(second) - tpSetupTimestamp(first))
+    .slice(0, 3);
+  const section = $("tpRecentSetups");
+  if (section) section.hidden = recentSetups.length === 0;
+  setHTML("tpRecentSetupList", recentSetups.map((setup) => {
+    const values = { ...TP_DEFAULT_VALUES, ...setup.values };
+    const result = tpCalculate(values);
+    const name = setup.name || "Setup sem nome";
+    return `
+      <button class="recent-setup${setup.id === activeId ? " is-active" : ""}" type="button" data-load-setup="${escapeHtml(setup.id)}" aria-pressed="${setup.id === activeId}" title="Carregar ${escapeHtml(name)}">
+        <span>${escapeHtml(name)}</span>
+        <strong>${result.frontBar.toFixed(1).replace(".", ",")} / ${result.rearBar.toFixed(1).replace(".", ",")} <small>bar</small></strong>
+        <em>frente / trás</em>
+      </button>
+    `;
+  }).join(""));
+}
+
 function tpRenderSetups() {
   const setups = tpGetJson(TP_SETUPS_KEY).filter((setup) => setup?.id && setup?.values);
   const activeId = localStorage.getItem(TP_ACTIVE_SETUP_KEY);
   $("tpEmptySetups").hidden = setups.length > 0;
+  tpRenderRecentSetups(setups, activeId);
   setHTML("tpSetupList", setups.map((setup) => `
     <article class="saved-item${setup.id === activeId ? " is-active" : ""}">
       <button class="saved-main" type="button" data-load-setup="${escapeHtml(setup.id)}">
@@ -944,7 +970,8 @@ function tpSaveCurrentSetup() {
   const values = tpReadValues();
   const name = window.prompt("Nome do setup", tpDefaultSetupName(values));
   if (!name?.trim()) return;
-  const setup = { id: `setup-${Date.now()}`, name: name.trim(), createdAt: new Date().toISOString(), values };
+  const createdAt = new Date().toISOString();
+  const setup = { id: `setup-${Date.now()}`, name: name.trim(), createdAt, lastUsedAt: createdAt, values };
   const setups = tpGetJson(TP_SETUPS_KEY);
   setups.push(setup);
   tpSetJson(TP_SETUPS_KEY, setups);
@@ -954,8 +981,11 @@ function tpSaveCurrentSetup() {
 }
 
 function tpLoadSetup(id) {
-  const setup = tpGetJson(TP_SETUPS_KEY).find((item) => item.id === id);
+  const setups = tpGetJson(TP_SETUPS_KEY);
+  const setup = setups.find((item) => item.id === id);
   if (!setup) return;
+  setup.lastUsedAt = new Date().toISOString();
+  tpSetJson(TP_SETUPS_KEY, setups);
   tpApplyValues(setup.values);
   localStorage.setItem(TP_ACTIVE_SETUP_KEY, id);
   tpRenderSetups();
@@ -1043,6 +1073,11 @@ function initPressure() {
     if (remove) tpDeleteSetup(remove.dataset.deleteSetup);
     else if (load) tpLoadSetup(load.dataset.loadSetup);
   });
+  $("tpRecentSetupList")?.addEventListener("click", (event) => {
+    const load = event.target.closest("[data-load-setup]");
+    if (load) tpLoadSetup(load.dataset.loadSetup);
+  });
+  $("tpOpenSetups")?.addEventListener("click", () => setPressureTab("setups"));
 
   const activeId = localStorage.getItem(TP_ACTIVE_SETUP_KEY);
   const activeSetup = tpGetJson(TP_SETUPS_KEY).find((setup) => setup.id === activeId);
