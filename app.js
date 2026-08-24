@@ -575,31 +575,41 @@ function currentValues(data, index) {
   };
 }
 
+function forecastTableRows(data, start, count) {
+  const times = data.hourly?.time || [];
+  const rows = [];
+  for (let index = start, row = 0; index < Math.min(start + count, times.length); index += 1, row += 1) {
+    const values = currentValues(data, index);
+    const direction = windDirection(values.direction);
+    const quality = conditionQuality(values);
+    const weather = weatherIconDetails(values.weatherCode, values.isDay);
+    const timeLabel = row === 0 ? "Agora" : formatHour(times[index]);
+    rows.push(`
+      <tr class="${row === 0 ? "is-now" : ""}">
+        <td class="time-cell"><strong>${timeLabel}</strong><small>${formatWeekday(times[index])}, ${formatShortDate(times[index])}</small></td>
+        <td class="weather-state-cell" aria-label="${weather.label}" title="${weather.label}">
+          <span class="hourly-weather-icon weather-tone-${weather.tone}" aria-hidden="true"><svg><use href="#i-weather-${weather.icon}"/></svg></span>
+        </td>
+        <td class="wind-summary-cell" aria-label="Direção ${direction.from} para ${direction.to}; vento ${Math.round(values.wind)} quilómetros por hora; rajadas ${Math.round(values.gust)} quilómetros por hora">
+          <div class="wind-summary-direction"><span class="table-arrow" style="transform:rotate(${direction.degrees}deg)">↓</span><strong>${direction.from} → ${direction.to}</strong></div>
+          <div class="wind-summary-speeds"><b>${Math.round(values.wind)}</b><i>|</i><b class="gust">${Math.round(values.gust)}</b><small>km/h</small></div>
+        </td>
+        <td class="number-cell rain-cell"><strong>${Math.round(values.probability)}%</strong><small>${values.precipitation.toFixed(1)} mm</small></td>
+        <td class="number-cell temp-cell"><strong>${Math.round(values.temp)}°</strong><small>sens. ${Math.round(values.apparent)}°</small></td>
+        <td class="number-cell"><strong>${Math.round(values.humidity)}%</strong><small>${humidityLabel(values.humidity)}</small></td>
+        <td class="number-cell uv-cell"><strong>${values.uv.toFixed(1)}</strong><small>${uvLabel(values.uv)}</small></td>
+        <td><span class="quality-badge">${quality.score}</span></td>
+      </tr>
+    `);
+  }
+  return rows.join("");
+}
+
 function renderCurrentForecast6h(data) {
   const times = data.hourly?.time || [];
   if (!times.length) return;
-  const nearest = nearestHourIndex(times);
-  const nearestTime = new Date(times[nearest]).getTime();
-  const start = Math.min(nearest + (nearestTime <= Date.now() ? 1 : 0), times.length - 1);
-  const cards = [];
-
-  for (let index = start; index < Math.min(start + 6, times.length); index += 1) {
-    const values = currentValues(data, index);
-    const direction = windDirection(values.direction);
-    const weather = weatherIconDetails(values.weatherCode, values.isDay);
-    const time = formatHour(times[index]);
-    const timeLabel = time.replace(":00", "h");
-    cards.push(`
-      <article class="current-hour-card" aria-label="${time}, ${weather.label}; vento de ${direction.from} para ${direction.to} a ${Math.round(values.wind)} quilómetros por hora; rajada ${Math.round(values.gust)} quilómetros por hora; chuva ${Math.round(values.probability)} por cento; temperatura ${Math.round(values.temp)} graus">
-        <header><strong>${timeLabel}</strong><span class="hourly-weather-icon weather-tone-${weather.tone}" title="${weather.label}" aria-hidden="true"><svg><use href="#i-weather-${weather.icon}"/></svg></span></header>
-        <div class="current-hour-direction"><span class="table-arrow" style="transform:rotate(${direction.degrees}deg)">↓</span><strong>${direction.from}→${direction.to}</strong></div>
-        <div class="current-hour-wind"><b>${Math.round(values.wind)}</b><i>|</i><b class="gust">${Math.round(values.gust)}</b><small>km/h</small></div>
-        <div class="current-hour-meta"><span class="rain">${Math.round(values.probability)}%</span><span class="temp">${Math.round(values.temp)}°</span></div>
-      </article>
-    `);
-  }
-
-  setHTML("currentForecast6h", cards.join(""));
+  const tableBody = $("currentForecast6hTable")?.querySelector("tbody");
+  if (tableBody) tableBody.innerHTML = forecastTableRows(data, nearestHourIndex(times), 6);
 }
 
 function renderCurrent(data) {
@@ -668,33 +678,8 @@ function renderForecastSummary(data) {
 function renderForecast48(data) {
   const times = data.hourly.time;
   const start = nearestHourIndex(times);
-  const rows = [];
-  for (let index = start, row = 0; index < Math.min(start + FORECAST_HOURS, times.length); index += 1, row += 1) {
-    const values = currentValues(data, index);
-    const direction = windDirection(values.direction);
-    const quality = conditionQuality(values);
-    const weather = weatherIconDetails(values.weatherCode, values.isDay);
-    const timeLabel = row === 0 ? "Agora" : formatHour(times[index]);
-    rows.push(`
-      <tr class="${row === 0 ? "is-now" : ""}">
-        <td class="time-cell"><strong>${timeLabel}</strong><small>${formatWeekday(times[index])}, ${formatShortDate(times[index])}</small></td>
-        <td class="weather-state-cell" aria-label="${weather.label}" title="${weather.label}">
-          <span class="hourly-weather-icon weather-tone-${weather.tone}" aria-hidden="true"><svg><use href="#i-weather-${weather.icon}"/></svg></span>
-        </td>
-        <td class="wind-summary-cell" aria-label="Direção ${direction.from} para ${direction.to}; vento ${Math.round(values.wind)} quilómetros por hora; rajadas ${Math.round(values.gust)} quilómetros por hora">
-          <div class="wind-summary-direction"><span class="table-arrow" style="transform:rotate(${direction.degrees}deg)">↓</span><strong>${direction.from} → ${direction.to}</strong></div>
-          <div class="wind-summary-speeds"><b>${Math.round(values.wind)}</b><i>|</i><b class="gust">${Math.round(values.gust)}</b><small>km/h</small></div>
-        </td>
-        <td class="number-cell rain-cell"><strong>${Math.round(values.probability)}%</strong><small>${values.precipitation.toFixed(1)} mm</small></td>
-        <td class="number-cell temp-cell"><strong>${Math.round(values.temp)}°</strong><small>sens. ${Math.round(values.apparent)}°</small></td>
-        <td class="number-cell"><strong>${Math.round(values.humidity)}%</strong><small>${humidityLabel(values.humidity)}</small></td>
-        <td class="number-cell uv-cell"><strong>${values.uv.toFixed(1)}</strong><small>${uvLabel(values.uv)}</small></td>
-        <td><span class="quality-badge">${quality.score}</span></td>
-      </tr>
-    `);
-  }
   const tableBody = $("forecast48Table")?.querySelector("tbody");
-  if (tableBody) tableBody.innerHTML = rows.join("");
+  if (tableBody) tableBody.innerHTML = forecastTableRows(data, start, FORECAST_HOURS);
 }
 
 function hourlyDayAverage(data, isoDay, key) {

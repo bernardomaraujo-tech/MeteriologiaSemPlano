@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#f6f7f5">
   <meta name="description" content="Meteorologia técnica para ciclismo e calculadora de pressão de pneus.">
   <title>SEM PLANO — Meteo</title>
-  <link rel="stylesheet" href="./styles.css?v=20260824_04">
+  <link rel="stylesheet" href="./styles.css?v=20260824_05">
   <link rel="manifest" href="./manifest.json">
   <link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -140,15 +140,16 @@
           </section>
         </div>
 
-        <section class="card current-forecast-card" aria-labelledby="currentForecastTitle">
-          <div class="current-forecast-heading">
-            <div><h2 id="currentForecastTitle">Próximas 6 horas</h2><p>Vento | rajada · chuva · temperatura</p></div>
+        <section class="card forecast-table-card current-forecast-card" aria-labelledby="currentForecastTitle">
+          <div class="forecast-heading">
+            <div><h2 id="currentForecastTitle">Próximas 6 horas</h2><p>Desliza para consultar todos os dados</p></div>
             <span>6 h</span>
           </div>
-          <div class="current-hourly-scroll">
-            <div class="current-hourly-list" id="currentForecast6h" aria-live="polite">
-              <p class="current-hourly-state" id="currentForecast6hState">A carregar previsão…</p>
-            </div>
+          <div class="table-scroll current-table-scroll">
+            <table class="forecast-table" id="currentForecast6hTable">
+              <thead><tr><th>Hora</th><th class="weather-column-heading">Tempo</th><th class="wind-column-heading">Direção<small>Vento | Rajada</small></th><th>Chuva</th><th>Temp.</th><th>Hum.</th><th>UV</th><th>Qual.</th></tr></thead>
+              <tbody aria-live="polite"><tr><td colspan="8" class="loading-cell" id="currentForecast6hState">A carregar previsão…</td></tr></tbody>
+            </table>
           </div>
         </section>
 
@@ -368,6 +369,6 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="./app.js?v=20260824_04"></script>
+  <script src="./app.js?v=20260824_05"></script>
 </body>
 </html>

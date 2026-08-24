@@ -314,31 +314,6 @@ h1, h2, p { margin-top: 0; }
 .compact-card .soft-icon { width: 34px; height: 34px; }
 .compact-card strong { font-size: 1.7rem; }
 
-.current-forecast-card { padding: 0; overflow: hidden; }
-.current-forecast-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; padding: 16px 17px 13px; }
-.current-forecast-heading h2 { margin: 0 0 4px; font-size: .98rem; font-weight: 650; }
-.current-forecast-heading p { margin: 0; color: var(--muted); font-size: .66rem; }
-.current-forecast-heading > span { padding: 6px 8px; border-radius: 99px; background: var(--green-soft); color: var(--green-dark); font-size: .6rem; font-weight: 750; }
-.current-hourly-scroll { overflow-x: auto; padding: 0 14px 15px; overscroll-behavior-x: contain; scrollbar-width: none; scroll-snap-type: x proximity; -webkit-overflow-scrolling: touch; }
-.current-hourly-scroll::-webkit-scrollbar { display: none; }
-.current-hourly-list { width: max-content; min-width: 100%; display: grid; grid-auto-flow: column; grid-auto-columns: 108px; gap: 8px; }
-.current-hour-card { min-width: 0; padding: 9px 10px 10px; border: 1px solid var(--line); border-radius: 15px; background: #fbfcfb; scroll-snap-align: start; }
-.current-hour-card header { display: flex; align-items: center; justify-content: space-between; gap: 7px; }
-.current-hour-card header > strong { font-size: .78rem; }
-.current-hour-card .hourly-weather-icon { width: 29px; height: 29px; border-radius: 10px; }
-.current-hour-card .hourly-weather-icon svg { width: 18px; height: 18px; }
-.current-hour-direction { display: flex; align-items: center; gap: 4px; margin-top: 8px; color: var(--green-dark); }
-.current-hour-direction .table-arrow { display: inline-block; color: var(--green); font-size: 1rem; line-height: 1; }
-.current-hour-direction strong { font-size: .62rem; letter-spacing: -.01em; }
-.current-hour-wind { display: flex; align-items: baseline; gap: 4px; margin-top: 5px; }
-.current-hour-wind b { font-size: .73rem; }
-.current-hour-wind b.gust { color: var(--green-dark); }
-.current-hour-wind i, .current-hour-wind small { color: var(--muted); font-size: .46rem; font-style: normal; font-weight: 500; }
-.current-hour-meta { display: flex; align-items: center; justify-content: space-between; gap: 7px; margin-top: 8px; padding-top: 7px; border-top: 1px solid var(--line); font-size: .68rem; font-weight: 750; }
-.current-hour-meta .rain { color: var(--blue); }
-.current-hour-meta .temp { color: var(--orange); }
-.current-hourly-state { grid-column: 1 / -1; min-width: calc(100vw - 64px); margin: 0; padding: 22px 8px; color: var(--muted); font-size: .7rem; text-align: center; }
-
 .clothing-card { padding: 18px; }
 .clothing-title { display: flex; align-items: flex-start; gap: 12px; }
 .clothing-title h2 { margin: 1px 0 5px; font-size: 1rem; font-weight: 650; }
@@ -377,6 +352,7 @@ h1, h2, p { margin-top: 0; }
 .forecast-heading p { margin: 0; color: var(--muted); font-size: .7rem; }
 .forecast-heading > span { padding: 6px 8px; border-radius: 99px; background: var(--green-soft); color: var(--green-dark); font-size: .61rem; font-weight: 750; }
 .table-scroll { max-height: min(62dvh, 620px); overflow: auto; overscroll-behavior: contain; scrollbar-width: thin; -webkit-overflow-scrolling: touch; }
+.current-table-scroll { max-height: none; }
 .forecast-table { --time-column-width: 76px; width: 100%; min-width: 684px; border-collapse: separate; border-spacing: 0; }
 .forecast-table th, .forecast-table td { padding: 12px 10px; border-top: 1px solid var(--line); text-align: left; vertical-align: middle; white-space: nowrap; }
 .forecast-table th { position: sticky; z-index: 4; top: 0; background: #fbfcfb; color: var(--muted); font-size: .58rem; font-weight: 750; letter-spacing: .07em; text-transform: uppercase; }

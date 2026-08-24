@@ -5,8 +5,9 @@ import vm from "node:vm";
 
 function loadWeatherHelpers() {
   const tableBody = { innerHTML: "" };
-  const currentForecast = { innerHTML: "" };
+  const currentTableBody = { innerHTML: "" };
   const forecastTable = { querySelector: (selector) => selector === "tbody" ? tableBody : null };
+  const currentForecastTable = { querySelector: (selector) => selector === "tbody" ? currentTableBody : null };
   const context = {
     console,
     URL,
@@ -21,7 +22,7 @@ function loadWeatherHelpers() {
     document: {
       querySelector: () => null,
       querySelectorAll: () => [],
-      getElementById: (id) => id === "forecast48Table" ? forecastTable : id === "currentForecast6h" ? currentForecast : null,
+      getElementById: (id) => id === "forecast48Table" ? forecastTable : id === "currentForecast6hTable" ? currentForecastTable : null,
       addEventListener: () => {}
     },
     window: { addEventListener: () => {} }
@@ -30,10 +31,10 @@ function loadWeatherHelpers() {
   vm.createContext(context);
   const source = fs.readFileSync(new URL("../app.js", import.meta.url), "utf8");
   vm.runInContext(`${source}\nglobalThis.__weatherHelpers = { weatherIconDetails, renderCurrentForecast6h, renderForecast48 };`, context);
-  return { ...context.__weatherHelpers, currentForecast, tableBody };
+  return { ...context.__weatherHelpers, currentTableBody, tableBody };
 }
 
-const { weatherIconDetails, renderCurrentForecast6h, renderForecast48, currentForecast, tableBody } = loadWeatherHelpers();
+const { weatherIconDetails, renderCurrentForecast6h, renderForecast48, currentTableBody, tableBody } = loadWeatherHelpers();
 
 test("distingue céu limpo de dia e de noite", () => {
   assert.equal(weatherIconDetails(0, 1).icon, "sun");
@@ -97,7 +98,8 @@ test("apresenta os seis períodos seguintes no separador Atual", () => {
     uv_index: repeat(3),
     is_day: repeat(1)
   }});
-  assert.equal((currentForecast.innerHTML.match(/current-hour-card/g) || []).length, 6);
-  assert.equal((currentForecast.innerHTML.match(/hourly-weather-icon/g) || []).length, 6);
-  assert.equal((currentForecast.innerHTML.match(/vento de NE para SW/g) || []).length, 6);
+  assert.equal((currentTableBody.innerHTML.match(/<tr class=/g) || []).length, 6);
+  assert.equal((currentTableBody.innerHTML.match(/hourly-weather-icon/g) || []).length, 6);
+  assert.equal((currentTableBody.innerHTML.match(/Direção NE para SW/g) || []).length, 6);
+  assert.match(currentTableBody.innerHTML, /<strong>Agora<\/strong>/);
 });
