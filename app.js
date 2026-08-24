@@ -419,6 +419,21 @@ function weatherConditionLabel(code) {
   return "Condições variáveis";
 }
 
+function weatherIconDetails(code, isDay = true) {
+  const value = Math.round(finite(code, -1));
+  const daylight = Number(isDay) === 1;
+  const label = weatherConditionLabel(value);
+  if ([95, 96, 99].includes(value)) return { icon: "storm", tone: "storm", label };
+  if ([71, 73, 75, 77, 85, 86].includes(value)) return { icon: "snow", tone: "wet", label };
+  if ([61, 63, 65, 66, 67, 80, 81, 82].includes(value)) return { icon: "rain", tone: "wet", label };
+  if ([51, 53, 55, 56, 57].includes(value)) return { icon: "drizzle", tone: "wet", label };
+  if ([45, 48].includes(value)) return { icon: "fog", tone: "cloud", label };
+  if (value === 3) return { icon: "cloud", tone: "cloud", label };
+  if ([1, 2].includes(value)) return { icon: daylight ? "partly" : "night-cloud", tone: daylight ? "clear" : "night", label };
+  if (value === 0) return { icon: daylight ? "sun" : "moon", tone: daylight ? "clear" : "night", label };
+  return { icon: "cloud", tone: "cloud", label };
+}
+
 function windStrengthLabel(wind) {
   if (wind < 12) return "Vento fraco";
   if (wind < 20) return "Vento moderado";
@@ -555,7 +570,8 @@ function currentValues(data, index) {
     gust: finite(data.hourly.wind_gusts_10m?.[index]),
     direction: finite(data.hourly.wind_direction_10m?.[index]),
     uv: finite(data.hourly.uv_index?.[index]),
-    weatherCode: finite(data.hourly.weather_code?.[index], -1)
+    weatherCode: finite(data.hourly.weather_code?.[index], -1),
+    isDay: finite(data.hourly.is_day?.[index], 1)
   };
 }
 
@@ -629,10 +645,14 @@ function renderForecast48(data) {
     const values = currentValues(data, index);
     const direction = windDirection(values.direction);
     const quality = conditionQuality(values);
+    const weather = weatherIconDetails(values.weatherCode, values.isDay);
     const timeLabel = row === 0 ? "Agora" : formatHour(times[index]);
     rows.push(`
       <tr class="${row === 0 ? "is-now" : ""}">
         <td class="time-cell"><strong>${timeLabel}</strong><small>${formatWeekday(times[index])}, ${formatShortDate(times[index])}</small></td>
+        <td class="weather-state-cell" aria-label="${weather.label}" title="${weather.label}">
+          <span class="hourly-weather-icon weather-tone-${weather.tone}" aria-hidden="true"><svg><use href="#i-weather-${weather.icon}"/></svg></span>
+        </td>
         <td class="wind-summary-cell" aria-label="Direção ${direction.from} para ${direction.to}; vento ${Math.round(values.wind)} quilómetros por hora; rajadas ${Math.round(values.gust)} quilómetros por hora">
           <div class="wind-summary-direction"><span class="table-arrow" style="transform:rotate(${direction.degrees}deg)">↓</span><strong>${direction.from} → ${direction.to}</strong></div>
           <div class="wind-summary-speeds"><b>${Math.round(values.wind)}</b><i>|</i><b class="gust">${Math.round(values.gust)}</b><small>km/h</small></div>
