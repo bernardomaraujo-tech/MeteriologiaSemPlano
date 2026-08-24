@@ -2,25 +2,67 @@ import fs from "node:fs/promises";
 import path from "node:path";
 
 const OUTPUT_PATH = path.resolve(process.argv[2] || "cycling-news.json");
-const MAX_ITEMS_PER_QUERY = 30;
+const MAX_ITEMS_PER_QUERY = 12;
+const MAX_GENERAL_ITEMS_PER_SOURCE = 8;
+const MAX_ITEMS_PER_DISCIPLINE = 60;
+
+const SOURCES = {
+  road: [
+    { name: "Cyclingnews", domain: "cyclingnews.com" },
+    { name: "Escape Collective", domain: "escapecollective.com" },
+    { name: "Cycling Weekly", domain: "cyclingweekly.com" },
+    { name: "VELO", domain: "velo.outsideonline.com" },
+    { name: "WielerFlits", domain: "wielerflits.nl", locale: { hl: "nl", gl: "NL", ceid: "NL:nl" } },
+    { name: "CyclingUpToDate", domain: "cyclinguptodate.com" }
+  ],
+  mtb: [
+    { name: "Pinkbike", domain: "pinkbike.com" },
+    { name: "Vital MTB", domain: "vitalmtb.com" },
+    { name: "Escape Collective", domain: "escapecollective.com" },
+    { name: "VELO", domain: "velo.outsideonline.com" },
+    { name: "UCI", domain: "uci.org" }
+  ],
+  cyclocross: [
+    { name: "WielerFlits", domain: "wielerflits.nl", locale: { hl: "nl", gl: "NL", ceid: "NL:nl" } },
+    { name: "Cyclocross Magazine", domain: "cxmagazine.com" },
+    { name: "Cyclocross24", domain: "cyclocross24.com" },
+    { name: "Cyclingnews", domain: "cyclingnews.com" },
+    { name: "UCI", domain: "uci.org" }
+  ],
+  gravel: [
+    { name: "Escape Collective", domain: "escapecollective.com" },
+    { name: "VELO", domain: "velo.outsideonline.com" },
+    { name: "Gravel Cyclist", domain: "gravelcyclist.com" },
+    { name: "Cyclingnews", domain: "cyclingnews.com" },
+    { name: "Cycling Weekly", domain: "cyclingweekly.com" },
+    { name: "BikeRadar", domain: "bikeradar.com" }
+  ]
+};
 
 const FEEDS = {
   road: {
-    general: 'WorldTour OR Vuelta OR Giro OR "Tour de France" OR "Volta a Portugal" when:30d',
-    transfers: '(WorldTour OR "road cycling") (transfer OR signs OR contract OR joins) when:120d'
+    general: 'WorldTour OR Vuelta OR Giro OR "Tour de France" OR "Volta a Portugal"',
+    transfers: '(WorldTour OR "road cycling") (transfer OR signs OR contract OR joins)'
   },
   mtb: {
-    general: '"mountain bike racing" OR "UCI mountain bike" OR XCO OR downhill OR enduro when:30d',
-    transfers: '("mountain bike" OR MTB) (transfer OR signs OR contract OR joins OR team) when:120d'
+    general: '"mountain bike racing" OR "UCI mountain bike" OR XCO OR downhill OR enduro',
+    transfers: '("mountain bike" OR MTB) (transfer OR signs OR contract OR joins OR team)'
   },
   cyclocross: {
-    general: 'cyclocross OR "cyclo-cross" when:60d',
-    transfers: '(cyclocross OR "cyclo-cross") (transfer OR signs OR contract OR joins OR team) when:180d'
+    general: 'cyclocross OR "cyclo-cross"',
+    transfers: '(cyclocross OR "cyclo-cross") (transfer OR signs OR contract OR joins OR team)'
   },
   gravel: {
-    general: '"gravel racing" OR "UCI Gravel" OR "gravel cycling" when:30d',
-    transfers: '("gravel cycling" OR "UCI Gravel") (transfer OR signs OR contract OR joins OR team) when:180d'
+    general: '"gravel racing" OR "UCI Gravel" OR "gravel cycling"',
+    transfers: '("gravel cycling" OR "UCI Gravel") (transfer OR signs OR contract OR joins OR team)'
   }
+};
+
+const RECENCY = {
+  road: { general: "when:30d", transfers: "when:120d" },
+  mtb: { general: "when:30d", transfers: "when:120d" },
+  cyclocross: { general: "when:60d", transfers: "when:180d" },
+  gravel: { general: "when:30d", transfers: "when:180d" }
 };
 
 function decodeXml(value) {
@@ -42,23 +84,34 @@ function tagValue(block, tag) {
   return decodeXml(match?.[1]);
 }
 
+function sourceDetails(block) {
+  const match = block.match(/<source\b([^>]*)>([\s\S]*?)<\/source>/i);
+  if (!match) return { source: "", sourceUrl: "" };
+  const urlMatch = match[1].match(/\burl=["']([^"']+)["']/i);
+  return { source: decodeXml(match[2]), sourceUrl: decodeXml(urlMatch?.[1]) };
+}
+
 function parseItems(xml) {
   return (xml.match(/<item>[\s\S]*?<\/item>/gi) || [])
-    .map((block) => ({
-      title: tagValue(block, "title"),
-      pubDate: tagValue(block, "pubDate"),
-      link: tagValue(block, "link")
-    }))
+    .map((block) => {
+      const source = sourceDetails(block);
+      return {
+        title: tagValue(block, "title"),
+        pubDate: tagValue(block, "pubDate"),
+        link: tagValue(block, "link"),
+        ...source
+      };
+    })
     .filter((item) => item.title && /^https?:\/\//.test(item.link))
     .slice(0, MAX_ITEMS_PER_QUERY);
 }
 
-function googleNewsFeed(query) {
+function googleNewsFeed(query, locale = {}) {
   return `https://news.google.com/rss/search?${new URLSearchParams({
     q: query,
-    hl: "en-GB",
-    gl: "GB",
-    ceid: "GB:en"
+    hl: locale.hl || "en-GB",
+    gl: locale.gl || "GB",
+    ceid: locale.ceid || "GB:en"
   }).toString()}`;
 }
 
@@ -66,29 +119,54 @@ function looksLikeTransfer(title) {
   return /transfer|rumou?r|\bsigns?\b|\bsigned\b|contract|\bjoins?\b|renewal|\bextends?\b|\bmoves?\b|\bdeal\b/i.test(title);
 }
 
-async function fetchFeed(discipline, query, type = null) {
-  const response = await fetch(googleNewsFeed(query), {
+function approvedSource(sourceUrl, sources) {
+  try {
+    const hostname = new URL(sourceUrl).hostname.replace(/^www\./, "");
+    return sources.find((source) => hostname === source.domain || hostname.endsWith(`.${source.domain}`)) || null;
+  } catch (_) {
+    return null;
+  }
+}
+
+function sourceQuery(sources) {
+  return sources.map((source) => `site:${source.domain}`).join(" OR ");
+}
+
+async function fetchFeed(discipline, query, recency, type = null, requestedSource = null) {
+  const sources = SOURCES[discipline];
+  const requestedSources = requestedSource ? [requestedSource] : sources;
+  const curatedQuery = `(${query}) (${sourceQuery(requestedSources)}) ${recency}`;
+  const response = await fetch(googleNewsFeed(curatedQuery, requestedSource?.locale), {
     headers: { "user-agent": "SEM-PLANO-Cycling-News/1.0" }
   });
   if (!response.ok) throw new Error(`${discipline}: Google News respondeu ${response.status}`);
-  const items = parseItems(await response.text());
+  const items = parseItems(await response.text())
+    .map((item) => ({ item, source: approvedSource(item.sourceUrl, requestedSources) }))
+    .filter(({ source }) => source)
+    .map(({ item, source }) => ({ ...item, source: source.name }));
   if (!items.length) throw new Error(`${discipline}: feed sem notícias`);
   return type ? items.filter((item) => looksLikeTransfer(item.title)).map((item) => ({ ...item, type })) : items;
 }
 
 const entries = await Promise.all(
   Object.entries(FEEDS).map(async ([discipline, queries]) => {
-    const [general, transfers] = await Promise.all([
-      fetchFeed(discipline, queries.general),
-      fetchFeed(discipline, queries.transfers, "transfers")
+    const [generalGroups, transfers] = await Promise.all([
+      Promise.all(SOURCES[discipline].map((source) =>
+        fetchFeed(discipline, queries.general, RECENCY[discipline].general, null, source)
+          .then((items) => items.slice(0, MAX_GENERAL_ITEMS_PER_SOURCE))
+          .catch(() => [])
+      )),
+      fetchFeed(discipline, queries.transfers, RECENCY[discipline].transfers, "transfers").catch(() => [])
     ]);
+    const general = generalGroups.flat();
+    if (!general.length) throw new Error(`${discipline}: nenhuma fonte editorial respondeu com notícias`);
     const seen = new Set();
     const items = [...general, ...transfers].filter((item) => {
       const key = item.title.toLocaleLowerCase("en").replace(/[^a-z0-9]+/g, " ").trim();
       if (!key || seen.has(key)) return false;
       seen.add(key);
       return true;
-    });
+    }).slice(0, MAX_ITEMS_PER_DISCIPLINE);
     return [discipline, items];
   })
 );
