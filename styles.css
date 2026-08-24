@@ -352,7 +352,7 @@ h1, h2, p { margin-top: 0; }
 .forecast-heading p { margin: 0; color: var(--muted); font-size: .7rem; }
 .forecast-heading > span { padding: 6px 8px; border-radius: 99px; background: var(--green-soft); color: var(--green-dark); font-size: .61rem; font-weight: 750; }
 .table-scroll { max-height: min(62dvh, 620px); overflow: auto; overscroll-behavior: contain; scrollbar-width: thin; -webkit-overflow-scrolling: touch; }
-.forecast-table { --time-column-width: 76px; width: 100%; min-width: 650px; border-collapse: separate; border-spacing: 0; }
+.forecast-table { --time-column-width: 76px; width: 100%; min-width: 700px; border-collapse: separate; border-spacing: 0; }
 .forecast-table th, .forecast-table td { padding: 12px 10px; border-top: 1px solid var(--line); text-align: left; vertical-align: middle; white-space: nowrap; }
 .forecast-table th { position: sticky; z-index: 4; top: 0; background: #fbfcfb; color: var(--muted); font-size: .58rem; font-weight: 750; letter-spacing: .07em; text-transform: uppercase; }
 .forecast-table td { font-size: .78rem; }
@@ -365,7 +365,14 @@ h1, h2, p { margin-top: 0; }
   max-width: var(--time-column-width);
   background: var(--surface);
 }
-.forecast-table th:nth-child(2), .forecast-table td:nth-child(2) {
+.forecast-table .weather-column-heading, .forecast-table .weather-state-cell {
+  width: 48px;
+  min-width: 48px;
+  max-width: 48px;
+  padding-inline: 6px;
+  text-align: center;
+}
+.forecast-table .wind-column-heading, .forecast-table .wind-summary-cell {
   width: 128px;
   min-width: 128px;
   max-width: 128px;
@@ -374,6 +381,13 @@ h1, h2, p { margin-top: 0; }
 .forecast-table tr.is-now > td { background: #f7fcf9; }
 .time-cell strong { display: block; font-size: .78rem; }
 .time-cell small { color: var(--muted); font-size: .62rem; }
+.hourly-weather-icon { display: inline-grid; width: 32px; height: 32px; place-items: center; border-radius: 11px; }
+.hourly-weather-icon svg { width: 20px; height: 20px; }
+.weather-tone-clear { background: var(--orange-soft); color: var(--orange); }
+.weather-tone-night { background: #edf1f7; color: #52627a; }
+.weather-tone-cloud { background: #f0f2f1; color: #68716b; }
+.weather-tone-wet { background: var(--blue-soft); color: var(--blue); }
+.weather-tone-storm { background: var(--purple-soft); color: var(--purple); }
 .wind-column-heading { line-height: 1.2; }
 .wind-column-heading small { display: block; margin-top: 3px; font-size: .45rem; font-weight: 650; letter-spacing: .025em; }
 .wind-summary-cell { padding-inline: 8px !important; }
