@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#f6f7f5">
   <meta name="description" content="Meteorologia técnica para ciclismo e calculadora de pressão de pneus.">
   <title>SEM PLANO — Meteo</title>
-  <link rel="stylesheet" href="./styles.css?v=20260824_07">
+  <link rel="stylesheet" href="./styles.css?v=20260824_08">
   <link rel="manifest" href="./manifest.json">
   <link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -66,7 +66,7 @@
         <header class="page-header">
           <div>
             <p class="brand">SEM PLANO</p>
-            <h1 id="currentTitle">Atual</h1>
+            <h1 id="currentTitle">Tempo Atual</h1>
           </div>
           <button class="icon-button" id="refreshCurrent" type="button" aria-label="Atualizar meteorologia">
             <svg><use href="#i-refresh"/></svg>
@@ -354,7 +354,7 @@
 
       <section class="app-view cycling-view" id="viewCycling" data-view-panel="cycling" aria-labelledby="cyclingTitle" hidden>
         <header class="page-header">
-          <div><p class="brand">SEM PLANO</p><h1 id="cyclingTitle">Ciclismo</h1></div>
+          <div><p class="brand">SEM PLANO</p><h1 id="cyclingTitle">Notícias Ciclismo</h1></div>
           <button class="icon-button" id="refreshCyclingNews" type="button" aria-label="Atualizar notícias">
             <svg><use href="#i-refresh"/></svg>
           </button>
@@ -427,9 +427,9 @@
   </div>
 
   <nav class="bottom-nav" aria-label="Navegação principal">
-    <button class="is-active" type="button" data-app-view="current"><svg><use href="#i-current"/></svg><span>Atual</span></button>
+    <button class="is-active" type="button" data-app-view="current"><svg><use href="#i-current"/></svg><span>Tempo Atual</span></button>
     <button type="button" data-app-view="forecast"><svg><use href="#i-forecast"/></svg><span>Previsão</span></button>
-    <button type="button" data-app-view="cycling"><svg><use href="#i-news"/></svg><span>Ciclismo</span></button>
+    <button type="button" data-app-view="cycling"><svg><use href="#i-news"/></svg><span>Notícias Ciclismo</span></button>
     <button type="button" data-app-view="pressure"><svg><use href="#i-gauge"/></svg><span>Pressão Pneus</span></button>
   </nav>
 
@@ -445,6 +445,6 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="./app.js?v=20260824_07"></script>
+  <script src="./app.js?v=20260824_08"></script>
 </body>
 </html>
