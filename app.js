@@ -32,8 +32,18 @@ const CYCLING_DISCIPLINES = {
     season: "2026",
     feedTerms: 'WorldTour OR Vuelta OR Giro OR "Tour de France" OR "Volta a Portugal"',
     fallbackUrl: "https://www.cyclingnews.com/pro-cycling/",
+    sources: [
+      { name: "Cyclingnews", domain: "cyclingnews.com", url: "https://www.cyclingnews.com/pro-cycling/" },
+      { name: "Escape Collective", domain: "escapecollective.com", url: "https://escapecollective.com/" },
+      { name: "Cycling Weekly", domain: "cyclingweekly.com", url: "https://www.cyclingweekly.com/news" },
+      { name: "VELO", domain: "velo.outsideonline.com", url: "https://velo.outsideonline.com/" },
+      { name: "WielerFlits", domain: "wielerflits.nl", url: "https://www.wielerflits.nl/" },
+      { name: "CyclingUpToDate", domain: "cyclinguptodate.com", url: "https://cyclinguptodate.com/" }
+    ],
     calendarUrl: "https://www.uci.org/calendar/road/2ruOnavHX0dMGTCRozdYAU",
     rankingsUrl: "https://www.uci.org/discipline/road/6TBjsDD8902tud440iv1Cu?tab=rankings",
+    statsUrl: "https://www.procyclingstats.com/",
+    statsLabel: "Resultados e estatísticas",
     events: [
       { name: "La Vuelta a España", location: "Mónaco · França · Andorra · Espanha", start: "2026-08-22", end: "2026-09-13", kind: "Grand Tour", url: "https://www.lavuelta.es/en/overall-route" },
       { name: "GP Cycliste de Québec", location: "Québec, Canadá", start: "2026-09-11", end: "2026-09-11", kind: "UCI WorldTour", url: "https://gpcqm.ca/en/" },
@@ -49,8 +59,17 @@ const CYCLING_DISCIPLINES = {
     season: "2026",
     feedTerms: '"mountain bike racing" OR "UCI mountain bike" OR XCO OR downhill OR enduro',
     fallbackUrl: "https://www.pinkbike.com/news/",
+    sources: [
+      { name: "Pinkbike", domain: "pinkbike.com", url: "https://www.pinkbike.com/news/" },
+      { name: "Vital MTB", domain: "vitalmtb.com", url: "https://www.vitalmtb.com/" },
+      { name: "Escape Collective", domain: "escapecollective.com", url: "https://escapecollective.com/" },
+      { name: "VELO", domain: "velo.outsideonline.com", url: "https://velo.outsideonline.com/" },
+      { name: "UCI", domain: "uci.org", url: "https://www.uci.org/discipline/mountain-bike/4LArSj7CKcytMrGEDtKwkb" }
+    ],
     calendarUrl: "https://www.ucimtbworldseries.com/calendar",
     rankingsUrl: "https://www.uci.org/discipline/mountain-bike/4LArSj7CKcytMrGEDtKwkb?tab=rankings",
+    statsUrl: "https://www.ucimtbworldseries.com/standings",
+    statsLabel: "Classificações World Series",
     events: [
       { name: "UCI MTB World Championships", location: "Val di Sole, Itália", start: "2026-08-26", end: "2026-08-30", kind: "XCO · XCC · DHI", url: "https://www.uci.org/competition-hub/2026-uci-mountain-bike-world-championships-xco-xcr-xcc-e-mtb-dhi/5aHMncZjNA8ofgCaDA3Gsj" },
       { name: "World Series · Soldier Hollow", location: "Utah, Estados Unidos", start: "2026-09-19", end: "2026-09-20", kind: "XCO · XCC", url: "https://www.ucimtbworldseries.com/calendar" },
@@ -64,8 +83,17 @@ const CYCLING_DISCIPLINES = {
     season: "2026/27",
     feedTerms: 'cyclocross OR "cyclo-cross"',
     fallbackUrl: "https://www.uci.org/news/cyclo-cross/3aOLVmpqkjVcCGvqtRv5KJ",
+    sources: [
+      { name: "WielerFlits", domain: "wielerflits.nl", url: "https://www.wielerflits.nl/" },
+      { name: "Cyclocross Magazine", domain: "cxmagazine.com", url: "https://www.cxmagazine.com/" },
+      { name: "Cyclocross24", domain: "cyclocross24.com", url: "https://cyclocross24.com/" },
+      { name: "Cyclingnews", domain: "cyclingnews.com", url: "https://www.cyclingnews.com/" },
+      { name: "UCI", domain: "uci.org", url: "https://www.uci.org/news/cyclo-cross/3aOLVmpqkjVcCGvqtRv5KJ" }
+    ],
     calendarUrl: "https://www.ucicyclocrossworldcup.com/en/calendar",
     rankingsUrl: "https://www.uci.org/discipline/cyclo-cross/27qDl3RfvZBNwx1GhqJTwj?tab=rankings",
+    statsUrl: "https://cyclocross24.com/",
+    statsLabel: "Resultados e estatísticas",
     events: [
       { name: "Taça do Mundo #1 · Ostrava", location: "Ostrava, Chéquia", start: "2026-11-27", end: "2026-11-27", kind: "Taça do Mundo", url: "https://www.uci.org/competition-details/2027/CRO/79165" },
       { name: "Taça do Mundo #2 · Tábor", location: "Tábor, Chéquia", start: "2026-11-29", end: "2026-11-29", kind: "Taça do Mundo", url: "https://www.ucicyclocrossworldcup.com/en/calendar" },
@@ -82,8 +110,18 @@ const CYCLING_DISCIPLINES = {
     season: "2026",
     feedTerms: '"gravel racing" OR "UCI Gravel" OR "gravel cycling"',
     fallbackUrl: "https://www.uci.org/news/gravel/2WbYbNOvkUCAmWf7Mf6VtR",
+    sources: [
+      { name: "Escape Collective", domain: "escapecollective.com", url: "https://escapecollective.com/" },
+      { name: "VELO", domain: "velo.outsideonline.com", url: "https://velo.outsideonline.com/" },
+      { name: "Gravel Cyclist", domain: "gravelcyclist.com", url: "https://www.gravelcyclist.com/" },
+      { name: "Cyclingnews", domain: "cyclingnews.com", url: "https://www.cyclingnews.com/" },
+      { name: "Cycling Weekly", domain: "cyclingweekly.com", url: "https://www.cyclingweekly.com/news" },
+      { name: "BikeRadar", domain: "bikeradar.com", url: "https://www.bikeradar.com/gravel" }
+    ],
     calendarUrl: "https://ucigravelworldseries.com/en/calendar/",
     rankingsUrl: "https://www.uci.org/discipline/gravel/5secLRyYas3xItHITvmXRd?tab=results",
+    statsUrl: "https://ucigravelworldseries.com/en/results/",
+    statsLabel: "Resultados Gravel World Series",
     events: [
       { name: "UEC Gravel European Championships", location: "Houffalize, Bélgica", start: "2026-08-30", end: "2026-08-30", kind: "Europeu", url: "https://ucigravelworldseries.com/en/calendar/" },
       { name: "The Wolf", location: "Dronninglund, Dinamarca", start: "2026-09-05", end: "2026-09-05", kind: "UCI Gravel World Series", url: "https://ucigravelworldseries.com/en/calendar/" },
@@ -880,7 +918,8 @@ function writeCyclingNewsCache(discipline, type, value) {
 function buildCyclingNewsUrl(discipline) {
   const config = CYCLING_DISCIPLINES[discipline] || CYCLING_DISCIPLINES.road;
   const recency = discipline === "cyclocross" ? "when:60d" : "when:30d";
-  const query = [config.feedTerms, recency].filter(Boolean).join(" ");
+  const approvedSources = config.sources.map((source) => `site:${source.domain}`).join(" OR ");
+  const query = [`(${config.feedTerms})`, `(${approvedSources})`, recency].filter(Boolean).join(" ");
   const feedUrl = `https://news.google.com/rss/search?${new URLSearchParams({
     q: query,
     hl: "en-GB",
@@ -956,7 +995,9 @@ function normaliseCyclingNewsItems(items, requestedType = "all") {
   const seen = new Set();
   return (Array.isArray(items) ? items : [])
     .map((item) => {
-      const { title, source } = splitCyclingNewsTitle(item?.title);
+      const splitTitle = splitCyclingNewsTitle(item?.title);
+      const title = splitTitle.title;
+      const source = decodeNewsText(item?.source) || splitTitle.source;
       const publishedAt = parseCyclingNewsDate(item?.pubDate);
       const url = safeExternalUrl(item?.link);
       const hintedType = item?.type && item.type !== "all" && CYCLING_NEWS_TYPES[item.type] ? item.type : null;
@@ -1028,6 +1069,15 @@ function renderCyclingNews(items, fetchedAt, { stale = false } = {}) {
 
   const updateLabel = new Date(fetchedAt).toLocaleTimeString("pt-PT", { hour: "2-digit", minute: "2-digit" });
   setText("cyclingNewsSource", `${stale ? "Última atualização guardada" : "Atualizado"} às ${updateLabel} · títulos no idioma original`);
+}
+
+function renderCyclingSources() {
+  const config = CYCLING_DISCIPLINES[cyclingDiscipline];
+  setHTML("cyclingSourceLinks", config.sources.map((source) => `
+    <a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">
+      <span>${escapeHtml(source.name)}</span><svg><use href="#i-external"/></svg>
+    </a>
+  `).join(""));
 }
 
 function renderCyclingNewsLoading() {
@@ -1127,6 +1177,8 @@ function renderCyclingCalendar() {
   }).join(""));
   $("cyclingRankingsLink").href = config.rankingsUrl;
   $("cyclingOfficialCalendarLink").href = config.calendarUrl;
+  $("cyclingStatsLink").href = config.statsUrl;
+  setText("cyclingStatsLabel", config.statsLabel);
 }
 
 function setCyclingDiscipline(discipline) {
@@ -1135,6 +1187,7 @@ function setCyclingDiscipline(discipline) {
   $("viewCycling")?.setAttribute("data-discipline", discipline);
   $$('[data-cycling-discipline]').forEach((button) => button.classList.toggle("is-active", button.dataset.cyclingDiscipline === discipline));
   setText("cyclingFeedTitle", CYCLING_DISCIPLINES[discipline].label);
+  renderCyclingSources();
   renderCyclingCalendar();
   if (cyclingMode === "news" && !$("viewCycling")?.hidden) loadCyclingNews();
 }

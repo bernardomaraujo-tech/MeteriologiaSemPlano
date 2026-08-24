@@ -40,6 +40,8 @@ test("constrói um feed temático por disciplina", () => {
   assert.match(feedUrl, /news\.google\.com\/rss\/search/);
   assert.match(feedUrl, /mountain\+bike/);
   assert.match(feedUrl, /downhill/);
+  assert.match(feedUrl, /site:pinkbike\.com/);
+  assert.match(feedUrl, /site:vitalmtb\.com/);
   assert.match(feedUrl, /when:30d/);
   assert.match(feedUrl, /ceid=GB:en/);
 });
@@ -68,6 +70,13 @@ test("normaliza, ordena e remove notícias repetidas", () => {
   assert.equal(items[0].type, "teams");
 });
 
+test("preserva a publicação indicada pelos dados agregados", () => {
+  const [item] = helpers.normaliseCyclingNewsItems([
+    { title: "Uma notícia - Google News", source: "Escape Collective", pubDate: "2026-08-22 10:00:00", link: "https://example.com/a" }
+  ]);
+  assert.equal(item.source, "Escape Collective");
+});
+
 test("identifica eventos terminados, a decorrer e futuros", () => {
   const event = { start: "2026-08-22", end: "2026-09-13" };
   assert.equal(helpers.cyclingEventStatus(event, new Date("2026-08-20T12:00:00")), "next");
@@ -79,8 +88,14 @@ test("disponibiliza calendário e ligações oficiais nas quatro disciplinas", (
   assert.deepEqual(Object.keys(helpers.CYCLING_DISCIPLINES), ["road", "mtb", "cyclocross", "gravel"]);
   for (const discipline of Object.values(helpers.CYCLING_DISCIPLINES)) {
     assert.ok(discipline.events.length >= 4);
+    assert.ok(discipline.sources.length >= 5);
     assert.match(discipline.calendarUrl, /^https:\/\//);
     assert.match(discipline.rankingsUrl, /^https:\/\//);
+    assert.match(discipline.statsUrl, /^https:\/\//);
+    for (const source of discipline.sources) {
+      assert.match(source.domain, /^[a-z0-9.-]+$/);
+      assert.match(source.url, /^https:\/\//);
+    }
     for (const event of discipline.events) {
       assert.match(event.start, /^\d{4}-\d{2}-\d{2}$/);
       assert.match(event.url, /^https:\/\//);
