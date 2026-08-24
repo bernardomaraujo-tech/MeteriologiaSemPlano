@@ -352,7 +352,7 @@ h1, h2, p { margin-top: 0; }
 .forecast-heading p { margin: 0; color: var(--muted); font-size: .7rem; }
 .forecast-heading > span { padding: 6px 8px; border-radius: 99px; background: var(--green-soft); color: var(--green-dark); font-size: .61rem; font-weight: 750; }
 .table-scroll { max-height: min(62dvh, 620px); overflow: auto; overscroll-behavior: contain; scrollbar-width: thin; -webkit-overflow-scrolling: touch; }
-.forecast-table { --time-column-width: 76px; width: 100%; min-width: 700px; border-collapse: separate; border-spacing: 0; }
+.forecast-table { --time-column-width: 76px; width: 100%; min-width: 684px; border-collapse: separate; border-spacing: 0; }
 .forecast-table th, .forecast-table td { padding: 12px 10px; border-top: 1px solid var(--line); text-align: left; vertical-align: middle; white-space: nowrap; }
 .forecast-table th { position: sticky; z-index: 4; top: 0; background: #fbfcfb; color: var(--muted); font-size: .58rem; font-weight: 750; letter-spacing: .07em; text-transform: uppercase; }
 .forecast-table td { font-size: .78rem; }
@@ -373,9 +373,9 @@ h1, h2, p { margin-top: 0; }
   text-align: center;
 }
 .forecast-table .wind-column-heading, .forecast-table .wind-summary-cell {
-  width: 128px;
-  min-width: 128px;
-  max-width: 128px;
+  width: 112px;
+  min-width: 112px;
+  max-width: 112px;
 }
 .forecast-table thead th:first-child { z-index: 6; background: #fbfcfb; }
 .forecast-table tr.is-now > td { background: #f7fcf9; }
