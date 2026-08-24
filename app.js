@@ -12,6 +12,89 @@ const AUTO_LOCATION_ID = "device_location";
 const DEFAULT_LOCATION_ID = "alcabideche";
 const LOCATION_STORAGE_KEY = "semPlanoMeteoLocationV2";
 const DEVICE_LOCATION_STORAGE_KEY = "semPlanoMeteoDeviceLocationV1";
+const CYCLING_NEWS_CACHE_PREFIX = "semPlanoCyclingNewsV1";
+const CYCLING_NEWS_CACHE_MS = 30 * 60 * 1000;
+const CYCLING_NEWS_STALE_MS = 24 * 60 * 60 * 1000;
+const CYCLING_NEWS_DATA_URL = "https://raw.githubusercontent.com/bernardomaraujo-tech/MeteriologiaSemPlano/news-data/cycling-news.json";
+
+const CYCLING_NEWS_TYPES = {
+  all: { label: "Todas", terms: "" },
+  results: { label: "Provas e classificações", terms: "results OR standings OR classification OR winner OR stage" },
+  teams: { label: "Equipas e ciclistas", terms: "team OR rider OR cyclist OR injury OR interview" },
+  transfers: { label: "Transferências", terms: "transfer OR signs OR contract OR joins OR renewal" },
+  curiosities: { label: "Curiosidades", terms: "tech OR equipment OR history OR feature OR training" }
+};
+
+const CYCLING_DISCIPLINES = {
+  road: {
+    label: "Ciclismo de estrada",
+    shortLabel: "Estrada",
+    season: "2026",
+    feedTerms: 'WorldTour OR Vuelta OR Giro OR "Tour de France" OR "Volta a Portugal"',
+    fallbackUrl: "https://www.cyclingnews.com/pro-cycling/",
+    calendarUrl: "https://www.uci.org/calendar/road/2ruOnavHX0dMGTCRozdYAU",
+    rankingsUrl: "https://www.uci.org/discipline/road/6TBjsDD8902tud440iv1Cu?tab=rankings",
+    events: [
+      { name: "La Vuelta a España", location: "Mónaco · França · Andorra · Espanha", start: "2026-08-22", end: "2026-09-13", kind: "Grand Tour", url: "https://www.lavuelta.es/en/overall-route" },
+      { name: "GP Cycliste de Québec", location: "Québec, Canadá", start: "2026-09-11", end: "2026-09-11", kind: "UCI WorldTour", url: "https://gpcqm.ca/en/" },
+      { name: "GP Cycliste de Montréal", location: "Montréal, Canadá", start: "2026-09-13", end: "2026-09-13", kind: "UCI WorldTour", url: "https://gpcqm.ca/en/grand-prix-cycliste-montreal/" },
+      { name: "Campeonatos do Mundo UCI", location: "Montréal, Canadá", start: "2026-09-20", end: "2026-09-27", kind: "Mundial", url: "https://www.uci.org/competition-hub/2026-uci-road-world-championships/14QBdFX8GqbCHUPE234D0Q" },
+      { name: "Il Lombardia", location: "Lombardia, Itália", start: "2026-10-10", end: "2026-10-10", kind: "Monumento", url: "https://www.uci.org/competition-details/2026/ROA/76949" },
+      { name: "Tour of Guangxi", location: "Guangxi, China", start: "2026-10-13", end: "2026-10-18", kind: "UCI WorldTour", url: "https://www.uci.org/calendar/road/2ruOnavHX0dMGTCRozdYAU" }
+    ]
+  },
+  mtb: {
+    label: "Mountain Bike",
+    shortLabel: "MTB",
+    season: "2026",
+    feedTerms: '"mountain bike racing" OR "UCI mountain bike" OR XCO OR downhill OR enduro',
+    fallbackUrl: "https://www.pinkbike.com/news/",
+    calendarUrl: "https://www.ucimtbworldseries.com/calendar",
+    rankingsUrl: "https://www.uci.org/discipline/mountain-bike/4LArSj7CKcytMrGEDtKwkb?tab=rankings",
+    events: [
+      { name: "UCI MTB World Championships", location: "Val di Sole, Itália", start: "2026-08-26", end: "2026-08-30", kind: "XCO · XCC · DHI", url: "https://www.uci.org/competition-hub/2026-uci-mountain-bike-world-championships-xco-xcr-xcc-e-mtb-dhi/5aHMncZjNA8ofgCaDA3Gsj" },
+      { name: "World Series · Soldier Hollow", location: "Utah, Estados Unidos", start: "2026-09-19", end: "2026-09-20", kind: "XCO · XCC", url: "https://www.ucimtbworldseries.com/calendar" },
+      { name: "World Series · Whistler", location: "British Columbia, Canadá", start: "2026-09-25", end: "2026-09-27", kind: "DHI", url: "https://www.ucimtbworldseries.com/calendar" },
+      { name: "World Series · Lake Placid", location: "Nova Iorque, Estados Unidos", start: "2026-10-02", end: "2026-10-04", kind: "XCO · XCC · DHI", url: "https://www.ucimtbworldseries.com/events/lake-placid-2026" }
+    ]
+  },
+  cyclocross: {
+    label: "Ciclocross",
+    shortLabel: "Ciclocross",
+    season: "2026/27",
+    feedTerms: 'cyclocross OR "cyclo-cross"',
+    fallbackUrl: "https://www.uci.org/news/cyclo-cross/3aOLVmpqkjVcCGvqtRv5KJ",
+    calendarUrl: "https://www.ucicyclocrossworldcup.com/en/calendar",
+    rankingsUrl: "https://www.uci.org/discipline/cyclo-cross/27qDl3RfvZBNwx1GhqJTwj?tab=rankings",
+    events: [
+      { name: "Taça do Mundo #1 · Ostrava", location: "Ostrava, Chéquia", start: "2026-11-27", end: "2026-11-27", kind: "Taça do Mundo", url: "https://www.uci.org/competition-details/2027/CRO/79165" },
+      { name: "Taça do Mundo #2 · Tábor", location: "Tábor, Chéquia", start: "2026-11-29", end: "2026-11-29", kind: "Taça do Mundo", url: "https://www.ucicyclocrossworldcup.com/en/calendar" },
+      { name: "Taça do Mundo #3 · Glasgow", location: "Glasgow, Reino Unido", start: "2026-12-13", end: "2026-12-13", kind: "Taça do Mundo", url: "https://www.ucicyclocrossworldcup.com/en/calendar" },
+      { name: "Taça do Mundo · Antwerpen", location: "Antuérpia, Bélgica", start: "2026-12-19", end: "2026-12-19", kind: "Taça do Mundo", url: "https://www.ucicyclocrossworldcup.com/en/calendar" },
+      { name: "Taça do Mundo · Koksijde", location: "Koksijde, Bélgica", start: "2026-12-20", end: "2026-12-20", kind: "Taça do Mundo", url: "https://www.ucicyclocrossworldcup.com/en/calendar" },
+      { name: "Taça do Mundo · Namur", location: "Namur, Bélgica", start: "2026-12-27", end: "2026-12-27", kind: "Taça do Mundo", url: "https://www.ucicyclocrossworldcup.com/en/calendar" },
+      { name: "Campeonatos do Mundo UCI", location: "Ostende, Bélgica", start: "2027-01-29", end: "2027-01-31", kind: "Mundial", url: "https://www.uci.org/discipline/cyclo-cross/27qDl3RfvZBNwx1GhqJTwj" }
+    ]
+  },
+  gravel: {
+    label: "Gravel",
+    shortLabel: "Gravel",
+    season: "2026",
+    feedTerms: '"gravel racing" OR "UCI Gravel" OR "gravel cycling"',
+    fallbackUrl: "https://www.uci.org/news/gravel/2WbYbNOvkUCAmWf7Mf6VtR",
+    calendarUrl: "https://ucigravelworldseries.com/en/calendar/",
+    rankingsUrl: "https://www.uci.org/discipline/gravel/5secLRyYas3xItHITvmXRd?tab=results",
+    events: [
+      { name: "UEC Gravel European Championships", location: "Houffalize, Bélgica", start: "2026-08-30", end: "2026-08-30", kind: "Europeu", url: "https://ucigravelworldseries.com/en/calendar/" },
+      { name: "The Wolf", location: "Dronninglund, Dinamarca", start: "2026-09-05", end: "2026-09-05", kind: "UCI Gravel World Series", url: "https://ucigravelworldseries.com/en/calendar/" },
+      { name: "Falling Leaves", location: "Lahti, Finlândia", start: "2026-09-12", end: "2026-09-12", kind: "UCI Gravel World Series", url: "https://ucigravelworldseries.com/en/calendar/" },
+      { name: "Sea Otter Europe Girona", location: "Girona, Espanha", start: "2026-09-19", end: "2026-09-19", kind: "UCI Gravel World Series", url: "https://ucigravelworldseries.com/en/calendar/" },
+      { name: "Gravel Grit ’n Grind", location: "Halmstad, Suécia", start: "2026-09-26", end: "2026-09-26", kind: "UCI Gravel World Series", url: "https://ucigravelworldseries.com/en/calendar/" },
+      { name: "UCI Gravel World Championships", location: "Nannup, Austrália", start: "2026-10-10", end: "2026-10-11", kind: "Mundial", url: "https://www.uci.org/competition-hub/2026-uci-gravel-world-championships/4pPnJQCxeBxNQnUav5ckqn" },
+      { name: "Alentejo Gravel", location: "Ourique, Portugal", start: "2026-10-25", end: "2026-10-25", kind: "Qualificação 2027", url: "https://ucigravelworldseries.com/en/calendar/" }
+    ]
+  }
+};
 
 const LOCATIONS = [
   { id: "alcabideche", name: "Alcabideche", region: "Cascais", lat: 38.7330, lon: -9.4100 },
@@ -50,6 +133,11 @@ let toastTimer = null;
 let routeData = null;
 let routeAnalysis = null;
 let routeAnalysisRunId = 0;
+let cyclingDiscipline = "road";
+let cyclingMode = "news";
+let cyclingNewsType = "all";
+let cyclingNewsRunId = 0;
+const cyclingNewsMemory = new Map();
 
 function setText(idOrElement, value) {
   const element = typeof idOrElement === "string" ? $(idOrElement) : idOrElement;
@@ -762,7 +850,310 @@ function setAppView(view) {
     panel.classList.toggle("is-active", active);
   });
   $$('[data-app-view]').forEach((button) => button.classList.toggle("is-active", button.dataset.appView === view));
+  if (view === "cycling") {
+    renderCyclingCalendar();
+    if (cyclingMode === "news") loadCyclingNews();
+  }
   window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function cyclingCacheKey(discipline, type) {
+  return `${CYCLING_NEWS_CACHE_PREFIX}:${discipline}:${type}`;
+}
+
+function readCyclingNewsCache(discipline, type) {
+  try {
+    const cached = JSON.parse(localStorage.getItem(cyclingCacheKey(discipline, type)) || "null");
+    if (!cached || !Array.isArray(cached.items) || !Number.isFinite(Number(cached.fetchedAt))) return null;
+    return { items: cached.items, fetchedAt: Number(cached.fetchedAt), cachedAt: Number(cached.cachedAt || cached.fetchedAt) };
+  } catch (_) {
+    return null;
+  }
+}
+
+function writeCyclingNewsCache(discipline, type, value) {
+  try {
+    localStorage.setItem(cyclingCacheKey(discipline, type), JSON.stringify(value));
+  } catch (_) {}
+}
+
+function buildCyclingNewsUrl(discipline) {
+  const config = CYCLING_DISCIPLINES[discipline] || CYCLING_DISCIPLINES.road;
+  const recency = discipline === "cyclocross" ? "when:60d" : "when:30d";
+  const query = [config.feedTerms, recency].filter(Boolean).join(" ");
+  const feedUrl = `https://news.google.com/rss/search?${new URLSearchParams({
+    q: query,
+    hl: "en-GB",
+    gl: "GB",
+    ceid: "GB:en"
+  }).toString()}`;
+  return `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feedUrl)}`;
+}
+
+async function fetchCyclingNewsItems(discipline) {
+  try {
+    const refreshWindow = Math.floor(Date.now() / CYCLING_NEWS_CACHE_MS);
+    const response = await fetchWithTimeout(`${CYCLING_NEWS_DATA_URL}?v=${refreshWindow}`);
+    const payload = await response.json();
+    const items = payload?.disciplines?.[discipline];
+    if (!response.ok || !Array.isArray(items) || !items.length) throw new Error("Dados agregados indisponíveis");
+    return { items, updatedAt: Date.parse(payload.updatedAt) || Date.now() };
+  } catch (_) {
+    const response = await fetchWithTimeout(buildCyclingNewsUrl(discipline));
+    const payload = await response.json();
+    if (!response.ok || payload?.status !== "ok") throw new Error(payload?.message || "Resposta de notícias inválida");
+    return { items: payload.items, updatedAt: Date.now() };
+  }
+}
+
+function decodeNewsText(value) {
+  return String(value || "")
+    .replace(/&#(\d+);/g, (_, code) => String.fromCodePoint(Number(code)))
+    .replaceAll("&amp;", "&")
+    .replaceAll("&quot;", '"')
+    .replaceAll("&#39;", "'")
+    .replaceAll("&nbsp;", " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function splitCyclingNewsTitle(value) {
+  const fullTitle = decodeNewsText(value);
+  const separatorIndex = fullTitle.lastIndexOf(" - ");
+  if (separatorIndex < 1) return { title: fullTitle, source: "Fonte externa" };
+  return {
+    title: fullTitle.slice(0, separatorIndex).trim(),
+    source: fullTitle.slice(separatorIndex + 3).trim() || "Fonte externa"
+  };
+}
+
+function inferCyclingNewsType(title) {
+  const text = String(title || "").toLocaleLowerCase("en");
+  if (/transfer|rumou?r|\bsigns?\b|\bsigned\b|contract|\bjoins?\b|renewal|\bextends?\b|\bmoves?\b|\bdeal\b|assina|contrato|renova/.test(text)) return "transfers";
+  if (/result|standings?|classification|general classification|gc\b|wins?|winner|victory|stage|podium|champion|finale|race report|classificação|vitória|etapa/.test(text)) return "results";
+  if (/team|rider|cyclist|injury|return|roster|interview|training|equipa|ciclista|lesão/.test(text)) return "teams";
+  return "curiosities";
+}
+
+function safeExternalUrl(value) {
+  try {
+    const url = new URL(value);
+    return ["http:", "https:"].includes(url.protocol) ? url.href : "#";
+  } catch (_) {
+    return "#";
+  }
+}
+
+function parseCyclingNewsDate(value) {
+  const raw = String(value || "").trim();
+  const date = /^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/.test(raw)
+    ? new Date(raw.replace(" ", "T") + "Z")
+    : new Date(raw);
+  return Number.isNaN(date.getTime()) ? new Date(0) : date;
+}
+
+function normaliseCyclingNewsItems(items, requestedType = "all") {
+  const seen = new Set();
+  return (Array.isArray(items) ? items : [])
+    .map((item) => {
+      const { title, source } = splitCyclingNewsTitle(item?.title);
+      const publishedAt = parseCyclingNewsDate(item?.pubDate);
+      const url = safeExternalUrl(item?.link);
+      const hintedType = item?.type && item.type !== "all" && CYCLING_NEWS_TYPES[item.type] ? item.type : null;
+      const type = requestedType === "all" ? (hintedType || inferCyclingNewsType(title)) : requestedType;
+      return { title, source, url, type, publishedAt: publishedAt.toISOString() };
+    })
+    .filter((item) => item.title && item.url !== "#")
+    .filter((item) => {
+      const key = item.title.toLocaleLowerCase("pt-PT").replace(/[^a-z0-9à-ÿ]+/g, " ").trim();
+      if (!key || seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    })
+    .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))
+    .slice(0, 40);
+}
+
+function cyclingNewsDateLabel(value) {
+  const date = new Date(value);
+  const elapsedMinutes = Math.max(0, Math.floor((Date.now() - date.getTime()) / 60000));
+  if (Number.isNaN(elapsedMinutes)) return "Data não indicada";
+  if (elapsedMinutes < 60) return elapsedMinutes < 2 ? "Agora" : `Há ${elapsedMinutes} min`;
+  if (elapsedMinutes < 24 * 60) return `Há ${Math.floor(elapsedMinutes / 60)} h`;
+  return date.toLocaleDateString("pt-PT", { day: "numeric", month: "short" }).replace(".", "");
+}
+
+function cyclingNewsTypeLabel(type) {
+  return CYCLING_NEWS_TYPES[type]?.label || "Atualidade";
+}
+
+function renderCyclingNews(items, fetchedAt, { stale = false } = {}) {
+  const config = CYCLING_DISCIPLINES[cyclingDiscipline];
+  const matchingItems = cyclingNewsType === "all" ? items : items.filter((item) => item.type === cyclingNewsType);
+  const visibleItems = matchingItems.slice(0, 12);
+  const feature = $("cyclingFeature");
+  setText("cyclingFeedTitle", config.label);
+  setText("cyclingNewsCount", String(visibleItems.length));
+
+  if (!visibleItems.length) {
+    if (feature) feature.hidden = true;
+    setHTML("cyclingNewsList", `
+      <div class="cycling-empty">
+        <p>Não foram encontradas notícias recentes para este filtro.</p>
+        <a href="${escapeHtml(config.fallbackUrl)}" target="_blank" rel="noopener noreferrer">Abrir fonte especializada</a>
+      </div>
+    `);
+  } else {
+    const [highlight, ...remaining] = visibleItems;
+    if (feature) {
+      feature.hidden = false;
+      feature.innerHTML = `
+        <div class="feature-meta"><span class="news-topic">${escapeHtml(cyclingNewsTypeLabel(highlight.type))}</span><time datetime="${escapeHtml(highlight.publishedAt)}">${escapeHtml(cyclingNewsDateLabel(highlight.publishedAt))} · ${escapeHtml(highlight.source)}</time></div>
+        <h2>${escapeHtml(highlight.title)}</h2>
+        <a href="${escapeHtml(highlight.url)}" target="_blank" rel="noopener noreferrer">Ler notícia <svg><use href="#i-external"/></svg></a>
+      `;
+    }
+    setHTML("cyclingNewsList", remaining.length ? remaining.map((item) => `
+      <a class="cycling-news-item" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">
+        <span class="news-marker" aria-hidden="true"></span>
+        <div class="cycling-news-copy">
+          <span class="news-topic">${escapeHtml(cyclingNewsTypeLabel(item.type))}</span>
+          <h3>${escapeHtml(item.title)}</h3>
+          <small>${escapeHtml(item.source)} · ${escapeHtml(cyclingNewsDateLabel(item.publishedAt))}</small>
+        </div>
+        <svg><use href="#i-external"/></svg>
+      </a>
+    `).join("") : `<div class="cycling-empty"><p>Esta é a única notícia recente encontrada para o filtro selecionado.</p></div>`);
+  }
+
+  const updateLabel = new Date(fetchedAt).toLocaleTimeString("pt-PT", { hour: "2-digit", minute: "2-digit" });
+  setText("cyclingNewsSource", `${stale ? "Última atualização guardada" : "Atualizado"} às ${updateLabel} · títulos no idioma original`);
+}
+
+function renderCyclingNewsLoading() {
+  $("cyclingFeature").hidden = true;
+  setText("cyclingNewsCount", "—");
+  setHTML("cyclingNewsList", `<div class="cycling-loading"><span></span><p>A reunir as principais notícias de ${escapeHtml(CYCLING_DISCIPLINES[cyclingDiscipline].label.toLocaleLowerCase("pt-PT"))}…</p></div>`);
+}
+
+function renderCyclingNewsError() {
+  const config = CYCLING_DISCIPLINES[cyclingDiscipline];
+  $("cyclingFeature").hidden = true;
+  setText("cyclingNewsCount", "0");
+  setHTML("cyclingNewsList", `
+    <div class="cycling-empty">
+      <p>Não foi possível atualizar as notícias neste momento. Tenta novamente ou abre a fonte especializada.</p>
+      <a href="${escapeHtml(config.fallbackUrl)}" target="_blank" rel="noopener noreferrer">Abrir ${escapeHtml(config.shortLabel)}</a>
+    </div>
+  `);
+  setText("cyclingNewsSource", "Serviço de notícias temporariamente indisponível");
+}
+
+async function loadCyclingNews({ force = false } = {}) {
+  const discipline = cyclingDiscipline;
+  const type = "all";
+  const memoryKey = cyclingCacheKey(discipline, type);
+  const cached = cyclingNewsMemory.get(memoryKey) || readCyclingNewsCache(discipline, type);
+  const cacheAge = cached ? Date.now() - cached.cachedAt : Infinity;
+  if (cached) cyclingNewsMemory.set(memoryKey, cached);
+
+  if (!force && cached && cacheAge < CYCLING_NEWS_CACHE_MS) {
+    renderCyclingNews(cached.items, cached.fetchedAt);
+    return;
+  }
+
+  const runId = ++cyclingNewsRunId;
+  if (cached && cacheAge < CYCLING_NEWS_STALE_MS) renderCyclingNews(cached.items, cached.fetchedAt, { stale: true });
+  else renderCyclingNewsLoading();
+  $("refreshCyclingNews")?.classList.add("is-spinning");
+
+  try {
+    const payload = await fetchCyclingNewsItems(discipline);
+    const value = { items: normaliseCyclingNewsItems(payload.items, "all"), fetchedAt: payload.updatedAt, cachedAt: Date.now() };
+    cyclingNewsMemory.set(memoryKey, value);
+    writeCyclingNewsCache(discipline, type, value);
+    if (runId === cyclingNewsRunId && discipline === cyclingDiscipline) renderCyclingNews(value.items, value.fetchedAt);
+  } catch (_) {
+    if (runId !== cyclingNewsRunId || discipline !== cyclingDiscipline) return;
+    if (cached && cacheAge < CYCLING_NEWS_STALE_MS) renderCyclingNews(cached.items, cached.fetchedAt, { stale: true });
+    else renderCyclingNewsError();
+  } finally {
+    if (runId === cyclingNewsRunId) $("refreshCyclingNews")?.classList.remove("is-spinning");
+  }
+}
+
+function cyclingEventStatus(event, now = new Date()) {
+  const start = new Date(`${event.start}T00:00:00`);
+  const end = new Date(`${event.end || event.start}T23:59:59`);
+  if (now < start) return "next";
+  if (now > end) return "past";
+  return "live";
+}
+
+function cyclingEventDateMarkup(event) {
+  const start = new Date(`${event.start}T12:00:00`);
+  const end = new Date(`${event.end || event.start}T12:00:00`);
+  const month = (date) => date.toLocaleDateString("pt-PT", { month: "short" }).replace(".", "").toUpperCase();
+  if (event.start === (event.end || event.start)) return `<strong>${start.getDate()}</strong><small>${month(start)}</small>`;
+  if (start.getMonth() === end.getMonth()) return `<strong>${start.getDate()}–${end.getDate()}</strong><small>${month(start)}</small>`;
+  return `<strong>${start.getDate()}/${start.getMonth() + 1}</strong><small>ATÉ ${end.getDate()}/${end.getMonth() + 1}</small>`;
+}
+
+function renderCyclingCalendar() {
+  const config = CYCLING_DISCIPLINES[cyclingDiscipline];
+  if (!config) return;
+  const statusOrder = { live: 0, next: 1, past: 2 };
+  const events = [...config.events].sort((a, b) => {
+    const aStatus = cyclingEventStatus(a);
+    const bStatus = cyclingEventStatus(b);
+    if (aStatus !== bStatus) return statusOrder[aStatus] - statusOrder[bStatus];
+    return aStatus === "past" ? new Date(b.start) - new Date(a.start) : new Date(a.start) - new Date(b.start);
+  });
+  const nextEvent = events.find((event) => cyclingEventStatus(event) === "next");
+  const labels = { live: "A decorrer", next: "Agendado", past: "Terminado" };
+
+  setText("cyclingCalendarTitle", `Calendário de ${config.shortLabel.toLocaleLowerCase("pt-PT")}`);
+  setText("cyclingCalendarSeason", config.season);
+  setHTML("cyclingCalendarList", events.map((event) => {
+    const status = cyclingEventStatus(event);
+    const label = status === "next" && event === nextEvent ? "Próximo" : labels[status];
+    return `
+      <a class="calendar-event" href="${escapeHtml(event.url)}" target="_blank" rel="noopener noreferrer">
+        <span class="calendar-date">${cyclingEventDateMarkup(event)}</span>
+        <div class="calendar-event-copy"><h3>${escapeHtml(event.name)}</h3><p>${escapeHtml(event.kind)} · ${escapeHtml(event.location)}</p></div>
+        <span class="event-status is-${status}">${label}</span>
+      </a>
+    `;
+  }).join(""));
+  $("cyclingRankingsLink").href = config.rankingsUrl;
+  $("cyclingOfficialCalendarLink").href = config.calendarUrl;
+}
+
+function setCyclingDiscipline(discipline) {
+  if (!CYCLING_DISCIPLINES[discipline]) return;
+  cyclingDiscipline = discipline;
+  $("viewCycling")?.setAttribute("data-discipline", discipline);
+  $$('[data-cycling-discipline]').forEach((button) => button.classList.toggle("is-active", button.dataset.cyclingDiscipline === discipline));
+  setText("cyclingFeedTitle", CYCLING_DISCIPLINES[discipline].label);
+  renderCyclingCalendar();
+  if (cyclingMode === "news" && !$("viewCycling")?.hidden) loadCyclingNews();
+}
+
+function setCyclingMode(mode) {
+  cyclingMode = mode === "calendar" ? "calendar" : "news";
+  $$('[data-cycling-mode]').forEach((button) => button.classList.toggle("is-active", button.dataset.cyclingMode === cyclingMode));
+  $("cyclingNewsPanel").hidden = cyclingMode !== "news";
+  $("cyclingCalendarPanel").hidden = cyclingMode !== "calendar";
+  $("refreshCyclingNews").hidden = cyclingMode !== "news";
+  if (cyclingMode === "news" && !$("viewCycling")?.hidden) loadCyclingNews();
+  else renderCyclingCalendar();
+}
+
+function setCyclingNewsType(type) {
+  if (!CYCLING_NEWS_TYPES[type]) return;
+  cyclingNewsType = type;
+  $$('[data-news-type]').forEach((button) => button.classList.toggle("is-active", button.dataset.newsType === type));
+  loadCyclingNews();
 }
 
 function setForecastMode(mode) {
@@ -1693,6 +2084,9 @@ function init() {
   $$('[data-app-view]').forEach((button) => button.addEventListener("click", () => setAppView(button.dataset.appView)));
   $$('[data-forecast-context]').forEach((button) => button.addEventListener("click", () => setForecastContext(button.dataset.forecastContext)));
   $$('[data-forecast-mode]').forEach((button) => button.addEventListener("click", () => setForecastMode(button.dataset.forecastMode)));
+  $$('[data-cycling-discipline]').forEach((button) => button.addEventListener("click", () => setCyclingDiscipline(button.dataset.cyclingDiscipline)));
+  $$('[data-cycling-mode]').forEach((button) => button.addEventListener("click", () => setCyclingMode(button.dataset.cyclingMode)));
+  $$('[data-news-type]').forEach((button) => button.addEventListener("click", () => setCyclingNewsType(button.dataset.newsType)));
   $$('[data-open-location]').forEach((button) => button.addEventListener("click", openLocationModal));
   $("closeLocation")?.addEventListener("click", closeLocationModal);
   $("locationModal")?.addEventListener("click", (event) => { if (event.target === $("locationModal")) closeLocationModal(); });
@@ -1702,6 +2096,7 @@ function init() {
     searchTimer = setTimeout(() => searchLocations(query), 280);
   });
   $("refreshCurrent")?.addEventListener("click", refreshWeather);
+  $("refreshCyclingNews")?.addEventListener("click", () => loadCyclingNews({ force: true }));
   $("routeGpxInput")?.addEventListener("change", handleRouteFile);
   $("routeUploadLabel")?.addEventListener("keydown", (event) => {
     if (event.key !== "Enter" && event.key !== " ") return;
@@ -1717,6 +2112,8 @@ function init() {
   setAppView("current");
   setForecastContext("local");
   setForecastMode("48h");
+  setCyclingDiscipline("road");
+  setCyclingMode("news");
   refreshWeather();
   setInterval(refreshWeather, REFRESH_MS);
 

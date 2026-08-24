@@ -1,0 +1,53 @@
+name: Atualizar notícias de ciclismo
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cycling-news-data
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obter o repositório
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Recolher notícias
+        run: node scripts/update-cycling-news.mjs /tmp/cycling-news.json
+
+      - name: Publicar dados sem novo deploy da app
+        shell: bash
+        run: |
+          if git ls-remote --exit-code --heads origin news-data >/dev/null 2>&1; then
+            git fetch origin news-data:news-data
+            git switch news-data
+          else
+            git switch --orphan news-data
+            git rm -rf .
+          fi
+
+          cp /tmp/cycling-news.json cycling-news.json
+          git add cycling-news.json
+
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Atualizar notícias de ciclismo"
+          git push origin news-data

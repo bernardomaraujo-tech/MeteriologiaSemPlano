@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#f6f7f5">
   <meta name="description" content="Meteorologia técnica para ciclismo e calculadora de pressão de pneus.">
   <title>SEM PLANO — Meteo</title>
-  <link rel="stylesheet" href="./styles.css?v=20260824_05">
+  <link rel="stylesheet" href="./styles.css?v=20260824_06">
   <link rel="manifest" href="./manifest.json">
   <link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -36,6 +36,9 @@
       <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M7 7l1 14h8l1-14M10 11v6M14 11v6"/></symbol>
       <symbol id="i-history" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/></symbol>
       <symbol id="i-bike" viewBox="0 0 24 24"><circle cx="6" cy="17" r="4"/><circle cx="18" cy="17" r="4"/><path d="m6 17 4-8h4l4 8M9 12h7M8 7h3"/></symbol>
+      <symbol id="i-news" viewBox="0 0 24 24"><path d="M5 4h14v16H5Z"/><path d="M8 8h8M8 12h8M8 16h5"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18M7 14h.01M12 14h.01M17 14h.01M7 18h.01M12 18h.01"/></symbol>
+      <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9"/><path d="M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"/></symbol>
       <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/><path d="M8 18h3a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h7"/></symbol>
       <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M5 14v5h14v-5"/></symbol>
       <symbol id="i-weather-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M18.7 5.3l-1.4 1.4M6.7 17.3l-1.4 1.4"/></symbol>
@@ -348,12 +351,78 @@
           </section>
         </div>
       </section>
+
+      <section class="app-view cycling-view" id="viewCycling" data-view-panel="cycling" aria-labelledby="cyclingTitle" hidden>
+        <header class="page-header">
+          <div><p class="brand">SEM PLANO</p><h1 id="cyclingTitle">Ciclismo</h1></div>
+          <button class="icon-button" id="refreshCyclingNews" type="button" aria-label="Atualizar notícias">
+            <svg><use href="#i-refresh"/></svg>
+          </button>
+        </header>
+
+        <div class="discipline-tabs" role="tablist" aria-label="Disciplina de ciclismo">
+          <button class="is-active" type="button" data-cycling-discipline="road">Estrada</button>
+          <button type="button" data-cycling-discipline="mtb">MTB</button>
+          <button type="button" data-cycling-discipline="cyclocross">Ciclocross</button>
+          <button type="button" data-cycling-discipline="gravel">Gravel</button>
+        </div>
+
+        <div class="segmented-control cycling-mode" role="tablist" aria-label="Conteúdo de ciclismo">
+          <button class="is-active" type="button" data-cycling-mode="news"><svg><use href="#i-news"/></svg> Notícias</button>
+          <button type="button" data-cycling-mode="calendar"><svg><use href="#i-calendar"/></svg> Calendário</button>
+        </div>
+
+        <div id="cyclingNewsPanel">
+          <div class="news-type-scroll" aria-label="Filtrar notícias por tema">
+            <button class="is-active" type="button" data-news-type="all">Todas</button>
+            <button type="button" data-news-type="results">Provas e classificações</button>
+            <button type="button" data-news-type="teams">Equipas e ciclistas</button>
+            <button type="button" data-news-type="transfers">Transferências</button>
+            <button type="button" data-news-type="curiosities">Curiosidades</button>
+          </div>
+
+          <section class="card cycling-feature" id="cyclingFeature" hidden></section>
+
+          <section class="card cycling-feed-card">
+            <div class="cycling-section-heading">
+              <div><p>ÚLTIMAS NOTÍCIAS</p><h2 id="cyclingFeedTitle">Ciclismo de estrada</h2></div>
+              <span id="cyclingNewsCount">—</span>
+            </div>
+            <div class="cycling-news-list" id="cyclingNewsList" aria-live="polite">
+              <div class="cycling-loading"><span></span><p>As notícias são carregadas quando abrires este separador.</p></div>
+            </div>
+          </section>
+
+          <p class="source-line" id="cyclingNewsSource">Fontes selecionadas · títulos no idioma original</p>
+        </div>
+
+        <div id="cyclingCalendarPanel" hidden>
+          <section class="card calendar-card">
+            <div class="cycling-section-heading calendar-heading">
+              <div><p>PRINCIPAIS EVENTOS</p><h2 id="cyclingCalendarTitle">Calendário de estrada</h2></div>
+              <span id="cyclingCalendarSeason">2026</span>
+            </div>
+            <div class="calendar-list" id="cyclingCalendarList"></div>
+          </section>
+
+          <section class="card official-links-card">
+            <div><p>CLASSIFICAÇÕES E RESULTADOS</p><h2>Consulta oficial</h2></div>
+            <div class="official-links">
+              <a id="cyclingRankingsLink" href="https://www.uci.org/" target="_blank" rel="noopener noreferrer"><span>Ranking / classificações</span><svg><use href="#i-external"/></svg></a>
+              <a id="cyclingOfficialCalendarLink" href="https://www.uci.org/calendar/all/2jnxYAuvjgttyHi6YQ94EJ" target="_blank" rel="noopener noreferrer"><span>Calendário completo</span><svg><use href="#i-external"/></svg></a>
+            </div>
+          </section>
+
+          <p class="source-line">Seleção dos principais eventos · datas e resultados ligados às fontes oficiais</p>
+        </div>
+      </section>
     </main>
   </div>
 
   <nav class="bottom-nav" aria-label="Navegação principal">
     <button class="is-active" type="button" data-app-view="current"><svg><use href="#i-current"/></svg><span>Atual</span></button>
     <button type="button" data-app-view="forecast"><svg><use href="#i-forecast"/></svg><span>Previsão</span></button>
+    <button type="button" data-app-view="cycling"><svg><use href="#i-news"/></svg><span>Ciclismo</span></button>
     <button type="button" data-app-view="pressure"><svg><use href="#i-gauge"/></svg><span>Pressão Pneus</span></button>
   </nav>
 
@@ -369,6 +438,6 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="./app.js?v=20260824_05"></script>
+  <script src="./app.js?v=20260824_06"></script>
 </body>
 </html>
