@@ -568,6 +568,185 @@ h1, h2, p { margin-top: 0; }
 .saved-actions span { color: var(--green-dark); font-size: .59rem; font-weight: 700; }
 .tiny-button { width: 32px; height: 32px; display: grid; place-items: center; border: 0; border-radius: 10px; background: #fff; color: var(--muted); }
 .tiny-button svg { width: 15px; }
+
+/* Ciclismo */
+.cycling-view {
+  --discipline: #14905a;
+  --discipline-dark: #0a6941;
+  --discipline-soft: #eaf7f0;
+}
+.cycling-view[data-discipline="mtb"] { --discipline: #c66a2c; --discipline-dark: #8d4318; --discipline-soft: #fff1e7; }
+.cycling-view[data-discipline="cyclocross"] { --discipline: #7254ae; --discipline-dark: #523b84; --discipline-soft: #f1edfa; }
+.cycling-view[data-discipline="gravel"] { --discipline: #9b7743; --discipline-dark: #73552d; --discipline-soft: #f5efe5; }
+
+.discipline-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+  margin: 3px 0 10px;
+  padding: 5px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.discipline-tabs button {
+  min-width: 0;
+  min-height: 42px;
+  padding: 7px 5px;
+  border: 0;
+  border-radius: 13px;
+  background: transparent;
+  color: var(--muted);
+  font-size: .65rem;
+  font-weight: 730;
+  white-space: nowrap;
+}
+.discipline-tabs button.is-active { background: var(--discipline-soft); color: var(--discipline-dark); }
+
+.cycling-mode { grid-template-columns: 1fr 1fr; margin: 0 0 13px; }
+.cycling-mode button { display: flex; align-items: center; justify-content: center; gap: 7px; }
+.cycling-mode button svg { width: 15px; height: 15px; }
+.cycling-mode button.is-active { color: var(--discipline-dark); }
+
+.news-type-scroll {
+  display: flex;
+  gap: 7px;
+  margin: 0 -18px 13px;
+  padding: 1px 18px 3px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.news-type-scroll::-webkit-scrollbar { display: none; }
+.news-type-scroll button {
+  flex: 0 0 auto;
+  min-height: 35px;
+  padding: 7px 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: .64rem;
+  font-weight: 690;
+  white-space: nowrap;
+}
+.news-type-scroll button.is-active { border-color: transparent; background: var(--discipline-soft); color: var(--discipline-dark); }
+
+.cycling-feature {
+  position: relative;
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  padding: 22px;
+  border-color: transparent;
+  background:
+    radial-gradient(circle at 82% 16%, color-mix(in srgb, var(--discipline) 52%, transparent), transparent 35%),
+    linear-gradient(145deg, #1d2822, #101612 74%);
+  color: #fff;
+}
+.cycling-feature::after {
+  content: "";
+  position: absolute;
+  right: -46px;
+  top: -58px;
+  width: 175px;
+  height: 175px;
+  border: 24px solid rgba(255, 255, 255, .055);
+  border-radius: 50%;
+}
+.cycling-feature > * { position: relative; z-index: 1; }
+.cycling-feature .feature-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+.news-topic {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: var(--discipline-soft);
+  color: var(--discipline-dark);
+  font-size: .56rem;
+  font-weight: 800;
+  letter-spacing: .055em;
+  text-transform: uppercase;
+}
+.cycling-feature .news-topic { background: rgba(255, 255, 255, .14); color: #fff; backdrop-filter: blur(8px); }
+.cycling-feature time { color: rgba(255, 255, 255, .68); font-size: .64rem; }
+.cycling-feature h2 { max-width: 29ch; margin: 0 0 14px; font-size: clamp(1.22rem, 5vw, 1.55rem); line-height: 1.15; letter-spacing: -.025em; }
+.cycling-feature a { display: inline-flex; align-items: center; gap: 7px; width: fit-content; color: #fff; font-size: .69rem; font-weight: 700; text-decoration: none; }
+.cycling-feature a svg { width: 15px; height: 15px; }
+
+.cycling-feed-card, .calendar-card { padding: 0; overflow: hidden; }
+.cycling-section-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 17px 18px 14px; }
+.cycling-section-heading p, .official-links-card > div:first-child p { margin: 0 0 4px; color: var(--discipline-dark); font-size: .58rem; font-weight: 800; letter-spacing: .09em; }
+.cycling-section-heading h2, .official-links-card h2 { margin: 0; font-size: 1rem; font-weight: 650; }
+.cycling-section-heading > span { min-width: 32px; padding: 5px 8px; border-radius: 99px; background: var(--discipline-soft); color: var(--discipline-dark); font-size: .6rem; font-weight: 780; text-align: center; }
+
+.cycling-news-list { border-top: 1px solid var(--line); }
+.cycling-news-item {
+  display: grid;
+  grid-template-columns: 11px minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  padding: 15px 17px;
+  border-bottom: 1px solid var(--line);
+  color: inherit;
+  text-decoration: none;
+}
+.cycling-news-item:last-child { border-bottom: 0; }
+.cycling-news-item .news-marker { width: 8px; height: 8px; border-radius: 50%; background: var(--discipline); box-shadow: 0 0 0 4px var(--discipline-soft); }
+.cycling-news-copy { min-width: 0; }
+.cycling-news-copy h3 { margin: 6px 0 5px; font-size: .86rem; line-height: 1.28; letter-spacing: -.012em; }
+.cycling-news-copy small { display: block; overflow: hidden; color: var(--muted); font-size: .61rem; white-space: nowrap; text-overflow: ellipsis; }
+.cycling-news-item > svg { width: 16px; height: 16px; color: var(--muted-2); }
+.cycling-news-item:hover { background: color-mix(in srgb, var(--discipline-soft) 46%, white); }
+
+.cycling-loading, .cycling-empty {
+  min-height: 160px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 11px;
+  padding: 28px;
+  color: var(--muted);
+  text-align: center;
+}
+.cycling-loading span { width: 25px; height: 25px; border: 3px solid var(--line-strong); border-top-color: var(--discipline); border-radius: 50%; animation: spin .8s linear infinite; }
+.cycling-loading p, .cycling-empty p { max-width: 34ch; margin: 0; font-size: .72rem; line-height: 1.45; }
+.cycling-empty a { color: var(--discipline-dark); font-size: .7rem; font-weight: 700; }
+
+.calendar-heading { border-bottom: 1px solid var(--line); }
+.calendar-list { display: grid; }
+.calendar-event {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  min-height: 78px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line);
+  color: inherit;
+  text-decoration: none;
+}
+.calendar-event:last-child { border-bottom: 0; }
+.calendar-date { display: grid; place-items: center; align-content: center; min-height: 53px; padding: 6px 4px; border-radius: 15px; background: var(--discipline-soft); color: var(--discipline-dark); text-align: center; }
+.calendar-date strong { display: block; font-size: .85rem; line-height: 1.05; }
+.calendar-date small { display: block; margin-top: 3px; font-size: .51rem; font-weight: 750; text-transform: uppercase; }
+.calendar-event-copy { min-width: 0; }
+.calendar-event-copy h3 { margin: 0 0 5px; font-size: .84rem; line-height: 1.2; }
+.calendar-event-copy p { margin: 0; overflow: hidden; color: var(--muted); font-size: .61rem; white-space: nowrap; text-overflow: ellipsis; }
+.event-status { display: inline-flex; align-items: center; gap: 5px; padding: 5px 7px; border-radius: 99px; background: var(--surface-soft); color: var(--muted); font-size: .52rem; font-weight: 760; white-space: nowrap; }
+.event-status::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; opacity: .72; }
+.event-status.is-live { background: #fff0ee; color: #b63e32; }
+.event-status.is-next { background: var(--discipline-soft); color: var(--discipline-dark); }
+.event-status.is-past { opacity: .72; }
+
+.official-links-card { padding: 18px; }
+.official-links { display: grid; gap: 8px; margin-top: 15px; }
+.official-links a { min-height: 48px; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 0 13px; border: 1px solid var(--line); border-radius: 14px; color: var(--ink); font-size: .73rem; font-weight: 650; text-decoration: none; }
+.official-links a svg { width: 16px; height: 16px; color: var(--discipline); }
 .history-item { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12px; padding: 13px; border-bottom: 1px solid var(--line); }
 .history-result { text-align: right; }
 .history-result strong { display: block; color: var(--green-dark); font-size: .9rem; }
@@ -583,7 +762,7 @@ h1, h2, p { margin-top: 0; }
   width: min(644px, calc(100% - 26px));
   min-height: 72px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 4px;
   padding: 5px;
   border: 1px solid rgba(223, 228, 223, .9);
@@ -596,7 +775,7 @@ h1, h2, p { margin-top: 0; }
 }
 .bottom-nav button { min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; border: 0; border-radius: 17px; background: transparent; color: #6f7771; }
 .bottom-nav button svg { width: 22px; height: 22px; }
-.bottom-nav button span { font-size: .61rem; font-weight: 650; white-space: nowrap; }
+.bottom-nav button span { font-size: .59rem; font-weight: 650; white-space: nowrap; }
 .bottom-nav button.is-active { background: var(--green-soft); color: var(--green-dark); }
 
 .modal-backdrop { position: fixed; z-index: 50; inset: 0; display: flex; align-items: flex-end; justify-content: center; padding: 16px; background: rgba(15, 20, 17, .33); backdrop-filter: blur(5px); }
@@ -662,6 +841,12 @@ h1, h2, p { margin-top: 0; }
   .pressure-row select, .small-segmented { grid-column: 2; min-width: 132px; }
   .stepper { width: 112px; }
   .result-actions { grid-template-columns: 1fr; }
+  .discipline-tabs { gap: 3px; padding: 4px; }
+  .discipline-tabs button { font-size: .59rem; }
+  .cycling-feature { min-height: 176px; padding: 19px; }
+  .calendar-event { grid-template-columns: 53px minmax(0, 1fr); gap: 10px; }
+  .calendar-event .event-status { grid-column: 2; justify-self: start; margin-top: -3px; }
+  .bottom-nav button span { font-size: .54rem; }
 }
 
 @media (min-width: 900px) {
