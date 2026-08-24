@@ -4,7 +4,7 @@ PWA mobile-first para avaliar condições de ciclismo e calcular pressão de pne
 
 ## Estrutura
 
-- **Atual** — vento, rajadas e direção visual em destaque; precipitação, temperatura, humidade, UV, roupa técnica sugerida e qualidade da condição.
+- **Atual** — vento, rajadas e direção visual em destaque; precipitação, temperatura, humidade, UV, evolução das próximas 6 horas, roupa técnica sugerida e qualidade da condição.
 - **Previsão** — evolução hora a hora das próximas 48 horas, resumo de 7 dias e análise de rotas GPX com meteorologia prevista ao longo do percurso.
 - **Pressão Pneus** — calculadora completa, acesso rápido aos 3 setups mais recentes, gestão de setups guardados e histórico local de resultados.
 

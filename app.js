@@ -575,6 +575,33 @@ function currentValues(data, index) {
   };
 }
 
+function renderCurrentForecast6h(data) {
+  const times = data.hourly?.time || [];
+  if (!times.length) return;
+  const nearest = nearestHourIndex(times);
+  const nearestTime = new Date(times[nearest]).getTime();
+  const start = Math.min(nearest + (nearestTime <= Date.now() ? 1 : 0), times.length - 1);
+  const cards = [];
+
+  for (let index = start; index < Math.min(start + 6, times.length); index += 1) {
+    const values = currentValues(data, index);
+    const direction = windDirection(values.direction);
+    const weather = weatherIconDetails(values.weatherCode, values.isDay);
+    const time = formatHour(times[index]);
+    const timeLabel = time.replace(":00", "h");
+    cards.push(`
+      <article class="current-hour-card" aria-label="${time}, ${weather.label}; vento de ${direction.from} para ${direction.to} a ${Math.round(values.wind)} quilómetros por hora; rajada ${Math.round(values.gust)} quilómetros por hora; chuva ${Math.round(values.probability)} por cento; temperatura ${Math.round(values.temp)} graus">
+        <header><strong>${timeLabel}</strong><span class="hourly-weather-icon weather-tone-${weather.tone}" title="${weather.label}" aria-hidden="true"><svg><use href="#i-weather-${weather.icon}"/></svg></span></header>
+        <div class="current-hour-direction"><span class="table-arrow" style="transform:rotate(${direction.degrees}deg)">↓</span><strong>${direction.from}→${direction.to}</strong></div>
+        <div class="current-hour-wind"><b>${Math.round(values.wind)}</b><i>|</i><b class="gust">${Math.round(values.gust)}</b><small>km/h</small></div>
+        <div class="current-hour-meta"><span class="rain">${Math.round(values.probability)}%</span><span class="temp">${Math.round(values.temp)}°</span></div>
+      </article>
+    `);
+  }
+
+  setHTML("currentForecast6h", cards.join(""));
+}
+
 function renderCurrent(data) {
   const index = nearestHourIndex(data.hourly.time);
   const values = currentValues(data, index);
@@ -597,6 +624,7 @@ function renderCurrent(data) {
   setText("currentUv", values.uv.toFixed(1));
   setText("uvState", uvLabel(values.uv));
 
+  renderCurrentForecast6h(data);
   renderClothing(values);
   setText("conditionScore", quality.score);
   setText("qualityRingValue", quality.score);
@@ -734,6 +762,7 @@ async function refreshWeather({ forceLocation = false } = {}) {
   } catch (error) {
     if (runId !== refreshRunId) return;
     setText("updated", `Não foi possível atualizar: ${error?.message || error}`);
+    setText("currentForecast6hState", "Previsão temporariamente indisponível.");
     setText("forecastHeadline", "Dados temporariamente indisponíveis");
     showToast("Não foi possível obter a meteorologia. Tenta novamente.");
   } finally {

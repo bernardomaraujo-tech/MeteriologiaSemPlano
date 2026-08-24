@@ -5,6 +5,7 @@ import vm from "node:vm";
 
 function loadWeatherHelpers() {
   const tableBody = { innerHTML: "" };
+  const currentForecast = { innerHTML: "" };
   const forecastTable = { querySelector: (selector) => selector === "tbody" ? tableBody : null };
   const context = {
     console,
@@ -20,7 +21,7 @@ function loadWeatherHelpers() {
     document: {
       querySelector: () => null,
       querySelectorAll: () => [],
-      getElementById: (id) => id === "forecast48Table" ? forecastTable : null,
+      getElementById: (id) => id === "forecast48Table" ? forecastTable : id === "currentForecast6h" ? currentForecast : null,
       addEventListener: () => {}
     },
     window: { addEventListener: () => {} }
@@ -28,11 +29,11 @@ function loadWeatherHelpers() {
   context.globalThis = context;
   vm.createContext(context);
   const source = fs.readFileSync(new URL("../app.js", import.meta.url), "utf8");
-  vm.runInContext(`${source}\nglobalThis.__weatherHelpers = { weatherIconDetails, renderForecast48 };`, context);
-  return { ...context.__weatherHelpers, tableBody };
+  vm.runInContext(`${source}\nglobalThis.__weatherHelpers = { weatherIconDetails, renderCurrentForecast6h, renderForecast48 };`, context);
+  return { ...context.__weatherHelpers, currentForecast, tableBody };
 }
 
-const { weatherIconDetails, renderForecast48, tableBody } = loadWeatherHelpers();
+const { weatherIconDetails, renderCurrentForecast6h, renderForecast48, currentForecast, tableBody } = loadWeatherHelpers();
 
 test("distingue céu limpo de dia e de noite", () => {
   assert.equal(weatherIconDetails(0, 1).icon, "sun");
@@ -75,4 +76,28 @@ test("apresenta um ícone representativo em cada uma das 48 linhas", () => {
   }});
   assert.equal((tableBody.innerHTML.match(/hourly-weather-icon/g) || []).length, 48);
   assert.equal((tableBody.innerHTML.match(/aria-label="Céu com nuvens"/g) || []).length, 48);
+});
+
+test("apresenta os seis períodos seguintes no separador Atual", () => {
+  const start = new Date();
+  start.setMinutes(0, 0, 0);
+  const times = Array.from({ length: 12 }, (_, index) => new Date(start.getTime() + index * 3600000).toISOString());
+  const repeat = (value) => Array(12).fill(value);
+  renderCurrentForecast6h({ hourly: {
+    time: times,
+    temperature_2m: repeat(18),
+    apparent_temperature: repeat(17),
+    relative_humidity_2m: repeat(65),
+    precipitation: repeat(0),
+    precipitation_probability: repeat(10),
+    weather_code: repeat(2),
+    wind_speed_10m: repeat(14),
+    wind_gusts_10m: repeat(24),
+    wind_direction_10m: repeat(45),
+    uv_index: repeat(3),
+    is_day: repeat(1)
+  }});
+  assert.equal((currentForecast.innerHTML.match(/current-hour-card/g) || []).length, 6);
+  assert.equal((currentForecast.innerHTML.match(/hourly-weather-icon/g) || []).length, 6);
+  assert.equal((currentForecast.innerHTML.match(/vento de NE para SW/g) || []).length, 6);
 });
