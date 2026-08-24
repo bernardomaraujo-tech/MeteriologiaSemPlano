@@ -13,7 +13,7 @@ PWA mobile-first para avaliar condições de ciclismo e calcular pressão de pne
 - Meteorologia e geocodificação: [Open-Meteo](https://open-meteo.com/).
 - Modelo preferencial: **KNMI Seamless**, combinando HARMONIE-AROME na sua área de cobertura com ECMWF; se os dados estiverem indisponíveis ou incompletos, a aplicação utiliza automaticamente o **Open-Meteo Best Match**.
 - Mapa discreto do cartão de vento: [OpenStreetMap](https://www.openstreetmap.org/copyright), centrado automaticamente na localização selecionada.
-- Localização, setups e histórico: guardados apenas no `localStorage` do dispositivo.
+- Localização selecionada, última posição autorizada, setups e histórico: guardados apenas no `localStorage` do dispositivo. A última posição é reutilizada nas visitas seguintes; o GPS só volta a ser consultado quando o utilizador seleciona explicitamente **Localização atual**.
 - Ficheiros GPX: processados localmente no dispositivo e não guardados pela aplicação.
 - Atualização automática: a cada 5 minutos.
 

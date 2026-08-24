@@ -11,6 +11,7 @@ const PREFERRED_WEATHER_MODEL = "knmi_seamless";
 const AUTO_LOCATION_ID = "device_location";
 const DEFAULT_LOCATION_ID = "alcabideche";
 const LOCATION_STORAGE_KEY = "semPlanoMeteoLocationV2";
+const DEVICE_LOCATION_STORAGE_KEY = "semPlanoMeteoDeviceLocationV1";
 
 const LOCATIONS = [
   { id: "alcabideche", name: "Alcabideche", region: "Cascais", lat: 38.7330, lon: -9.4100 },
@@ -104,6 +105,38 @@ function saveLocationPreference(location) {
   } catch (_) {}
 }
 
+function loadCachedDeviceLocation() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(DEVICE_LOCATION_STORAGE_KEY) || "null");
+    const lat = Number(saved?.lat);
+    const lon = Number(saved?.lon);
+    if (!Number.isFinite(lat) || !Number.isFinite(lon) || Math.abs(lat) > 90 || Math.abs(lon) > 180) return null;
+    return {
+      id: AUTO_LOCATION_ID,
+      name: "Localização atual",
+      lat,
+      lon,
+      accuracy: finite(saved.accuracy),
+      capturedAt: saved.capturedAt || null,
+      isDeviceLocation: true,
+      isCachedLocation: true
+    };
+  } catch (_) {
+    return null;
+  }
+}
+
+function saveCachedDeviceLocation(location) {
+  try {
+    localStorage.setItem(DEVICE_LOCATION_STORAGE_KEY, JSON.stringify({
+      lat: location.lat,
+      lon: location.lon,
+      accuracy: location.accuracy,
+      capturedAt: location.capturedAt
+    }));
+  } catch (_) {}
+}
+
 function getDefaultLocation() {
   return LOCATIONS.find((location) => location.id === DEFAULT_LOCATION_ID) || LOCATIONS[0];
 }
@@ -122,20 +155,27 @@ function getDevicePosition() {
   });
 }
 
-async function resolveActiveLocation() {
+async function resolveActiveLocation(forceDeviceRequest = false) {
   if (selectedLocation.id !== AUTO_LOCATION_ID) return { ...selectedLocation, isDeviceLocation: false };
+
+  const cachedLocation = loadCachedDeviceLocation();
+  if (cachedLocation && !forceDeviceRequest) return cachedLocation;
 
   try {
     const position = await getDevicePosition();
-    return {
+    const location = {
       id: AUTO_LOCATION_ID,
       name: "Localização atual",
       lat: position.coords.latitude,
       lon: position.coords.longitude,
       accuracy: finite(position.coords.accuracy),
+      capturedAt: new Date().toISOString(),
       isDeviceLocation: true
     };
+    saveCachedDeviceLocation(location);
+    return location;
   } catch (_) {
+    if (cachedLocation) return cachedLocation;
     const fallback = getDefaultLocation();
     return { ...fallback, name: `${fallback.name} · localização de recurso`, isFallback: true };
   }
@@ -655,13 +695,13 @@ function renderWeather(data, source, location) {
   setText("forecastSource", `Fonte meteorológica: ${source}`);
 }
 
-async function refreshWeather() {
+async function refreshWeather({ forceLocation = false } = {}) {
   const runId = ++refreshRunId;
   const refreshButton = $("refreshCurrent");
   refreshButton?.classList.add("is-spinning");
   setText("updated", "A atualizar as condições…");
   try {
-    const location = await resolveActiveLocation();
+    const location = await resolveActiveLocation(forceLocation);
     if (runId !== refreshRunId) return;
     resolvedLocation = location;
     updateLocationLabels(location);
@@ -1231,7 +1271,7 @@ function locationOptionButton(location, selected) {
   const title = document.createElement("strong");
   title.textContent = location.name;
   const subtitle = document.createElement("small");
-  subtitle.textContent = location.id === AUTO_LOCATION_ID ? "Usar a posição deste dispositivo" : (location.region || "Portugal");
+  subtitle.textContent = location.id === AUTO_LOCATION_ID ? "Usar ou atualizar a posição deste dispositivo" : (location.region || "Portugal");
   text.append(title, subtitle);
   const check = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   check.innerHTML = '<use href="#i-check"/>';
@@ -1271,13 +1311,14 @@ function closeLocationModal() {
 }
 
 async function selectLocation(location) {
+  const useDeviceLocation = location.id === AUTO_LOCATION_ID;
   selectedLocation = location.id === AUTO_LOCATION_ID
     ? { id: AUTO_LOCATION_ID, name: "Localização atual" }
     : { id: location.id, name: location.name, region: location.region || "Portugal", lat: finite(location.lat), lon: finite(location.lon) };
   saveLocationPreference(selectedLocation);
   updateLocationLabels(selectedLocation);
   closeLocationModal();
-  await refreshWeather();
+  await refreshWeather({ forceLocation: useDeviceLocation });
 }
 
 async function searchLocations(query) {
