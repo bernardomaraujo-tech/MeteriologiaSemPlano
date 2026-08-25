@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-25T13:13:11.159Z",
+  "updatedAt": "2026-08-25T14:06:15.820Z",
   "disciplines": {
     "road": [
       {
@@ -108,18 +108,11 @@
         "sourceUrl": "https://escapecollective.com"
       },
       {
-        "title": "MADE gallery 1: Big ideas for big wheels - Escape Collective",
-        "pubDate": "Sat, 22 Aug 2026 08:03:31 GMT",
-        "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE01Z0VuWFNnbDNDWDRWN1NlREZFQllQQnVpTDRaOFRVQ3pGN2x6amR3c0lHUDFNU2RUc3ctMDNmLXNOeWhTLU9QWXgxdG1XZ0lTMlJCSlc5eEdRWVlOczdzWTA4RFlxVkc1M2JhY1ZRRWFmc3RuTU5yNA?oc=5",
+        "title": "Les Gets tech: Big wheels from Cube and KTM plus Fox's prototype electronic suspension - Escape Collective",
+        "pubDate": "Mon, 24 Aug 2026 06:49:23 GMT",
+        "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNU1NGR3VPYlJUZmF4dDRUNnJOUFVDMXBxYzU2bk5iNEZ0My1GblVSSi1pa2g4LWFhQXU0MUZNekFETHAtRjQzX0hURmhwTG1uX0tnZDhCZGg2eUJGdFdNQnJzdWRCNE9xeUFaRzNxYUJXelBZRXBENERBZ3ljQ2g2UzdqY1NVOVJqNjNnSjhUQVJ2N012NkxFRkFudXFEbTFnTElIc2dGdXNDNTRkQ01NcFhWcVo?oc=5",
         "source": "Escape Collective",
         "sourceUrl": "https://escapecollective.com"
-      },
-      {
-        "title": "Vuelta a España stage three neutralised and then abandoned after hailstorm - Cycling Weekly",
-        "pubDate": "Mon, 24 Aug 2026 15:37:37 GMT",
-        "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOeEhENG5ZeVpJVG94Qng1SVdRdk53cTM3QXprOW1CWXMyRDRVSVJES3c1d2RWSmhfUkFVbjRQNnVzQlVhVnNrMllVVlMwQlN6QkFMN25sa0FBTEJ2RUZMeFZKWGZ5VWVZdnNHNjZaYnlSWWFRUE5DWE9vdlJrSFM4RUVQMTlQZmRfSWF4Nk5sVy1pbTRGdWlndnlYcy1TVWw3RWd3OWpyLVRxN2s2VnBCUE04NDdydVdxeUtUUGxLZThIeUQyZWc?oc=5",
-        "source": "Cycling Weekly",
-        "sourceUrl": "https://www.cyclingweekly.com"
       },
       {
         "title": "'It has a serious problem with cyclists' – Pyrenean hotel sheltering Vuelta a España riders receives dozens of spoof reviews on Google - Cycling Weekly",
@@ -129,7 +122,14 @@
         "sourceUrl": "https://www.cyclingweekly.com"
       },
       {
-        "title": "New 13-speed Shimano Dura-Ace groupset spotted at Vuelta a España - Cycling Weekly",
+        "title": "Vuelta a España stage three neutralised and then abandoned after hailstorm - Cycling Weekly",
+        "pubDate": "Mon, 24 Aug 2026 15:37:37 GMT",
+        "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOeEhENG5ZeVpJVG94Qng1SVdRdk53cTM3QXprOW1CWXMyRDRVSVJES3c1d2RWSmhfUkFVbjRQNnVzQlVhVnNrMllVVlMwQlN6QkFMN25sa0FBTEJ2RUZMeFZKWGZ5VWVZdnNHNjZaYnlSWWFRUE5DWE9vdlJrSFM4RUVQMTlQZmRfSWF4Nk5sVy1pbTRGdWlndnlYcy1TVWw3RWd3OWpyLVRxN2s2VnBCUE04NDdydVdxeUtUUGxLZThIeUQyZWc?oc=5",
+        "source": "Cycling Weekly",
+        "sourceUrl": "https://www.cyclingweekly.com"
+      },
+      {
+        "title": "New 13-speed Shimano Dura-Ace R9300 groupset spotted at Vuelta a España - Cycling Weekly",
         "pubDate": "Sun, 23 Aug 2026 19:29:56 GMT",
         "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPRWlsOXdHai1tS2dkUnlhRGJ4ZzBrVUt4WjZZN182UElvR0VLUmJZdk54azktbzhvV2E1S2NzcmI5RU5BQWZZb1pkclY5S1NnMG5xcW16aWZ6Rkh0OWRKcDBfNWR4Mi1Rbk5QVmRtOUotaHB4LTlBM3U5SFJlWDlyX2xJcF9qZ2VNSThMeTN3YVM4Q1R3c1JyTnpOc085anNsRUE?oc=5",
         "source": "Cycling Weekly",
@@ -178,6 +178,13 @@
         "sourceUrl": "https://velo.outsideonline.com"
       },
       {
+        "title": "Vuelta a España ‘Hail Hotel’ Has Been Spammed with Rave Reviews. They're Definitely Not All Legit. - Outside Magazine",
+        "pubDate": "Tue, 25 Aug 2026 08:01:05 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNak10R3Z4R1hKZmN4TkNoQ2l6SDJnSV9QSmhOSkFqbkVjUzhMZHQwR2hHdkdFeUJFb1VUS0tTS1VPcGstdE1iQV9ZalFKZndpcW1DY25WRTVqZU5NZ2FqWGhTa2h5UHB0X3daUGZNaFczd0ttbGxHREZEMDJLME5vcnh0ejJ2d3RtRU9hbnZZQTVwQm9lLU5tQURzT0lGUkNHVUtVV0JYZjlJQQ?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
+      },
+      {
         "title": "Ethan Hayter Can't Catch a Break at the Vuelta as UCI Jury Wipes Out His Green Jersey Points - Outside Magazine",
         "pubDate": "Mon, 24 Aug 2026 19:27:20 GMT",
         "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPYUlDNnl6MFR3QWxVU09nYWVuZFZMMFFqZ1FYV0RHOVBPSW9KbTd2VE9LQmhxVTRLS1FYVm5jUDNGMXZ0dkVYVV9qOVhiRmljTHRSQ3pwb01DVnRDQjVDbUpnTVFJa3BfU2RNNXJNbXJzUXRHaG1WNTVFU2tvZkxDZUoydHp4akNMcTBQbGVaSnVXdFhydVdjZDJUNFl0Mk52dVRGbm4wanRia3JR?oc=5",
@@ -216,13 +223,6 @@
         "title": "Paul Seixas Drops Bombshell on His 2027 Plans After Months of Transfer Rumors - Outside Magazine",
         "pubDate": "Mon, 17 Aug 2026 11:14:06 GMT",
         "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPV2ZSeFJFZW95S1hZRmZ0bVJCaElUYk04SWlXWkMzQ29rUjdaX3o3M3FUQ0tTUHZ4RUJvc0o2Ul9pRHhQTzNPZGJfUjBNZVltTG1IUm9rOWZqRFZjMGRaNGluRUpSb0RpZkI5bG5WdEhKUmNUMjFzdHVwUVRQZ212YnptbFVPdVd1cGJLZUw2YWItSjFhTFVWY0k0aHg1Yk9zTlRvRm9TaHZyVzMtLTNvT1d0MllfUQ?oc=5",
-        "source": "VELO",
-        "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
-        "title": "The 2026 Vuelta a España Route Is So Brutal Even Tadej Pogačar Could Suffer - Outside Magazine",
-        "pubDate": "Thu, 20 Aug 2026 15:08:18 GMT",
-        "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQaFpUZlNXWjA2alVHT3liT1NXeDkzWHR2dVF4Q3U4bk54MkV3UlRHTzdwMU5EQnEwT3VoMkVhMFBobW5vTS1EZGFlTVAwaW9UWHI3bXV4ZW1TVlJIUVNGcDJFRUI2eHVsZXZSRzVDOXFyWjNETGltRmN6OExpNGdpdk1JYXN5eC01NXFBdURZQWptV1owRldXSlFIVTY0VkJvajhBc3pqb3FHVWNzaml6Mkh6OHo0RGs?oc=5",
         "source": "VELO",
         "sourceUrl": "https://velo.outsideonline.com"
       },
@@ -276,9 +276,9 @@
         "sourceUrl": "https://www.wielerflits.nl"
       },
       {
-        "title": "‘Schuilhotel’ uit Vuelta is plots wereldberoemd: “Een dag die we nooit zullen vergeten” - WielerFlits",
-        "pubDate": "Tue, 25 Aug 2026 12:49:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQSWZlQ2lTZ2ZON1p2dk55RnEyUWpBVVNkVDFqNHdhMzZ5d2JkOGk0em5Nb0JFZTdEWjNXTUlLQ1pGbzMxaHY2M0dESHdHRXBMaUhicVJVRll0ajV4bzVfc0FWVTN4THlPVzFjdTBkQ09RUXNtT29YVURoZkVrMGg5SERoOWRMX1hEbnRXM29OYy1fRXJsbUVlLXY1RXgtckNsVFJ1MXRWckt5RUZtSFVUMjBiMkozcVpK?oc=5",
+        "title": "Vuelta 2026: Gehavende Cian Uijtdebroeks moet al zeer vroeg lossen in eerste bergrit - WielerFlits",
+        "pubDate": "Tue, 25 Aug 2026 13:37:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOWHUxRmtkM2ZFMDlSb0pfUm83bFBQcVVZcmdkYmhYVnZPbURyUHJxRkowd2NLbWdPZmNsZ0ljQ0FhdWc5eFFQbzVPMThDT2x0TG1kNkNVeFhBV2ZuTmtLWnhGMEdlMTZpNHpYbWotNG8xV1pBQ195VXB0eWlNazRGODJnTkpDYnJ1SzB1UWlzVl9CUngtTDVxT18yb0tTSHFnWlM1ZFo1R01UTXM3MFBHQUdFV29CcjlmaXc?oc=5",
         "source": "WielerFlits",
         "sourceUrl": "https://www.wielerflits.nl"
       },
@@ -318,23 +318,23 @@
         "sourceUrl": "https://cyclinguptodate.com"
       },
       {
-        "title": "\"Pogacar is ahead of even Messi\" - Liverpool FC head coach compares the two giants of sport - CyclingUpToDate.com",
-        "pubDate": "Sun, 23 Aug 2026 04:03:21 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQZ1lJVFpjYWdPR2dxZXRqUnpRWS1LUVV5UWJmcDA1NHdDT0ROdm5ZVVl2MERnQW41a01rX2NmbDJMZEx4SzVfU0s5YW02cHZZcjZEdVV5SUxxMktRTWxxbzE4Q3JEY01jZFZOclZ2T2RtTjFRbWJjYk5YS1RpYmFzdkNLMlVQYkdUMHV4SkotWHlvbHNkYXY3RTBCSUxGcUN2RURucWFHVkx5aE1IamxmdlZOMEQ4ZFVtX3BGVjVtS0w?oc=5",
-        "source": "CyclingUpToDate",
-        "sourceUrl": "https://cyclinguptodate.com"
-      },
-      {
-        "title": "Medical Reports & Withdrawals Vuelta a Espana 2026 stage 3 - One rider abandons before the race is caught by a storm - CyclingUpToDate.com",
-        "pubDate": "Mon, 24 Aug 2026 16:18:46 GMT",
-        "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPcE1RdWE5VmFnVExtUlNMV0JQenhBRFJDRHM1VDRLbldaUC1QR3RqYVdTZWQwanRXWGpkSzdJWko1OU93eEI2QmJoZmdqOTcyYVoyczdSaDBMS1F3V1M5cGQzOURwOXl4RjVtZVlyeEJuTUljckRPYUhBWlRBX3JvTHY3VGc2TGtvanhyUm5oLVc0bDNWWHJHTUtHMkIyRmJIU1ItNWQ2SUJqR0RXWUlWUE9yWDNseVd6dGVOZmFlUkNsb285d0RCQnJVNDE5eC1OV1M2VXdaZlNHZnZNRlhUaVhB?oc=5",
-        "source": "CyclingUpToDate",
-        "sourceUrl": "https://cyclinguptodate.com"
-      },
-      {
         "title": "Cian Uijtdebroeks suffers heavy crash at the Vuelta a España - Belgian has multiple injuries on arm and leg as team sweat over his future in race - CyclingUpToDate.com",
         "pubDate": "Mon, 24 Aug 2026 10:18:44 GMT",
         "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNVm10Sko5X1RFdWlEcHdyZUFtbVp1eWlleUkycEFmUDNuQUhQc2hvYVhsQmxxN0JmTVZDS2Y2UlVXZEFfM1Y3UG1VRkFzZVFkZmlmRWhFUEpFcXhzSVJaOWhIRE9xQlVkc0F6ZEtBeVpCNWNSalpPVU8wUTVKXzRrSW1FcHJLaXRsQUp0U25QZ3RZVTd5VmVHUFQ0Q1RhTFBwamxaOTBfOGdhOEcy?oc=5",
+        "source": "CyclingUpToDate",
+        "sourceUrl": "https://cyclinguptodate.com"
+      },
+      {
+        "title": "“It will probably be over by Stage 4” – Johan Bruyneel predicts Tadej Pogacar will settle 2026 Vuelta GC battle early - CyclingUpToDate.com",
+        "pubDate": "Fri, 21 Aug 2026 12:46:47 GMT",
+        "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNNFJ0X3dyeXFWcWgtUTA5QU1xdnpUOUJMUmhvaTgwRWs1T3R5M09reV9xamp4SEhtM2lXek1ic0twQlctb2R5WW51czU1ZVF1a01Yc1NjTlJFUVRnWGNVUmg1dVdwSzZfdFlOWktON1JSM3V4U2taRlY2a0ZuLXlzVlZPTTVZTTBqZnhiMEItNlJzdEw4T0xuN2toZGZaUnBlNnlFY2s1ZElUUGRVSlFpSzk2Q1FBZUJsLVd3YVVlaGVPNllzSnN0V1ZvT2x5YzV3VkNUcHl5UU91MXNFWkZRRDFUQQ?oc=5",
+        "source": "CyclingUpToDate",
+        "sourceUrl": "https://cyclinguptodate.com"
+      },
+      {
+        "title": "\"No one should have to put up with being treated like an object\" - Serious controversy emerges from La Vuelta guest - CyclingUpToDate.com",
+        "pubDate": "Sun, 23 Aug 2026 13:28:27 GMT",
+        "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQd0FRTlN2UjFMMHRZams0NG9lSDA4OU1XVmpSX3FvZDdfeTV5Wkd3cGVPd0l6ZGpRcG56Q0VwRGxiTmhHUU1Gb3EtU1IzTEhiazlLSnYwVFdTWHZSM2J2R3lMTTZuODF0WnRZc0dTRzdPNDhnTUVMV1ZqMDAwbVpNZ0RacGd0Q3MtTDZWTFY4NDZwbXNncVdVd3RueG5WM3hyYUpIS3ZvS01ZYUY2SlRQTHlVTFp3QWx2bUVSU3BJckxRZ05XMHI5aGpDeXJEaU9NbElqR2gtREtjdzk4bzlMUA?oc=5",
         "source": "CyclingUpToDate",
         "sourceUrl": "https://cyclinguptodate.com"
       },
@@ -384,13 +384,6 @@
         "sourceUrl": "https://www.pinkbike.com"
       },
       {
-        "title": "Race Analysis: Tense Battles & Last Lap Supremacy at the 2026 Les Gets XC World Cup - Pinkbike",
-        "pubDate": "Mon, 24 Aug 2026 13:04:56 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQSVFLaTAtemJvR1VKQXBKSUxJa3FmSk4xaUpHUlgyTmlmal9Ob2lPdU9uT0ZGMmVocXl2azJBbXRFalVqWklBUnNyTUVlY3dvc3JqekMzcERiaXh0ZHp1dmVNMExsUjBKWUt6ZXRuWWZhZk1VdzQxSFQ0RllwbU51a2UtUmdqdEJVSU5ZOER0WTF5bHc2RVRHM2ZnOTIwMXMyX1ZzR0RRM1Z2SlBaNXMtQTFzbU45bUVCbVZ3?oc=5",
-        "source": "Pinkbike",
-        "sourceUrl": "https://www.pinkbike.com"
-      },
-      {
         "title": "Nicolai & Gamux Release a Gearbox Equipped Downhill eMTB - Pinkbike",
         "pubDate": "Wed, 19 Aug 2026 18:08:11 GMT",
         "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPYjMtU2VpcmNEQ1M0anNHMWY1a0FLMjE1UzdBNXIwUHV3bHB3VWFKYXJNdjBGQm1nell5TXFLck16Qm1WVzN0MGozMTUwLWYwNVRhMDllQXNwQ3RSeG9lQ3JkbndUdGFyeGRvSDNWQlluQmJpQnp1cHJjZ0R6OXluaXNJNUE3cEFtOXA3eA?oc=5",
@@ -403,6 +396,20 @@
         "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPTjA4dzg3azRKVm5MRENCNFZ3VGdnUWxmTkxrVGhwWG1TNFcyOHhRY0VVRi1MRkJCbVpMdkRqZDdzNEJMQWNfZF9BOUsxaC1walJ6NmFtaWVaZWx5SjJMejJoNnhCVkdXQmJVZ1VhbzE5UURoeFpxVVBKVzd1U1M5eDd6Ujc4Z3hXVFAwNnZ0RU9sbWgtc2ZwaEdkSjBKVkhFdWlMdlZUdw?oc=5",
         "source": "Pinkbike",
         "sourceUrl": "https://www.pinkbike.com"
+      },
+      {
+        "title": "UCI & WBD Sports Cancel 2027 Enduro World Cup Season - Pinkbike",
+        "pubDate": "Wed, 19 Aug 2026 17:20:02 GMT",
+        "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQQVBxa19GcU5iVGVEQlZjdjI0NVJ1TjF6bkhnLXVMYURleWZvTmF6alE4ZDJfX2wyUjNoLTFMQWYzS25ObmVEZGdrV1c0SWNNaEprUmpGdmtzT2lmcFBzQ3hLSnA0cWVWd2pDS2J4bk5qSHVnUjZSSWV5NXRhY0hyZA?oc=5",
+        "source": "Pinkbike",
+        "sourceUrl": "https://www.pinkbike.com"
+      },
+      {
+        "title": "The Hub - Mountain Biking Forums / Message Boards - Vital MTB",
+        "pubDate": "Sun, 19 Nov 2017 07:06:06 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE16eElyVDNGSDk2c2pFQUwzSERiWEJwSXhpcEhyUW5GWXlmYlBObHFLQ05mMXhXQnRDTnQwS1VSSGVrNTF3RzlGU3ZxT3VXRjBHSjJCay1Zd25XbVRNTTJ3?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
       },
       {
         "title": "2026 REEB Hall Pass - Vital MTB",
@@ -440,23 +447,16 @@
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
+        "title": "A Full Weekend of Biking in Whitefish, Montana - Vital MTB",
+        "pubDate": "Mon, 24 Aug 2026 17:50:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNOW9CVWIzajFERlRoaTZ6d0hMMTJvOG9DSHVicklkQm5Pb0xsdkdBVFREN2xQdmtsRzZNNlgtRGxsenFYT1lJRjhsOGhWX1NGY2JwdTlCdHdCUHZLS1RRQWtqMUVhSUJ3UlZENGg5eGNSUnpRajB5RDBadEpWSlVEVWhpQWJrZmxf?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
         "title": "Enduro - Vital MTB",
         "pubDate": "Thu, 09 Nov 2017 09:50:02 GMT",
         "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE96UlltMTEtUVppRVdsVjRXb1lNbU01eDdfVU04TUxGWGxTeDBVcmRPWE1Xa19UUGhkdmhOcEoxVHk0TzFCM0RUR3JsU05SV0JrYUlDb2F5bEFlQzRu?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
-      },
-      {
-        "title": "$17,000 Prize Purse Announced for 2026 Triple Crown UCI DH Series - Vital MTB",
-        "pubDate": "Sat, 15 Aug 2026 07:00:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPWEpoT3JvSjdkRm1OLTRmcFZWU3BSV1VQV2pPTDNBMjVFb1JNX0FDLUxhQTJkMFpqbmZlbmZuWnBKUnVJeXFzZUxWZWFyNmhWVndPOFJUc1NQRzNhcTNaN2RsZHo4SGVkNXYxOUV2QnI0OHUzSC1TVnM4UXJJWE5HRlB6TU5RSmM?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
-      },
-      {
-        "title": "Trek World Cup XC and DH Racers Switch Bikes and Kits - sspomer - Mountain Biking Videos - Vital MTB",
-        "pubDate": "Mon, 17 Aug 2026 20:23:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNRnpNSVVjOVNSeUpsblBTVHUyc1BCYjlMSS10WXI3VTJBM1ZadDMwc3dVS0dXU3l3VFhfQVR6XzlZaUstdmxhdFJPeE5KQ180aS01RDNiSEdERmIwWUxSaFJyMWloRXVMMGJKYjBWN1B5Y0IzVTJjRVZMWnlBZmo2SXAyTXJsb2J4YVJJaDh2eHU2SjZWbW9R?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
@@ -785,6 +785,13 @@
         "sourceUrl": "https://www.cyclingnews.com"
       },
       {
+        "title": "'If you're heading out on your bike in the next few days give him a thought as you clip in' – Finlay Tarling's parents issue public message following son's death - Cyclingnews",
+        "pubDate": "Sun, 16 Aug 2026 10:55:22 GMT",
+        "link": "https://news.google.com/rss/articles/CBMisgJBVV95cUxQb1E0dndkYnhDeFVIWXRrMjBySlo3b1hfX3B0eTNJejRqcWUtdmc4bjUtYjhJUmxERW9TUmRrTllxQTJIejk0dm5LaEJGNmZQTFFrb1FGNW1DZGZBMGZzOEItd08tQWF6dVAwNTJjNVN2SmplQzFXcHVuWC1ieFRRM1drM2NreXdKUGt2dHdFZEU1OGpEZFBsQnEzV05PZUVQalBIQW1wc0JKTnA3YTMtNDFRWXBxR095NnVnQmpQOWdRTWlDcFZfZzItWFlGVVQtOHl1UHVNbUJJRlZrR0VvUG4xZDg0c1FldENQTWFVV0piV2U1SG5nelZhUlFmUEFETnZPQ25ZeHlvS0hTRDFRdno1dEVQVGNLZF9xZWdJUVlTNnhQUkt3Q0wwdzVwQ04xUmc?oc=5",
+        "source": "Cyclingnews",
+        "sourceUrl": "https://www.cyclingnews.com"
+      },
+      {
         "title": "Van Rysel goes big on gravel with two new launches across both race and adventure - Cyclingnews",
         "pubDate": "Mon, 24 Aug 2026 08:28:48 GMT",
         "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNdngzSnk4UE5PRVNJeFRkTnowaHNiblhXSGlSZzJmWGY2WEpCSWF0OE83YUREd0xTY2hHbUItWGVlc2pmaFQ4T05RRV9JTmsxOVR3cktkSGdEYUZfbkRKeWFSRjJYaW5LbEdWaUNpRUt1SGVhdWNCeUZjdEV4bmNaYXJzWE9ZMHRtM3dYZGZ4cWFGS1QyT2ZRUGdUOGZzc3VZbVJLNWF2alRKUzI4QUJ6SHRRTVNqdWtYLXVfS041LWc?oc=5",
@@ -816,13 +823,6 @@
         "title": "Kim Le Court-Pienaar comes full circle at Tour of Britain Women to take her first-ever GC victory - Cyclingnews",
         "pubDate": "Sun, 23 Aug 2026 18:33:36 GMT",
         "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPaDFfWEgwWnNjdm9tTURRUWsxV3cxeTl4eGNRejlhcGVkaTZKOW9pZnB2aGZuRXpDUlRmUFVWWnVIRi0tRlRiUlEtZG1hNjc4RlNDTUlkSEdXUnRQWGNMbVdEYkJZaWtTVjZ5NzZMcTN4SWR0c3B5VURVcVFSSFRvQ0NiOFVEczl1ZDV0cXhuZ005TXo0c2ZjYW9lWXVwRms4ZjNXWGpXVTRxdlhIeFdyOF9VZ05kWEVpem1PdHROYXlpbWNNMmdHRzdQSUtMUWI4aUhPZG5YZC1nSS1aUEFvM1hHOHhUZw?oc=5",
-        "source": "Cyclingnews",
-        "sourceUrl": "https://www.cyclingnews.com"
-      },
-      {
-        "title": "Vuelta a España places restrictions on its own content creator amid backlash over interactions with Tadej Pogačar and others - Cyclingnews",
-        "pubDate": "Mon, 24 Aug 2026 14:05:27 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxNVHpwVXNMZ3lGUC1jTmhwOTlvX3BVa2RDQjJwbFZGd3RsUkpoZU01dWd1WHNyM0JjR25ZZnQxTWVWVE1wTEhBQjZrUGlva0RHSGtYNzl0bEtjdWxBMVBrbTRoZXlhd3h6a1BKcE85S2Z2U1dNZXhHcW9LVVN6RHUzZUdhc294RmM3X2d4U2lnVEdObFE5WlVaUmtGalM2Y1hzMGlFT2l4MGJ3OXo1VEwxVU1KSFlHQ1g5aXVmRXV3NENPUWRESHYzeDNjendjNDhrRHhEVGlDWFh1WVgtUFF2ZDJIVl9KZ0wwLWx6ZmtoeFVYelBvVzUyUk8zLXJSa0pWSEE?oc=5",
         "source": "Cyclingnews",
         "sourceUrl": "https://www.cyclingnews.com"
       },
@@ -876,6 +876,13 @@
         "sourceUrl": "https://www.uci.org"
       },
       {
+        "title": "UCI Junior Track World Championships: young stars to take over Heusden-Zolder - UCI.org",
+        "pubDate": "Mon, 17 Aug 2026 11:56:39 GMT",
+        "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNOFZQODRGQ3pYVnRwc2ZMcURLRXpuTy1feEpkU3dMVy13Wk9aN1dmVlhLVmVENnNFOVhiT1M4S09vZkFIWmZVLWRidjVjUDRSTkR5T1NVdkxqS1pPSURsOElaTGtlN3Awa25NTDh0UmFIWjNSczlOSkhrTUVDVkw2eXlSRWIwUEs2SXNHUEdSaDRiWWZUTmczMlhqTGVFU2czSnlqVl8zbEcycXc3c1hfY3VQWWJNYWx6MWdTel9IS1dGMmZCMHc?oc=5",
+        "source": "UCI",
+        "sourceUrl": "https://www.uci.org"
+      },
+      {
         "title": "Kasper Asgreen signs for NSN Cycling - Cyclingnews",
         "pubDate": "Mon, 24 Aug 2026 09:22:23 GMT",
         "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNYkd5QzZudTdjbnJKYkhoN293dEh1TkloRE51UEZsVF8za1dWdGFuenlJVVMzN1JZS1lLaEd2bjl3MHNZWklzWjdYbS1ZOXpZVDZQQXNzRXV4UjdwTTRDQ2FiTm1Vb1lvZnZnM0cwV2pPSlg0MnN6VEFQTlNwWFhxODljWEhUcWFJamtmeXo1OHU?oc=5",
@@ -921,7 +928,7 @@
         "sourceUrl": "https://velo.outsideonline.com"
       },
       {
-        "title": "Power analysis Archives - Outside Magazine",
+        "title": "Power analysis - Velo - Outside Magazine",
         "pubDate": "Fri, 02 Jun 2023 15:14:52 GMT",
         "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1JZDJ3X1d1UVozSVQ2SGFDUUFFaHFiVDhWeGpqN25KeDN0b0lEN1VzUHhtRXRiMEVvNUpNbWhTcE9KMFVfdmFhQ3BSVlRyT2xpVlZZSE9COUJ3TFBRSUdN?oc=5",
         "source": "VELO",
@@ -1019,13 +1026,6 @@
         "sourceUrl": "https://www.cyclingnews.com"
       },
       {
-        "title": "Vuelta a España: Stage 3 ends without a winner as extreme weather batters the peloton on the road to first summit finish at Font Romeu - Cyclingnews",
-        "pubDate": "Mon, 24 Aug 2026 16:09:12 GMT",
-        "link": "https://news.google.com/rss/articles/CBMijgJBVV95cUxQUFV6RU1rUEtLZ1phd3JiaHVOX2hqb21Ed01vQ3MxcUdLVE5KUzVsVDhRdFZpVmdkU0lXdGdST1JXcWhEaURiWGdKV2ZRR1N0djZZdmREOHJoYUZOUU8xRk8xejBDS3ZucU1GMWRleF83LXlPRmQ0Zl9jTERGeE1NeVVxNmZZczhMVDM2U3RVbFF3QWJSQWxsd05PaXNObkYwamFZc3hCU3FsXzA0WmY1SEtMQzJFcUZDYUhFSE1EVHpEeUUtcWVqQ0djekczRDR4eEhnLWctX2t3ZTdvbWhrOTQzeEhEazBCUzBsVFYxWUI1cUhtam1vZWlkTUhERHNoR0dNYXdHa3A2WFYtc1E?oc=5",
-        "source": "Cyclingnews",
-        "sourceUrl": "https://www.cyclingnews.com"
-      },
-      {
         "title": "Van Rysel goes big on gravel with two new launches across both race and adventure - Cyclingnews",
         "pubDate": "Mon, 24 Aug 2026 08:28:48 GMT",
         "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNdngzSnk4UE5PRVNJeFRkTnowaHNiblhXSGlSZzJmWGY2WEpCSWF0OE83YUREd0xTY2hHbUItWGVlc2pmaFQ4T05RRV9JTmsxOVR3cktkSGdEYUZfbkRKeWFSRjJYaW5LbEdWaUNpRUt1SGVhdWNCeUZjdEV4bmNaYXJzWE9ZMHRtM3dYZGZ4cWFGS1QyT2ZRUGdUOGZzc3VZbVJLNWF2alRKUzI4QUJ6SHRRTVNqdWtYLXVfS041LWc?oc=5",
@@ -1040,16 +1040,23 @@
         "sourceUrl": "https://www.cyclingnews.com"
       },
       {
-        "title": "'I will need a bit of luck' – Mathieu van der Poel delivers strong mountain bike return at Les Gets but keeps a lid on World Championships expectations - Cyclingnews",
-        "pubDate": "Mon, 24 Aug 2026 10:40:48 GMT",
-        "link": "https://news.google.com/rss/articles/CBMioAJBVV95cUxQdkNmYXhsZU1UYTNqT2syTUR6NWgzT01wVmdjZTE5TmM1aXRJck5HYjJ5MDVNY3BZN29oMXQ1UDF5b2t4NmRLSS1CYlNOV0pfYklOUnRMcmpvZ2Q1OWxQZFdrZEF4STVrTFBFZFNYSERYdFFBM0lrZ1dkNWJWNTNZSU9UcGpOOGdBNm5CQ3lSZ0Y5cksxMnBXRkg5UHlfbFFmOGp0OGhTc1E4UUxaVW5ydjJEbWFHMGJXREUya1NDZkgyeEdLUU5WeHViLV9VN01zRktJdDU4R2ZCSmhWSGtqR3hLYXJIRHBsMjJ2enN5SUxnUFNkaU1xOThRdHU5STFhWEFzMnlKTzZGZ043bHNGZHNEbHpibUtURVpjZENoLXE?oc=5",
+        "title": "Vuelta a España: Stage 3 ends without a winner as extreme weather batters the peloton on the road to first summit finish at Font Romeu - Cyclingnews",
+        "pubDate": "Mon, 24 Aug 2026 16:09:12 GMT",
+        "link": "https://news.google.com/rss/articles/CBMijgJBVV95cUxQUFV6RU1rUEtLZ1phd3JiaHVOX2hqb21Ed01vQ3MxcUdLVE5KUzVsVDhRdFZpVmdkU0lXdGdST1JXcWhEaURiWGdKV2ZRR1N0djZZdmREOHJoYUZOUU8xRk8xejBDS3ZucU1GMWRleF83LXlPRmQ0Zl9jTERGeE1NeVVxNmZZczhMVDM2U3RVbFF3QWJSQWxsd05PaXNObkYwamFZc3hCU3FsXzA0WmY1SEtMQzJFcUZDYUhFSE1EVHpEeUUtcWVqQ0djekczRDR4eEhnLWctX2t3ZTdvbWhrOTQzeEhEazBCUzBsVFYxWUI1cUhtam1vZWlkTUhERHNoR0dNYXdHa3A2WFYtc1E?oc=5",
         "source": "Cyclingnews",
         "sourceUrl": "https://www.cyclingnews.com"
       },
       {
-        "title": "Vuelta a España GC standings - No change after stage cancellation, Tadej Pogačar keeps leader's jersey after stage 3 - Cyclingnews",
-        "pubDate": "Mon, 24 Aug 2026 16:56:09 GMT",
-        "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPLVZOS2ctQzVkUEZyV2VvMHZ4QlZTM0FUT1NFbFEzREhGWVJaSk0wZ1M1Z1NnZl80Mi1ZQlFhcGM2WGt0eE5MSnhhNVgyVFp4QmpqZXA5bDZkNVItajJRUXZ5aHFCakJWTWZZbTBYWnlWRGtGRnh2ZklYTW53aWRoYjJDNVQ0OGxGdzFYZVhYUzdoXzF4d084NjJuY00wLWdqTXIyWHY0M0poendIal9nRGRTeGxHcFRyVmY2YlU3VkN6NGZMZTQzNjZOQ0VBRVJXLXZveGhVbzN5cE9zbnc?oc=5",
+        "title": "'It's not completely under my control but I'm going to try' - After ultra-narrow TT defeat to Pogačar, Ethan Hayter throws hat in ring for red in Vuelta a España - Cyclingnews",
+        "pubDate": "Sun, 23 Aug 2026 10:43:30 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiqgJBVV95cUxOVW1Qdl9MUGJmdnBUaGNvT2hzZ3hHSUtoeGdaRDd1aTFwX3lsV1FXMmlzSHo2cnZqQkdVdmhBUzF6ZlRKMHozbWRBUGx5dDZNbF9zRFJlLXdJbXZGSkVEYi1STFRuSTh2ME1od0g3WEpEUUtUVEVKWUlHalQ1V2U3SU1LQ04yNUpycVZpUkc2dnltT0FaamphbGZyZ2h3RUtnMEpvYlA3dTFNcjd2emt6Y1ZTSlozMk5LMmY1TEdyMFRQbjhRQmtuYm4zWXBrOTIzLVF4RVZaZkUzLVBDZ0pMbVZPVzZFYjh0VlJsa3NMT1ZYRkxseTdEa0d1V2p3WnNxYnc2NEZ3UlBqbjFpUWpWSFh5NWx2T0c0WkZyZEZNdVhLd3hraDVhb2FB?oc=5",
+        "source": "Cyclingnews",
+        "sourceUrl": "https://www.cyclingnews.com"
+      },
+      {
+        "title": "'I will need a bit of luck' – Mathieu van der Poel delivers strong mountain bike return at Les Gets but keeps a lid on World Championships expectations - Cyclingnews",
+        "pubDate": "Mon, 24 Aug 2026 10:40:48 GMT",
+        "link": "https://news.google.com/rss/articles/CBMioAJBVV95cUxQdkNmYXhsZU1UYTNqT2syTUR6NWgzT01wVmdjZTE5TmM1aXRJck5HYjJ5MDVNY3BZN29oMXQ1UDF5b2t4NmRLSS1CYlNOV0pfYklOUnRMcmpvZ2Q1OWxQZFdrZEF4STVrTFBFZFNYSERYdFFBM0lrZ1dkNWJWNTNZSU9UcGpOOGdBNm5CQ3lSZ0Y5cksxMnBXRkg5UHlfbFFmOGp0OGhTc1E4UUxaVW5ydjJEbWFHMGJXREUya1NDZkgyeEdLUU5WeHViLV9VN01zRktJdDU4R2ZCSmhWSGtqR3hLYXJIRHBsMjJ2enN5SUxnUFNkaU1xOThRdHU5STFhWEFzMnlKTzZGZ043bHNGZHNEbHpibUtURVpjZENoLXE?oc=5",
         "source": "Cyclingnews",
         "sourceUrl": "https://www.cyclingnews.com"
       },
@@ -1082,16 +1089,16 @@
         "sourceUrl": "https://www.cyclingweekly.com"
       },
       {
-        "title": "‘The success of gravel revolves around the success of the 99%, not the pros’: Gravel is investing in livestreams but does it actually need fandom? - Cycling Weekly",
-        "pubDate": "Tue, 18 Aug 2026 16:21:48 GMT",
-        "link": "https://news.google.com/rss/articles/CBMikwJBVV95cUxNT2FJYlYyZ0VmV0ZzTmhPbUxDcHhhOElTS1p1NzlZOWNhT0xDTVZ2UGMzOW43TWNuajB3d3ZfRC1DQVUyUG1HelktVS1wdW9aUU96Y3ktOEo3Y3BVSnJwSm1vY2p0SkJYZzVXQzRCbHF2RUM0dVhnREY3cFNpMWdQd3hYaHNld3R4QWdGdERReHczTTVydXRvZG50WGVaSG52Y0k5c0pCcXpKV2ZHUzlmV2p0cVlqdG9zVHJKM3J0WmVmdWkwWk5CRkZwWXZvYjF1OUxOS2xGakpPbEU1ZjJVN0JQSVF4TGdHRHhNdU5xVHFkdF9YbDNxMmVJVzBCaDcwMVNYZ2pJUHFma09Wc3BiUnVZYw?oc=5",
+        "title": "'They went really fast, and I didn't' - Quinn Simmons finishes 9th at Leadville - Cycling Weekly",
+        "pubDate": "Sat, 15 Aug 2026 07:00:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQZmhJVmZZeTJ1Wm4xa1JiNHU0M05rTVdYMlpoaU9yc1gyYnpMTjdmVXF3VnJieU9iZnBhRWZVVEdidmQwN3ZpTHpwazhlWnBLaGxYZXN4ZENYcmFNeTd0RnFFQjlzdU1wMXN0RGxWRHlxX3BvckFHcWliVUNEOEpaRm94NUZMM3ZXNVlfUHJCMzgtZG5HVjlyXzg2cVdIXzBQS1psUGRR?oc=5",
         "source": "Cycling Weekly",
         "sourceUrl": "https://www.cyclingweekly.com"
       },
       {
-        "title": "'They went really fast, and I didn't' - Quinn Simmons finishes 9th at Leadville - Cycling Weekly",
-        "pubDate": "Sat, 15 Aug 2026 07:00:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQZmhJVmZZeTJ1Wm4xa1JiNHU0M05rTVdYMlpoaU9yc1gyYnpMTjdmVXF3VnJieU9iZnBhRWZVVEdidmQwN3ZpTHpwazhlWnBLaGxYZXN4ZENYcmFNeTd0RnFFQjlzdU1wMXN0RGxWRHlxX3BvckFHcWliVUNEOEpaRm94NUZMM3ZXNVlfUHJCMzgtZG5HVjlyXzg2cVdIXzBQS1psUGRR?oc=5",
+        "title": "‘The success of gravel revolves around the success of the 99%, not the pros’: Gravel is investing in livestreams but does it actually need fandom? - Cycling Weekly",
+        "pubDate": "Tue, 18 Aug 2026 16:21:48 GMT",
+        "link": "https://news.google.com/rss/articles/CBMikwJBVV95cUxNT2FJYlYyZ0VmV0ZzTmhPbUxDcHhhOElTS1p1NzlZOWNhT0xDTVZ2UGMzOW43TWNuajB3d3ZfRC1DQVUyUG1HelktVS1wdW9aUU96Y3ktOEo3Y3BVSnJwSm1vY2p0SkJYZzVXQzRCbHF2RUM0dVhnREY3cFNpMWdQd3hYaHNld3R4QWdGdERReHczTTVydXRvZG50WGVaSG52Y0k5c0pCcXpKV2ZHUzlmV2p0cVlqdG9zVHJKM3J0WmVmdWkwWk5CRkZwWXZvYjF1OUxOS2xGakpPbEU1ZjJVN0JQSVF4TGdHRHhNdU5xVHFkdF9YbDNxMmVJVzBCaDcwMVNYZ2pJUHFma09Wc3BiUnVZYw?oc=5",
         "source": "Cycling Weekly",
         "sourceUrl": "https://www.cyclingweekly.com"
       },
@@ -1110,16 +1117,16 @@
         "sourceUrl": "https://www.cyclingweekly.com"
       },
       {
-        "title": "I swapped car miles for e-bike miles, reducing my resting heart rate - Cycling Weekly",
-        "pubDate": "Wed, 19 Aug 2026 08:24:04 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiigJBVV95cUxQS2o5S1NxNGlZdnZ0eWNnSjRYT3dHU1FlYXNtQzVtS0VLQUREb3dVWnRuc0V5dUpnRFNKS1ZndGN0OWYyYVlPV2FhZzd1LTRiczgzNy1Gdi14NzZfVVhrMkQtajNqQVRFLXM5VmktbDZXRVJ2bHVxYzF3ekNOaVYyZ1VPSm52ZVlVaTYzd09WLVFDOWI3MnNrODFScXM3WTR3b01TZnhyd09Vd2x5RXYwVHdWbFVHVlEwN3prVk5INk9Gd1VDQTdiTlRTZU1YQWY4QW5FbkVLRVRIRFYxcUUtVmRwN3pMMC0zMFRJeGJSX0NBOWoyV3U0bExZanZhenBBVmF1b3FPUmYyUQ?oc=5",
+        "title": "From race-ready to all-day adventure: Our editors' top gravel bike picks from Competitive Cyclist - Cycling Weekly",
+        "pubDate": "Sun, 23 Aug 2026 11:05:16 GMT",
+        "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPamJieVNrQ191dWI2ZVhWQVVNRmFXeVA3d3EzUmxzcnNfZlVoYmpGdzJhZW5GN1N4SllfSVhVcmpWN3FpZDNYYUI0M1E2aDQ3WFdzdW12T2s2S3BXSGo2a1d4WFNtcUF6Si0ycGJTNTNQQk5uaVlZclAzWC1hN3Z3SXhiZU9mN0VTRnNMc0JEa29nUkxKTUpJY0RZd1M2UVBXbGlZTVMtYWlkRHZKcndnRHJMMHpyS2h2RURXMW4xNXR5ZHRFVnJhV1IzS2s?oc=5",
         "source": "Cycling Weekly",
         "sourceUrl": "https://www.cyclingweekly.com"
       },
       {
-        "title": "From race-ready to all-day adventure: Our editors' top gravel bike picks from Competitive Cyclist - Cycling Weekly",
-        "pubDate": "Sun, 23 Aug 2026 11:05:16 GMT",
-        "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPamJieVNrQ191dWI2ZVhWQVVNRmFXeVA3d3EzUmxzcnNfZlVoYmpGdzJhZW5GN1N4SllfSVhVcmpWN3FpZDNYYUI0M1E2aDQ3WFdzdW12T2s2S3BXSGo2a1d4WFNtcUF6Si0ycGJTNTNQQk5uaVlZclAzWC1hN3Z3SXhiZU9mN0VTRnNMc0JEa29nUkxKTUpJY0RZd1M2UVBXbGlZTVMtYWlkRHZKcndnRHJMMHpyS2h2RURXMW4xNXR5ZHRFVnJhV1IzS2s?oc=5",
+        "title": "I swapped car miles for e-bike miles, reducing my resting heart rate - Cycling Weekly",
+        "pubDate": "Wed, 19 Aug 2026 08:24:04 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiigJBVV95cUxQS2o5S1NxNGlZdnZ0eWNnSjRYT3dHU1FlYXNtQzVtS0VLQUREb3dVWnRuc0V5dUpnRFNKS1ZndGN0OWYyYVlPV2FhZzd1LTRiczgzNy1Gdi14NzZfVVhrMkQtajNqQVRFLXM5VmktbDZXRVJ2bHVxYzF3ekNOaVYyZ1VPSm52ZVlVaTYzd09WLVFDOWI3MnNrODFScXM3WTR3b01TZnhyd09Vd2x5RXYwVHdWbFVHVlEwN3prVk5INk9Gd1VDQTdiTlRTZU1YQWY4QW5FbkVLRVRIRFYxcUUtVmRwN3pMMC0zMFRJeGJSX0NBOWoyV3U0bExZanZhenBBVmF1b3FPUmYyUQ?oc=5",
         "source": "Cycling Weekly",
         "sourceUrl": "https://www.cyclingweekly.com"
       },
