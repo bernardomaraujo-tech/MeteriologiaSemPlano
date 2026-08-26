@@ -1,7 +1,28 @@
 {
-  "updatedAt": "2026-08-26T09:04:23.310Z",
+  "updatedAt": "2026-08-26T09:58:55.620Z",
   "disciplines": {
     "road": [
+      {
+        "title": "'I'm making some good developments' – Next Dutch sprint star Nienke Veenhoven enjoys best season yet as Maike van der Duin joins her lead-out train",
+        "pubDate": "Wed, 26 Aug 2026 09:54:14 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/im-making-some-good-developments-next-dutch-sprint-star-nienke-veenhoven-enjoys-best-season-yet-as-maike-van-der-duin-joins-her-lead-out-train/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"It gives us a lot of confidence for the rest of the Vuelta\" - Felix Gall satisfied despite vocal criticism of Decathlon CMA CGM tactics",
+        "pubDate": "Wed, 26 Aug 2026 11:47:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/it-gives-us-a-lot-of-confidence-for-the-rest-of-the-vuelta-felix-gall-satisfied-despite-vocal-criticism-of-decathlon-cma-cgm-tactics",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Inside how a quiet hotel became the centre of a dramatic Vuelta a Espana moment - Pogacar and Van Aert walking around lobby, fans handing out towels and children taking selfies",
+        "pubDate": "Wed, 26 Aug 2026 11:15:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/inside-how-a-quiet-hotel-became-the-centre-of-a-dramatic-vuelta-a-espana-moment-pogacar-and-van-aert-walking-around-lobby-fans-handing-out-towels-and-children-taking-selfies",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
       {
         "title": "Cian Uijtdebroeks abandons Vuelta a España as Movistar rider leaves Grand Tour in first week again after Tour de France disappointment",
         "pubDate": "Wed, 26 Aug 2026 10:32:00 +0200",
@@ -206,20 +227,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "“We’re fighting for second place, for the podium... that's the reality” - Enric Mas concedes Vuelta win already out of reach after Tadej Pogacar demolition",
-        "pubDate": "Tue, 25 Aug 2026 18:14:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/were-fighting-for-second-place-for-the-podium-thats-the-reality-enric-mas-concedes-vuelta-win-already-out-of-reach-after-tadej-pogacar-demolition",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "“I never thought that I would ride like this ever” - Tadej Pogacar reaches new heights even he never imagined as Vuelta is blown apart on Stage 4",
-        "pubDate": "Tue, 25 Aug 2026 18:02:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/i-never-thought-that-i-would-ride-like-this-ever-tadej-pogacar-reaches-new-heights-even-he-never-imagined-as-vuelta-is-blown-apart-on-stage-4",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "Vuelta a España: Tadej Pogačar twists the knife with 50km solo raid in Andorra to win stage 4",
         "pubDate": "Tue, 25 Aug 2026 15:35:24 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/racing/vuelta-a-espana-tadej-pogacar-twists-the-knife-with-solo-raid-in-andorra-to-win-stage-4/",
@@ -308,13 +315,6 @@
         "pubDate": "Mon, 24 Aug 2026 19:19:17 +0000",
         "link": "https://www.cyclingweekly.com/news/20-percent-of-people-gave-me-a-barf-emoji-three-made-showstoppers-push-steel-into-new-territory",
         "source": "Cycling Weekly",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Vuelta a España: Stage 3 ends without a winner as extreme weather batters the peloton on the road to first summit finish at Font Romeu",
-        "pubDate": "Mon, 24 Aug 2026 16:09:12 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/racing/vuelta-a-espana-stage-3-ends-without-a-winner-as-extreme-weather-batters-the-peloton-on-the-road-to-first-summit-finish-at-font-romeu/",
-        "source": "Cyclingnews",
         "sourceUrl": ""
       },
       {
@@ -436,13 +436,6 @@
         "title": "Bike Checks - Vital MTB",
         "pubDate": "Wed, 26 Aug 2026 05:55:14 GMT",
         "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFA1NkVsSldZWUVlbGZJX1ZhZ3RPcVNsQVQ5OVF4a0tqeUpOczRxY3N3TW9lMGpHUDJSaExDVGN1R3VldTRKVnpsY29nSEJjN3ls?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
-      },
-      {
-        "title": "Vital MTB - Mountain Bikes, Reviews, Videos, Races - Vital MTB",
-        "pubDate": "Wed, 26 Aug 2026 03:01:51 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiPkFVX3lxTE5JVzJ2YWFYZVJsR2hKRUVobUhnQ3h6OWp4WGdUbEh2Ty1ZUVRqLThSTElzOWh2NnB3OFFzOUR3?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
@@ -685,6 +678,13 @@
         "sourceUrl": "https://www.uci.org"
       },
       {
+        "title": "Enduro / All-Mountain Mountain Bikes - Vital MTB",
+        "pubDate": "Wed, 19 Aug 2026 21:15:15 GMT",
+        "link": "https://news.google.com/rss/articles/CBMihwJBVV95cUxOM0ZpUUZmdHYxVy1pZkVMMEdWNy1xUlBycS1LNkQ1Yl9nc2lOSzVfYlpQTUFoak0wdDc2N0Y4Sl9FdHl6UXprdlNVcU4xUHA2THBlQnB1NkFqTXIxX0lwNmdKTG10V3dtMTRQd3N5dnpnWVlYMXhwdjVHVUdMQnVHUThMcUdTQlRrSWhaQWwyS2hwVVlqbFJvS3lEZ1EwWHRNN1dnSV9WMTFTWl9FcV9NalFObEU1WEpfa0VQTG5fcThjcUUyRTZSLVIzblBfUGttQnNzMGNOMXp2YnZwSEZmSTAwelZGTU1yUGhnV1MtN3c0MzdYNlNzUzFSOGlUZ1pFcUVQMHYxYw?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
         "title": "UCI Mountain Bike Enduro and E-Enduro World Championships to become the speciality’s flagship event from 2027 - UCI.org",
         "pubDate": "Wed, 19 Aug 2026 17:19:17 GMT",
         "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPZjNkVzdLMzNpR040azB1SEZJRHl0TDV0WUFwUVhockVjNzVUOU5OLUJuTDRIbTJjRlVWc2NFZDhyTXpZWlNnek9KMGpIdVlBS01DWUZrQ1JPODF1QkIyWnRVNTlYRVJpaUhINXRxTlBncjY1RE10a2FFUXg4TmRnUUF0OVJTNFQyT1ljbTR3YVJaTWRhMXJBcVBrTURNcGQ5M0t1MExwZmNnR2pNSDY3S3Rqd3VERlN6aThSZ3hsTTlVb2VRaFljUUFyNVMtaUxWaFM2S3hjQkYxSkxpc1RIbTIycko1NXNZYW1kSGhrUHdKSExMbzZn?oc=5",
@@ -708,9 +708,9 @@
         "sourceUrl": "https://cyclocross24.com"
       },
       {
-        "title": "Trek USCX #6 - Charm City Cross 2026 - Women Elite (C2) - Cyclocross24.com",
-        "pubDate": "Wed, 19 Aug 2026 09:04:55 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE01Z0NJdUdHeWMwY2ltS1pLSkp0eURMRFdVYWttWVFiaU4wcXBxcEdzMjFIYWRFZjVGek9FN2NQd3plTGt5Zm9IR3JubFU?oc=5",
+        "title": "Results Superprestige Overijse - Vlaamse Druivencross 2026 - Women Elite - Cyclocross24.com",
+        "pubDate": "Wed, 19 Aug 2026 15:49:02 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9vWkpkSzhPTDlSejkySG81MzhyNXZGWkxPS241b182Q2RwcXdtYnlNVWF6SXF2c0RIdHBxSlJXSTgtU1RfZHJhbDFYYUI?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       }
@@ -848,6 +848,13 @@
         "link": "https://www.gravelcyclist.com/bicycle-tech/the-kegety-quirk-cycles-first-production-gravel-bike/",
         "source": "Gravel Cyclist",
         "sourceUrl": ""
+      },
+      {
+        "title": "The East Coast gravel weekend that's easy on the eyes and hard on the legs - Outside Magazine",
+        "pubDate": "Thu, 20 Aug 2026 16:41:33 GMT",
+        "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNaDNFOW1rbU5IS1Y4UWdxcWtRaGx4LXJiaHhIX1FmdGwwUWJMV2EwaEJneFVKMTFuR1ByVTUxd1Y0UXB3UHQyQ3hLek95VzVvMGtpUDN1VHdIVTJkQ1BpMklmMl9USTFkUzIza25JOXh3QU1JZzFPSWRnU2dOcHQ5ZFNwVWZPbkJ5OW1vSGRIWmZyeGx3V1ZGMUdzWDBsSmNnQTZZWEI3aFBmYlRXelJOR0NxT2FuN0lmRURhOVlDRFZsUlhw?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
       },
       {
         "title": "This Alex Singer bike was built to withstand gravel trails 78-years-ago - Cycling Weekly",
