@@ -125,3 +125,18 @@ test("usa exclusivamente fontes editoriais em inglês", () => {
     assert.doesNotMatch(feedUrl, /wielerflits\.nl/);
   }
 });
+
+test("o agregador dá prioridade a feeds oficiais diretos", () => {
+  const updater = fs.readFileSync(new URL("../scripts/update-cycling-news.mjs", import.meta.url), "utf8");
+  assert.match(updater, /cyclingnews\.com\/feeds\/tag\/pro-cycling/);
+  assert.match(updater, /cyclingweekly\.com\/feeds\/tag\/news/);
+  assert.match(updater, /pinkbike_xml_feed\.php/);
+  assert.match(updater, /vitalmtb\.com\/rss\.xml/);
+  assert.match(updater, /gravelcyclist\.com\/feed/);
+  assert.match(updater, /bikeradar\.com\/rss\/news/);
+  assert.match(updater, /fetchGeneralSource/);
+  assert.match(updater, /return fetchFeed\(discipline, query, recency, null, source\)/);
+  assert.match(updater, /Date\.parse\(second\.pubDate\) - Date\.parse\(first\.pubDate\)/);
+  assert.match(updater, /function matchesDiscipline/);
+  assert.match(updater, /source\?\.exclusiveDiscipline/);
+});
