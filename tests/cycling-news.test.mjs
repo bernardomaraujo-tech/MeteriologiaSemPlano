@@ -95,10 +95,25 @@ test("disponibiliza calendário e ligações oficiais nas quatro disciplinas", (
     for (const source of discipline.sources) {
       assert.match(source.domain, /^[a-z0-9.-]+$/);
       assert.match(source.url, /^https:\/\//);
+      assert.equal(source.language, "en");
     }
     for (const event of discipline.events) {
       assert.match(event.start, /^\d{4}-\d{2}-\d{2}$/);
       assert.match(event.url, /^https:\/\//);
     }
+  }
+});
+
+test("usa exclusivamente fontes editoriais em inglês", () => {
+  const sources = Object.values(helpers.CYCLING_DISCIPLINES).flatMap((discipline) => discipline.sources);
+  assert.ok(sources.length > 0);
+  assert.ok(sources.every((source) => source.language === "en"));
+  assert.ok(!sources.some((source) => source.domain === "wielerflits.nl"));
+
+  for (const discipline of Object.keys(helpers.CYCLING_DISCIPLINES)) {
+    const feedUrl = decodeURIComponent(new URL(helpers.buildCyclingNewsUrl(discipline)).searchParams.get("rss_url"));
+    assert.match(feedUrl, /hl=en-GB/);
+    assert.match(feedUrl, /ceid=GB:en/);
+    assert.doesNotMatch(feedUrl, /wielerflits\.nl/);
   }
 });
