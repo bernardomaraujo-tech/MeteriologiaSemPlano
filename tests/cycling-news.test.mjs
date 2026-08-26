@@ -27,7 +27,7 @@ function loadCyclingHelpers() {
   context.globalThis = context;
   vm.createContext(context);
   const source = fs.readFileSync(new URL("../app.js", import.meta.url), "utf8");
-  vm.runInContext(`${source}\nglobalThis.__cyclingHelpers = { buildCyclingNewsUrl, splitCyclingNewsTitle, inferCyclingNewsType, normaliseCyclingNewsItems, cyclingEventStatus, CYCLING_DISCIPLINES };`, context);
+  vm.runInContext(`${source}\nglobalThis.__cyclingHelpers = { buildCyclingNewsUrl, splitCyclingNewsTitle, inferCyclingNewsType, normaliseCyclingNewsItems, isRecentCyclingNews, cyclingEventStatus, CYCLING_DISCIPLINES };`, context);
   return context.__cyclingHelpers;
 }
 
@@ -42,7 +42,7 @@ test("constrói um feed temático por disciplina", () => {
   assert.match(feedUrl, /downhill/);
   assert.match(feedUrl, /site:pinkbike\.com/);
   assert.match(feedUrl, /site:vitalmtb\.com/);
-  assert.match(feedUrl, /when:30d/);
+  assert.match(feedUrl, /when:7d/);
   assert.match(feedUrl, /ceid=GB:en/);
 });
 
@@ -75,6 +75,14 @@ test("preserva a publicação indicada pelos dados agregados", () => {
     { title: "Uma notícia - Google News", source: "Escape Collective", pubDate: "2026-08-22 10:00:00", link: "https://example.com/a" }
   ]);
   assert.equal(item.source, "Escape Collective");
+});
+
+test("distingue notícias das últimas 24 horas", () => {
+  const now = new Date("2026-08-26T10:00:00Z").getTime();
+  assert.equal(helpers.isRecentCyclingNews("2026-08-26T03:00:00Z", now), true);
+  assert.equal(helpers.isRecentCyclingNews("2026-08-25T10:00:00Z", now), true);
+  assert.equal(helpers.isRecentCyclingNews("2026-08-25T09:59:59Z", now), false);
+  assert.equal(helpers.isRecentCyclingNews("2018-01-01T00:00:00Z", now), false);
 });
 
 test("identifica eventos terminados, a decorrer e futuros", () => {

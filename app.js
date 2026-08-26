@@ -12,9 +12,10 @@ const AUTO_LOCATION_ID = "device_location";
 const DEFAULT_LOCATION_ID = "alcabideche";
 const LOCATION_STORAGE_KEY = "semPlanoMeteoLocationV2";
 const DEVICE_LOCATION_STORAGE_KEY = "semPlanoMeteoDeviceLocationV1";
-const CYCLING_NEWS_CACHE_PREFIX = "semPlanoCyclingNewsV1";
+const CYCLING_NEWS_CACHE_PREFIX = "semPlanoCyclingNewsV2";
 const CYCLING_NEWS_CACHE_MS = 30 * 60 * 1000;
 const CYCLING_NEWS_STALE_MS = 24 * 60 * 60 * 1000;
+const CYCLING_NEWS_RECENT_MS = 24 * 60 * 60 * 1000;
 const CYCLING_NEWS_DATA_URL = "https://raw.githubusercontent.com/bernardomaraujo-tech/MeteriologiaSemPlano/news-data/cycling-news.json";
 
 const CYCLING_NEWS_TYPES = {
@@ -174,6 +175,7 @@ let cyclingDiscipline = "road";
 let cyclingMode = "news";
 let cyclingNewsType = "all";
 let cyclingNewsRunId = 0;
+let cyclingNewsShowOlder = false;
 const cyclingNewsMemory = new Map();
 
 function setText(idOrElement, value) {
@@ -916,7 +918,7 @@ function writeCyclingNewsCache(discipline, type, value) {
 
 function buildCyclingNewsUrl(discipline) {
   const config = CYCLING_DISCIPLINES[discipline] || CYCLING_DISCIPLINES.road;
-  const recency = discipline === "cyclocross" ? "when:60d" : "when:30d";
+  const recency = "when:7d";
   const approvedSources = config.sources
     .filter((source) => source.language === "en")
     .map((source) => `site:${source.domain}`)
@@ -1030,20 +1032,33 @@ function cyclingNewsTypeLabel(type) {
   return CYCLING_NEWS_TYPES[type]?.label || "Atualidade";
 }
 
+function isRecentCyclingNews(value, now = Date.now()) {
+  const publishedAt = new Date(value).getTime();
+  return Number.isFinite(publishedAt) && publishedAt <= now + 60 * 60 * 1000 && now - publishedAt <= CYCLING_NEWS_RECENT_MS;
+}
+
 function renderCyclingNews(items, fetchedAt, { stale = false } = {}) {
   const config = CYCLING_DISCIPLINES[cyclingDiscipline];
   const matchingItems = cyclingNewsType === "all" ? items : items.filter((item) => item.type === cyclingNewsType);
-  const visibleItems = matchingItems.slice(0, 12);
+  const now = Date.now();
+  const recentItems = matchingItems.filter((item) => isRecentCyclingNews(item.publishedAt, now));
+  const olderCount = Math.max(0, matchingItems.length - recentItems.length);
+  const visibleItems = (cyclingNewsShowOlder ? matchingItems : recentItems).slice(0, 12);
+  const olderToggle = olderCount ? `
+    <button class="cycling-news-more" id="toggleOlderCyclingNews" type="button">
+      ${cyclingNewsShowOlder ? "Mostrar apenas as últimas 24 horas" : `Ver notícias anteriores (${olderCount})`}
+    </button>
+  ` : "";
   const feature = $("cyclingFeature");
   setText("cyclingFeedTitle", config.label);
-  setText("cyclingNewsCount", String(visibleItems.length));
+  setText("cyclingNewsCount", `${recentItems.length} · 24h`);
 
   if (!visibleItems.length) {
     if (feature) feature.hidden = true;
     setHTML("cyclingNewsList", `
       <div class="cycling-empty">
-        <p>Não foram encontradas notícias recentes para este filtro.</p>
-        <a href="${escapeHtml(config.fallbackUrl)}" target="_blank" rel="noopener noreferrer">Abrir fonte especializada</a>
+        <p>Não foram publicadas notícias nas últimas 24 horas para este filtro.</p>
+        ${olderToggle || `<a href="${escapeHtml(config.fallbackUrl)}" target="_blank" rel="noopener noreferrer">Abrir fonte especializada</a>`}
       </div>
     `);
   } else {
@@ -1056,7 +1071,7 @@ function renderCyclingNews(items, fetchedAt, { stale = false } = {}) {
         <a href="${escapeHtml(highlight.url)}" target="_blank" rel="noopener noreferrer">Ler notícia <svg><use href="#i-external"/></svg></a>
       `;
     }
-    setHTML("cyclingNewsList", remaining.length ? remaining.map((item) => `
+    const remainingMarkup = remaining.length ? remaining.map((item) => `
       <a class="cycling-news-item" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">
         <span class="news-marker" aria-hidden="true"></span>
         <div class="cycling-news-copy">
@@ -1066,11 +1081,17 @@ function renderCyclingNews(items, fetchedAt, { stale = false } = {}) {
         </div>
         <svg><use href="#i-external"/></svg>
       </a>
-    `).join("") : `<div class="cycling-empty"><p>Esta é a única notícia recente encontrada para o filtro selecionado.</p></div>`);
+    `).join("") : `<div class="cycling-empty"><p>Esta é a única notícia publicada nas últimas 24 horas.</p></div>`;
+    setHTML("cyclingNewsList", `${remainingMarkup}${olderToggle}`);
   }
 
+  $("toggleOlderCyclingNews")?.addEventListener("click", () => {
+    cyclingNewsShowOlder = !cyclingNewsShowOlder;
+    renderCyclingNews(items, fetchedAt, { stale });
+  });
+
   const updateLabel = new Date(fetchedAt).toLocaleTimeString("pt-PT", { hour: "2-digit", minute: "2-digit" });
-  setText("cyclingNewsSource", `${stale ? "Última atualização guardada" : "Atualizado"} às ${updateLabel} · fontes editoriais em inglês`);
+  setText("cyclingNewsSource", `${stale ? "Última atualização guardada" : "Atualizado"} às ${updateLabel} · ${recentItems.length} nas últimas 24 h · fontes em inglês`);
 }
 
 function renderCyclingSources() {
@@ -1186,6 +1207,7 @@ function renderCyclingCalendar() {
 function setCyclingDiscipline(discipline) {
   if (!CYCLING_DISCIPLINES[discipline]) return;
   cyclingDiscipline = discipline;
+  cyclingNewsShowOlder = false;
   $("viewCycling")?.setAttribute("data-discipline", discipline);
   $$('[data-cycling-discipline]').forEach((button) => button.classList.toggle("is-active", button.dataset.cyclingDiscipline === discipline));
   setText("cyclingFeedTitle", CYCLING_DISCIPLINES[discipline].label);
@@ -1207,6 +1229,7 @@ function setCyclingMode(mode) {
 function setCyclingNewsType(type) {
   if (!CYCLING_NEWS_TYPES[type]) return;
   cyclingNewsType = type;
+  cyclingNewsShowOlder = false;
   $$('[data-news-type]').forEach((button) => button.classList.toggle("is-active", button.dataset.newsType === type));
   loadCyclingNews();
 }
