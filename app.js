@@ -33,12 +33,11 @@ const CYCLING_DISCIPLINES = {
     feedTerms: 'WorldTour OR Vuelta OR Giro OR "Tour de France" OR "Volta a Portugal"',
     fallbackUrl: "https://www.cyclingnews.com/pro-cycling/",
     sources: [
-      { name: "Cyclingnews", domain: "cyclingnews.com", url: "https://www.cyclingnews.com/pro-cycling/" },
-      { name: "Escape Collective", domain: "escapecollective.com", url: "https://escapecollective.com/" },
-      { name: "Cycling Weekly", domain: "cyclingweekly.com", url: "https://www.cyclingweekly.com/news" },
-      { name: "VELO", domain: "velo.outsideonline.com", url: "https://velo.outsideonline.com/" },
-      { name: "WielerFlits", domain: "wielerflits.nl", url: "https://www.wielerflits.nl/" },
-      { name: "CyclingUpToDate", domain: "cyclinguptodate.com", url: "https://cyclinguptodate.com/" }
+      { name: "Cyclingnews", domain: "cyclingnews.com", url: "https://www.cyclingnews.com/pro-cycling/", language: "en" },
+      { name: "Escape Collective", domain: "escapecollective.com", url: "https://escapecollective.com/", language: "en" },
+      { name: "Cycling Weekly", domain: "cyclingweekly.com", url: "https://www.cyclingweekly.com/news", language: "en" },
+      { name: "VELO", domain: "velo.outsideonline.com", url: "https://velo.outsideonline.com/", language: "en" },
+      { name: "CyclingUpToDate", domain: "cyclinguptodate.com", url: "https://cyclinguptodate.com/", language: "en" }
     ],
     calendarUrl: "https://www.uci.org/calendar/road/2ruOnavHX0dMGTCRozdYAU",
     rankingsUrl: "https://www.uci.org/discipline/road/6TBjsDD8902tud440iv1Cu?tab=rankings",
@@ -60,11 +59,11 @@ const CYCLING_DISCIPLINES = {
     feedTerms: '"mountain bike racing" OR "UCI mountain bike" OR XCO OR downhill OR enduro',
     fallbackUrl: "https://www.pinkbike.com/news/",
     sources: [
-      { name: "Pinkbike", domain: "pinkbike.com", url: "https://www.pinkbike.com/news/" },
-      { name: "Vital MTB", domain: "vitalmtb.com", url: "https://www.vitalmtb.com/" },
-      { name: "Escape Collective", domain: "escapecollective.com", url: "https://escapecollective.com/" },
-      { name: "VELO", domain: "velo.outsideonline.com", url: "https://velo.outsideonline.com/" },
-      { name: "UCI", domain: "uci.org", url: "https://www.uci.org/discipline/mountain-bike/4LArSj7CKcytMrGEDtKwkb" }
+      { name: "Pinkbike", domain: "pinkbike.com", url: "https://www.pinkbike.com/news/", language: "en" },
+      { name: "Vital MTB", domain: "vitalmtb.com", url: "https://www.vitalmtb.com/", language: "en" },
+      { name: "Escape Collective", domain: "escapecollective.com", url: "https://escapecollective.com/", language: "en" },
+      { name: "VELO", domain: "velo.outsideonline.com", url: "https://velo.outsideonline.com/", language: "en" },
+      { name: "UCI", domain: "uci.org", url: "https://www.uci.org/discipline/mountain-bike/4LArSj7CKcytMrGEDtKwkb", language: "en" }
     ],
     calendarUrl: "https://www.ucimtbworldseries.com/calendar",
     rankingsUrl: "https://www.uci.org/discipline/mountain-bike/4LArSj7CKcytMrGEDtKwkb?tab=rankings",
@@ -84,11 +83,11 @@ const CYCLING_DISCIPLINES = {
     feedTerms: 'cyclocross OR "cyclo-cross"',
     fallbackUrl: "https://www.uci.org/news/cyclo-cross/3aOLVmpqkjVcCGvqtRv5KJ",
     sources: [
-      { name: "WielerFlits", domain: "wielerflits.nl", url: "https://www.wielerflits.nl/" },
-      { name: "Cyclocross Magazine", domain: "cxmagazine.com", url: "https://www.cxmagazine.com/" },
-      { name: "Cyclocross24", domain: "cyclocross24.com", url: "https://cyclocross24.com/" },
-      { name: "Cyclingnews", domain: "cyclingnews.com", url: "https://www.cyclingnews.com/" },
-      { name: "UCI", domain: "uci.org", url: "https://www.uci.org/news/cyclo-cross/3aOLVmpqkjVcCGvqtRv5KJ" }
+      { name: "Cyclocross Magazine", domain: "cxmagazine.com", url: "https://www.cxmagazine.com/", language: "en" },
+      { name: "Cyclocross24", domain: "cyclocross24.com", url: "https://cyclocross24.com/", language: "en" },
+      { name: "Cyclingnews", domain: "cyclingnews.com", url: "https://www.cyclingnews.com/", language: "en" },
+      { name: "CyclingUpToDate", domain: "cyclinguptodate.com", url: "https://cyclinguptodate.com/cyclocross", language: "en" },
+      { name: "UCI", domain: "uci.org", url: "https://www.uci.org/news/cyclo-cross/3aOLVmpqkjVcCGvqtRv5KJ", language: "en" }
     ],
     calendarUrl: "https://www.ucicyclocrossworldcup.com/en/calendar",
     rankingsUrl: "https://www.uci.org/discipline/cyclo-cross/27qDl3RfvZBNwx1GhqJTwj?tab=rankings",
@@ -111,12 +110,12 @@ const CYCLING_DISCIPLINES = {
     feedTerms: '"gravel racing" OR "UCI Gravel" OR "gravel cycling"',
     fallbackUrl: "https://www.uci.org/news/gravel/2WbYbNOvkUCAmWf7Mf6VtR",
     sources: [
-      { name: "Escape Collective", domain: "escapecollective.com", url: "https://escapecollective.com/" },
-      { name: "VELO", domain: "velo.outsideonline.com", url: "https://velo.outsideonline.com/" },
-      { name: "Gravel Cyclist", domain: "gravelcyclist.com", url: "https://www.gravelcyclist.com/" },
-      { name: "Cyclingnews", domain: "cyclingnews.com", url: "https://www.cyclingnews.com/" },
-      { name: "Cycling Weekly", domain: "cyclingweekly.com", url: "https://www.cyclingweekly.com/news" },
-      { name: "BikeRadar", domain: "bikeradar.com", url: "https://www.bikeradar.com/gravel" }
+      { name: "Escape Collective", domain: "escapecollective.com", url: "https://escapecollective.com/", language: "en" },
+      { name: "VELO", domain: "velo.outsideonline.com", url: "https://velo.outsideonline.com/", language: "en" },
+      { name: "Gravel Cyclist", domain: "gravelcyclist.com", url: "https://www.gravelcyclist.com/", language: "en" },
+      { name: "Cyclingnews", domain: "cyclingnews.com", url: "https://www.cyclingnews.com/", language: "en" },
+      { name: "Cycling Weekly", domain: "cyclingweekly.com", url: "https://www.cyclingweekly.com/news", language: "en" },
+      { name: "BikeRadar", domain: "bikeradar.com", url: "https://www.bikeradar.com/gravel", language: "en" }
     ],
     calendarUrl: "https://ucigravelworldseries.com/en/calendar/",
     rankingsUrl: "https://www.uci.org/discipline/gravel/5secLRyYas3xItHITvmXRd?tab=results",
@@ -918,7 +917,10 @@ function writeCyclingNewsCache(discipline, type, value) {
 function buildCyclingNewsUrl(discipline) {
   const config = CYCLING_DISCIPLINES[discipline] || CYCLING_DISCIPLINES.road;
   const recency = discipline === "cyclocross" ? "when:60d" : "when:30d";
-  const approvedSources = config.sources.map((source) => `site:${source.domain}`).join(" OR ");
+  const approvedSources = config.sources
+    .filter((source) => source.language === "en")
+    .map((source) => `site:${source.domain}`)
+    .join(" OR ");
   const query = [`(${config.feedTerms})`, `(${approvedSources})`, recency].filter(Boolean).join(" ");
   const feedUrl = `https://news.google.com/rss/search?${new URLSearchParams({
     q: query,
@@ -1068,7 +1070,7 @@ function renderCyclingNews(items, fetchedAt, { stale = false } = {}) {
   }
 
   const updateLabel = new Date(fetchedAt).toLocaleTimeString("pt-PT", { hour: "2-digit", minute: "2-digit" });
-  setText("cyclingNewsSource", `${stale ? "Última atualização guardada" : "Atualizado"} às ${updateLabel} · títulos no idioma original`);
+  setText("cyclingNewsSource", `${stale ? "Última atualização guardada" : "Atualizado"} às ${updateLabel} · fontes editoriais em inglês`);
 }
 
 function renderCyclingSources() {

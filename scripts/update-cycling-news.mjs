@@ -8,36 +8,40 @@ const MAX_ITEMS_PER_DISCIPLINE = 60;
 
 const SOURCES = {
   road: [
-    { name: "Cyclingnews", domain: "cyclingnews.com" },
-    { name: "Escape Collective", domain: "escapecollective.com" },
-    { name: "Cycling Weekly", domain: "cyclingweekly.com" },
-    { name: "VELO", domain: "velo.outsideonline.com" },
-    { name: "WielerFlits", domain: "wielerflits.nl", locale: { hl: "nl", gl: "NL", ceid: "NL:nl" } },
-    { name: "CyclingUpToDate", domain: "cyclinguptodate.com" }
+    { name: "Cyclingnews", domain: "cyclingnews.com", language: "en" },
+    { name: "Escape Collective", domain: "escapecollective.com", language: "en" },
+    { name: "Cycling Weekly", domain: "cyclingweekly.com", language: "en" },
+    { name: "VELO", domain: "velo.outsideonline.com", language: "en" },
+    { name: "CyclingUpToDate", domain: "cyclinguptodate.com", language: "en" }
   ],
   mtb: [
-    { name: "Pinkbike", domain: "pinkbike.com" },
-    { name: "Vital MTB", domain: "vitalmtb.com" },
-    { name: "Escape Collective", domain: "escapecollective.com" },
-    { name: "VELO", domain: "velo.outsideonline.com" },
-    { name: "UCI", domain: "uci.org" }
+    { name: "Pinkbike", domain: "pinkbike.com", language: "en" },
+    { name: "Vital MTB", domain: "vitalmtb.com", language: "en" },
+    { name: "Escape Collective", domain: "escapecollective.com", language: "en" },
+    { name: "VELO", domain: "velo.outsideonline.com", language: "en" },
+    { name: "UCI", domain: "uci.org", language: "en" }
   ],
   cyclocross: [
-    { name: "WielerFlits", domain: "wielerflits.nl", locale: { hl: "nl", gl: "NL", ceid: "NL:nl" } },
-    { name: "Cyclocross Magazine", domain: "cxmagazine.com" },
-    { name: "Cyclocross24", domain: "cyclocross24.com" },
-    { name: "Cyclingnews", domain: "cyclingnews.com" },
-    { name: "UCI", domain: "uci.org" }
+    { name: "Cyclocross Magazine", domain: "cxmagazine.com", language: "en" },
+    { name: "Cyclocross24", domain: "cyclocross24.com", language: "en" },
+    { name: "Cyclingnews", domain: "cyclingnews.com", language: "en" },
+    { name: "CyclingUpToDate", domain: "cyclinguptodate.com", language: "en" },
+    { name: "UCI", domain: "uci.org", language: "en" }
   ],
   gravel: [
-    { name: "Escape Collective", domain: "escapecollective.com" },
-    { name: "VELO", domain: "velo.outsideonline.com" },
-    { name: "Gravel Cyclist", domain: "gravelcyclist.com" },
-    { name: "Cyclingnews", domain: "cyclingnews.com" },
-    { name: "Cycling Weekly", domain: "cyclingweekly.com" },
-    { name: "BikeRadar", domain: "bikeradar.com" }
+    { name: "Escape Collective", domain: "escapecollective.com", language: "en" },
+    { name: "VELO", domain: "velo.outsideonline.com", language: "en" },
+    { name: "Gravel Cyclist", domain: "gravelcyclist.com", language: "en" },
+    { name: "Cyclingnews", domain: "cyclingnews.com", language: "en" },
+    { name: "Cycling Weekly", domain: "cyclingweekly.com", language: "en" },
+    { name: "BikeRadar", domain: "bikeradar.com", language: "en" }
   ]
 };
+
+for (const [discipline, sources] of Object.entries(SOURCES)) {
+  const invalidSource = sources.find((source) => source.language !== "en");
+  if (invalidSource) throw new Error(`${discipline}: a fonte ${invalidSource.name} não está marcada como inglesa`);
+}
 
 const FEEDS = {
   road: {
