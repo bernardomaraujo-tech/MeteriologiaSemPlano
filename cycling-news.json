@@ -1,7 +1,21 @@
 {
-  "updatedAt": "2026-08-26T09:58:55.620Z",
+  "updatedAt": "2026-08-26T10:52:42.114Z",
   "disciplines": {
     "road": [
+      {
+        "title": "LIVE - Vuelta a España Stage 5 - Visma and Lidl-Trek battle for victory or will the breakaway prevail?",
+        "pubDate": "Wed, 26 Aug 2026 12:35:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/live-vuelta-a-espana-stage-5-visma-and-lidl-trek-battle-for-victory-or-will-the-breakaway-prevail",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"I would rather finish a fighting second and be asked what on earth we are doing\" - Evenepoel's Tour de France ambitions blasted as Van Hooydonck criticises Red Bull",
+        "pubDate": "Wed, 26 Aug 2026 12:29:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/i-would-rather-finish-a-fighting-second-and-be-asked-what-on-earth-we-are-doing-evenepoels-tour-de-france-ambitions-blasted-as-van-hooydonck-criticises-red-bull",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
       {
         "title": "'I'm making some good developments' – Next Dutch sprint star Nienke Veenhoven enjoys best season yet as Maike van der Duin joins her lead-out train",
         "pubDate": "Wed, 26 Aug 2026 09:54:14 +0000",
@@ -202,20 +216,6 @@
         "title": "Medical Reports & Withdrawals Vuelta a Espana 2026 Stage 4",
         "pubDate": "Tue, 25 Aug 2026 19:01:00 +0200",
         "link": "https://cyclinguptodate.com/cycling/medical-reports-withdrawals-vuelta-a-espana-2026-stage-4",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "“I was half expecting to completely lose GC” - Oscar Onley goes from overnight sickness scare to fifth overall and Vuelta white jersey",
-        "pubDate": "Tue, 25 Aug 2026 19:00:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/i-was-half-expecting-to-completely-lose-gc-oscar-onley-goes-from-overnight-sickness-scare-to-fifth-overall-and-vuelta-white-jersey",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "“Second behind the best rider ever isn’t bad, is it?” - Jarno Widar announces himself at Grand Tour level with breakthrough Vuelta ride",
-        "pubDate": "Tue, 25 Aug 2026 18:36:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/second-behind-the-best-rider-ever-isnt-bad-is-it-jarno-widar-announces-himself-at-grand-tour-level-with-breakthrough-vuelta-ride",
         "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
@@ -426,7 +426,14 @@
     ],
     "mtb": [
       {
-        "title": "Spotted: Martin Maes To Race World Champs On A 32\" / 29\" Orbea Rallon DH - Val Di Sole 2026",
+        "title": "Video: A Week in Vang, Norway Riding Hefty Bike Park with Makken &amp; Friends",
+        "pubDate": "Wed, 26 Aug 2026 00:00:00 PDT",
+        "link": "https://www.pinkbike.com/news/a-week-in-vang-norway-riding-hefty-bike-park-with-makken-and-friends.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Spotted: Martin Maes To Race World Champs On A 32\" / 27.5” Orbea Rallon DH - Val Di Sole 2026",
         "pubDate": "Wed, 26 Aug 2026 00:00:00 PDT",
         "link": "https://www.pinkbike.com/news/spotted-martin-maes-to-race-world-champs-on-a-32--29-orbea-rallon-dh-val-di-sole-2026.html?trk=rss",
         "source": "Pinkbike",
@@ -608,13 +615,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "Battery Fire Heavily Damages Historic Vancouver Island Bike Shop &amp; Hostel",
-        "pubDate": "Mon, 24 Aug 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/fire-heavily-damages-a-historic-vancouver-island-mtb-hub.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
         "title": "mfoga - Vital MTB",
         "pubDate": "Mon, 24 Aug 2026 04:17:27 GMT",
         "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE92T0hEN29GdC11ZDBwWS1VTEtQZmVqWFpwNEZobVRORHlwcVRDVTZQeTJ3c3BNYzltV3lUczFWYWtJOF9ENmF3SWVfSkVuMlpIUHRUMEI3TjlQa0tZSnNR?oc=5",
@@ -667,13 +667,6 @@
         "title": "2026 UCI Mountain Bike World Championships: Pidcock and Van der Poel join XCO line-up - UCI.org",
         "pubDate": "Thu, 20 Aug 2026 14:37:59 GMT",
         "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPV0JMWndlTzE5dG83Y1ktRmRsRGJyc3QwMmVMYzFHRVZLcnE2VFNUY05hN2E1NzY3NkYwMXgyOW9sMkpIMm90b29VNXN6QkxDNkRqa0RfcW5ZRVZtUmI2N0FuSEF6VGNIdE1BRUY3TFJ2Ry1BYVVLUS0tMDJCbGIzbExHRjB2aVR5VEFyT0s0MWNqelFVQy15WE1mbUNWWDVpTDg1SlQ3TVJRU3d6cXlrWDEyVDlFaG9mVnFIeWpHV1JuazRmWjN5SDNqb1FPc1dI?oc=5",
-        "source": "UCI",
-        "sourceUrl": "https://www.uci.org"
-      },
-      {
-        "title": "2026 UCI Mountain Bike World Championships: star-studded XCC fields - UCI.org",
-        "pubDate": "Thu, 20 Aug 2026 06:38:42 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOSTBmVE14Q0R3LXFsSE5zdk0yblJndjBVNV81cDdNTlhpYk9DQWxLNDZIOXRPRm53VGVwUU50ZGVTZmVDcHVhZ1lqcXM4U1ZxRklSQk1BeXVoNmdwaVl2cEdUT3drcmxkSlpyRlEwNGFscWkzSm1HeVMxc0dvWEduanJMRU04LVFreWNkRDRidEF0bGJZWHJTMTV5a1FWZFcwRzdCUlFhT3lMLWZkZEtjMHZPU0pCNkdi?oc=5",
         "source": "UCI",
         "sourceUrl": "https://www.uci.org"
       },
