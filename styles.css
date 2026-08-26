@@ -702,6 +702,17 @@ h1, h2, p { margin-top: 0; }
 .cycling-news-copy small { display: block; overflow: hidden; color: var(--muted); font-size: .61rem; white-space: nowrap; text-overflow: ellipsis; }
 .cycling-news-item > svg { width: 16px; height: 16px; color: var(--muted-2); }
 .cycling-news-item:hover { background: color-mix(in srgb, var(--discipline-soft) 46%, white); }
+.cycling-news-more {
+  width: calc(100% - 30px);
+  min-height: 42px;
+  margin: 12px 15px 15px;
+  border: 1px solid color-mix(in srgb, var(--discipline) 24%, var(--line));
+  border-radius: 13px;
+  background: var(--discipline-soft);
+  color: var(--discipline-dark);
+  font-size: .68rem;
+  font-weight: 750;
+}
 
 .cycling-loading, .cycling-empty {
   min-height: 160px;

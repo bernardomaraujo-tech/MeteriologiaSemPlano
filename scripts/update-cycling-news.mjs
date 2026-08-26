@@ -5,6 +5,8 @@ const OUTPUT_PATH = path.resolve(process.argv[2] || "cycling-news.json");
 const MAX_ITEMS_PER_QUERY = 12;
 const MAX_GENERAL_ITEMS_PER_SOURCE = 8;
 const MAX_ITEMS_PER_DISCIPLINE = 60;
+const MAX_GENERAL_AGE_MS = 7 * 24 * 60 * 60 * 1000;
+const MAX_TRANSFER_AGE_MS = 30 * 24 * 60 * 60 * 1000;
 
 const SOURCES = {
   road: [
@@ -63,10 +65,10 @@ const FEEDS = {
 };
 
 const RECENCY = {
-  road: { general: "when:30d", transfers: "when:120d" },
-  mtb: { general: "when:30d", transfers: "when:120d" },
-  cyclocross: { general: "when:60d", transfers: "when:180d" },
-  gravel: { general: "when:30d", transfers: "when:180d" }
+  road: { general: "when:7d", transfers: "when:30d" },
+  mtb: { general: "when:7d", transfers: "when:30d" },
+  cyclocross: { general: "when:7d", transfers: "when:30d" },
+  gravel: { general: "when:7d", transfers: "when:30d" }
 };
 
 function decodeXml(value) {
@@ -123,6 +125,11 @@ function looksLikeTransfer(title) {
   return /transfer|rumou?r|\bsigns?\b|\bsigned\b|contract|\bjoins?\b|renewal|\bextends?\b|\bmoves?\b|\bdeal\b/i.test(title);
 }
 
+function hasAcceptableAge(item, maxAgeMs, now = Date.now()) {
+  const publishedAt = Date.parse(item.pubDate);
+  return Number.isFinite(publishedAt) && publishedAt <= now + 60 * 60 * 1000 && now - publishedAt <= maxAgeMs;
+}
+
 function approvedSource(sourceUrl, sources) {
   try {
     const hostname = new URL(sourceUrl).hostname.replace(/^www\./, "");
@@ -147,7 +154,8 @@ async function fetchFeed(discipline, query, recency, type = null, requestedSourc
   const items = parseItems(await response.text())
     .map((item) => ({ item, source: approvedSource(item.sourceUrl, requestedSources) }))
     .filter(({ source }) => source)
-    .map(({ item, source }) => ({ ...item, source: source.name }));
+    .map(({ item, source }) => ({ ...item, source: source.name }))
+    .filter((item) => hasAcceptableAge(item, type ? MAX_TRANSFER_AGE_MS : MAX_GENERAL_AGE_MS));
   if (!items.length) throw new Error(`${discipline}: feed sem notícias`);
   return type ? items.filter((item) => looksLikeTransfer(item.title)).map((item) => ({ ...item, type })) : items;
 }
