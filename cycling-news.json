@@ -1,7 +1,28 @@
 {
-  "updatedAt": "2026-08-30T23:31:43.332Z",
+  "updatedAt": "2026-08-31T05:38:55.560Z",
   "disciplines": {
     "road": [
+      {
+        "title": "\"You should never give up, you have to keep trying\" - Alex Aranburu's many attempts are rewarded with a first WorldTour Classic win",
+        "pubDate": "Mon, 31 Aug 2026 06:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/you-should-never-give-up-you-have-to-keep-trying-alex-aranburus-many-attempts-are-rewarded-with-a-first-worldtour-classic-win",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Mads Würtz Schmidt goes solo to defend men's European gravel title as Femke Markus sweeps up women's jersey in Houffalize sprint",
+        "pubDate": "Mon, 31 Aug 2026 01:13:10 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/racing/mads-wurtz-schmidt-goes-solo-to-defend-mens-european-gravel-title-as-femke-markus-sweeps-up-womens-jersey-in-houffalize-sprint/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"I thought I had a bigger lead\" - Santiago Buitrago blames breakaway's failure to win stage 9 partly to poor information",
+        "pubDate": "Mon, 31 Aug 2026 03:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/i-thought-i-had-a-bigger-lead-santiago-buitrago-blames-breakaways-failure-to-win-stage-9-partly-to-poor-information",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
       {
         "title": "\"I trust Quick-Step 100%\" - Paul Magnier refuses offer to join Red Bull - BORA - hansgrohe",
         "pubDate": "Mon, 31 Aug 2026 01:00:00 +0200",
@@ -55,6 +76,13 @@
         "title": "Worse Than Feared: Pogačar Breaks Collarbone, Fractures Neck, Suffers Concussion - Outside Magazine",
         "pubDate": "Sun, 30 Aug 2026 17:48:10 GMT",
         "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOalJwTHFROUkzMXRlMEI2Qlcwd1RTVC1SektWcVZydUMwQ08xZUhOZDFIVjJiX29HWmFaTjAtQ05veHFHNUF4Y3RRcGw2ZDYzNTl0N01Xc1RiclNVTjcyR2xKWXFjR2pBTDhaMU16dUdrRFVWVlFXWEJFZFR2cV9lUWhfaDJSeVMwTDIxY0pOX09yaFNQX2JnbEVRaTVuRTBIZGxHeGhoLUREVlNaUFQyM090RmlWak5PdzlmeUo0R3EzdjZORjdCa3dXZFVGbTQ?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
+      },
+      {
+        "title": "Vuelta a España Stage 9: Mas Wins Atop Alto de Aitana, Tightens Hold on Red Jersey - Outside Magazine",
+        "pubDate": "Sun, 30 Aug 2026 17:26:09 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOMjE3X0tULUY0eXhkLTFFN3NfN1d2VWlxU1BwdU0zQUFfU1d1aEdueE04OHJ3aks4MnF2dF9xRzB6VTNibG55dlJNMXF4dnF6R1l5d3RGRnYyWHFpX0ZsRnNDYkg3WWFqdUl5Nk96MkZ6UUhlYzZNbFBNajhXNjMtWDF0MGstN2ZkWnVwc3BpNnVWZ21SSHQ0MlJNcDlLWlNKQXhLSGY0aUlZUQ?oc=5",
         "source": "VELO",
         "sourceUrl": "https://velo.outsideonline.com"
       },
@@ -171,13 +199,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "MTB World Championships: Tom Pidcock Powers to Incredible Victory, Van der Poel Out of the Picture - Outside Magazine",
-        "pubDate": "Sun, 30 Aug 2026 15:03:34 GMT",
-        "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOZi13OU14WEtNM0IwMm12QnZ3RjJqaWdLZVNpMl9zQnZpbHhEb1RfQUhvenoxS3hnUTc4M0lpdF9LVE5zbHF1TlRWSEtWaEtiRXk3UnJJSklYQk05OUVTTnJvYmZZbW9jUFJ1dThVXzZ0VzZuVHNRenExQkw4Tmk3blBQMmEtQ29LNk1hUnp5UlNJeDZaZHU1enltaU1RUTcwbm9jTjNn?oc=5",
-        "source": "VELO",
-        "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
         "title": "Only One Hand on the Bars at 60kph: New Details in Tadej Pogačar’s Devastating Vuelta Crash - Outside Magazine",
         "pubDate": "Sun, 30 Aug 2026 15:03:06 GMT",
         "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQd0pPWmo3azdnZDE1eWhFUWJvVnBtRXIzbzdvQU1yUDYtWE0waHUxNVNBZ2czdklOY0lGRTlhZndjMzZ6MUNmQ2tUX2xSRTl4Qzh0bUpyNERFMWxXZ184bGdIYTFmb1U2SWs4QmJ3SmtPZlJEU3R0WVZCcnlXcDRPOHE5cXVRa25mLWhubGZIbC1ldGc5aXhITFY2X0N1dGZpbktVem1zcjlFUQ?oc=5",
@@ -206,24 +227,10 @@
         "sourceUrl": ""
       },
       {
-        "title": "“There’s not one rider who’s super dominant... it’ll be exciting” - GC Kuss senses opportunity in Tadej Pogacar’s absence to reclaim Vuelta crown",
-        "pubDate": "Sun, 30 Aug 2026 15:00:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/theres-not-one-rider-whos-super-dominant-itll-be-exciting-gc-kuss-senses-opportunity-in-tadej-pogacars-absence-to-reclaim-vuelta-crown",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "Watch the Philadelphia Cycling Classic live on Cyclingnews",
         "pubDate": "Sun, 30 Aug 2026 12:49:16 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/racing/watch-the-philadelphia-cycling-classic-live-on-cyclingnews/",
         "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "“We don’t know whether it was a GoPro or a stone” - Tadej Pogacar “in a bad way” says UAE boss Matxin, as confusion reigns over cause of Vuelta-ending crash",
-        "pubDate": "Sun, 30 Aug 2026 14:30:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/we-dont-know-whether-it-was-a-gopro-or-a-stone-tadej-pogacar-in-a-bad-way-says-uae-boss-matxin-as-confusion-reigns-over-cause-of-vuelta-ending-crash",
-        "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
       {
@@ -353,13 +360,6 @@
         "sourceUrl": "https://velo.outsideonline.com"
       },
       {
-        "title": "‘Right now we have to be with Tadej the person' - UAE Team Emirates-XRG management prioritize Pogačar's recovery after Vuelta a España leader crashes out of race",
-        "pubDate": "Sat, 29 Aug 2026 17:50:52 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/right-now-we-have-to-be-with-tadej-the-person-uae-team-emirates-xrg-management-prioritize-pogacars-recovery-after-vuelta-a-espana-leader-crashes-out-of-race/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
         "title": "Vuelta a España Stage 8: Coquard Wins First Grand Tour Stage, Pogačar Crashes Out - Outside Magazine",
         "pubDate": "Sat, 29 Aug 2026 17:13:35 GMT",
         "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPQTJ5MDZBUHBQajRBcGRoUGxsYk1RYkdieTY3QjJGU09ReWpfbGs3X2tpenlwOTJWbDh2TXlUckpVTEo1bW9panlrWTM2Vm1YbVhHOFZqS09nOXRWZnRLM2dJWnpVYUNnaS1lQzlRLXg3d0ZEYmJLUm16WmNCdXNNN0pudkR0VktwWWhWNVI0RE56SGZPMkJsZVlFUlJpSVlpdFVmSGo0ZlkzdTdDSFhvWjJqRQ?oc=5",
@@ -381,9 +381,9 @@
         "sourceUrl": "https://velo.outsideonline.com"
       },
       {
-        "title": "Luca Van Boven Somehow Finished Mountain Stage With a Collapsed Lung at Vuelta a España - Outside Magazine",
-        "pubDate": "Sat, 29 Aug 2026 12:58:11 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNYjVUM21fc0hUZ0l4eXVoeWg0cXVOOWNKMV81dTBTMlZiUGNyQm41bWh5MEJZbFdyRGgyUEY4RDRnWnBSR3gyZFU3aWVJemVzY3I3YmF5S2lSSTZoVEU1MFRnSC1tcUVGRHFWdzl6M2NUMWRrY1VLUC1YaVBxY1BCT1VVVFRGaWdabWNaV0QwMUdQRmJwa0dKQzhwSkMzcklFaGNYVHBWckQ4ODhWNjJmdmxYY3I1MmtHUWpj?oc=5",
+        "title": "Shimano Going to 13 Speeds is A Big Deal—Wires or No - Outside Magazine",
+        "pubDate": "Sat, 29 Aug 2026 12:06:27 GMT",
+        "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNNzFsRVBwMDRHZjFWa1k5dTV1YzhXb1lsVkNOOHlGZTdQN2tWM0w1TDgzTnhnQnJxWUZ2LW52Z1NSNWpab3pFSU1RV3J5Sjh1NE9ob1kxUUdWcklCUUtBMUk0Z0dfcjh5LXgtM0NuUEhhSlVKdktURW1aSTVPNDJzSHVaQlVtQQ?oc=5",
         "source": "VELO",
         "sourceUrl": "https://velo.outsideonline.com"
       },
@@ -427,7 +427,7 @@
     "mtb": [
       {
         "title": "2026 UCI MOUNTAIN BIKE WORLD CHAMPIONSHIPS - XCO/XCR/XCC/E-MTB/DHI - UCI.org",
-        "pubDate": "Sun, 30 Aug 2026 22:04:36 GMT",
+        "pubDate": "Mon, 31 Aug 2026 04:11:47 GMT",
         "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNcnZGTkZNZFl3cGczOTc3R1dTWmVWNHYyWXBjUFJ6VVJwUGNaUHpBNmctb0ZVeFAyMGxaT2NwTW9tbi02TVk3YUZoemVHTEJLRVFkWG5OdGFxTzZBNk9JVVU2MW93bnYtUkxKb2d2YkRMcVFVaWI0RGw5SHFETHhaODRLeVFOcldJSU9tSW9lbmhZdXR0YVpQb1lSNDdJZEh2OUVoSC1mN2ZZRjVVc0MtNVhpYjdZcHQ5cExNTnBCaU53SjN6bW9DcQ?oc=5",
         "source": "UCI",
         "sourceUrl": "https://www.uci.org"
@@ -545,6 +545,13 @@
         "sourceUrl": "https://p.vitalmtb.com"
       },
       {
+        "title": "RESULTS: Val di Sole World Championships Elite DH Finals - Vital MTB",
+        "pubDate": "Sat, 29 Aug 2026 12:43:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOS2VtLUU5UGJNRVIyTERac093TnU4T2tpT0cxX2IzaVowWEtaMGkxMlBjcHhGbEgzQWhWbi1QNm9FTlRoa2tWSjJsVjZGQmJzZ0JERE5adnJnN2RPUHgyR05MSDl3aFU5SHUtV3ZieVNreU5hRjNHUmFaekdyOTlzMnpVZWQ2eFFEOGMxQThWcXV1a0Uw?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
         "title": "RESULTS: Val di Sole World Championships Junior DH Finals - Vital MTB",
         "pubDate": "Sat, 29 Aug 2026 10:24:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNbThiWTV2Y2NWSE5jeExrZlZTdk43dzRaUV9jZHdfNkFQQmRYd2VmWjNGSTNwXzRXVkl4WEVpNE11VGl3M3FDNGI5aGpHLUw5U3MxcGZVd3MxMlJZZm1RckFOSzRRenhscEthQ3V0VlNHRzk1YjBuZUp0cGpLTjFBdDJaTk5CUzZ4QmZNbi0yeGJFZE8wSWc?oc=5",
@@ -585,13 +592,6 @@
         "link": "https://www.pinkbike.com/news/xc-worlds-fantasy-contest-win-a-trailforks-pro-yearly-subscription.html?trk=rss",
         "source": "Pinkbike",
         "sourceUrl": ""
-      },
-      {
-        "title": "WORLD CHAMPS - Vital MTB",
-        "pubDate": "Sat, 29 Aug 2026 03:04:31 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9tdXVFVk9iUmxxMVFpQzhrLXp4dWFkdlB1dk1UMHhXXzEwa0pPcGJVb1hxVmdNQ0c2QVRjcFozQV9pNDdyQllxVElOdWRrN0lMeEVCMTYyMjdqMVNUV1lB?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
       },
       {
         "title": "2026 UCI Mountain Bike World Championships: nine UCI world titles decided on first two days - UCI.org",
@@ -730,6 +730,20 @@
       }
     ],
     "gravel": [
+      {
+        "title": "MADE Show Builder Bikes P to W (THE END) 2026",
+        "pubDate": "Mon, 31 Aug 2026 05:36:38 +0000",
+        "link": "https://www.gravelcyclist.com/videos/made-show-builder-bikes-p-to-w-the-end-2026/",
+        "source": "Gravel Cyclist",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Mads Würtz Schmidt goes solo to defend men's European gravel title as Femke Markus sweeps up women's jersey in Houffalize sprint",
+        "pubDate": "Mon, 31 Aug 2026 01:13:10 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/racing/mads-wurtz-schmidt-goes-solo-to-defend-mens-european-gravel-title-as-femke-markus-sweeps-up-womens-jersey-in-houffalize-sprint/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
       {
         "title": "From race-ready to all-day adventure: Our editors' top gravel bike picks from Competitive Cyclist - Cycling Weekly",
         "pubDate": "Sun, 30 Aug 2026 05:30:36 GMT",
