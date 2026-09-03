@@ -1,13 +1,48 @@
 {
-  "updatedAt": "2026-09-03T19:51:20.364Z",
+  "updatedAt": "2026-09-03T22:36:22.133Z",
   "disciplines": {
     "road": [
+      {
+        "title": "\"There was a moment when we decided to go for it\" - Richard Carapaz hits out at Vuelta favourites",
+        "pubDate": "Thu, 03 Sep 2026 23:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/there-was-a-moment-when-we-decided-to-go-for-it-richard-carapaz-hits-out-at-vuelta-favourites",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Can a padded bra make you faster? New CFD modelling delivers a deflating answer for cyclists",
+        "pubDate": "Thu, 03 Sep 2026 20:58:06 +0000",
+        "link": "https://www.cyclingweekly.com/news/can-a-padded-bra-make-you-faster-new-cfd-modelling-delivers-a-deflating-answer-for-cyclists",
+        "source": "Cycling Weekly",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Tactically perfect and on the offensive like never before – Enric Mas drops all his rivals at the Vuelta a España, but he must keep attacking – Analysis",
+        "pubDate": "Thu, 03 Sep 2026 20:14:19 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/racing/tactically-perfect-and-attacking-like-never-before-enric-mas-drops-all-his-rivals-at-the-vuelta-a-espana-but-he-must-keep-attacking-analysis/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "'We'll keep on fighting' - Vuelta a España an uphill battle for Primož Roglič after Enric Mas gains time on Calar Alto",
+        "pubDate": "Thu, 03 Sep 2026 19:52:58 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/racing/well-keep-on-fighting-vuelta-a-espana-an-uphill-battle-for-primoz-roglic-after-enric-mas-gains-time-on-calar-alto/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
       {
         "title": "DISCUSSION - Vuelta a España Stage 12: Offensive cycling at its finest, Slovenia’s new star and Mas with a killer instinct",
         "pubDate": "Thu, 03 Sep 2026 21:30:00 +0200",
         "link": "https://cyclinguptodate.com/cycling/discussion-vuelta-a-espana-stage-12-offensive-cycling-at-its-finest-slovenias-new-star-and-mas-with-a-killer-instinct",
         "source": "CyclingUpToDate",
         "sourceUrl": ""
+      },
+      {
+        "title": "Vuelta a España Stage 12: Enric Mas Goes Long as 'Mini-Pogačar' Omrzel Wins Big - Outside Magazine",
+        "pubDate": "Thu, 03 Sep 2026 18:54:56 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQZUc2dHpvN3FCVldDaWxrODVHX0hOejlSSVZXVnJRY2RMTVRZODVkYXY2WUk2WVVnelNqU05IWlhkWjgyanJYcXpiT0EyMlRXdExVazA0aDNaZmlhZE9ZZXlyWWdEZnotaHlUX19sWFdmRWRYdkV3VllFbFBENWpqS3VHOUVXaW5LTHBxLXQ1Mml0OExGdjFycDZQLUkzakpwTTY5X253NmJYT00?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
       },
       {
         "title": "Without Pogacar, is he the big World Championship favourite? Red Bull star Remco Evenepoel puts in 5,300 metres of climbing in the Alps",
@@ -234,13 +269,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "\"It is up to us to strike in the final week\" - Primoz Roglic and Red Bull have Vuelta mission as they try to keep pace with red jersey Mas",
-        "pubDate": "Thu, 03 Sep 2026 12:35:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/it-is-up-to-us-to-strike-in-the-final-week-primoz-roglic-and-red-bull-have-vuelta-mission-as-they-try-to-keep-pace-with-red-jersey-mas",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "As it happened: A new Slovenian star is crowned and the red jersey plays his cards on stage 12 of the Vuelta a España",
         "pubDate": "Thu, 03 Sep 2026 10:26:55 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/live/vuelta-a-espana-2026-stage-12-live-updates/",
@@ -283,20 +311,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "Mathieu van der Poel skips Canadian one-day races, returns to Tour de Luxembourg to build for UCI Road World Championships in Montréal",
-        "pubDate": "Wed, 02 Sep 2026 20:00:06 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/mathieu-van-der-poel-skips-canadian-one-day-races-returns-to-tour-de-luxembourg-to-build-for-uci-road-world-championships-in-montreal/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Return to lead-out duties for Wout van Aert brings Visma more success at Vuelta a España, but 'he also needs wins himself' says DS",
-        "pubDate": "Wed, 02 Sep 2026 19:36:54 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/return-to-lead-out-duties-for-wout-van-aert-brings-visma-more-success-at-vuelta-a-espana-but-he-also-needs-wins-himself-says-ds/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
         "title": "'What's next?' – Tiffany Cromwell quietly retires from road racing",
         "pubDate": "Wed, 02 Sep 2026 16:59:34 +0000",
         "link": "https://www.cyclingweekly.com/news/whats-next-tiffany-cromwell-quietly-retires-from-road-racing-after-philadelphia-cycling-classic",
@@ -314,13 +328,6 @@
         "title": "Tadej Pogačar Can't Trust Anybody With His Bike - Outside Magazine",
         "pubDate": "Wed, 02 Sep 2026 16:10:35 GMT",
         "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPdnZqZU1pR1dvQ1NTbUlob2lXYlZkNTl2eGZCVmpWVWx2Q1JWaGRFbVRPd0tjbjMxWXRlTTFnY1ZRci1fOFF0UC02YW9KdDN6M0JkRFNGRDc3SnMwTlE2RUNOS1o2aHpWUjJnWDF3TXppdThXVUV3NHcwa3dhZ0RHdmdwNnhKUQ?oc=5",
-        "source": "VELO",
-        "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
-        "title": "The Vuelta a España Is About to Get So Hot Officials Are Changing How Riders Get Water - Outside Magazine",
-        "pubDate": "Wed, 02 Sep 2026 08:39:34 GMT",
-        "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNdlRic1ZldlZ6RXg3R3d3bmdYNUJsalVaRlNFcjZJY1hnMk0weGgwNzBNNHZTaDhUa21UcTRTVUpDcUJDVEVWeVVKODJLVEdHOVFwX29DYlRyMWt4MDAtSGt6U3ZpS1E2ZUhDQjU5R0U1LUN5dzk5N3NUdGs0dDRTbUxYZW9wZW8yaThkRjBQaWxfdG90YlJSeHI4MF9QdTJiRF85WjlDQ1AwcTVpRDZN?oc=5",
         "source": "VELO",
         "sourceUrl": "https://velo.outsideonline.com"
       },
@@ -396,13 +403,6 @@
         "type": "transfers"
       },
       {
-        "title": "Spin Cycle: The rock that rocked the Vuelta - Escape Collective",
-        "pubDate": "Mon, 31 Aug 2026 13:32:57 GMT",
-        "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5iemRyT1Vka3lsUGxNNDRENU5uTlRUcmpxc3pBd0djS1hKLVFhb3gtOWNWLWhKNmtOd1hKaXhwSmc1T3RrVDdwd0hOX29rM0VMZzNkWk1NU25zbHZ3SmxRaTRaWWI5UVRJVVUyUERBajdIUmFrbFVneTYxckY?oc=5",
-        "source": "Escape Collective",
-        "sourceUrl": "https://escapecollective.com"
-      },
-      {
         "title": "Tadej Pogačar's Brutal Crash Upends a Lot More Than Just the Vuelta a España - Outside Magazine",
         "pubDate": "Mon, 31 Aug 2026 09:36:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQdDFkSGRGZEtvZjg3ZXhnS04zcHZFbnJ4Mnl5OWc4TFZYZmkyMFRpRTJoZ09jd3NZc0VJYnp3d0FrN2dQZFd3M09xSXQ0WW9WdDVJbklQRjlNMnJuZTduMzZhSG5TUTVaUEtkbm1SSDBQYVBPcmtjVTJKcC1GN2pOWm9hMnlBZw?oc=5",
@@ -431,6 +431,20 @@
         "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9rM0ZFdXE3Wjl2SXRWQ0lndndKZDFEMlBWWDI5YWRJZzJEMkdvd3JpLU1iTTRuVHpvNk1FcmQzOUhMTkg5OFVLaC0yYkk2cTYydkRsN2VNRGNRYTF6T1l1ak9EdkYtV2Y2TllncWZKNjU5TDVhN3ZoQWIyRkZQdw?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
+        "title": "Mike Sinyard Returns to Role of CEO at Specialized as Armin Landgraf Steps Back",
+        "pubDate": "Thu, 3 Sep 2026 00:00:00 PDT",
+        "link": "https://www.pinkbike.com/news/mike-sinyard-returns-to-role-of-ceo-at-specialized-as-armin-landgraf-steps-back.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Tech Briefing: Serviceable Saddles, Modular Frame Protection, Wheels for Cardboard Boxes, &amp; More",
+        "pubDate": "Thu, 3 Sep 2026 00:00:00 PDT",
+        "link": "https://www.pinkbike.com/news/tech-briefing-serviceable-saddles-modular-frame-protection-wheels-for-cardboard-boxes-and-much-more.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
       },
       {
         "title": "Bike Check: Mic Williams' WRP DH-01",
@@ -566,20 +580,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "Event Recap: Hannah Bergemann's 5th Annual Hangtime",
-        "pubDate": "Tue, 1 Sep 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/hannah-bergemanns-5th-annual-hangtime-recap.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Video &amp; Event Report: High Flying Action at the Malverns Classic 2026",
-        "pubDate": "Tue, 1 Sep 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/video-malverns-classic-2026-recap.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
         "title": "Canfield Lithium V3 - Vital MTB",
         "pubDate": "Mon, 31 Aug 2026 13:53:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOQjBaT3RXUWtQc0o5Zm5DSUNNeGxBOXhjNzVNMlBqOUNuVTdhcFdaR0VlYndGUy0wYXZKbVBXbjRCejFKSDhlcGFST2VpRzFDMTQzcVRqM1psNDJSLWw5NEZnQWkyWVA4UkhEcDVTbGZ1UnBPLXNlbnF0WnVpU2ZHcEUxTDdTTGhHdDhMbUtMU2U?oc=5",
@@ -694,42 +694,42 @@
     ],
     "cyclocross": [
       {
-        "title": "HG Cross 2026-2027 - Men Junior - Cyclocross24.com",
+        "title": "HG Cross 2026-2027 - Men Junior - cyclocross24.com",
         "pubDate": "Wed, 02 Sep 2026 01:21:07 GMT",
         "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBNLUxkVzcwUG40VEVRWFVRM2hiaE42MHE5cU5aWGpvMDdMSkdOMmNxWDZUYW8yOXVKMmtGaWNLcVg2OWRJT2duSEFPdVZaNUtQQkVfQmxSSjJyMnpzeWtSRTdHVTg5a3BC?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
       {
-        "title": "Results Copenhagen Cyclo Cross Clash - Day 2 2026 - Women Elite - Cyclocross24.com",
+        "title": "Results Copenhagen Cyclo Cross Clash - Day 2 2026 - Women Elite - cyclocross24.com",
         "pubDate": "Wed, 02 Sep 2026 00:14:49 GMT",
         "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9MRWpNSnpSSWI5dW91M09ROUZUN1N6YVZUaWZjUHhkZGliUkhtVHRfWkFQTTRhUng3NDE4TVlVVHhSUTlhTXAxOEFvUks?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
       {
-        "title": "- Cyclocross24.com",
+        "title": "- cyclocross24.com",
         "pubDate": "Sun, 30 Aug 2026 13:03:37 GMT",
         "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFAyZFd2Q2gxNk9wWkM2V09rSDBHcnFLNy1EWFNnUFBXRzdySVpLMTRNUnhIT3VreTRPVGtaSzdvUEFpYWVGRnV0b0YxbHMwdVY1VWV2R0ZNcGV4aHJIbjYtOGp2QQ?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
       {
-        "title": "Results Cyclo-cross National Trophy Derby 2026 - Women Junior - Cyclocross24.com",
+        "title": "Results Cyclo-cross National Trophy Derby 2026 - Women Junior - cyclocross24.com",
         "pubDate": "Fri, 28 Aug 2026 16:52:48 GMT",
         "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFB6RXdrdWs1Y2NpaEFyTnpfNk1tZloyVlVHb2Rhc1Nub3pSdFdkbEVqOUU4RFhBWEdfOGFJcWl6ZnJzQ3k1bmdPU1VaTkw?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
       {
-        "title": "Results Swedish National Championships Cyclocross Malmö 2027 - Women Junior - Cyclocross24.com",
+        "title": "Results Swedish National Championships Cyclocross Malmö 2027 - Women Junior - cyclocross24.com",
         "pubDate": "Fri, 28 Aug 2026 15:56:26 GMT",
         "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5iX2NNelFvdzJmUjBydTgtTVdGbzM1RThLbkN4dEhFOUpudlVndzlSenNPeDVsdUVtNi15QzhjekszY2xqVGxyd0NBYzE?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
       {
-        "title": "Results Copenhagen Cyclo Cross Clash - Day 1 2026 - Women Junior - Cyclocross24.com",
+        "title": "Results Copenhagen Cyclo Cross Clash - Day 1 2026 - Women Junior - cyclocross24.com",
         "pubDate": "Fri, 28 Aug 2026 02:50:53 GMT",
         "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5SbGplLUJINmpsSHQ0Tm9vTjFYcFZYWlJMREpUOGxZNnpQY0xnV3pHaGFSV3pndjVOaXh2NWJaLW10Qmw4RkVVQVhWMy0?oc=5",
         "source": "Cyclocross24",
@@ -766,7 +766,7 @@
         "sourceUrl": "https://velo.outsideonline.com"
       },
       {
-        "title": "'The most compliant and comfortable carbon gravel frame we’ve ever made' – all-new Scott Addict Gravel combines comfort and adventure with performance - Cycling Weekly",
+        "title": "'The most compliant and comfortable carbon gravel frame we’ve ever made' – all-new Scott Addict Gravel combines comfort and adventure with performance - cyclingweekly.com",
         "pubDate": "Thu, 03 Sep 2026 14:00:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMikgJBVV95cUxNUVZtckVIVVR5Mjc3VlZocDcxTUh3RU9GSUphMWlHeTRfMlduYkVjc2Znd3lHcTZYUjExWmUzNVZJdGNfdGU2LWVZeEw0Y1MxbmREQ3VVaUpyVnpNdDFHT2szSkJCdUpYUzN5WmJwTXVSNFpmcnBaMEVDLUljd28xaGliZVFmRTc5ZkM1ZU4zblNfVE5MOTZOc09VdUZhMHlNcVJlR2V0eHg4OXRPMDRsSXJmZHowVzRSb2syYzhNV3lCVUtjMTFwT25YbHlWSThVMFIydzlNRGgyaGhHeVhwMks4NlNZcTBFSHN3V0ROWnRyOTNtRzFkOFFhQnpvU2w0VFFUZTZwRU1VTzhMdHAwRFd3?oc=5",
         "source": "Cycling Weekly",
@@ -801,7 +801,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "From race-ready to all-day adventure: Our editors' top gravel bike picks from Competitive Cyclist - Cycling Weekly",
+        "title": "From race-ready to all-day adventure: Our editors' top gravel bike picks from Competitive Cyclist - cyclingweekly.com",
         "pubDate": "Wed, 02 Sep 2026 12:56:37 GMT",
         "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPamJieVNrQ191dWI2ZVhWQVVNRmFXeVA3d3EzUmxzcnNfZlVoYmpGdzJhZW5GN1N4SllfSVhVcmpWN3FpZDNYYUI0M1E2aDQ3WFdzdW12T2s2S3BXSGo2a1d4WFNtcUF6Si0ycGJTNTNQQk5uaVlZclAzWC1hN3Z3SXhiZU9mN0VTRnNMc0JEa29nUkxKTUpJY0RZd1M2UVBXbGlZTVMtYWlkRHZKcndnRHJMMHpyS2h2RURXMW4xNXR5ZHRFVnJhV1IzS2s?oc=5",
         "source": "Cycling Weekly",
