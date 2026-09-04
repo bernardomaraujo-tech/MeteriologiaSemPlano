@@ -1,7 +1,14 @@
 {
-  "updatedAt": "2026-09-03T22:36:22.133Z",
+  "updatedAt": "2026-09-04T01:00:00.523Z",
   "disciplines": {
     "road": [
+      {
+        "title": "\"That is all we wanted to achieve\" - Does Felix Gall believe Vuelta victory is out of reach?",
+        "pubDate": "Fri, 04 Sep 2026 01:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/that-is-all-we-wanted-to-achieve-does-felix-gall-believe-vuelta-victory-is-out-of-reach",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
       {
         "title": "\"There was a moment when we decided to go for it\" - Richard Carapaz hits out at Vuelta favourites",
         "pubDate": "Thu, 03 Sep 2026 23:00:00 +0200",
@@ -241,13 +248,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "“He, too, must use his common sense\" - Eddy Merckx warns Tadej Pogacar not to rush into World Championships after Vuelta crash and surgery",
-        "pubDate": "Thu, 03 Sep 2026 13:13:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/he-too-must-use-his-common-sense-eddy-merckx-warns-tadej-pogacar-not-to-rush-into-world-championships-after-vuelta-crash-and-surgery",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "Fem van Empel says she's 'happier than ever' amid cycling career break",
         "pubDate": "Thu, 03 Sep 2026 11:03:16 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/fem-van-empel-says-shes-happier-than-ever-amid-cycling-career-break/",
@@ -417,16 +417,16 @@
         "sourceUrl": "https://velo.outsideonline.com"
       },
       {
-        "title": "Vuelta: Mas does the red jersey proud with stage 9 victory - Escape Collective",
-        "pubDate": "Sun, 30 Aug 2026 16:03:31 GMT",
-        "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQeXFRWDhSbHNGYTRTelFFZ0Z4amFGY05mOF94ZmxJelViel9MeXZHY2ZNcVMtTl9RVVBBMEVvR0lxelR4RG9fNDlwY2VpMzdQM2M4X3RWbHBLZXJfYW14RVh0WUJaQjBvUjFhOVF6d1cxUUVIdWlBbmRxVXFQbjQ3amFCUHk5aDZDcmN4aTVBV3k?oc=5",
+        "title": "'They weren't riding hard enough' – Widar's fighting talk after impressing on Vuelta stage 9 - Escape Collective",
+        "pubDate": "Sun, 30 Aug 2026 19:26:57 GMT",
+        "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPQ0JPZkZlWmNqMG9UTTFkYkoxa21TM1B4b2NuenhHY3hxUUdxVzNyMGFJczJ0aUFGcmdLRmFUQU1Tdk9wTW9SM3RvQ3I4eVhWcy1tX1lGenJHdnpyc3RWVnd3TGpla05UbkJISlFnd2M0elVxR004UjdGWng2Z3Y4V21ob2kteU9kUk5XVEhMaGY4M1UxOWdaQzZrWXpSVi0zeThQX0xieWdGXzZpZGJyRnFBUHh2TFE?oc=5",
         "source": "Escape Collective",
         "sourceUrl": "https://escapecollective.com"
       }
     ],
     "mtb": [
       {
-        "title": "Carson Storch & Kurtis Downs X SR Suntour - Hot Doggin' In Oregon - Vital MTB",
+        "title": "Carson Storch & Kurtis Downs X SR Suntour - Hot Doggin' In Oregon - vitalmtb.com",
         "pubDate": "Thu, 03 Sep 2026 13:00:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9rM0ZFdXE3Wjl2SXRWQ0lndndKZDFEMlBWWDI5YWRJZzJEMkdvd3JpLU1iTTRuVHpvNk1FcmQzOUhMTkg5OFVLaC0yYkk2cTYydkRsN2VNRGNRYTF6T1l1ak9EdkYtV2Y2TllncWZKNjU5TDVhN3ZoQWIyRkZQdw?oc=5",
         "source": "Vital MTB",
@@ -580,7 +580,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "Canfield Lithium V3 - Vital MTB",
+        "title": "Canfield Lithium V3 - vitalmtb.com",
         "pubDate": "Mon, 31 Aug 2026 13:53:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOQjBaT3RXUWtQc0o5Zm5DSUNNeGxBOXhjNzVNMlBqOUNuVTdhcFdaR0VlYndGUy0wYXZKbVBXbjRCejFKSDhlcGFST2VpRzFDMTQzcVRqM1psNDJSLWw5NEZnQWkyWVA4UkhEcDVTbGZ1UnBPLXNlbnF0WnVpU2ZHcEUxTDdTTGhHdDhMbUtMU2U?oc=5",
         "source": "Vital MTB",
@@ -594,7 +594,7 @@
         "sourceUrl": "https://www.uci.org"
       },
       {
-        "title": "Fox GRIPX vs RS Charger 3.1 - Dougal - SC - Mountain Biking Pictures - Vital MTB",
+        "title": "Fox GRIPX vs RS Charger 3.1 - Dougal - SC - Mountain Biking Pictures - vitalmtb.com",
         "pubDate": "Mon, 31 Aug 2026 06:45:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1QdWdFMnpoM19SZ01sbkp1Yk1KTkw0VHBMblN0OERsekNjTkRwWks4elpVUlBuVW4yWGdTYnA0akdoeGRNTnphbjZiaw?oc=5",
         "source": "Vital MTB",
@@ -636,14 +636,21 @@
         "sourceUrl": "https://www.uci.org"
       },
       {
-        "title": "RESULTS: Val di Sole World Championships Elite DH Finals - Vital MTB",
+        "title": "RESULTS: Val di Sole World Championships Elite DH Finals - vitalmtb.com",
         "pubDate": "Sat, 29 Aug 2026 12:43:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOS2VtLUU5UGJNRVIyTERac093TnU4T2tpT0cxX2IzaVowWEtaMGkxMlBjcHhGbEgzQWhWbi1QNm9FTlRoa2tWSjJsVjZGQmJzZ0JERE5adnJnN2RPUHgyR05MSDl3aFU5SHUtV3ZieVNreU5hRjNHUmFaekdyOTlzMnpVZWQ2eFFEOGMxQThWcXV1a0Uw?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "RESULTS: Val di Sole World Championships Junior DH Finals - Vital MTB",
+        "title": "Mountain Bike Parts - vitalmtb.com",
+        "pubDate": "Sat, 29 Aug 2026 10:48:53 GMT",
+        "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOakFrU2FKUEVDN2VJNXFjcmpvTlpVcmJOVktOUXdCdjN2SjF1clRCVWVvZkFKVDAtQ2Q5WXN6bkxqQ1dsTkZ6Y2ZSUHF4R1BNSlRya0FwT2lRSHlNSG5pWnJGaExUWEJTQ1FuTHYwbVRMeXhlOVBtVDFSMThkRjE2a2o5bC1OVm9jbll5bzB2Wm5SNlFTUFNrV0VSNzc?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
+        "title": "RESULTS: Val di Sole World Championships Junior DH Finals - vitalmtb.com",
         "pubDate": "Sat, 29 Aug 2026 10:24:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNbThiWTV2Y2NWSE5jeExrZlZTdk43dzRaUV9jZHdfNkFQQmRYd2VmWjNGSTNwXzRXVkl4WEVpNE11VGl3M3FDNGI5aGpHLUw5U3MxcGZVd3MxMlJZZm1RckFOSzRRenhscEthQ3V0VlNHRzk1YjBuZUp0cGpLTjFBdDJaTk5CUzZ4QmZNbi0yeGJFZE8wSWc?oc=5",
         "source": "Vital MTB",
@@ -657,79 +664,72 @@
         "sourceUrl": "https://www.uci.org"
       },
       {
-        "title": "RESULTS: Val di Sole World Championships Elite DH Qualifying - Vital MTB",
+        "title": "RESULTS: Val di Sole World Championships Elite DH Qualifying - vitalmtb.com",
         "pubDate": "Fri, 28 Aug 2026 14:01:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPaEQ2bThjNWN4eXNjOUYyTklBUk9qamljXzIwaXQ1RmZzVUk5bEFRTU9ac004bXdNSlY0Zks1N3FkMzNlZERWb1NSU2ZtdjA0MU1EVExyanRYMU15ZGh5bjF4ZTk3VF8zb3phWmFGWFpnMUpXQU9MNmpXNko1QTd5VVpkeXNDRlI2aDF0VlVOdkhVT3hQX19objFn?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "Sugarbrad - Vital MTB",
+        "title": "Sugarbrad - vitalmtb.com",
         "pubDate": "Fri, 28 Aug 2026 11:04:17 GMT",
         "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE4zTVlqSjJ3THBRN25fYlI1N0tGYUVYZ3Z4Vk04Y3hsOHhDSURaWGN3aFU3dFJkSGdjWmJNWEFKbmZOZ1lTZGx4ZGFUWXRKdFdZYlNLakczeWtmN2RYVmRJb1BQcE8?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "2026 UCI Mountain Bike World Championships - Vital MTB",
+        "title": "2026 UCI Mountain Bike World Championships - vitalmtb.com",
         "pubDate": "Fri, 28 Aug 2026 09:20:37 GMT",
         "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQWGh0WXdKUDlYdzhwUG41R3NIX1h0UjlUdjdreUQ5dUt1SWhfTFNpNWx4OTF5ODRod2RoT2tFQU5INHpFMHdDQkh0RlFuRXhLRWFZZlNzVm5rWkMyenBNeEh6bUQ2V0xCT0RmRXl6cFFyYVpqOUxVOHNPeGNvUDg0eW8wRHpabzg?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "RESULTS: Val di Sole World Championships Junior DH Qualifying - Vital MTB",
+        "title": "RESULTS: Val di Sole World Championships Junior DH Qualifying - vitalmtb.com",
         "pubDate": "Fri, 28 Aug 2026 09:20:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxObFNNSVlrX05GTzVFaDNGNzR6ckxsMlY3TlJqRXYyc3ZGRWdvY282c0ZwNzNvZlJGeEtLU1JSeGlVOEc1MmpjaG01OTE1VmY1akhqZ19JeU5mUkxEZGI3VjNCZzdhVjVmMDJ6UzFDeXJpMlRibUVtaFpDaTRjRFg0RnJuTnc4blpUUkNNS0FsUktidHlBbngtZXo4NA?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
-      },
-      {
-        "title": "Mountain Bike Parts - Vital MTB",
-        "pubDate": "Thu, 27 Aug 2026 22:50:08 GMT",
-        "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQd3BHQ0s1RG43T0ZsS3ZOdGRrT0NFVThhXzBxWVhHMzVpTnQ0OWMtbXlETF9zY1ByaWw2UUpMa3hqMkF3THRMeG9YamRsNTVqVXNSZUpVdURHdEl4VnFPVUVtVzJNSEVNaHhWNS1DQ1paZ1pZYTRtenROOVpTVUo4aFFnQ1QtSXp2Qml1dURmVFNBY0stcjNRR2FWbG15N1NpbjNzdVpNcw?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       }
     ],
     "cyclocross": [
       {
-        "title": "HG Cross 2026-2027 - Men Junior - cyclocross24.com",
+        "title": "HG Cross 2026-2027 - Men Junior - Cyclocross24.com",
         "pubDate": "Wed, 02 Sep 2026 01:21:07 GMT",
         "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBNLUxkVzcwUG40VEVRWFVRM2hiaE42MHE5cU5aWGpvMDdMSkdOMmNxWDZUYW8yOXVKMmtGaWNLcVg2OWRJT2duSEFPdVZaNUtQQkVfQmxSSjJyMnpzeWtSRTdHVTg5a3BC?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
       {
-        "title": "Results Copenhagen Cyclo Cross Clash - Day 2 2026 - Women Elite - cyclocross24.com",
+        "title": "Results Copenhagen Cyclo Cross Clash - Day 2 2026 - Women Elite - Cyclocross24.com",
         "pubDate": "Wed, 02 Sep 2026 00:14:49 GMT",
         "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9MRWpNSnpSSWI5dW91M09ROUZUN1N6YVZUaWZjUHhkZGliUkhtVHRfWkFQTTRhUng3NDE4TVlVVHhSUTlhTXAxOEFvUks?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
       {
-        "title": "- cyclocross24.com",
+        "title": "- Cyclocross24.com",
         "pubDate": "Sun, 30 Aug 2026 13:03:37 GMT",
         "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFAyZFd2Q2gxNk9wWkM2V09rSDBHcnFLNy1EWFNnUFBXRzdySVpLMTRNUnhIT3VreTRPVGtaSzdvUEFpYWVGRnV0b0YxbHMwdVY1VWV2R0ZNcGV4aHJIbjYtOGp2QQ?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
       {
-        "title": "Results Cyclo-cross National Trophy Derby 2026 - Women Junior - cyclocross24.com",
+        "title": "Results Cyclo-cross National Trophy Derby 2026 - Women Junior - Cyclocross24.com",
         "pubDate": "Fri, 28 Aug 2026 16:52:48 GMT",
         "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFB6RXdrdWs1Y2NpaEFyTnpfNk1tZloyVlVHb2Rhc1Nub3pSdFdkbEVqOUU4RFhBWEdfOGFJcWl6ZnJzQ3k1bmdPU1VaTkw?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
       {
-        "title": "Results Swedish National Championships Cyclocross Malmö 2027 - Women Junior - cyclocross24.com",
+        "title": "Results Swedish National Championships Cyclocross Malmö 2027 - Women Junior - Cyclocross24.com",
         "pubDate": "Fri, 28 Aug 2026 15:56:26 GMT",
         "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5iX2NNelFvdzJmUjBydTgtTVdGbzM1RThLbkN4dEhFOUpudlVndzlSenNPeDVsdUVtNi15QzhjekszY2xqVGxyd0NBYzE?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
       {
-        "title": "Results Copenhagen Cyclo Cross Clash - Day 1 2026 - Women Junior - cyclocross24.com",
+        "title": "Results Copenhagen Cyclo Cross Clash - Day 1 2026 - Women Junior - Cyclocross24.com",
         "pubDate": "Fri, 28 Aug 2026 02:50:53 GMT",
         "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5SbGplLUJINmpsSHQ0Tm9vTjFYcFZYWlJMREpUOGxZNnpQY0xnV3pHaGFSV3pndjVOaXh2NWJaLW10Qmw4RkVVQVhWMy0?oc=5",
         "source": "Cyclocross24",
@@ -766,7 +766,7 @@
         "sourceUrl": "https://velo.outsideonline.com"
       },
       {
-        "title": "'The most compliant and comfortable carbon gravel frame we’ve ever made' – all-new Scott Addict Gravel combines comfort and adventure with performance - cyclingweekly.com",
+        "title": "'The most compliant and comfortable carbon gravel frame we’ve ever made' – all-new Scott Addict Gravel combines comfort and adventure with performance - Cycling Weekly",
         "pubDate": "Thu, 03 Sep 2026 14:00:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMikgJBVV95cUxNUVZtckVIVVR5Mjc3VlZocDcxTUh3RU9GSUphMWlHeTRfMlduYkVjc2Znd3lHcTZYUjExWmUzNVZJdGNfdGU2LWVZeEw0Y1MxbmREQ3VVaUpyVnpNdDFHT2szSkJCdUpYUzN5WmJwTXVSNFpmcnBaMEVDLUljd28xaGliZVFmRTc5ZkM1ZU4zblNfVE5MOTZOc09VdUZhMHlNcVJlR2V0eHg4OXRPMDRsSXJmZHowVzRSb2syYzhNV3lCVUtjMTFwT25YbHlWSThVMFIydzlNRGgyaGhHeVhwMks4NlNZcTBFSHN3V0ROWnRyOTNtRzFkOFFhQnpvU2w0VFFUZTZwRU1VTzhMdHAwRFd3?oc=5",
         "source": "Cycling Weekly",
@@ -801,7 +801,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "From race-ready to all-day adventure: Our editors' top gravel bike picks from Competitive Cyclist - cyclingweekly.com",
+        "title": "From race-ready to all-day adventure: Our editors' top gravel bike picks from Competitive Cyclist - Cycling Weekly",
         "pubDate": "Wed, 02 Sep 2026 12:56:37 GMT",
         "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPamJieVNrQ191dWI2ZVhWQVVNRmFXeVA3d3EzUmxzcnNfZlVoYmpGdzJhZW5GN1N4SllfSVhVcmpWN3FpZDNYYUI0M1E2aDQ3WFdzdW12T2s2S3BXSGo2a1d4WFNtcUF6Si0ycGJTNTNQQk5uaVlZclAzWC1hN3Z3SXhiZU9mN0VTRnNMc0JEa29nUkxKTUpJY0RZd1M2UVBXbGlZTVMtYWlkRHZKcndnRHJMMHpyS2h2RURXMW4xNXR5ZHRFVnJhV1IzS2s?oc=5",
         "source": "Cycling Weekly",
