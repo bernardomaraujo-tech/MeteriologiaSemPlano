@@ -1,7 +1,21 @@
 {
-  "updatedAt": "2026-09-04T01:00:00.523Z",
+  "updatedAt": "2026-09-04T05:55:55.342Z",
   "disciplines": {
     "road": [
+      {
+        "title": "Who's having fun on the Vuelta's Big Comfy Sofa this year? - Escape Collective",
+        "pubDate": "Fri, 04 Sep 2026 04:49:21 GMT",
+        "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNQUNsUzJ0RkszSzZ2bWoxTG96d216ZHE4bHIzVXdvUTJydjZIVXlnQl9jWWY4dEZlVWRIbnNLOHg4aWN2bzBhVElxZFJuYjVIb195UWdOZ2Zyd0ozOGdkVHBlTXM2NkNMT2pHSXI0SkE4eGhWMDQ4VDFheUk3eXhJLU5Xc05WaDB5TGJkTUlHTQ?oc=5",
+        "source": "Escape Collective",
+        "sourceUrl": "https://escapecollective.com"
+      },
+      {
+        "title": "\"He has to live with this body for the rest of his life\" - Tadej Pogacar's World Championships bid 'isn't realistic' for Slovenia's team doctor",
+        "pubDate": "Fri, 04 Sep 2026 03:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/he-has-to-live-with-this-body-for-the-rest-of-his-life-tadej-pogacars-world-championships-bid-isnt-realistic-for-slovenias-team-doctor",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
       {
         "title": "\"That is all we wanted to achieve\" - Does Felix Gall believe Vuelta victory is out of reach?",
         "pubDate": "Fri, 04 Sep 2026 01:00:00 +0200",
@@ -45,7 +59,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "Vuelta a España Stage 12: Enric Mas Goes Long as 'Mini-Pogačar' Omrzel Wins Big - Outside Magazine",
+        "title": "Vuelta a España Stage 12: Enric Mas Goes Long as 'Mini-Pogačar' Omrzel Wins Big - velo.outsideonline.com",
         "pubDate": "Thu, 03 Sep 2026 18:54:56 GMT",
         "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQZUc2dHpvN3FCVldDaWxrODVHX0hOejlSSVZXVnJRY2RMTVRZODVkYXY2WUk2WVVnelNqU05IWlhkWjgyanJYcXpiT0EyMlRXdExVazA0aDNaZmlhZE9ZZXlyWWdEZnotaHlUX19sWFdmRWRYdkV3VllFbFBENWpqS3VHOUVXaW5LTHBxLXQ1Mml0OExGdjFycDZQLUkzakpwTTY5X253NmJYT00?oc=5",
         "source": "VELO",
@@ -234,16 +248,17 @@
         "sourceUrl": ""
       },
       {
+        "title": "'I want to win more races no matter what they are' – Lennert Van Eetvelt switches Lotto for NSN in three-year deal - Cyclingnews",
+        "pubDate": "Thu, 03 Sep 2026 13:24:04 GMT",
+        "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOSzhILVBiRGdBRWVEWW5ub1k1eEpVV1FmX0NQR3VNY2docjBaR2ZrNmNZanlxWXNjaFhtbExmc2pDRmljT29NLVlEZHFsd1hhU1g3d0NwNGVmd1NTeTJOaVJqTjdNbjZUTF81V2dtS2twdktBNWMwcmtLNXpyZW83NHBRZW9GZmhCRXJDOUwzdmg0enR5bXJsdjlreXp2ZkRLMUxuTkdOZHE1UUd6VW5ObWNxUTlzeS1CVTBMWTlWRW40ei0zd0pmS2hfdmU2RFQ4YXFyeE1veTRKSXdjRlVYV2x0dlNKel9nbzdvSnQ1djdRaEZaUi0w?oc=5",
+        "source": "Cyclingnews",
+        "sourceUrl": "https://www.cyclingnews.com",
+        "type": "transfers"
+      },
+      {
         "title": "\"He went straight into a lamppost\" - 19-year old American rider Ezra Caudell placed in induced coma after crash at Philadelphia Cycling Classic",
         "pubDate": "Thu, 03 Sep 2026 14:42:00 +0200",
         "link": "https://cyclinguptodate.com/cycling/he-went-straight-into-a-lamppost-19-year-old-american-rider-ezra-caudell-placed-in-induced-coma-after-crash-at-philadelphia-cycling-classic",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Mathieu van der Poel's road return confirmed - Dutchman makes surprising schedule decision before World Championships",
-        "pubDate": "Thu, 03 Sep 2026 13:44:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/mathieu-van-der-poels-road-return-confirmed-dutchman-makes-surprising-schedule-decision-before-world-championships",
         "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
@@ -325,14 +340,21 @@
         "sourceUrl": "https://escapecollective.com"
       },
       {
-        "title": "Tadej Pogačar Can't Trust Anybody With His Bike - Outside Magazine",
+        "title": "Tadej Pogačar Can't Trust Anybody With His Bike - velo.outsideonline.com",
         "pubDate": "Wed, 02 Sep 2026 16:10:35 GMT",
         "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPdnZqZU1pR1dvQ1NTbUlob2lXYlZkNTl2eGZCVmpWVWx2Q1JWaGRFbVRPd0tjbjMxWXRlTTFnY1ZRci1fOFF0UC02YW9KdDN6M0JkRFNGRDc3SnMwTlE2RUNOS1o2aHpWUjJnWDF3TXppdThXVUV3NHcwa3dhZ0RHdmdwNnhKUQ?oc=5",
         "source": "VELO",
         "sourceUrl": "https://velo.outsideonline.com"
       },
       {
-        "title": "Only One Hand on the Bars at 60kph: New Details in Tadej Pogačar’s Devastating Vuelta Crash - Outside Magazine",
+        "title": "The Vuelta a España Is About to Get So Hot Officials Are Changing How Riders Get Water - velo.outsideonline.com",
+        "pubDate": "Wed, 02 Sep 2026 08:39:34 GMT",
+        "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNdlRic1ZldlZ6RXg3R3d3bmdYNUJsalVaRlNFcjZJY1hnMk0weGgwNzBNNHZTaDhUa21UcTRTVUpDcUJDVEVWeVVKODJLVEdHOVFwX29DYlRyMWt4MDAtSGt6U3ZpS1E2ZUhDQjU5R0U1LUN5dzk5N3NUdGs0dDRTbUxYZW9wZW8yaThkRjBQaWxfdG90YlJSeHI4MF9QdTJiRF85WjlDQ1AwcTVpRDZN?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
+      },
+      {
+        "title": "Only One Hand on the Bars at 60kph: New Details in Tadej Pogačar’s Devastating Vuelta Crash - velo.outsideonline.com",
         "pubDate": "Wed, 02 Sep 2026 07:00:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQd0pPWmo3azdnZDE1eWhFUWJvVnBtRXIzbzdvQU1yUDYtWE0waHUxNVNBZ2czdklOY0lGRTlhZndjMzZ6MUNmQ2tUX2xSRTl4Qzh0bUpyNERFMWxXZ184bGdIYTFmb1U2SWs4QmJ3SmtPZlJEU3R0WVZCcnlXcDRPOHE5cXVRa25mLWhubGZIbC1ldGc5aXhITFY2X0N1dGZpbktVem1zcjlFUQ?oc=5",
         "source": "VELO",
@@ -353,7 +375,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "Vuelta a España Stage 10: Visma Loses Control of Wild Sprint Finale as Tronchon Kicks to Unexpected Win - Outside Magazine",
+        "title": "Vuelta a España Stage 10: Visma Loses Control of Wild Sprint Finale as Tronchon Kicks to Unexpected Win - velo.outsideonline.com",
         "pubDate": "Tue, 01 Sep 2026 17:44:30 GMT",
         "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQV1JkdldLMXYxWW5CU0tFLURYaTAtX21ZclFKLUw2a0hTT0RTRHdNd2JZNnZrY0kyMVNIR0c2Rnk4RTdRNWdqcU10TVREa0ZmTXd1V2d1Z1ZVVkRNazZ0LWE0ck9GWUN0SGpmMWZvR0lzUnhTV1ZLakNfUlNoT0pwR1hQQ0F6VHp5SlZXdnQtRnI0VXdvYVVUdlY0WVNnZWVUTTBmSVljNA?oc=5",
         "source": "VELO",
@@ -367,14 +389,14 @@
         "sourceUrl": "https://escapecollective.com"
       },
       {
-        "title": "The Vuelta Lost Tadej Pogačar. Did It Just Get a Lot More Interesting? - Outside Magazine",
+        "title": "The Vuelta Lost Tadej Pogačar. Did It Just Get a Lot More Interesting? - velo.outsideonline.com",
         "pubDate": "Tue, 01 Sep 2026 12:53:54 GMT",
         "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE4yQnFVQ0tFd3BGVzdqRmFxdmlfZHdqZEExZFR2WmhCdG1oZ004NXlPWjhZLW5jS2pSUHJTeFNuZTUzWDFjbm5BNWpZRk9zN3JFWTFIdlpPQ0g1SG9aX1k3aDFzbGRIVVhvU3ZyRWN2WW1wX0lQeWNocw?oc=5",
         "source": "VELO",
         "sourceUrl": "https://velo.outsideonline.com"
       },
       {
-        "title": "Mathieu van der Poel Is Ready to Sacrifice the Tour de France for Elusive MTB World Title - Outside Magazine",
+        "title": "Mathieu van der Poel Is Ready to Sacrifice the Tour de France for Elusive MTB World Title - velo.outsideonline.com",
         "pubDate": "Tue, 01 Sep 2026 09:44:19 GMT",
         "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFAwREFXamd1R253eWVjWWd0Y0hBQ0RvM1cwMWNxS1RBN2tyaHBVNTBPSTM2ZmdVTkVpWlM2UzdETkZkQ0QyU21wd1BueE1WeWxSeVdrVmhaUEFNTkkzdjlQODU1Sm1HRGRra0EtOU45aWllWTR6dUcxNU5WdW9ZUQ?oc=5",
         "source": "VELO",
@@ -395,42 +417,27 @@
         "sourceUrl": ""
       },
       {
-        "title": "Andrea Bagioli moves to XDS-Astana on two-year contract - Cyclingnews",
-        "pubDate": "Mon, 31 Aug 2026 15:21:09 GMT",
-        "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQN2NtWG5Cd2ZlVXRta1dQZG5lTDFsbUFjem5TT2h1RjdZYkhJQVIwdFMtUGdBYTRxQVpPUTZPckxZZmxCWENoYnhXSk9PQTYycUVzbGVPVlVIUVV2Ri1VclIwWkFPdGlPSDJwMmFXQ0hEOWF5NXZQZXpBUDNUN2dZaDlHQTRpZnhPbmJMbkVVWjV3NTB6Q1NGTUtQQWMtUmxUQ1lZZy1pNTR6ZmZMV2xMamRGTXdDNFF6RzMwUWhFNXBTTlFEYXFheVBsa3FrUFl2NndXREJ3VTdvcl9CT2thNHBubWs?oc=5",
-        "source": "Cyclingnews",
-        "sourceUrl": "https://www.cyclingnews.com",
-        "type": "transfers"
-      },
-      {
-        "title": "Tadej Pogačar's Brutal Crash Upends a Lot More Than Just the Vuelta a España - Outside Magazine",
-        "pubDate": "Mon, 31 Aug 2026 09:36:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQdDFkSGRGZEtvZjg3ZXhnS04zcHZFbnJ4Mnl5OWc4TFZYZmkyMFRpRTJoZ09jd3NZc0VJYnp3d0FrN2dQZFd3M09xSXQ0WW9WdDVJbklQRjlNMnJuZTduMzZhSG5TUTVaUEtkbm1SSDBQYVBPcmtjVTJKcC1GN2pOWm9hMnlBZw?oc=5",
-        "source": "VELO",
-        "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
-        "title": "Hit by a Car Pre-Vuelta, Roglič GC Dreams Revive - Outside Magazine",
-        "pubDate": "Sun, 30 Aug 2026 21:07:16 GMT",
-        "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQZ21qd0ZNRklPWGpobVB2dEcxVm8xWjBGdlpjTWRjQXNBancyamhBUzVyb2kybkdCSE4wSDd2c3EwMmRpRXBLVmJvSVpWM1NNejBIWTJ6MDZEcXJHb0dUNG9mNk1hQURXS0c4TllBT1IzWDJFdzhJczB2R2wza3FwRlhndTdXcGJwOE5GNFkzX2YwZw?oc=5",
-        "source": "VELO",
-        "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
-        "title": "'They weren't riding hard enough' – Widar's fighting talk after impressing on Vuelta stage 9 - Escape Collective",
-        "pubDate": "Sun, 30 Aug 2026 19:26:57 GMT",
-        "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPQ0JPZkZlWmNqMG9UTTFkYkoxa21TM1B4b2NuenhHY3hxUUdxVzNyMGFJczJ0aUFGcmdLRmFUQU1Tdk9wTW9SM3RvQ3I4eVhWcy1tX1lGenJHdnpyc3RWVnd3TGpla05UbkJISlFnd2M0elVxR004UjdGWng2Z3Y4V21ob2kteU9kUk5XVEhMaGY4M1UxOWdaQzZrWXpSVi0zeThQX0xieWdGXzZpZGJyRnFBUHh2TFE?oc=5",
+        "title": "Spin Cycle: The rock that rocked the Vuelta - Escape Collective",
+        "pubDate": "Mon, 31 Aug 2026 13:32:57 GMT",
+        "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5iemRyT1Vka3lsUGxNNDRENU5uTlRUcmpxc3pBd0djS1hKLVFhb3gtOWNWLWhKNmtOd1hKaXhwSmc1T3RrVDdwd0hOX29rM0VMZzNkWk1NU25zbHZ3SmxRaTRaWWI5UVRJVVUyUERBajdIUmFrbFVneTYxckY?oc=5",
         "source": "Escape Collective",
         "sourceUrl": "https://escapecollective.com"
       }
     ],
     "mtb": [
       {
-        "title": "Carson Storch & Kurtis Downs X SR Suntour - Hot Doggin' In Oregon - vitalmtb.com",
+        "title": "Carson Storch & Kurtis Downs X SR Suntour - Hot Doggin' In Oregon - Vital MTB",
         "pubDate": "Thu, 03 Sep 2026 13:00:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9rM0ZFdXE3Wjl2SXRWQ0lndndKZDFEMlBWWDI5YWRJZzJEMkdvd3JpLU1iTTRuVHpvNk1FcmQzOUhMTkg5OFVLaC0yYkk2cTYydkRsN2VNRGNRYTF6T1l1ak9EdkYtV2Y2TllncWZKNjU5TDVhN3ZoQWIyRkZQdw?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
+        "title": "Video: Kate Courtney Faces Setbacks  With Grit at Cape Epic in 'Everything to Gain'",
+        "pubDate": "Thu, 3 Sep 2026 00:00:00 PDT",
+        "link": "https://www.pinkbike.com/news/video-kate-courtney-faces-setbacks-with-grit-at-cape-epic-in-everything-to-gain.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
       },
       {
         "title": "Mike Sinyard Returns to Role of CEO at Specialized as Armin Landgraf Steps Back",
@@ -524,7 +531,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "Mathieu van der Poel Is Ready to Sacrifice the Tour de France for Elusive MTB World Title - Outside Magazine",
+        "title": "Mathieu van der Poel Is Ready to Sacrifice the Tour de France for Elusive MTB World Title - velo.outsideonline.com",
         "pubDate": "Tue, 01 Sep 2026 09:44:19 GMT",
         "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFAwREFXamd1R253eWVjWWd0Y0hBQ0RvM1cwMWNxS1RBN2tyaHBVNTBPSTM2ZmdVTkVpWlM2UzdETkZkQ0QyU21wd1BueE1WeWxSeVdrVmhaUEFNTkkzdjlQODU1Sm1HRGRra0EtOU45aWllWTR6dUcxNU5WdW9ZUQ?oc=5",
         "source": "VELO",
@@ -573,14 +580,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "Ari Bikes Introduces Wire Peak 3.0 eMTB",
-        "pubDate": "Tue, 1 Sep 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/ari-bikes-introduces-wire-peak-30-160150mm-alloy-frame-avinox-m2s.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Canfield Lithium V3 - vitalmtb.com",
+        "title": "Canfield Lithium V3 - Vital MTB",
         "pubDate": "Mon, 31 Aug 2026 13:53:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOQjBaT3RXUWtQc0o5Zm5DSUNNeGxBOXhjNzVNMlBqOUNuVTdhcFdaR0VlYndGUy0wYXZKbVBXbjRCejFKSDhlcGFST2VpRzFDMTQzcVRqM1psNDJSLWw5NEZnQWkyWVA4UkhEcDVTbGZ1UnBPLXNlbnF0WnVpU2ZHcEUxTDdTTGhHdDhMbUtMU2U?oc=5",
         "source": "Vital MTB",
@@ -594,7 +594,7 @@
         "sourceUrl": "https://www.uci.org"
       },
       {
-        "title": "Fox GRIPX vs RS Charger 3.1 - Dougal - SC - Mountain Biking Pictures - vitalmtb.com",
+        "title": "Fox GRIPX vs RS Charger 3.1 - Dougal - SC - Mountain Biking Pictures - Vital MTB",
         "pubDate": "Mon, 31 Aug 2026 06:45:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1QdWdFMnpoM19SZ01sbkp1Yk1KTkw0VHBMblN0OERsekNjTkRwWks4elpVUlBuVW4yWGdTYnA0akdoeGRNTnphbjZiaw?oc=5",
         "source": "Vital MTB",
@@ -615,14 +615,14 @@
         "sourceUrl": "https://escapecollective.com"
       },
       {
-        "title": "MTB World Championships: Tom Pidcock Powers to Incredible Victory, Van der Poel Out of the Picture - Outside Magazine",
+        "title": "MTB World Championships: Tom Pidcock Powers to Incredible Victory, Van der Poel Out of the Picture - velo.outsideonline.com",
         "pubDate": "Sun, 30 Aug 2026 15:03:34 GMT",
         "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOZi13OU14WEtNM0IwMm12QnZ3RjJqaWdLZVNpMl9zQnZpbHhEb1RfQUhvenoxS3hnUTc4M0lpdF9LVE5zbHF1TlRWSEtWaEtiRXk3UnJJSklYQk05OUVTTnJvYmZZbW9jUFJ1dThVXzZ0VzZuVHNRenExQkw4Tmk3blBQMmEtQ29LNk1hUnp5UlNJeDZaZHU1enltaU1RUTcwbm9jTjNn?oc=5",
         "source": "VELO",
         "sourceUrl": "https://velo.outsideonline.com"
       },
       {
-        "title": "Puck Pieterse Narrowly Misses Podium at Mountain Bike World Championships as Frei Dominates - Outside Magazine",
+        "title": "Puck Pieterse Narrowly Misses Podium at Mountain Bike World Championships as Frei Dominates - velo.outsideonline.com",
         "pubDate": "Sun, 30 Aug 2026 13:13:03 GMT",
         "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPYm1kbllOODBBY0pwdUpDYmdGdjY2a1hlX0sxZDE2aVhUYm80T0c2c1AtZ2k2M05oMFRvbk92US1iNERSWVBrYzNmLUo4bTBSazlNQ2tCUlZFYmFZSWtQaWNMOS1SNXlZRjJSV0pRRk43blBsUVFOU3JOUWFEcE9UUHBTb1RiNFpsOFV5bnE4VDhKeVNnbjQ4OHBhV1FoUHV1clI4Z1E1ZXlQa21KUFE?oc=5",
         "source": "VELO",
@@ -636,21 +636,14 @@
         "sourceUrl": "https://www.uci.org"
       },
       {
-        "title": "RESULTS: Val di Sole World Championships Elite DH Finals - vitalmtb.com",
+        "title": "RESULTS: Val di Sole World Championships Elite DH Finals - Vital MTB",
         "pubDate": "Sat, 29 Aug 2026 12:43:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOS2VtLUU5UGJNRVIyTERac093TnU4T2tpT0cxX2IzaVowWEtaMGkxMlBjcHhGbEgzQWhWbi1QNm9FTlRoa2tWSjJsVjZGQmJzZ0JERE5adnJnN2RPUHgyR05MSDl3aFU5SHUtV3ZieVNreU5hRjNHUmFaekdyOTlzMnpVZWQ2eFFEOGMxQThWcXV1a0Uw?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "Mountain Bike Parts - vitalmtb.com",
-        "pubDate": "Sat, 29 Aug 2026 10:48:53 GMT",
-        "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOakFrU2FKUEVDN2VJNXFjcmpvTlpVcmJOVktOUXdCdjN2SjF1clRCVWVvZkFKVDAtQ2Q5WXN6bkxqQ1dsTkZ6Y2ZSUHF4R1BNSlRya0FwT2lRSHlNSG5pWnJGaExUWEJTQ1FuTHYwbVRMeXhlOVBtVDFSMThkRjE2a2o5bC1OVm9jbll5bzB2Wm5SNlFTUFNrV0VSNzc?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
-      },
-      {
-        "title": "RESULTS: Val di Sole World Championships Junior DH Finals - vitalmtb.com",
+        "title": "RESULTS: Val di Sole World Championships Junior DH Finals - Vital MTB",
         "pubDate": "Sat, 29 Aug 2026 10:24:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNbThiWTV2Y2NWSE5jeExrZlZTdk43dzRaUV9jZHdfNkFQQmRYd2VmWjNGSTNwXzRXVkl4WEVpNE11VGl3M3FDNGI5aGpHLUw5U3MxcGZVd3MxMlJZZm1RckFOSzRRenhscEthQ3V0VlNHRzk1YjBuZUp0cGpLTjFBdDJaTk5CUzZ4QmZNbi0yeGJFZE8wSWc?oc=5",
         "source": "Vital MTB",
@@ -664,28 +657,28 @@
         "sourceUrl": "https://www.uci.org"
       },
       {
-        "title": "RESULTS: Val di Sole World Championships Elite DH Qualifying - vitalmtb.com",
+        "title": "RESULTS: Val di Sole World Championships Elite DH Qualifying - Vital MTB",
         "pubDate": "Fri, 28 Aug 2026 14:01:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPaEQ2bThjNWN4eXNjOUYyTklBUk9qamljXzIwaXQ1RmZzVUk5bEFRTU9ac004bXdNSlY0Zks1N3FkMzNlZERWb1NSU2ZtdjA0MU1EVExyanRYMU15ZGh5bjF4ZTk3VF8zb3phWmFGWFpnMUpXQU9MNmpXNko1QTd5VVpkeXNDRlI2aDF0VlVOdkhVT3hQX19objFn?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "Sugarbrad - vitalmtb.com",
+        "title": "Sugarbrad - Vital MTB",
         "pubDate": "Fri, 28 Aug 2026 11:04:17 GMT",
         "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE4zTVlqSjJ3THBRN25fYlI1N0tGYUVYZ3Z4Vk04Y3hsOHhDSURaWGN3aFU3dFJkSGdjWmJNWEFKbmZOZ1lTZGx4ZGFUWXRKdFdZYlNLakczeWtmN2RYVmRJb1BQcE8?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "2026 UCI Mountain Bike World Championships - vitalmtb.com",
+        "title": "2026 UCI Mountain Bike World Championships - Vital MTB",
         "pubDate": "Fri, 28 Aug 2026 09:20:37 GMT",
         "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQWGh0WXdKUDlYdzhwUG41R3NIX1h0UjlUdjdreUQ5dUt1SWhfTFNpNWx4OTF5ODRod2RoT2tFQU5INHpFMHdDQkh0RlFuRXhLRWFZZlNzVm5rWkMyenBNeEh6bUQ2V0xCT0RmRXl6cFFyYVpqOUxVOHNPeGNvUDg0eW8wRHpabzg?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "RESULTS: Val di Sole World Championships Junior DH Qualifying - vitalmtb.com",
+        "title": "RESULTS: Val di Sole World Championships Junior DH Qualifying - Vital MTB",
         "pubDate": "Fri, 28 Aug 2026 09:20:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxObFNNSVlrX05GTzVFaDNGNzR6ckxsMlY3TlJqRXYyc3ZGRWdvY282c0ZwNzNvZlJGeEtLU1JSeGlVOEc1MmpjaG01OTE1VmY1akhqZ19JeU5mUkxEZGI3VjNCZzdhVjVmMDJ6UzFDeXJpMlRibUVtaFpDaTRjRFg0RnJuTnc4blpUUkNNS0FsUktidHlBbngtZXo4NA?oc=5",
         "source": "Vital MTB",
@@ -693,6 +686,13 @@
       }
     ],
     "cyclocross": [
+      {
+        "title": "Results Grand Prix Pilsen 2026 - Women Elite - Cyclocross24.com",
+        "pubDate": "Thu, 03 Sep 2026 19:06:53 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9HY3dmSWtNUV9mNXJjZTlnU01PQzU3MmhyaUJjNUVhVjFMUzJkbEFMakItRDJaZi1IcGx4X0VKeWNGQlhNZEtZNGhfX08?oc=5",
+        "source": "Cyclocross24",
+        "sourceUrl": "https://cyclocross24.com"
+      },
       {
         "title": "HG Cross 2026-2027 - Men Junior - Cyclocross24.com",
         "pubDate": "Wed, 02 Sep 2026 01:21:07 GMT",
@@ -720,23 +720,16 @@
         "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFB6RXdrdWs1Y2NpaEFyTnpfNk1tZloyVlVHb2Rhc1Nub3pSdFdkbEVqOUU4RFhBWEdfOGFJcWl6ZnJzQ3k1bmdPU1VaTkw?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
-      },
-      {
-        "title": "Results Swedish National Championships Cyclocross Malmö 2027 - Women Junior - Cyclocross24.com",
-        "pubDate": "Fri, 28 Aug 2026 15:56:26 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5iX2NNelFvdzJmUjBydTgtTVdGbzM1RThLbkN4dEhFOUpudlVndzlSenNPeDVsdUVtNi15QzhjekszY2xqVGxyd0NBYzE?oc=5",
-        "source": "Cyclocross24",
-        "sourceUrl": "https://cyclocross24.com"
-      },
-      {
-        "title": "Results Copenhagen Cyclo Cross Clash - Day 1 2026 - Women Junior - Cyclocross24.com",
-        "pubDate": "Fri, 28 Aug 2026 02:50:53 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5SbGplLUJINmpsSHQ0Tm9vTjFYcFZYWlJMREpUOGxZNnpQY0xnV3pHaGFSV3pndjVOaXh2NWJaLW10Qmw4RkVVQVhWMy0?oc=5",
-        "source": "Cyclocross24",
-        "sourceUrl": "https://cyclocross24.com"
       }
     ],
     "gravel": [
+      {
+        "title": "Scott launches a new Addict Gravel Bike: It’s not 32″, 700c Prevails!",
+        "pubDate": "Fri, 04 Sep 2026 04:34:56 +0000",
+        "link": "https://www.gravelcyclist.com/bicycle-tech/scott-launches-a-new-addict-gravel-bike-its-not-32-700c-prevails/",
+        "source": "Gravel Cyclist",
+        "sourceUrl": ""
+      },
       {
         "title": "Tout Terrain introduces a lighter, higher-capacity Dynamo-powered Charging Port: Cinq Plug Plus 7",
         "pubDate": "Thu, 03 Sep 2026 16:46:06 +0000",
@@ -759,7 +752,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "The New Scott Addict Gravel Leans in to Modern Gravel Racing with Big Tires and Stable Geometry - Outside Magazine",
+        "title": "The New Scott Addict Gravel Leans in to Modern Gravel Racing with Big Tires and Stable Geometry - velo.outsideonline.com",
         "pubDate": "Thu, 03 Sep 2026 14:04:59 GMT",
         "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOOGpoU1gzV3g2Um5ERkZWeWpzU0xZajhGdzJZaTU2YXdiS1kxdlQxTWNhcFFJTWozRVZTM1VVMTJiNDVGQS1fU1ZwQUlOYUZSdEZwc3FWLTl3ZlZOcnhIUWpnbkoxTkM4bnQ0UWQ4QW9jbVJxVEwyRW9kVnVRcDhYR1IzOTR4bDhTUUotMU01QQ?oc=5",
         "source": "VELO",
@@ -846,13 +839,6 @@
         "title": "MADE Show Builder Bikes P to W (THE END) 2026",
         "pubDate": "Mon, 31 Aug 2026 05:36:38 +0000",
         "link": "https://www.gravelcyclist.com/videos/made-show-builder-bikes-p-to-w-the-end-2026/",
-        "source": "Gravel Cyclist",
-        "sourceUrl": ""
-      },
-      {
-        "title": "MADE Show Builder Bikes L to O 2026",
-        "pubDate": "Sat, 29 Aug 2026 03:56:36 +0000",
-        "link": "https://www.gravelcyclist.com/videos/made-show-builder-bikes-l-to-o-2026/",
         "source": "Gravel Cyclist",
         "sourceUrl": ""
       }
