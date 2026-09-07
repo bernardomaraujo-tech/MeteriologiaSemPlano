@@ -1,7 +1,91 @@
 {
-  "updatedAt": "2026-09-07T04:45:07.466Z",
+  "updatedAt": "2026-09-07T10:21:40.529Z",
   "disciplines": {
     "road": [
+      {
+        "title": "Nairo Quintana confirmed to take part in Road World Championships as last race of career",
+        "pubDate": "Mon, 07 Sep 2026 10:20:17 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/nairo-quintana-confirmed-to-take-part-in-road-world-championships-as-last-race-of-career/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "One of Great Britain's best still has no contract for 2027 - \"One result can change things\"",
+        "pubDate": "Mon, 07 Sep 2026 12:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/one-of-great-britains-best-still-has-no-contract-for-2027-one-result-can-change-things",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"Primoz can still definitely win\" - João Almeida hints Roglic for potential Vuelta victory",
+        "pubDate": "Mon, 07 Sep 2026 11:15:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/primoz-can-still-definitely-win-joao-almeida-hints-roglic-for-potential-vuelta-victory",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"I'm sure the people in the UCI office will have theirs set at 20°C\" - Matthew Brennan highly critical of racing at over 40 degrees",
+        "pubDate": "Mon, 07 Sep 2026 10:34:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/im-sure-the-people-in-the-uci-office-will-have-theirs-set-at-20c-matthew-brennan-highly-critical-of-racing-at-over-40-degrees",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"The hardest part is already behind\" - Alberto Contador believes Movistar and Mas may be ready to take Vuelta win",
+        "pubDate": "Mon, 07 Sep 2026 10:14:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/the-hardest-part-is-already-behind-alberto-contador-believes-movistar-and-mas-may-be-ready-to-take-vuelta-win",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "“There are at least fifteen riders who can win”: Bernard Hinault sees wide-open World Championships after Pogacar’s absence",
+        "pubDate": "Mon, 07 Sep 2026 10:01:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/there-are-at-least-fifteen-riders-who-can-win-bernard-hinault-sees-wide-open-world-championships-after-pogacars-absence",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "“This victory is for my grandpa, he passed away some weeks ago\" - Nils Politt emotional after winning final Tour of Britain stage",
+        "pubDate": "Mon, 07 Sep 2026 10:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/this-victory-is-for-my-grandpa-he-passed-away-some-weeks-ago-nils-politt-emotional-after-winning-final-tour-of-britain-stage",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "“I don't think Primoz is too bothered” - Adam Blythe questions if Roglic and Red Bull are stressing over Enric Mas' Vuelta advantage",
+        "pubDate": "Mon, 07 Sep 2026 09:55:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/i-dont-think-primoz-is-too-bothered-adam-blythe-questions-if-roglic-and-red-bull-are-stressing-over-enric-mas-vuelta-advantage",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Vuelta a Espana 2026 Stage 16 preview, profile, favourites & prediction - Crosswinds threaten one of final sprint chances as Matthew Brennan and Wout van Aert target La Rabida",
+        "pubDate": "Mon, 07 Sep 2026 09:53:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/vuelta-a-espana-2026-stage-16-preview-profile-favourites-prediction-crosswinds-threaten-one-of-final-sprint-chances-as-matthew-brennan-and-wout-van-aert-target-la-rabida",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "UCI Gravel World Series: Romy Kasper and Andreas Stokbro Nielsen sweep up at first edition of The Wolf",
+        "pubDate": "Mon, 07 Sep 2026 07:48:56 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/racing/uci-gravel-world-series-romy-kasper-and-andreas-stokbro-nielsen-sweep-up-at-first-edition-of-the-wolf/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "UCI moves closer to mandatory rider tracking as safety plans enter regulatory phase",
+        "pubDate": "Mon, 07 Sep 2026 09:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/uci-moves-closer-to-mandatory-rider-tracking-as-safety-plans-enter-regulatory-phase",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "“Is that what cycling wants?”: Michael Matthews criticises the race strategies of teams chasing UCI points",
+        "pubDate": "Mon, 07 Sep 2026 07:54:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/is-that-what-cycling-wants-michael-matthews-criticises-the-race-strategies-of-teams-chasing-uci-points",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
       {
         "title": "“I can be proud of myself”: Alessandro Romele savours breakthrough Vuelta result after finishing second to Van Aert",
         "pubDate": "Mon, 07 Sep 2026 06:00:00 +0200",
@@ -17,24 +101,17 @@
         "sourceUrl": ""
       },
       {
-        "title": "“This victory is for my grandpa”: Nils Politt emotional after winning final Tour of Britain stage",
-        "pubDate": "Mon, 07 Sep 2026 01:00:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/this-victory-is-for-my-grandpa-nils-politt-emotional-after-winning-final-tour-of-britain-stage",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
+        "title": "Heat Stroke Warnings from Treble Vuelta a España Stage Winner - Outside Magazine",
+        "pubDate": "Sun, 06 Sep 2026 22:49:21 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNeGgxQ1FobU5qYkNwN2U4emZhckxLWjFyZWNZNEFMcGJ5WTRjQ0xuSXlDMS02aHZLbE1ZcFpzVzNiNWd0YUZ1TXZfeWRqZ0hEZWZOeEt3bEZxZmhhaWJKSU5MYkh4eUpKaGoyOG5tVElwRjVDWm1sRGI2d1ItTnJvaVZUXzJGWkVxSG1jdGY3RDNKUFlRYUhiaW5mQU95TXdnSjJQVkU0bklobzhLSDZGMmNHNkN6WUNRQWNyVEpFMlItdw?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
       },
       {
         "title": "Gravel Earth: Geerike Schreurs and Mads Würtz Schmidt solo to elite wins at The River and capture series titles",
         "pubDate": "Sun, 06 Sep 2026 21:17:37 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/racing/gravel-earth-series-geerike-schreurs-and-mads-wurtz-schmidt-solo-to-elite-wins-at-the-river-and-capture-series-titles/",
         "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "“There are at least fifteen riders who can win”: Bernard Hinault sees wide-open World Championships after Pogacar’s absence",
-        "pubDate": "Sun, 06 Sep 2026 23:00:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/there-are-at-least-fifteen-riders-who-can-win-bernard-hinault-sees-wide-open-world-championships-after-pogacars-absence",
-        "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
       {
@@ -94,13 +171,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "Vuelta a Espana 2026 Stage 16 preview, profile, favourites & prediction - Crosswinds threaten one of final sprint chances as Matthew Brennan and Wout van Aert target La Rabida",
-        "pubDate": "Sun, 06 Sep 2026 19:36:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/vuelta-a-espana-2026-stage-16-preview-profile-favourites-prediction-crosswinds-threaten-one-of-final-sprint-chances-as-matthew-brennan-and-wout-van-aert-target-la-rabida",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "“Almost everything has been under control” – Enric Mas takes two-minute Vuelta lead over Felix Gall and Primoz Roglic into final week",
         "pubDate": "Sun, 06 Sep 2026 19:00:00 +0200",
         "link": "https://cyclinguptodate.com/cycling/almost-everything-has-been-under-control-enric-mas-takes-two-minute-vuelta-lead-over-felix-gall-and-primoz-roglic-into-final-week",
@@ -150,13 +220,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "Vuelta a Espana 2026 Classifications Update Stage 15 - Enric Mas takes two-minute lead into final week as Wout van Aert surges 108 points clear",
-        "pubDate": "Sun, 06 Sep 2026 17:51:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/vuelta-a-espana-2026-classifications-update-stage-15-enric-mas-takes-two-minute-lead-into-final-week-as-wout-van-aert-surges-108-points-clear",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "Vuelta a España: Wout van Aert wins stage 15 from a five-rider breakaway",
         "pubDate": "Sun, 06 Sep 2026 15:48:53 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/racing/vuelta-a-espana-wout-van-aert-wins-stage-15-from-a-five-rider-breakaway/",
@@ -164,24 +227,10 @@
         "sourceUrl": ""
       },
       {
-        "title": "Results Vuelta a Espana 2026 Stage 15 | Wout van Aert wins five-man thriller after extreme heat slashes almost 80km from route",
-        "pubDate": "Sun, 06 Sep 2026 17:36:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/results-vuelta-a-espana-2026-stage-15-wout-van-aert-wins-five-man-thriller-after-extreme-heat-slashes-almost-80km-from-route",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "Pointe du Raz Ladies Classic: Nina Berton swipes victory from breakaway duo on final 50 metres in Plouhinec",
         "pubDate": "Sun, 06 Sep 2026 15:09:25 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/racing/pointe-du-raz-ladies-classic-nina-berton-swipes-victory-from-breakaway-duo-on-final-50-metres-in-plouhinec/",
         "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "“We didn’t want to attack, we didn’t want to make a hard race” - UAE accidentally blow Tour of Britain apart as Tim Wellens seals overall victory",
-        "pubDate": "Sun, 06 Sep 2026 16:40:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/we-didnt-want-to-attack-we-didnt-want-to-make-a-hard-race-uae-accidentally-blow-tour-of-britain-apart-as-tim-wellens-seals-overall-victory",
-        "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
       {
@@ -199,39 +248,11 @@
         "sourceUrl": ""
       },
       {
-        "title": "Results GP Industria & Artigianato 2026 | Tom Pidcock wins solo just one week after MTB world title as Montreal Worlds build gathers pace",
-        "pubDate": "Sun, 06 Sep 2026 15:56:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/results-gp-industria-artigianato-2026-tom-pidcock-wins-solo-just-one-week-after-mtb-world-title-as-montreal-worlds-build-gathers-pace",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Results Tour of Britain 2026 Stage 5 - Tim Wellens seals overall victory as Nils Politt crowns UAE domination with solo win",
-        "pubDate": "Sun, 06 Sep 2026 15:48:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/results-tour-of-britain-2026-stage-5-tim-wellens-seals-overall-victory-as-nils-politt-crowns-uae-domination-with-solo-win",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "“I know he’ll come back even stronger” - From one Slovenian superstar to another, Olympic champion sends heartfelt message to Tadej Pogacar after Vuelta crash",
-        "pubDate": "Sun, 06 Sep 2026 15:30:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/i-know-hell-come-back-even-stronger-from-one-slovenian-superstar-to-another-olympic-champion-sends-heartfelt-message-to-tadej-pogacar-after-vuelta-crash",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Van Aert takes Visma's fifth win of the Vuelta on shortened stage 15 - escapecollective.com",
+        "title": "Van Aert takes Visma's fifth win of the Vuelta on shortened stage 15 - Escape Collective",
         "pubDate": "Sun, 06 Sep 2026 13:21:26 GMT",
         "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOSTh4MEZ0d1dPdW45SS1IVDJyNFZQaGdmTHctV0h0ZTVEWUVXdGZpcU81Ui1ONUM3RlBfTk5Vbkx4M2h0TEpwRGRQRWdBUzVsbmZ2Z3hDUnp2dzFYRGpvNGRVQkVoTXdLY2pNbU9naVN2MU9ySG5NbG5LTFVrazV2TzVfbmpSNExyOV9pNUxHNXl4SllwWE0wbVY2TlMxUQ?oc=5",
         "source": "Escape Collective",
         "sourceUrl": "https://escapecollective.com"
-      },
-      {
-        "title": "“I don't think Primoz is too bothered” - Adam Blythe questions if Roglic and Red Bull are stressing over Enric Mas' Vuelta advantage",
-        "pubDate": "Sun, 06 Sep 2026 15:00:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/i-dont-think-primoz-is-too-bothered-adam-blythe-questions-if-roglic-and-red-bull-are-stressing-over-enric-mas-vuelta-advantage",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
       },
       {
         "title": "As it happened: shortened stage 15 of the Vuelta a España goes to a breakaway",
@@ -255,14 +276,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "Vuelta stage 14: Marco Brenner wins Tudor's first Grand Tour stage from the breakaway - escapecollective.com",
-        "pubDate": "Sat, 05 Sep 2026 23:40:42 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNSTdkTF9jNnBmaHFDSzM1YWdSLUhkSVJtNVhnaEVGVFV0ZE50Q005ZmxDVWRqN3piTEpwZnBvLWxtcHNmYlJuZk9iVmJSWkc3LUxlMnpIQnMwcUVSR0pSX0NOdnFtYjlJWFFJaUtlWHN1bnNzMzl2REUxeHBLYkx5QW9VTGNQWW9TM2RSN0FQbzF5UHlUMDhXSnZ1Rlg5WTRsX1hiUGlNdHQ5WW45OFI0UVplWQ?oc=5",
-        "source": "Escape Collective",
-        "sourceUrl": "https://escapecollective.com"
-      },
-      {
-        "title": "Tadej Pogačar's season is (officially) over - escapecollective.com",
+        "title": "Tadej Pogačar's season is (officially) over - Escape Collective",
         "pubDate": "Sat, 05 Sep 2026 23:40:42 GMT",
         "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE83eVJ5c05HLVdMMVZaaU0xRWRFR3YxVUZlMVpWTUVTV3V4QmhBN0JpTVdXXzRxZ01BUW9GcDZFRHl0cFoxX0FHVWxPV0d2aHpnYjRDMmlPZU1lOEhESjF0RXFpbVV2d092WEFodHJqWk42c1k4Sl92bXFB?oc=5",
         "source": "Escape Collective",
@@ -311,20 +325,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "'Today's time gap was thanks to Raúl' - Vuelta a España leader Enric Mas pays tribute to teammate García Pierna for distancing key rival Primož Roglič",
-        "pubDate": "Sat, 05 Sep 2026 17:46:56 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/todays-time-gap-was-thanks-to-raul-vuelta-a-espana-leader-enric-mas-pays-tribute-to-teammate-garcia-pierna-for-distancing-key-rival-primoz-roglic/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "'I didn't want to take too much risk with the heat' – Felix Gall moves past Primož Roglič into second at Vuelta a España but feels the exhaustion building",
-        "pubDate": "Sat, 05 Sep 2026 17:25:29 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/i-didnt-want-to-take-too-much-risk-with-the-heat-felix-gall-moves-past-primoz-roglic-into-second-at-vuelta-a-espana-but-feels-the-exhaustion-building/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
         "title": "If you tried to invent pro cycling today, it wouldn’t get past the risk assessment",
         "pubDate": "Sat, 05 Sep 2026 14:50:00 +0000",
         "link": "https://www.cyclingweekly.com/news/if-you-tried-to-invent-pro-cycling-today-it-wouldnt-get-past-the-risk-assessment",
@@ -346,7 +346,7 @@
         "sourceUrl": "https://velo.outsideonline.com"
       },
       {
-        "title": "Tadej Pogačar to miss remainder of 2026 season after Vuelta a España crash, but extends UAE Team Emirates-XRG contract until 2032 - Cyclingnews",
+        "title": "Tadej Pogačar to miss remainder of 2026 season after Vuelta a España crash, but extends UAE Team Emirates-XRG contract until 2032 - cyclingnews.com",
         "pubDate": "Sat, 05 Sep 2026 10:03:52 GMT",
         "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxObm45enNYVEVDMXhjUkV5MkdDRlREcUR5dDBPS0M4TlNiU2l0NXZWSG4tSXBUQ3JTVENEaHEtQzIzQ2lBcjdTMkZ5TUJjYVZXRnowY1l6RUtyYkFZV2VTR1V0WGlRelo0M19ONXlYLTljV2NGdWJ0dF9SM0pHdW5NMWNyLVE4YWJZa3RJeFNzdUtzTE4xeFB1RmpTeDhBckZYSklaM2NzSEIzRmwwdzVjZU9WMktIc2NYSm13QXZUb1ZRUnlPRVZfaFhTTFJ5cGl6ZWNSTmZMRDNSNXQ2N25YSWp4NmZvTU10TVV3?oc=5",
         "source": "Cyclingnews",
@@ -354,7 +354,7 @@
         "type": "transfers"
       },
       {
-        "title": "GPS trackers and better barriers: Rule changes are coming - escapecollective.com",
+        "title": "GPS trackers and better barriers: Rule changes are coming - Escape Collective",
         "pubDate": "Fri, 04 Sep 2026 20:15:48 GMT",
         "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPV21vT1J6VVYtS2Q5aGhsTlVsREsxbVNkNmplR3d0MTByVmJJMlNyanp4YmZDTngydkhtcXRtTHRGV3BuaEk4S1lPUzRHRlB2NVFoWGFmS1VQTkluUm43Y2ZCd3RBTm5YNi1uSFRXLVRKc1Y0VFp0MHp5RDF2TXhjQmIxU2JmdVdlWVFLcjRKOA?oc=5",
         "source": "Escape Collective",
@@ -382,7 +382,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "Vuelta: Van Aert gets his win on stage 13 - escapecollective.com",
+        "title": "Vuelta: Van Aert gets his win on stage 13 - Escape Collective",
         "pubDate": "Fri, 04 Sep 2026 15:42:01 GMT",
         "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5wUVE1R05KUnBGbFp1cklUU2dGeXlpYlFhcDhiQTM2Y0dSaW9SVF9FZm52d3h5d3p4MEpYRFpfSWJsTUNCZjJfTGJZZS1TMHp1RThsNldQTkx6Y3Vpcy1HRXlSYTE?oc=5",
         "source": "Escape Collective",
@@ -396,6 +396,13 @@
         "sourceUrl": ""
       },
       {
+        "title": "Gallery: The 2026 Escape Member Summit bikes - Escape Collective",
+        "pubDate": "Fri, 04 Sep 2026 13:52:06 GMT",
+        "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFAzVmF3NDNzVHoydFprTE81THNtaFFjcElTTUttYlBENkxmZG5ESGhZTmhKWXlsQzJEM2g3YjlxZVU1ZVFSRlRvU3htTWplZ0JtWTlZZWltYXljS1FqUUs4ekZVTU5tUVpNUzJGRVhodmtWNGtibkJSTkQ2NVUyUQ?oc=5",
+        "source": "Escape Collective",
+        "sourceUrl": "https://escapecollective.com"
+      },
+      {
         "title": "'We will seize them and they will be destroyed' – police force issues warning to illegal e-bike riders",
         "pubDate": "Fri, 04 Sep 2026 12:10:45 +0000",
         "link": "https://www.cyclingweekly.com/news/we-will-seize-them-and-they-will-be-destroyed-police-force-issues-warning-to-illegal-e-bike-riders",
@@ -403,7 +410,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "Specialized founder Mike Sinyard returns as CEO - escapecollective.com",
+        "title": "Specialized founder Mike Sinyard returns as CEO - Escape Collective",
         "pubDate": "Fri, 04 Sep 2026 10:39:03 GMT",
         "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOT0Z0N0NXYTd3SkluS01mc010bmJKSko3Vkp5YlU2WUg2U0lMSzZRTU5INVptVmNXV0dYWmNrUU9XbHRtdVpiQ1N4LUpnNXZFREkxSWthaUhQQlZrNWFSSDEzRlhYbnA3MUpjLWp1S1RxSjBBVXJ0SE1odnJ1WlBidE5oSQ?oc=5",
         "source": "Escape Collective",
@@ -415,16 +422,37 @@
         "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQeVcyZFRaZW5rVHRjQWJDbDFmYllmTGUteVJPWU1KRTBTeEJDaElwWDBmbXlYQzFqbjFtWVptOWhGanJHTG11NzdaMmFCODRxLTY1Ui1WWGZBR1d2ZmRSbTdsVVFvaE1ZRGpUbTVQZVFIa1ItQWVQUzUtRzUtdk5fOWQ4TXg4YVR5dnQtVGhtRDZBeEF3VHFBVkJ1aDFSMHJUbWxvQTIxVHFtR3Vv?oc=5",
         "source": "VELO",
         "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
-        "title": "‘It brought us closer together’ – British couple set a new record for cycling around the world",
-        "pubDate": "Fri, 04 Sep 2026 09:53:39 +0000",
-        "link": "https://www.cyclingweekly.com/news/british-couple-set-a-new-record-for-cycling-around-the-world",
-        "source": "Cycling Weekly",
-        "sourceUrl": ""
       }
     ],
     "mtb": [
+      {
+        "title": "2005 INTENSE M3 MS RACING - Vital MTB",
+        "pubDate": "Mon, 07 Sep 2026 08:43:37 GMT",
+        "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1iNEVIQUFJbWVEY3IxODc4N3lfVGU2M2VYUi00T0pUaXZKWnh4T0trZ2NUY2JZZEVCb1ljWTVEbVlhUkJkSDhxNVo5eGlZWWlBc1BOWWdnbUZEaGZnd0xtbllPTVdEekxpOEUxY1NyTmlfcUFVNmdn?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
+        "title": "Industry Digest: Specialized Reaches Settlement in E-Bike 'Over-Run' Lawsuit, US Bike Imports Increase &amp; More",
+        "pubDate": "Mon, 7 Sep 2026 00:00:00 PDT",
+        "link": "https://www.pinkbike.com/news/industry-digest-specialized-reaches-settlement-in-e-bike-over-run-lawsuit-us-bike-imports-increase-and-more.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Roger Vieira's High-Speed POV: Red Bull Stuttgart Cerro Abajo",
+        "pubDate": "Mon, 7 Sep 2026 00:00:00 PDT",
+        "link": "https://www.pinkbike.com/news/roger-vieiras-high-speed-pov-red-bull-stuttgart-cerro-abajo.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Thomas Genon Prepares for Red Bull Rampage at the 2026 Tour des Niares",
+        "pubDate": "Mon, 7 Sep 2026 00:00:00 PDT",
+        "link": "https://www.pinkbike.com/news/thomas-genon-prepares-for-red-bull-rampage-at-the-2026-tour-des-niares.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
       {
         "title": "Homemade Steel Downhill Bike V2 - Vital MTB",
         "pubDate": "Sun, 06 Sep 2026 10:23:00 GMT",
@@ -485,6 +513,13 @@
         "title": "2026 Race Talk - The Hub - Mountain Biking Forums / Message Boards - Vital MTB",
         "pubDate": "Sat, 05 Sep 2026 20:09:26 GMT",
         "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9iSk5LRlpIZXdlVUp2Tmlza0k4MURrUHVxUTlZcXZ2SVVWMWdQaHV1S3NnTWRTdU9jYUl1T01fS3hfRlhVczBOUFUwVG81T0JT?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
+        "title": "Vinci's Custom Fun Steel Bike - Vital MTB",
+        "pubDate": "Sat, 05 Sep 2026 11:09:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOV2NrZkhLU1YteUJaNk00QjM5Wl9VMTVveFNCN3haLUNtbzY5cVVyQ3U3LS05Z05FX2NMVTJzYW5NaDZGMHFQaUhRalZxWnNPamlvYXJwdExCMHFTLW1uMGF1MUZSZTAyajE1WG5wTU9kWFR4SmxxRXZwOExkcGlYN2hn?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
@@ -573,37 +608,16 @@
         "sourceUrl": ""
       },
       {
-        "title": "Pinkbike Poll: What Would You Change About the Mountain Bike Scene Where You Live?",
-        "pubDate": "Fri, 4 Sep 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/pinkbike-poll-what-would-you-change-about-the-mountain-bike-scene-where-you-live.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Marin's Madrone Trail Hardtail is a Throwback to 1986 (And I Want One)",
-        "pubDate": "Fri, 4 Sep 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/marins-madrone-trail-is-a-throwback-to-1986-and-i-want-one.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
-        "title": "15-Year-Old Mayumi Wakefield on Hitting Massive Jumps, Backflips, &amp; Rampage Dreams",
-        "pubDate": "Fri, 4 Sep 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/15-year-old-mayumi-wakefield-on-hitting-massive-jumps-backflips-and-rampage-dreams.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
+        "title": "Carson Storch & Kurtis Downs X SR Suntour - Hot Doggin' In Oregon - Vital MTB",
+        "pubDate": "Thu, 03 Sep 2026 13:00:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9rM0ZFdXE3Wjl2SXRWQ0lndndKZDFEMlBWWDI5YWRJZzJEMkdvd3JpLU1iTTRuVHpvNk1FcmQzOUhMTkg5OFVLaC0yYkk2cTYydkRsN2VNRGNRYTF6T1l1ak9EdkYtV2Y2TllncWZKNjU5TDVhN3ZoQWIyRkZQdw?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
       },
       {
         "title": "OLD MADE NEW - Sam Hill's Replica Iron Horse Sunday from 2008 - Vital MTB",
         "pubDate": "Tue, 01 Sep 2026 15:05:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNTlFYYUFyc19qM1NjRlZld1ZJTlFjRExJQ2YwajN5NUhQN3VjeXpaRkMtMVNFVHFCWHBJd08zeVI0SnJOM08wN0VrRmtFZ29hTDI0WE81UUpkdy1pcDNJRGlxbGFSakp4X1RGcmJNVGNBQ0lISlE2RmRJOEJzdGNMckRkVmNnQ2gwallKWEppbTFNN1dOQTB0SWpR?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
-      },
-      {
-        "title": "Vital Bikes of the Day, August 2026 - Vital MTB",
-        "pubDate": "Tue, 01 Sep 2026 13:24:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNbGhhVW9ndnJRREpiLTRCSUxRcXdDeXY2MnplZ3dISEZkQ0FBeHh6RllDWGVJcWEtM3JzMG1zT3duTXA0R3JkQUw5dk1sTmk2RkVhUFV6bGlqYzlhZS1zR2ZBdGNvOURhejFzZGtDQThxRHp1dmZ3cEVpd0dDQ2MxZDlrRFUwRjE3dC1JVUl0RVNHaVBOMXluYmVaVQ?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
@@ -634,20 +648,6 @@
         "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5fUEJUVFB5cUE5dGV6RDNxVjlFUWhtMXNRdkFOaUFpajlQRnJ4ZEozQ0ZQYmRVZ1pGalRkMW9TMVNtSG5JYy1SR216WkVoc29RMW80cU5MaHlMN2FIUUo4SGZlNkNoVVhJQ3lvSjZ5SDM?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
-      },
-      {
-        "title": "UCI Mountain Bike World Championships: Frei and Pidcock win Elite cross-country Olympic gold - UCI.org",
-        "pubDate": "Mon, 31 Aug 2026 10:16:08 GMT",
-        "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPVjZGZHBTMEozQkVjYXM4Y2xZLVBnZ3NHQm1kdFZNNWZUZ0RZOWRjZHA0Y1hPRmJRZEQ2TlAtOF8tSU4xOGJvdXFfSU16T3BVSnBzV0NNTDRmdTFIbTZMUVZuLXFFeUVrUTR3SjVFZVFRRU9ILVh5dHhnU3RyMUZhM1hkejRiX1FrLS1hOWF1U0VZUGV1QThINlZ2M3RQbXVnTm9LZk9ZU3dsWDQxRExvYi1RRXRBaXBCcFNhSjdUUmU2eEk3Ui00dWVFMjlBa2l4NFJzYTl1d29fUQ?oc=5",
-        "source": "UCI",
-        "sourceUrl": "https://www.uci.org"
-      },
-      {
-        "title": "UCI Mountain Bike World Championships: Höll and Goldstone retain downhill titles in devastating fashion - UCI.org",
-        "pubDate": "Mon, 31 Aug 2026 06:05:22 GMT",
-        "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQdTlSNWFqNjhpQzJWTmRLdWNKNXNTa2ZKelJIYTViNHQ3bjNFc0tZQUNDZUxiYWRJS0NFTi0wbU5QenN0a09QaGdxLU1mSXZjbFNfOWVwdDE0V2ZMNWVpTkxSd0FiQ2Q2TVJLcnNwel9fYlA1Qk11Y0dfUWZjdzVTVjRrNGp5OUtocEg2Wkk3ZXA0b0VhcExvNklMVVpXdnpEb2NUTmdHWE1PM2ZVTWl1NkxYTWFsS3FrXzNUYUVRZ0xnak5xeE1sdDBMcXIwRGxyUmpfR0dtWXI5ZjhtazNnXzRVd1FuUlpHalE?oc=5",
-        "source": "UCI",
-        "sourceUrl": "https://www.uci.org"
       }
     ],
     "cyclocross": [
@@ -669,6 +669,13 @@
         "title": "Pan-American Championships Cyclocross Washington 2026 - Men Elite (CC) - Cyclocross24.com",
         "pubDate": "Sat, 05 Sep 2026 23:55:24 GMT",
         "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE43RmdoM3pNNDl1ZWRIY1d1VV9EV0JweU1hdzluVGlTM0JZX2hLcEpka3h3Z1ZWVEowYVFCQjhDdG1KdjBKRnJxTnZkT1E?oc=5",
+        "source": "Cyclocross24",
+        "sourceUrl": "https://cyclocross24.com"
+      },
+      {
+        "title": "Results Estonian National Championships Cyclocross Viljandi 2026 - Cyclocross24.com",
+        "pubDate": "Sat, 05 Sep 2026 23:55:16 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFB3SVI5dXdkajFmbVJheW44V0tJMzY2cE54NFYybDJ5LUFPRWZoZU40SUtCRldBc0c3Rno1Tl9TVV95TTRCeUt3MnZydTY?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
@@ -727,16 +734,16 @@
         "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9SNVdMeXE2YTJKX29rTzlwOW9rSFdZNkR1WnB4a2ZtRXN2XzY1X2NqZS1LLVltX0hEMGhfVWgyQlo0aElCcmFWaTNDSUs?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
-      },
-      {
-        "title": "Bianca Stewart - Cyclocross24.com",
-        "pubDate": "Mon, 31 Aug 2026 07:00:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1xeWZodnNaVW14OTRKX19jVXFEem5jMEVmQWtPTUZaSkhzSl9JNWZOOVh1NUVMaWh5d1hGWW5QYWVWNkVBZG9EM3VVVlc1eXd1aF9SY2VGanBSZw?oc=5",
-        "source": "Cyclocross24",
-        "sourceUrl": "https://cyclocross24.com"
       }
     ],
     "gravel": [
+      {
+        "title": "UCI Gravel World Series: Romy Kasper and Andreas Stokbro Nielsen sweep up at first edition of The Wolf",
+        "pubDate": "Mon, 07 Sep 2026 07:48:56 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/racing/uci-gravel-world-series-romy-kasper-and-andreas-stokbro-nielsen-sweep-up-at-first-edition-of-the-wolf/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
       {
         "title": "Gravel Earth: Geerike Schreurs and Mads Würtz Schmidt solo to elite wins at The River and capture series titles",
         "pubDate": "Sun, 06 Sep 2026 21:17:37 +0000",
@@ -780,7 +787,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "Factor Elara FKT review: All-in on aero gravel - escapecollective.com",
+        "title": "Factor Elara FKT review: All-in on aero gravel - Escape Collective",
         "pubDate": "Fri, 04 Sep 2026 08:03:44 GMT",
         "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9pMkt3SmhBb203RHp1OXFKV3paZFlrY2dyZVF5TVF5WDhnUURoOF9mejBzNHRoMEIzengtaWhNYy15eGV4Y3NtMWFHdG1vWHE3MkVzZXJicHNIWTRlU1FzTXF4djFmWC1DZ1gtaVNKUGYxM2pSeVlmaFV3?oc=5",
         "source": "Escape Collective",
@@ -801,7 +808,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "Factor Elara review: a bonkers, incredibly capable gravel bike designed for nothing else but going fast - cyclingweekly.com",
+        "title": "Factor Elara review: a bonkers, incredibly capable gravel bike designed for nothing else but going fast - Cycling Weekly",
         "pubDate": "Fri, 04 Sep 2026 08:00:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOUS15eVpRaHJHcVhxcmhEMVliMWNxVV9sc3RFU0dSZHlEc3RMTHNkaUdrQUlJNDgzSzVZTkh5VnR2X29rOHZsaDBEdWFZNVQtR2Z3Si1FS1MtS242ckxUNjg2eVFFSXcxRlB1dEQ1czRVdTU1bEhITmh6YzdGLWJ5RDV2NF93Z0xhZndKNENmQ2w4dEZiQjlPdUk2ZDlHRDhQbXJjTkRBaHVtR2xRUWRDWXp2TWo1ZE5HZmRMQ1hxSDVyXzNwSXVkZjZMZHlERFowZFFmYk9LYllBcUR4NjE2V0NYNXIxVzBlcGx3Q1N3?oc=5",
         "source": "Cycling Weekly",
@@ -843,7 +850,7 @@
         "sourceUrl": "https://velo.outsideonline.com"
       },
       {
-        "title": "Despite its pedigree, and aero appearance, Scott's new Addict Gravel bike sees racing take a back seat - cyclingweekly.com",
+        "title": "Despite its pedigree, and aero appearance, Scott's new Addict Gravel bike sees racing take a back seat - Cycling Weekly",
         "pubDate": "Thu, 03 Sep 2026 14:00:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMikgJBVV95cUxNUVZtckVIVVR5Mjc3VlZocDcxTUh3RU9GSUphMWlHeTRfMlduYkVjc2Znd3lHcTZYUjExWmUzNVZJdGNfdGU2LWVZeEw0Y1MxbmREQ3VVaUpyVnpNdDFHT2szSkJCdUpYUzN5WmJwTXVSNFpmcnBaMEVDLUljd28xaGliZVFmRTc5ZkM1ZU4zblNfVE5MOTZOc09VdUZhMHlNcVJlR2V0eHg4OXRPMDRsSXJmZHowVzRSb2syYzhNV3lCVUtjMTFwT25YbHlWSThVMFIydzlNRGgyaGhHeVhwMks4NlNZcTBFSHN3V0ROWnRyOTNtRzFkOFFhQnpvU2w0VFFUZTZwRU1VTzhMdHAwRFd3?oc=5",
         "source": "Cycling Weekly",
@@ -857,7 +864,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "Best gravel bike saddles 2026: I tested seven off-road seats for performance, comfort and durability - cyclingweekly.com",
+        "title": "Best gravel bike saddles 2026: I tested seven off-road seats for performance, comfort and durability - Cycling Weekly",
         "pubDate": "Thu, 03 Sep 2026 08:21:11 GMT",
         "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNRnBwNjBjN2c5NW1qRTVxTUw2MUN2Zm5ieE45c01LNHM3SWctUy1sXzFfcS1xNTc5OUZkNW9OY2ZCXzRNNVh3UUR4a2RVTVFCZTBfNmhSWERDM2ltQzdadnZWS243SXFFY0xOLXdqcDdYaURvYk95cTFfUkdjZjZ0S3lCYXprb05wT05qOTNzamJ1eXctZVV3ZUdsa3JpeFdQRGFuUzRrazduUUt0RnZFYVkxODZvU1VXeWlkU1c0QQ?oc=5",
         "source": "Cycling Weekly",
@@ -871,7 +878,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "From race-ready to all-day adventure: Our editors' top gravel bike picks from Competitive Cyclist - cyclingweekly.com",
+        "title": "From race-ready to all-day adventure: Our editors' top gravel bike picks from Competitive Cyclist - Cycling Weekly",
         "pubDate": "Wed, 02 Sep 2026 12:56:37 GMT",
         "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPamJieVNrQ191dWI2ZVhWQVVNRmFXeVA3d3EzUmxzcnNfZlVoYmpGdzJhZW5GN1N4SllfSVhVcmpWN3FpZDNYYUI0M1E2aDQ3WFdzdW12T2s2S3BXSGo2a1d4WFNtcUF6Si0ycGJTNTNQQk5uaVlZclAzWC1hN3Z3SXhiZU9mN0VTRnNMc0JEa29nUkxKTUpJY0RZd1M2UVBXbGlZTVMtYWlkRHZKcndnRHJMMHpyS2h2RURXMW4xNXR5ZHRFVnJhV1IzS2s?oc=5",
         "source": "Cycling Weekly",
