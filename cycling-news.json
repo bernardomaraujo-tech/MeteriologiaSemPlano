@@ -1,7 +1,21 @@
 {
-  "updatedAt": "2026-09-07T23:31:08.436Z",
+  "updatedAt": "2026-09-08T04:40:23.044Z",
   "disciplines": {
     "road": [
+      {
+        "title": "\"This is a huge compliment to our scouting system\": 19-year-old British Visma gem stuns the field with first professional victory",
+        "pubDate": "Tue, 08 Sep 2026 06:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/this-is-a-huge-compliment-to-our-scouting-system-19-year-old-british-visma-gem-stuns-the-field-with-first-professional-victory",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "“I have to keep doing what I’m doing and not give up”: Primoz Roglic refuses to abandon dream of fifth Vuelta victory",
+        "pubDate": "Tue, 08 Sep 2026 03:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/i-have-to-keep-doing-what-im-doing-and-not-give-up-primoz-roglic-refuses-to-abandon-dream-of-fifth-vuelta-victory",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
       {
         "title": "Vuelta a Espana 2026 Stage 16 preview, profile, favourites & prediction - Crosswinds threaten one of final sprint chances as Matthew Brennan and Wout van Aert target La Rabida",
         "pubDate": "Tue, 08 Sep 2026 01:10:00 +0200",
@@ -29,6 +43,13 @@
         "link": "https://cyclinguptodate.com/cycling/my-goal-is-to-really-become-the-best-zimmermann-possible-german-all-rounder-signs-three-year-deal-with-lidl-trek",
         "source": "CyclingUpToDate",
         "sourceUrl": ""
+      },
+      {
+        "title": "One Month to Montréal Road Worlds: Ranking the Favorites for the Rainbow Jersey - Outside Magazine",
+        "pubDate": "Mon, 07 Sep 2026 21:21:55 GMT",
+        "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPcGVVOFNtQjBGRnRjZ25fMVY5TFVOZkpUbVJEbndWNVBwRXJ3N0wzTXh3aDNDRkJlaThTZVFXUUNUNE84aHg1d2NMZ3RIWnk1d2FLUDRXQ3NkWHNFQ3Z2M0d1XzFFbXpRTExPYk93WWs5c25YU1Z1bDNXMTNjM3ZKNXBaRXZOaG9vNEhtYzAzODFILUlfdEI0aXV2bzNTWXdrS1IzQ3J3?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
       },
       {
         "title": "Belgium announces star-studded World Championship squad as Evenepoel and Van Aert lead eight-man team",
@@ -188,20 +209,6 @@
         "title": "\"The hardest part is already behind\" - Alberto Contador believes Movistar and Mas may be ready to take Vuelta win",
         "pubDate": "Mon, 07 Sep 2026 10:14:00 +0200",
         "link": "https://cyclinguptodate.com/cycling/the-hardest-part-is-already-behind-alberto-contador-believes-movistar-and-mas-may-be-ready-to-take-vuelta-win",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "“There are at least fifteen riders who can win”: Bernard Hinault sees wide-open World Championships after Pogacar’s absence",
-        "pubDate": "Mon, 07 Sep 2026 10:01:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/there-are-at-least-fifteen-riders-who-can-win-bernard-hinault-sees-wide-open-world-championships-after-pogacars-absence",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "“This victory is for my grandpa, he passed away some weeks ago\" - Nils Politt emotional after winning final Tour of Britain stage",
-        "pubDate": "Mon, 07 Sep 2026 10:00:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/this-victory-is-for-my-grandpa-he-passed-away-some-weeks-ago-nils-politt-emotional-after-winning-final-tour-of-britain-stage",
         "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
@@ -414,22 +421,22 @@
         "link": "https://www.cyclingweekly.com/news/mystery-surrounds-closure-of-popular-london-bike-shop",
         "source": "Cycling Weekly",
         "sourceUrl": ""
-      },
-      {
-        "title": "Remco Evenepoel Ramps Up Massive Worlds Prep With Rainbow Jersey Suddenly Up for Grabs - Outside Magazine",
-        "pubDate": "Fri, 04 Sep 2026 08:50:08 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOM0pRQnVyeldsT25TWU1CNGw4T0pFdzhzRHN1SndickFiUF9UQjVZSUxXc2hBUG9MR0xuVUdXcC03WHBqakE1cWRjQ2pnY1Fwa1FVQ0hlZVY0ZjRhNzdtaG9WLWt3cVZLSFhwbHNCc1I2b2xIbjRKUzhSTXdBcGxmS0NTQmtMR01nMS1nOHR2N1FlRHNtU1I3V1FJdFdfM3dwT1pETUpwOHNsaVk?oc=5",
-        "source": "VELO",
-        "sourceUrl": "https://velo.outsideonline.com"
       }
     ],
     "mtb": [
       {
-        "title": "2005 INTENSE M3 MS RACING - Vital MTB",
+        "title": "2005 INTENSE M3 MS RACING - vitalmtb.com",
         "pubDate": "Mon, 07 Sep 2026 08:49:16 GMT",
         "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1iNEVIQUFJbWVEY3IxODc4N3lfVGU2M2VYUi00T0pUaXZKWnh4T0trZ2NUY2JZZEVCb1ljWTVEbVlhUkJkSDhxNVo5eGlZWWlBc1BOWWdnbUZEaGZnd0xtbllPTVdEekxpOEUxY1NyTmlfcUFVNmdn?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
+        "title": "Nino Schurter Dislocates &amp; Breaks Arm After Crashing Mountain Scooter",
+        "pubDate": "Mon, 7 Sep 2026 00:00:00 PDT",
+        "link": "https://www.pinkbike.com/news/nino-schurter-dislocates-and-breaks-arm-after-crashing-mountain-scooter.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
       },
       {
         "title": "Review: The Quarry Rage Bait 32\" Hardtail",
@@ -481,7 +488,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "Homemade Steel Downhill Bike V2 - Vital MTB",
+        "title": "Homemade Steel Downhill Bike V2 - vitalmtb.com",
         "pubDate": "Sun, 06 Sep 2026 10:23:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOazRiakNKXzFXWUhuLURGRy1UbUNISzVlaW4xaTJVWFQtRFdCTjhjbm81NGJ4bEtvVGlKRThaaHp5QnZ2LWhjUXZIR0xhUnFIM1kyc2JGbGZFaFdjUHh1bjdXVEZHcTRqcGh4dTBoUUZZaXRoV1BOVnRGVE5nbkxaSnlaYw?oc=5",
         "source": "Vital MTB",
@@ -537,14 +544,14 @@
         "sourceUrl": ""
       },
       {
-        "title": "2026 Race Talk - The Hub - Mountain Biking Forums / Message Boards - Vital MTB",
+        "title": "2026 Race Talk - The Hub - Mountain Biking Forums / Message Boards - vitalmtb.com",
         "pubDate": "Sat, 05 Sep 2026 20:09:26 GMT",
         "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9iSk5LRlpIZXdlVUp2Tmlza0k4MURrUHVxUTlZcXZ2SVVWMWdQaHV1S3NnTWRTdU9jYUl1T01fS3hfRlhVczBOUFUwVG81T0JT?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "Vinci's Custom Fun Steel Bike - Vital MTB",
+        "title": "Vinci's Custom Fun Steel Bike - vitalmtb.com",
         "pubDate": "Sat, 05 Sep 2026 11:09:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOV2NrZkhLU1YteUJaNk00QjM5Wl9VMTVveFNCN3haLUNtbzY5cVVyQ3U3LS05Z05FX2NMVTJzYW5NaDZGMHFQaUhRalZxWnNPamlvYXJwdExCMHFTLW1uMGF1MUZSZTAyajE1WG5wTU9kWFR4SmxxRXZwOExkcGlYN2hn?oc=5",
         "source": "Vital MTB",
@@ -586,49 +593,42 @@
         "sourceUrl": ""
       },
       {
-        "title": "Video: Life Beyond Rampage with Georgia Astle",
-        "pubDate": "Sat, 5 Sep 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/video-life-beyond-rampage-with-georgia-astle.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Roots and Role Models | The Story Behind Tahnée Seagrave's Signature Kit - iceman2058 - Mountain Biking Videos - Vital MTB",
+        "title": "Roots and Role Models | The Story Behind Tahnée Seagrave's Signature Kit - iceman2058 - Mountain Biking Videos - vitalmtb.com",
         "pubDate": "Fri, 04 Sep 2026 14:56:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQdldFNDFDQ3loTTlJVi1adlA0NmpmOEE0TGROeEhNdTB0TmFhbTlsZGRSMmcydVhiN0szd1pqUm5VdmRvTFJ3TWdESFFXS094Z0lNQThxUjU0TVJMZ0J4U2EwWjQzYVUxMWROX0R6UlFIdXFuZlNPM19leW9xNU5VRmdBa1FOVGppVmtoRmtPZ0VLYlBXR1Q4SXI0Q0pCTmhaYkdQaUNCRQ?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "Orbea Rallon - Vital MTB",
+        "title": "Orbea Rallon - vitalmtb.com",
         "pubDate": "Fri, 04 Sep 2026 11:05:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQWml3SmlreXZzZHp3WmZldGt4aFg1c0J6Unc4MUxOakFtc3Brd004Ql9CcFM5bFFqdnd4VkVFTm5OamkxOE9uZFZOZGVDRkZ3UUVyN2JPd21JUWdGT0VKUDlLZnNkRUoxc3FwMTFyR1FPa1gwY01tYmpfZkxTX2x5RzB1UE1nSUxIbzdz?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "Carson Storch & Kurtis Downs X SR Suntour - Hot Doggin' In Oregon - Vital MTB",
+        "title": "Carson Storch & Kurtis Downs X SR Suntour - Hot Doggin' In Oregon - vitalmtb.com",
         "pubDate": "Thu, 03 Sep 2026 13:00:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9rM0ZFdXE3Wjl2SXRWQ0lndndKZDFEMlBWWDI5YWRJZzJEMkdvd3JpLU1iTTRuVHpvNk1FcmQzOUhMTkg5OFVLaC0yYkk2cTYydkRsN2VNRGNRYTF6T1l1ak9EdkYtV2Y2TllncWZKNjU5TDVhN3ZoQWIyRkZQdw?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "OLD MADE NEW - Sam Hill's Replica Iron Horse Sunday from 2008 - Vital MTB",
+        "title": "OLD MADE NEW - Sam Hill's Replica Iron Horse Sunday from 2008 - vitalmtb.com",
         "pubDate": "Tue, 01 Sep 2026 15:05:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNTlFYYUFyc19qM1NjRlZld1ZJTlFjRExJQ2YwajN5NUhQN3VjeXpaRkMtMVNFVHFCWHBJd08zeVI0SnJOM08wN0VrRmtFZ29hTDI0WE81UUpkdy1pcDNJRGlxbGFSakp4X1RGcmJNVGNBQ0lISlE2RmRJOEJzdGNMckRkVmNnQ2gwallKWEppbTFNN1dOQTB0SWpR?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "Parallel III ft. Brandon Semenuk, Kade Edwards, Hugo Frixtalon - iceman2058 - Mountain Biking Videos - Vital MTB",
+        "title": "Parallel III ft. Brandon Semenuk, Kade Edwards, Hugo Frixtalon - iceman2058 - Mountain Biking Videos - vitalmtb.com",
         "pubDate": "Tue, 01 Sep 2026 14:19:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOeXYyME8ySTNtZGl6UTBDYl9FZzNiUVd2eHJMalVGQ3lMSEtRbGVVNlkwUklSekZPbzJjY3BmUC1RdTB6OWc4dmZOdjJmYnpuSndrZmxZdUtiYW12RWpOam4yVjVPc01tdzVsdHFsR1VyZnp0VjdUQm0yTTFHRkRmVEZubW04Nk9lSmhuMXg1MVFTdFYyTFBrUlNPcm9GZnc?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "Vital Bikes of the Day, August 2026 - Vital MTB",
+        "title": "Vital Bikes of the Day, August 2026 - vitalmtb.com",
         "pubDate": "Tue, 01 Sep 2026 13:24:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNbGhhVW9ndnJRREpiLTRCSUxRcXdDeXY2MnplZ3dISEZkQ0FBeHh6RllDWGVJcWEtM3JzMG1zT3duTXA0R3JkQUw5dk1sTmk2RkVhUFV6bGlqYzlhZS1zR2ZBdGNvOURhejFzZGtDQThxRHp1dmZ3cEVpd0dDQ2MxZDlrRFUwRjE3dC1JVUl0RVNHaVBOMXluYmVaVQ?oc=5",
         "source": "Vital MTB",
@@ -643,6 +643,13 @@
       }
     ],
     "cyclocross": [
+      {
+        "title": "Copa de España #7 - CX Tr3ce Bike Arroyomolinos 2027 - Cyclocross24.com",
+        "pubDate": "Sat, 05 Sep 2026 23:55:56 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1UN2ZFbjI1WUFsRURjRXhCWlAwR0hUNDB2SE9Ma0dXNlVyaW9IcGd6LXVOZE1WWnRJY3ozS185cFE2NjZWaXJfeU1xR25ZZExDNHhrODBGaw?oc=5",
+        "source": "Cyclocross24",
+        "sourceUrl": "https://cyclocross24.com"
+      },
       {
         "title": "Results Canadian National Championships Cyclocross Oro-Medonte 2026 - Cyclocross24.com",
         "pubDate": "Sat, 05 Sep 2026 23:55:28 GMT",
@@ -717,13 +724,6 @@
         "title": "Results Copa de España #7 - CX Tr3ce Bike Arroyomolinos 2027 - Cyclocross24.com",
         "pubDate": "Sat, 05 Sep 2026 23:53:26 GMT",
         "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBOTkJRcmVmWTU5bXVDamd4dGVjRDRyTWFHOURWekdlSHJjdGdwcnplTEpmUUk2YVZZX21NUWxEX3V4MllKOERubS1pRE4?oc=5",
-        "source": "Cyclocross24",
-        "sourceUrl": "https://cyclocross24.com"
-      },
-      {
-        "title": "UEC European Championships Cyclocross Zeddam 2026 - Men Elite (CC) - Cyclocross24.com",
-        "pubDate": "Thu, 03 Sep 2026 23:23:02 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9tZW4weEh6M0Z1anZFeU9jLV9qbnd6NmtRaWNkZXNRcHA2Z3RuMUNtSXNmTklFX0JsUHN2Z1JyS2dSeFJ4eFZ0NkpqeWc?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       }
