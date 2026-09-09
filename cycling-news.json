@@ -1,7 +1,63 @@
 {
-  "updatedAt": "2026-09-09T04:52:45.712Z",
+  "updatedAt": "2026-09-09T09:48:54.601Z",
   "disciplines": {
     "road": [
+      {
+        "title": "\"The Tour is a completely different story\" - Will Matthew Brennan convince Visma to make Tour de France debut in 2027?",
+        "pubDate": "Wed, 09 Sep 2026 11:18:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/the-tour-is-a-completely-different-story-will-matthew-brennan-convince-visma-to-make-tour-de-france-debut-in-2027",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Tadej Pogačar's absence changes everything – How will World Championships strategies and tactics be rewritten in Montreal?",
+        "pubDate": "Wed, 09 Sep 2026 09:07:32 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/racing/tadej-pogacars-absence-changes-everything-how-will-world-championships-strategies-and-tactics-be-rewritten-in-montreal/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"Comparing myself with him made it more difficult\" - Felix Gall admits Tadej Pogacar's early success was a problem for him",
+        "pubDate": "Wed, 09 Sep 2026 10:57:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/comparing-myself-with-him-made-it-more-difficult-felix-gall-admits-tadej-pogacars-early-success-was-a-problem-for-him",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Why Kevin Vermaerke Won’t Stop Attacking After Pogačar Disaster at La Vuelta a España - Outside Magazine",
+        "pubDate": "Wed, 09 Sep 2026 08:56:30 GMT",
+        "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQTjlZaFdHMllPZldHWnNudk9qblZUaFZ1UmhzRG5IQmRKMlEwdEVDMUtwWTNDNE0xci1LTDdyNzVUMkZFbC16bF9RYXVnV1BqSk10cGcyT1pwMmRSM3BlY1VVbjdEQ05wZEtKSUJBNUdUQnNVaWpnemFNc1ZBb08wWXVkaTd1Vml6ckRpc2l4OU83NVdSSzl0c3lQMlY3NEF1SkwtUVliUmtySFk0TFpvQVI2cDV3dzFUX3lRZzRn?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
+      },
+      {
+        "title": "\"Whatever the team tells me\" - Iván Romeo all-in for Movistar's pursuit of La Vuelta victory",
+        "pubDate": "Wed, 09 Sep 2026 10:23:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/whatever-the-team-tells-me-ivan-romeo-all-in-for-movistars-pursuit-of-la-vuelta-victory",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "After fourth Vuelta victory, British Tour de France start is Matthew Brennan's big goal - \"It would be fantastic to take the yellow jersey on the opening day there\"",
+        "pubDate": "Wed, 09 Sep 2026 10:16:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/after-fourth-vuelta-victory-british-tour-de-france-start-is-matthew-brennans-big-goal-it-would-be-fantastic-to-take-the-yellow-jersey-on-the-opening-day-there",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Vuelta a Espana 2026 Stage 17 preview, profile, favourites & prediction - Can anyone stop Visma's absolute sprint domination?",
+        "pubDate": "Wed, 09 Sep 2026 10:15:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/vuelta-a-espana-2026-stage-17-preview-profile-favourites-prediction-can-anyone-stop-vismas-absolute-sprint-domination",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "“Pay-to-ride” case takes another turn as five-year bans for former Vini Zabù managers are overturned",
+        "pubDate": "Wed, 09 Sep 2026 09:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/pay-to-ride-case-takes-another-turn-as-five-year-bans-for-former-vini-zabu-managers-are-overturned",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
       {
         "title": "“I’d like to bring time trials back into the spotlight”: New RCS chief reveals his vision for a revamped Giro d’Italia",
         "pubDate": "Wed, 09 Sep 2026 06:00:00 +0200",
@@ -52,13 +108,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "Vuelta a Espana 2026 Stage 17 preview, profile, favourites & prediction - Can anyone stop Visma's absolute sprint domination?",
-        "pubDate": "Wed, 09 Sep 2026 02:04:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/vuelta-a-espana-2026-stage-17-preview-profile-favourites-prediction-can-anyone-stop-vismas-absolute-sprint-domination",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "“If Van Aert has a chance to become world champion, it’s this year”: Former Dutch rider backs Belgian over Van der Poel for Worlds",
         "pubDate": "Wed, 09 Sep 2026 01:00:00 +0200",
         "link": "https://cyclinguptodate.com/cycling/if-van-aert-has-a-chance-to-become-world-champion-its-this-year-former-dutch-rider-backs-belgian-over-van-der-poel-for-worlds",
@@ -102,7 +151,7 @@
       },
       {
         "title": "Escape Collective - Escape Collective",
-        "pubDate": "Tue, 08 Sep 2026 19:04:19 GMT",
+        "pubDate": "Tue, 08 Sep 2026 19:10:35 GMT",
         "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE1UZ2VaWFozbFo4ckFYQUNRY05DTDNWWXA3ajQtdU91SlAycnVEeVhoRE5zUzdDQU9EMlllbE1wNGFsM00?oc=5",
         "source": "Escape Collective",
         "sourceUrl": "https://escapecollective.com"
@@ -164,23 +213,9 @@
         "sourceUrl": ""
       },
       {
-        "title": "After fourth Vuelta victory, British Tour de France start is Matthew Brennan's big goal - \"It would be fantastic to take the yellow jersey on the opening day there\"",
-        "pubDate": "Tue, 08 Sep 2026 18:03:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/after-fourth-vuelta-victory-british-tour-de-france-start-is-matthew-brennans-big-goal-it-would-be-fantastic-to-take-the-yellow-jersey-on-the-opening-day-there",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "Medical Reports & Withdrawals Vuelta a Espana 2026 Stage 16 - Unlucky UAE sees half of the remaining team crash",
         "pubDate": "Tue, 08 Sep 2026 17:40:00 +0200",
         "link": "https://cyclinguptodate.com/cycling/medical-reports-withdrawals-vuelta-a-espana-2026-stage-16-unlucky-uae-sees-half-of-the-remaining-team-crash",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Vuelta a Espana 2026 Classifications Update Stage 16 - Van Aert and Buitrago look set for victory, Enric Mas retains red as the peloton enters the final week",
-        "pubDate": "Tue, 08 Sep 2026 17:34:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/vuelta-a-espana-2026-classifications-update-stage-16-van-aert-and-buitrago-look-set-for-victory-enric-mas-retains-red-as-the-peloton-enters-the-final-week",
         "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
@@ -192,20 +227,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "Results Vuelta a España 2026 stage 16 - Victory number six for Visma as Matthew Brennan sprints to victory once again",
-        "pubDate": "Tue, 08 Sep 2026 17:15:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/results-vuelta-a-espana-2026-stage-16-victory-number-six-for-visma-as-matthew-brennan-sprints-to-victory-once-again",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Red Bull - BORA - hansgrohe set to lose one of its key domestiques, who might boost Tudor's classics block",
-        "pubDate": "Tue, 08 Sep 2026 15:45:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/red-bull-bora-hansgrohe-set-to-lose-one-of-its-key-domestiques-who-might-boost-tudors-classics-block",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "'I'm dreaming of something beautiful' – Marianne Vos heads to UCI Gravel World Championships in Australia in bid to reclaim rainbow stripes",
         "pubDate": "Tue, 08 Sep 2026 13:30:00 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/im-dreaming-of-something-beautiful-marianne-vos-heads-to-uci-gravel-world-championships-in-australia-in-bid-to-reclaim-rainbow-stripes/",
@@ -213,14 +234,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "Bahrain Victorious confirm signing of Spanish climber currently in the general classification fight at Vuelta a Espana",
-        "pubDate": "Tue, 08 Sep 2026 14:45:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/bahrain-victorious-confirm-signing-of-spanish-climber-currently-in-the-general-classification-fight-at-vuelta-a-espana",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "‘They were cyclists going out on a Sunday morning, enjoying the countryside, and this happened’ – Two cyclists killed by car-driver in Kent",
+        "title": "'They were cyclists going out on a Sunday morning, enjoying the countryside, and this happened' – Two cyclists killed in Kent road crash",
         "pubDate": "Tue, 08 Sep 2026 11:06:02 +0000",
         "link": "https://www.cyclingweekly.com/news/they-were-cyclists-going-out-on-a-sunday-morning-enjoying-the-countryside-and-this-happened-two-cyclists-killed-by-car-driver-in-kent",
         "source": "Cycling Weekly",
@@ -311,13 +325,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "'Most important thing is they get along well now' – Wout van Aert and Remco Evenepoel lead Belgium at World Championships with communication the key for national coach",
-        "pubDate": "Mon, 07 Sep 2026 11:14:51 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/most-important-thing-is-they-get-along-well-now-wout-van-aert-and-remco-evenepoel-lead-belgium-at-world-championships-with-communication-the-key-for-national-coach/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
         "title": "Primož Roglič Fined for ‘Sticky Bottle’ as Vuelta Hopes Hang by a Thread - Outside Magazine",
         "pubDate": "Mon, 07 Sep 2026 07:34:23 GMT",
         "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOVG1ja2hvUnNhZ0podkZ0T1QxcE0zelJyR0VkMXNGei1RVm80T0ZBTmdoNnBSendXWFBoUlBmQWF3a3RLNy16WTlJTGlpUU1TQkxMbEpBX2s2YmRGUHk1d0dxU2lxemN4S2xuaUhNNm1LUFZVZnFrM3BUUXNMX2g0VjdhSXJHQXNWMGpiajdtNzFZSHhob2F2eVFoa2lBWGdFQ05yZW9sQnJyVVc0WXZmdmJIVFdGUQ?oc=5",
@@ -332,16 +339,23 @@
         "sourceUrl": "https://velo.outsideonline.com"
       },
       {
-        "title": "Heat Stroke Warnings from Treble Vuelta a España Stage Winner - Outside Magazine",
-        "pubDate": "Sun, 06 Sep 2026 22:49:21 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNeGgxQ1FobU5qYkNwN2U4emZhckxLWjFyZWNZNEFMcGJ5WTRjQ0xuSXlDMS02aHZLbE1ZcFpzVzNiNWd0YUZ1TXZfeWRqZ0hEZWZOeEt3bEZxZmhhaWJKSU5MYkh4eUpKaGoyOG5tVElwRjVDWm1sRGI2d1ItTnJvaVZUXzJGWkVxSG1jdGY3RDNKUFlRYUhiaW5mQU95TXdnSjJQVkU0bklobzhLSDZGMmNHNkN6WUNRQWNyVEpFMlItdw?oc=5",
-        "source": "VELO",
-        "sourceUrl": "https://velo.outsideonline.com"
+        "title": "Long-term review: Trek CheckOut SL7 full-suspension gravel bike - Escape Collective",
+        "pubDate": "Mon, 07 Sep 2026 01:59:14 GMT",
+        "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSXJFZkZqRF9vQkYwRGswaFdqcnlzc0VLUkZDOEhGYy1WVzBEZFpZd0U2TEY4Z3ltTlFvS0Ytc2xEVHl3aDJVcnRBWjZTRVZVbjF4XzlESFFFbjhRdEZXYnBVMjItMG1RajF5eXlJU2JhRFdpSlZyOUtydTc0VUZYSVk0a0doNzBrZnR5akdscEt5Y0lwTTl3?oc=5",
+        "source": "Escape Collective",
+        "sourceUrl": "https://escapecollective.com"
       },
       {
         "title": "Vuelta a España Stage 15: Van Aert in Complete Control for Second Win in Three Days - Outside Magazine",
         "pubDate": "Sun, 06 Sep 2026 16:13:58 GMT",
         "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOb3NxNEhSYWZLVmlHVktkcENfNndnU3R1UnpVMHVwM3Y2YTZfajRGM2FWZjNNTTh6b2lUTTBFWUIzZ2RnY3d6a3RCNnE4Ung3a2tyNmdUUmVuZE5UV0t3TjVSVkk3WFZsU3NaQ0E1RGJ3VnZ3UWJpSzZnaWZKcFdQN01pRWNKeG1nMXV0ME9EZUx1QVhvamRWOXg4ay1mbXZuZjF1M0pJaFBUNktkbng1Vkw1cU1sYkx6dTFJUTMzeHdyVWxXbDBrM3ZjTE9RdXo4RkJxTVphaUlPQnVjaloyYg?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
+      },
+      {
+        "title": "Are Stars Aligning for a Tour Down Under Return for Tadej Pogačar? - Outside Magazine",
+        "pubDate": "Sun, 06 Sep 2026 13:29:03 GMT",
+        "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQQnpLUkZXOVBXd0VMNTVWR2FpZzV1bWhieEZoVnNpZkpWamItN1N4TzlkdHhWLUFCeHFmaTNpaGMyQWVuNEhab0ZvRzl2aVlxQXJoOHNmU2t2aENZcUdhaVVFQXhKSDRmY1A5QmNqaTJiMlFVUTlSUzdybXExVkhoc0lLYk9XSFVNX1hYRUJYMU1VZC1DWl82eA?oc=5",
         "source": "VELO",
         "sourceUrl": "https://velo.outsideonline.com"
       },
@@ -407,20 +421,6 @@
         "link": "https://www.cyclingweekly.com/news/the-biked-that-helped-launched-the-career-of-an-unlikely-dutch-climber",
         "source": "Cycling Weekly",
         "sourceUrl": ""
-      },
-      {
-        "title": "Ezra Caudell remains in intensive care with head and lung trauma after Philadelphia crash, faces lengthy recovery",
-        "pubDate": "Fri, 04 Sep 2026 18:11:56 +0000",
-        "link": "https://www.cyclingweekly.com/news/ezra-caudell-remains-in-intensive-care-with-head-and-lung-trauma-after-philadelphia-crash-faces-lengthy-recovery",
-        "source": "Cycling Weekly",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Vuelta: Van Aert gets his win on stage 13 - Escape Collective",
-        "pubDate": "Fri, 04 Sep 2026 15:42:01 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5wUVE1R05KUnBGbFp1cklUU2dGeXlpYlFhcDhiQTM2Y0dSaW9SVF9FZm52d3h5d3p4MEpYRFpfSWJsTUNCZjJfTGJZZS1TMHp1RThsNldQTkx6Y3Vpcy1HRXlSYTE?oc=5",
-        "source": "Escape Collective",
-        "sourceUrl": "https://escapecollective.com"
       }
     ],
     "mtb": [
@@ -437,6 +437,13 @@
         "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNN2FuQXlhcDQ0NFl2ZU9jQUJ5QkMwRTJpcHJJUTFYY2lkejc3R1ozNWh4T2tjVGdjdDZZaDhUajhMRDFoWGV5MlgwOEpBZnFnVlZDYVJOZWNfU3Zhb1dGYkpCZkYwVWhuYm13dnRnaklTOExhc01EdDJqZ1I3ekdBWUxxYVplc3h1NWpKS0w2NEpWLVVOY0ZNNDJweV90dmZNSHhnT2hLdDNxYldXRHB1X3hJU1ZkZUJtMU9JdExOdDV3NDBSSmc?oc=5",
         "source": "UCI",
         "sourceUrl": "https://www.uci.org"
+      },
+      {
+        "title": "Video: One Bike, Two Races - Matthew Fairbrother's First Downieville Classic",
+        "pubDate": "Tue, 8 Sep 2026 00:00:00 PDT",
+        "link": "https://www.pinkbike.com/news/video-one-bike-two-races-matthew-fairbrothers-first-downieville-classic.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
       },
       {
         "title": "Video: Tom Van Steenbergen in EP2 of 'A Million for One - Returning to Red Bull Rampage After the Crash'",
@@ -589,13 +596,6 @@
         "title": "Slack Randoms: Triangle Bike Wheels, DIY Wireless Brakes &amp; More",
         "pubDate": "Sun, 6 Sep 2026 00:00:00 PDT",
         "link": "https://www.pinkbike.com/news/slack-randoms-triangle-bike-wheels-diy-wireless-brakes-and-more.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Replay: 2026 Red Bull Stuttgart Cerro Abajo",
-        "pubDate": "Sun, 6 Sep 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/replay-2026-red-bull-stuttgart-cerro-abajo.html?trk=rss",
         "source": "Pinkbike",
         "sourceUrl": ""
       },
@@ -758,7 +758,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "Sponsored rider leaks video of unreleased Canyon aero gravel bike on Instagram - Cycling Weekly",
+        "title": "Sponsored rider leaks video of unreleased Canyon aero gravel bike on Instagram - cyclingweekly.com",
         "pubDate": "Tue, 08 Sep 2026 13:34:25 GMT",
         "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPSnVpYjlqTjJuWmJid1hINlFfMlBneHlBNm9ZRms2bW13OFJCU2k5a0FZUmp3blJpOExBRzB6MWZPUWRXTWp2TXdZM0wxYXRKOFljYUxHXzJNV0wtM2ViOEUyVGxQZVlBcE5YOU9oc3ZpVlhkRkhhcFBiS2todVIwbEpJZER4V19KaWNXcFpjRzk5LVB3SnBndGNpSXdYOTNEeE9pVHNNZnB6dWU3SWU4SmRKTEZqZi03?oc=5",
         "source": "Cycling Weekly",
@@ -828,7 +828,7 @@
         "sourceUrl": "https://escapecollective.com"
       },
       {
-        "title": "Factor Elara review: a bonkers, incredibly capable gravel bike designed for nothing else but going fast - Cycling Weekly",
+        "title": "Factor Elara review: a bonkers, incredibly capable gravel bike designed for nothing else but going fast - cyclingweekly.com",
         "pubDate": "Fri, 04 Sep 2026 08:00:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOUS15eVpRaHJHcVhxcmhEMVliMWNxVV9sc3RFU0dSZHlEc3RMTHNkaUdrQUlJNDgzSzVZTkh5VnR2X29rOHZsaDBEdWFZNVQtR2Z3Si1FS1MtS242ckxUNjg2eVFFSXcxRlB1dEQ1czRVdTU1bEhITmh6YzdGLWJ5RDV2NF93Z0xhZndKNENmQ2w4dEZiQjlPdUk2ZDlHRDhQbXJjTkRBaHVtR2xRUWRDWXp2TWo1ZE5HZmRMQ1hxSDVyXzNwSXVkZjZMZHlERFowZFFmYk9LYllBcUR4NjE2V0NYNXIxVzBlcGx3Q1N3?oc=5",
         "source": "Cycling Weekly",
@@ -870,7 +870,7 @@
         "sourceUrl": "https://velo.outsideonline.com"
       },
       {
-        "title": "Despite its pedigree, and aero appearance, Scott's new Addict Gravel bike sees racing take a back seat - Cycling Weekly",
+        "title": "Despite its pedigree, and aero appearance, Scott's new Addict Gravel bike sees racing take a back seat - cyclingweekly.com",
         "pubDate": "Thu, 03 Sep 2026 14:00:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMikgJBVV95cUxNUVZtckVIVVR5Mjc3VlZocDcxTUh3RU9GSUphMWlHeTRfMlduYkVjc2Znd3lHcTZYUjExWmUzNVZJdGNfdGU2LWVZeEw0Y1MxbmREQ3VVaUpyVnpNdDFHT2szSkJCdUpYUzN5WmJwTXVSNFpmcnBaMEVDLUljd28xaGliZVFmRTc5ZkM1ZU4zblNfVE5MOTZOc09VdUZhMHlNcVJlR2V0eHg4OXRPMDRsSXJmZHowVzRSb2syYzhNV3lCVUtjMTFwT25YbHlWSThVMFIydzlNRGgyaGhHeVhwMks4NlNZcTBFSHN3V0ROWnRyOTNtRzFkOFFhQnpvU2w0VFFUZTZwRU1VTzhMdHAwRFd3?oc=5",
         "source": "Cycling Weekly",
@@ -884,7 +884,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "Best gravel bike saddles 2026: I tested seven off-road seats for performance, comfort and durability - Cycling Weekly",
+        "title": "Best gravel bike saddles 2026: I tested seven off-road seats for performance, comfort and durability - cyclingweekly.com",
         "pubDate": "Thu, 03 Sep 2026 08:21:11 GMT",
         "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNRnBwNjBjN2c5NW1qRTVxTUw2MUN2Zm5ieE45c01LNHM3SWctUy1sXzFfcS1xNTc5OUZkNW9OY2ZCXzRNNVh3UUR4a2RVTVFCZTBfNmhSWERDM2ltQzdadnZWS243SXFFY0xOLXdqcDdYaURvYk95cTFfUkdjZjZ0S3lCYXprb05wT05qOTNzamJ1eXctZVV3ZUdsa3JpeFdQRGFuUzRrazduUUt0RnZFYVkxODZvU1VXeWlkU1c0QQ?oc=5",
         "source": "Cycling Weekly",
@@ -898,7 +898,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "From race-ready to all-day adventure: Our editors' top gravel bike picks from Competitive Cyclist - Cycling Weekly",
+        "title": "From race-ready to all-day adventure: Our editors' top gravel bike picks from Competitive Cyclist - cyclingweekly.com",
         "pubDate": "Wed, 02 Sep 2026 12:56:37 GMT",
         "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPamJieVNrQ191dWI2ZVhWQVVNRmFXeVA3d3EzUmxzcnNfZlVoYmpGdzJhZW5GN1N4SllfSVhVcmpWN3FpZDNYYUI0M1E2aDQ3WFdzdW12T2s2S3BXSGo2a1d4WFNtcUF6Si0ycGJTNTNQQk5uaVlZclAzWC1hN3Z3SXhiZU9mN0VTRnNMc0JEa29nUkxKTUpJY0RZd1M2UVBXbGlZTVMtYWlkRHZKcndnRHJMMHpyS2h2RURXMW4xNXR5ZHRFVnJhV1IzS2s?oc=5",
         "source": "Cycling Weekly",
