@@ -1,7 +1,21 @@
 {
-  "updatedAt": "2026-09-11T00:12:25.311Z",
+  "updatedAt": "2026-09-11T04:44:19.894Z",
   "disciplines": {
     "road": [
+      {
+        "title": "Astana tie up in-form Vuelta breakout rider on a two-year contract extension",
+        "pubDate": "Fri, 11 Sep 2026 06:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/astana-tie-up-in-form-vuelta-breakout-rider-on-a-two-year-contract-extension",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"I didn't feel comfortable with the rain\" - Benoit Cosnefroy celebrates his fifth victory of debut season in UAE jersey",
+        "pubDate": "Fri, 11 Sep 2026 03:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/i-didnt-feel-comfortable-with-the-rain-benoit-cosnefroy-celebrates-his-fifth-victory-of-debut-season-in-uae-jersey",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
       {
         "title": "\"He's empty and he's got some illness\" - Lidl-Trek gradually gives up on a good result for Mattias Skjelmose",
         "pubDate": "Fri, 11 Sep 2026 01:00:00 +0200",
@@ -178,13 +192,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "Adrien Boichis to skip final World Series rounds despite XCO overall title fight - Escape Collective",
-        "pubDate": "Thu, 10 Sep 2026 14:42:52 GMT",
-        "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQaWdpUkx2YVlzTHBsNHhjTnByZTI1QnpPUzFTazhQMG5QczRZU2NMWXVSQUdPdUNPTzlWWGFBdTg2d0RmMndobGxBNFFxTDdKSXY4elV3UEtTZzJjWXFGRzFCR1NFMkdYWUwyTEx5NWxXM2pVMENTU2VzRzlFNEVGWFREMTRKbDJ4dE1CT3ZuWVh6c2tmd2FYY2hGRzJtbXc?oc=5",
-        "source": "Escape Collective",
-        "sourceUrl": "https://escapecollective.com"
-      },
-      {
         "title": "Coppa Sabatini: Benoît Cosnefroy overtakes final breakaway rider for victory with punishing acceleration in closing metres",
         "pubDate": "Thu, 10 Sep 2026 14:26:05 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/racing/coppa-sabatini-benoit-cosnefroy-overtakes-final-breakaway-rider-for-victory-with-punishing-acceleration-in-closing-metres/",
@@ -223,20 +230,6 @@
         "title": "“In 2020 I was in top form too, then suddenly it was over” - Remco Evenepoel sees haunting Pogacar parallel as biggest rival’s crash blows Worlds wide open",
         "pubDate": "Thu, 10 Sep 2026 15:30:00 +0200",
         "link": "https://cyclinguptodate.com/cycling/in-2020-i-was-in-top-form-too-then-suddenly-it-was-over-remco-evenepoel-sees-haunting-pogacar-parallel-as-biggest-rivals-crash-blows-worlds-wide-open",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "“As long as the legs are there...”: INEOS fully confident Oscar Onley can defend white jersey in Vuelta time trial",
-        "pubDate": "Thu, 10 Sep 2026 15:00:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/as-long-as-the-legs-are-there-ineos-fully-confident-oscar-onley-can-defend-white-jersey-in-vuelta-time-trial",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "“That ‘but’ has disappeared” - Former Tour de France winner backs Enric Mas against Roglic and Gall at La Vuelta 2026",
-        "pubDate": "Thu, 10 Sep 2026 14:40:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/oscar-pereiro-on-why-he-believes-enric-mas-will-win-la-vuelta-that-but-has-disappeared",
         "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
@@ -337,6 +330,13 @@
         "link": "https://www.cyclingnews.com/pro-cycling/racing/ill-have-to-bring-out-the-best-version-of-enric-vuelta-a-espana-leader-mas-focused-on-his-own-performance-in-key-time-trial-on-thursday/",
         "source": "Cyclingnews",
         "sourceUrl": ""
+      },
+      {
+        "title": "Vuelta: Brennan outkicks Meeus and Cort to take his fifth sprint win on stage 17 - Escape Collective",
+        "pubDate": "Wed, 09 Sep 2026 16:08:32 GMT",
+        "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQU3hzWnZBMS1qVF9iWERFZ0xyX0xYNXZZUzhKRFd0N2hsSDdzUEt1eGcyd2NBMjIxWWpDa2ZDZDR6YWFvanVrZEt3QU02cEY4Y2hfY3l1LXYtXy1GcFoxX1VUMXpzeWd3aW52OGVxVG8zTEVMc25Yc2JkdDl4dUxvd0MxSkkyNGJnTjY5TDdWR2d6eVdtbGdTVzlURHZhR0U5ZGItN2pPNWFJd2FXZXc?oc=5",
+        "source": "Escape Collective",
+        "sourceUrl": "https://escapecollective.com"
       },
       {
         "title": "Kevin Vermaerke Keeps Attacking to Prove He Belongs at the 2027 Tour de France - Outside Magazine",
@@ -758,7 +758,14 @@
     ],
     "gravel": [
       {
-        "title": "5 new gravel bikes that have got us excited - BikeRadar",
+        "title": "Marianne Vos confirmed for Gravel Worlds in Australia - Escape Collective",
+        "pubDate": "Fri, 11 Sep 2026 00:32:16 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPWVp6T1kyMkJrWDJIVTE5RmltUFZxQjk0ZlZabkpmMG9yX0RWN3VXVzhJOHk2eUxXRkVzVmJQaHkzWUdkRlpXZnJ6eGhqRWMxOTVidm5FVS1SbjNWWE1ldjRlN3VmWlo0VnBSMW02cWhCZEhjZXBVeVFKbDNyaG1QNTl2cWlINkk4UDdV?oc=5",
+        "source": "Escape Collective",
+        "sourceUrl": "https://escapecollective.com"
+      },
+      {
+        "title": "5 new gravel bikes that have got us excited - bikeradar.com",
         "pubDate": "Thu, 10 Sep 2026 15:00:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPSVhJV25wR1UxdW5hMFJYVXZEVXhrbHRQUFdlVFZwdVB0N19mMk9KTUxXVFE0NEpTNEYwdjJab19mNmhBUnlMbi1mcGZYQ3pmaU8zVjB5NVkwNU1OWXVXYnJoQllhV3JDNXdEQzRxR0pVZ2lsQUdzZ1FuRnp5Tng4Y0RkRjY3R1VYckE?oc=5",
         "source": "BikeRadar",
@@ -800,13 +807,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "“A major leap forward in gravel tyre performance”: WTB’s new high-volume aero gravel tyres include features to lower drag - BikeRadar",
-        "pubDate": "Wed, 09 Sep 2026 15:00:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBpeEVvMVg5VjlpNDRnNXFNZ0tkdENKTVp5bmpNM25TaEZTQWxWaE42UTVxUm5vM25DRmU0cFRkc1l1NHBDandWV0NVdWxKYXZJbHJxRjdBd2psOGZ5dkZJM2Y5ZmlwdHdhdjhr?oc=5",
-        "source": "BikeRadar",
-        "sourceUrl": "https://www.bikeradar.com"
-      },
-      {
         "title": "UCI Gravel World Series:  Elizabeth Hermolle and Jenson Young win at Graean Cymru",
         "pubDate": "Wed, 09 Sep 2026 01:48:14 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/racing/uci-gravel-world-series-elizabeth-hermolle-and-jenson-young-win-at-graean-cymru/",
@@ -835,7 +835,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "Sponsored rider leaks video of unreleased Canyon aero gravel bike on Instagram - Cycling Weekly",
+        "title": "Sponsored rider leaks video of unreleased Canyon aero gravel bike on Instagram - cyclingweekly.com",
         "pubDate": "Tue, 08 Sep 2026 13:34:25 GMT",
         "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPSnVpYjlqTjJuWmJid1hINlFfMlBneHlBNm9ZRms2bW13OFJCU2k5a0FZUmp3blJpOExBRzB6MWZPUWRXTWp2TXdZM0wxYXRKOFljYUxHXzJNV0wtM2ViOEUyVGxQZVlBcE5YOU9oc3ZpVlhkRkhhcFBiS2todVIwbEpJZER4V19KaWNXcFpjRzk5LVB3SnBndGNpSXdYOTNEeE9pVHNNZnB6dWU3SWU4SmRKTEZqZi03?oc=5",
         "source": "Cycling Weekly",
@@ -856,7 +856,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "Udog Forza gravel shoe review: distinctive-looking, comfy and breathable - Cycling Weekly",
+        "title": "Udog Forza gravel shoe review: distinctive-looking, comfy and breathable - cyclingweekly.com",
         "pubDate": "Mon, 07 Sep 2026 18:30:41 GMT",
         "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQUEljSXRZR2VJY2lQQ0Y0Y3hnVGRnUkdOUFZlVWdqOG1QR0ExWXVpdjhRYktCa3p2VmZRUEp5Und2ZVhHbW01NHhiZkVoYnJJai1JcWpTVGdZcm4zV0pKemRveHpidUpOUHhCakswNmNZamlYTG1kR3FKVHVKVFNTVklSQkFFYzF6SmdPTnFPRmRUQUdSS0MyWFE2RFUyeWZEMWpueVFEdjRiVmFjTTIzQTJMUU9ZWmg4ZGJMcFVZdw?oc=5",
         "source": "Cycling Weekly",
@@ -884,7 +884,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "Chinese brand Winspace’s new gravel bike takes a 58mm front tyre – and costs half as much as its mainstream rivals - BikeRadar",
+        "title": "Chinese brand Winspace’s new gravel bike takes a 58mm front tyre – and costs half as much as its mainstream rivals - bikeradar.com",
         "pubDate": "Fri, 04 Sep 2026 14:27:43 GMT",
         "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE13WXhPVDVJYmItdVo0LXZhcHU4WWtrMXpQVURwR3FkQ29aVlNEMDN6NlNyeHViT215SnFySGp5M2sxVG15WnZjZV9YUVNUbm40V0NwVFllaWlvTEluNnBSYkpGc0U3Y3Fhc0xv?oc=5",
         "source": "BikeRadar",
@@ -905,25 +905,18 @@
         "sourceUrl": "https://escapecollective.com"
       },
       {
-        "title": "Factor Elara review: a bonkers, incredibly capable gravel bike designed for nothing else but going fast - Cycling Weekly",
+        "title": "Factor Elara review: a bonkers, incredibly capable gravel bike designed for nothing else but going fast - cyclingweekly.com",
         "pubDate": "Fri, 04 Sep 2026 08:00:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOUS15eVpRaHJHcVhxcmhEMVliMWNxVV9sc3RFU0dSZHlEc3RMTHNkaUdrQUlJNDgzSzVZTkh5VnR2X29rOHZsaDBEdWFZNVQtR2Z3Si1FS1MtS242ckxUNjg2eVFFSXcxRlB1dEQ1czRVdTU1bEhITmh6YzdGLWJ5RDV2NF93Z0xhZndKNENmQ2w4dEZiQjlPdUk2ZDlHRDhQbXJjTkRBaHVtR2xRUWRDWXp2TWo1ZE5HZmRMQ1hxSDVyXzNwSXVkZjZMZHlERFowZFFmYk9LYllBcUR4NjE2V0NYNXIxVzBlcGx3Q1N3?oc=5",
         "source": "Cycling Weekly",
         "sourceUrl": "https://www.cyclingweekly.com"
       },
       {
-        "title": "Factor's new Elara gravel bike sports a wacky fork inspired by its One aero road bike in the name of racing speed - BikeRadar",
+        "title": "Factor's new Elara gravel bike sports a wacky fork inspired by its One aero road bike in the name of racing speed - bikeradar.com",
         "pubDate": "Fri, 04 Sep 2026 08:00:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBoYkNzbzF0VjZXdWRuLUtYY1VOUjF6RVBROUFGazlDTHNxZkZhb21KczJXVUwzY0hhVlpGdFhoenNUTGZVYkJjNWhhMmQxODNhaXdkNmpRZnQwYTZr?oc=5",
         "source": "BikeRadar",
         "sourceUrl": "https://www.bikeradar.com"
-      },
-      {
-        "title": "Scott launches a new Addict Gravel Bike: It’s not 32″, 700c Prevails!",
-        "pubDate": "Fri, 04 Sep 2026 04:34:56 +0000",
-        "link": "https://www.gravelcyclist.com/bicycle-tech/scott-launches-a-new-addict-gravel-bike-its-not-32-700c-prevails/",
-        "source": "Gravel Cyclist",
-        "sourceUrl": ""
       }
     ]
   }
