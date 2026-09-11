@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#f6f7f5">
   <meta name="description" content="Meteorologia técnica para ciclismo e calculadora de pressão de pneus.">
   <title>SEM PLANO — Meteo</title>
-  <link rel="stylesheet" href="./styles.css?v=20260826_03">
+  <link rel="stylesheet" href="./styles.css?v=20260911_01">
   <link rel="manifest" href="./manifest.json">
   <link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -228,12 +228,20 @@
               <span class="soft-icon green"><svg><use href="#i-route"/></svg></span>
               <div><h2>Analisar uma rota</h2><p>Importa um GPX para prever as condições no ponto e hora em que lá vais passar.</p></div>
             </div>
+            <div class="saved-routes-block" id="savedRoutesBlock">
+              <div class="saved-routes-heading">
+                <div><p>ROTAS GUARDADAS</p><span>Seleciona uma rota para voltar a analisá-la</span></div>
+                <strong id="savedRoutesCount">0/5</strong>
+              </div>
+              <p class="route-saved-empty" id="savedRoutesEmpty">Ainda não tens rotas guardadas.</p>
+              <div class="saved-routes-list" id="savedRoutesList" aria-live="polite"></div>
+            </div>
             <label class="route-upload-button" id="routeUploadLabel" for="routeGpxInput" tabindex="0">
               <input id="routeGpxInput" type="file" accept=".gpx,application/gpx+xml" hidden>
               <svg><use href="#i-upload"/></svg>
               <span><strong>Escolher ficheiro GPX</strong><small>Exportado do Strava, Garmin, Komoot ou outra aplicação</small></span>
             </label>
-            <p class="route-privacy">O ficheiro é processado apenas neste dispositivo e não fica guardado.</p>
+            <p class="route-privacy">O GPX é processado localmente e só fica guardado neste dispositivo se escolheres essa opção.</p>
           </section>
 
           <section class="card route-settings-card" id="routeSettings" hidden>
@@ -241,12 +249,16 @@
               <div><p>ROTA CARREGADA</p><strong id="routeName">—</strong></div>
               <div class="route-file-metrics"><span><strong id="routeDistance">—</strong><small>km</small></span><span><strong id="routeElevation">—</strong><small>m D+</small></span></div>
             </div>
+            <label class="route-name-field"><span>Nome da rota</span><input id="routeCustomName" type="text" maxlength="60" autocomplete="off" placeholder="Ex.: Volta à Serra de Sintra"></label>
             <div class="route-settings-grid">
               <label><span>Data</span><input id="routeStartDate" type="date"></label>
               <label><span>Partida</span><input id="routeStartTime" type="time" step="900"></label>
               <label><span>Velocidade média</span><div><input id="routeAverageSpeed" type="number" min="8" max="50" step="1" value="24"><small>km/h</small></div></label>
             </div>
-            <button class="primary-button full-button" type="button" id="routeAnalyze"><svg><use href="#i-route"/></svg> Analisar condições da rota</button>
+            <div class="route-actions">
+              <button class="secondary-button" type="button" id="routeSave"><svg><use href="#i-save"/></svg><span>Guardar rota</span></button>
+              <button class="primary-button" type="button" id="routeAnalyze"><svg><use href="#i-route"/></svg> Analisar condições</button>
+            </div>
             <p class="route-analysis-state" id="routeAnalysisState" aria-live="polite"></p>
           </section>
 
@@ -445,6 +457,6 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="./app.js?v=20260826_03"></script>
+  <script src="./app.js?v=20260911_01"></script>
 </body>
 </html>

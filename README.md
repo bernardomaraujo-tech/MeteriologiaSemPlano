@@ -15,7 +15,7 @@ PWA mobile-first para avaliar condições de ciclismo e calcular pressão de pne
 - Modelo preferencial: **KNMI Seamless**, combinando HARMONIE-AROME na sua área de cobertura com ECMWF; se os dados estiverem indisponíveis ou incompletos, a aplicação utiliza automaticamente o **Open-Meteo Best Match**.
 - Mapa discreto do cartão de vento: [OpenStreetMap](https://www.openstreetmap.org/copyright), centrado automaticamente na localização selecionada.
 - Localização selecionada, última posição autorizada, setups e histórico: guardados apenas no `localStorage` do dispositivo. A última posição é reutilizada nas visitas seguintes; o GPS só volta a ser consultado quando o utilizador seleciona explicitamente **Localização atual**.
-- Ficheiros GPX: processados localmente no dispositivo e não guardados pela aplicação.
+- Ficheiros GPX: processados localmente. O utilizador pode atribuir um nome e guardar até 5 rotas no `IndexedDB` do dispositivo para voltar a analisá-las; as previsões meteorológicas são sempre recalculadas para a data e hora escolhidas.
 - Notícias: agregação horária do Google News, limitada a uma seleção editorial de publicações especializadas por modalidade, numa branch de dados do próprio repositório; RSS2JSON funciona apenas como fallback. A app mantém cache local de 30 minutos e reutiliza as últimas notícias durante 24 horas em caso de indisponibilidade temporária.
 - Calendários e classificações: seleção editorial de eventos com ligações para a UCI e para os sites oficiais de cada competição.
 - Atualização automática: a cada 5 minutos.
