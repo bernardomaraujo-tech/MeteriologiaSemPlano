@@ -7,6 +7,10 @@ const OSM_ZOOM = 11;
 const ROUTE_SAMPLE_MINUTES = 15;
 const ROUTE_MAX_SAMPLES = 48;
 const ROUTE_MAX_FILE_BYTES = 10 * 1024 * 1024;
+const ROUTE_MAX_SAVED = 5;
+const ROUTE_DB_NAME = "semPlanoMeteoRoutesV1";
+const ROUTE_DB_VERSION = 1;
+const ROUTE_STORE_NAME = "routes";
 const PREFERRED_WEATHER_MODEL = "knmi_seamless";
 const AUTO_LOCATION_ID = "device_location";
 const DEFAULT_LOCATION_ID = "alcabideche";
@@ -171,6 +175,11 @@ let toastTimer = null;
 let routeData = null;
 let routeAnalysis = null;
 let routeAnalysisRunId = 0;
+let routeRawGpx = "";
+let routeSavedId = null;
+let routeDbPromise = null;
+let routeStorageAvailable = Boolean(globalThis.indexedDB);
+let savedRoutes = [];
 let cyclingDiscipline = "road";
 let cyclingMode = "news";
 let cyclingNewsType = "all";
@@ -1271,6 +1280,212 @@ function initRouteDefaults() {
   $("routeStartTime").value = routeTimeInputValue(departure);
 }
 
+function normaliseRouteName(value, fallback = "Rota GPX") {
+  const cleaned = String(value || "").trim().replace(/\s+/g, " ").slice(0, 60);
+  return cleaned || String(fallback || "Rota GPX").trim().slice(0, 60) || "Rota GPX";
+}
+
+function createSavedRouteRecord(values, now = new Date().toISOString()) {
+  return {
+    id: values.id || globalThis.crypto?.randomUUID?.() || `route-${Date.now()}-${Math.random().toString(16).slice(2)}`,
+    name: normaliseRouteName(values.name),
+    gpxText: String(values.gpxText || ""),
+    distanceKm: finite(values.distanceKm),
+    elevationGain: Math.round(finite(values.elevationGain)),
+    createdAt: values.createdAt || now,
+    updatedAt: now
+  };
+}
+
+function canSaveNewRoute(routes, savedId = null) {
+  return Boolean(savedId) || routes.length < ROUTE_MAX_SAVED;
+}
+
+function openRouteDatabase() {
+  if (!globalThis.indexedDB) return Promise.reject(new Error("Armazenamento local indisponível."));
+  if (routeDbPromise) return routeDbPromise;
+  routeDbPromise = new Promise((resolve, reject) => {
+    const request = globalThis.indexedDB.open(ROUTE_DB_NAME, ROUTE_DB_VERSION);
+    request.onupgradeneeded = () => {
+      if (!request.result.objectStoreNames.contains(ROUTE_STORE_NAME)) {
+        request.result.createObjectStore(ROUTE_STORE_NAME, { keyPath: "id" });
+      }
+    };
+    request.onsuccess = () => {
+      request.result.onversionchange = () => {
+        request.result.close();
+        routeDbPromise = null;
+      };
+      resolve(request.result);
+    };
+    request.onerror = () => {
+      routeDbPromise = null;
+      reject(request.error || new Error("Não foi possível abrir as rotas guardadas."));
+    };
+  });
+  return routeDbPromise;
+}
+
+async function routeStoreRequest(mode, operation) {
+  const database = await openRouteDatabase();
+  return new Promise((resolve, reject) => {
+    const transaction = database.transaction(ROUTE_STORE_NAME, mode);
+    const request = operation(transaction.objectStore(ROUTE_STORE_NAME));
+    let result;
+    request.onsuccess = () => { result = request.result; };
+    request.onerror = () => reject(request.error || new Error("Não foi possível atualizar as rotas guardadas."));
+    transaction.oncomplete = () => resolve(result);
+    transaction.onerror = () => reject(transaction.error || new Error("Não foi possível atualizar as rotas guardadas."));
+    transaction.onabort = () => reject(transaction.error || new Error("A operação com a rota foi interrompida."));
+  });
+}
+
+async function readSavedRoutes() {
+  const records = await routeStoreRequest("readonly", (store) => store.getAll());
+  return (Array.isArray(records) ? records : [])
+    .filter((record) => record?.id && record?.gpxText)
+    .sort((first, second) => Date.parse(second.updatedAt || 0) - Date.parse(first.updatedAt || 0))
+    .slice(0, ROUTE_MAX_SAVED);
+}
+
+function savedRouteDateLabel(value) {
+  const date = new Date(value);
+  if (!Number.isFinite(date.getTime())) return "Guardada neste dispositivo";
+  return `Guardada em ${date.toLocaleDateString("pt-PT", { day: "2-digit", month: "short" })}`;
+}
+
+function syncRouteSaveButton() {
+  const button = $("routeSave");
+  if (!button) return;
+  const label = button.querySelector("span");
+  const isUpdate = Boolean(routeSavedId);
+  if (label) label.textContent = isUpdate ? "Atualizar rota" : "Guardar rota";
+  button.disabled = !routeData || !routeRawGpx || !routeStorageAvailable || !canSaveNewRoute(savedRoutes, routeSavedId);
+}
+
+function renderSavedRoutes() {
+  const list = $("savedRoutesList");
+  const empty = $("savedRoutesEmpty");
+  if (!list || !empty) return;
+  setText("savedRoutesCount", routeStorageAvailable ? `${savedRoutes.length}/${ROUTE_MAX_SAVED}` : "—");
+  empty.hidden = savedRoutes.length > 0;
+  if (!savedRoutes.length) {
+    list.innerHTML = "";
+  } else {
+    list.innerHTML = savedRoutes.map((record) => `
+      <div class="saved-route-row${record.id === routeSavedId ? " is-active" : ""}">
+        <button class="saved-route-open" type="button" data-load-saved-route="${escapeHtml(record.id)}">
+          <span><strong>${escapeHtml(record.name)}</strong><small>${escapeHtml(savedRouteDateLabel(record.updatedAt))}</small></span>
+          <em>${finite(record.distanceKm).toFixed(1).replace(".", ",")} km · ${Math.round(finite(record.elevationGain))} m D+</em>
+        </button>
+        <button class="saved-route-delete" type="button" data-delete-saved-route="${escapeHtml(record.id)}" aria-label="Apagar a rota ${escapeHtml(record.name)}"><svg><use href="#i-trash"/></svg></button>
+      </div>
+    `).join("");
+  }
+  syncRouteSaveButton();
+}
+
+async function initSavedRoutes() {
+  if (!routeStorageAvailable) {
+    setText("savedRoutesEmpty", "Guardar rotas não está disponível neste navegador.");
+    renderSavedRoutes();
+    return;
+  }
+  try {
+    savedRoutes = await readSavedRoutes();
+  } catch (_) {
+    routeStorageAvailable = false;
+    setText("savedRoutesEmpty", "Não foi possível aceder às rotas guardadas neste dispositivo.");
+  }
+  renderSavedRoutes();
+}
+
+function activateRoute(parsedRoute, { gpxText, savedId = null, message } = {}) {
+  routeData = parsedRoute;
+  routeRawGpx = String(gpxText || "");
+  routeSavedId = savedId;
+  routeAnalysis = null;
+  const displayName = normaliseRouteName(parsedRoute.name);
+  routeData.name = displayName;
+  setText("routeName", displayName);
+  $("routeCustomName").value = displayName;
+  setText("routeDistance", routeData.distanceKm.toFixed(1).replace(".", ","));
+  setText("routeElevation", routeData.elevationGain);
+  $("routeSettings").hidden = false;
+  $("routeResults").hidden = true;
+  setText("routeAnalysisState", message || "Rota pronta. Confirma a partida e a velocidade média.");
+  renderSavedRoutes();
+}
+
+async function saveCurrentRoute() {
+  if (!routeData || !routeRawGpx || !routeStorageAvailable) return;
+  if (!canSaveNewRoute(savedRoutes, routeSavedId)) {
+    showToast("Já tens 5 rotas guardadas. Apaga uma para guardar esta.");
+    return;
+  }
+  const name = normaliseRouteName($("routeCustomName").value, routeData.name);
+  const existing = savedRoutes.find((record) => record.id === routeSavedId);
+  const record = createSavedRouteRecord({
+    id: existing?.id,
+    name,
+    gpxText: routeRawGpx,
+    distanceKm: routeData.distanceKm,
+    elevationGain: routeData.elevationGain,
+    createdAt: existing?.createdAt
+  });
+  const button = $("routeSave");
+  button.disabled = true;
+  try {
+    await routeStoreRequest("readwrite", (store) => store.put(record));
+    routeSavedId = record.id;
+    routeData.name = name;
+    setText("routeName", name);
+    $("routeCustomName").value = name;
+    savedRoutes = await readSavedRoutes();
+    renderSavedRoutes();
+    setText("routeAnalysisState", "Rota guardada neste dispositivo. Podes voltar a abri-la a qualquer momento.");
+    showToast(existing ? "Rota atualizada." : "Rota guardada.");
+  } catch (_) {
+    showToast("Não foi possível guardar a rota neste dispositivo.");
+  } finally {
+    syncRouteSaveButton();
+  }
+}
+
+async function loadSavedRoute(id) {
+  const record = savedRoutes.find((item) => item.id === id);
+  if (!record) return;
+  try {
+    setText("routeAnalysisState", "A abrir a rota guardada…");
+    const parsedRoute = parseGpx(record.gpxText, record.name);
+    parsedRoute.name = record.name;
+    activateRoute(parsedRoute, {
+      gpxText: record.gpxText,
+      savedId: record.id,
+      message: "Rota guardada aberta. Escolhe a partida e atualiza a previsão."
+    });
+    $("routeSettings").scrollIntoView?.({ behavior: "smooth", block: "nearest" });
+    showToast("Rota guardada aberta.");
+  } catch (_) {
+    showToast("Não foi possível abrir esta rota guardada.");
+  }
+}
+
+async function deleteSavedRoute(id) {
+  const record = savedRoutes.find((item) => item.id === id);
+  if (!record) return;
+  if (globalThis.confirm && !globalThis.confirm(`Apagar a rota “${record.name}”?`)) return;
+  try {
+    await routeStoreRequest("readwrite", (store) => store.delete(id));
+    if (routeSavedId === id) routeSavedId = null;
+    savedRoutes = await readSavedRoutes();
+    renderSavedRoutes();
+    showToast("Rota apagada.");
+  } catch (_) {
+    showToast("Não foi possível apagar a rota.");
+  }
+}
+
 function routeChildText(parent, localName) {
   if (!parent) return "";
   const child = Array.from(parent.children || []).find((element) => element.localName === localName);
@@ -1692,21 +1907,23 @@ async function handleRouteFile(event) {
   }
   try {
     setText("routeAnalysisState", "A ler o ficheiro GPX…");
-    const parsedRoute = parseGpx(await file.text(), file.name.replace(/\.gpx$/i, ""));
+    const gpxText = await file.text();
+    const parsedRoute = parseGpx(gpxText, file.name.replace(/\.gpx$/i, ""));
     if (runId !== routeAnalysisRunId) return;
-    routeData = parsedRoute;
-    routeAnalysis = null;
-    setText("routeName", routeData.name);
-    setText("routeDistance", routeData.distanceKm.toFixed(1).replace(".", ","));
-    setText("routeElevation", routeData.elevationGain);
-    $("routeSettings").hidden = false;
-    $("routeResults").hidden = true;
-    setText("routeAnalysisState", "Rota pronta. Confirma a partida e a velocidade média.");
+    activateRoute(parsedRoute, {
+      gpxText,
+      message: canSaveNewRoute(savedRoutes)
+        ? "Rota pronta. Podes dar-lhe um nome, guardá-la e analisar as condições."
+        : "Rota pronta. Já tens 5 rotas guardadas, mas podes analisá-la sem guardar."
+    });
     showToast("Rota GPX carregada.");
   } catch (error) {
     routeData = null;
+    routeRawGpx = "";
+    routeSavedId = null;
     $("routeSettings").hidden = true;
     $("routeResults").hidden = true;
+    renderSavedRoutes();
     showToast(error?.message || "Não foi possível ler o ficheiro GPX.");
   } finally {
     event.target.value = "";
@@ -2181,11 +2398,26 @@ function init() {
     event.preventDefault();
     $("routeGpxInput")?.click();
   });
+  $("routeCustomName")?.addEventListener("input", (event) => {
+    if (!routeData) return;
+    setText("routeName", normaliseRouteName(event.target.value, routeData.name));
+  });
+  $("routeSave")?.addEventListener("click", saveCurrentRoute);
+  $("savedRoutesList")?.addEventListener("click", (event) => {
+    const deleteButton = event.target.closest("[data-delete-saved-route]");
+    if (deleteButton) {
+      deleteSavedRoute(deleteButton.dataset.deleteSavedRoute);
+      return;
+    }
+    const openButton = event.target.closest("[data-load-saved-route]");
+    if (openButton) loadSavedRoute(openButton.dataset.loadSavedRoute);
+  });
   $("routeAnalyze")?.addEventListener("click", analyseRoute);
   document.addEventListener("keydown", (event) => { if (event.key === "Escape" && !$("locationModal").hidden) closeLocationModal(); });
 
   initPressure();
   initRouteDefaults();
+  initSavedRoutes();
   updateLocationLabels(selectedLocation);
   setAppView("current");
   setForecastContext("local");
