@@ -1,7 +1,28 @@
 {
-  "updatedAt": "2026-09-13T22:25:56.709Z",
+  "updatedAt": "2026-09-14T01:07:45.665Z",
   "disciplines": {
     "road": [
+      {
+        "title": "\"I’m really pleased to have finished Vuelta on such a high note\" - Magnus Cort wraps up career with teammate's victory",
+        "pubDate": "Mon, 14 Sep 2026 03:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/im-really-pleased-to-have-finished-vuelta-on-such-a-high-note-magnus-cort-wraps-up-career-with-teammates-victory",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"My body can't take it anymore\" - Mattias Skjelmose signs out of World Championships after exahusting Tour-Vuelta double",
+        "pubDate": "Mon, 14 Sep 2026 01:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/my-body-cant-take-it-anymore-mattias-skjelmose-signs-out-of-world-championships-after-exahusting-tour-vuelta-double",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Vuelta a España Analysis: Reinvigoration for Mas, Resurgence for Roglič, Evolution for Gall - Outside Magazine",
+        "pubDate": "Sun, 13 Sep 2026 22:58:15 GMT",
+        "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNYnpJdGRLbXlGLWNjRC1CbUM1QkYxcFVNUW5tRmk5RDdTU0oxVlBrTEpUWlg4SEJVLTJrNWFObGZELWlPbjRaOERiTjZ2UlE2OGVOZ2tOYnFudkpWYVpFX0tGcGFMNkgzNG5Sd3RfUGZ4VUE2ZjBqZ3pxeTVWRTRhUmdZaTJqSUF2NWZMTDNLeS1Rbmp2TVlwbGVWTQ?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
+      },
       {
         "title": "'I was here to make mistakes' – Paul Seixas confident he can improve after second at GP de Montréal and return even stronger for World Championships",
         "pubDate": "Sun, 13 Sep 2026 21:57:47 +0000",
@@ -129,13 +150,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "Mas wins the Vuelta as Johannessen takes hard-fought stage 21 victory - Escape Collective",
-        "pubDate": "Sun, 13 Sep 2026 18:13:40 GMT",
-        "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQODM3RllXR3hLYk1uM3AySTRucmU0WGtqRFNJNUJLcHNlMGV6cC1OQXBLdkYtdmJXMDRhbWppMGEzSXpna0tOMmZXMU5jbXl6MjBvc0d1YWxQT0ViTTRibUlrMjNGc3BzRjJ3eldoRk9RZW5xT3dySUlXdTJGcjFuS2RaMzRBWUFhcnQ4N0dxT0ZpU1d3bEtyUjN4Q1IyOVFM?oc=5",
-        "source": "Escape Collective",
-        "sourceUrl": "https://escapecollective.com"
-      },
-      {
         "title": "Medical Reports & Withdrawals Vuelta a Espana 2026 Stage 21 - 142 riders reach Granada as peloton navigates final stage without abandon",
         "pubDate": "Sun, 13 Sep 2026 20:09:00 +0200",
         "link": "https://cyclinguptodate.com/cycling/medical-reports-withdrawals-vuelta-a-espana-2026-stage-21-142-riders-reach-granada-as-peloton-navigates-final-stage-without-abandon",
@@ -189,20 +203,6 @@
         "pubDate": "Sun, 13 Sep 2026 15:15:08 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/racing/trofeo-matteotti-sakarias-koller-loland-sprints-to-victory-after-an-attacking-race-in-abruzzo/",
         "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "“I've learned I'm a lot more robust than I thought” - British cycling's newest star Matthew Brennan reflects on historic Grand Tour debut at La Vuelta 2026",
-        "pubDate": "Sun, 13 Sep 2026 17:15:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/ive-learned-im-a-lot-more-robust-than-i-thought-british-cyclings-newest-star-matthew-brennan-reflects-on-historic-grand-tour-debut-at-la-vuelta-2026",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Results Trofeo Matteotti 2026 - Sakarias Koller Løland takes second career win as Benoit Cosnefroy and UAE narrowly denied another Italian classic victory",
-        "pubDate": "Sun, 13 Sep 2026 16:45:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/results-trofeo-matteotti-2026-sakarias-koller-loeland-takes-second-career-win-as-benoit-cosnefroy-and-uae-narrowly-denied-another-italian-classic-victory",
-        "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
       {
@@ -297,7 +297,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "Dogged Determination: Dunbar Overcoming More than a Decade of Brutal Bad Luck - velo.outsideonline.com",
+        "title": "Dogged Determination: Dunbar Overcoming More than a Decade of Brutal Bad Luck - Outside Magazine",
         "pubDate": "Fri, 11 Sep 2026 23:14:49 GMT",
         "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOcmYtWmU4eXp2NFhtUERuYmN3V1BwTGJpQW1OZ0xUUlFXNEw0RW1HNEV5aHpySHNOcldHWVNjZjdDQ2NIX3I0Y2gyNVFFMGk1aW5lUlZ6ak5nNWt0a2Vscm56UEp5dzlZYklweFVsMW00TDVobjJQaVc2UU9sa0VLWE4xYnJ4MWREdGhqcjlUTmxDcEoxcFFSZVNaYw?oc=5",
         "source": "VELO",
@@ -311,14 +311,14 @@
         "sourceUrl": "https://escapecollective.com"
       },
       {
-        "title": "Grand Prix Cycliste de Québec: Remco Evenepoel Claims an Aggressive Edition of the Key Pre-Worlds Test - velo.outsideonline.com",
+        "title": "Grand Prix Cycliste de Québec: Remco Evenepoel Claims an Aggressive Edition of the Key Pre-Worlds Test - Outside Magazine",
         "pubDate": "Fri, 11 Sep 2026 20:15:59 GMT",
         "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOSFg1b2JUXzVtRFR1UzJPMV9QZmtIeDBCcmtFbWtVUWUwRS13Z0RUTkh5bUt5MEZ0RUhqZ0tVeE5wd3l2aUNPM2RpX2pLclNwcnZ4OUk0RkUxQXpQay0zbWdfemR6b3dTRHpTSmNCeWlQWWR2QnYzemZTSlVFcGp6VExBSDVUcmpDb21TdllEZE5qZlpnb05kSlRUTQ?oc=5",
         "source": "VELO",
         "sourceUrl": "https://velo.outsideonline.com"
       },
       {
-        "title": "Vuelta a España Stage 19: Dunbar Turns Tough Season Around with Determined Mountain Win - velo.outsideonline.com",
+        "title": "Vuelta a España Stage 19: Dunbar Turns Tough Season Around with Determined Mountain Win - Outside Magazine",
         "pubDate": "Fri, 11 Sep 2026 19:10:17 GMT",
         "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNOEM3SU96Um96RUFZNC1BcVc2dVpXZmtJaFp1Q3F3VnFMcFJkTGFULVZqSUV5VWlIdm1YREJJZ1lqR2FyUXI1V3dVS1VsN3A5N3RmYkdHclQ4b2RGamJWSjdWSGpYUTNfaUlqWDUzUkN2dHBJVUFINnROcEJPZ0hxd2VSaHpSRzBuY3BRWkszTU1jOGlOQTZ3b3YtVU1Pa2FlWjQ0SWktYjRRUzlPUDlRLVhCSElpbWo3Y0E?oc=5",
         "source": "VELO",
@@ -361,7 +361,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "Ferrand-Prévot Ends Season, Weeks After Withdrawing from Tour de France Femmes - velo.outsideonline.com",
+        "title": "Ferrand-Prévot Ends Season, Weeks After Withdrawing from Tour de France Femmes - Outside Magazine",
         "pubDate": "Fri, 11 Sep 2026 11:11:56 GMT",
         "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPRE5OZnJRbW5lVkxLUGVmdDlpTkFNTlUySGRzN09IV212NGRwV3JwaVh0M3ZqLW5hMGZ6UWsyX2FmY1dhRGl0TUJ6Wl94NWFscXVqZXl4emgwOWQ4R3B0SS1GNXk1QVBCN055dnRBM1MyLTRBZkpFcEI4NjhtaV8zZThURUY5SkNz?oc=5",
         "source": "VELO",
@@ -375,6 +375,13 @@
         "sourceUrl": "https://escapecollective.com"
       },
       {
+        "title": "How Jesus saved Phil Gaimon's YouTube channel - Escape Collective",
+        "pubDate": "Fri, 11 Sep 2026 01:42:30 GMT",
+        "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE8wMTNmRXZZbmtxdjAzQVhpMkdrbUlXRXJWNnd3cnV1LW95Qk1DalhhOXd6cjdBWFc5TFZ4UTVodmV4dHRpeXJpQjlNUTF4eFpzenJ4NVBQRElpRnlwa25xSVpIclhGMWdaTW5LLXQwam5HZHVWTE9ISVdMRXhGWnM?oc=5",
+        "source": "Escape Collective",
+        "sourceUrl": "https://escapecollective.com"
+      },
+      {
         "title": "Who won the Vuelta a Espana time trial? - Escape Collective",
         "pubDate": "Thu, 10 Sep 2026 21:02:02 GMT",
         "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE90MzRVYXlzMDZNTFVlMHhjYWJQUnRGVURla3MxSFgzaEdna3h2N2tZbU1sQVpaSEVacTZWMHR0Y0ZMLUNlUFFzWXFQdG5mWnZvUEkxaWVQSTc3dk8wakNTc3U3a3I5eW01blo5N21TRVZVSnV5aGlaZg?oc=5",
@@ -382,7 +389,7 @@
         "sourceUrl": "https://escapecollective.com"
       },
       {
-        "title": "Vuelta a España Stage 18: Küng Wins as Mas Fends Off Roglič - velo.outsideonline.com",
+        "title": "Vuelta a España Stage 18: Küng Wins as Mas Fends Off Roglič - Outside Magazine",
         "pubDate": "Thu, 10 Sep 2026 20:29:50 GMT",
         "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOclpvLXhZeW5kWWRPZ3c3Z0lyRDJmS2pxa2RhcE5wZ3kzLUNLdnZtTUNKNVkxMjFyUldMd2NoTFZWaHpiWkxHQ29YV3dVbFNMSXoxSl9zQ3hVMVc3YUZGWDdhcTUtNlYzbC15a3JLdTZRRXppenM1MFpVbndoTnZLY0dELXREblNFNTkwSzZEVmg1eFZZNmt4TzNqVzJiTFhhckw4VnlFckpjRFU?oc=5",
         "source": "VELO",
@@ -415,13 +422,6 @@
         "link": "https://www.cyclingweekly.com/news/a-machine-ridden-by-a-true-colossus-of-bike-racing-and-she-stood-just-4ft-11in-tall",
         "source": "Cycling Weekly",
         "sourceUrl": ""
-      },
-      {
-        "title": "Pogačar Is Out and French Teen Phenom Paul Seixas Wants the Crown - velo.outsideonline.com",
-        "pubDate": "Thu, 10 Sep 2026 10:11:23 GMT",
-        "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOVW0xUU55OGY3Rjk2MjdUSWpxMVIzd09NbE1TMllyckhUWFVsZndzRHpOclpQMTMtTjVQMlI2LVlOYXdOWXFYdmJhTEFKUUpfVVg2NzdBUmU0eU5tREFnUkZCTFhXOGw1cjU3eXdYYi1DaEc3YXNLN2RBMFhJbEZzVXp5ZjBZbEowRnNlOXhaUU01akYy?oc=5",
-        "source": "VELO",
-        "sourceUrl": "https://velo.outsideonline.com"
       }
     ],
     "mtb": [
@@ -448,7 +448,7 @@
       },
       {
         "title": "2026 UCI MTB MARATHON WORLD CHAMPIONSHIPS - UCI.org",
-        "pubDate": "Sun, 13 Sep 2026 07:00:00 GMT",
+        "pubDate": "Sat, 12 Sep 2026 21:32:41 GMT",
         "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOYWcyVC13dkFSUE13Q29WdmdqaFBJTGRjR1FxTWRpS1d6NVNWZEc2c1I5V1lrZVI5Z0Z4OHhwVEJzeF9EQndUbnhWa3FORHBoRGFidWJFeWhUX05nek83SGpLMm85QWZwMXducF9kejJVSTJ2aEJIcW5LaEVjeXE0RzRydFZreHpRWTJ2N1MzSl9NNHpkUXRqdTNvSG5RWlpTS2pYejd3dEk2RERUb2liODRWWVg1TzNnc2c?oc=5",
         "source": "UCI",
         "sourceUrl": "https://www.uci.org"
@@ -517,21 +517,21 @@
         "sourceUrl": ""
       },
       {
-        "title": "Enduro / All-Mountain Bikes - vitalmtb.com",
+        "title": "Enduro / All-Mountain Bikes - Vital MTB",
         "pubDate": "Sat, 12 Sep 2026 04:15:41 GMT",
         "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNb3k2cEFIQnZ6WXc3Z2JqSllLYTFNaUVQNWx1bHhUdmxSYjRNTlU1MWVlSzhFQkt0a0FUeko5ZGRwaHZIMFYtZEVRQTdFalpVQ1lsMEZWM0F2OUdpMXhiTXpGNHZTMmRPVzVSZ0ZZdVVCdFNNdEhfMkVKcEpoLWcyWnBIS2N2anhTVS1JT0VnMWNPX1NCZGE4MmtqMm5LZ0pnbEJWS2lKM2Qzd096TG1HNThreWhQcWlRdU9ObmI5Y3R2VTc2czI0dHZ4TURWRUszcmYwVEl0UWtsOFJNSzEtU1lpckllOXh0?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "Mountain Bike Parts - vitalmtb.com",
+        "title": "Mountain Bike Parts - Vital MTB",
         "pubDate": "Fri, 11 Sep 2026 14:46:59 GMT",
         "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQZkVfeUMwbFBfTW03ZzM2dHJBenpMQjJSRGJKY0JjbkdncFBPWHJuOHFFOFhadnEtT2RDckhLdUZudTBfS0tWYWgwREt0MWJGV1hBMTJQUWFud0ZUYlpwcUoxaTBVbm5ZYVJEOUFQbVVhT2dBU1NQYzlMN1ZRekdEZm5UcHkzdTU5cDRqRDZMaG9GWlU?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "Trek Session - vitalmtb.com",
+        "title": "Trek Session - Vital MTB",
         "pubDate": "Fri, 11 Sep 2026 09:23:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQLWgwMDZFZm0yU3RQTHJUQXBISlNlUEF2X1pUZEl1MmlXcm85eU1MZjQ4T1NrNHBxbnhpYk9zaWtvNVlNMm9JY3FURFVrV2F6V0dKSEFhYkRwcmkzX05GTFFCM2dFYTNzcW5abGJ6Tlo1RlJ3dmI5VHBaam5zbmxSYWExRi1lanM3RXhF?oc=5",
         "source": "Vital MTB",
@@ -594,14 +594,14 @@
         "sourceUrl": ""
       },
       {
-        "title": "sspomer - vitalmtb.com",
+        "title": "sspomer - Vital MTB",
         "pubDate": "Fri, 11 Sep 2026 03:28:03 GMT",
         "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE4tTjBtN2hORWVsTGV1SHYyZ2JTWTJxeTlNTi1wT0JEMDMxVDl1U205RFg4NjJBaTVKbzFmOFRYT3hLWEJCTXgzSF9SejNkY1FheEQ5Z1cyQ21LNWp0?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "RAW #USDH Action from the U.S. Open - vitalmtb.com",
+        "title": "RAW #USDH Action from the U.S. Open - Vital MTB",
         "pubDate": "Fri, 11 Sep 2026 02:44:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9NcWFHa1AyS1g1SzRBcTRvbFYtcnVnWDhUcmprc0tUbUwwbWk5T2RKSXdYUjR0bzJHUktYRXc4T1Vrem9KMUNzMXcwTTRRY2V6aVFua1cxNHZ1M2oxLVVVZUZvRTl4ZTRyaFRSaktLNHdQWVk?oc=5",
         "source": "Vital MTB",
@@ -615,7 +615,7 @@
         "sourceUrl": "https://escapecollective.com"
       },
       {
-        "title": "2027 Scott Spark DC Factory Bike - Reviews, Comparisons, Specs - Bikes - vitalmtb.com",
+        "title": "2027 Scott Spark DC Factory Bike - Reviews, Comparisons, Specs - Bikes - Vital MTB",
         "pubDate": "Thu, 10 Sep 2026 13:02:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1lMVNzcUJxV2JuTFVOc01SeEZqLTdrNnc5RFlKZ1Rld1hxcVpJQ0JEYXdoV04zV3ZndkdwN1kzdV9MYmU0c3p6SF9mR0dFd1p6eTZYODZ6SjhMcVhhS1Q4ZTMyU282b3BLejM0YUlzbw?oc=5",
         "source": "Vital MTB",
@@ -629,37 +629,37 @@
         "sourceUrl": "https://www.uci.org"
       },
       {
-        "title": "Liv Glorious Advanced - vitalmtb.com",
+        "title": "Liv Glorious Advanced - Vital MTB",
         "pubDate": "Thu, 10 Sep 2026 12:04:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNaUs0QVB6OEJFQUxUUXdHa29QQWxrY0ZJald3OXYtWjBUWFBJMk9nck1KV2hIWlFuZ043bmlGS0tla0dTazkwWEdXeTg2SWlGX1VPQWVuamc0SFNETFdWT2Y3X0NCSWVKVmlqZlRCcVN2Y1RGd0czbjF0UlVYSzZ3ZkJ6SmdhWmQ4UXlKOXJCZ0dnOUl6OFdv?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "2026 Liv Glorious Advanced \"Angine de Poitrine\" - vitalmtb.com",
+        "title": "2026 MTB Tech Rumors and Innovation - Longer and Slacker - The Hub - Mountain Biking Forums / Message Boards - Vital MTB",
+        "pubDate": "Thu, 10 Sep 2026 09:16:41 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBDUlQ2N0N6aDRialZfTWREMVFoYWk1Qk44X0I3RzIwaU5oUW5fUUY0cFgtMWlCSWRteUtJazd6UXQ4NElrRlpEa2dBR1ZraXBI?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
+        "title": "2026 Liv Glorious Advanced \"Angine de Poitrine\" - Vital MTB",
         "pubDate": "Thu, 10 Sep 2026 06:46:32 GMT",
         "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNQ3lpN2JHRk5tUFI0VmxKQUdydi0yV0xOUGxBOFJjSm02T1dLMEpoWkhSbkFUaHNQem52aE1NRzZIRjJRaTNaOVh6eVpvaGJrZG5FY190Nl9EcU9aTWRlakt1TnpJQWRsS2wzMDBjcjNTTHExbk9za1pjLWx5RjJSYVROWUhPSjJ4ZzRxVGV3N1NoQ0Fr?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "Saving It in Peru + Tyler Ervin's Frameworks - vitalmtb.com",
+        "title": "Saving It in Peru + Tyler Ervin's Frameworks - Vital MTB",
         "pubDate": "Tue, 08 Sep 2026 23:49:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQUEtEMzdvOS1yUFlEVmEwN0U4bVlmRDczZzdvVWQzV2FWUjFRQV94TVY1MVpHSmFGMzJZYVo5UmdER0huN0dqbTdyb0VrWnozci0xRnBTaFFwanhDN016YjBvSFctVWRNUldJajVobE96cWllWENJUGJmVWdZM3FTTkREWU9ZZw?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "DEITY: DESERTION featuring Tyler McCaul - iceman2058 - Mountain Biking Videos - vitalmtb.com",
+        "title": "DEITY: DESERTION featuring Tyler McCaul - iceman2058 - Mountain Biking Videos - Vital MTB",
         "pubDate": "Tue, 08 Sep 2026 16:52:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNelFwS2FsWEw4QmNrR2hxdlJEQTJ1dHNXZll6YjhyY08wNDdEZ1FKeFpnWDhpN0FzNGdkYktsckUzYURYN0czOTg1R1RfWm9NbElRMzBacHB6cG1NNGhKc01BUTBEU3VMN2xqVUdwaExDUnZ4Q2dQMkhGdjRXU05ua2UtTQ?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
-      },
-      {
-        "title": "Project 17 - The Hub - Mountain Biking Forums / Message Boards - vitalmtb.com",
-        "pubDate": "Mon, 07 Sep 2026 01:06:13 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9xZ0VMd2VSTk0wc0hEQ3lwbkNJWmlnNE5FTHp3QWM1bXdyRjlvVWFUcmhsNjh5c1BMWlc1dl9aZlZGUk1wUGR2WUxMVzJ0c0wxa1pWZHJBc1hnUQ?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       }
@@ -671,13 +671,6 @@
         "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1yclQzd3J5ZlY5SjRxZGxIR0oyMHAzZlIzSkptQ0hKWVdnVUFJZFJZNGdVdnhYS2xJSEdCU2FPcFoxWmtHX0ljdWpNTFNrcFoxSlJYUHBqU09RWmM?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
-      },
-      {
-        "title": "\"That doesn’t help me make a comeback\" - Tom Pidcock doesn't find his cyclocross return likely without an Olympic carrot - CyclingUpToDate.com",
-        "pubDate": "Thu, 10 Sep 2026 21:36:12 GMT",
-        "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOUjdpdjBRZzB3SXBTTDJJOEk2a1RfV0h1SEVHb2h2NVZFUl9lT1RLWVpJVlpVc0JDTFpNNXAtdGJ4QzNLVVZJRk5ndS1icGpiT3haSnIyb3NUb0ZqeUZpeEs4MG1yb3JkMXZxNkxnRVZqaTVrcHNTUnJiNlhvWEtzVFhaWUxtUEU0WWxHV1ZXLXoyVTdobHFTR3ppLTE5MkM2bkNhcjZUMXhIN0kyT2VGSGowOC1yeHBzMHJuTXUtMHRMdkZUdmVzNFdGSG56cjVFUUhXTWQyOHVNb2E4S3dNNWhjSWg1eWZT?oc=5",
-        "source": "CyclingUpToDate",
-        "sourceUrl": "https://cyclinguptodate.com"
       },
       {
         "title": "Results Grand Prix Ostrava 2026 - Men Junior - Cyclocross24.com",
@@ -731,7 +724,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "The Seven Tires that Define Gravel Riding in 2026 - velo.outsideonline.com",
+        "title": "The Seven Tires that Define Gravel Riding in 2026 - Outside Magazine",
         "pubDate": "Thu, 10 Sep 2026 07:00:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPZFMtWC1oVXBaeHk0YXBJdXdOUkFDOFVSVmZtb3JEcDNXTmFYOENESmY1YnhJdk9BRnlrckU2Ry1GTnYwMlR0NDV2NjQzOEduQnc1TWdwN1pQSldZdWpTUDJaWDFuTGtLa08wZEFTbnFSSE01bmVMbTI0MjVPcnNBT2QzMFE0Zw?oc=5",
         "source": "VELO",
@@ -757,6 +750,13 @@
         "link": "https://www.gravelcyclist.com/videos/wtb-raises-the-bar-for-gravel-new-treads-new-sizes-up-to-14-watts-faster/",
         "source": "Gravel Cyclist",
         "sourceUrl": ""
+      },
+      {
+        "title": "“A major leap forward in gravel tyre performance”: WTB’s new high-volume aero gravel tyres include features to lower drag - BikeRadar",
+        "pubDate": "Wed, 09 Sep 2026 15:00:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBpeEVvMVg5VjlpNDRnNXFNZ0tkdENKTVp5bmpNM25TaEZTQWxWaE42UTVxUm5vM25DRmU0cFRkc1l1NHBDandWV0NVdWxKYXZJbHJxRjdBd2psOGZ5dkZJM2Y5ZmlwdHdhdjhr?oc=5",
+        "source": "BikeRadar",
+        "sourceUrl": "https://www.bikeradar.com"
       },
       {
         "title": "Winspace launches the G5 Gravel Bike: “Redefining what a Gravel Race Bike can be”",
