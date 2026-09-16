@@ -1,7 +1,21 @@
 {
-  "updatedAt": "2026-09-16T00:23:31.338Z",
+  "updatedAt": "2026-09-16T06:04:13.016Z",
   "disciplines": {
     "road": [
+      {
+        "title": "UCI WorldTour Riders Ranking Update: Pogacar concedes defeat, Tom Pidcock drops a spot, Matthew Brennan makes huge jump into top 25 and Enric Mas joins the elite",
+        "pubDate": "Wed, 16 Sep 2026 06:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/uci-worldtour-riders-ranking-update-pogacar-concedes-defeat-tom-pidcock-drops-a-spot-matthew-brennan-makes-huge-jump-into-top-25-and-enric-mas-joins-the-elite",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Brendan Johnston at home in Life Time Grand Prix but continuing to push boundaries as he looks to 'bag a bigger win'",
+        "pubDate": "Wed, 16 Sep 2026 01:31:57 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/racing/brendan-johnston-at-home-in-life-time-grand-prix-but-continuing-to-push-boundaries-as-he-looks-to-bag-a-bigger-win/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
       {
         "title": "\"At Worlds, you need each other to go far\" - Dutch coach explains why he left home Wiebes, Vos and Van der Breggen",
         "pubDate": "Wed, 16 Sep 2026 01:00:00 +0200",
@@ -24,13 +38,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "Wheel Talk Newsletter: The Worlds start list is taking shape - Escape Collective",
-        "pubDate": "Tue, 15 Sep 2026 19:56:52 GMT",
-        "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQWTJoNWkxRXAtMFVDUWRqN3NkcWRlZGFkZG5fR1lkdjk5RHhqRUR6OGJUT3gxYkRNanBJaGNoSDNLQ0lZenJJN1dtSHRuSXpoOXBGeXR5RkVPZEVsVDhpVUJXZFZtMFdXRnJBdjJGMDhLcWJnMTEwR1ZwbVpwbF9yLVNuUHZvdDBCZ0RKbkZXQjQ1OEU?oc=5",
-        "source": "Escape Collective",
-        "sourceUrl": "https://escapecollective.com"
-      },
-      {
         "title": "“He would have finished second anyway” – Remco Evenepoel’s father insists son was Tadej Pogacar's closest Tour challenger, even before Jonas Vingegaard's crash",
         "pubDate": "Tue, 15 Sep 2026 21:30:00 +0200",
         "link": "https://cyclinguptodate.com/cycling/he-would-have-finished-second-anyway-remco-evenepoels-father-insists-son-was-tadej-pogacars-closest-tour-challenger-even-before-jonas-vingegaards-crash",
@@ -43,6 +50,13 @@
         "link": "https://cyclinguptodate.com/cycling/all-the-races-hes-won-you-just-had-to-push-hard-on-the-pedals-paul-seixas-right-hand-man-says-french-starlet-must-learn-quickly-ahead-of-world-championship-tilt",
         "source": "CyclingUpToDate",
         "sourceUrl": ""
+      },
+      {
+        "title": "Alexey Vermeulen and the human side of gravel - Escape Collective",
+        "pubDate": "Tue, 15 Sep 2026 17:05:21 GMT",
+        "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNaUI2OXVmNDdJaWl2N3FmN0ZUa05fMlNYR2JJSVBIeVZRZVk0WUY1R2VTQjNEOEU3ZTIxZWdlUlBOd0NBejJNckpvNGhnYVJ1cVE4TV80WUFaeVg5QTlNaHpybVJKVS1XMXYyZFpiNmFwV1BRS0JGbXFmRG9CeTFCUw?oc=5",
+        "source": "Escape Collective",
+        "sourceUrl": "https://escapecollective.com"
       },
       {
         "title": "“They threatened me with a firearm” - Vuelta a Espana runner-up robbed at gunpoint while training, just days before 50th birthday",
@@ -241,13 +255,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "UCI World Tour Rankings Teams Update: Del Toro and Evenepoel win, keeping UAE and Red Bull at the top; Movistar moves up with Enric Mas' Vuelta victory",
-        "pubDate": "Tue, 15 Sep 2026 10:15:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/uci-world-tour-rankings-teams-update-del-toro-and-evenepoel-win-keeping-uae-and-red-bull-at-the-top-movistar-moves-up-with-enric-mas-vuelta-victory",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "2026 Giro d'Italia and Vuelta a España podium finisher Felix Gall signs for Lidl-Trek for 2027",
         "pubDate": "Tue, 15 Sep 2026 08:03:03 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/transfers/2026-giro-d-italia-and-vuelta-a-espana-podium-finisher-felix-gall-signs-for-lidl-trek-for-2027/",
@@ -260,13 +267,6 @@
         "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPcUtuMzNlakI4aUZyMXFyS1E4cFJzUmVDWTBXSFg1a01jQWRBSjJSVXVTZ2Y5ZjNzNjVXck9WeWM5ZDJMUDVVcXBhTFgyVUZqTm1GRGc4Y3h6Q3p4VUE5WDhHNVN0TnFCU1NKTFpGaHppcVpwaEpoM05vX1VDbGpaeG1OcGxlQ3dKQmVfT1dJam1FdHVIWmIxa2Rn?oc=5",
         "source": "Escape Collective",
         "sourceUrl": "https://escapecollective.com"
-      },
-      {
-        "title": "I’ve Covered Cycling Since Payphones. Pogačar’s Vuelta Crash Showed How Much Has Changed. - Outside Magazine",
-        "pubDate": "Mon, 14 Sep 2026 17:44:02 GMT",
-        "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOVE5rbkV6aHNXYmd0WFM4b0pVRWFEMW5mLTRuc2t2RV9vb1pKaUgtTnc3WXk5ZVZkY3plME5CLWZhWjVIc3NWSHNzTGtqNFNKaVpLUDhmNF9qQUo0cE9GMjN2Q05tYjVFcmhTNFp1bndWWGZ3aFpCMHlYZEVoeTRETjRaSEp4UWpIOEZUb3Z4OWlXYjJGd25rb0xHaUlwZjBuR2ZfN3Nmekt0Sy1kV0ZLZFBjRDBLN3E3SUtnUmFkZXdsbVg2cFd2MzdtYnMzZTVvYjBzTzdQOWczcEZ1WVFjY2lRcnY?oc=5",
-        "source": "VELO",
-        "sourceUrl": "https://velo.outsideonline.com"
       },
       {
         "title": "Cédrine Kerbaol boosts SD Worx-Protime’s climbing core with two-year deal at the Dutch squad",
@@ -298,6 +298,13 @@
         "sourceUrl": ""
       },
       {
+        "title": "Spin Cycle: Crowd surfing for the Masses - Escape Collective",
+        "pubDate": "Mon, 14 Sep 2026 16:19:06 GMT",
+        "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9WWXpYMkxad191VldiSFdLUzJkdVVMR1RSNFFmbnYyVThTZVBycDFabDM2Vk1tSnNZei1GTWhtOVptZkREMHduU09NUjRkeWdjTkotMTBzYkhrU0FsT3NxSU1XVWVkVU9aWFByR2lEaVVnYURKbURYcQ?oc=5",
+        "source": "Escape Collective",
+        "sourceUrl": "https://escapecollective.com"
+      },
+      {
         "title": "MTB Marathon World Championships: Fairytale season for Anna Weinbeer continues for Swiss rider while German Andreas Seewald secures men's title",
         "pubDate": "Mon, 14 Sep 2026 16:08:29 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/racing/mtb-marathon-world-championships-fairytale-season-for-anna-weinbeer-continues-for-swiss-rider-while-german-andreas-seewald-secures-mens-title/",
@@ -326,13 +333,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "After tough season, Ben Healy finds rhythm and form in time for World Championships",
-        "pubDate": "Mon, 14 Sep 2026 11:50:37 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/after-tough-season-ben-healy-finds-rhythm-and-form-in-time-for-world-championships/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
         "title": "The favorites for Worlds delivered on the hype in Quebec and Montreal - Escape Collective",
         "pubDate": "Mon, 14 Sep 2026 10:46:57 GMT",
         "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPemlyb0hQU2h6N0tDa3JseEdXRnl1ckZYZFpKemZ0VUVTWTBLelVNY3IzclFDbWRUd2tqYlUtbi1BYU02T0R2NEY5S0JvejV6aVF5eThkcTRFOHBKcDc3SU1JUzlXMFgxMWktQm9POWhlcWZwUHlMWGdleE45LU9PYnZRSUdlX21kYURfUUhMQVd5T2J5VVZUellmTlA?oc=5",
@@ -354,9 +354,16 @@
         "sourceUrl": "https://velo.outsideonline.com"
       },
       {
-        "title": "Wout van Aert Has Given Evenepoel a Problem for Road Worlds: 5 Hot Takes from the Vuelta a España - Outside Magazine",
-        "pubDate": "Mon, 14 Sep 2026 06:53:20 GMT",
-        "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNV0VXYmZJUFNuTUV0N0gzRkJKZnFKRWNnSEtrQUlhZnhFOHZrYW4ycVl4a0tUY25PRldwc1ZPeEdUZGprdWVteVdUVW9UZU5kcmhjaVhXVy11N0N6aFBtSkhhMC1qNHNuZ3VUeUhkY2ZUcnJiX2tLUFZ5eE9ESThOU19nT1YwSkpVVl9qWUc2UDZQenF3cWVoVkhtYWNpbWxCSWE4RDA3dw?oc=5",
+        "title": "Grand Prix Cycliste de Montréal: Isaac del Toro Beats Seixas in Worlds Dress Rehearsal - Outside Magazine",
+        "pubDate": "Sun, 13 Sep 2026 20:03:15 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOMkk3T3hsNGlwVVUyNzZMM3FmWjdyM1lIaUdVS2hpOG9BZlNoc1UweWExVk1KcTNsLWY1a0pQRXJpTmRDYjFfSW1naFBUVnVYWVllVGVTZkpRdTJmekxKRlBaMnZCQnBwRlctMkxMNVNtZUVnTktnbFR1SzdEZldlV2swQkxfUUZaajZrNnFXbzlqYnNMZUxYWnRBejlVQVhsYnZpd050WWg?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
+      },
+      {
+        "title": "Vuelta a España Stage 21: Johannessen Takes Frenzied Finale as Mas Seals Overall Victory - Outside Magazine",
+        "pubDate": "Sun, 13 Sep 2026 20:00:02 GMT",
+        "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPRXBwcUV1SlFsVXhCQVdIS1NSNEpsMGFRYTRiZGJmMGlxSHZST2NCMWJEUXp3VzdtWkhvaFV3MlBRNk4tY082VG1EbFBOUUtfMVJKVTZkZEJJWng1ZXNyNDVkY3hRSzBvRlY5MXRNUjg4TXE0dTFaRGw2R2YybDhCdUdvb0RPV2pOM3ZKUWtCVFRkYWZjQlkzeHBqVHphUXZEeU5LRTYzZW5OalZtTmZ5OXJnY1Y0NURSU0tJLVBEdmlKNG1XVHZOX29reTRxUVFOb1UtbHE4U1NibUVuUmxYVDNoVElDLW8?oc=5",
         "source": "VELO",
         "sourceUrl": "https://velo.outsideonline.com"
       },
@@ -373,13 +380,6 @@
         "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQellxRzdOSmZ1QVF1Z3pmZHdLTGtaR0tEbndEYVlqX1d0SzllOWhJekZZNjg1dG5KMjF2RTB2VS1keXhlV0VId0RZYTF1dmtBTXVXZEJDbVlrN3ZoM29MNjB2MklpcWVfMGY3T1p1cGxpU3UyZlB1Y0EwMFhVaElTNnJaRU13c1FSamU1YnVDMldvR0g5aFZJMVdKYkZPeDg0X1ZVT1NlYmlHRHlGTXlkY1hn?oc=5",
         "source": "Escape Collective",
         "sourceUrl": "https://escapecollective.com"
-      },
-      {
-        "title": "Sepp Kuss Soars up Vuelta GC with Inspired Ride on Final Mountain Stage - Outside Magazine",
-        "pubDate": "Sat, 12 Sep 2026 20:34:33 GMT",
-        "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQUHV0YkY0LVpNVzBNR0c2NnBJbDc0aVRxb0F3VmowcGVxYjRVX3Z6cllQWDlRTmhVRDk3RmdRODVmY2d2ZTlqR0JOYi1xaGlCbVVxV0RrMlFYZHRkS25rQVNyVVp3QXVQSU9odm5FdmNsT2dPdElVblZTTWE0MXBEa29YSjdVWUJOUUF3NklxOXNVVUtmbUgzSzJn?oc=5",
-        "source": "VELO",
-        "sourceUrl": "https://velo.outsideonline.com"
       },
       {
         "title": "Vuelta a España Stage 20: Landa Rescues Terrible Season, Mas Set for Overall Win - Outside Magazine",
@@ -431,6 +431,13 @@
         "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9fY3o3aFU3ZUVCaTBUNWRjOTgtQ1JXU1NwcFVxLUs1bjQzMkFKT29DU3liNmNaeGpKbFpKSzdfSGl1QUxQNDFzT2NSQksyclVkXzhwQnk2SnlfOGV6TFNIdS1ZUndlU0otaVBzNjBCWV8tdTFXYkE?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
+        "title": "Video: Danny Hart at His Fourth World Champs in Val di Sole in 'All of Northing' - Just Getting Started EP6",
+        "pubDate": "Tue, 15 Sep 2026 00:00:00 PDT",
+        "link": "https://www.pinkbike.com/news/video-danny-hart-at-his-fourth-world-champs-in-val-di-sole-in-all-of-northing-just-getting-started-ep6.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
       },
       {
         "title": "Video: 2 Weeks Until It's Time to Start Building - Reed Boggs &amp; Johny Salido Training for Rampage in Virgin, Utah",
@@ -503,18 +510,18 @@
         "sourceUrl": ""
       },
       {
-        "title": "2026 UCI Mountain Bike Marathon World Championships: Seewald and Weinbeer dominate - uci.org",
+        "title": "Lachie Stevens-McNab - Moments - Les Gets and World Champs - sspomer - Mountain Biking Videos - Vital MTB",
+        "pubDate": "Tue, 15 Sep 2026 06:59:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPQVlwZTlVTWlzZEV3M0dNNjQ4d21iYTlkUmp2QW9XWnMwd2xnSmU2Ylp6VXVmWVBGd3JjdlJSb1RXSFdCcnE4TkNRY0RubW1xaXVhZUtIM2RSMzhCelpKbm9rbUJiWTh6TVhENUF0MGN0NFVJZmdldVRmdjBDVE5sdEcwZFcwbkREVDhLX2dJM3NLTkg4elFPSg?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
+        "title": "2026 UCI Mountain Bike Marathon World Championships: Seewald and Weinbeer dominate - UCI.org",
         "pubDate": "Mon, 14 Sep 2026 13:42:54 GMT",
         "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQN1pieURKZFJmNHZvNU41T3dRSHhzVDdRd3gtVjk3OHMwMDRxVmVqOHpmQmdmMnV5ZFNNRllqVGJwb1hwdEVsZ2g1c3dVZFNjNUhfQ243V1pGTWJEN0Q3ZGk0T0VJQ0NITzFTTzdENW5iVm1hLU9pZmI1a2lMSUV3azNKYm5jSFlBcUZaQXg0RjZTYU0yVW9FZW93WktmMHFNT0JEY2RuYlNaZ01jaWFYVkxVTW1TVkxkZDdWQ0pINGJ5R1cxSkFxNk9paUw?oc=5",
         "source": "UCI",
         "sourceUrl": "https://www.uci.org"
-      },
-      {
-        "title": "2026 Race Talk - The Hub - Mountain Biking Forums / Message Boards - Vital MTB",
-        "pubDate": "Mon, 14 Sep 2026 09:27:48 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5PMDFIS2xxajh2Ny01WU9WNE1INGRXNW44Vng2TlNYSUl1dzA4U2FEQkNDclM3RVFneV9hZ196QUQybjdlVTFEdDEtY3llSUdpM1czSnI4TDZXSGtpdElYc0JoS1ZFSlBuWkE?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
       },
       {
         "title": "Day 3 Randoms - Bespoked Show Dresden 2026",
@@ -601,14 +608,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "Aaron Gwin &amp; Gloria Scarsi Win the 2026 US Open Downhill",
-        "pubDate": "Sun, 13 Sep 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/aaron-gwin-and-gloria-scarsi-win-the-2026-us-open-downhill.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
-        "title": "2026 UCI MTB MARATHON WORLD CHAMPIONSHIPS - uci.org",
+        "title": "2026 UCI MTB MARATHON WORLD CHAMPIONSHIPS - UCI.org",
         "pubDate": "Sat, 12 Sep 2026 21:32:41 GMT",
         "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOYWcyVC13dkFSUE13Q29WdmdqaFBJTGRjR1FxTWRpS1d6NVNWZEc2c1I5V1lrZVI5Z0Z4OHhwVEJzeF9EQndUbnhWa3FORHBoRGFidWJFeWhUX05nek83SGpLMm85QWZwMXducF9kejJVSTJ2aEJIcW5LaEVjeXE0RzRydFZreHpRWTJ2N1MzSl9NNHpkUXRqdTNvSG5RWlpTS2pYejd3dEk2RERUb2liODRWWVg1TzNnc2c?oc=5",
         "source": "UCI",
@@ -643,7 +643,7 @@
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "2026 UCI Mountain Bike Marathon World Championships: the courses and who to watch - uci.org",
+        "title": "2026 UCI Mountain Bike Marathon World Championships: the courses and who to watch - UCI.org",
         "pubDate": "Thu, 10 Sep 2026 12:25:49 GMT",
         "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQY215SGcycWZmVmZybkVpMUk5UF9kUmhDVTYxTmJrR0M2M2ZTODlWNWlEYVEwNlExTUNqTWJmRnpwekctSnNvNllfNVQ2YkpETlNkdlF3WmNKcFd3aG9BM3E0VXh2aFk3UjZTMFlNZkQxR2VaWkdvMkh5R2pZRngwS2RZdWVMVWQ3WC01SU8tRVFiMTJ5MEdLQWhXU2ZUMkVVLUdtTEVGZmdLTWgzTE9Sb0RSUlZzNXJaRENaNTJNRWZZQUNoNVJwNjNR?oc=5",
         "source": "UCI",
@@ -673,7 +673,7 @@
     ],
     "cyclocross": [
       {
-        "title": "Riley Oosterhof - cyclocross24.com",
+        "title": "Riley Oosterhof - Cyclocross24.com",
         "pubDate": "Sun, 13 Sep 2026 04:33:50 GMT",
         "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1yclQzd3J5ZlY5SjRxZGxIR0oyMHAzZlIzSkptQ0hKWVdnVUFJZFJZNGdVdnhYS2xJSEdCU2FPcFoxWmtHX0ljdWpNTFNrcFoxSlJYUHBqU09RWmM?oc=5",
         "source": "Cyclocross24",
@@ -681,6 +681,20 @@
       }
     ],
     "gravel": [
+      {
+        "title": "Co-Motion Cycles : More than just Tandems : Factory Tour, Eugene, Oregon",
+        "pubDate": "Wed, 16 Sep 2026 05:37:01 +0000",
+        "link": "https://www.gravelcyclist.com/videos/co-motion-cycles-more-than-just-tandems-factory-tour-eugene-oregon/",
+        "source": "Gravel Cyclist",
+        "sourceUrl": ""
+      },
+      {
+        "title": "US Gravel Nationals - Outside Magazine",
+        "pubDate": "Tue, 15 Sep 2026 23:14:22 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9NSlExWnNlR01rOU01NUxSdUc4S19SazZaYzVFQnl1MnVGZGtiM0x6aXVvc2hFbjlEODdnbXJkaTNxVlZqN0FnS005c0RQS1A3aW5RWGRDVDJBWXV1OHRGTFlKb2s?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
+      },
       {
         "title": "Tout Terrain takes family adventures off roads with New Singletrailer II Gravel",
         "pubDate": "Tue, 15 Sep 2026 21:05:31 +0000",
@@ -731,7 +745,7 @@
         "sourceUrl": "https://escapecollective.com"
       },
       {
-        "title": "5 new gravel bikes that have got us excited - bikeradar.com",
+        "title": "5 new gravel bikes that have got us excited - BikeRadar",
         "pubDate": "Thu, 10 Sep 2026 15:00:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPSVhJV25wR1UxdW5hMFJYVXZEVXhrbHRQUFdlVFZwdVB0N19mMk9KTUxXVFE0NEpTNEYwdjJab19mNmhBUnlMbi1mcGZYQ3pmaU8zVjB5NVkwNU1OWXVXYnJoQllhV3JDNXdEQzRxR0pVZ2lsQUdzZ1FuRnp5Tng4Y0RkRjY3R1VYckE?oc=5",
         "source": "BikeRadar",
@@ -759,7 +773,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "“A major leap forward in gravel tyre performance”: WTB’s new high-volume aero gravel tyres include features to lower drag - bikeradar.com",
+        "title": "“A major leap forward in gravel tyre performance”: WTB’s new high-volume aero gravel tyres include features to lower drag - BikeRadar",
         "pubDate": "Wed, 09 Sep 2026 15:00:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBpeEVvMVg5VjlpNDRnNXFNZ0tkdENKTVp5bmpNM25TaEZTQWxWaE42UTVxUm5vM25DRmU0cFRkc1l1NHBDandWV0NVdWxKYXZJbHJxRjdBd2psOGZ5dkZJM2Y5ZmlwdHdhdjhr?oc=5",
         "source": "BikeRadar",
