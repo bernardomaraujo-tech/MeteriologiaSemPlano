@@ -1,7 +1,112 @@
 {
-  "updatedAt": "2026-09-16T06:04:13.016Z",
+  "updatedAt": "2026-09-16T11:38:18.372Z",
   "disciplines": {
     "road": [
+      {
+        "title": "\"That is the main goal...\" - Mathieu van der Poel's Luxembourg presence is not by chance, but a successful formula",
+        "pubDate": "Wed, 16 Sep 2026 12:46:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/that-is-the-main-goal-mathieu-van-der-poels-luxembourg-presence-is-not-by-chance-but-a-successful-formula",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "'The rider may lose control of the bike, leading to injuries' – bike recall over failing forks expanded",
+        "pubDate": "Wed, 16 Sep 2026 10:26:04 +0000",
+        "link": "https://www.cyclingweekly.com/news/the-rider-may-lose-control-of-the-bike-leading-to-injuries-bike-recall-over-failing-forks-expanded",
+        "source": "Cycling Weekly",
+        "sourceUrl": ""
+      },
+      {
+        "title": "'He's totally disconnected from reality' – Philippe Gilbert slams Tim Wellens' refusal to ride the World Championships for Belgium",
+        "pubDate": "Wed, 16 Sep 2026 10:25:34 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/hes-totally-disconnected-from-reality-philippe-gilbert-slams-tim-wellens-refusal-to-ride-the-world-championships-for-belgium/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Tom Pidcock, Oscar Onley, Adam Yates... - Great Britain reveal the 36 riders that will take part in the 2026 World Championships",
+        "pubDate": "Wed, 16 Sep 2026 12:19:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/tom-pidcock-oscar-onley-adam-yates-great-britain-reveal-the-36-riders-that-will-take-part-in-the-2026-world-championships",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Soudal-QuickStep bolster sprint and Classics squads with Ben Turner signing",
+        "pubDate": "Wed, 16 Sep 2026 09:46:14 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/transfers/soudal-quickstep-bolster-sprint-and-classics-squads-with-ben-turner-signing/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Paul Seixas can make history at the Worlds: a 92-year-old record is in his sights",
+        "pubDate": "Wed, 16 Sep 2026 11:45:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/paul-seixas-can-make-history-at-the-worlds-a-92-year-old-record-is-in-his-sights",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"He is completely out of touch with reality\" - Philippe Gilbert blasts Tim Wellens for letting go of World Championships for UAE duties",
+        "pubDate": "Wed, 16 Sep 2026 11:21:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/he-is-completely-out-of-touch-with-reality-philippe-gilbert-blasts-tim-wellens-for-letting-go-of-world-championships-for-uae-duties",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "La Vuelta was easily the best Grand Tour of the season, now a wide-open Worlds awaits – Sean Kelly's Vuelta column",
+        "pubDate": "Wed, 16 Sep 2026 08:58:04 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/la-vuelta-was-easily-the-best-grand-tour-of-the-season-now-a-wide-open-worlds-awaits-sean-kellys-vuelta-column/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "“He would have finished second anyway” – Remco Evenepoel’s father insists son was Tadej Pogacar's closest Tour challenger, even before Jonas Vingegaard's crash",
+        "pubDate": "Wed, 16 Sep 2026 10:53:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/he-would-have-finished-second-anyway-remco-evenepoels-father-insists-son-was-tadej-pogacars-closest-tour-challenger-even-before-jonas-vingegaards-crash",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"He has unfinished business with La Vuelta\" - Tadej Pogacar already Guillén's big target for Vuelta moving forward",
+        "pubDate": "Wed, 16 Sep 2026 10:50:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/he-has-unfinished-business-with-la-vuelta-tadej-pogacar-already-guillens-big-target-for-vuelta-moving-forward",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "OFFICIAL: Netcompany INEOS lose one of its leaders, who reinforces Quick-Step's sprint and classics block",
+        "pubDate": "Wed, 16 Sep 2026 10:36:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/official-netcompany-ineos-lose-one-of-its-leaders-who-reinforces-quick-steps-sprint-and-classics-block",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Tour de Luxembourg 2026 GC & stage 1 previews, profiles, favourites & predictions - Mathieu van der Poel's big pre-world championships test",
+        "pubDate": "Wed, 16 Sep 2026 10:17:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/tour-de-luxembourg-2026-gc-stage-1-preview-profile-favourites-predictions-mathieu-van-der-poels-big-pre-world-championships-test",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "'The big guys usually fighting for the podium are now going for the win' – British riders look to capitalise on absence of Pogačar at Worlds in support of 'genuine contender' Tom Pidcock",
+        "pubDate": "Wed, 16 Sep 2026 08:16:43 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/racing/the-big-guys-usually-fighting-for-the-podium-are-now-going-for-the-win-british-riders-look-to-capitalise-on-absence-of-pogacar-at-worlds-in-support-of-genuine-contender-tom-pidcock/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Former junior European champion heads home - Uno-X recruit Alexander Kristoff's younger brother",
+        "pubDate": "Wed, 16 Sep 2026 09:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/former-junior-european-champion-heads-home-uno-x-recruit-alexander-kristoffs-younger-brother",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Australian team named for home UCI Gravel World Championships, with Frain, Cromwell and Ovett joined by former national title holders O'Brien, Sens and Harris",
+        "pubDate": "Wed, 16 Sep 2026 06:21:30 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/racing/australian-team-named-for-home-uci-gravel-world-championships-with-frain-cromwell-and-ovett-joined-by-former-national-title-holders-obrien-sens-and-harris/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
       {
         "title": "UCI WorldTour Riders Ranking Update: Pogacar concedes defeat, Tom Pidcock drops a spot, Matthew Brennan makes huge jump into top 25 and Enric Mas joins the elite",
         "pubDate": "Wed, 16 Sep 2026 06:00:00 +0200",
@@ -35,13 +140,6 @@
         "pubDate": "Tue, 15 Sep 2026 20:23:20 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/collarbone-strong-head-strong-tadej-pogacar-rides-indoors-for-the-first-time-since-vuelta-a-espana-crash/",
         "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "“He would have finished second anyway” – Remco Evenepoel’s father insists son was Tadej Pogacar's closest Tour challenger, even before Jonas Vingegaard's crash",
-        "pubDate": "Tue, 15 Sep 2026 21:30:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/he-would-have-finished-second-anyway-remco-evenepoels-father-insists-son-was-tadej-pogacars-closest-tour-challenger-even-before-jonas-vingegaards-crash",
-        "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
       {
@@ -164,31 +262,10 @@
         "sourceUrl": ""
       },
       {
-        "title": "GP de Wallonie 2026 preview, profile, favourites & predictions - UAE look to win star-studden field on cobbled Namur climb",
-        "pubDate": "Tue, 15 Sep 2026 13:52:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/gp-de-wallonie-2026-preview-profile-favourites-predictions-uae-look-to-win-star-studden-field-on-cobbled-namur-climb",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Tour de Luxembourg 2026 GC & stage 1 previews, profiles, favourites & predictions - Mathieu van der Poel's big pre-world championships test",
-        "pubDate": "Tue, 15 Sep 2026 13:23:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/tour-de-luxembourg-2026-gc-stage-1-preview-profile-favourites-predictions-mathieu-van-der-poels-big-pre-world-championships-test",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "Enric Mas' maturity and calmness allowed him to capitalise on strong form, while his GC rivals have plenty of lessons to learn from the Vuelta a España – Philippa York analysis",
         "pubDate": "Tue, 15 Sep 2026 11:21:25 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/enric-mas-maturity-and-calmness-allowed-him-to-capitalise-on-strong-form-while-his-gc-rivals-have-plenty-of-lessons-to-learn-from-the-vuelta-a-espana-philippa-york-analysis/",
         "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"Really difficult for the heavier riders...\" - Remco Evenepoel argues climbers, not Van Aert or van der Poel, are favoured by Montréal circuit",
-        "pubDate": "Tue, 15 Sep 2026 12:45:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/really-difficult-for-the-heavier-riders-remco-evenepoel-argues-climbers-not-van-aert-or-van-der-poel-are-favoured-by-montreal-circuit",
-        "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
       {
@@ -199,45 +276,10 @@
         "sourceUrl": ""
       },
       {
-        "title": "\"Trying to secure a win with my new team...\" - Kévin Vauquelin looks to win with INEOS for the first time in Abruzzo; reveals he was also ill during Tour de France",
-        "pubDate": "Tue, 15 Sep 2026 12:15:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/trying-to-secure-a-win-with-my-new-team-kevin-vauquelin-looks-to-win-with-ineos-for-the-first-time-in-abruzzo-reveals-he-was-also-ill-during-tour-de-france",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Bahrain - Victorious sign the winner of one of 2026's most unique mountain races",
-        "pubDate": "Tue, 15 Sep 2026 11:35:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/bahrain-victorious-sign-the-winner-of-one-of-2026s-most-unique-mountain-races",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "'I was surprised as well' - Movistar general manager Eusebio Unzué analyses Enric Mas' unexpected but welcome victory in Vuelta a España",
         "pubDate": "Tue, 15 Sep 2026 08:57:44 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/racing/i-was-surprised-as-well-movistar-general-manager-eusebio-unzue-analyses-enric-mas-unexpected-but-welcome-victory-in-vuelta-a-espana/",
         "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "UCI Road World Championships 2026 in Montreal: Schedule, Dates and How to Watch in USA and UK",
-        "pubDate": "Tue, 15 Sep 2026 10:51:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/uci-road-world-championships-2026-in-montreal-schedule-dates-and-how-to-watch-in-usa-and-uk",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"The culmination of a decade of heartbreaks\" - Why Enric Mas' Vuelta win means so much",
-        "pubDate": "Tue, 15 Sep 2026 10:46:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/the-culmination-of-a-decade-of-heartbreaks-why-enric-mas-vuelta-win-means-so-much",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"He has several riders who can almost act like teammates\" - Isaac del Toro named favourite to win World Championships in Pogacar's absence",
-        "pubDate": "Tue, 15 Sep 2026 10:45:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/he-has-several-riders-who-can-almost-act-like-teammates-isaac-del-toro-named-favourite-to-win-world-championships-in-pogacars-absence",
-        "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
       {
@@ -269,6 +311,13 @@
         "sourceUrl": "https://escapecollective.com"
       },
       {
+        "title": "I’ve Covered Cycling Since Payphones. Pogačar’s Vuelta Crash Showed How Much Has Changed. - Outside Magazine",
+        "pubDate": "Mon, 14 Sep 2026 17:44:02 GMT",
+        "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOVE5rbkV6aHNXYmd0WFM4b0pVRWFEMW5mLTRuc2t2RV9vb1pKaUgtTnc3WXk5ZVZkY3plME5CLWZhWjVIc3NWSHNzTGtqNFNKaVpLUDhmNF9qQUo0cE9GMjN2Q05tYjVFcmhTNFp1bndWWGZ3aFpCMHlYZEVoeTRETjRaSEp4UWpIOEZUb3Z4OWlXYjJGd25rb0xHaUlwZjBuR2ZfN3Nmekt0Sy1kV0ZLZFBjRDBLN3E3SUtnUmFkZXdsbVg2cFd2MzdtYnMzZTVvYjBzTzdQOWczcEZ1WVFjY2lRcnY?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
+      },
+      {
         "title": "Cédrine Kerbaol boosts SD Worx-Protime’s climbing core with two-year deal at the Dutch squad",
         "pubDate": "Mon, 14 Sep 2026 17:04:34 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/cedrine-kerbaol-boosts-sd-worx-protimes-climbing-core-with-two-year-deal-at-the-dutch-squad/",
@@ -284,20 +333,6 @@
         "type": "transfers"
       },
       {
-        "title": "'Radically different scenario' - With four riders at finish, UAE Team Emirates-XRG battle through tough Vuelta a España without Tadej Pogačar",
-        "pubDate": "Mon, 14 Sep 2026 16:45:56 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/radically-different-scenario-with-four-riders-at-finish-uae-team-emirates-xrg-battle-through-tough-vuelta-a-espana-without-tadej-pogacar/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Six conclusions from the Vuelta a España – Mas returns Spain to glory, Van Aert at his versatile best, and the ripple effect of Pogačar's crash",
-        "pubDate": "Mon, 14 Sep 2026 16:33:26 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/racing/six-conclusions-from-the-vuelta-a-espana-mas-returns-spain-to-glory-van-aert-at-his-versatile-best-and-the-ripple-effect-of-pogacars-crash/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
         "title": "Spin Cycle: Crowd surfing for the Masses - Escape Collective",
         "pubDate": "Mon, 14 Sep 2026 16:19:06 GMT",
         "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9WWXpYMkxad191VldiSFdLUzJkdVVMR1RSNFFmbnYyVThTZVBycDFabDM2Vk1tSnNZei1GTWhtOVptZkREMHduU09NUjRkeWdjTkotMTBzYkhrU0FsT3NxSU1XVWVkVU9aWFByR2lEaVVnYURKbURYcQ?oc=5",
@@ -305,31 +340,10 @@
         "sourceUrl": "https://escapecollective.com"
       },
       {
-        "title": "MTB Marathon World Championships: Fairytale season for Anna Weinbeer continues for Swiss rider while German Andreas Seewald secures men's title",
-        "pubDate": "Mon, 14 Sep 2026 16:08:29 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/racing/mtb-marathon-world-championships-fairytale-season-for-anna-weinbeer-continues-for-swiss-rider-while-german-andreas-seewald-secures-mens-title/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
         "title": "'Imagine a world where women are seen for what they can do not just what they look like': Athletes from across cycling speak out against sexualised depiction of women in sport",
         "pubDate": "Mon, 14 Sep 2026 15:26:01 +0000",
         "link": "https://www.cyclingweekly.com/news/olympic-champion-sophie-capewell-speaks-out-against-sydney-sweeney-ad",
         "source": "Cycling Weekly",
-        "sourceUrl": ""
-      },
-      {
-        "title": "'I expect a very hard race with big time gaps' – A UCI Gravel World Championships title defence for Florian Vermeersch in Nannup",
-        "pubDate": "Mon, 14 Sep 2026 13:25:53 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/racing/i-expect-a-very-hard-race-with-big-time-gaps-a-uci-gravel-world-championships-title-defence-for-florian-vermeersch-in-nannup/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "'I think I took last year for granted' – Oscar Onley fights through setbacks with vital lessons learnt from successful rollercoaster Vuelta a España",
-        "pubDate": "Mon, 14 Sep 2026 12:07:02 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/i-think-i-took-last-year-for-granted-oscar-onley-fights-through-setbacks-with-vital-lessons-learnt-from-successful-rollercoaster-vuelta-a-espana/",
-        "source": "Cyclingnews",
         "sourceUrl": ""
       },
       {
@@ -382,6 +396,13 @@
         "sourceUrl": "https://escapecollective.com"
       },
       {
+        "title": "Riccitello, Dunbar and Hamilton Crash Out of Vuelta a España on Final GC Day - Outside Magazine",
+        "pubDate": "Sat, 12 Sep 2026 21:59:02 GMT",
+        "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxORDR0U0oxV0c1Vzk1V1I2UERJdnJyVFJWRUVWRW1URnR0MWZ3eWxLLUtMbmh2NzlQT1VTdUtKd0RoYzhqcC1OeGV3eGhKOUhjSWowcDFMajlERjdEZ0JVUzhVR0UzUldNSUM3OTZnWHVZM3M1QlE5TklaN1NGVk1haFZrbzFMMjhVWlVid0tnYjZ4UHNrVjRfRTUtdXJ4WW55YVN1M2kzbW83bWZIbUtQSHZR?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
+      },
+      {
         "title": "Vuelta a España Stage 20: Landa Rescues Terrible Season, Mas Set for Overall Win - Outside Magazine",
         "pubDate": "Sat, 12 Sep 2026 19:16:24 GMT",
         "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQeW1VSF9hMEw0OG5YUTRDTkU0TlFLTGNRTFNLVE9QYzFBZi1mUzJpbDVYNmhkZ25jaEdHUG1iY0VkczA1SHFiUWl4UlBrNEIycXFieDhnY2M1RS16TVRLNDB2Z3hQUEd4REwtUjA0OGpYbmE3ajcyX3BuSmZCWlNsM2dWTjVaU3d5RGRPX3BBSVVFdGNKVEFJekVqbERaZWVxaVN4VnF1ck1XNkoxMENZN08zVk9Xems?oc=5",
@@ -401,30 +422,37 @@
         "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOcmYtWmU4eXp2NFhtUERuYmN3V1BwTGJpQW1OZ0xUUlFXNEw0RW1HNEV5aHpySHNOcldHWVNjZjdDQ2NIX3I0Y2gyNVFFMGk1aW5lUlZ6ak5nNWt0a2Vscm56UEp5dzlZYklweFVsMW00TDVobjJQaVc2UU9sa0VLWE4xYnJ4MWREdGhqcjlUTmxDcEoxcFFSZVNaYw?oc=5",
         "source": "VELO",
         "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
-        "title": "Grand Prix Cycliste de Québec: Remco Evenepoel Claims an Aggressive Edition of the Key Pre-Worlds Test - Outside Magazine",
-        "pubDate": "Fri, 11 Sep 2026 20:15:59 GMT",
-        "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOSFg1b2JUXzVtRFR1UzJPMV9QZmtIeDBCcmtFbWtVUWUwRS13Z0RUTkh5bUt5MEZ0RUhqZ0tVeE5wd3l2aUNPM2RpX2pLclNwcnZ4OUk0RkUxQXpQay0zbWdfemR6b3dTRHpTSmNCeWlQWWR2QnYzemZTSlVFcGp6VExBSDVUcmpDb21TdllEZE5qZlpnb05kSlRUTQ?oc=5",
-        "source": "VELO",
-        "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
-        "title": "Vuelta a España Stage 19: Dunbar Turns Tough Season Around with Determined Mountain Win - Outside Magazine",
-        "pubDate": "Fri, 11 Sep 2026 19:10:17 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNOEM3SU96Um96RUFZNC1BcVc2dVpXZmtJaFp1Q3F3VnFMcFJkTGFULVZqSUV5VWlIdm1YREJJZ1lqR2FyUXI1V3dVS1VsN3A5N3RmYkdHclQ4b2RGamJWSjdWSGpYUTNfaUlqWDUzUkN2dHBJVUFINnROcEJPZ0hxd2VSaHpSRzBuY3BRWkszTU1jOGlOQTZ3b3YtVU1Pa2FlWjQ0SWktYjRRUzlPUDlRLVhCSElpbWo3Y0E?oc=5",
-        "source": "VELO",
-        "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
-        "title": "From a 'skinny broken girl into a strong woman' - Clara Koppenburg finds new strength in gravel after battling an eating disorder",
-        "pubDate": "Fri, 11 Sep 2026 17:43:41 +0000",
-        "link": "https://www.cyclingweekly.com/news/from-a-skinny-broken-girl-into-a-strong-woman-clara-koppenburg-finds-new-strength-in-gravel-after-battling-an-eating-disorder",
-        "source": "Cycling Weekly",
-        "sourceUrl": ""
       }
     ],
     "mtb": [
+      {
+        "title": "2026 Soldier Hollow XC World Cup Preview: Rider List, Race Schedule &amp; How to Watch",
+        "pubDate": "Wed, 16 Sep 2026 00:00:00 PDT",
+        "link": "https://www.pinkbike.com/news/2026-soldier-hollow-xc-world-cup-preview-rider-list-race-schedule-and-how-to-watch.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Trek Factory Racing Show Evie Richards Riding New 32\" XC Bike",
+        "pubDate": "Wed, 16 Sep 2026 00:00:00 PDT",
+        "link": "https://www.pinkbike.com/news/trek-factory-racing-show-evie-richards-riding-new-32-xc-bike.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Video: Inside Adrien Boichis' Journey to the Top in Making Legends",
+        "pubDate": "Wed, 16 Sep 2026 00:00:00 PDT",
+        "link": "https://www.pinkbike.com/news/video-inside-adrien-boichis-journey-to-the-top-in-making-legends.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
+      {
+        "title": "How to Get Your Kids Into Mountain Biking",
+        "pubDate": "Wed, 16 Sep 2026 00:00:00 PDT",
+        "link": "https://www.pinkbike.com/news/how-to-get-your-kids-into-mountain-biking.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
       {
         "title": "S&M Big Jumper Build - Vital MTB",
         "pubDate": "Tue, 15 Sep 2026 09:50:00 GMT",
@@ -552,27 +580,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "WBD Sports Reveals Nominees for Rookie of the Year at the Golden Arrow Awards",
-        "pubDate": "Mon, 14 Sep 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/wbd-sports-reveals-nominees-for-rookie-of-the-year-at-the-golden-arrow-awards.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Video: Race Highlights from the iXS EDC #6 Verbier, Switzerland",
-        "pubDate": "Mon, 14 Sep 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/video-race-mashup-ixs-edc-6-verbier-switzerland.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Comparing Race Runs From the 2026 US Open Downhill",
-        "pubDate": "Mon, 14 Sep 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/racecraft-head-to-heads-2026-fox-us-open.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
         "title": "What enduro bike am I? - The Hub - Mountain Biking Forums / Message Boards - Vital MTB",
         "pubDate": "Mon, 14 Sep 2026 02:55:51 GMT",
         "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBIRlppNWlBRGtJdnRXczlzdmtSTjN6NlE3VC1jUmVIN1kzZXNZR1V0ZXc4ckhxVmlJNWt5dWV5aHZuUFRUTDJ5TURSMVgzRG9p?oc=5",
@@ -597,13 +604,6 @@
         "title": "Day 2 Randoms - Bespoked Show Dresden 2026",
         "pubDate": "Sun, 13 Sep 2026 00:00:00 PDT",
         "link": "https://www.pinkbike.com/news/day-2-randoms-bespoked-show-dresden-2026.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Race Report: Lisa Baumann &amp; Yannick Baechler Win the iXS EDC Round 6 at Verbier",
-        "pubDate": "Sun, 13 Sep 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/lisa-baumann-and-yannick-baechler-win-the-ixs-edc-round-6-at-verbier.html?trk=rss",
         "source": "Pinkbike",
         "sourceUrl": ""
       },
@@ -682,6 +682,13 @@
     ],
     "gravel": [
       {
+        "title": "Australian team named for home UCI Gravel World Championships, with Frain, Cromwell and Ovett joined by former national title holders O'Brien, Sens and Harris",
+        "pubDate": "Wed, 16 Sep 2026 06:21:30 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/racing/australian-team-named-for-home-uci-gravel-world-championships-with-frain-cromwell-and-ovett-joined-by-former-national-title-holders-obrien-sens-and-harris/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
         "title": "Co-Motion Cycles : More than just Tandems : Factory Tour, Eugene, Oregon",
         "pubDate": "Wed, 16 Sep 2026 05:37:01 +0000",
         "link": "https://www.gravelcyclist.com/videos/co-motion-cycles-more-than-just-tandems-factory-tour-eugene-oregon/",
@@ -689,18 +696,18 @@
         "sourceUrl": ""
       },
       {
-        "title": "US Gravel Nationals - Outside Magazine",
-        "pubDate": "Tue, 15 Sep 2026 23:14:22 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9NSlExWnNlR01rOU01NUxSdUc4S19SazZaYzVFQnl1MnVGZGtiM0x6aXVvc2hFbjlEODdnbXJkaTNxVlZqN0FnS005c0RQS1A3aW5RWGRDVDJBWXV1OHRGTFlKb2s?oc=5",
-        "source": "VELO",
-        "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
         "title": "Tout Terrain takes family adventures off roads with New Singletrailer II Gravel",
         "pubDate": "Tue, 15 Sep 2026 21:05:31 +0000",
         "link": "https://www.gravelcyclist.com/bicycle-tech/tout-terrain-takes-family-adventures-off-roads-with-new-singletrailer-ii-gravel/",
         "source": "Gravel Cyclist",
         "sourceUrl": ""
+      },
+      {
+        "title": "The New US Gravel National Champs Are 2 Sides of the Gravel Racing Coin - Outside Magazine",
+        "pubDate": "Tue, 15 Sep 2026 18:44:41 GMT",
+        "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5UU0tBeTdVcUVBN1E4VG85em9JRHQyNUo2VDNkcEtybWtFLTIzaFp1a0lvUks2Y3lpX1hUUzRHYUJaY3dSdVB3RlpFU0tZY1RWSHJUQnNscW05UnZ4UlRTNmFBdndLczVkRWZoNmJSdy13eUpZRVo5SGh2bw?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
       },
       {
         "title": "Vittoria RideArmor expands to 42mm: “The No-Brainer choice when reliability matters most”",
@@ -713,20 +720,6 @@
         "title": "'I expect a very hard race with big time gaps' – A UCI Gravel World Championships title defence for Florian Vermeersch in Nannup",
         "pubDate": "Mon, 14 Sep 2026 13:25:53 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/racing/i-expect-a-very-hard-race-with-big-time-gaps-a-uci-gravel-world-championships-title-defence-for-florian-vermeersch-in-nannup/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "UCI Gravel World Series: Romy Kasper and Tobias Mørch Kongstad win elite races at Falling Leaves in Finland",
-        "pubDate": "Sun, 13 Sep 2026 09:14:48 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/racing/uci-gravel-world-series-romy-kasper-and-tobias-morch-kongstad-win-elite-races-at-falling-leaves-in-finland/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "USA Cycling Gravel National Championships: Trek Driftless teammates Paige Onweller, Cobe Freeburn secure elite titles",
-        "pubDate": "Sun, 13 Sep 2026 08:29:45 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/usa-cycling-gravel-national-championships-trek-driftless-teammates-paige-onweller-cobe-freeburn-secure-elite-titles/",
         "source": "Cyclingnews",
         "sourceUrl": ""
       },
