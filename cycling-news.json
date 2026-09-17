@@ -1,7 +1,21 @@
 {
-  "updatedAt": "2026-09-17T18:16:29.822Z",
+  "updatedAt": "2026-09-17T21:29:29.442Z",
   "disciplines": {
     "road": [
+      {
+        "title": "Three-time cyclocross world champion Fem van Empel returns from hiatus as a teammate of Demi Vollering!",
+        "pubDate": "Thu, 17 Sep 2026 23:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/three-time-cyclocross-world-champion-fem-van-empel-returns-from-hiatus-as-a-teammate-of-demi-vollering",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Eneco Tour integrates women's and men's races, alternating starts in prologue",
+        "pubDate": "Thu, 17 Sep 2026 20:55:51 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/eneco-tour-integrates-womens-and-mens-races-alternating-starts-in-prologue/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
       {
         "title": "How do you beat Remco Evenepoel in a time trial? - The last four times the world champion has been beaten in a race against the clock",
         "pubDate": "Thu, 17 Sep 2026 20:00:00 +0200",
@@ -249,13 +263,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "OPINION - Isaac del Toro is the favorite to win the 2026 World Championships in Montréal",
-        "pubDate": "Thu, 17 Sep 2026 06:00:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/opinion-isaac-del-toro-is-the-favorite-to-win-the-2026-world-championships-in-montreal",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "'He's saying cancer. I start bawling my eyes out' - Declan Irvine's journey through diabetes, a life-changing disease and the unstoppable path for third UCI Gravel World Championships qualification",
         "pubDate": "Wed, 16 Sep 2026 21:05:24 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/hes-saying-cancer-i-start-bawling-my-eyes-out-declan-irvines-journey-through-diabetes-a-life-changing-disease-and-the-unstoppable-path-for-third-uci-gravel-world-championships-qualification/",
@@ -315,13 +322,6 @@
         "title": "Grand Prix de Wallonie Dames: Karlijn Swinkels launches a long-range sprint to take victory on the Citadelle de Namur",
         "pubDate": "Wed, 16 Sep 2026 12:51:48 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/grand-prix-de-wallonie-dames-karlijn-swinkels-launches-a-long-range-sprint-to-take-victory-on-the-citadelle-de-namur/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Mads Pedersen helps fund two extra spots for U23 riders in Denmark's World Championships squad",
-        "pubDate": "Wed, 16 Sep 2026 12:25:24 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/mads-pedersen-helps-fund-two-extra-spots-for-u23-riders-in-denmarks-world-championships-squad/",
         "source": "Cyclingnews",
         "sourceUrl": ""
       },
@@ -427,9 +427,23 @@
     ],
     "mtb": [
       {
+        "title": "Mountain Bike News - Vital MTB",
+        "pubDate": "Thu, 17 Sep 2026 12:00:15 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9KSGw1cjJ5RUpWVW10R0dIVzR0Z25kRnVYX1FTaHJOZWU1V2huMHpSQ3VZaHZDQ2x2MDVrdWJIY1JLRElGYkpOTA?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
         "title": "26 Riders Announced For Red Bull Hardline British Columbia",
         "pubDate": "Thu, 17 Sep 2026 00:00:00 PDT",
         "link": "https://www.pinkbike.com/news/26-riders-announced-for-red-bull-hardline-british-columbia.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Video: What is 'Bjorn Riley's Sketchbook'?",
+        "pubDate": "Thu, 17 Sep 2026 00:00:00 PDT",
+        "link": "https://www.pinkbike.com/news/video-what-is-bjorn-rileys-sketchbook.html?trk=rss",
         "source": "Pinkbike",
         "sourceUrl": ""
       },
@@ -491,7 +505,7 @@
       },
       {
         "title": "2026 Race Talk - The Hub - Mountain Biking Forums / Message Boards - Vital MTB",
-        "pubDate": "Wed, 16 Sep 2026 18:05:33 GMT",
+        "pubDate": "Wed, 16 Sep 2026 20:33:26 GMT",
         "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5PMDFIS2xxajh2Ny01WU9WNE1INGRXNW44Vng2TlNYSUl1dzA4U2FEQkNDclM3RVFneV9hZ196QUQybjdlVTFEdDEtY3llSUdpM1czSnI4TDZXSGtpdElYc0JoS1ZFSlBuWkE?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
@@ -546,7 +560,7 @@
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "Video: Danny Hart at His Fourth World Champs in Val di Sole in 'All of Northing' - Just Getting Started EP6",
+        "title": "Video: Danny Hart at His Fourth World Champs in Val di Sole in 'All or Nothing' - Just Getting Started EP6",
         "pubDate": "Tue, 15 Sep 2026 00:00:00 PDT",
         "link": "https://www.pinkbike.com/news/video-danny-hart-at-his-fourth-world-champs-in-val-di-sole-in-all-of-northing-just-getting-started-ep6.html?trk=rss",
         "source": "Pinkbike",
@@ -567,13 +581,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "Podcast Roundup: Aaron Gwin on His Chainless Run, Rachel Atherton on Motherhood &amp; Kilian Bron's Craziest MTB Expeditions",
-        "pubDate": "Tue, 15 Sep 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/podcast-roundup-aaron-gwin-on-his-chainless-run-rachel-atherton-on-motherhood-and-kilian-brons-craziest-mtb-expeditions.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
         "title": "Lachie Stevens-McNab - Moments - Les Gets and World Champs - sspomer - Mountain Biking Videos - Vital MTB",
         "pubDate": "Tue, 15 Sep 2026 06:59:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPQVlwZTlVTWlzZEV3M0dNNjQ4d21iYTlkUmp2QW9XWnMwd2xnSmU2Ylp6VXVmWVBGd3JjdlJSb1RXSFdCcnE4TkNRY0RubW1xaXVhZUtIM2RSMzhCelpKbm9rbUJiWTh6TVhENUF0MGN0NFVJZmdldVRmdjBDVE5sdEcwZFcwbkREVDhLX2dJM3NLTkg4elFPSg?oc=5",
@@ -581,7 +588,7 @@
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "2026 UCI Mountain Bike Marathon World Championships: Seewald and Weinbeer dominate - uci.org",
+        "title": "2026 UCI Mountain Bike Marathon World Championships: Seewald and Weinbeer dominate - UCI.org",
         "pubDate": "Mon, 14 Sep 2026 13:42:54 GMT",
         "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQN1pieURKZFJmNHZvNU41T3dRSHhzVDdRd3gtVjk3OHMwMDRxVmVqOHpmQmdmMnV5ZFNNRllqVGJwb1hwdEVsZ2g1c3dVZFNjNUhfQ243V1pGTWJEN0Q3ZGk0T0VJQ0NITzFTTzdENW5iVm1hLU9pZmI1a2lMSUV3azNKYm5jSFlBcUZaQXg0RjZTYU0yVW9FZW93WktmMHFNT0JEY2RuYlNaZ01jaWFYVkxVTW1TVkxkZDdWQ0pINGJ5R1cxSkFxNk9paUw?oc=5",
         "source": "UCI",
@@ -602,7 +609,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "2026 UCI Mountain Bike Marathon Masters World Championships - uci.org",
+        "title": "2026 UCI Mountain Bike Marathon Masters World Championships - UCI.org",
         "pubDate": "Mon, 14 Sep 2026 07:00:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOcU9lRzVVcGIwenIzUEJveXdfRFRRLW9nQzVMVS02ZEpnNmVGUVgzbGRqUU5obENEOTZzV3otTVRGTUJ6Z2t0dFVEVHNMUi1VZUJXeUtBcmxITVJ1MExZM0duQ2RUZlRUWkVHNy1UbjAxaExJaGprTXRDRTk4ZTJTY056b1RxTV9SUHVHYUdlOGdJdDY5VHZ5c0EweWIxNUxPWlZ1OUdicnJvNmd3Qy1TcW9R?oc=5",
         "source": "UCI",
@@ -630,13 +637,6 @@
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "Mountain Bike News - Vital MTB",
-        "pubDate": "Sun, 13 Sep 2026 08:35:45 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9KSGw1cjJ5RUpWVW10R0dIVzR0Z25kRnVYX1FTaHJOZWU1V2huMHpSQ3VZaHZDQ2x2MDVrdWJIY1JLRElGYkpOTA?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
-      },
-      {
         "title": "KarBroSWE - Vital MTB",
         "pubDate": "Sat, 12 Sep 2026 23:42:56 GMT",
         "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5uVTVMSldhdkdTQ0hIdklZUjdack8tSE0zN2hJdWZuT2JmeVdmQ0pubnZ0dFQxRkxUQzdwaXdINWFwZWxRcmE2djNQeDNXV3gtMGRBOG00QQ?oc=5",
@@ -644,7 +644,7 @@
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "2026 UCI MTB MARATHON WORLD CHAMPIONSHIPS - uci.org",
+        "title": "2026 UCI MTB MARATHON WORLD CHAMPIONSHIPS - UCI.org",
         "pubDate": "Sat, 12 Sep 2026 21:32:41 GMT",
         "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOYWcyVC13dkFSUE13Q29WdmdqaFBJTGRjR1FxTWRpS1d6NVNWZEc2c1I5V1lrZVI5Z0Z4OHhwVEJzeF9EQndUbnhWa3FORHBoRGFidWJFeWhUX05nek83SGpLMm85QWZwMXducF9kejJVSTJ2aEJIcW5LaEVjeXE0RzRydFZreHpRWTJ2N1MzSl9NNHpkUXRqdTNvSG5RWlpTS2pYejd3dEk2RERUb2liODRWWVg1TzNnc2c?oc=5",
         "source": "UCI",
@@ -666,6 +666,13 @@
       }
     ],
     "cyclocross": [
+      {
+        "title": "Three-time cyclocross world champion Fem van Empel returns from hiatus as a teammate of Demi Vollering!",
+        "pubDate": "Thu, 17 Sep 2026 23:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/three-time-cyclocross-world-champion-fem-van-empel-returns-from-hiatus-as-a-teammate-of-demi-vollering",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
       {
         "title": "Infestation Gravel Returns for 2026 with Two Courses, Affordable Entry Fees - Cyclocross Magazine",
         "pubDate": "Thu, 17 Sep 2026 01:53:37 GMT",
@@ -753,7 +760,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "Best gravel bikes under £2,000 / $2,000 in 2026 - bikeradar.com",
+        "title": "Best gravel bikes under £2,000 / $2,000 in 2026 - BikeRadar",
         "pubDate": "Tue, 15 Sep 2026 10:00:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNb2U5ZWpuaGdEWEtBTmVNSEhvRTlTNllreWNnYzJfZVNISlk1djZnelpJYWRzcFVtakY0SUY5Q2tVcktSdy1nVFlXejZvaEhPcWJPaUtqZHZSSnBia1BCRmIwc3FKTHNmU3ZyVDAyMThnMWFzYXU5bWp2cG9senpYSw?oc=5",
         "source": "BikeRadar",
