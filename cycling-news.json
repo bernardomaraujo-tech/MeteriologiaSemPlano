@@ -1,11 +1,88 @@
 {
-  "updatedAt": "2026-09-18T05:57:24.249Z",
+  "updatedAt": "2026-09-18T11:18:42.136Z",
   "disciplines": {
     "road": [
       {
-        "title": "XDS Astana's sweep through Asia begins; How many points can they \"effortlessly\" rack-up in the last month of 2026?",
-        "pubDate": "Fri, 18 Sep 2026 06:00:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/xds-astanas-sweep-through-asia-begins-how-many-points-can-they-effortlessly-rack-up-in-the-last-month-of-2026",
+        "title": "\"Never a domestique; he was always the team leader\" - Is Philippe Gilbert's criticism of Tim Wellens justified?",
+        "pubDate": "Fri, 18 Sep 2026 13:04:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/never-a-domestique-he-was-always-the-team-leader-is-philippe-gilberts-criticism-of-tim-wellens-justified",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Marlen Reusser or Demi Vollering? Can anyone challenge the two favourites in the World Championships elite women's time trial?",
+        "pubDate": "Fri, 18 Sep 2026 10:47:35 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/marlen-reusser-or-demi-vollering-can-anyone-challenge-the-two-favourites-in-the-world-championships-elite-womens-time-trial/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "World Championships 2026 Montréal men's and women's elite time trial 2026 preview, profile, favourites & predictions - Will Remco Evenepoel and Marlen Reusser revalidate their titles?",
+        "pubDate": "Fri, 18 Sep 2026 12:08:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/world-championships-2026-montreal-mens-and-womens-elite-time-trial-2026-preview-profile-favourites-predictions-will-remco-evenepoel-and-marlen-reusser-revalidate-their-titles",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "From Olano to Alejandro Valverde and even a record-holder - Spain's luxurious palmarès at the World Championships",
+        "pubDate": "Fri, 18 Sep 2026 11:35:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/from-olano-to-alejandro-valverde-and-even-a-record-holder-spains-luxurious-palmares-at-the-world-championships",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "UCI Road World Championships 2026 in Montreal: Schedule, Dates and How to Watch in USA and UK",
+        "pubDate": "Fri, 18 Sep 2026 11:31:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/uci-road-world-championships-2026-in-montreal-schedule-dates-and-how-to-watch-in-usa-and-uk",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Startlist men's and women's time trial World Championships Montréal 2026 - Riders: Evenepoel, Ganna, Hayter, Reusser, Vollering and more",
+        "pubDate": "Fri, 18 Sep 2026 11:18:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/startlist-mens-and-womens-time-trial-world-championships-montreal-2026-riders-evenepoel-ganna-hayter-reusser-vollering-and-more",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Tour de Luxembourg 2026 stage 3 preview, favourites & prediction - Mathieu van der Poel revenge as sharp climbs set to open up overall classification race",
+        "pubDate": "Fri, 18 Sep 2026 11:10:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/tour-de-luxembourg-2026-stage-2-preview-favourites-prediction-can-mathieu-van-der-poel-make-it-two-from-two-after-perfect-start",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "XDS Astana have found a UCI points goldmine – And they’re heading back for more",
+        "pubDate": "Fri, 18 Sep 2026 11:09:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/xds-astana-have-found-a-uci-points-goldmine-and-theyre-heading-back-for-more",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "From Alpe d'Huez to world titles - The 5 most incredible victories of Tom Pidcock’s career",
+        "pubDate": "Fri, 18 Sep 2026 10:51:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/from-alpe-dhuez-to-world-titles-the-5-most-incredible-victories-of-tom-pidcocks-career",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "The best riders who have never won at the Road World Championships – and who could change that in 2026",
+        "pubDate": "Fri, 18 Sep 2026 08:24:39 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/racing/the-best-riders-who-have-never-won-at-the-road-world-championships-and-who-could-change-that-in-2026/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "'I want to enjoy it' – Fem van Empel to restart racing career with FDJ United-Suez after mental health break",
+        "pubDate": "Fri, 18 Sep 2026 08:01:03 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/i-want-to-enjoy-it-fem-van-empel-to-restart-racing-career-with-fdj-united-suez-after-mental-health-break/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Changes in USA's World Championships team - Riley Sheehan set for a last-minute World Championships call-up to replace sick Neilson Powless",
+        "pubDate": "Fri, 18 Sep 2026 09:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/changes-in-usas-world-championships-team-riley-sheehan-set-for-a-last-minute-world-championships-call-up-to-replace-sick-neilson-powless",
         "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
@@ -66,13 +143,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "Tour de Luxembourg 2026 stage 3 preview, favourites & prediction - Mathieu van der Poel revenge as sharp climbs set to open up overall classification race",
-        "pubDate": "Thu, 17 Sep 2026 18:48:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/tour-de-luxembourg-2026-stage-2-preview-favourites-prediction-can-mathieu-van-der-poel-make-it-two-from-two-after-perfect-start",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "Tour de Luxembourg: Marijn van den Berg claims stage 2 with long sprint",
         "pubDate": "Thu, 17 Sep 2026 16:36:42 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/racing/tour-de-luxembourg-marijn-van-den-berg-claims-stage-2-with-long-sprint/",
@@ -108,7 +178,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "Tour of Slovakia: Paul Magnier wins again by country mile on stage 2",
+        "title": "Tour of Slovakia: Paul Magnier wins again on stage 2",
         "pubDate": "Thu, 17 Sep 2026 15:34:57 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/racing/tour-of-slovakia-paul-magnier-wins-again-by-country-mile-on-stage-2/",
         "source": "Cyclingnews",
@@ -171,13 +241,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "Startlist World Championships 2026 Elite Women's Road Race - Riders: Demi Vollering, Lotte Kopecky, Elisa Longo Borghini, Kasia Niewiadoma, Marlen Reusser and more",
-        "pubDate": "Thu, 17 Sep 2026 13:30:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/startlist-world-championships-2026-elite-womens-road-race-riders-demi-vollering-lotte-kopecky-elisa-longo-borghini-kasia-niewiadoma-marlen-reusser-and-more",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "'A little too difficult for me' – Mathieu van der Poel plays down his World Championships chances",
         "pubDate": "Thu, 17 Sep 2026 11:17:04 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/a-little-too-difficult-for-me-mathieu-van-der-poel-plays-down-his-world-championships-chances/",
@@ -185,24 +248,10 @@
         "sourceUrl": ""
       },
       {
-        "title": "OFFICIAL: Vuelta a Espana stage winner makes surprise WorldTour exit as Caja Rural - Seguros RGA pull off major transfer coup",
-        "pubDate": "Thu, 17 Sep 2026 13:05:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/official-vuelta-a-espana-stage-winner-makes-surprise-worldtour-exit-as-caja-rural-seguros-rga-pull-off-major-transfer-coup",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "'I am going to contact Phil and give him a piece of my mind' – Tim Wellens responds to Gilbert's World Championships criticism",
         "pubDate": "Thu, 17 Sep 2026 10:35:15 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/i-am-going-to-contact-phil-and-give-him-a-piece-of-my-mind-tim-wellens-responds-to-gilberts-world-championships-criticism/",
         "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Startlist World Championships 2026 Elite Men's Road Race - Riders: Remco Evenepoel, Wout van Aert, Mathieu van der Poel, Isaac del Toro, Tom Pidcock, Paul Seixas and more",
-        "pubDate": "Thu, 17 Sep 2026 12:30:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/startlist-world-championships-2026-elite-mens-road-race-riders-remco-evenepoel-wout-van-aert-mathieu-van-der-poel-isaac-del-toro-tom-pidcock-paul-seixas-and-more",
-        "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
       {
@@ -221,38 +270,10 @@
         "type": "transfers"
       },
       {
-        "title": "OFFICIAL: Lotto-Intermarché bring cycling’s ‘philosopher’ back to Belgian roots as five-time Tour de France top-15 finisher targets Grand Tour resurgence",
-        "pubDate": "Thu, 17 Sep 2026 11:30:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/official-lotto-intermarche-bring-cyclings-philosopher-back-to-belgian-roots-as-five-time-tour-de-france-top-15-finisher-targets-grand-tour-resurgence",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "Small nations, rising stars, and the home advantage – Eight side quests and subplots to follow at the Montreal World Championships",
         "pubDate": "Thu, 17 Sep 2026 09:24:59 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/racing/small-nations-rising-stars-and-the-home-advantage-eight-side-quests-and-subplots-to-follow-at-the-montreal-world-championships/",
         "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "From Pogacar to Vingegaard to Evenepoel? Giro d’Italia reportedly set to welcome another generational star in 2027 as Belgian looks to settle unfinished business",
-        "pubDate": "Thu, 17 Sep 2026 10:40:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/from-pogacar-to-vingegaard-to-evenepoel-giro-ditalia-reportedly-set-to-welcome-another-generational-star-in-2027-as-belgian-looks-to-settle-unfinished-business",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "“The course is just a little too hard for me” - Mathieu van der Poel pours cold water on World Championships hopes despite winning return in Luxembourg",
-        "pubDate": "Thu, 17 Sep 2026 10:15:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/the-course-is-just-a-little-too-hard-for-me-mathieu-van-der-poel-pours-cold-water-on-world-championships-hopes-despite-winning-return-in-luxembourg",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "“I still want to win something”: Red Bull-BORA-hansgrohe extends key domestique through 2028",
-        "pubDate": "Thu, 17 Sep 2026 09:00:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/i-still-want-to-win-something-red-bull-bora-hansgrohe-extends-key-domestique-through-2028",
-        "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
       {
@@ -294,27 +315,6 @@
         "title": "Tour of Slovakia: Paul Magnier wins by a country mile in stage 1 sprint",
         "pubDate": "Wed, 16 Sep 2026 15:33:46 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/racing/tour-of-slovakia-paul-magnier-wins-by-a-country-mile-in-stage-1-sprint/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "'No unrealistic expectations or unnecessary limitations' - Kate Courtney is diving head-first into the unknown",
-        "pubDate": "Wed, 16 Sep 2026 14:43:01 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/no-unrealistic-expectations-or-unnecessary-limitations-kate-courtney-is-diving-head-first-into-the-unknown/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "'This race was a very good final preparation' – Mathieu van der Poel returns to Luxembourg to build rhythm and form ahead of Road World Championships",
-        "pubDate": "Wed, 16 Sep 2026 13:56:31 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/this-race-was-a-very-good-final-preparation-mathieu-van-der-poel-returns-to-luxembourg-to-build-rhythm-and-form-ahead-of-road-world-championships/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Grand Prix de Wallonie Dames: Karlijn Swinkels launches a long-range sprint to take victory on the Citadelle de Namur",
-        "pubDate": "Wed, 16 Sep 2026 12:51:48 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/grand-prix-de-wallonie-dames-karlijn-swinkels-launches-a-long-range-sprint-to-take-victory-on-the-citadelle-de-namur/",
         "source": "Cyclingnews",
         "sourceUrl": ""
       },
@@ -389,14 +389,6 @@
         "sourceUrl": "https://velo.outsideonline.com"
       },
       {
-        "title": "Cédrine Kerbaol boosts SD Worx-Protime’s climbing core with two-year deal at the Dutch squad - Cyclingnews",
-        "pubDate": "Mon, 14 Sep 2026 17:04:34 GMT",
-        "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNUmJYSk5SWk5WNjJyTy15WUlsNzlZaEdkbmpDUHZNYmJzeGMyVC14QjA2eU1OeWRaQk95eW9NZ0NJODBYX1ZuSjZCdXNHcDZ2dFM3NGNSNmpwM1pTOVFVTkxnR0JCWWowZmhGMm41UUNzQnF3MURueXE5eC1fNnVnQ3pwakNoeFFBTm54NDdJOGczN0JBc2JpTHlwVnpPV0tFOU02TVZtOEMta1RZb21HemR6UjZQbXdnRFAtSGFobloxTUxfTG1nS2Q0aGhRdmo3aHJ6TXkwVFY4NmhwVkd6Ug?oc=5",
-        "source": "Cyclingnews",
-        "sourceUrl": "https://www.cyclingnews.com",
-        "type": "transfers"
-      },
-      {
         "title": "Spin Cycle: Crowd surfing for the Masses - Escape Collective",
         "pubDate": "Mon, 14 Sep 2026 16:19:06 GMT",
         "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9WWXpYMkxad191VldiSFdLUzJkdVVMR1RSNFFmbnYyVThTZVBycDFabDM2Vk1tSnNZei1GTWhtOVptZkREMHduU09NUjRkeWdjTkotMTBzYkhrU0FsT3NxSU1XVWVkVU9aWFByR2lEaVVnYURKbURYcQ?oc=5",
@@ -423,22 +415,51 @@
         "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNbU44eHpkWGRzdm82dWktUXJoUGxyaWJraFZIcHpZR0tDaFZWZEpGX0hyRWdxam43VEZxWW9SbFJ1SUlxRjRnRFlNSW1yZXdHYV9kR3lWdWZINENncHJfeHBIYTF6M1ZUREdHaURQWEVfcmppcG9nekdSV2V1ODlwbkhuc2RtZTJQeUhRVmRDc0NPSGlKcjV3?oc=5",
         "source": "VELO",
         "sourceUrl": "https://velo.outsideonline.com"
+      },
+      {
+        "title": "Vuelta a España Reactions: Reinvigoration for Mas, Resurgence for Roglič, Evolution for Gall - Outside Magazine",
+        "pubDate": "Sun, 13 Sep 2026 22:56:34 GMT",
+        "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNYnpJdGRLbXlGLWNjRC1CbUM1QkYxcFVNUW5tRmk5RDdTU0oxVlBrTEpUWlg4SEJVLTJrNWFObGZELWlPbjRaOERiTjZ2UlE2OGVOZ2tOYnFudkpWYVpFX0tGcGFMNkgzNG5Sd3RfUGZ4VUE2ZjBqZ3pxeTVWRTRhUmdZaTJqSUF2NWZMTDNLeS1Rbmp2TVlwbGVWTQ?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
       }
     ],
     "mtb": [
       {
-        "title": "Mountain Bike News - Vital MTB",
-        "pubDate": "Thu, 17 Sep 2026 12:00:15 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9KSGw1cjJ5RUpWVW10R0dIVzR0Z25kRnVYX1FTaHJOZWU1V2huMHpSQ3VZaHZDQ2x2MDVrdWJIY1JLRElGYkpOTA?oc=5",
+        "title": "Scott Unveil a 32\" Spark Prototype - 2026 XCO World Cup Soldier Hollow",
+        "pubDate": "Fri, 18 Sep 2026 00:00:00 PDT",
+        "link": "https://www.pinkbike.com/news/scott-unveil-a-32-spark-prototype-2026-xco-world-cup-soldier-hollow.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Video: First Laps of the New Soldier Hollow XC World Cup Course",
+        "pubDate": "Fri, 18 Sep 2026 00:00:00 PDT",
+        "link": "https://www.pinkbike.com/news/video-first-laps-of-the-new-soldier-hollow-xc-world-cup-course.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Beyond Gravity Announces First Wave of Athletes Signed On for 2027 Event - Pinkbike",
+        "pubDate": "Thu, 17 Sep 2026 14:14:17 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPRzdtQ3loY1BLUlZGT3NCbmZDTFJvWmtmNWhJODE1SGwxd2xyNGtVODFwRWtfVGlYVlFoV09jRF9USDd5Y0lhSklxQ0ZwMjd2cXdEZVIzWXd2YlYyU2Z2QmpyZndxNVRXREJsZV9MRWNRMXVyX0FHdWdXdDZZVE1KRVE0NlQ4ZUZGUzBhcU1TYmtEN1RDYjJyMWhQUXl2VERuNFUyYmlJZWtBcDQ?oc=5",
+        "source": "Pinkbike",
+        "sourceUrl": "https://www.pinkbike.com",
+        "type": "transfers"
+      },
+      {
+        "title": "2025 Kona Process 153 CR mullet MX on NOBL Ethos Enduro - Vital MTB",
+        "pubDate": "Thu, 17 Sep 2026 07:58:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPZ0l1NHlFNWhJS0JyS2ttZGNXMnpETFhFS1FhcDdWY3Jxa0drcl9UNXhTQ2VrMER2N29iUVRQVXpyRHdDN1B3TU9Sa2M3dEt1V0JRRmFxTXd0dTZ0Rl96dnRrVVhNeDIzaU1wb3ppRkRQakpSaElhOHRsYWtkY1JCNm9FRnhaVHRYZWFEdkxPTXhXS3RoOTRlNTdn?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "Eoin - Vital MTB",
-        "pubDate": "Thu, 17 Sep 2026 08:56:10 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE0wcHpFZUhpc053cHUxaVV1LVc0SzJPTUFqQVNYVE8wazBrNGthTWNKaUZMaXhBRXZONmxNazVzdnpqcTVjaVdLcktfa3RjQ3FTSVJRVWJWaVJrZWotYWc?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
+        "title": "Race Report: 3-Day Enduro2 Wraps Up The Season at Aletsch Arena with 16 Stages &amp; More Than 10,000 Metres of Descending",
+        "pubDate": "Thu, 17 Sep 2026 00:00:00 PDT",
+        "link": "https://www.pinkbike.com/news/race-report-3-day-enduro2-wraps-up-the-season-at-aletsch-arena-with-16-stages-and-more-than-10000-metres-of-descending.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
       },
       {
         "title": "Video: Riding Big Mountain Lines Only Accessible by Pack Raft with Carter Krasny &amp; Paula Zibasa",
@@ -560,32 +581,11 @@
         "sourceUrl": ""
       },
       {
-        "title": "Video: What To Do When Things Go Wrong on the Trails with Remy Metailler &amp; Matt from Canadian Outdoor Medical Consulting",
-        "pubDate": "Wed, 16 Sep 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/video-what-to-do-when-things-go-wrong-on-the-trails.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Video: Inside Adrien Boichis' Journey to the Top in ‘Making Legends’",
-        "pubDate": "Wed, 16 Sep 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/video-inside-adrien-boichis-journey-to-the-top-in-making-legends.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
         "title": "S&M Big Jumper Build - Vital MTB",
         "pubDate": "Tue, 15 Sep 2026 09:50:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9fY3o3aFU3ZUVCaTBUNWRjOTgtQ1JXU1NwcFVxLUs1bjQzMkFKT29DU3liNmNaeGpKbFpKSzdfSGl1QUxQNDFzT2NSQksyclVkXzhwQnk2SnlfOGV6TFNIdS1ZUndlU0otaVBzNjBCWV8tdTFXYkE?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
-      },
-      {
-        "title": "Video: Danny Hart at His Fourth World Champs in Val di Sole in 'All or Nothing' - Just Getting Started EP6",
-        "pubDate": "Tue, 15 Sep 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/video-danny-hart-at-his-fourth-world-champs-in-val-di-sole-in-all-of-northing-just-getting-started-ep6.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
       },
       {
         "title": "Lachie Stevens-McNab - Moments - Les Gets and World Champs - sspomer - Mountain Biking Videos - Vital MTB",
@@ -633,6 +633,13 @@
         "title": "Danny Macaskill Endless Light in Norway - Bosch eBike Systems - iceman2058 - Mountain Biking Videos - Vital MTB",
         "pubDate": "Sun, 13 Sep 2026 11:35:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNVW1TMG40Z0pRdGFJZzB3TkZPWmM0RG4tRlhWNXg4Tjl2bEdDQVl1LThOQWc5dWFYZ3dpb2JaMktCUDRYZzRHbTlGNDMyNklMNVlsVHZYWXc4SFVTMjRIdlpBNmZGNG9vQ3pxa1dFVklVNUdwTWdlMC1tS0lFcnMzYzlDYjZVaVhNWE9MZlJhWmFrSU9CanpyNDBpYw?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
+        "title": "Mountain Bike News - Vital MTB",
+        "pubDate": "Sun, 13 Sep 2026 08:35:45 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9KSGw1cjJ5RUpWVW10R0dIVzR0Z25kRnVYX1FTaHJOZWU1V2huMHpSQ3VZaHZDQ2x2MDVrdWJIY1JLRElGYkpOTA?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
