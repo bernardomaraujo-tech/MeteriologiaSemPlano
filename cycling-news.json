@@ -1,7 +1,14 @@
 {
-  "updatedAt": "2026-09-18T00:21:38.228Z",
+  "updatedAt": "2026-09-18T05:57:24.249Z",
   "disciplines": {
     "road": [
+      {
+        "title": "XDS Astana's sweep through Asia begins; How many points can they \"effortlessly\" rack-up in the last month of 2026?",
+        "pubDate": "Fri, 18 Sep 2026 06:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/xds-astanas-sweep-through-asia-begins-how-many-points-can-they-effortlessly-rack-up-in-the-last-month-of-2026",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
       {
         "title": "Tadej Pogacar's crash won't scare him from Paris-Roubaix pursuit - \"High-speed crashes are more devastating than what might happen at Roubaix\"",
         "pubDate": "Fri, 18 Sep 2026 01:38:00 +0200",
@@ -214,13 +221,6 @@
         "type": "transfers"
       },
       {
-        "title": "The greatest team performance you’ve never heard of - Escape Collective",
-        "pubDate": "Thu, 17 Sep 2026 09:45:36 GMT",
-        "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPQUwyWkRYaHdtRkE0Sks0eUkzX1k3cEVORXo4UTRWUGpZSDQ0bHJLeURfbTZZdDBZeWxQNjI2S1Q2WElSS0F1eV9LS0FVMXlWT0JlbncxeXpqYWxBc3lTVkNlYmZRZzd5QVMtdHNsZ19IQnlSNWxwWDJ1RG95c1B3dmQ2UV8xbkxxckpQS0F5enZ5Ny1yaGQ1djlycEk?oc=5",
-        "source": "Escape Collective",
-        "sourceUrl": "https://escapecollective.com"
-      },
-      {
         "title": "OFFICIAL: Lotto-Intermarché bring cycling’s ‘philosopher’ back to Belgian roots as five-time Tour de France top-15 finisher targets Grand Tour resurgence",
         "pubDate": "Thu, 17 Sep 2026 11:30:00 +0200",
         "link": "https://cyclinguptodate.com/cycling/official-lotto-intermarche-bring-cyclings-philosopher-back-to-belgian-roots-as-five-time-tour-de-france-top-15-finisher-targets-grand-tour-resurgence",
@@ -252,13 +252,6 @@
         "title": "“I still want to win something”: Red Bull-BORA-hansgrohe extends key domestique through 2028",
         "pubDate": "Thu, 17 Sep 2026 09:00:00 +0200",
         "link": "https://cyclinguptodate.com/cycling/i-still-want-to-win-something-red-bull-bora-hansgrohe-extends-key-domestique-through-2028",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "“He would have finished second anyway” – Remco Evenepoel’s father insists son was Tadej Pogacar's closest Tour challenger, even before Jonas Vingegaard's crash",
-        "pubDate": "Thu, 17 Sep 2026 08:53:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/he-would-have-finished-second-anyway-remco-evenepoels-father-insists-son-was-tadej-pogacars-closest-tour-challenger-even-before-jonas-vingegaards-crash",
         "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
@@ -423,13 +416,27 @@
         "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPemlyb0hQU2h6N0tDa3JseEdXRnl1ckZYZFpKemZ0VUVTWTBLelVNY3IzclFDbWRUd2tqYlUtbi1BYU02T0R2NEY5S0JvejV6aVF5eThkcTRFOHBKcDc3SU1JUzlXMFgxMWktQm9POWhlcWZwUHlMWGdleE45LU9PYnZRSUdlX21kYURfUUhMQVd5T2J5VVZUellmTlA?oc=5",
         "source": "Escape Collective",
         "sourceUrl": "https://escapecollective.com"
+      },
+      {
+        "title": "Vuelta a España Prize Money: 3 Teams Didn't Earn Enough to Cover Their Fuel Bill - Outside Magazine",
+        "pubDate": "Mon, 14 Sep 2026 09:35:43 GMT",
+        "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNbU44eHpkWGRzdm82dWktUXJoUGxyaWJraFZIcHpZR0tDaFZWZEpGX0hyRWdxam43VEZxWW9SbFJ1SUlxRjRnRFlNSW1yZXdHYV9kR3lWdWZINENncHJfeHBIYTF6M1ZUREdHaURQWEVfcmppcG9nekdSV2V1ODlwbkhuc2RtZTJQeUhRVmRDc0NPSGlKcjV3?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
       }
     ],
     "mtb": [
       {
-        "title": "Tested: Insta360 Launches New Wide-Angle Lens and Cycling Accessory Bundles for GO Ultra - vitalmtb.com",
-        "pubDate": "Thu, 17 Sep 2026 12:00:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQT2h5aHd2bWlKUWlhbnliVUZ1US1YcU5kdVRJaTk0U0hwQWI2OXFYSm1sMjExeEEzLXBFVWhsczduYXViN1lsNDFodkctX2xBdHhVUEFoclUxZWljcTBsQnZmbzRxWWVYeWZGMDhqLS1tbmdBQWR2SjZxTFhOMndHZ1pVVU5OTi1hWXFfNjZUVEVJd0RlMTZkTWJ1Q1lsSHhjTXluNnUtdVNsSzZkT0o0TGxsVUpWLVFa?oc=5",
+        "title": "Mountain Bike News - Vital MTB",
+        "pubDate": "Thu, 17 Sep 2026 12:00:15 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9KSGw1cjJ5RUpWVW10R0dIVzR0Z25kRnVYX1FTaHJOZWU1V2huMHpSQ3VZaHZDQ2x2MDVrdWJIY1JLRElGYkpOTA?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
+        "title": "Eoin - Vital MTB",
+        "pubDate": "Thu, 17 Sep 2026 08:56:10 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE0wcHpFZUhpc053cHUxaVV1LVc0SzJPTUFqQVNYVE8wazBrNGthTWNKaUZMaXhBRXZONmxNazVzdnpqcTVjaVdLcktfa3RjQ3FTSVJRVWJWaVJrZWotYWc?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
@@ -518,8 +525,8 @@
         "sourceUrl": ""
       },
       {
-        "title": "2026 Race Talk - The Hub - Mountain Biking Forums / Message Boards - vitalmtb.com",
-        "pubDate": "Wed, 16 Sep 2026 20:33:26 GMT",
+        "title": "2026 Race Talk - The Hub - Mountain Biking Forums / Message Boards - Vital MTB",
+        "pubDate": "Thu, 17 Sep 2026 00:37:38 GMT",
         "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5PMDFIS2xxajh2Ny01WU9WNE1INGRXNW44Vng2TlNYSUl1dzA4U2FEQkNDclM3RVFneV9hZ196QUQybjdlVTFEdDEtY3llSUdpM1czSnI4TDZXSGtpdElYc0JoS1ZFSlBuWkE?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
@@ -567,7 +574,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "S&M Big Jumper Build - vitalmtb.com",
+        "title": "S&M Big Jumper Build - Vital MTB",
         "pubDate": "Tue, 15 Sep 2026 09:50:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9fY3o3aFU3ZUVCaTBUNWRjOTgtQ1JXU1NwcFVxLUs1bjQzMkFKT29DU3liNmNaeGpKbFpKSzdfSGl1QUxQNDFzT2NSQksyclVkXzhwQnk2SnlfOGV6TFNIdS1ZUndlU0otaVBzNjBCWV8tdTFXYkE?oc=5",
         "source": "Vital MTB",
@@ -581,7 +588,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "Lachie Stevens-McNab - Moments - Les Gets and World Champs - sspomer - Mountain Biking Videos - vitalmtb.com",
+        "title": "Lachie Stevens-McNab - Moments - Les Gets and World Champs - sspomer - Mountain Biking Videos - Vital MTB",
         "pubDate": "Tue, 15 Sep 2026 06:59:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPQVlwZTlVTWlzZEV3M0dNNjQ4d21iYTlkUmp2QW9XWnMwd2xnSmU2Ylp6VXVmWVBGd3JjdlJSb1RXSFdCcnE4TkNRY0RubW1xaXVhZUtIM2RSMzhCelpKbm9rbUJiWTh6TVhENUF0MGN0NFVJZmdldVRmdjBDVE5sdEcwZFcwbkREVDhLX2dJM3NLTkg4elFPSg?oc=5",
         "source": "Vital MTB",
@@ -609,35 +616,28 @@
         "sourceUrl": "https://www.uci.org"
       },
       {
-        "title": "What enduro bike am I? - The Hub - Mountain Biking Forums / Message Boards - vitalmtb.com",
+        "title": "What enduro bike am I? - The Hub - Mountain Biking Forums / Message Boards - Vital MTB",
         "pubDate": "Mon, 14 Sep 2026 02:55:51 GMT",
         "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBIRlppNWlBRGtJdnRXczlzdmtSTjN6NlE3VC1jUmVIN1kzZXNZR1V0ZXc4ckhxVmlJNWt5dWV5aHZuUFRUTDJ5TURSMVgzRG9p?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "High vs Low Anti Rise Bikes - The Hub - Mountain Biking Forums / Message Boards - vitalmtb.com",
+        "title": "High vs Low Anti Rise Bikes - The Hub - Mountain Biking Forums / Message Boards - Vital MTB",
         "pubDate": "Mon, 14 Sep 2026 01:28:01 GMT",
         "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE56TlJ2WWtxWkdXUkpEdFptQmhiaTFaWlZtWGpLcmpySG5SM0taYVIwRGxjay0wc0xOdE9nVGdVcDk5TV9kc2htT05NYTlEVEph?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "Danny Macaskill Endless Light in Norway - Bosch eBike Systems - iceman2058 - Mountain Biking Videos - vitalmtb.com",
+        "title": "Danny Macaskill Endless Light in Norway - Bosch eBike Systems - iceman2058 - Mountain Biking Videos - Vital MTB",
         "pubDate": "Sun, 13 Sep 2026 11:35:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNVW1TMG40Z0pRdGFJZzB3TkZPWmM0RG4tRlhWNXg4Tjl2bEdDQVl1LThOQWc5dWFYZ3dpb2JaMktCUDRYZzRHbTlGNDMyNklMNVlsVHZYWXc4SFVTMjRIdlpBNmZGNG9vQ3pxa1dFVklVNUdwTWdlMC1tS0lFcnMzYzlDYjZVaVhNWE9MZlJhWmFrSU9CanpyNDBpYw?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "Mountain Bike News - vitalmtb.com",
-        "pubDate": "Sun, 13 Sep 2026 08:35:45 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9KSGw1cjJ5RUpWVW10R0dIVzR0Z25kRnVYX1FTaHJOZWU1V2huMHpSQ3VZaHZDQ2x2MDVrdWJIY1JLRElGYkpOTA?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
-      },
-      {
-        "title": "KarBroSWE - vitalmtb.com",
+        "title": "KarBroSWE - Vital MTB",
         "pubDate": "Sat, 12 Sep 2026 23:42:56 GMT",
         "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5uVTVMSldhdkdTQ0hIdklZUjdack8tSE0zN2hJdWZuT2JmeVdmQ0pubnZ0dFQxRkxUQzdwaXdINWFwZWxRcmE2djNQeDNXV3gtMGRBOG00QQ?oc=5",
         "source": "Vital MTB",
@@ -651,14 +651,14 @@
         "sourceUrl": "https://www.uci.org"
       },
       {
-        "title": "Enduro / All-Mountain Bikes - vitalmtb.com",
+        "title": "Enduro / All-Mountain Bikes - Vital MTB",
         "pubDate": "Sat, 12 Sep 2026 04:15:41 GMT",
         "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNb3k2cEFIQnZ6WXc3Z2JqSllLYTFNaUVQNWx1bHhUdmxSYjRNTlU1MWVlSzhFQkt0a0FUeko5ZGRwaHZIMFYtZEVRQTdFalpVQ1lsMEZWM0F2OUdpMXhiTXpGNHZTMmRPVzVSZ0ZZdVVCdFNNdEhfMkVKcEpoLWcyWnBIS2N2anhTVS1JT0VnMWNPX1NCZGE4MmtqMm5LZ0pnbEJWS2lKM2Qzd096TG1HNThreWhQcWlRdU9ObmI5Y3R2VTc2czI0dHZ4TURWRUszcmYwVEl0UWtsOFJNSzEtU1lpckllOXh0?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "Mountain Bike Parts - vitalmtb.com",
+        "title": "Mountain Bike Parts - Vital MTB",
         "pubDate": "Fri, 11 Sep 2026 14:46:59 GMT",
         "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQZkVfeUMwbFBfTW03ZzM2dHJBenpMQjJSRGJKY0JjbkdncFBPWHJuOHFFOFhadnEtT2RDckhLdUZudTBfS0tWYWgwREt0MWJGV1hBMTJQUWFud0ZUYlpwcUoxaTBVbm5ZYVJEOUFQbVVhT2dBU1NQYzlMN1ZRekdEZm5UcHkzdTU5cDRqRDZMaG9GWlU?oc=5",
         "source": "Vital MTB",
@@ -672,6 +672,13 @@
         "link": "https://cyclinguptodate.com/cycling/three-time-cyclocross-world-champion-fem-van-empel-returns-from-hiatus-as-a-teammate-of-demi-vollering",
         "source": "CyclingUpToDate",
         "sourceUrl": ""
+      },
+      {
+        "title": "- Cyclocross24.com",
+        "pubDate": "Thu, 17 Sep 2026 16:54:58 GMT",
+        "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE8wUFpVY2hwRXptQTNrXzdSRDExUTlacVgzMlRzc0J1YU9FdmlzOVBMc045Vm1Hd0s3SkU4TEcwaXJGY3BxVFhYUXVETHBDRWkyYllHNWtYUzlLbEhkU0pUQnVIbHB1TDNzN2RxYldUTjV6TzhwNzZN?oc=5",
+        "source": "Cyclocross24",
+        "sourceUrl": "https://cyclocross24.com"
       },
       {
         "title": "Infestation Gravel Returns for 2026 with Two Courses, Affordable Entry Fees - Cyclocross Magazine",
@@ -779,13 +786,6 @@
         "link": "https://www.cyclingweekly.com/news/from-a-skinny-broken-girl-into-a-strong-woman-clara-koppenburg-finds-new-strength-in-gravel-after-battling-an-eating-disorder",
         "source": "Cycling Weekly",
         "sourceUrl": ""
-      },
-      {
-        "title": "Marianne Vos confirmed for Gravel Worlds in Australia - Escape Collective",
-        "pubDate": "Fri, 11 Sep 2026 00:32:16 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPWVp6T1kyMkJrWDJIVTE5RmltUFZxQjk0ZlZabkpmMG9yX0RWN3VXVzhJOHk2eUxXRkVzVmJQaHkzWUdkRlpXZnJ6eGhqRWMxOTVidm5FVS1SbjNWWE1ldjRlN3VmWlo0VnBSMW02cWhCZEhjZXBVeVFKbDNyaG1QNTl2cWlINkk4UDdV?oc=5",
-        "source": "Escape Collective",
-        "sourceUrl": "https://escapecollective.com"
       }
     ]
   }
