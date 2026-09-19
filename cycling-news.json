@@ -1,7 +1,14 @@
 {
-  "updatedAt": "2026-09-18T22:35:53.473Z",
+  "updatedAt": "2026-09-19T01:12:10.993Z",
   "disciplines": {
     "road": [
+      {
+        "title": "Canada loses Derek Gee-West for time trial events due to a GP Montréal crash: \"I'll do everything I can to line up for road race\"",
+        "pubDate": "Sat, 19 Sep 2026 01:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/canada-loses-derek-gee-west-for-time-trial-events-due-to-a-gp-montreal-crash-ill-do-everything-i-can-to-line-up-for-road-race",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
       {
         "title": "UCI hands out a 10-year ban to former Head of Performance for several infingements including \"psychological abuse\" of a rider",
         "pubDate": "Fri, 18 Sep 2026 23:00:00 +0200",
@@ -227,13 +234,6 @@
         "sourceUrl": "https://escapecollective.com"
       },
       {
-        "title": "Tadej Pogacar's crash won't scare him from Paris-Roubaix pursuit - \"High-speed crashes are more devastating than what might happen at Roubaix\"",
-        "pubDate": "Fri, 18 Sep 2026 01:38:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/tadej-pogacars-crash-wont-scare-him-from-paris-roubaix-pursuit-high-speed-crashes-are-more-devastating-than-what-might-happen-at-roubaix",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "Eneco Tour integrates women's and men's races, alternating starts in prologue",
         "pubDate": "Thu, 17 Sep 2026 20:55:51 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/eneco-tour-integrates-womens-and-mens-races-alternating-starts-in-prologue/",
@@ -426,6 +426,13 @@
     ],
     "mtb": [
       {
+        "title": "Trek Session Park 9.9 - Vital MTB",
+        "pubDate": "Fri, 18 Sep 2026 14:28:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxONEJGUm83LTBkb3JmVDdiNVBKekY1X2JXV0ZRYUZDQ1pwTVhHT3FWWm90OE1aZVJNVjF2NHlQOElRbUpWdEtHTXNrSXZLb28xY2EwdnY5OTAzVVdXQ2lNX0VzVE1UcUFJT2R0dVFaclZvWjVaVWwyRjRfN2tnR1ROTVdfd2t1RlE4bVlWZlBabmxhWlhjMTZB?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
         "title": "'It's Another Way of Riding' - Filippo Colombo's First Impressions of the Scott Spark 32\" Prototype",
         "pubDate": "Fri, 18 Sep 2026 00:00:00 PDT",
         "link": "https://www.pinkbike.com/news/its-another-way-of-riding-filippo-colombos-first-impressions-of-the-scott-spark-32-prototype.html?trk=rss",
@@ -595,7 +602,7 @@
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "2026 UCI Mountain Bike Marathon World Championships: Seewald and Weinbeer dominate - uci.org",
+        "title": "2026 UCI Mountain Bike Marathon World Championships: Seewald and Weinbeer dominate - UCI.org",
         "pubDate": "Mon, 14 Sep 2026 13:42:54 GMT",
         "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQN1pieURKZFJmNHZvNU41T3dRSHhzVDdRd3gtVjk3OHMwMDRxVmVqOHpmQmdmMnV5ZFNNRllqVGJwb1hwdEVsZ2g1c3dVZFNjNUhfQ243V1pGTWJEN0Q3ZGk0T0VJQ0NITzFTTzdENW5iVm1hLU9pZmI1a2lMSUV3azNKYm5jSFlBcUZaQXg0RjZTYU0yVW9FZW93WktmMHFNT0JEY2RuYlNaZ01jaWFYVkxVTW1TVkxkZDdWQ0pINGJ5R1cxSkFxNk9paUw?oc=5",
         "source": "UCI",
@@ -616,7 +623,7 @@
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "2026 UCI Mountain Bike Marathon Masters World Championships - uci.org",
+        "title": "2026 UCI Mountain Bike Marathon Masters World Championships - UCI.org",
         "pubDate": "Mon, 14 Sep 2026 07:00:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOcU9lRzVVcGIwenIzUEJveXdfRFRRLW9nQzVMVS02ZEpnNmVGUVgzbGRqUU5obENEOTZzV3otTVRGTUJ6Z2t0dFVEVHNMUi1VZUJXeUtBcmxITVJ1MExZM0duQ2RUZlRUWkVHNy1UbjAxaExJaGprTXRDRTk4ZTJTY056b1RxTV9SUHVHYUdlOGdJdDY5VHZ5c0EweWIxNUxPWlZ1OUdicnJvNmd3Qy1TcW9R?oc=5",
         "source": "UCI",
@@ -624,8 +631,8 @@
       },
       {
         "title": "What enduro bike am I? - The Hub - Mountain Biking Forums / Message Boards - Vital MTB",
-        "pubDate": "Mon, 14 Sep 2026 02:55:51 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBIRlppNWlBRGtJdnRXczlzdmtSTjN6NlE3VC1jUmVIN1kzZXNZR1V0ZXc4ckhxVmlJNWt5dWV5aHZuUFRUTDJ5TURSMVgzRG9p?oc=5",
+        "pubDate": "Mon, 14 Sep 2026 03:14:29 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1rZWRXcHVPZVdQcm9yaGtYRWN0Y1dzS3c2eHdGdFpOZTc1dmlOaWJ0cFYxQ09wbHFIQzlyS1NCNUlGSk5tM3lrTGR6SW5zZVlh?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
@@ -644,13 +651,6 @@
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "Mountain Bike News - Vital MTB",
-        "pubDate": "Sun, 13 Sep 2026 08:35:45 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9KSGw1cjJ5RUpWVW10R0dIVzR0Z25kRnVYX1FTaHJOZWU1V2huMHpSQ3VZaHZDQ2x2MDVrdWJIY1JLRElGYkpOTA?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
-      },
-      {
         "title": "KarBroSWE - Vital MTB",
         "pubDate": "Sat, 12 Sep 2026 23:42:56 GMT",
         "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5uVTVMSldhdkdTQ0hIdklZUjdack8tSE0zN2hJdWZuT2JmeVdmQ0pubnZ0dFQxRkxUQzdwaXdINWFwZWxRcmE2djNQeDNXV3gtMGRBOG00QQ?oc=5",
@@ -658,7 +658,7 @@
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "2026 UCI MTB MARATHON WORLD CHAMPIONSHIPS - uci.org",
+        "title": "2026 UCI MTB MARATHON WORLD CHAMPIONSHIPS - UCI.org",
         "pubDate": "Sat, 12 Sep 2026 21:32:41 GMT",
         "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOYWcyVC13dkFSUE13Q29WdmdqaFBJTGRjR1FxTWRpS1d6NVNWZEc2c1I5V1lrZVI5Z0Z4OHhwVEJzeF9EQndUbnhWa3FORHBoRGFidWJFeWhUX05nek83SGpLMm85QWZwMXducF9kejJVSTJ2aEJIcW5LaEVjeXE0RzRydFZreHpRWTJ2N1MzSl9NNHpkUXRqdTNvSG5RWlpTS2pYejd3dEk2RERUb2liODRWWVg1TzNnc2c?oc=5",
         "source": "UCI",
@@ -686,6 +686,13 @@
         "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE8wUFpVY2hwRXptQTNrXzdSRDExUTlacVgzMlRzc0J1YU9FdmlzOVBMc045Vm1Hd0s3SkU4TEcwaXJGY3BxVFhYUXVETHBDRWkyYllHNWtYUzlLbEhkU0pUQnVIbHB1TDNzN2RxYldUTjV6TzhwNzZN?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
+      },
+      {
+        "title": "Infestation Gravel Returns for 2026 with Two Courses, Affordable Entry Fees - Cyclocross Magazine",
+        "pubDate": "Thu, 17 Sep 2026 01:53:37 GMT",
+        "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNYy1GTU4ySC02ZUlfaGE0TnBMS0xVekZJcGdSLUhtdHFvNUV4d09aakJINWVPVHM3eXYyUE9PaWQ2czZQYjl4RUozMHV3TGNPRG9MYU85enFvZVJGVDZTZ1ZmSEY5OHQtc1g3amZsZDVuc2dGcDk2eDBYX0RrNVVDTWFHZ3ZsZjZlUE5jOWJlTUE5bVJXTFln?oc=5",
+        "source": "Cyclocross Magazine",
+        "sourceUrl": "https://www.cxmagazine.com"
       },
       {
         "title": "Riley Oosterhof - Cyclocross24.com",
