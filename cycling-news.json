@@ -1,7 +1,71 @@
 {
-  "updatedAt": "2026-09-19T11:03:07.665Z",
+  "updatedAt": "2026-09-19T14:27:12.664Z",
   "disciplines": {
     "road": [
+      {
+        "title": "Richard Carapaz makes late withdrawal from World Championships",
+        "pubDate": "Sat, 19 Sep 2026 14:13:48 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/richard-carapaz-makes-late-withdrawal-from-world-championships/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"I could come quite close\" - Filippo Ganna sees a way he can upset the odds and deny Remco Evenepoel in World Championships time trial",
+        "pubDate": "Sat, 19 Sep 2026 15:57:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/i-could-come-quite-close-filippo-ganna-sees-a-way-he-can-upset-the-odds-and-deny-remco-evenepoel-in-world-championships-time-trial",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Filippo Ganna has a new 'more extreme' time trial position, but don't expect to see it at the World Championships",
+        "pubDate": "Sat, 19 Sep 2026 13:29:37 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/filippo-ganna-has-a-new-more-extreme-time-trial-position-but-dont-expect-to-see-it-at-the-world-championships/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Do Italy have a new World Championships secret weapon? - Visma rider turns heads with statement-making performance before Montreal",
+        "pubDate": "Sat, 19 Sep 2026 15:04:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/do-italy-have-a-new-world-championships-secret-weapon-visma-rider-turns-heads-with-statement-making-performance-before-montreal",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "“It is a mistake Jurgen has only to blame himself for\" - Patrick Lefevere blasts his Quick-Step successor as he points to blunder in team's transfers",
+        "pubDate": "Sat, 19 Sep 2026 14:30:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/it-is-a-mistake-jurgen-has-only-to-blame-himself-for-patrick-lefevere-blasts-his-quick-step-successor-as-he-points-to-blunder-in-teams-transfers",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Netcompany INEOS on the brink of losing another rider - Second contract breaking in two months likely to happen",
+        "pubDate": "Sat, 19 Sep 2026 13:52:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/netcompany-ineos-on-the-brink-of-losing-another-rider-second-contract-breaking-in-two-months-likely-to-happen",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Remember the 12-year-old fan who went viral at the 2021 Tour of Britain? He just signed for Visma-Lease a Bike's junior team",
+        "pubDate": "Sat, 19 Sep 2026 11:28:13 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/remember-the-12-year-old-fan-who-went-viral-at-the-2021-tour-of-britain-he-just-signed-for-visma-lease-a-bikes-junior-team/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Remember the 12-year-old fan who went viral at the 2021 Tour of Britain? He just signed for Visma-Lease a Bike's junior team - Cyclingnews",
+        "pubDate": "Sat, 19 Sep 2026 11:28:13 GMT",
+        "link": "https://news.google.com/rss/articles/CBMihwJBVV95cUxOenN1Ym1feDNnX1ROMm1rSjFUc2psWFY4dHBtZThxRTBPT0x0WEdBU1VaUzV3MjBSMDhDN3JWOXBXUHlUU3Ntdmd3dGkwWDlUTW9icDd3Yzd0QjVKYnRBT21QbFRwajJMdXlhVmIwUUs1MDBKd1BBM21DYnlmV29acGxJV2lWMEtTRHJwbDJ5ZE5FaUJ6d2lmX0x3a3VMTFVzS3RKSGt5bXFHQnEzN2gxX0NwTlpCbW5Ob2JKZk5BSlhpd3IzRTVRRW42N09nMUJ3SzJ0NU1KV0xVS01OUFZoRXhOSHNJbHdkeVJ2QUtQMmNKeW0zd2RhNjNsemNKcUJoMlpNbDBydw?oc=5",
+        "source": "Cyclingnews",
+        "sourceUrl": "https://www.cyclingnews.com",
+        "type": "transfers"
+      },
+      {
+        "title": "Analysis - How can the United States of America win the 2026 Montréal World Championships",
+        "pubDate": "Sat, 19 Sep 2026 13:15:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/analysis-how-can-the-united-states-of-america-win-the-2026-montreal-world-championships",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
       {
         "title": "\"Without Tadej, the race could go any number of ways\" - Italian armada eye rainbow jersey after Pogacar's withdrawal",
         "pubDate": "Sat, 19 Sep 2026 12:37:00 +0200",
@@ -143,20 +207,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "Results Giro d'Abruzzo 2026 Stage 4 - INEOS take general classification and stage win as emotional Kevin Vauquelin triumphs in final stage",
-        "pubDate": "Fri, 18 Sep 2026 15:33:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/results-giro-dabruzzo-2026-stage-4-ineos-take-general-classification-and-stage-win-as-emotional-kevin-vauquelin-triumphs-in-final-stage",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "From van der Poel's newest rival to Pogacar's potential new teammate - The French diamond developing under the spotlight",
-        "pubDate": "Fri, 18 Sep 2026 14:56:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/from-van-der-poels-newest-rival-to-pogacars-potential-new-teammate-the-french-diamond-developing-under-the-spotlight",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "'Go back to the kitchen': Speaking out about naked Sydney Sweeney ad showed misogyny is rife, but we have an opportunity to move forward",
         "pubDate": "Fri, 18 Sep 2026 12:49:50 +0000",
         "link": "https://www.cyclingweekly.com/news/go-back-to-the-kitchen-speaking-out-about-naked-sydney-sweeney-ad-showed-misogyny-is-rife-but-we-have-an-opportunity-to-move-forward",
@@ -171,20 +221,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "\"There is interest from us as well\" - How Tom Pidcock adds leverage to Pinarello's attempt to sign Paul Seixas",
-        "pubDate": "Fri, 18 Sep 2026 14:15:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/there-is-interest-from-us-as-well-how-tom-pidcock-adds-leverage-to-pinarellos-attempt-to-sign-paul-seixas",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"Typical of Hayter to deliver a top performance out of nowhere\" - Might a surprise winner at the World Championships be British?",
-        "pubDate": "Fri, 18 Sep 2026 13:45:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/typical-of-hayter-to-deliver-a-top-performance-out-of-nowhere-might-a-surprise-winner-at-the-world-championships-be-british",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "We're hiring! Could you be our next social media editor?",
         "pubDate": "Fri, 18 Sep 2026 11:37:51 +0000",
         "link": "https://www.cyclingweekly.com/news/were-hiring-could-you-be-our-next-social-media-editor",
@@ -196,13 +232,6 @@
         "pubDate": "Fri, 18 Sep 2026 11:32:13 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/transfers/uno-x-mobility-signal-grand-tour-gc-ambitions-with-usoa-ostolaza-signing-analysis/",
         "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"I don’t want that to sound arrogant\" - Camp Evenepoel ready to turn Montréal time trial into a fourth world title",
-        "pubDate": "Fri, 18 Sep 2026 13:30:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/i-dont-want-that-to-sound-arrogant-camp-evenepoel-ready-to-turn-montreal-time-trial-into-a-fourth-world-title",
-        "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
       {
@@ -234,7 +263,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "The return of Paris's forgotten cargo trike races - Escape Collective",
+        "title": "The return of Paris's forgotten cargo trike races - escapecollective.com",
         "pubDate": "Fri, 18 Sep 2026 06:34:01 GMT",
         "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNeks5RW1aYlVaVnVmbDh0V1B3TW5HVF96WjZYWXZXaFhKQkRtYnVxVjBSYnktenpMUlAyVTdPMUhGYng5dkxuVlNtV00wdU5obk1PQ0pJUk1aSjgyV1l4S2VvVFJIYU9zN0Zpa3lpeUhhSWNGUHdRbGVtU2Z1Z3oyX3kyWEg?oc=5",
         "source": "Escape Collective",
@@ -318,27 +347,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "'The ribs didn’t make it’ – Derek Gee-West withdraws from time trial at his home World Championships",
-        "pubDate": "Thu, 17 Sep 2026 12:08:04 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/the-ribs-didnt-make-it-derek-gee-west-withdraws-from-time-trial-at-his-home-world-championships/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "'A little too difficult for me' – Mathieu van der Poel plays down his World Championships chances",
-        "pubDate": "Thu, 17 Sep 2026 11:17:04 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/a-little-too-difficult-for-me-mathieu-van-der-poel-plays-down-his-world-championships-chances/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "'I am going to contact Phil and give him a piece of my mind' – Tim Wellens responds to Gilbert's World Championships criticism",
-        "pubDate": "Thu, 17 Sep 2026 10:35:15 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/i-am-going-to-contact-phil-and-give-him-a-piece-of-my-mind-tim-wellens-responds-to-gilberts-world-championships-criticism/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
         "title": "T-Rex Arms and Stumpy Thighs: How Remco Evenepoel Became 'The Aero Bullet' - Outside Magazine",
         "pubDate": "Thu, 17 Sep 2026 10:33:54 GMT",
         "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBuMnQwYTdzcmZwRGRNeGF1a3FEbDNhellhc3NOX2xJSzExd19GSUQwRUo5d000SXg2ektOaEQ1T2M2ZGx3cUlnRDRkN2xRTUVWX2dQbzBGX3VtaU1odDNUaHdDQmQxTlg0aDZzOE5TdGhWUjhwbkZSRjRWc2lBVVk?oc=5",
@@ -382,14 +390,14 @@
         "sourceUrl": "https://velo.outsideonline.com"
       },
       {
-        "title": "Wheel Talk Newsletter: The Worlds start list is taking shape - Escape Collective",
+        "title": "Wheel Talk Newsletter: The Worlds start list is taking shape - escapecollective.com",
         "pubDate": "Tue, 15 Sep 2026 19:56:52 GMT",
         "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQWTJoNWkxRXAtMFVDUWRqN3NkcWRlZGFkZG5fR1lkdjk5RHhqRUR6OGJUT3gxYkRNanBJaGNoSDNLQ0lZenJJN1dtSHRuSXpoOXBGeXR5RkVPZEVsVDhpVUJXZFZtMFdXRnJBdjJGMDhLcWJnMTEwR1ZwbVpwbF9yLVNuUHZvdDBCZ0RKbkZXQjQ1OEU?oc=5",
         "source": "Escape Collective",
         "sourceUrl": "https://escapecollective.com"
       },
       {
-        "title": "Alexey Vermeulen and the human side of gravel - Escape Collective",
+        "title": "Alexey Vermeulen and the human side of gravel - escapecollective.com",
         "pubDate": "Tue, 15 Sep 2026 17:05:21 GMT",
         "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNaUI2OXVmNDdJaWl2N3FmN0ZUa05fMlNYR2JJSVBIeVZRZVk0WUY1R2VTQjNEOEU3ZTIxZWdlUlBOd0NBejJNckpvNGhnYVJ1cVE4TV80WUFaeVg5QTlNaHpybVJKVS1XMXYyZFpiNmFwV1BRS0JGbXFmRG9CeTFCUw?oc=5",
         "source": "Escape Collective",
@@ -415,13 +423,6 @@
         "link": "https://www.cyclingweekly.com/news/we-were-in-awe-of-the-amount-of-people-that-made-this-a-special-day-hundreds-attend-protest-ride-after-two-cyclists-killed-on-planned-route",
         "source": "Cycling Weekly",
         "sourceUrl": ""
-      },
-      {
-        "title": "Teniel Campbell is back - and she's taking aim at the 2028 Olympics - Escape Collective",
-        "pubDate": "Mon, 14 Sep 2026 23:22:50 GMT",
-        "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPcUtuMzNlakI4aUZyMXFyS1E4cFJzUmVDWTBXSFg1a01jQWRBSjJSVXVTZ2Y5ZjNzNjVXck9WeWM5ZDJMUDVVcXBhTFgyVUZqTm1GRGc4Y3h6Q3p4VUE5WDhHNVN0TnFCU1NKTFpGaHppcVpwaEpoM05vX1VDbGpaeG1OcGxlQ3dKQmVfT1dJam1FdHVIWmIxa2Rn?oc=5",
-        "source": "Escape Collective",
-        "sourceUrl": "https://escapecollective.com"
       }
     ],
     "mtb": [
@@ -431,6 +432,13 @@
         "link": "https://www.pinkbike.com/news/video-mud-mayhem-and-silver-world-champs-medals-with-lachie-stevens-mcnab.html?trk=rss",
         "source": "Pinkbike",
         "sourceUrl": ""
+      },
+      {
+        "title": "Protecting Digital Privacy While Using Mountain Bike Apps and Wearables - Vital MTB",
+        "pubDate": "Fri, 18 Sep 2026 15:46:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1nYkdTOE1kTkFjZjJuTms5UWUtZHE0Qk9JdUpyd2VTT3BJQzlNUXhVOHdDZnVmMHFLSFgzUmM0QlI3RmhONXIzcnhveG83Qko5UWtoZmlWV2R5dEhiaV9qZXpLckZxYjNHb29yYWZXWVNMMXdhLVZZ?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
       },
       {
         "title": "Trek Session Park 9.9 - Vital MTB",
@@ -489,7 +497,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "Beyond Gravity Announces First Wave of Athletes Signed On for 2027 Event - pinkbike.com",
+        "title": "Beyond Gravity Announces First Wave of Athletes Signed On for 2027 Event - Pinkbike",
         "pubDate": "Thu, 17 Sep 2026 14:14:17 GMT",
         "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPRzdtQ3loY1BLUlZGT3NCbmZDTFJvWmtmNWhJODE1SGwxd2xyNGtVODFwRWtfVGlYVlFoV09jRF9USDd5Y0lhSklxQ0ZwMjd2cXdEZVIzWXd2YlYyU2Z2QmpyZndxNVRXREJsZV9MRWNRMXVyX0FHdWdXdDZZVE1KRVE0NlQ4ZUZGUzBhcU1TYmtEN1RDYjJyMWhQUXl2VERuNFUyYmlJZWtBcDQ?oc=5",
         "source": "Pinkbike",
@@ -630,13 +638,6 @@
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "2026 UCI Mountain Bike Marathon Masters World Championships - UCI.org",
-        "pubDate": "Mon, 14 Sep 2026 07:00:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOcU9lRzVVcGIwenIzUEJveXdfRFRRLW9nQzVMVS02ZEpnNmVGUVgzbGRqUU5obENEOTZzV3otTVRGTUJ6Z2t0dFVEVHNMUi1VZUJXeUtBcmxITVJ1MExZM0duQ2RUZlRUWkVHNy1UbjAxaExJaGprTXRDRTk4ZTJTY056b1RxTV9SUHVHYUdlOGdJdDY5VHZ5c0EweWIxNUxPWlZ1OUdicnJvNmd3Qy1TcW9R?oc=5",
-        "source": "UCI",
-        "sourceUrl": "https://www.uci.org"
-      },
-      {
         "title": "What enduro bike am I? - The Hub - Mountain Biking Forums / Message Boards - Vital MTB",
         "pubDate": "Mon, 14 Sep 2026 03:14:29 GMT",
         "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1rZWRXcHVPZVdQcm9yaGtYRWN0Y1dzS3c2eHdGdFpOZTc1dmlOaWJ0cFYxQ09wbHFIQzlyS1NCNUlGSk5tM3lrTGR6SW5zZVlh?oc=5",
@@ -666,6 +667,13 @@
       }
     ],
     "cyclocross": [
+      {
+        "title": "Results Trek USCX #1 - Rochester Cyclocross 2026 - Women Junior - Cyclocross24.com",
+        "pubDate": "Sat, 19 Sep 2026 13:04:18 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBDNGk2aXoyclk2bW5WU3N2ejhMV0dkMExVT3JpcEFpYXduNXhfWlcxTUdJcmlNVkR4T1V1SWxpRm0yXzAyeDZyc0RBeDQ?oc=5",
+        "source": "Cyclocross24",
+        "sourceUrl": "https://cyclocross24.com"
+      },
       {
         "title": "Results International Cyclo-Cross Bad Salzdetfurth #1 2026 - Women Elite - Cyclocross24.com",
         "pubDate": "Sat, 19 Sep 2026 05:05:05 GMT",
@@ -702,13 +710,6 @@
         "sourceUrl": "https://cyclocross24.com"
       },
       {
-        "title": "Infestation Gravel Returns for 2026 with Two Courses, Affordable Entry Fees - Cyclocross Magazine",
-        "pubDate": "Thu, 17 Sep 2026 01:53:37 GMT",
-        "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNYy1GTU4ySC02ZUlfaGE0TnBMS0xVekZJcGdSLUhtdHFvNUV4d09aakJINWVPVHM3eXYyUE9PaWQ2czZQYjl4RUozMHV3TGNPRG9MYU85enFvZVJGVDZTZ1ZmSEY5OHQtc1g3amZsZDVuc2dGcDk2eDBYX0RrNVVDTWFHZ3ZsZjZlUE5jOWJlTUE5bVJXTFln?oc=5",
-        "source": "Cyclocross Magazine",
-        "sourceUrl": "https://www.cxmagazine.com"
-      },
-      {
         "title": "Riley Oosterhof - Cyclocross24.com",
         "pubDate": "Sun, 13 Sep 2026 04:33:50 GMT",
         "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1yclQzd3J5ZlY5SjRxZGxIR0oyMHAzZlIzSkptQ0hKWVdnVUFJZFJZNGdVdnhYS2xJSEdCU2FPcFoxWmtHX0ljdWpNTFNrcFoxSlJYUHBqU09RWmM?oc=5",
@@ -717,6 +718,13 @@
       }
     ],
     "gravel": [
+      {
+        "title": "Sea Otter Girona gallery: New 32in and gravel bikes - escapecollective.com",
+        "pubDate": "Sat, 19 Sep 2026 13:10:33 GMT",
+        "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOUGxZT3lSc3RpNkRza1NUUWlLb0hMRFpPLXhnMkR0YmoyZHpRTlJlczRyOFNwNXpTYTVKRU9LemRiWXJ5THdld2ppQ2diQThzZy1lYm9jM0RnaGt6XzVLTl8ybDdZM2hsanJ6eVI0V0RPN3NhMXNycjdIQnk3bWI2SGgycEVXRGc?oc=5",
+        "source": "Escape Collective",
+        "sourceUrl": "https://escapecollective.com"
+      },
       {
         "title": "Schwalbe goes large with its first 32-inch gravel tyres – but where are the bikes to use them with? - cyclingweekly.com",
         "pubDate": "Fri, 18 Sep 2026 15:34:42 GMT",
