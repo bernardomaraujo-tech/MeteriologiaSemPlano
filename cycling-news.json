@@ -1,7 +1,14 @@
 {
-  "updatedAt": "2026-09-19T01:12:10.993Z",
+  "updatedAt": "2026-09-19T05:55:36.428Z",
   "disciplines": {
     "road": [
+      {
+        "title": "Cycling Market - INEOS lose another leader; Pidcock to be joined by British national champion; America's top team grows",
+        "pubDate": "Sat, 19 Sep 2026 06:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/cycling-market-ineos-lose-another-leader-pidcock-to-be-joined-by-british-national-champion-americas-top-team-grows",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
       {
         "title": "Canada loses Derek Gee-West for time trial events due to a GP Montréal crash: \"I'll do everything I can to line up for road race\"",
         "pubDate": "Sat, 19 Sep 2026 01:00:00 +0200",
@@ -220,13 +227,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "Changes in USA's World Championships team - Riley Sheehan set for a last-minute World Championships call-up to replace sick Neilson Powless",
-        "pubDate": "Fri, 18 Sep 2026 09:00:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/changes-in-usas-world-championships-team-riley-sheehan-set-for-a-last-minute-world-championships-call-up-to-replace-sick-neilson-powless",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "The return of Paris's forgotten cargo trike races - Escape Collective",
         "pubDate": "Fri, 18 Sep 2026 06:34:01 GMT",
         "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNeks5RW1aYlVaVnVmbDh0V1B3TW5HVF96WjZYWXZXaFhKQkRtYnVxVjBSYnktenpMUlAyVTdPMUhGYng5dkxuVlNtV00wdU5obk1PQ0pJUk1aSjgyV1l4S2VvVFJIYU9zN0Zpa3lpeUhhSWNGUHdRbGVtU2Z1Z3oyX3kyWEg?oc=5",
@@ -375,6 +375,14 @@
         "sourceUrl": "https://velo.outsideonline.com"
       },
       {
+        "title": "All the pro cycling transfers for 2027: Ben Turner leaves Netcompany-Ineos for Soudal Quick-Step - Cycling Weekly",
+        "pubDate": "Wed, 16 Sep 2026 08:37:45 GMT",
+        "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNNVNGZGpZVDdzOGNUdHo0SG1JbW9QTl9yS0dOY1FZc0piTE9sUmM1TEc2U2FYY3JfMU9OeS1CQ0VPTWhPVnppcjNjNzJtLW84cTNZYkxMZ3ZMeXNoUWhtUXBubC1OREcwSU9ZUGRlM2dhSks0NGVLVDJlaFpTUGdzZQ?oc=5",
+        "source": "Cycling Weekly",
+        "sourceUrl": "https://www.cyclingweekly.com",
+        "type": "transfers"
+      },
+      {
         "title": "Tadej Pogačar Back on Trainer 2 Weeks After Season-Ending Vuelta Crash - Outside Magazine",
         "pubDate": "Tue, 15 Sep 2026 23:05:02 GMT",
         "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOYUxKQ215bFRITVQ5ZXl3bVg5NXROdEV0OHUzLUJ0b0ZEWXVyd3E0SnNVcEFDQlFaMExpV0lkb1FWVUFneGJ2NTR3aWVOeG1GZ1Joa3JUTEEyblcxSW5vSW1rOVBIbEd1MVBGWURfU3UwY1ZEQVVmZzJZYUYyY2loNF9mLTA5R3V0TElJaWcwT1VGcnd6WXRzSTFlM2NpVmItR0c2ZDl1UDh2QQ?oc=5",
@@ -415,13 +423,6 @@
         "link": "https://www.cyclingweekly.com/news/we-were-in-awe-of-the-amount-of-people-that-made-this-a-special-day-hundreds-attend-protest-ride-after-two-cyclists-killed-on-planned-route",
         "source": "Cycling Weekly",
         "sourceUrl": ""
-      },
-      {
-        "title": "Teniel Campbell is back - and she's taking aim at the 2028 Olympics - Escape Collective",
-        "pubDate": "Mon, 14 Sep 2026 23:22:50 GMT",
-        "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPcUtuMzNlakI4aUZyMXFyS1E4cFJzUmVDWTBXSFg1a01jQWRBSjJSVXVTZ2Y5ZjNzNjVXck9WeWM5ZDJMUDVVcXBhTFgyVUZqTm1GRGc4Y3h6Q3p4VUE5WDhHNVN0TnFCU1NKTFpGaHppcVpwaEpoM05vX1VDbGpaeG1OcGxlQ3dKQmVfT1dJam1FdHVIWmIxa2Rn?oc=5",
-        "source": "Escape Collective",
-        "sourceUrl": "https://escapecollective.com"
       }
     ],
     "mtb": [
@@ -488,6 +489,13 @@
         "source": "Pinkbike",
         "sourceUrl": "https://www.pinkbike.com",
         "type": "transfers"
+      },
+      {
+        "title": "Mountain Bike News - Vital MTB",
+        "pubDate": "Thu, 17 Sep 2026 12:00:15 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9KSGw1cjJ5RUpWVW10R0dIVzR0Z25kRnVYX1FTaHJOZWU1V2huMHpSQ3VZaHZDQ2x2MDVrdWJIY1JLRElGYkpOTA?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
       },
       {
         "title": "2025 Kona Process 153 CR mullet MX on NOBL Ethos Enduro - Vital MTB",
@@ -663,13 +671,6 @@
         "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOYWcyVC13dkFSUE13Q29WdmdqaFBJTGRjR1FxTWRpS1d6NVNWZEc2c1I5V1lrZVI5Z0Z4OHhwVEJzeF9EQndUbnhWa3FORHBoRGFidWJFeWhUX05nek83SGpLMm85QWZwMXducF9kejJVSTJ2aEJIcW5LaEVjeXE0RzRydFZreHpRWTJ2N1MzSl9NNHpkUXRqdTNvSG5RWlpTS2pYejd3dEk2RERUb2liODRWWVg1TzNnc2c?oc=5",
         "source": "UCI",
         "sourceUrl": "https://www.uci.org"
-      },
-      {
-        "title": "Enduro / All-Mountain Bikes - Vital MTB",
-        "pubDate": "Sat, 12 Sep 2026 04:15:41 GMT",
-        "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNb3k2cEFIQnZ6WXc3Z2JqSllLYTFNaUVQNWx1bHhUdmxSYjRNTlU1MWVlSzhFQkt0a0FUeko5ZGRwaHZIMFYtZEVRQTdFalpVQ1lsMEZWM0F2OUdpMXhiTXpGNHZTMmRPVzVSZ0ZZdVVCdFNNdEhfMkVKcEpoLWcyWnBIS2N2anhTVS1JT0VnMWNPX1NCZGE4MmtqMm5LZ0pnbEJWS2lKM2Qzd096TG1HNThreWhQcWlRdU9ObmI5Y3R2VTc2czI0dHZ4TURWRUszcmYwVEl0UWtsOFJNSzEtU1lpckllOXh0?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
       }
     ],
     "cyclocross": [
@@ -686,13 +687,6 @@
         "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE8wUFpVY2hwRXptQTNrXzdSRDExUTlacVgzMlRzc0J1YU9FdmlzOVBMc045Vm1Hd0s3SkU4TEcwaXJGY3BxVFhYUXVETHBDRWkyYllHNWtYUzlLbEhkU0pUQnVIbHB1TDNzN2RxYldUTjV6TzhwNzZN?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
-      },
-      {
-        "title": "Infestation Gravel Returns for 2026 with Two Courses, Affordable Entry Fees - Cyclocross Magazine",
-        "pubDate": "Thu, 17 Sep 2026 01:53:37 GMT",
-        "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNYy1GTU4ySC02ZUlfaGE0TnBMS0xVekZJcGdSLUhtdHFvNUV4d09aakJINWVPVHM3eXYyUE9PaWQ2czZQYjl4RUozMHV3TGNPRG9MYU85enFvZVJGVDZTZ1ZmSEY5OHQtc1g3amZsZDVuc2dGcDk2eDBYX0RrNVVDTWFHZ3ZsZjZlUE5jOWJlTUE5bVJXTFln?oc=5",
-        "source": "Cyclocross Magazine",
-        "sourceUrl": "https://www.cxmagazine.com"
       },
       {
         "title": "Riley Oosterhof - Cyclocross24.com",
