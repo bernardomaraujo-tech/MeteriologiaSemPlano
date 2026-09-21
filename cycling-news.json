@@ -1,7 +1,35 @@
 {
-  "updatedAt": "2026-09-20T22:27:56.286Z",
+  "updatedAt": "2026-09-21T01:08:20.430Z",
   "disciplines": {
     "road": [
+      {
+        "title": "Martin Vidaurre and Martina Berta win penultimate cross-country Mountain Bike World Series round at Soldier Hollow",
+        "pubDate": "Mon, 21 Sep 2026 01:02:05 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/racing/martin-vidaurre-and-martina-berta-win-penultimate-cross-country-mountain-bike-world-series-round-at-soldier-hollow/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Results Tour de Luxembourg 2026 Stage 5 | Mathieu van der Poel completes astonishing 170km solo raid as Davide Piganzoli seals overall victory",
+        "pubDate": "Mon, 21 Sep 2026 02:29:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/results-tour-de-luxembourg-2026-stage-5-mathieu-van-der-poel-completes-astonishing-170km-solo-raid-as-davide-piganzoli-seals-overall-victory",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"11 years. Amazing memories. Amazing friendships\" - Trusted Pogacar-Roglic ally and long-time Jayco AlUla servant rides final race for team before retirement",
+        "pubDate": "Mon, 21 Sep 2026 02:25:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/11-years-amazing-memories-amazing-friendships-trusted-pogacar-roglic-ally-and-long-time-jayco-alula-servant-rides-final-race-for-team-before-retirement",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"If I do a few more of them, I can learn to love it a little bit more\": Zoe Bäckstedt reflects on first elite Worlds TT medal",
+        "pubDate": "Mon, 21 Sep 2026 01:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/if-i-do-a-few-more-of-them-i-can-learn-to-love-it-a-little-bit-more-zoe-backstedt-reflects-on-first-elite-worlds-tt-medal",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
       {
         "title": "'It's definitive proof that I'm one of the specialists' - Paul Seixas makes his mark on World Championships time trial with podium",
         "pubDate": "Sun, 20 Sep 2026 21:34:46 +0000",
@@ -178,13 +206,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "Results Tour de Luxembourg 2026 Stage 5 | Mathieu van der Poel completes astonishing 170km solo raid as Davide Piganzoli seals overall victory",
-        "pubDate": "Sun, 20 Sep 2026 16:32:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/results-tour-de-luxembourg-2026-stage-5-mathieu-van-der-poel-completes-astonishing-170km-solo-raid-as-davide-piganzoli-seals-overall-victory",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "Results GP d'Isbergues 2026 - Olav Kooij defends his crown with sprint victory over Matteo Moschetti and Arvid de Kleijn",
         "pubDate": "Sun, 20 Sep 2026 16:21:00 +0200",
         "link": "https://cyclinguptodate.com/cycling/results-gp-disbergues-2026-olav-kooij-defends-his-crown-with-sprint-victory-over-matteo-moschetti-and-arvid-de-kleijn",
@@ -203,13 +224,6 @@
         "pubDate": "Sun, 20 Sep 2026 13:26:31 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/racing/truly-an-exceptional-memory-eddy-merckx-and-genevieve-gambillon-look-back-on-1974-world-championships-wins-as-montreals-mount-royal-climb-returns-to-centre-stage/",
         "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"11 years. Amazing memories. Amazing friendships\" - Trusted Pogacar-Roglic ally and long-time Jayco AlUla servant rides final race for team before retirement",
-        "pubDate": "Sun, 20 Sep 2026 15:00:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/11-years-amazing-memories-amazing-friendships-trusted-pogacar-roglic-ally-and-long-time-jayco-alula-servant-rides-final-race-for-team-before-retirement",
-        "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
       {
@@ -248,13 +262,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "From Fabian Cancellara to Remco Evenepoel: The five riders who defined World Championship time trialling",
-        "pubDate": "Sun, 20 Sep 2026 13:48:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/from-fabian-cancellara-to-remco-evenepoel-the-five-riders-who-defined-world-championship-time-trialling",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "Miguel Ángel López doping case 'definitively closed'",
         "pubDate": "Sun, 20 Sep 2026 11:40:31 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/doping/miguel-angel-lopez-doping-case-definitively-closed/",
@@ -269,16 +276,16 @@
         "sourceUrl": ""
       },
       {
+        "title": "Vollering and Key Rivals Rev up for Road Worlds Rainbows - Outside Magazine",
+        "pubDate": "Sun, 20 Sep 2026 10:12:48 GMT",
+        "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNV2c3QkdGRUFBQ3VfaTFOYWtHR3c5dTM2RGx5MlNvdnNhelh2YWVIQW84S3ZwbllpQTRkYW9rcmxkdk9LSnZ1NkF3V09OS2dkYldXLWRpSjlZUnl2OXQyeTJnSVRtTFNRYzZpUk81MEtXaEh2MUZZeGdZQ0VMYUk2THdDbWxhZVl6ajhRQg?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
+      },
+      {
         "title": "UCI Gravel World Series: Tiffany Cromwell dominates Tartu Bike Marathon as Lukas Malezsewski wins men's race in five-man sprint",
         "pubDate": "Sun, 20 Sep 2026 10:03:15 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/racing/uci-gravel-world-series-tiffany-cromwell-dominates-tartu-bike-marathon-as-lukas-malezsewski-wins-mens-race-in-five-man-sprint/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "UCI Gravel World Series: Rosa Klöser drops Marianne Vos to take solo victory at Sea Otter Europe, as Leon Kaiser sprints to win men's race",
-        "pubDate": "Sun, 20 Sep 2026 09:33:55 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/racing/uci-gravel-world-series-rosa-kloser-drops-marianne-vos-to-take-solo-victory-at-sea-otter-europe-as-leon-kaiser-sprints-to-win-mens-race/",
         "source": "Cyclingnews",
         "sourceUrl": ""
       },
@@ -312,6 +319,13 @@
         "type": "transfers"
       },
       {
+        "title": "'Everyone thinks they are Pogačar' – Pellizzari expects Worlds road race to blow up early - Escape Collective",
+        "pubDate": "Fri, 18 Sep 2026 12:50:50 GMT",
+        "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNNENMbXpxREZyYnhMcHRTanczRnFWX1kwWHdSdnRQZkVPd2RrcUowMmJzalJqVWw2YXV2Q1BkNVZHREhCQ3RLRGR5Q0NCT0ZLQnVlbEVMcldGU01majRiX3BJRklWcno4WDkzNUJueFFSbzN4bDZQd1ZJS1FSOEpwbFdHVkdsM3E2YXNmd0w1WHBNRzdXVjdubi1OakJZc05aU3JfRWNxVUF3cV8zSWlURmt2eUhvQQ?oc=5",
+        "source": "Escape Collective",
+        "sourceUrl": "https://escapecollective.com"
+      },
+      {
         "title": "'Go back to the kitchen': Speaking out about naked Sydney Sweeney ad showed misogyny is rife, but we have an opportunity to move forward",
         "pubDate": "Fri, 18 Sep 2026 12:49:50 +0000",
         "link": "https://www.cyclingweekly.com/news/go-back-to-the-kitchen-speaking-out-about-naked-sydney-sweeney-ad-showed-misogyny-is-rife-but-we-have-an-opportunity-to-move-forward",
@@ -331,6 +345,13 @@
         "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQcGwxcFA2UVg4YTJMcmVGUEQ1QlJjQW1BTllQMlBIenBqQTNZeWh2TFhORGFOQmFaSEpYdDFVUGg1Tng1TUtVczByZXZCUG1uUHc3UnAyaXpTOVRvYmdSZ1pfdXFuMnRyMGhIUmNnSE1TcjZFRUI5UTl0UTViRlV4WVpnNnpjaDZUYXFKWV9kdjBjeHpHQWZZRFRCaHE2cU0yTmJB?oc=5",
         "source": "VELO",
         "sourceUrl": "https://velo.outsideonline.com"
+      },
+      {
+        "title": "The return of Paris's forgotten cargo trike races - Escape Collective",
+        "pubDate": "Fri, 18 Sep 2026 04:25:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNeks5RW1aYlVaVnVmbDh0V1B3TW5HVF96WjZYWXZXaFhKQkRtYnVxVjBSYnktenpMUlAyVTdPMUhGYng5dkxuVlNtV00wdU5obk1PQ0pJUk1aSjgyV1l4S2VvVFJIYU9zN0Zpa3lpeUhhSWNGUHdRbGVtU2Z1Z3oyX3kyWEg?oc=5",
+        "source": "Escape Collective",
+        "sourceUrl": "https://escapecollective.com"
       },
       {
         "title": "Dutch national team has a new strategy for World Road Championships - Escape Collective",
@@ -401,27 +422,6 @@
         "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPLVNON3ZGZEU4bXM1N2VWV3JnRHhaZnFkODdoX1BJeFl3Z0FnOWVJS1UtV2ZWaUVlU0JodWIyZXI2Z3puallxSG44ZmdMb3B3Vk9XcC1GY1dRMWF1cGtHcjVzYXRQQzkxT1U5X1h4Zmg2S2M5YXNQUW1PTGVqTlhGX0NZUkZFWmE0ek13?oc=5",
         "source": "VELO",
         "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
-        "title": "Tadej Pogačar Back on Trainer 2 Weeks After Season-Ending Vuelta Crash - Outside Magazine",
-        "pubDate": "Tue, 15 Sep 2026 23:05:02 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOYUxKQ215bFRITVQ5ZXl3bVg5NXROdEV0OHUzLUJ0b0ZEWXVyd3E0SnNVcEFDQlFaMExpV0lkb1FWVUFneGJ2NTR3aWVOeG1GZ1Joa3JUTEEyblcxSW5vSW1rOVBIbEd1MVBGWURfU3UwY1ZEQVVmZzJZYUYyY2loNF9mLTA5R3V0TElJaWcwT1VGcnd6WXRzSTFlM2NpVmItR0c2ZDl1UDh2QQ?oc=5",
-        "source": "VELO",
-        "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
-        "title": "Pogačar is back on the trainer - Escape Collective",
-        "pubDate": "Tue, 15 Sep 2026 20:07:37 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE45WlZkY2tJTmdtUTRzNXFMTzh3ZFRka0UyV3JYZFBjdXlES0RCQ0tBVUh0OWxaS2hMREQ3bXBlRTFONWRnZjFXU0FR?oc=5",
-        "source": "Escape Collective",
-        "sourceUrl": "https://escapecollective.com"
-      },
-      {
-        "title": "Wheel Talk Newsletter: The Worlds start list is taking shape - Escape Collective",
-        "pubDate": "Tue, 15 Sep 2026 19:56:52 GMT",
-        "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQWTJoNWkxRXAtMFVDUWRqN3NkcWRlZGFkZG5fR1lkdjk5RHhqRUR6OGJUT3gxYkRNanBJaGNoSDNLQ0lZenJJN1dtSHRuSXpoOXBGeXR5RkVPZEVsVDhpVUJXZFZtMFdXRnJBdjJGMDhLcWJnMTEwR1ZwbVpwbF9yLVNuUHZvdDBCZ0RKbkZXQjQ1OEU?oc=5",
-        "source": "Escape Collective",
-        "sourceUrl": "https://escapecollective.com"
       }
     ],
     "mtb": [
@@ -433,7 +433,7 @@
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "Live Results: 2026 Soldier Hollow Elite XC World Cup",
+        "title": "Results: Martina Berta &amp; Martin Vidaurre Kossmann Win Dramatic 2026 Soldier Hollow XC World Cup",
         "pubDate": "Sun, 20 Sep 2026 00:00:00 PDT",
         "link": "https://www.pinkbike.com/news/results-2026-soldier-hollow-elite-xc-world-cup.html?trk=rss",
         "source": "Pinkbike",
@@ -525,8 +525,8 @@
       },
       {
         "title": "Trek Session Park 9.9 - Vital MTB",
-        "pubDate": "Fri, 18 Sep 2026 14:28:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxONEJGUm83LTBkb3JmVDdiNVBKekY1X2JXV0ZRYUZDQ1pwTVhHT3FWWm90OE1aZVJNVjF2NHlQOElRbUpWdEtHTXNrSXZLb28xY2EwdnY5OTAzVVdXQ2lNX0VzVE1UcUFJT2R0dVFaclZvWjVaVWwyRjRfN2tnR1ROTVdfd2t1RlE4bVlWZlBabmxhWlhjMTZB?oc=5",
+        "pubDate": "Fri, 18 Sep 2026 14:24:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE14ckloYW5vcDRvcUtFcENVY0R2RmlNNXFGWFpJZ045aWxIaU1YX0NzX1FtSFc1NmQzS2tWMUdKOGlQRW1wTE5XdllyZFZkZzZUcFBDdWlBcEdDQVVEOHVTaXZyVjNkR3lTVzRaSHpiUjUyUQ?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
@@ -636,7 +636,7 @@
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "2026 UCI Mountain Bike Marathon World Championships: Seewald and Weinbeer dominate - UCI.org",
+        "title": "2026 UCI Mountain Bike Marathon World Championships: Seewald and Weinbeer dominate - uci.org",
         "pubDate": "Mon, 14 Sep 2026 13:42:54 GMT",
         "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQN1pieURKZFJmNHZvNU41T3dRSHhzVDdRd3gtVjk3OHMwMDRxVmVqOHpmQmdmMnV5ZFNNRllqVGJwb1hwdEVsZ2g1c3dVZFNjNUhfQ243V1pGTWJEN0Q3ZGk0T0VJQ0NITzFTTzdENW5iVm1hLU9pZmI1a2lMSUV3azNKYm5jSFlBcUZaQXg0RjZTYU0yVW9FZW93WktmMHFNT0JEY2RuYlNaZ01jaWFYVkxVTW1TVkxkZDdWQ0pINGJ5R1cxSkFxNk9paUw?oc=5",
         "source": "UCI",
