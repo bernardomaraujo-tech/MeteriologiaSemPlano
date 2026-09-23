@@ -1,20 +1,125 @@
 {
-  "updatedAt": "2026-09-23T06:00:20.442Z",
+  "updatedAt": "2026-09-23T11:41:10.468Z",
   "disciplines": {
     "road": [
+      {
+        "title": "Opinion: The Wildest Racing in Cycling Isn’t at the Tour de France - Outside Magazine",
+        "pubDate": "Wed, 23 Sep 2026 11:07:36 GMT",
+        "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOa0RUbnd5OVRvaU9oNXpQYVVJU1I3OFZsR2IzVDROd1I2Rmt5dmtlZVkzUHJBU3V3Q3cxc1ZZSDMxaWNiUTdUbnBuNGxQQTBvMVBLczkySXRqS3pqUGRXZllLSkJrQzFEdUVmLS0zb2RTZ0Y4Z1FUNXlmX1h3a0ZvRkFCS0JvQ3ZTVkxuNEplR09wSjdKNDVUeQ?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
+      },
+      {
+        "title": "\"It’s classic Wout to show up for all the big moments\" - Belgian's coach believes World Championships can bring out the best of him",
+        "pubDate": "Wed, 23 Sep 2026 13:06:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/its-classic-wout-to-show-up-for-all-the-big-moments-belgians-coach-believes-world-championships-can-bring-out-the-best-of-him",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "'No plans' for Tadej Pogačar to race again in 2026, say UAE Team Emirates-XRG amid European Championships confusion",
+        "pubDate": "Wed, 23 Sep 2026 10:34:35 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/no-plans-for-tadej-pogacar-to-race-again-in-2026-say-uae-team-emirates-xrg-amid-european-championships-confusion/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Giulio Ciccone on the move? Tom Pidcock's Pinarello might pull off another massive transfers",
+        "pubDate": "Wed, 23 Sep 2026 12:30:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/giulio-ciccone-on-the-move-tom-pidcocks-pinarello-might-pull-off-another-massive-transfers",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"If he wants, we can sit down together and I’ll show him\" - Tension frows between Remco Evenepoel and Filippo Ganna",
+        "pubDate": "Wed, 23 Sep 2026 12:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/if-he-wants-we-can-sit-down-together-and-ill-show-him-tension-frows-between-remco-evenepoel-and-filippo-ganna",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Two years on from Muriel Furrer's death, GPS trackers still haven't been introduced to cycling – Why teams can't agree, and what's next",
+        "pubDate": "Wed, 23 Sep 2026 09:30:49 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/safety/two-years-on-from-muriel-furrers-death-gps-trackers-still-havent-been-introduced-to-cycling-why-teams-cant-agree-and-whats-next/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"The best decision I’ve ever made in my career\" - Tom Pidcock's departure from INEOS turned his life around",
+        "pubDate": "Wed, 23 Sep 2026 11:04:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/the-best-decision-ive-ever-made-in-my-career-tom-pidcocks-departure-from-ineos-turned-his-life-around",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "UCI council backs new national rider jersey despite teams’ opposition",
+        "pubDate": "Wed, 23 Sep 2026 10:55:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/uci-council-backs-new-national-rider-jersey-despite-teams-opposition",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "“There are some who say it had something to do with the motorbikes” - Mathieu van der Poel’s astonishing 170km+ solo leaves gobsmacked peloton searching for answers",
+        "pubDate": "Wed, 23 Sep 2026 10:51:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/there-are-some-who-say-it-had-something-to-do-with-the-motorbikes-mathieu-van-der-poels-astonishing-170km-solo-leaves-gobsmacked-peloton-searching-for-answers",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"The circuit is just too difficult for him\" - Is Mathieu van der Poel really capable of winning Montréal World Championships?",
+        "pubDate": "Wed, 23 Sep 2026 10:37:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/the-circuit-is-just-too-difficult-for-him-is-mathieu-van-der-poel-really-capable-of-winning-montreal-world-championships",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Fran Millar resigns as Rapha CEO ahead of 'significant organisational changes to reduce cost and drive efficiency'",
+        "pubDate": "Wed, 23 Sep 2026 08:22:53 +0000",
+        "link": "https://www.cyclingweekly.com/news/fran-millar-resigns-as-rapha-ceo-warning-of-significant-organisational-changes",
+        "source": "Cycling Weekly",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"They took everything from us\" - From disguising herself as a man to train to almost conquering the Asian Games, how Fariba Hashimi has evolved into pro cycling",
+        "pubDate": "Wed, 23 Sep 2026 10:22:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/they-took-everything-from-us-from-disguising-herself-as-a-man-to-train-to-almost-conquering-the-asian-games-how-fariba-hashimi-has-evolved-into-pro-cycling",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "New world champion set to join Mathieu van der Poel's team - Transfer reportedly sealed before rainbow jersey win as Alpecin strike gold",
+        "pubDate": "Wed, 23 Sep 2026 10:09:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/new-world-champion-set-to-join-mathieu-van-der-poels-team-transfer-reportedly-sealed-before-rainbow-jersey-win-as-alpecin-strike-gold",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "'My end goal is to ride with the WorldTour team' – young star of a viral 2021 Tour of Britain clip signs for Visma-Lease a Bike talent development team",
+        "pubDate": "Wed, 23 Sep 2026 08:00:00 +0000",
+        "link": "https://www.cyclingweekly.com/news/young-star-of-a-viral-2021-tour-of-britain-clip-signs-for-visma-lease-a-bike-talent-development-team",
+        "source": "Cycling Weekly",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"Continuing with the team was never in question\": Lidl-Trek extend deal with experienced domestique through 2028",
+        "pubDate": "Wed, 23 Sep 2026 09:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/continuing-with-the-team-was-never-in-question-lidl-trek-extend-deal-with-experienced-domestique-through-2028",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Cycling News, Reviews & Features - Escape Collective",
+        "pubDate": "Wed, 23 Sep 2026 05:53:37 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9IYWpOVnBZWElyaTZ3MmxjLXR6SUN0VEpZMzZNUzVSN1pQR2c0TFBLQ1djaGxMTHRvMk5tdzNfTUJsa1l5ZzRrTFhtbVdiUQ?oc=5",
+        "source": "Escape Collective",
+        "sourceUrl": "https://escapecollective.com"
+      },
       {
         "title": "UCI World Tour Teams Ranking Update: UAE untouchable at the top, Netcompany INEOS just inside top 10 as Lotto surge and relegation battle takes dramatic turn",
         "pubDate": "Wed, 23 Sep 2026 06:00:00 +0200",
         "link": "https://cyclinguptodate.com/cycling/uci-world-tour-teams-ranking-update-uae-untouchable-at-the-top-netcompany-ineos-just-inside-top-10-as-lotto-surge-and-relegation-battle-takes-dramatic-turn",
         "source": "CyclingUpToDate",
         "sourceUrl": ""
-      },
-      {
-        "title": "Cycling News, Reviews & Features - Escape Collective",
-        "pubDate": "Tue, 22 Sep 2026 23:07:18 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9IYWpOVnBZWElyaTZ3MmxjLXR6SUN0VEpZMzZNUzVSN1pQR2c0TFBLQ1djaGxMTHRvMk5tdzNfTUJsa1l5ZzRrTFhtbVdiUQ?oc=5",
-        "source": "Escape Collective",
-        "sourceUrl": "https://escapecollective.com"
       },
       {
         "title": "“We struggled for several years”: Filippo Ganna celebrates Italy’s long-awaited Worlds mixed relay triumph",
@@ -42,13 +147,6 @@
         "pubDate": "Tue, 22 Sep 2026 21:00:56 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/road-world-championships-maria-okrucinska-smashes-junior-womens-time-trial-to-take-gold-for-poland-in-montreal/",
         "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "UCI council backs new national rider jersey despite teams’ opposition",
-        "pubDate": "Tue, 22 Sep 2026 23:00:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/uci-council-backs-new-national-rider-jersey-despite-teams-opposition",
-        "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
       {
@@ -129,13 +227,6 @@
         "sourceUrl": "https://velo.outsideonline.com"
       },
       {
-        "title": "“There are some who say it had something to do with the motorbikes” - Mathieu van der Poel’s astonishing 170km+ solo leaves gobsmacked peloton searching for answers",
-        "pubDate": "Tue, 22 Sep 2026 19:00:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/there-are-some-who-say-it-had-something-to-do-with-the-motorbikes-mathieu-van-der-poels-astonishing-170km-solo-leaves-gobsmacked-peloton-searching-for-answers",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "'I couldn't really go any faster' – Depleted from Vuelta a España, Ethan Hayter never found smooth sailing in time trial at Montreal Road Worlds",
         "pubDate": "Tue, 22 Sep 2026 16:08:18 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/i-couldnt-really-go-any-faster-depleted-from-vuelta-a-espana-ethan-hayter-never-found-smooth-sailing-in-time-trial-at-montreal-road-worlds/",
@@ -155,6 +246,13 @@
         "link": "https://www.cyclingweekly.com/news/major-retailer-backcountry-acquires-mobile-bike-shop-franchise-velofix",
         "source": "Cycling Weekly",
         "sourceUrl": ""
+      },
+      {
+        "title": "Commentary: The UCI's new jersey idea is its best in years - Escape Collective",
+        "pubDate": "Tue, 22 Sep 2026 15:48:43 GMT",
+        "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBMTTZmSU9ueTMyaWhDbC1UZk5sUFFETlk1enltN3lZR2NoN1VsNlJHeVdwSmctNEtldmJmRVNadVBqRW1VcTF4eGtya0JCTUdmaHFuckVMZ0xUZlVZVEVwbkdJaXR5SWE5SjIxZGptZnlYOUpEcVhWS0h0UQ?oc=5",
+        "source": "Escape Collective",
+        "sourceUrl": "https://escapecollective.com"
       },
       {
         "title": "Road World Championships: Italy power to mixed relay TTT victory with huge rides from Ganna, Longo Borghini and co",
@@ -178,38 +276,10 @@
         "sourceUrl": ""
       },
       {
-        "title": "Results CRO Race 2026 Stage 1 - Juan Sebastian Molano denies Paul Magnier after late attackers caught inside final 500 metres",
-        "pubDate": "Tue, 22 Sep 2026 16:05:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/results-cro-race-2026-stage-1-juan-sebastian-molano-denies-paul-magnier-after-late-attackers-caught-inside-final-500-metres",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "'I don't think that solo changes much' – Modest Mathieu van der Poel and Wout van Aert unconcerned by jet lag as they head late to World Championships in Canada",
         "pubDate": "Tue, 22 Sep 2026 13:46:27 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/i-dont-think-that-solo-changes-much-modest-mathieu-van-der-poel-and-wout-van-aert-unconcerned-by-jet-lag-as-they-head-late-to-world-championships-in-canada/",
         "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "“Will he have the legs to go 250 kilometres-plus?” - Chris Horner questions what Remco Evenepoel’s record-breaking Worlds TT really means for road race hopes",
-        "pubDate": "Tue, 22 Sep 2026 15:00:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/will-he-have-the-legs-to-go-250-kilometres-plus-chris-horner-questions-what-remco-evenepoels-record-breaking-worlds-tt-really-means-for-road-race-hopes",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Who are the best young riders in World Championships time trial history? - Top U23 performances ever on the world stage",
-        "pubDate": "Tue, 22 Sep 2026 14:15:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/the-top-5-u23-time-triallists-in-world-championship-history",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "INEOS-bound junior sensation set for World Championships before big step-up to World Tour - “I’d be more than satisfied with a win”",
-        "pubDate": "Tue, 22 Sep 2026 13:30:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/ineos-bound-junior-sensation-set-for-world-championships-before-big-step-up-to-world-tour-id-be-more-than-satisfied-with-a-win",
-        "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
       {
@@ -220,24 +290,10 @@
         "sourceUrl": ""
       },
       {
-        "title": "Have Wout van Aert and Mathieu van der Poel left it too late to travel to World Championships? - \"I’m afraid the jet lag could still be in their system\"",
-        "pubDate": "Tue, 22 Sep 2026 13:01:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/have-wout-van-aert-and-mathieu-van-der-poel-left-it-too-late-to-travel-to-world-championships-im-afraid-the-jet-lag-could-still-be-in-their-system",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "La Grande Duchesse – How Luxembourg's Elsy Jacobs became the first-ever women’s World Champion",
         "pubDate": "Tue, 22 Sep 2026 10:11:59 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/la-grande-duchesse-how-luxembourgs-elsy-jacobs-became-the-first-ever-womens-world-champion/",
         "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Start Times & Order World Championships 2026 Montréal Junior Men and Junior Women time trials",
-        "pubDate": "Tue, 22 Sep 2026 12:11:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/start-times-order-world-championships-2026-montreal-junior-men-and-junior-women-time-trials",
-        "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
       {
@@ -248,24 +304,10 @@
         "sourceUrl": ""
       },
       {
-        "title": "\"Suffering is when you lose your little brother on a bike\" - Irish rider's touching interview after World Championships crash",
-        "pubDate": "Tue, 22 Sep 2026 11:45:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/suffering-is-when-you-lose-your-little-brother-on-a-bike-irish-riders-touching-interview-after-world-championships-crash",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "A wide open field of young stars going for glory – World Championships junior men's road race contenders",
         "pubDate": "Tue, 22 Sep 2026 09:28:18 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/racing/a-wide-open-field-of-young-stars-going-for-glory-world-championships-junior-mens-road-race-contenders/",
         "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "New world champion set to join Mathieu van der Poel's team - Transfer reportedly sealed before rainbow jersey win as Alpecin strike gold",
-        "pubDate": "Tue, 22 Sep 2026 11:17:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/new-world-champion-set-to-join-mathieu-van-der-poels-team-transfer-reportedly-sealed-before-rainbow-jersey-win-as-alpecin-strike-gold",
-        "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
       {
@@ -274,13 +316,6 @@
         "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/newly-crowned-world-champion-felicity-wilson-haffenden-exits-lidl-trek-for-fenix-premier-tech/",
         "source": "Cyclingnews",
         "sourceUrl": ""
-      },
-      {
-        "title": "Commentary: The UCI's new jersey idea is its best in years - Escape Collective",
-        "pubDate": "Mon, 21 Sep 2026 21:03:55 GMT",
-        "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBMTTZmSU9ueTMyaWhDbC1UZk5sUFFETlk1enltN3lZR2NoN1VsNlJHeVdwSmctNEtldmJmRVNadVBqRW1VcTF4eGtya0JCTUdmaHFuckVMZ0xUZlVZVEVwbkdJaXR5SWE5SjIxZGptZnlYOUpEcVhWS0h0UQ?oc=5",
-        "source": "Escape Collective",
-        "sourceUrl": "https://escapecollective.com"
       },
       {
         "title": "'I don't know what's happened. I'm a bit lost for words' - Ben Wiggins mystified by missing U23 time trial podium at Road World Championships",
@@ -300,20 +335,6 @@
         "title": "The next generation of specialists is expected to shine despite short course - World Championships junior women's time trial contenders",
         "pubDate": "Mon, 21 Sep 2026 18:58:59 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/the-next-generation-of-specialists-is-expected-to-shine-despite-short-course-world-championships-junior-womens-time-trial-contenders/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Road World Championships: Ryan Gal astonishes with under-23 men's time trial gold in Montreal",
-        "pubDate": "Mon, 21 Sep 2026 18:37:13 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/racing/road-world-championships-ryan-gal-astonishes-with-under-23-mens-time-trial-gold-in-montreal/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "'I exploded spectacularly' to 'dreaming there's a rainbow at the top' - Felicity Wilson-Haffenden reverses fortune on final ITT climb this year for women's U23 gold at Road Worlds",
-        "pubDate": "Mon, 21 Sep 2026 17:30:08 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/i-exploded-spectacularly-to-dreaming-theres-a-rainbow-at-the-top-felicity-wilson-haffenden-reverses-fortune-on-final-itt-climb-this-year-for-womens-u23-gold-at-road-worlds/",
         "source": "Cyclingnews",
         "sourceUrl": ""
       },
@@ -367,6 +388,13 @@
         "sourceUrl": "https://escapecollective.com"
       },
       {
+        "title": "Vollering and Key Rivals Rev up for Road Worlds Rainbows - Outside Magazine",
+        "pubDate": "Sun, 20 Sep 2026 10:12:48 GMT",
+        "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNV2c3QkdGRUFBQ3VfaTFOYWtHR3c5dTM2RGx5MlNvdnNhelh2YWVIQW84S3ZwbllpQTRkYW9rcmxkdk9LSnZ1NkF3V09OS2dkYldXLWRpSjlZUnl2OXQyeTJnSVRtTFNRYzZpUk81MEtXaEh2MUZZeGdZQ0VMYUk2THdDbWxhZVl6ajhRQg?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
+      },
+      {
         "title": "Villafañe and Wilson win LTGP round at Chequamegon - Escape Collective",
         "pubDate": "Sat, 19 Sep 2026 23:53:48 GMT",
         "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOZmQ2X05GRW43YmV0UmZ1bFNHSERkWGtvRmFWTG5GQXowUWpqU09VZmhFTU1WaDZ1RnlORGlDUmw0OUtVZVp4NHdadllpcnpvTzhYMm90a2kzS1JVUElLTXctYVJkcTYwNk56cTRxa1ZkUVJEUFB2OWhzdWhwNTFxdVA5RzlnREU?oc=5",
@@ -393,35 +421,6 @@
         "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQVjZHdjE3eGpGUXY1Q3JXSmJOU1dpd1pITzNPc0FsdXBIbVJncWNKV3BsWWlqMnVOT1ZaTkNqX0pORU1jTGZKX0NLMkxaUXQxYU9HbXZMaE5SOGFlMEZsb0xKaTJyYXZobW5ZQnlWeFFjSEQ2MXNxajJwWEx3NzFMbUEtMG56QkYtR0JESjN1Qld3bmR3Y1VkY0d2TGQ3Z2ppOXE4a0xCN1QxR3BSZ01KUENEQQ?oc=5",
         "source": "Escape Collective",
         "sourceUrl": "https://escapecollective.com"
-      },
-      {
-        "title": "Two Key Chances for Evenepoel to Make Huge Worlds History - Outside Magazine",
-        "pubDate": "Sat, 19 Sep 2026 17:35:59 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNM3VBT3AzVk5nQ1RuM2p3WGtydzhvLUdGaERjeS1aVHFIQlRvZm02NXNXN19fb3BtMWlQMjdDTlhsVDl6QzdRWlowaUVlOHhNYWpocnpmWGhGeFR1X0JhQkVTY0FHdllITThLb2V1OVFlalNteTRBcDBWSmg0dWpmMUVYWDlNSURRVXc?oc=5",
-        "source": "VELO",
-        "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
-        "title": "'Time to race with a team that can accompany me in my ambitions' – The Paula Blasi transfer saga is over, as rising star confirms done deal with new team - Cyclingnews",
-        "pubDate": "Sat, 19 Sep 2026 10:19:22 GMT",
-        "link": "https://news.google.com/rss/articles/CBMipgJBVV95cUxOcGdLMlpfNjRzYUIyU3BFRURnRU1oS0oxRElMbFR1TjA1Ni1EZFdLV0hQaDBwTy0xSVhEanFKcW5LRlJBa3cyQldEVk9odl9wcVoyeUlUZHN2cjZFMGcwMk1VekxaanZBbFQtWVhGWl9BckZwMWRZclROSHhlbHdGdlAtMlAycW0yTkhmRC1ybDZDbm9HZFRNZzBOTzQ5WmFpUUxPc1h3ajNIc3FMcjdBMjNLREQzNVNKcEotNW9BMjhpNUhXcFZVQzJXZTdrZmN1R2xNVzAxaWhobS1LQmdjR0VKcHBSVjJkbldjaXZtT0lORFVVc2NSd3ZXeHYwSW5XSHFCSURoNFhRMkpMRUZfMXdvV3ZxeGFTQkI0bFJIbVNvMXJNeFE?oc=5",
-        "source": "Cyclingnews",
-        "sourceUrl": "https://www.cyclingnews.com",
-        "type": "transfers"
-      },
-      {
-        "title": "'Everyone thinks they are Pogačar' – Pellizzari expects Worlds road race to blow up early - Escape Collective",
-        "pubDate": "Fri, 18 Sep 2026 12:50:50 GMT",
-        "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNNENMbXpxREZyYnhMcHRTanczRnFWX1kwWHdSdnRQZkVPd2RrcUowMmJzalJqVWw2YXV2Q1BkNVZHREhCQ3RLRGR5Q0NCT0ZLQnVlbEVMcldGU01majRiX3BJRklWcno4WDkzNUJueFFSbzN4bDZQd1ZJS1FSOEpwbFdHVkdsM3E2YXNmd0w1WHBNRzdXVjdubi1OakJZc05aU3JfRWNxVUF3cV8zSWlURmt2eUhvQQ?oc=5",
-        "source": "Escape Collective",
-        "sourceUrl": "https://escapecollective.com"
-      },
-      {
-        "title": "'Go back to the kitchen': Speaking out about naked Sydney Sweeney ad showed misogyny is rife, but we have an opportunity to move forward",
-        "pubDate": "Fri, 18 Sep 2026 12:49:50 +0000",
-        "link": "https://www.cyclingweekly.com/news/go-back-to-the-kitchen-speaking-out-about-naked-sydney-sweeney-ad-showed-misogyny-is-rife-but-we-have-an-opportunity-to-move-forward",
-        "source": "Cycling Weekly",
-        "sourceUrl": ""
       }
     ],
     "mtb": [
@@ -436,13 +435,6 @@
         "title": "Laurie Greenland RAW | Pure Speed in Wales - Jason_Schroeder - Mountain Biking Videos - Vital MTB",
         "pubDate": "Tue, 22 Sep 2026 17:08:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPc1AyMFVScjJRblpCT0dxZ21Lc2tEMXlyUTBhZGwzQW5LVWlUSnNEWlpBM2M3Y3dyOVRJYU8xdzZzSnJRVlhLSWxFOW0yWGJiVnh4YUhjaXdBWFRjVEpKeDFkX2VOQ01McmRHblk4cUEyNjdnUkJIcERxQmRSbHNhT3NB?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
-      },
-      {
-        "title": "Bike Checks - Vital MTB",
-        "pubDate": "Tue, 22 Sep 2026 17:04:17 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFA1NkVsSldZWUVlbGZJX1ZhZ3RPcVNsQVQ5OVF4a0tqeUpOczRxY3N3TW9lMGpHUDJSaExDVGN1R3VldTRKVnpsY29nSEJjN3ls?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
@@ -622,6 +614,13 @@
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
+        "title": "Tested: Insta360 Launches New Wide-Angle Lens and Cycling Accessory Bundles for GO Ultra - Vital MTB",
+        "pubDate": "Thu, 17 Sep 2026 12:00:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQT2h5aHd2bWlKUWlhbnliVUZ1US1YcU5kdVRJaTk0U0hwQWI2OXFYSm1sMjExeEEzLXBFVWhsczduYXViN1lsNDFodkctX2xBdHhVUEFoclUxZWljcTBsQnZmbzRxWWVYeWZGMDhqLS1tbmdBQWR2SjZxTFhOMndHZ1pVVU5OTi1hWXFfNjZUVEVJd0RlMTZkTWJ1Q1lsSHhjTXluNnUtdVNsSzZkT0o0TGxsVUpWLVFa?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
         "title": "2025 Kona Process 153 CR mullet MX on NOBL Ethos Enduro - Vital MTB",
         "pubDate": "Thu, 17 Sep 2026 07:58:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPZ0l1NHlFNWhJS0JyS2ttZGNXMnpETFhFS1FhcDdWY3Jxa0drcl9UNXhTQ2VrMER2N29iUVRQVXpyRHdDN1B3TU9Sa2M3dEt1V0JRRmFxTXd0dTZ0Rl96dnRrVVhNeDIzaU1wb3ppRkRQakpSaElhOHRsYWtkY1JCNm9FRnhaVHRYZWFEdkxPTXhXS3RoOTRlNTdn?oc=5",
@@ -638,7 +637,7 @@
     ],
     "cyclocross": [
       {
-        "title": "Results Coupe de France Cyclo-Cross #5 - Saint-Prouant 2026 - cyclocross24.com",
+        "title": "Results Coupe de France Cyclo-Cross #5 - Saint-Prouant 2026 - Cyclocross24.com",
         "pubDate": "Tue, 22 Sep 2026 16:19:24 GMT",
         "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBrUTZjR2FsUU9TVjJ5dmVHNWp6dkx6dGg2TW1QV08wdzNkVzZRYktSd0FaZjYzMFdrM2RMcEhMTWNJSEhnSnFkWk5XbVc?oc=5",
         "source": "Cyclocross24",
@@ -659,70 +658,70 @@
         "sourceUrl": ""
       },
       {
-        "title": "Results Trek USCX #2 - Rochester Cyclocross 2026 - Women Elite - cyclocross24.com",
+        "title": "Results Trek USCX #2 - Rochester Cyclocross 2026 - Women Elite - Cyclocross24.com",
         "pubDate": "Sun, 20 Sep 2026 13:02:58 GMT",
         "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5hcHJ4T2xjNzR3eVpReHFQS2hCdzBHeW1CWFFlX0ppa0hVQ1dRY3loSE5Bck1ybmNxZk8tSnB0b0J6dHRvMWU0bjFlYWQ?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
       {
-        "title": "Results International Cyclo-Cross Bad Salzdetfurth #2 2026 - Women Junior - cyclocross24.com",
+        "title": "Results Trek USCX #2 - Rochester Cyclocross 2026 - Men Junior - Cyclocross24.com",
+        "pubDate": "Sun, 20 Sep 2026 13:02:55 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBkOTBaRGc2UDd0bFdkZHZ1aGxWYmVuaDZhN1pCbDl6SGZqLWd0ZVRmcW85bG1WUnQza2tBRUpmQjljZngyeERxVm1PR0I?oc=5",
+        "source": "Cyclocross24",
+        "sourceUrl": "https://cyclocross24.com"
+      },
+      {
+        "title": "Results International Cyclo-Cross Bad Salzdetfurth #2 2026 - Women Junior - Cyclocross24.com",
         "pubDate": "Sun, 20 Sep 2026 05:04:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1lWDlpX1FXWmpwRWZIYWh2VXlVQ2lUQ1pXYV9hRzFQSzBJc2I1TDVKeFlIMjNiX0RQSGpZWEstVEphVEhmNGNYaHdyS1o?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
       {
-        "title": "Results International Cyclo-Cross Bad Salzdetfurth #2 2026 - Women Elite - cyclocross24.com",
+        "title": "Results International Cyclo-Cross Bad Salzdetfurth #2 2026 - Women Elite - Cyclocross24.com",
         "pubDate": "Sun, 20 Sep 2026 05:03:58 GMT",
         "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5lZ24yRWpXZ0V6d0IwV1ZVc19uVk90bEpqSHNzZnh3dFItdEQ5LWtBSjNka2hBd0JIdDJWMDRmQkREakdsbDB5SGNyMTk?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
       {
-        "title": "Beer Van Beurden - cyclocross24.com",
-        "pubDate": "Sun, 20 Sep 2026 00:49:16 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1hbVVLVzUyWUNxOGRnNVljMEJ1RTlRaEZTZnNwVVRjZXMzQ3hJNmpGdDVzZlFzbVVXOFdvSThfWWRGZ1lqaENFSUtISHJNTmlJcHRENXpFRnFtUEhB?oc=5",
+        "title": "Cora Cusack - Cyclocross24.com",
+        "pubDate": "Sat, 19 Sep 2026 23:42:51 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1KdERWWGRMNEJ2TDJWQkpxTUdjZXQzS2xPUnZHMjNkajh6Z2kzZVNCeFBsQ1RlM3VxWkJfYndxdTVBVGJ4blJYaVl0YkoxcTlUQ2IwbUhB?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
       {
-        "title": "Zoe McGuire - cyclocross24.com",
-        "pubDate": "Sat, 19 Sep 2026 21:04:02 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1fSkFKdzJUYUtYSHlrekNVZllDams3YWNMend0NkZQY0oyWHktUHJGWXBUbFA5Yi1KZ3doeFZYQUVoOEVheW40QW53UVlfUW1TOGczTUdR?oc=5",
+        "title": "Loic Glücklich - Cyclocross24.com",
+        "pubDate": "Sat, 19 Sep 2026 20:01:12 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1hdG9jbTVudWd3QWtqdDFiR3M3TjNUZkN1b045VHhabGwzVzd6REhIVHVycHhFb0taTGJtMl92OUNuNDlxUUJ2V19FZ2tveC01bExJSGd0UFVfZw?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
       {
-        "title": "Nikolai Ivakhov - cyclocross24.com",
+        "title": "Nikolai Ivakhov - Cyclocross24.com",
         "pubDate": "Sat, 19 Sep 2026 15:08:22 GMT",
         "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5VMmtwU3I3cERhemdvX2dzSXdmelA0ejQtVGhDTWwtWWE2cGlGT0FkbnFoZTJkX1ZjMWt5aHFfeU1xb3NWOGNxU0NGWThuNXB5ck9OUWZaTHZkR0k?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
       {
-        "title": "Johann Binder - cyclocross24.com",
-        "pubDate": "Sat, 19 Sep 2026 15:08:10 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1LSFU2NVVGUzg3MkFSVU1TVGFGNnlnQ1VMaWRYdl9EZG5BUlhZaXYzV2QyNW1VZ1RPamk3NGtyWGg2Ulc0b0UtX1hGZnFWM01MNFZYMTN4ZEw?oc=5",
+        "title": "Thijmen Hendrikx - Cyclocross24.com",
+        "pubDate": "Sat, 19 Sep 2026 15:07:18 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE0tRS1tQmxzWUxRNHk5OXpxcnM1QnJ5dUZ6RDc0eGNza0tTN3ZuMkUtUHZyS1FGdVFGY1YweFNHQzFjZDdMUU9JbVI1UjhJT2wyc1daVGphclU1VGpN?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
       {
-        "title": "Lotta Huybrechts - cyclocross24.com",
-        "pubDate": "Sat, 19 Sep 2026 13:44:09 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE50Y0txWHBDeXFRVk0zOHR5UjFBWFQ5RHN0Ylc2d003cFJEbXRzV2h3X01zLWpLSnlNcmc0UHpIWng1TW1yNzBzZDVqRHdzQUVVVVFrbElMZ0pNbWZz?oc=5",
+        "title": "International Cyclo-Cross Bad Salzdetfurth #1 2026 - Men Elite (C2) - Cyclocross24.com",
+        "pubDate": "Sat, 19 Sep 2026 07:00:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE8zV0tRa3pnWnEzMmNrZktXZ1BxRFhpcnExQzB2MkJ3c1pmcWZVU095VE1lWlNvVmZ3aUdXOU1ldTFTdzhENkVnMEw2OG0?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
       {
-        "title": "Results Trek USCX #1 - Rochester Cyclocross 2026 - Men Junior - cyclocross24.com",
-        "pubDate": "Sat, 19 Sep 2026 13:04:18 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1NNF80V2t2V3c5dS1McVRWZk1oWXg3WmFjdHRabUZVR1h0Q1lWVFFyVXlfX1Z6MVFFTDZXLVdUUjlrTTlrZEJHeEpIUUI?oc=5",
-        "source": "Cyclocross24",
-        "sourceUrl": "https://cyclocross24.com"
-      },
-      {
-        "title": "Results Hardwood Cross 2026 - Men Junior - cyclocross24.com",
+        "title": "Results Hardwood Cross 2026 - Men Junior - Cyclocross24.com",
         "pubDate": "Sat, 19 Sep 2026 05:05:53 GMT",
         "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1Ya19FU0pMWk80a3c4c1l6M21LdmZoaEdaUU9vY1huY2pTS0hacUF0d2otazB6MHd2ZkdNazNPTjN3ZVRVSDlvMmhrTzk?oc=5",
         "source": "Cyclocross24",
@@ -736,13 +735,6 @@
         "sourceUrl": "https://www.cxmagazine.com"
       },
       {
-        "title": "Three-time cyclocross world champion Fem van Empel returns from hiatus as a teammate of Demi Vollering! - CyclingUpToDate.com",
-        "pubDate": "Thu, 17 Sep 2026 21:03:06 GMT",
-        "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPSTlFa2hsOW1heEpPdDBuUTRRR1JOdXR0amZqNlZMYXJ0SVplVG8xbzF1dm1aenBRS1hTa192SmV2dGx4c3hJOTJ1OE1BazRqYUlvSENuanFWNGoxd2lQdnczZHlWb2h2VTc3LVZ0TWxrblhTVWVFMl9WMmNEaWVHSk12M1R4V1hBTUdWVEtvNUhPQzcwUFFBSVNuamhLN0g1M1pNWF9tLXYtNHdSTWsxUDFfLXIzRm1GZFVLZnFuZVo0YWx2UVk4YzNUNFNGaEFpTjZGcA?oc=5",
-        "source": "CyclingUpToDate",
-        "sourceUrl": "https://cyclinguptodate.com"
-      },
-      {
         "title": "Infestation Gravel Returns for 2026 with Two Courses, Affordable Entry Fees - Cyclocross Magazine",
         "pubDate": "Thu, 17 Sep 2026 01:53:37 GMT",
         "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNYy1GTU4ySC02ZUlfaGE0TnBMS0xVekZJcGdSLUhtdHFvNUV4d09aakJINWVPVHM3eXYyUE9PaWQ2czZQYjl4RUozMHV3TGNPRG9MYU85enFvZVJGVDZTZ1ZmSEY5OHQtc1g3amZsZDVuc2dGcDk2eDBYX0RrNVVDTWFHZ3ZsZjZlUE5jOWJlTUE5bVJXTFln?oc=5",
@@ -751,6 +743,13 @@
       }
     ],
     "gravel": [
+      {
+        "title": "The Factor Elara is as racy as it gets: How does the fastest gravel bike in the wind tunnel perform in the real world?",
+        "pubDate": "Wed, 23 Sep 2026 09:03:42 +0000",
+        "link": "https://www.cyclingnews.com/bikes/gravel/factor-elara-review/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
       {
         "title": "Vision’s new race-proven gravel wheels are aero, wide and cost less than £1,000 - BikeRadar",
         "pubDate": "Tue, 22 Sep 2026 15:30:00 GMT",
@@ -780,20 +779,6 @@
         "sourceUrl": "https://www.bikeradar.com"
       },
       {
-        "title": "UCI Gravel World Series: Cole Davis and Laurel Quinones conquer the altitude to claim commanding wins at Mammoth TUFF - Cyclingnews",
-        "pubDate": "Sun, 20 Sep 2026 12:52:33 GMT",
-        "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNVTFvaFVKaWRWQnZVT2UzYkVUbzZMQ0JPMS1QR0NTUlYzREVrcjUtWkFHdnRTTDI1eW5zU3Y0TTBKOXFpc3RBLUlqTEpTNEFWSXoxTTVtQVk3aUZWTzhNb2h0a1pTSzlIRUpHNVp0VHNKYUFBcm93VDlFVklJWHJsWnZGTDR1ZG9BblNieHpjQ01vemR3OGR2T3NiQVRpMXhUM0xtdWVoVnVDWEp1ZHRxeUVOV2tqOVM2ZElDbWRKcnpTNkNyWUZxUl8yNGhhaGdwTDlWRngwTVpTbUJzWGozYWRjdU5RMHlPcVMxaWk5T1M1WE9xVVp3?oc=5",
-        "source": "Cyclingnews",
-        "sourceUrl": "https://www.cyclingnews.com"
-      },
-      {
-        "title": "UCI Gravel World Series: Rosa Klöser drops Marianne Vos to take solo victory at Sea Otter Europe, as Leon Kaiser sprints to win men's race - Cyclingnews",
-        "pubDate": "Sun, 20 Sep 2026 09:33:55 GMT",
-        "link": "https://news.google.com/rss/articles/CBMikAJBVV95cUxQc1JCa1hqaThETFVYNVJsWm9ELVNfdGJTT3J2M0hza1gxQjE1MEtWbUcwTThFX2tDNmdGR2pWd2lQSGxiQmp5WVFUTS01UkhoV0ZiLVFQcU5rSHdIMm9WdldOLVI2SDN6UktGUVhUcGZJbE9vOGNyODlKclZNcmdMNlVKVm9lbzc2TkFTT1BqLXUzOXIzSklQS2ZZZXFRSXY2SEF0eHBlSGY1OGNKYU9sanhSV1hsNFZUdHlMODQyWnA2TlJFbklRQ1czbGYyZGN6VTFkUjJ0R0o5bEY3UmQ4Z2hScmczQWNoMERKVHpuNHBDUUVFRWZ3eldheHI0TDZsZ0Uyd0FFMHBZSzg3Q1JHUQ?oc=5",
-        "source": "Cyclingnews",
-        "sourceUrl": "https://www.cyclingnews.com"
-      },
-      {
         "title": "Sea Otter Girona gallery: New 32\" and gravel bikes - Escape Collective",
         "pubDate": "Sat, 19 Sep 2026 13:10:33 GMT",
         "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOUGxZT3lSc3RpNkRza1NUUWlLb0hMRFpPLXhnMkR0YmoyZHpRTlJlczRyOFNwNXpTYTVKRU9LemRiWXJ5THdld2ppQ2diQThzZy1lYm9jM0RnaGt6XzVLTl8ybDdZM2hsanJ6eVI0V0RPN3NhMXNycjdIQnk3bWI2SGgycEVXRGc?oc=5",
@@ -806,13 +791,6 @@
         "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOSWFNSHQtaG92RlVXNWN3RHFHTG9PQmVYajh4MU9hMmduNWltcGpjUHVXOEF6N0RkMVAwa2x0U3JTVG1jQWRmRTNRMlRUOGx0bjBSUmhjY3VKdC1GSXlSYzhhbHFTbVIyR2p3LUVGcXdFWnlkNHk4eVFzVVl6ZUlDekJTX011VS13R3lLcjVrUXBna2dXSVJkWF9zZDZucDQ4cERRZWtTb25QTXk1THJhOWFmVG84SFpUdW41dFVsdnNUZjh4Y01nX3d5TzQyUzJt?oc=5",
         "source": "Cycling Weekly",
         "sourceUrl": "https://www.cyclingweekly.com"
-      },
-      {
-        "title": "Wind tunnel tested: Who makes the fastest deep aero wide gravel wheels? - Cyclingnews",
-        "pubDate": "Fri, 18 Sep 2026 15:09:13 GMT",
-        "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNLXRSMV85Z2x5MWJFb3V0RUlxc3FsY3pKSnBrbk5MM0ZPaFBhX2tVZmMwd19nTXVMRS1BLXo4bFBiWFNEd3J1c2t2LWZOcm1TYlFZcU1hSjdnUXFMUDZaTm94RGFEa3BKUWdMRWdQTlV0SUE5YVVNU0ljSGZUakx3WWllQjlBeUNQYnI1NTR5SVFaOWxwcjBxNmhLY3g1Ynk2dmhXVkFCNk9BcWtMelhXMmlwLUlFNzFweE9GQ3pzQjdHeEkzQUlTdVpYVUw0Mk9s?oc=5",
-        "source": "Cyclingnews",
-        "sourceUrl": "https://www.cyclingnews.com"
       },
       {
         "title": "Wolf Tooth Announces Road, Gravel, & Mountain Bike Hubs",
@@ -834,20 +812,6 @@
         "link": "https://www.gravelcyclist.com/bicycle-tech/visiontech-sc-45-sl-i30-wheelset-built-for-unknown-terrain/",
         "source": "Gravel Cyclist",
         "sourceUrl": ""
-      },
-      {
-        "title": "'He's saying cancer. I start bawling my eyes out' - Declan Irvine's journey through diabetes, a life-changing disease and the unstoppable path for third UCI Gravel World Championships qualification - Cyclingnews",
-        "pubDate": "Wed, 16 Sep 2026 21:05:24 GMT",
-        "link": "https://news.google.com/rss/articles/CBMi4AJBVV95cUxQTGd2WDNvR1VqRkQ0Y2tZYU5lQWhZMTZOSlFEU3RucjZrc0xBZ00xTHU4V21KVlY5VUExMk5OQXdqcWUtek1nWmozMjJveWRqTUdtRzVtWnlXdmpZcHEzV2NSUzI5a00wTGtENVRWY1lfY3RrTUIzSURBQm96S1NNT0ZxeDFlRHVfT1hKS2tSR2diRFlKLWFSNFk2VlJIbG9GV09kbGJHX2NjRE5BemJHYmxrZHV3YlcxbUVvYkhKVktnSlhXeng5V1RVN2JOOVRKN0Znc1I0YnlWX1Q4S21VZ2hKR09rSnJlUUlNRzdITmlIX2laZVo0Y05PX1p1Y05BRTE1anlvc1FvOGVET1hyY1JsWjFCanR1cGV5SElGRERsdFBlUUQ3UzctcVlFeS1SWDBUM0lneTNwR1FObXdLeGYyMUtUNFVNQ1RHN3p1TjBkWjJiQnZzdzJWd3k0WDEx?oc=5",
-        "source": "Cyclingnews",
-        "sourceUrl": "https://www.cyclingnews.com"
-      },
-      {
-        "title": "Campagnolo Bora X Wheelset review: A wonderfully balanced gravel race wheelset - Cyclingnews",
-        "pubDate": "Wed, 16 Sep 2026 14:57:12 GMT",
-        "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNUHlqVTRrYi1QaGVsTkFwdWpqdlRoYXVYd1JrYWFMeDl6aUNNOW9lUTlhdmNWQnpKOW5kR0pWWWlicGFlTDJLM2QtcW1HUFZPV19IS19VYzhFcFp6aDJjcnZiRVhnOHdqbUFoanhaYzlJTC1MMXVLU3N1WVRPY1czQTM2WWt6cTAxeXJGX3JFNkViUE1KR0kyUXloOC1mZHVX?oc=5",
-        "source": "Cyclingnews",
-        "sourceUrl": "https://www.cyclingnews.com"
       }
     ]
   }
