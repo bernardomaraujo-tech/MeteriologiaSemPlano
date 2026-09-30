@@ -1,7 +1,35 @@
 {
-  "updatedAt": "2026-09-30T19:23:00.920Z",
+  "updatedAt": "2026-09-30T23:52:37.836Z",
   "disciplines": {
     "road": [
+      {
+        "title": "\"I wanted to finish on a high, and I feel like I did\" - Michael Woods promises his second retirement will be final",
+        "pubDate": "Thu, 01 Oct 2026 01:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/i-wanted-to-finish-on-a-high-and-i-feel-like-i-did-michael-woods-promises-his-second-retirement-will-be-final",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"Remco's heart still lies with Quick-Step\" - World champion's father confirms there's no longer bad blood after 2026 departure",
+        "pubDate": "Wed, 30 Sep 2026 23:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/remcos-heart-still-lies-with-quick-step-world-champions-father-confirms-theres-no-longer-bad-blood-after-2026-departure",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Bahrain Victorious sprinter provisionally suspended by Italian anti-doping authority",
+        "pubDate": "Wed, 30 Sep 2026 20:00:07 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/doping/bahrain-victorious-sprinter-provisionally-suspended-by-italian-anti-doping-authority/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "“If there’s women’s football, they go all out with cameras... even though it’s unwatchable” - TV treatment of Demi Vollering’s World Championship triumph sparks fury",
+        "pubDate": "Wed, 30 Sep 2026 21:30:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/if-theres-womens-football-they-go-all-out-with-cameras-even-though-its-unwatchable-tv-treatment-of-demi-vollerings-world-championship-triumph-sparks-fury",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
       {
         "title": "“With Giulio, we can aim for the top step of the podium” - Christian Scaroni admits World Championship regret after convincing Ciccone to join European title fight",
         "pubDate": "Wed, 30 Sep 2026 20:00:00 +0200",
@@ -193,27 +221,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "“It’s unfortunate because he was going really well”: Leo Hayter’s comeback halted by pericarditis ahead of Tour de Langkawi",
-        "pubDate": "Wed, 30 Sep 2026 09:00:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/its-unfortunate-because-he-was-going-really-well-leo-hayters-comeback-halted-by-pericarditis-ahead-of-tour-de-langkawi",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "UCI World Tour Teams Ranking Update: UAE stay clear at the top as Worlds boost Jayco AlUla and shake up relegation battle",
-        "pubDate": "Wed, 30 Sep 2026 06:00:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/uci-world-tour-teams-ranking-update-uae-stay-clear-at-the-top-as-worlds-boost-jayco-alula-and-shake-up-relegation-battle",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "“Who was the first one there to hug him? Mauro Gianetti!” - Lance Armstrong turns on UAE boss after Brandon McNulty’s rainbow triumph",
-        "pubDate": "Wed, 30 Sep 2026 05:50:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/who-was-the-first-one-there-to-hug-him-mauro-gianetti-lance-armstrong-turns-on-uae-boss-after-brandon-mcnultys-rainbow-triumph",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "The Hottest Tech Trend in Pro Cycling? Shoe Laces. - Outside Magazine",
         "pubDate": "Tue, 29 Sep 2026 23:52:48 GMT",
         "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxON0hOTlI1TktxbEJvZ1pUOHk5aXVVdWFTc0ZKR3pJZG9QS1BqWGJYckw2Ml9jR3B6UGJLTnhtQ2hNemJPalgzRmFyRVBwT3ZCM2JZeTFEcC1KWnMtYnRQUlEwaXR0XzFPemNvMUxiTzNWWmZmZFVQU1VpYjFYTTFTdnM0bHRZM3FqZk1yTDVBeUlJbnM?oc=5",
@@ -254,6 +261,13 @@
         "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/it-wont-happen-uae-team-emirates-xrg-management-insist-that-tadej-pogacar-is-not-racing-the-european-championships-this-autumn/",
         "source": "Cyclingnews",
         "sourceUrl": ""
+      },
+      {
+        "title": "Kasia Niewiadoma Signs with Lidl-Trek in Move That Will Reshape the Women’s Peloton - Outside Magazine",
+        "pubDate": "Tue, 29 Sep 2026 15:31:25 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQTS14bjlMZ1Iwb2h1X1d3bDJOLUJfRmZSXzZETVFhZVotaVJTcG1uTHdVaG9EZ1BiMjVQUzZzb2FJanFSczRDcjhhNzNaTHpLdHZtZG0tZGZacHB3Uk9vRFVhdVQ1SmlQM2RwRHpkTmRwamZIcWNLNXFaUEFJc1ozbHBVWWNaTW5Ob3c?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
       },
       {
         "title": "Kasia Niewiadoma-Phinney swaps Canyon-SRAM for Lidl-Trek after nine years in major women's peloton transfer",
@@ -334,13 +348,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "Emma Langley and Matt Wilson win inaugural Pulaski MTN-X Gravel Bike Race in Virginia",
-        "pubDate": "Tue, 29 Sep 2026 08:23:19 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/racing/emma-langley-and-matt-wilson-win-inaugural-pulaski-mtn-x-gravel-bike-race-in-virginia/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
         "title": "Worlds gallery: A week on top of the world in Montreal - Escape Collective",
         "pubDate": "Mon, 28 Sep 2026 16:49:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPVktDVVk3a0dwaHFpYUkxNzJ0Nm90VVVsVmRHZmhxYWJ5d0F1aW82REVHbzNFOHZfZi1TZ2pJc0lHQTN0QzNWemdPVi1IVVJQZEdLXy1ZeVNoaVEtUTlxZk0wdTRzRGpNTHN2U2Vic0Etd0ZWT09Db000MFFoX3pXNGtxSjZ3b3MwZHhZ?oc=5",
@@ -416,18 +423,11 @@
         "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE16YWZxdHEtenJPMWcxT1JEYWhGV1dPN24yY1BZXzZiUlFpaHRUMVdURTRlXzRqdE05NzhsbW5kU3k4ZlZsRE41Zk81UGNET0ZNTFZrTTVHOEo2cFdGUGIzZXNvZ09fVzQ?oc=5",
         "source": "VELO",
         "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
-        "title": "The most outstanding characteristic of the ride-leader is being bad at navigation.",
-        "pubDate": "Sat, 26 Sep 2026 07:35:00 +0000",
-        "link": "https://www.cyclingweekly.com/news/the-most-outstanding-characteristic-of-the-ride-leader-is-being-bad-at-navigation",
-        "source": "Cycling Weekly",
-        "sourceUrl": ""
       }
     ],
     "mtb": [
       {
-        "title": "Video: Tayte Proulx-Royds Journey to UCI World Cup Circuit in 'Epic, Simply Epic'",
+        "title": "Video: Tayte Proulx-Royds’ Journey to UCI World Cup Circuit in 'Epic, Simply Epic'",
         "pubDate": "Wed, 30 Sep 2026 00:00:00 PDT",
         "link": "https://www.pinkbike.com/news/video-tayte-proulx-royds-journey-to-uci-world-cup-circuit-epic-simply-epic.html?trk=rss",
         "source": "Pinkbike",
@@ -483,6 +483,13 @@
         "sourceUrl": ""
       },
       {
+        "title": "Prototype Steel Chromag Freeride/DH Bike from Whistler - The Hub - Mountain Biking Forums / Message Boards - Vital MTB",
+        "pubDate": "Tue, 29 Sep 2026 17:37:52 GMT",
+        "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPdGx4OGVnU2U2dGduUzdDWTItMlZKS0ZXOVZRX0ltN2dKbWp2LXBmay0zaDJ2dGkzZC1lYzFmR3dRSHdlUW40SzFQMTN1eUplalQyTHlnNjFzc1NVWXg1RzAyNzNDSllwRkhLY3N4QkxfTFh3TVhFcEJIR3pzZGlVTXZQdGtjcVlrZFhDZg?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
         "title": "10km OF DESCENDING IN 1 DAY x NINO SCHURTER! \"ROAMING ON 2 WHEELS\" - We Explore the BIKEKINGDOM - Vital MTB",
         "pubDate": "Tue, 29 Sep 2026 14:32:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxObjRpeDBoXzl5eUx0RDhyRXA2OXk5Wnp3M1o1T1NtdHBIZHlPX3dUbjVSSjFXMVIxRkpLc0Zaa3NtWkc3N1dTS0pkTnQtQXduN1VYMW85S1g5VmpMSEhDblctaUNYRnc0WGZ2NVBob0pCOURmQkktY3hxZnVkYmNEZi1zWjN5M3VpVDVvSFRvQy14R0EyQ0VSemJwMGpHTVV6NEhTN1dkdXBaR0YyOTBEZ1JsVnN0MUk?oc=5",
@@ -493,13 +500,6 @@
         "title": "What bikes relaunch in 2027? - The Hub - Mountain Biking Forums / Message Boards - Vital MTB",
         "pubDate": "Tue, 29 Sep 2026 11:35:30 GMT",
         "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBULUR0cmhYYjFBUWRZXzBPWmNPaWxIdERrZHpYMG9jdnVCcVBZRk9ORkxoeG5vLWR0X19YMzk4MDRhbm9vaS1xZmI4MlJzcHhJdEJBbFJkbXUtbUFfZlRIR2RxemhySjBiVmU2VA?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
-      },
-      {
-        "title": "Reverse Components Launches Machete Stem Line - Vital MTB",
-        "pubDate": "Tue, 29 Sep 2026 09:34:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQN0pvanhlemw2aHlqdWQ1bElyUmdLOTY0S0ZQdVY3X1phcTFRS1FaczNyNGtlQWNfTEo0UmxKeS16QWFxamdDWkpvZzV1ZkxLbVV3MGlYaENOUDZjaFhXNW1LbllGYjZJYktPcWQ5YTlDcGlxbXpscTV4RHFvR2JEQ19BWk1MSlBlU3dTbFJUMW5Mc1E?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
@@ -725,7 +725,7 @@
     ],
     "gravel": [
       {
-        "title": "Fizik Ferox 2 gravel shoe review: a decent value gravel race shoe - Cycling Weekly",
+        "title": "Fizik Ferox 2 gravel shoe review: a comfortable gravel race shoe - cyclingweekly.com",
         "pubDate": "Wed, 30 Sep 2026 11:00:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOLTR6eVgxbmlpTmVfUnBMNjUxWGlwdllaRTdod3VueTNSaXdtZmd1T0FDa2d0MVZEdTNpR0MzTENoWWNNQzNBaV9DNlQtc0RoTjUycXBsNVBjbVp4M1AyY2xpMVdGeUtUcmx4NkozUXpldVZxQjB1UTd4MFJMV3BPdzNHRDVDa2lGNHQwTm5PeGtQazhjSVVZbEktdlZTcjNiMER4Wl9lbmtObzBsbnZPZnFQZk0yQQ?oc=5",
         "source": "Cycling Weekly",
@@ -774,7 +774,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "Best gravel bikes 2026: extensively ridden and rated by our experts on a wide variety of terrain - Cycling Weekly",
+        "title": "Best gravel bikes 2026: extensively ridden and rated by our experts on a wide variety of terrain - cyclingweekly.com",
         "pubDate": "Fri, 25 Sep 2026 10:11:59 GMT",
         "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQdTJucjdxc0NxZHBuZ3VsSHU4Ty0zZlp1bHl6LUZkT2paeE9GMFdEWnJPLWZscGxOSlAtMGc0RFhjZ0Y2YmxTYXM4cVc4TFR3S2xHT010ellvUGdJdk9maUkteDh0VGpqYWJmbVJwTjdyRnBYZWNXcllqOE1rU0JQU2JDY050aDNDNndNdGU3LXZRMEZNclppLTdDUQ?oc=5",
         "source": "Cycling Weekly",
