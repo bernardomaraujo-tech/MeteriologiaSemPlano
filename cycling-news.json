@@ -1,13 +1,139 @@
 {
-  "updatedAt": "2026-10-04T06:57:57.043Z",
+  "updatedAt": "2026-10-04T13:13:06.453Z",
   "disciplines": {
     "road": [
       {
-        "title": "Piganzoli Scoops Giro Dell’Emilia as McNulty Debuts Rainbow Jersey - Outside Magazine",
-        "pubDate": "Sun, 04 Oct 2026 05:03:45 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOZUVNckcxYlBpcUU5b29EVDhmR3AxZklBMGtGWGIyYWNnSVZlVENaVE1iQkhzUkpzZ1lEeUM3eFFVaDdONXlIeDUwRGFnckRvRTRQQUhyVUxwd2dHTHE4VjRBdno2RWo0TXl4Y0FTUEtSb1VIRnd5WllzUTAyaWZSa1dXWGxDWXEzSTViWWYwSmxOZ2dwMjhwZGczSEpBOHVGS01OU3pPa2s?oc=5",
-        "source": "VELO",
-        "sourceUrl": "https://velo.outsideonline.com"
+        "title": "\"I did get the impression he had put on a little weight\" - Patrick Lefevere on why Evenepoel hasn't performed on Montréal road race",
+        "pubDate": "Sun, 04 Oct 2026 14:38:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/i-did-get-the-impression-he-had-put-on-a-little-weight-patrick-lefevere-on-why-evenepoel-hasnt-performed-on-montreal-road-race",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "“I didn’t expect it, it’s incredible” - New European champion is the daughter of former world champion and Tour of Flanders winner",
+        "pubDate": "Sun, 04 Oct 2026 14:30:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/i-didnt-expect-it-its-incredible-new-european-champion-is-the-daughter-of-former-world-champion-and-tour-of-flanders-winner",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Will Primoz Roglic realise a career-defining day? - Slovenian declares good form before European Championships start on home turf",
+        "pubDate": "Sun, 04 Oct 2026 14:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/will-primoz-roglic-realise-a-career-defining-day-slovenian-declares-good-form-before-european-championships-start-on-home-turf",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"I think it's pretty straightforward\" - Evenepoel not letting illness speculation skew his bid for historic European title",
+        "pubDate": "Sun, 04 Oct 2026 13:15:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/i-think-its-pretty-straightforward-evenepoel-not-letting-illness-speculation-skew-his-bid-for-historic-european-title",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "'I was never worried about anything' - Vollering converts Dutch dominance into yet more championships success in Slovenia",
+        "pubDate": "Sun, 04 Oct 2026 11:02:35 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/i-was-never-worried-about-anything-vollering-converts-dutch-dominance-into-yet-more-championships-succes-in-slovenia/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"Sometimes you have to believe in the crazy stuff\" - Mads Pedersen declares himself a European Championships contender despite brutal climb",
+        "pubDate": "Sun, 04 Oct 2026 12:44:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/sometimes-you-have-to-believe-in-the-crazy-stuff-mads-pedersen-declares-himself-a-european-championships-contender-despite-brutal-climb",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "European Championships Ljubljana men's elite road race 2026 preview, profile, favourites & predictions - Will Evenepoel be beaten in Slovenia?",
+        "pubDate": "Sun, 04 Oct 2026 12:04:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/european-championships-ljubljana-mens-elite-road-race-2026-preview-profile-favourites-predictions-will-evenepoel-be-beaten-in-slovenia",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"It was a more personal decision of him\" - Slovenia national team coach claims Pogacar European Championships decision was personal",
+        "pubDate": "Sun, 04 Oct 2026 12:02:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/it-was-a-more-personal-decision-of-him-slovenia-national-team-coach-claims-pogacar-european-championships-decision-was-personal",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "LIVE European Championships Elite Men’s Road Race 2026 - Clash of the titans with Remco Evenepoel the man to beat?",
+        "pubDate": "Sun, 04 Oct 2026 11:30:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/live-european-championships-elite-mens-road-race-2026-clash-of-the-titans-with-remco-evenepoel-the-man-to-beat",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"You could just give them the middle finger\" - Can Remco Evenepoel decisively silence criticism at European Championships?",
+        "pubDate": "Sun, 04 Oct 2026 11:30:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/you-could-just-give-them-the-middle-finger-can-remco-evenepoel-decisively-silence-criticism-at-european-championships",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "UEC European Championships: Azzura Ballan masters a four woman sprint to take the Junior Women's title",
+        "pubDate": "Sun, 04 Oct 2026 09:10:11 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/uec-european-championships-azzura-ballan-masters-a-four-woman-sprint-to-take-the-junior-womens-title/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Results women's junior European Championships road race 2026 - Azzurra Ballan takes breakaway glory as world champion misses out on decisive move",
+        "pubDate": "Sun, 04 Oct 2026 10:59:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/results-womens-junior-european-championships-road-race-2026-azzurra-ballan-takes-breakaway-glory-as-world-champion-misses-out-on-decisive-move",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Cycling bids farewell to a legend - Nairo Quintana rides last race after stellar career including two Grand Tour wins",
+        "pubDate": "Sun, 04 Oct 2026 10:30:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/nairo-quintana-bids-farewell-to-cycling-the-colombian-legend-who-won-two-grand-tours",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"We are organising a birthday party and the birthday boy isn't there\" - European Championships boss gutted Tadej Pogacar won't start race",
+        "pubDate": "Sun, 04 Oct 2026 10:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/we-are-organising-a-birthday-party-and-the-birthday-boy-isnt-there-european-championships-boss-gutted-tadej-pogacar-wont-start-race",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "'Rookie mistake' leaves Elisa Longo Borghini outside the medals in the women’s elite road race at the European Road Championships",
+        "pubDate": "Sun, 04 Oct 2026 07:58:49 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/rookie-mistake-leaves-elisa-longo-borghini-outside-the-medals-in-the-womens-elite-road-race-at-the-european-road-championships/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Lennart Jasch declares arrival as GC force with Le Tour de Langkawi overall victory, Matteo Malucelli claims stage 8 sprint to deliver three stage wins for 2026",
+        "pubDate": "Sun, 04 Oct 2026 07:52:08 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/racing/lennart-jasch-declares-arrival-as-gc-force-with-le-tour-de-langkawi-overall-victory-matteo-malucelli-claims-stage-8-sprint-to-deliver-three-stage-wins-for-2026/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Who won the last five European Championships? - Evenepoel, Roglic and Ciccone battle to add name to the history books in Slovenia",
+        "pubDate": "Sun, 04 Oct 2026 09:30:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/who-won-the-last-five-european-championships-evenepoel-roglic-and-ciccone-battle-to-add-name-to-the-history-books-in-slovenia",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "An Eddy Merckx team bike ridden in service of the great man",
+        "pubDate": "Sun, 04 Oct 2026 07:20:00 +0000",
+        "link": "https://www.cyclingweekly.com/news/an-eddy-merckx-team-bike-ridden-in-service-of-the-great-man",
+        "source": "Cycling Weekly",
+        "sourceUrl": ""
+      },
+      {
+        "title": "“I didn't want to finish with a plaster on my wrist”: Training crash cruelly cuts short Ion Izagirre’s farewell tour",
+        "pubDate": "Sun, 04 Oct 2026 09:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/i-didnt-want-to-finish-with-a-plaster-on-my-wrist-training-crash-cruelly-cuts-short-ion-izagirres-farewell-tour",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
       },
       {
         "title": "Huge signings, early retirements, contract breakings and a steal from INEOS? Lidl-Trek's explosive transfer window",
@@ -38,7 +164,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "Quintana's retirement marks the passing of an era - escapecollective.com",
+        "title": "Quintana's retirement marks the passing of an era - Escape Collective",
         "pubDate": "Sat, 03 Oct 2026 20:53:34 GMT",
         "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPX2hrUjF2a2FzSUZHVnpfMjRTWk9NbG5OOUxjTjFVUTlONnF0U1hSWFZNV24zaHNjdHpiWjk5YVZ5VWNmTDNGUDZxaktRUHdPVVdMUmgzSmM0R29qSzY1RHNjZV8xNUw0eHVIOGxibWdDQ1htV3VSbzZoeWpRMVJMOUxPNkE?oc=5",
         "source": "Escape Collective",
@@ -57,6 +183,13 @@
         "link": "https://cyclinguptodate.com/cycling/tre-valli-varesine-2026-preview-profile-favourites-predictions-evenepoel-pidcock-and-mcnulty-amongst-main-favourites",
         "source": "CyclingUpToDate",
         "sourceUrl": ""
+      },
+      {
+        "title": "Piganzoli Scoops Giro Dell’Emilia as McNulty Debuts Rainbow Jersey - Outside Magazine",
+        "pubDate": "Sat, 03 Oct 2026 19:28:08 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOZUVNckcxYlBpcUU5b29EVDhmR3AxZklBMGtGWGIyYWNnSVZlVENaVE1iQkhzUkpzZ1lEeUM3eFFVaDdONXlIeDUwRGFnckRvRTRQQUhyVUxwd2dHTHE4VjRBdno2RWo0TXl4Y0FTUEtSb1VIRnd5WllzUTAyaWZSa1dXWGxDWXEzSTViWWYwSmxOZ2dwMjhwZGczSEpBOHVGS01OU3pPa2s?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
       },
       {
         "title": "Cholet Agglo Tour: Jenthe Biermans wins from break after massive pull from teammate Bryan Coquard",
@@ -80,31 +213,10 @@
         "sourceUrl": ""
       },
       {
-        "title": "\"I love winning, that never gets old\" - Demi Vollering leaves no room for doubt with European Championships victory",
-        "pubDate": "Sat, 03 Oct 2026 18:11:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/i-love-winning-that-never-gets-old-demi-vollering-leaves-no-room-for-doubt-with-european-championships-victory",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "Sparkassen Münsterland Giro: Olav Kooij comes out on top after chaotic crash marred bunch sprint",
         "pubDate": "Sat, 03 Oct 2026 15:54:36 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/racing/sparkassen-munsterland-giro-olav-kooij-comes-out-on-top-after-chaotic-crash-marred-bunch-sprint/",
         "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Results Sparkassen Münsterland Giro 2026 - Olav Kooij wins all-star bunch sprint in Germany",
-        "pubDate": "Sat, 03 Oct 2026 17:41:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/results-sparkassen-munsterland-giro-2026-olav-kooij-wins-all-star-bunch-sprint-in-germany",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"We handled this race perfectly as a team\" - Numbers game see Visma conquer Giro dell'Emilia with Piganzoli",
-        "pubDate": "Sat, 03 Oct 2026 17:27:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/we-handled-this-race-perfectly-as-a-team-numbers-game-see-visma-conquer-giro-dellemilia-with-piganzoli",
-        "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
       {
@@ -113,27 +225,6 @@
         "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/uec-european-championships-world-champion-demi-vollering-claims-solo-elite-womens-victory-for-dominant-dutch-team/",
         "source": "Cyclingnews",
         "sourceUrl": ""
-      },
-      {
-        "title": "European Championships Ljubljana men's elite road race 2026 preview, profile, favourites & predictions - Will Evenepoel be beaten in Slovenia?",
-        "pubDate": "Sat, 03 Oct 2026 17:00:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/european-championships-ljubljana-mens-elite-road-race-2026-preview-profile-favourites-predictions-will-evenepoel-be-beaten-in-slovenia",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Results women's elite European Championships road race 2026 - Demi Vollering doubles up with her first win in the rainbow jersey",
-        "pubDate": "Sat, 03 Oct 2026 16:57:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/results-womens-elite-european-championships-road-race-2026-demi-vollering-doubles-up-with-her-first-win-in-the-rainbow-jersey",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Home wins for Vigilia and Piganzoli at Giro dell'Emilia - escapecollective.com",
-        "pubDate": "Sat, 03 Oct 2026 14:54:20 GMT",
-        "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNQVhxZDltZ2VGTVBYUnVfREdTTDJUcVJ0a1lNVUZvckE3eHFLRkRGQmM1aWZncHByMUZnamdtVGRlU0h1T29KQ3dOb2psUE5BRVFEZ21DbzV4cnE4bjlRUUIyQnNHenpxcmN2UlYyZFY5dkhyZ0FfSmFhYVJDODJ6dkFYSTZ0VTdJMGJuYw?oc=5",
-        "source": "Escape Collective",
-        "sourceUrl": "https://escapecollective.com"
       },
       {
         "title": "'Your saddle should be level, unless you’re a triathlete, time triallist or some other kind of weirdo'",
@@ -150,48 +241,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "European Championships Ljubljana women's elite road race 2026 preview, profile, favourites & predictions - Vollering, Niewiadoma, Reusser and Longo Borghini go to war again",
-        "pubDate": "Sat, 03 Oct 2026 15:49:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/european-championships-ljubljana-womens-elite-road-race-2026-preview-profile-favourites-predictions-vollering-niewiadoma-reusser-and-longo-borghini-go-to-war-again",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Big INEOS surprise transfer? Filippo Ganna could leave team - Lidl-Trek in talks to sign Italian leader from 2027 in surprise move",
-        "pubDate": "Sat, 03 Oct 2026 15:47:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/big-ineos-surprise-transfer-filippo-ganna-could-leave-team-lidl-trek-in-talks-to-sign-italian-leader-from-2027-in-surprise-move",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Results Giro dell'Emilia 2026 - Visma dominate as Piganzoli takes career-changing victory; Pidcock and Onley on the podium",
-        "pubDate": "Sat, 03 Oct 2026 15:37:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/results-giro-dellemilia-2026-visma-dominate-as-piganzoli-takes-career-changing-victory-pidcock-and-onley-on-the-podium",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"Was it worth it? Hard to say\" - Mattias Skjelmose ends troubled year due to Vuelta exhaustion",
-        "pubDate": "Sat, 03 Oct 2026 15:11:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/was-it-worth-it-hard-to-say-mattias-skjelmose-ends-troubled-year-due-to-vuelta-exhaustion",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"There is still a lot more to come\" - Urska Zigart renews until 2029 with AG Insurance - Soudal",
-        "pubDate": "Sat, 03 Oct 2026 14:49:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/there-is-still-a-lot-more-to-come-urska-zigart-renews-until-2029-with-ag-insurance-soudal",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Cycling Market - INEOS on the brink of disaster; Visma and UAE sign new riders; Seixas and Roglic's future decided soon",
-        "pubDate": "Sat, 03 Oct 2026 14:28:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/cycling-market-ineos-on-the-brink-of-disaster-visma-and-uae-sign-new-riders-seixas-and-roglics-future-decided-soon",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "Like Day and Night: the Two New World Champ Bikes Take Opposite Approaches to the Rainbow Stripes - Outside Magazine",
         "pubDate": "Sat, 03 Oct 2026 12:22:29 GMT",
         "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPR0RGM0QxdVg1WTR6c003T3BOMHRwR0FJVWRTMnljN0Y5d2RzdGJfTkJEeDcwM0FRa1drT0NZMi11Yjgyc2ZkYkJYejFQRE1OMjFha3lSbFliLTlCQ3A2VHhUeFdsSUlDMjZSSnZMSGV2bUJrckpwbUFCT09EZ2tLM005b28?oc=5",
@@ -199,11 +248,11 @@
         "sourceUrl": "https://velo.outsideonline.com"
       },
       {
-        "title": "\"Maybe the main attack will not be decided on the climb\" - Niewiadoma hints at different approach as Vollering admits Wiebes could play role in European Championships",
-        "pubDate": "Sat, 03 Oct 2026 14:00:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/maybe-the-main-attack-will-not-be-decided-on-the-climb-niewiadoma-hints-at-different-approach-as-vollering-admits-wiebes-could-play-role-in-european-championships",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
+        "title": "30.5\" wheels are no longer just a rumour - Escape Collective",
+        "pubDate": "Sat, 03 Oct 2026 11:54:17 GMT",
+        "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBGTUcyMGVyN3lELXhpQllmQXFMY0FoeFNUc3RLS25xdVFITEZOcVF6Rm1PWWNWQmZuNTl2Yk5YaHE1bzdlbWhFT2xfcElXMmU3ZW5hRnE1c2RmRUUxMjVWcmJOVVI4OHZsOHpuNERHcndkMnc?oc=5",
+        "source": "Escape Collective",
+        "sourceUrl": "https://escapecollective.com"
       },
       {
         "title": "Giro dell'Emilia Internazionale Donne Elite: Alessia Vigilia takes surprise breakaway win",
@@ -213,24 +262,10 @@
         "sourceUrl": ""
       },
       {
-        "title": "\"Lidl-Trek is losing one of the good ones\" - Another key staff member set to leave team after ten years as rider pays tribute to head sports director",
-        "pubDate": "Sat, 03 Oct 2026 13:20:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/lidl-trek-is-losing-one-of-the-good-ones-another-key-staff-member-set-to-leave-team-after-ten-years-as-rider-pays-tribute-to-head-sports-director",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "UEC European Championships: Elias Dybing wins the men junior road race for Norway",
         "pubDate": "Sat, 03 Oct 2026 10:49:45 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/racing/uec-european-championships-elias-dybing-wins-the-men-junior-road-race-for-norway/",
         "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"I would probably just make it into the top twenty in a race now\" - Chris Froome says cycling's nutrition changes has seen today's level eclipse his peak",
-        "pubDate": "Sat, 03 Oct 2026 12:49:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/i-would-probably-just-make-it-into-the-top-twenty-in-a-race-now-chris-froome-says-cyclings-nutrition-changes-has-seen-todays-level-eclipse-his-peak",
-        "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
       {
@@ -262,7 +297,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "A leaked 2027 World Series calendar points to more expansion. Is XC ready? - escapecollective.com",
+        "title": "A leaked 2027 World Series calendar points to more expansion. Is XC ready? - Escape Collective",
         "pubDate": "Fri, 02 Oct 2026 18:09:43 GMT",
         "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9Pa1BlNURQY2t1Tmh4STM4SnJHS1pSWUg3eUZjbWtDenVsQzk5S0ozUVRncFN2RS1nTTRfQWxHLVZ3R01obzNfWkUtNnptZ1d0NWt6M1A3OXNKVzRMRTV0TkdMRTM2TVFxUzB5NUpxSXhWUQ?oc=5",
         "source": "Escape Collective",
@@ -304,39 +339,11 @@
         "sourceUrl": ""
       },
       {
-        "title": "Visma-Lease a Bike look to realise 'untapped potential' of British rider Mark Donovan as first new signing for 2027",
-        "pubDate": "Fri, 02 Oct 2026 11:38:07 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/transfers/visma-lease-a-bike-look-to-realise-untapped-potential-of-british-rider-mark-donovan-as-first-new-signing-for-2027/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Quintana to end career at Giro dell'Emilia - escapecollective.com",
+        "title": "Quintana to end career at Giro dell'Emilia - Escape Collective",
         "pubDate": "Fri, 02 Oct 2026 11:34:26 GMT",
         "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5DLU5NYjM4VDhEaHNRTlNMalhLSkQwWlFNWm9yb3YtMW9LSndFNVh0QUtLRTlaX2cwcWtjWl9BSXFvWTVpc0NBX3hKU1R6cWI0U29LYW5UVXpwNl9TR0RTTlR4VlZySkRWREhMdnhHenUzenBTM1ZFVjViRQ?oc=5",
         "source": "Escape Collective",
         "sourceUrl": "https://escapecollective.com"
-      },
-      {
-        "title": "Belgian racers avoided World Championships disaster in run-in at US border, Alec Segaert reveals",
-        "pubDate": "Fri, 02 Oct 2026 11:03:47 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/belgian-racers-avoided-world-championships-disaster-in-run-in-at-us-border-alec-segaert-reveals/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Luka Mezgec announces new role as sports director at top WorldTour team following imminent retirement after European Championships",
-        "pubDate": "Fri, 02 Oct 2026 10:29:44 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/transfers/luka-mezgec-announces-new-role-as-sports-director-at-top-worldtour-team-following-imminent-retirement-after-european-championships/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "From elbow surgery to fighting for victory in a matter of days – Just starting Tour de Langkawi 'a bit of a bonus' for Josh Burnett",
-        "pubDate": "Fri, 02 Oct 2026 10:27:13 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/from-elbow-surgery-to-fighting-for-victory-in-a-matter-of-days-just-starting-tour-de-langkawi-a-bit-of-a-bonus-for-josh-burnett/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
       },
       {
         "title": "'People come to shops for 90% of bike repairs' – the industry needs 45,000 cycle mechanics right now, and it's a job that's AI-proof",
@@ -360,11 +367,18 @@
         "sourceUrl": "https://velo.outsideonline.com"
       },
       {
-        "title": "Zeno Q-Connector V2: A review of the slimmest brake hose quick couplers - escapecollective.com",
+        "title": "Zeno Q-Connector V2: A review of the slimmest brake hose quick couplers - Escape Collective",
         "pubDate": "Fri, 02 Oct 2026 02:24:31 GMT",
         "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNbVp4U2xfZXQtbkZUR0xXd2xLSzVsa2FyWk05N3VZeHhzcVNTZ1ljRHUwdTFCdkNHMHQxWjQxREtRS193d3IxWlpWdVRtb1RBaDRUQmpwRTdQYlB6bUtEZVV1LWRxTXFIaExOMEVVaTcyWmdhcE5IVWtBODB6SmhYVVFhSUtCQWxhanhtZFR0Y2pkSWtsNzZIMXpCa0Q0WGZER1E?oc=5",
         "source": "Escape Collective",
         "sourceUrl": "https://escapecollective.com"
+      },
+      {
+        "title": "Dial Your Diet for Training and Recovery: The Ultimate Guide from 52 Cycling Nutrition Experts - Outside Magazine",
+        "pubDate": "Thu, 01 Oct 2026 09:42:26 GMT",
+        "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBpalNoU2Mtd1FfTG51Rzg0NGRfaGxFT29Qc096bThoSlRfTWdjcW9HRnd1TGozdUZNRUNpdFktWlJkZW5mS0ZNaXNNWXB5LW5heUpYVHRkelhuam9CRWk3VGtWUUdfY3BNQXU5aU5CaHh4ZGhGRnVkb1ZoRjZLdw?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
       },
       {
         "title": "‘First we took a country, then a continent, now it’s the world’: ultra-cyclist Sarah Ruggins announces outright round-the-world record attempt",
@@ -374,7 +388,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "What it takes to race a World Cup: Behind the scenes at Cannondale Factory Racing - escapecollective.com",
+        "title": "What it takes to race a World Cup: Behind the scenes at Cannondale Factory Racing - Escape Collective",
         "pubDate": "Wed, 30 Sep 2026 19:59:28 GMT",
         "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9XeTgwLXVYQVJrdWpROEpvNlQ4U0U2YXZTbzRjZEo0ekY1anJnY3pNZ0dudXZwNlM1UWFGdWM4MURRRHZmTHQwX0Q2ZUcwUG5DdExZN0s1VS1pVDNPMkdkaXZSeS10MzFDNm1aS3JSbm1YOTlkRHA5YkxDTEc?oc=5",
         "source": "Escape Collective",
@@ -388,11 +402,19 @@
         "sourceUrl": "https://velo.outsideonline.com"
       },
       {
-        "title": "What does Kasia Niewiadoma-Phinney's move mean for everyone involved? - escapecollective.com",
+        "title": "What does Kasia Niewiadoma-Phinney's move mean for everyone involved? - Escape Collective",
         "pubDate": "Wed, 30 Sep 2026 16:49:14 GMT",
         "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOb2pDY1BiRTZDeVhCbkxRUHB1RHdiWDJid09uSUwzb2JneGY5dll5bXV2aTM5UGtLbkpKQ3JqVVJUaTd3cHlGeUFvUl9xajhPSU5nNzhOT3hyWnNHRXNTT2gzdzNWRTRSdnNqTGJ0VHNGSklUTHlad05tdjd6V0ptb2FLQVMyTlNXeWRHMGZkREtHWXZXaGhKVWZUeGN1QQ?oc=5",
         "source": "Escape Collective",
         "sourceUrl": "https://escapecollective.com"
+      },
+      {
+        "title": "On his 50th birthday, Oscar Sevilla signs up for another year as a pro cyclist - Cyclingnews",
+        "pubDate": "Wed, 30 Sep 2026 11:31:33 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPZXRNVDlrVjlZU291anR4NmFScWU1eTlGQ1hKZ1Izb2lQdW9uang3TDlJRVViTWdnWURaakpsRG1HMHVVaG84aGZzRFdVeFdWOWVQamtpTnAxYmtSRVMxRG5QM3RIUTZSWkRpaUdKSlJoR3hnTXc1U19OVXJnSml4amhBRnZ2UTRpakxHYTQxODJkWFFnb1lHbmQxQnByem9kMXM4c2ViQ19QUzlCd3Vrc1lnMy05cGtWSWRVUmJsU1dZdjVLeXJvSFZ1OA?oc=5",
+        "source": "Cyclingnews",
+        "sourceUrl": "https://www.cyclingnews.com",
+        "type": "transfers"
       },
       {
         "title": "The Hottest Tech Trend in Pro Cycling? Shoe Laces. - Outside Magazine",
@@ -400,30 +422,44 @@
         "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxON0hOTlI1TktxbEJvZ1pUOHk5aXVVdWFTc0ZKR3pJZG9QS1BqWGJYckw2Ml9jR3B6UGJLTnhtQ2hNemJPalgzRmFyRVBwT3ZCM2JZeTFEcC1KWnMtYnRQUlEwaXR0XzFPemNvMUxiTzNWWmZmZFVQU1VpYjFYTTFTdnM0bHRZM3FqZk1yTDVBeUlJbnM?oc=5",
         "source": "VELO",
         "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
-        "title": "16-day Grand Tours, smaller teams, and pooling broadcast rights: UCI lays out its vision for cycling’s future - escapecollective.com",
-        "pubDate": "Tue, 29 Sep 2026 22:42:31 GMT",
-        "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOb2dxREVPOE84T1pINkllbmVDVFRBVEtmdzYxa0xWWDc4c3ZZWE1rSG42YmtlT3JNUDNfb2tXbHNrNVhrMjgyRlJOZWozSFJ1NlJLYUJ1WnBSRlFwTi03TXJ5Q0ZYOEJCa0dZVlU5N3NCd3I3OVl5VHpFd0F4bFd5eUZFVlhoYkU1bC1qVDdyNmpqSXBtZmlaMTJGdmdicExYWDhHT2JXazhjY1ZXZ01lX0hqbGUwdnAxM1cwT3FZLXBwTEtBV0NXT3U1cVBOTDVG?oc=5",
-        "source": "Escape Collective",
-        "sourceUrl": "https://escapecollective.com"
-      },
-      {
-        "title": "At Sea Otter Europe, the bike industry is cautiously optimistic - escapecollective.com",
-        "pubDate": "Tue, 29 Sep 2026 20:37:39 GMT",
-        "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPQlNGVXpQOXVYU2dFSXIyeW45SEZLSEVTcThPcWItNVZsX2cwTlBmWHFVckhmeVItWTRCWmpEUVI2aWdCZUpnNk1DWl82VkdXdWcyMVA1MG5jRlBQSXo0c2hwTjVRYk1QOV94NVFkWDNzZ3Rxa0d2OUZ1dVJwM2MzMHpfOXliVkVnMkF1S1JGNTl6SUlmNnkw?oc=5",
-        "source": "Escape Collective",
-        "sourceUrl": "https://escapecollective.com"
-      },
-      {
-        "title": "Brandon McNulty's Packed Fall Schedule Gives Plenty of Shots to Win in Rainbow Jersey Debut - Outside Magazine",
-        "pubDate": "Tue, 29 Sep 2026 18:21:25 GMT",
-        "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNRTl0ZHJHblJ6WHl2d2oyQWpsTFFvSUUtNVl6eW1VQldidGRQejZNdXhxWFE1VnVST0dJUlUzLUJsYXV5cU5TUnhBU2wybHlIRXhkNk5NdWlTWTRqSUlPTmkxNU1LZldRcklzSGR1TDVEU0xWY18yTERfWnh2OTlCMUxHZjhFVkFNOWlrMQ?oc=5",
-        "source": "VELO",
-        "sourceUrl": "https://velo.outsideonline.com"
       }
     ],
     "mtb": [
+      {
+        "title": "Who Are the 2026 XC World Cup Series Winners?",
+        "pubDate": "Sun, 4 Oct 2026 00:00:00 PDT",
+        "link": "https://www.pinkbike.com/news/who-are-the-2026-xc-world-cup-series-winners.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Tech Randoms III: 2026 Lake Placid DH World Cup",
+        "pubDate": "Sun, 4 Oct 2026 00:00:00 PDT",
+        "link": "https://www.pinkbike.com/news/tech-randoms-iii-lake-placid-downhill-world-cup.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Race Highlights: 2026 Lake Placid XC World Cup",
+        "pubDate": "Sun, 4 Oct 2026 00:00:00 PDT",
+        "link": "https://www.pinkbike.com/news/race-highlights-2026-lake-placid-xc-world-cup.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Video: The Setup - Asa Vermette leads the Overall with One Last Dance in Lake Placid",
+        "pubDate": "Sun, 4 Oct 2026 00:00:00 PDT",
+        "link": "https://www.pinkbike.com/news/video-the-setup-asa-vermette-leads-the-overall-with-one-last-dance-in-lake-placid.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Video: WynTV Q2 Rapid Reactions - 2026 Lake Placid DH World Cup",
+        "pubDate": "Sun, 4 Oct 2026 00:00:00 PDT",
+        "link": "https://www.pinkbike.com/news/video-wyntv-q2-rapid-reactions-2026-lake-placid-dh-world-cup.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
       {
         "title": "Video:  Lake Placid Practice &amp; Quali Action - Inside The Tape",
         "pubDate": "Sat, 3 Oct 2026 00:00:00 PDT",
@@ -432,7 +468,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "Results: 2026 Lake Placid Elite XC World Cup",
+        "title": "Results: Charlie Aldridge &amp; Sina Frei Win Thrilling 2026 Lake Placid XC World Cup",
         "pubDate": "Sat, 3 Oct 2026 00:00:00 PDT",
         "link": "https://www.pinkbike.com/news/results-2026-lake-placid-elite-xc-world-cup.html?trk=rss",
         "source": "Pinkbike",
@@ -530,34 +566,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "Video: Jackson Goldstone's Muddy Practice Lap POV at the 2026 Lake Placid DH World Cup",
-        "pubDate": "Fri, 2 Oct 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/video-jackson-goldstones-muddy-practice-lap-pov-at-the-2026-lake-placid-dh-world-cup.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Results: Martin Vidaurre Kossmann &amp; Martina Berta Win the 2026 Lake Placid XCC Short Track World Cup",
-        "pubDate": "Fri, 2 Oct 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/results-2026-lake-placid-elite-xcc-short-track-world-cup.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Race Highlights: Elite XCC Short Track at the Lake Placid XC World Cup",
-        "pubDate": "Fri, 2 Oct 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/race-highlights-elite-xcc-short-track-at-the-lake-placid-xc-world-cup.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
-        "title": "5DEV Releases the AV3 Asa Vermette Signature Crank",
-        "pubDate": "Fri, 2 Oct 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/5dev-releases-the-av3-asa-vermette-signature-crank.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
         "title": "American National Championships - XCO/XCC - UCI.org",
         "pubDate": "Thu, 01 Oct 2026 21:32:10 GMT",
         "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9Ib3llS1VOZExHNkY0Y3F5LUZ0N2lJUDJBUzZxemZMTEdCOGhvR0h2QnlQdUJyMGExeU9TbjFRVDRLRFlmUU83MGhsUWR5dVdNVUVsM21femtMWWlsbFZRTk1yUEk?oc=5",
@@ -642,6 +650,13 @@
         "sourceUrl": "https://www.uci.org"
       },
       {
+        "title": "PIT BITS - Lake Placid USA World Cup DH - Vital MTB",
+        "pubDate": "Thu, 01 Oct 2026 18:55:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNc0gybktZOUV4ZTdPQXhseWVFX2E5UTg0ZVpsNFUtS1JoR05KWGdXY3o5bzJtbTY3R0wtcFNhNEc4dEFXelRRQnUxMnNkNVdtT1JKSjVZSkk0WFhjbHVyLWR6OHhLSmhkamtCYkhQdzZhLUM1dkNFVEd6eFFicGhsbE5XTjI?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
         "title": "2027 Loam Pass Is Here 🤘 Ride the Rest of 2026 FREE - Vital MTB",
         "pubDate": "Thu, 01 Oct 2026 13:00:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPUXJwUnlBUmFGN3ZoUWFQRWl4LV9pUkZJdVRFWlpCdFliVllic0RQS2cwa3pqWi1PZjdrSGJpNko4YktraVFMN0JudFRGN2lMQkQxaGdVVk11ZWt0ZjJRY0NmWmRTbDVacGJZMC1RN1lyVDg3RldpenNlOXl5eTl1ZVZDLWpIejZBazNz?oc=5",
@@ -698,13 +713,6 @@
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "Last Chance: Build Your Team Ahead of the Final Round - 2026 Lake Placid DH World Cup",
-        "pubDate": "Tue, 29 Sep 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/build-your-team-ahead-of-the-final-round-2026-lake-placid-dh-world-cup.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
         "title": "Red Bull Rampage 2026 - The Hub - Mountain Biking Forums / Message Boards - Vital MTB",
         "pubDate": "Mon, 28 Sep 2026 20:31:12 GMT",
         "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE45QWRjTkhFZ04wQVQzVlNqdzBsaERmN1RWNEZlcmxkQlNmMTZtREhpbVBFS0hjekxaQW0wN1AxS1JSaExuOU5oeTlDenVsVjkzX1pZV05YUG50UTJOQ1ZldndiNnQ1Y0s0UVRtc2xZUTV4UQ?oc=5",
@@ -724,16 +732,16 @@
         "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPcmxrbTItQnllamc3U0ZONnBFMm45YkNaUXVpVjBkRzZIWEROYk5rYzlYSWpTVmRDU1FDZ2xzczdlQnJWUWlncXo4YzdQaHI2MjFGbmhjdTl3ZlgxRFIzU2R1TDktdXhtZHhGMzNCMlpnOW9Xb083TEVrZ0FDd1E4TlRB?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
-      },
-      {
-        "title": "26 Inch 2014 Yeti SB66 Dream Build - Vital MTB",
-        "pubDate": "Sun, 27 Sep 2026 11:06:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPcloyX1JRbWRkejRXNFNINUNYRnR3MFVtWjVDY01DSnQ4OE1XUEI3SndTcTFYOGhMMFV4NTZ1Z1FuZy1UeTg2U1RlYU5pRHNHOHk3Snd0UnZjMF9FZzh3ODJxRzFXS3p6QVRxU1ZCZWx6VDNKYkc0ckZUamt5QXNBNUZXaTRwdw?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
       }
     ],
     "cyclocross": [
+      {
+        "title": "Results Janev Cup #1 - Chynov 2026 - Men Junior - Cyclocross24.com",
+        "pubDate": "Sat, 03 Oct 2026 05:35:19 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9nMzNRWFVNXzBhOTJsYXZJNUF0V21sUW13TUU1ZFNDQmVLZTVRTWFqNUd3ZXNobTdZRktQVzktMm5RTF82d3lFdnBOQU0?oc=5",
+        "source": "Cyclocross24",
+        "sourceUrl": "https://cyclocross24.com"
+      },
       {
         "title": "Results Czech National Championships Cyclocross Mlada Boleslav 2027 - Men Junior - Cyclocross24.com",
         "pubDate": "Fri, 02 Oct 2026 19:10:47 GMT",
@@ -745,6 +753,13 @@
         "title": "Results Cyclo-cross National Trophy Derby 2026 - Men Junior - Cyclocross24.com",
         "pubDate": "Fri, 02 Oct 2026 08:48:39 GMT",
         "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE52STZ1eEZfSk1TNDNhOEtHeG5qYzZnZW05OFBIQUw4b0FaSDdEcXV1bWpSSUNrQTRZOXYtaExWQkdUZTBlZmdMdjNqMFQ?oc=5",
+        "source": "Cyclocross24",
+        "sourceUrl": "https://cyclocross24.com"
+      },
+      {
+        "title": "Results Coupe de France Cyclo-Cross #2 - Nommay 2026 - Women Elite - Cyclocross24.com",
+        "pubDate": "Fri, 02 Oct 2026 05:57:31 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE8xMkw4NDR0X21MZ3F3YmFYTEJ2Rk5YU1BuTXVkN0pGZXB6RFd4TzZHSHc2Tk42bjJxbWVZQUE1c0ppQTdMWGhmY1pSemk?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
@@ -789,20 +804,6 @@
         "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBvbGNPUzJ4YWxpWmZKa2FneFcxeFBCV3NDbGZ0dEtxc2x6NFVSSk9pREttU2dRVnJVeW1nbEMyVUJyVUl1S2U3VDdMaVc?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
-      },
-      {
-        "title": "Results NoLimited Cup #1 - Levoca 2026 - Cyclocross24.com",
-        "pubDate": "Sun, 27 Sep 2026 07:00:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE15di1HN1hoMWduNjBySUJ4VGVhbU9lTUxrSnIteFNQcWpJWmhiX1lPRF9uMEpPVlRjRUYxUkZ2Nm10NVRKak5FQ3ZMS2M?oc=5",
-        "source": "Cyclocross24",
-        "sourceUrl": "https://cyclocross24.com"
-      },
-      {
-        "title": "Results Breizh CX Tour - Caudan 2026 - Women Elite - Cyclocross24.com",
-        "pubDate": "Sun, 27 Sep 2026 07:00:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1QdjBFY1RSLTRyTjRmM2Q3eGV3TzkzSWlELXJhdy1mQ3BjRWQxalZhOVZxUFZtaWZVOEFVbzRMN0hUQUVlQjdRNnJHd3o?oc=5",
-        "source": "Cyclocross24",
-        "sourceUrl": "https://cyclocross24.com"
       }
     ],
     "gravel": [
@@ -842,7 +843,7 @@
         "sourceUrl": "https://www.cyclingnews.com"
       },
       {
-        "title": "Review: Argon 18 Dark Matter gravel bike - escapecollective.com",
+        "title": "Review: Argon 18 Dark Matter gravel bike - Escape Collective",
         "pubDate": "Mon, 28 Sep 2026 18:56:13 GMT",
         "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE4wUmhrYzJiYU1IRURiOF9DZmJFTng5Y2VRa2JIV0FqY1k5bWdaMV82T1Q0dkt3QWtNZXh6a2MxbHRpVEtUVVQ1eUpKWTJMQzVrX3liemJWek44dmlNUTBOTlZFN1lsU0E0Z0xURHpBUGp1cWdHTG93NQ?oc=5",
         "source": "Escape Collective",
