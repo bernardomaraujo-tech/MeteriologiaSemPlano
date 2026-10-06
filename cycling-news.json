@@ -1,7 +1,133 @@
 {
-  "updatedAt": "2026-10-06T03:00:53.643Z",
+  "updatedAt": "2026-10-06T10:22:01.450Z",
   "disciplines": {
     "road": [
+      {
+        "title": "UEC defends accuracy of photo finish at European Championships in response to Giulio Ciccone questioning technology",
+        "pubDate": "Tue, 06 Oct 2026 10:02:53 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/racing/uec-defends-accuracy-of-photo-finish-at-european-championships-in-response-to-giulio-ciccone-questioning-technology/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "An open field with no Evenepoel or Ganna – Analysing the European Championships elite men's time trial contenders",
+        "pubDate": "Tue, 06 Oct 2026 10:00:10 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/racing/an-open-field-with-no-evenepoel-or-ganna-analysing-the-european-championships-elite-mens-time-trial-contenders/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"As long as Pogacar is here, I think he'll struggle\" - Cycling legend doubts young sensation can beat UAE's dominant leader",
+        "pubDate": "Tue, 06 Oct 2026 12:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/as-long-as-pogacar-is-here-i-think-hell-struggle-cycling-legend-doubts-young-sensation-can-beat-uaes-dominant-leader",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "LIVE Tre Valli Varesine 2026: Who can challenge world champion McNulty? Pidcock, Healy and Arensman take aim in Varese",
+        "pubDate": "Tue, 06 Oct 2026 12:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/live-tre-valli-varesine-2026-who-can-challenge-world-champion-mcnulty-pidcock-healy-and-arensman-take-aim-in-varese",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "F1 driver Valtteri Bottas’s incredible 400 kilometre cycle - He rides audacious distance to his next Grand Prix",
+        "pubDate": "Tue, 06 Oct 2026 11:20:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/f1-driver-valtteri-bottass-incredible-400-kilometre-cycle-he-rides-audacious-distance-to-his-next-grand-prix",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Filippo Ganna's potential transfer update - INEOS in discussions as Lidl-Trek reportedly grow in confidence for surprise signing",
+        "pubDate": "Tue, 06 Oct 2026 10:48:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/filippo-gannas-potential-transfer-update-ineos-in-discussions-as-lidl-trek-reportedly-grow-in-confidence-for-surprise-signing",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Final startlist Tre Valli Varesine 2026 - Riders: Pidcock, McNulty, Jorgenson, Healy, Simmons, Martinez and more",
+        "pubDate": "Tue, 06 Oct 2026 10:44:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/startlist-tre-valli-varesine-2026-riders-evenepoel-pidcock-mcnulty-jorgenson-carapaz-onley-ayuso-simmons",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "European cycling federation release definitive statement after Ciccone disputes photo finish - \"Not a traditional photograph\"",
+        "pubDate": "Tue, 06 Oct 2026 10:06:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/european-cycling-federation-release-definitive-statement-after-ciccone-disputes-photo-finish-not-a-traditional-photograph",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Start Times & Order European Championships 2026 elite women's time trial – Vollering, Reusser, Niewiadoma, Longo Borghini and more",
+        "pubDate": "Tue, 06 Oct 2026 09:39:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/start-times-order-european-championships-2026-elite-womens-time-trial-vollering-reusser-niewiadoma-longo-borghini-and-more",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "LIVE: Amazon Prime Big Deal Days cycling deals 2026: Our experts' top picks to kickstart the holiday shopping season",
+        "pubDate": "Tue, 06 Oct 2026 07:26:22 +0000",
+        "link": "https://www.cyclingweekly.com/news/live/amazon-prime-big-deal-days-cycling-deals-2026-live",
+        "source": "Cycling Weekly",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Start Times & Order European Championships 2026 elite men's time trial – Kung, Roglic, Söderqvist, Thornley, Armirail and more to do battle",
+        "pubDate": "Tue, 06 Oct 2026 09:18:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/start-times-order-european-championships-2026-elite-mens-time-trial-kung-roglic-soderqvist-thornley-armirail-and-more-to-do-battle",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "America’s new team keeps winning — Modern Adventure caps breakout debut season with six victories after dominant Tour de Langkawi",
+        "pubDate": "Tue, 06 Oct 2026 09:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/americas-new-team-keeps-winning-modern-adventure-caps-breakout-debut-season-with-six-victories-after-dominant-tour-de-langkawi",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Tre Valli Varesine 2026 preview, profile, favourites & predictions - Pidcock, McNulty and others headline monument-level battle in Italy",
+        "pubDate": "Tue, 06 Oct 2026 08:58:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/tre-valli-varesine-2026-preview-profile-favourites-predictions-evenepoel-pidcock-and-mcnulty-headline-monument-level-battle",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Two-time Grand Tour podium finisher parts ways with Lidl-Trek — Italian climber set for early exit after four seasons",
+        "pubDate": "Tue, 06 Oct 2026 07:15:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/two-time-grand-tour-podium-finisher-parts-ways-with-lidl-trek-italian-climber-set-for-early-exit-after-four-seasons",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "The season’s final battles - Five biggest races that can still make a huge impact on riders' 2026 results",
+        "pubDate": "Tue, 06 Oct 2026 07:14:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/the-years-final-battle-the-5-races-that-can-still-change-the-2026-season",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "“When you look at that record, your mouth falls open”: Marc Sergeant praises Remco Evenepoel’s “race intelligence” after dramatic European Championship victory",
+        "pubDate": "Tue, 06 Oct 2026 07:13:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/when-you-look-at-that-record-your-mouth-falls-open-marc-sergeant-praises-remco-evenepoels-race-intelligence-after-dramatic-european-championship-victory",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Furious Giulio Ciccone questions European Championships photo-finish loss to Remco Evenepoel - Italian wants to see photo \"on the real finish line\"",
+        "pubDate": "Tue, 06 Oct 2026 07:13:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/furious-giulio-ciccone-questions-european-championships-photo-finish-loss-to-remco-evenepoel-italian-wants-to-see-photo-on-the-real-finish-line",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Mexico, India, Australia, Colombia, Saudi Arabia, Spain... - Tadej Pogacar might start 2027 season earlier, but where?",
+        "pubDate": "Tue, 06 Oct 2026 06:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/mexico-india-australia-colombia-saudi-arabia-spain-tadej-pogacar-might-start-2027-season-earlier-but-where",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
       {
         "title": "True grit specialists primed to challenge the run of road pro rainbow jerseys – Analysing the Gravel World Championships contenders",
         "pubDate": "Tue, 06 Oct 2026 02:51:59 +0000",
@@ -13,20 +139,6 @@
         "title": "“That was nail-biting”: Pundits react to Remco Evenepoel’s chaotic march to the European crown",
         "pubDate": "Tue, 06 Oct 2026 03:00:00 +0200",
         "link": "https://cyclinguptodate.com/cycling/that-was-nail-biting-pundits-react-to-remco-evenepoels-chaotic-march-to-the-european-crown",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "‘Speak With Data’: UAE Boss Slams Skeptics Fueling Del Toro-McNulty Conspiracy Theories - Outside Magazine",
-        "pubDate": "Tue, 06 Oct 2026 00:39:03 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNV1RfMG5sTW5CYlY4UER4RkxkTWllOWNIZDRkcDQ0N1dvX2xOcVRnLTZ6RDdPWFBtVDJWcTJSMXp6M2hObWI3YkhVWm9xT2lZNjJyUHdRdkZvLW95ZVE3YmdoUDNpdUFDZzhfY3dDMUYzNDVNckUxcjVSNmVRZUxpT1U3dmdBaFBFRjZhRDlKX1ZmRWI4Y1pJN3F6YlRjMktMcFU2UUZJaWNPZGs?oc=5",
-        "source": "VELO",
-        "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
-        "title": "Two-time Grand Tour podium finisher parts ways with Lidl-Trek — Italian climber set for early exit after four seasons",
-        "pubDate": "Tue, 06 Oct 2026 01:00:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/two-time-grand-tour-podium-finisher-parts-ways-with-lidl-trek-italian-climber-set-for-early-exit-after-four-seasons",
         "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
@@ -45,18 +157,11 @@
         "sourceUrl": ""
       },
       {
-        "title": "“When you look at that record, your mouth falls open”: Marc Sergeant praises Remco Evenepoel’s “race intelligence” after dramatic European Championship victory",
-        "pubDate": "Mon, 05 Oct 2026 23:00:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/when-you-look-at-that-record-your-mouth-falls-open-marc-sergeant-praises-remco-evenepoels-race-intelligence-after-dramatic-european-championship-victory",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "The season’s final battles - Five biggest races that can still make a huge impact on riders' 2026 results",
-        "pubDate": "Mon, 05 Oct 2026 21:30:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/the-years-final-battle-the-5-races-that-can-still-change-the-2026-season",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
+        "title": "‘Speak With Data’: UAE Boss Slams Skeptics Fueling Del Toro-McNulty Conspiracy Theories - Outside Magazine",
+        "pubDate": "Mon, 05 Oct 2026 19:52:51 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNV1RfMG5sTW5CYlY4UER4RkxkTWllOWNIZDRkcDQ0N1dvX2xOcVRnLTZ6RDdPWFBtVDJWcTJSMXp6M2hObWI3YkhVWm9xT2lZNjJyUHdRdkZvLW95ZVE3YmdoUDNpdUFDZzhfY3dDMUYzNDVNckUxcjVSNmVRZUxpT1U3dmdBaFBFRjZhRDlKX1ZmRWI4Y1pJN3F6YlRjMktMcFU2UUZJaWNPZGs?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
       },
       {
         "title": "CyclingUpToDate Podcast - Remco Evenepoel joins \"once-in-a-century\" rider alongside Tadej Pogacar",
@@ -64,6 +169,13 @@
         "link": "https://cyclinguptodate.com/cycling/cyclinguptodate-podcast-remco-evenepoel-joins-once-in-a-century-rider-alongside-tadej-pogacar",
         "source": "CyclingUpToDate",
         "sourceUrl": ""
+      },
+      {
+        "title": "Realini will leave Lidl-Trek at the end of the season - Escape Collective",
+        "pubDate": "Mon, 05 Oct 2026 17:53:37 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQTF9YS3BzQ2ZvQy1XRTlsMXZnazZqNDNhcmxGMXRhOEhPZW1oOXBmS29ZOWZOVmJlaFU4Y09KVFEtYXp4TG1aRHROM0thVHpLM3M3NF9QdmJQUGM4ODBMRG1CS0IwWlNtVUpYQ2s1NVlJTlgwVWREUkYtdFJUbGFMcGI5SmdVdFJRQWt3?oc=5",
+        "source": "Escape Collective",
+        "sourceUrl": "https://escapecollective.com"
       },
       {
         "title": "Start Times & Order European Championships 2026 Team Time Trial Mixed Relay – Italy, France and Poland among contenders for European title",
@@ -98,20 +210,6 @@
         "title": "\"He can get as angry as he wants\" - Italian team dismiss Remco Evenepoel reaction over moment with Giulio Ciccone caught on camera",
         "pubDate": "Mon, 05 Oct 2026 17:29:00 +0200",
         "link": "https://cyclinguptodate.com/cycling/he-can-get-as-angry-as-he-wants-italian-team-dismiss-remco-evenepoel-reaction-over-moment-with-giulio-ciccone-caught-on-camera",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Furious Giulio Ciccone questions European Championships photo-finish loss to Remco Evenepoel - Italian wants to see photo \"on the real finish line\"",
-        "pubDate": "Mon, 05 Oct 2026 16:59:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/furious-giulio-ciccone-questions-european-championships-photo-finish-loss-to-remco-evenepoel-italian-wants-to-see-photo-on-the-real-finish-line",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Results Coppa Bernocchi 2026 - Noa Isadore takes big win as peloton leave it late to reel in breakaway and dangerous chase group in Italy",
-        "pubDate": "Mon, 05 Oct 2026 16:40:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/results-coppa-bernocchi-2026-noa-isadore-big-win-as-peloton-leave-it-late-to-reel-in-breakaway-and-dangerous-chase-group-in-italy",
         "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
@@ -151,24 +249,10 @@
         "sourceUrl": ""
       },
       {
-        "title": "Giro d'Italia 2027 start reportedly set to ride through Slovenia - Details emerge as legendary climb set for return nine years after iconic stage",
-        "pubDate": "Mon, 05 Oct 2026 15:32:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/giro-ditalia-2027-start-reportedly-set-to-ride-through-slovenia-details-emerge-as-legendary-climb-set-for-return-nine-years-after-iconic-stage",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "'Perhaps it will wear off and I will go back to suffering' – World Champion Brandon McNulty still riding high as he makes impressive start to rainbow jersey reign",
         "pubDate": "Mon, 05 Oct 2026 13:26:26 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/perhaps-it-will-wear-off-and-i-will-go-back-to-suffering-world-champion-brandon-mcnulty-still-riding-high-as-he-makes-impressive-start-to-rainbow-jersey-reign/",
         "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"He not only knows our culture\" - Visma appoint former rider as new Sporting Director as Richard Plugge praises former Vingegaard teammate",
-        "pubDate": "Mon, 05 Oct 2026 15:00:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/he-not-only-knows-our-culture-visma-appoint-former-rider-as-new-sporting-director-as-richard-plugge-praises-former-vingegaard-teammate",
-        "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
       {
@@ -186,13 +270,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "Il Lombardia 2026 preview, profile, favourites & predictions - Who will win after 5 years of Tadej Pogacar dominance?",
-        "pubDate": "Mon, 05 Oct 2026 13:30:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/il-lombardia-2026-preview-profile-favourites-predictions-who-will-win-after-5-years-of-tadej-pogacar-dominance",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "'You can just get on this bike and ride' – Stages SB200 drops 25kg in weight and comes with integrated display",
         "pubDate": "Mon, 05 Oct 2026 11:00:00 +0000",
         "link": "https://www.cyclingweekly.com/news/you-can-just-get-on-this-bike-and-ride-stages-sb200-drops-25kg-in-weight-and-comes-with-integrated-display",
@@ -207,13 +284,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "\"We're racing practically a stone's throw from his house\" - Matej Mohoric on Pogacar's disappointment to miss European Championships",
-        "pubDate": "Mon, 05 Oct 2026 12:34:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/were-racing-practically-a-stones-throw-from-his-house-matej-mohoric-on-pogacars-disappointment-to-miss-european-championships",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "UAE Team L'IMAD shutter development squad amid ongoing turbulence",
         "pubDate": "Mon, 05 Oct 2026 10:27:13 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/uae-team-limad-shutter-development-squad-amid-ongoing-turbulence/",
@@ -221,60 +291,18 @@
         "sourceUrl": ""
       },
       {
-        "title": "6 riders in the Top10, 1 in the Top10 - France's European Championships depth impresses but results disappoint",
-        "pubDate": "Mon, 05 Oct 2026 12:07:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/6-riders-in-the-top10-1-in-the-top10-frances-european-championships-depth-impresses-but-results-disappoint",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"I can be an 'armchair expert' now too\" - Pogacar on following races from the sidelines, injury recovery and 2027 plans",
-        "pubDate": "Mon, 05 Oct 2026 11:41:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/i-can-be-an-armchair-expert-now-too-pogacar-on-following-races-from-the-sidelines-injury-recovery-and-2027-plans",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Former Tour de France and Vuelta a España stage winner Ángel Arroyo dies at age 70",
-        "pubDate": "Mon, 05 Oct 2026 10:52:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/former-tour-de-france-and-vuelta-a-espana-stage-winner-angel-arroyo-dies-at-age-70",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Tre Valli Varesine 2026 preview, profile, favourites & predictions - Evenepoel, Pidcock and McNulty headline monument-level battle",
-        "pubDate": "Mon, 05 Oct 2026 10:36:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/tre-valli-varesine-2026-preview-profile-favourites-predictions-evenepoel-pidcock-and-mcnulty-headline-monument-level-battle",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"My win today was this ninth place\" - Primoz Roglic rues bad day at European Championships",
-        "pubDate": "Mon, 05 Oct 2026 10:00:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/my-win-today-was-this-ninth-place-primoz-roglic-rues-bad-day-at-european-championships",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"4 brain bleeds, 2 facial fractures, a broken collarbone and a broken pelvis\" - Sweden's Andersson reveals severe World Championships injuries",
-        "pubDate": "Mon, 05 Oct 2026 07:19:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/4-brain-bleeds-2-facial-fractures-a-broken-collarbone-and-a-broken-pelvis-swedens-andersson-reveals-severe-world-championships-injuries",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "‘My Shape Is Really Bad’: Tadej Pogačar Sorry/Not Sorry to Miss Euro Champs - Outside Magazine",
-        "pubDate": "Mon, 05 Oct 2026 01:54:35 GMT",
-        "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQajBrOUQ1ZDRYXzNJcnF6bmhtQVVRMVRET2lGOWJ2Y201UEptTFRGOC1Ec3B5TEZLZUpfcVRYMzV0eXBXMVhqYmpaeWktLW10al9ZTnZqM28zWXBWbGN5ZWpOMlpDTDBubVoxdUhMaElMM1hMdTR2YTlzdzVqT0kzSG1mZGxCZw?oc=5",
-        "source": "VELO",
-        "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
         "title": "‘In one moment I was really believing it’ - disappointed Giulio Ciccone reflects on agonising second place at European Championships",
         "pubDate": "Sun, 04 Oct 2026 20:46:15 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/in-one-moment-i-was-really-believing-it-disappointed-giulio-ciccone-reflects-on-agonising-second-place-at-european-championships/",
         "source": "Cyclingnews",
         "sourceUrl": ""
+      },
+      {
+        "title": "‘My Shape Is Really Bad’: Tadej Pogačar Sorry/Not Sorry to Miss Euro Champs - Outside Magazine",
+        "pubDate": "Sun, 04 Oct 2026 20:12:27 GMT",
+        "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQajBrOUQ1ZDRYXzNJcnF6bmhtQVVRMVRET2lGOWJ2Y201UEptTFRGOC1Ec3B5TEZLZUpfcVRYMzV0eXBXMVhqYmpaeWktLW10al9ZTnZqM28zWXBWbGN5ZWpOMlpDTDBubVoxdUhMaElMM1hMdTR2YTlzdzVqT0kzSG1mZGxCZw?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
       },
       {
         "title": "‘I know my shape is kind of really bad’- Tadej Pogačar comes to terms with missing European Championships in Slovenia",
@@ -319,25 +347,11 @@
         "sourceUrl": ""
       },
       {
-        "title": "Coppa Agostini: Paul Lapeira returns to winning ways taking a breakaway sprint victory",
-        "pubDate": "Sun, 04 Oct 2026 15:49:53 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/racing/coppa-agostini-paul-lapeira-returns-to-winning-ways-taking-a-breakaway-sprint-victory/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
         "title": "Evenepoel Pips Ciccone in Desperate Sprint to Become European Champion - Outside Magazine",
         "pubDate": "Sun, 04 Oct 2026 15:28:03 GMT",
         "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQTDRPSzFCc0NFeFktcENZMVdLcjBveUZlZDZBd2RPRkRjZkduQy1iSFFpN1UxLUYxZjdwTnpQdzZDSDlPMlEyMjNDOG8xS2lCY1VObWx3d2dXM2NVNmI3cmlVUHlsNDlqaFBSY09nX04tbF9KcWtOaDRXbExYVXItTi1xS0FENVRPajJPbGJsMjJ4RjhOUm80c2tCc09Fa1c5ekxOQmtzMnQxTWVuOURucTNGRm92NEdvRVZR?oc=5",
         "source": "VELO",
         "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
-        "title": "UEC European Championships: Remco Evenepoel snatches photo finish victory in the elite men's race after two-man sprint",
-        "pubDate": "Sun, 04 Oct 2026 15:14:41 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/racing/uec-european-championships-remco-evenepoel-snatches-photo-finish-victory-in-the-elite-mens-race-after-two-man-sprint/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
       },
       {
         "title": "An Eddy Merckx team bike ridden in service of the great man",
@@ -396,35 +410,28 @@
         "sourceUrl": ""
       },
       {
+        "title": "Spin Cycle: Seeing double rainbows - Escape Collective",
+        "pubDate": "Fri, 02 Oct 2026 13:28:16 GMT",
+        "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1VM20zaXZpWVZQNV8yckZsRHFJV2hicEpycHBTV3NITklDdFNJZkczTVdLNkVfYlNWc0wxdXNZYXpndnA1Sm1sT01SUWNGMW9NemJMV3lvdFNIdE5LaFJTVDY1ZnlJdjd3MmFycUN2RGw?oc=5",
+        "source": "Escape Collective",
+        "sourceUrl": "https://escapecollective.com"
+      },
+      {
         "title": "Quintana to end career at Giro dell'Emilia - Escape Collective",
         "pubDate": "Fri, 02 Oct 2026 11:34:26 GMT",
         "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5DLU5NYjM4VDhEaHNRTlNMalhLSkQwWlFNWm9yb3YtMW9LSndFNVh0QUtLRTlaX2cwcWtjWl9BSXFvWTVpc0NBX3hKU1R6cWI0U29LYW5UVXpwNl9TR0RTTlR4VlZySkRWREhMdnhHenUzenBTM1ZFVjViRQ?oc=5",
         "source": "Escape Collective",
         "sourceUrl": "https://escapecollective.com"
-      },
-      {
-        "title": "Jakobsen to make his official Visma debut this weekend - Escape Collective",
-        "pubDate": "Fri, 02 Oct 2026 11:34:25 GMT",
-        "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPTDVBUXJjcUhtU0tYVGR4dzVkQnZPenh6QWx1VFZzVUtVNmxJb0x6ME9pQVRoc2lqaVdqQzQxN3RUa003bDJKQkUtNktreVVzWV9QZE9OTUUyTXNDRlBXUElqa0Vod083Vmc3cGhfaUtiWlF1ek1ITmtYaXJQckwxYzI2cUZoMjdYeUNjNQ?oc=5",
-        "source": "Escape Collective",
-        "sourceUrl": "https://escapecollective.com"
-      },
-      {
-        "title": "'People come to shops for 90% of bike repairs' – the industry needs 45,000 cycle mechanics right now, and it's a job that's AI-proof",
-        "pubDate": "Fri, 02 Oct 2026 08:45:53 +0000",
-        "link": "https://www.cyclingweekly.com/news/people-come-to-shops-for-90-percent-of-bike-repairs-the-industry-needs-45-000-cycle-mechanics-right-now-and-its-a-job-thats-ai-proof",
-        "source": "Cycling Weekly",
-        "sourceUrl": ""
-      },
-      {
-        "title": "No Pogačar, All the Pressure: Evenepoel Riding For Redemption after Worlds Washout - Outside Magazine",
-        "pubDate": "Fri, 02 Oct 2026 07:32:26 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPaTNkX0ZmVXByZkJpdmxKT0pTc2V6Z0plU0VPd0FZSXFHWlVEaFVrWE5uOVhtX0hqa3h4LVlWWm5iTnA4TThRRjNiMUowZEhlMWUwRlRLRE40a2hIM0lueHVhdlZjOFFBakh5Z2ppLWhuSjBFRHZON3lQRDI1TDJzM1E1WURJTks5TjR4SEx0a3VCSC1pcVJtZDYtRTlnWDNVNGZEem9MSTJxZw?oc=5",
-        "source": "VELO",
-        "sourceUrl": "https://velo.outsideonline.com"
       }
     ],
     "mtb": [
+      {
+        "title": "Built Not Bought: Freddie Thomson's Resume is Rideable, Not Readable",
+        "pubDate": "Tue, 6 Oct 2026 00:00:00 PDT",
+        "link": "https://www.pinkbike.com/news/built-not-bought-freddie-thomsons-resume-is-rideable-not-readable.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
       {
         "title": "New winners and seismic shifts: UCI MTB World Series season in review - Escape Collective",
         "pubDate": "Mon, 05 Oct 2026 21:53:07 GMT",
@@ -538,6 +545,13 @@
         "sourceUrl": ""
       },
       {
+        "title": "FINAL RESULTS - World Cup Downhill Lake Placid - Vital MTB",
+        "pubDate": "Sun, 04 Oct 2026 15:36:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQM2lrV0NhcFBIa3RiNHVRVk80WUZhNkdQM0NiRTUxOUt2dUU4LTdtZDJUWVdrc1JCeDNkTHE1Y1EyV2t1amJIQm9lNWZoSzlDM2dyZ181S0xTSENBa3c1MW84Q1czOFRSOUdUQXBqM3RLdzhia3IySnpNTHpoWExWaVhyeTVfQQ?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
         "title": "Who Are the 2026 Downhill World Cup Overall Series Winners?",
         "pubDate": "Sun, 4 Oct 2026 00:00:00 PDT",
         "link": "https://www.pinkbike.com/news/who-are-the-2026-downhill-world-cup-overall-series-winners.html?trk=rss",
@@ -562,13 +576,6 @@
         "title": "32\" Prototypes, Retro Bikes &amp; Tire Choice Dilemmas: 2026 Lake Placid XC World Cup Tech",
         "pubDate": "Sun, 4 Oct 2026 00:00:00 PDT",
         "link": "https://www.pinkbike.com/news/tech-randoms-lake-placid-xc-world-cup.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Who Are the 2026 XC World Cup Series Winners?",
-        "pubDate": "Sun, 4 Oct 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/who-are-the-2026-xc-world-cup-series-winners.html?trk=rss",
         "source": "Pinkbike",
         "sourceUrl": ""
       },
@@ -732,13 +739,6 @@
         "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxObjRpeDBoXzl5eUx0RDhyRXA2OXk5Wnp3M1o1T1NtdHBIZHlPX3dUbjVSSjFXMVIxRkpLc0Zaa3NtWkc3N1dTS0pkTnQtQXduN1VYMW85S1g5VmpMSEhDblctaUNYRnc0WGZ2NVBob0pCOURmQkktY3hxZnVkYmNEZi1zWjN5M3VpVDVvSFRvQy14R0EyQ0VSemJwMGpHTVV6NEhTN1dkdXBaR0YyOTBEZ1JsVnN0MUk?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
-      },
-      {
-        "title": "Reverse Components Launches Machete Stem Line - Vital MTB",
-        "pubDate": "Tue, 29 Sep 2026 09:34:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQN0pvanhlemw2aHlqdWQ1bElyUmdLOTY0S0ZQdVY3X1phcTFRS1FaczNyNGtlQWNfTEo0UmxKeS16QWFxamdDWkpvZzV1ZkxLbVV3MGlYaENOUDZjaFhXNW1LbllGYjZJYktPcWQ5YTlDcGlxbXpscTV4RHFvR2JEQ19BWk1MSlBlU3dTbFJUMW5Mc1E?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
       }
     ],
     "cyclocross": [
@@ -814,6 +814,13 @@
       }
     ],
     "gravel": [
+      {
+        "title": "Shimano XC703 Off-Road Racing Shoes (perfect on Gravel too)",
+        "pubDate": "Tue, 06 Oct 2026 05:02:33 +0000",
+        "link": "https://www.gravelcyclist.com/videos/shimano-xc703-off-road-racing-shoes-perfect-on-gravel-too/",
+        "source": "Gravel Cyclist",
+        "sourceUrl": ""
+      },
       {
         "title": "True grit specialists primed to challenge the run of road pro rainbow jerseys – Analysing the Gravel World Championships contenders",
         "pubDate": "Tue, 06 Oct 2026 02:51:59 +0000",
