@@ -1,7 +1,77 @@
 {
-  "updatedAt": "2026-10-07T16:31:48.977Z",
+  "updatedAt": "2026-10-07T22:00:09.255Z",
   "disciplines": {
     "road": [
+      {
+        "title": "Clash of the calendars – Systems collide with riders forced to choose between Life Time Grand Prix and UCI Gravel World Championships",
+        "pubDate": "Wed, 07 Oct 2026 21:15:48 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/racing/clash-of-the-calendars-systems-collide-with-riders-forced-to-choose-between-life-time-grand-prix-and-uci-gravel-world-championships/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"I received all sorts of threats from Colombia\" - Rasmussen faces severe backlash after criticism of new world champion",
+        "pubDate": "Wed, 07 Oct 2026 23:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/i-received-all-sorts-of-threats-from-colombia-rasmussen-faces-severe-backlash-after-criticism-of-new-world-champion",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Magnus Sheffield to leave Netcompany Ineos for four-year contract with Uno-X Mobility",
+        "pubDate": "Wed, 07 Oct 2026 19:40:32 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/transfers/magnus-sheffield-to-leave-netcompany-ineos-for-four-year-contract-with-uno-x-mobility/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "“It’s incomprehensible how you can be a professional rider at the very top for so long and not know how the photo finish works” - Giulio Ciccone’s Euros criticism shut down",
+        "pubDate": "Wed, 07 Oct 2026 21:30:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/its-incomprehensible-how-you-can-be-a-professional-rider-at-the-very-top-for-so-long-and-not-know-how-the-photo-finish-works-giulio-ciccones-euros-criticism-shut-down",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "'Fingers crossed for that scenario' - Dutch squad aligned for Marianne Vos to recapture rainbow jersey at Gravel World Championships",
+        "pubDate": "Wed, 07 Oct 2026 18:26:00 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/fingers-crossed-for-that-scenario-dutch-squad-aligned-for-marianne-vos-to-recapture-rainbow-jersey-at-gravel-world-championships/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "All Content - Outside Magazine",
+        "pubDate": "Wed, 07 Oct 2026 18:10:36 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE91ZTRYTkNpWGlhaldhRkFhSHV0TUl2clBVbnZYSDhYenBzZFBMRWhXSWI4cFpURm1KVjNUNm1tb0RzT0RWRnZ2Y0hKQjJQSGVVVERMQmZoSVU0VVR6YWFEUA?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
+      },
+      {
+        "title": "'I will definitely remember this for the rest of my life' – No Pogačar, no problem as veteran Primož Roglič saves Slovenia at the last with fairytale European title triumph",
+        "pubDate": "Wed, 07 Oct 2026 18:09:58 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/racing/i-will-definitely-remember-this-for-the-rest-of-my-life-no-pogacar-no-problem-as-veteran-primoz-roglic-saves-slovenia-at-the-last-with-fairytale-european-title-triumph/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "“He wanted to ride at all costs” - UAE boss reveals how hard Tadej Pogacar pushed for Euros return before medical staff stepped in",
+        "pubDate": "Wed, 07 Oct 2026 20:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/he-wanted-to-ride-at-all-costs-uae-boss-reveals-how-hard-tadej-pogacar-pushed-for-euros-return-before-medical-staff-stepped-in",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Final Startlist Gran Piemonte 2026 - Riders: Brandon McNulty, Isaac del Toro, Romain Gregoire, Fred Wright, Ben Turner...",
+        "pubDate": "Wed, 07 Oct 2026 19:09:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/final-startlist-gran-piemonte-2026-riders-brandon-mcnulty-isaac-del-toro-romain-gregoire-fred-wright-ben-turner",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Egan Bernal retirement bombshell? INEOS' last Tour de France winner standing reportedly considering his future at just 29",
+        "pubDate": "Wed, 07 Oct 2026 19:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/egan-bernal-retirement-bombshell-ineos-last-tour-de-france-winner-standing-reportedly-considering-his-future-at-just-29",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
       {
         "title": "“Mentally, I wasn’t really there anymore” - Demi Vollering’s golden fortnight finally catches up with her at European Championships",
         "pubDate": "Wed, 07 Oct 2026 18:15:00 +0200",
@@ -52,7 +122,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "‘Risk Your Life in a Race’: Wrong-Way Police Motorbike Hits Pidcock’s Teammates - Outside Magazine",
+        "title": "‘Risk Your Life To Race’: Wrong-Way Police Motorbike Hits Pidcock’s Teammates - Outside Magazine",
         "pubDate": "Wed, 07 Oct 2026 13:43:04 GMT",
         "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPTTFwMmNwR18yb3FKWW9sWVhSM05MQWt3RzF0enZVNDgzVFVva05sQmMwdnNDYTVhWnhDSXZkTGw4WWZQZkhTRTVDT3VTbTRjazFESUk1WDNlUXU5dTQ4ejlFMjdfdmNmdFhQTGFIdWlEcEEtMmFMUHItQm9hUE5teDRtLU8xMTRYN3RDNTBmbFc?oc=5",
         "source": "VELO",
@@ -206,45 +276,10 @@
         "sourceUrl": ""
       },
       {
-        "title": "Broken bikes and stitches - How a police motorbike crashed into Tre Valli Varesine peloton",
-        "pubDate": "Wed, 07 Oct 2026 10:48:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/broken-bikes-and-stitches-how-a-police-motorbike-crashed-into-tre-valli-varesine-peloton",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"He was already walking the hospital corridors\" - American Ezra Caudell discharged from hospital 31 days after life-threatening crash",
-        "pubDate": "Wed, 07 Oct 2026 10:19:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/he-was-already-walking-the-hospital-corridors-american-ezra-caudell-discharged-from-hospital-31-days-after-life-threatening-crash",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "“I want to become world champion” - Lidl-Trek's new diamond wants Spain back on the classics map",
-        "pubDate": "Wed, 07 Oct 2026 09:58:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/i-want-to-become-world-champion-lidl-treks-new-diamond-wants-spain-back-on-the-classics-map",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Chasing the next prodigy - Agencies race to sign 15-year-old talent in high-stakes search for the next Pogacar",
-        "pubDate": "Wed, 07 Oct 2026 09:00:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/chasing-the-next-prodigy-agencies-race-to-sign-15-year-old-talent-in-high-stakes-search-for-the-next-pogacar",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "Gravel grid anomalies, national teams in name only and self funding – Explaining the workings of a UCI Gravel World Championships",
         "pubDate": "Wed, 07 Oct 2026 05:13:47 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/racing/gravel-grid-anomalies-national-teams-in-name-only-and-self-funding-explaining-the-workings-of-a-uci-gravel-world-championships/",
         "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "UCI World Tour Teams Ranking Update: Pogacar's UAE extend their lead as Picnic climbs and the fight around 30th intensifies",
-        "pubDate": "Wed, 07 Oct 2026 06:00:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/uci-world-tour-teams-ranking-update-pogacars-uae-extend-their-lead-as-picnic-climbs-and-the-fight-around-30th-intensifies",
-        "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
       {
@@ -290,38 +325,10 @@
         "sourceUrl": ""
       },
       {
-        "title": "Tre Valli Varesine: Jarno Widar pulls off surprise win in three-up sprint with Tom Pidcock and Matteo Jorgenson",
-        "pubDate": "Tue, 06 Oct 2026 15:50:50 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/racing/tre-valli-varesine-jarno-widar-pulls-off-surprise-win-in-three-up-sprint-with-tom-pidcock-and-matteo-jorgenson/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Binche-Chimay-Binche: Paul Magnier slams the door on Lotto-Intermarché duo for winning sprint",
-        "pubDate": "Tue, 06 Oct 2026 15:29:53 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/racing/binche-chimay-binche-paul-magnier-slams-the-door-on-lotto-intermarche-duo-for-winning-sprint/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "UEC European Championships: France storm to elite mixed relay TTT victory",
-        "pubDate": "Tue, 06 Oct 2026 15:20:31 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/racing/uec-european-championships-france-storm-to-elite-mixed-team-relay-victory/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
         "title": "Cyclo-cross could be cycling’s Parkrun – or at least its best chance of getting people racing bikes",
         "pubDate": "Tue, 06 Oct 2026 14:12:36 +0000",
         "link": "https://www.cyclingweekly.com/news/cyclo-cross-could-be-cyclings-parkrun-or-at-least-its-best-chance-of-getting-people-racing-bikes",
         "source": "Cycling Weekly",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Binche-Chimay-Binche pour Dames: Linda Riedmann beats Charlotte Kool in uphill sprint finish",
-        "pubDate": "Tue, 06 Oct 2026 13:22:31 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/binche-chimay-binche-pour-dames-linda-riedmann-beats-charlotte-kool-in-uphill-sprint-finish/",
-        "source": "Cyclingnews",
         "sourceUrl": ""
       },
       {
@@ -415,13 +422,6 @@
         "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPR0RGM0QxdVg1WTR6c003T3BOMHRwR0FJVWRTMnljN0Y5d2RzdGJfTkJEeDcwM0FRa1drT0NZMi11Yjgyc2ZkYkJYejFQRE1OMjFha3lSbFliLTlCQ3A2VHhUeFdsSUlDMjZSSnZMSGV2bUJrckpwbUFCT09EZ2tLM005b28?oc=5",
         "source": "VELO",
         "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
-        "title": "Home wins for Vigilia and Piganzoli at Giro dell'Emilia - Escape Collective",
-        "pubDate": "Sat, 03 Oct 2026 14:54:20 GMT",
-        "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNQVhxZDltZ2VGTVBYUnVfREdTTDJUcVJ0a1lNVUZvckE3eHFLRkRGQmM1aWZncHByMUZnamdtVGRlU0h1T29KQ3dOb2psUE5BRVFEZ21DbzV4cnE4bjlRUUIyQnNHenpxcmN2UlYyZFY5dkhyZ0FfSmFhYVJDODJ6dkFYSTZ0VTdJMGJuYw?oc=5",
-        "source": "Escape Collective",
-        "sourceUrl": "https://escapecollective.com"
       }
     ],
     "mtb": [
@@ -433,6 +433,27 @@
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
+        "title": "Social Roundup: First Hits at Red Bull Rampage 2026",
+        "pubDate": "Wed, 7 Oct 2026 00:00:00 PDT",
+        "link": "https://www.pinkbike.com/news/social-roundup-first-hits-at-red-bull-rampage-2026.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
+      {
+        "title": "The 12 Women's Bikes of Red Bull Rampage 2026 - Vote For Your Favorite",
+        "pubDate": "Wed, 7 Oct 2026 00:00:00 PDT",
+        "link": "https://www.pinkbike.com/news/the-12-womens-bikes-of-red-bull-rampage-2026-vote-for-your-favorite.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Cami Nogueira Out of Red Bull Rampage After a Huge Crash in Practice",
+        "pubDate": "Wed, 7 Oct 2026 00:00:00 PDT",
+        "link": "https://www.pinkbike.com/news/cami-nogueira-out-of-red-bull-rampage-after-a-huge-crash-in-practice.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
+      {
         "title": "Wild Lines &amp; First Hits at Red Bull Rampage 2026",
         "pubDate": "Wed, 7 Oct 2026 00:00:00 PDT",
         "link": "https://www.pinkbike.com/news/rampage-day-1-and-2-2026-video.html?trk=rss",
@@ -440,9 +461,9 @@
         "sourceUrl": ""
       },
       {
-        "title": "Video: Blasting Through Dust in 'Ember' Featuring Alex Storr",
+        "title": "Revel Releases a 32\" Titanium Hardtail - The El Jefe Grande",
         "pubDate": "Wed, 7 Oct 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/video-blasting-through-dust-in-ember-featuring-alex-storr.html?trk=rss",
+        "link": "https://www.pinkbike.com/news/revel-announces-32-el-jefe-grande-titanium-hardtail.html?trk=rss",
         "source": "Pinkbike",
         "sourceUrl": ""
       },
@@ -450,6 +471,13 @@
         "title": "Brian's Randoms: Rumors, Tech, &amp; Insights from Taichung Bike Week 2026",
         "pubDate": "Wed, 7 Oct 2026 00:00:00 PDT",
         "link": "https://www.pinkbike.com/news/brians-randoms-rumours-tech-and-insights-from-taichung-bike-week-2026.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Video: Blasting Through Dust in 'Ember' Featuring Alex Storr",
+        "pubDate": "Wed, 7 Oct 2026 00:00:00 PDT",
+        "link": "https://www.pinkbike.com/news/video-blasting-through-dust-in-ember-featuring-alex-storr.html?trk=rss",
         "source": "Pinkbike",
         "sourceUrl": ""
       },
@@ -475,9 +503,9 @@
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "Tire chat (nerds only) - The Hub - Mountain Biking Forums / Message Boards - Vital MTB",
-        "pubDate": "Tue, 06 Oct 2026 17:04:30 GMT",
-        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5pRVRNV3NrSmx0VjgyTy00dEE0dVVTWE5OUUNuSjFpWldvS3pka180cU1FR1hWMFpxM2tDa1RpSGRFa0M0R3VCdFV3RVhOcHJMR09EMXpSUkYwUThOTk04ZnB4cnRFU0NUSVYtck1LSktwdw?oc=5",
+        "title": "Santa Cruz Hightower V4 CC - Vital MTB",
+        "pubDate": "Tue, 06 Oct 2026 10:18:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNUHZDWTJPaHBibEw3b2sySWZNNk5TQXZfNktUY0k2a090QW5mT21wZC15LUgyb19Ed1RNZFgxb3JzdjJ1c0tjbG4za1p3c3hLUDZkWFpkTm05UkJRNXc2U0JTUjdVRnExaEhKX0FQbVY5Zkd6dFJTVEt0YXVJa3hIN3JMMXEwVFRCZEJSRFdfdE1HcjNLV2NPM2lHRQ?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
@@ -573,32 +601,11 @@
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "Video: Reece Wallace Trying To Land His Plane On A Mountain To Ride Down",
-        "pubDate": "Mon, 5 Oct 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/video-reece-wallace-trying-to-land-his-plane-on-a-mountain-to-ride-down.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
-        "title": "16 Videos from Red Bull Rampage 2026 - First Hits &amp; Progress on the Builds",
-        "pubDate": "Mon, 5 Oct 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/video-roundup-first-hits-and-progress-on-the-builds-red-bull-rampage-2026.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
-        "title": "How Much Do 2026 World Cup Downhill Bikes Really Weigh?",
-        "pubDate": "Mon, 5 Oct 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/how-much-do-world-cup-downhill-bikes-really-weigh--2026.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
-        "title": "CADEX Releases $4,000 Bonded Carbon Spoke Max XC Wheelset",
-        "pubDate": "Mon, 5 Oct 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/cadex-releases-4000-bonded-carbon-spoke-max-xc-wheelset.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
+        "title": "(2026) MAXXIS MINION DHX (275”/29”) - Vital MTB",
+        "pubDate": "Mon, 05 Oct 2026 12:03:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBpUHNZOHRMVGtOTE5veE4ySGxKTEgtS29OQWxXQXZ4V3U2OW83LW5uQmU4bTVTekxEX2E2X1F2SUVMZ2lOLUh6RkxLT3RXU2x2ZGJXNVEzdjFqbWMyUUdDWHVGUC0tcFFuQUptZFBNOFpnWGlYSC1YSUVxX04zb1E?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
       },
       {
         "title": "FINAL RESULTS - World Cup Downhill Lake Placid - Vital MTB",
@@ -632,6 +639,13 @@
         "title": "Sherbrooke Canada Cup - XCO/XCC + UCI XCO Junior Series - UCI.org",
         "pubDate": "Thu, 01 Oct 2026 21:27:08 GMT",
         "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE04SUlZeG5wTUg2MTFjWnNWYUdVa095SmlWdUR3eGNKdmF6YVBDWmszTlpUb0k0YnM0TGZ2aXdoV2ZBT1JsbTd3dWJOLVBoZ1pkMERHek1PdWdQX0J1X3RWdW9FY2g?oc=5",
+        "source": "UCI",
+        "sourceUrl": "https://www.uci.org"
+      },
+      {
+        "title": "Namibian National Championships - XCO/XCC/E-XC - UCI.org",
+        "pubDate": "Thu, 01 Oct 2026 21:25:39 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBqZ2RsWEFiMUhqSDQ5ZklJcjJxMjRSSUVvUVlwZ3Q2aWFjTGRnR0FyZTlBSTFHOXJvYTdxM2Q0aVFsTmVaSkJJZmRwQmRfaXpQbm5FRC03Z1dVTExrODk5bkdoY28?oc=5",
         "source": "UCI",
         "sourceUrl": "https://www.uci.org"
       },
@@ -685,13 +699,6 @@
         "sourceUrl": "https://www.uci.org"
       },
       {
-        "title": "Costa Rican National Championships - XCO/XCC/E-XCE/XCE - UCI.org",
-        "pubDate": "Thu, 01 Oct 2026 20:44:35 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1vTE00NXhQcmQ1aVpyQlpEZ3N0QmtEbi1nendvSFQ2M3dmOGtoZHVJamo4djhPcUhtbnVqSDRNZWtwcHpYV0VjbUZrSDJxd1BPem1jbWZrLVhOVVM1RGxyUTdKT28?oc=5",
-        "source": "UCI",
-        "sourceUrl": "https://www.uci.org"
-      },
-      {
         "title": "Portuguese National Championships - XCO/XCC - UCI.org",
         "pubDate": "Thu, 01 Oct 2026 20:32:49 GMT",
         "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE50SmhSbUtJQjVTaVJFT3ZBaG9NYkJDNk1sUE9JbEppcHNyd1VTNjBtMWc3QU85aEZMNjlGZ1NldHc4LUpxX1gybkZNbzdISVJ1U1VGemU5U25vQURwN0duN3p0LVc?oc=5",
@@ -732,13 +739,6 @@
         "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPUXJwUnlBUmFGN3ZoUWFQRWl4LV9pUkZJdVRFWlpCdFliVllic0RQS2cwa3pqWi1PZjdrSGJpNko4YktraVFMN0JudFRGN2lMQkQxaGdVVk11ZWt0ZjJRY0NmWmRTbDVacGJZMC1RN1lyVDg3RldpenNlOXl5eTl1ZVZDLWpIejZBazNz?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
-      },
-      {
-        "title": "Does Handlebar Compliance Actually Improve Comfort? | MTB Handlebar Shootout - Vital MTB",
-        "pubDate": "Wed, 30 Sep 2026 16:48:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNRUE4WlRlTnFzcnR5TkFvZmNRZHRjRXpTWGhqUkxtLTlTQ25PMmdreExrQi02TGZMdkM1Z0xTOU9adW03Z2tOOVhyQ3JFU2NWLTFWbmF2TnFWXzljeXd6VWNPektmWnBMQjZBYnltMFZFMjg2NTV5dHFaWVI2VFJtNkRZSzVhRW1kV1NSbmNibHprMWJ2SkJwY2JwcTB4ek15bzQ0UHV0c0dSRHM?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
       }
     ],
     "cyclocross": [
@@ -746,13 +746,6 @@
         "title": "Results Pan-American Championships Cyclocross Washington 2026 - Women Elite - Cyclocross24.com",
         "pubDate": "Wed, 07 Oct 2026 07:10:25 GMT",
         "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5tSHFvNWEyREVWQ2pJQmpkYVdxMzFGTE1OdDN6N2dDMHZLcmkwemdtYXVrRXVsX3BGQnNIUHVfTE5XbklMaDFwU2lmSDg?oc=5",
-        "source": "Cyclocross24",
-        "sourceUrl": "https://cyclocross24.com"
-      },
-      {
-        "title": "- Cyclocross24.com",
-        "pubDate": "Tue, 06 Oct 2026 10:51:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBxN3hPSERUdVNKZlZTdG5kZ0phR0RPWlBfXzZTZDFkX1FjQTRDdnluOVBaWDgtQURoaEc4YnBOeHFIdUZQcjMwSmVpSUZraDJscVU0THkzbDhfQXVRVWRJMFRId0tKb3dSVTdyRnlRdllnWWxU?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
@@ -767,6 +760,13 @@
         "title": "Results Brumath Bike Festival 2026 - Women Elite - Cyclocross24.com",
         "pubDate": "Sun, 04 Oct 2026 07:00:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBpRlRxUnd2aFplR2xtbkRQN2JZTWRwLVVTLVAzU1UyYTVjVGRuTXJLcXF4S0t2dWlHVlhQZFZwQ0YxbU52MklWLUNFMnY?oc=5",
+        "source": "Cyclocross24",
+        "sourceUrl": "https://cyclocross24.com"
+      },
+      {
+        "title": "Loira Blazquez Garcia - Cyclocross24.com",
+        "pubDate": "Sun, 04 Oct 2026 07:00:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8xZTFNSlc0TXpDbldQbXY5Qm5MUVI2MkJvMUpicy1SdGI1M1F3d3BsSEpvb1VELVRSLWtvb2dDRzNjVWF5SDhoWW5YT0Z2V0ZkVkRpVWpLVmJlMWdNczZCS2pBOA?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
@@ -806,16 +806,16 @@
         "sourceUrl": "https://cyclocross24.com"
       },
       {
-        "title": "Results Cyclo-cross National Trophy Derby 2026 - Men Junior - Cyclocross24.com",
-        "pubDate": "Fri, 02 Oct 2026 08:48:39 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE52STZ1eEZfSk1TNDNhOEtHeG5qYzZnZW05OFBIQUw4b0FaSDdEcXV1bWpSSUNrQTRZOXYtaExWQkdUZTBlZmdMdjNqMFQ?oc=5",
+        "title": "Results Pan-American Championships Cyclocross Washington 2026 - Men U23 - Cyclocross24.com",
+        "pubDate": "Thu, 01 Oct 2026 22:13:42 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBNWTZFNEhPUURqVWl5Rzh1S2lBMHdkOWtSTzlITDd2NEJ4X1BQeDBmZlA4TEpSVzJmd3kyemlBMTdaTmQzaXdWcDhIa1Y?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
       {
-        "title": "Results Pan-American Championships Cyclocross Washington 2026 - Men U23 - Cyclocross24.com",
-        "pubDate": "Thu, 01 Oct 2026 22:13:42 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBNWTZFNEhPUURqVWl5Rzh1S2lBMHdkOWtSTzlITDd2NEJ4X1BQeDBmZlA4TEpSVzJmd3kyemlBMTdaTmQzaXdWcDhIa1Y?oc=5",
+        "title": "Results X2O Trofee Hofstade - Plage Cross 2026 - Women Elite - Cyclocross24.com",
+        "pubDate": "Thu, 01 Oct 2026 19:10:56 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1TeTRzd3FyaE1fdi13UjZOV21WQlRLbDJkVHdINjhkQm16Q1d1N0FFQ0hILTRHUGc1MmFGSGJJZHVQUzBTLUoyRHY0WkU?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
@@ -829,6 +829,34 @@
     ],
     "gravel": [
       {
+        "title": "Clash of the calendars – Systems collide with riders forced to choose between Life Time Grand Prix and UCI Gravel World Championships",
+        "pubDate": "Wed, 07 Oct 2026 21:15:48 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/racing/clash-of-the-calendars-systems-collide-with-riders-forced-to-choose-between-life-time-grand-prix-and-uci-gravel-world-championships/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "T-Lab Bikes debuts the Limited Edition ’76 Legacy R3 Omni All-Road Bike",
+        "pubDate": "Wed, 07 Oct 2026 19:56:45 +0000",
+        "link": "https://www.gravelcyclist.com/bicycle-tech/t-lab-bikes-debuts-the-limited-edition-76-legacy-r3-omni-all-road-bike/",
+        "source": "Gravel Cyclist",
+        "sourceUrl": ""
+      },
+      {
+        "title": "'Fingers crossed for that scenario' - Dutch squad aligned for Marianne Vos to recapture rainbow jersey at Gravel World Championships",
+        "pubDate": "Wed, 07 Oct 2026 18:26:00 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/fingers-crossed-for-that-scenario-dutch-squad-aligned-for-marianne-vos-to-recapture-rainbow-jersey-at-gravel-world-championships/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Black Magic Paint, the Wizards of Paint announce Co-Ownership",
+        "pubDate": "Wed, 07 Oct 2026 18:22:31 +0000",
+        "link": "https://www.gravelcyclist.com/bicycle-tech/black-magic-paint-the-wizards-of-paint-announce-co-ownership/",
+        "source": "Gravel Cyclist",
+        "sourceUrl": ""
+      },
+      {
         "title": "Cane Creek Cycling Components Factory Tour: Building Stuff in North Carolina",
         "pubDate": "Wed, 07 Oct 2026 15:40:24 +0000",
         "link": "https://www.gravelcyclist.com/videos/cane-creek-cycling-components-factory-tour-building-stuff-in-north-carolina/",
@@ -841,6 +869,13 @@
         "link": "https://www.cyclingnews.com/pro-cycling/racing/its-naive-to-think-that-trade-team-loyalties-will-disappear-at-the-gravel-world-championships-i-expect-some-of-the-seasons-strangest-tactics-yet/",
         "source": "Cyclingnews",
         "sourceUrl": ""
+      },
+      {
+        "title": "Formula 1 Superstar Valtteri Bottas Rode a Gravel Bike from Malaysia to Singapore for His Next Grand Prix - Outside Magazine",
+        "pubDate": "Wed, 07 Oct 2026 09:54:51 GMT",
+        "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQak1KVUQ4Vng1YWc4RlZwb1ZBcVdWdzBQMkR1UWVOSmhtZWVSeWdLRk55QmlTM0RTb2hpR010MVpFeUZKOUJyRklITmhFUlJUWnMtOGxYRmYwMjY4QklZQ0JqUEtDaEh6RjJ5RnJaaTM0dTBhQkhuOEdYSkNUSkdGUVVya0RTZERBR1dyWGFuWENObFE?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
       },
       {
         "title": "'You can't simply borrow road metrics' - Colnago launches new G5-X gravel bike",
@@ -924,13 +959,6 @@
         "pubDate": "Tue, 06 Oct 2026 05:02:33 +0000",
         "link": "https://www.gravelcyclist.com/videos/shimano-xc703-off-road-racing-shoes-perfect-on-gravel-too/",
         "source": "Gravel Cyclist",
-        "sourceUrl": ""
-      },
-      {
-        "title": "True grit specialists primed to challenge the run of road pro rainbow jerseys – Analysing the Gravel World Championships contenders",
-        "pubDate": "Tue, 06 Oct 2026 02:51:59 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/racing/true-grit-specialists-primed-to-challenge-the-run-of-road-pro-rainbow-jerseys-analysing-the-gravel-world-championships-contenders/",
-        "source": "Cyclingnews",
         "sourceUrl": ""
       },
       {
