@@ -1,9 +1,79 @@
 {
-  "updatedAt": "2026-10-11T01:56:09.721Z",
+  "updatedAt": "2026-10-11T08:55:15.062Z",
   "disciplines": {
     "road": [
       {
-        "title": "UCI Gravel World Championships 2026 elite men LIVE - Florian Vermeersch attempts title defence in Western Australia",
+        "title": "“I want to be the best in the peloton” - Paul Seixas throws down Tadej Pogacar challenge after Il Lombardia triumph",
+        "pubDate": "Sun, 11 Oct 2026 10:30:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/i-want-to-be-the-best-in-the-peloton-paul-seixas-throws-down-tadej-pogacar-challenge-after-il-lombardia-triumph",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Results UCI Gravel World Championships 2026 | Magnus Bak Klaris upsets Florian Vermeersch and Connor Swift after late crash drama",
+        "pubDate": "Sun, 11 Oct 2026 10:00:00 +0200",
+        "link": "https://cyclinguptodate.com/gravel/results-uci-gravel-world-championships-2026-magnus-bak-klaris-upsets-florian-vermeersch-and-connor-swift-after-late-crash-drama",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "'It's a great dream to really be able to compete against Tadej Pogačar' – Paul Seixas takes another step towards his man-made destiny at Il Lombardia",
+        "pubDate": "Sun, 11 Oct 2026 07:37:49 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/its-a-great-dream-to-really-be-able-to-compete-against-tadej-pogacar-paul-seixas-takes-another-step-towards-his-man-made-destiny-at-il-lombardia/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "“He’s so much better than Pogacar was at 20 years old” - Bruyneel, Hincapie and Martin heap praise on Paul Seixas after Il Lombardia",
+        "pubDate": "Sun, 11 Oct 2026 09:30:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/hes-so-much-better-than-pogacar-was-at-20-years-old-bruyneel-hincapie-and-martin-heap-praise-on-paul-seixas-after-il-lombardia",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "“I will not miss the suffering anymore!”: Bauke Mollema brings 18-year professional career to an emotional close at Il Lombardia",
+        "pubDate": "Sun, 11 Oct 2026 09:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/i-will-not-miss-the-suffering-anymore-bauke-mollema-brings-18-year-professional-career-to-an-emotional-close-at-il-lombardia",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "“An incredible finale to my career” - Three-time Grand Tour stage winner bows out with stunning Il Lombardia top 10 in last-ever race",
+        "pubDate": "Sun, 11 Oct 2026 08:58:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/an-incredible-finale-to-my-career-three-time-grand-tour-stage-winner-bows-out-with-stunning-il-lombardia-top-10-in-last-ever-race",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "UAE open door to Paul Seixas transfer as Gianetti confirms contact with French superstar’s agent",
+        "pubDate": "Sun, 11 Oct 2026 08:58:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/if-he-asks-to-come-to-us-i-wouldnt-say-no-uae-openly-court-paul-seixas-as-battle-for-french-superstars-future-intensifies",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Tour of Chongming Island: Lorena Wiebes completes clean sweep to seal overall victory on stage 3",
+        "pubDate": "Sun, 11 Oct 2026 06:49:02 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/tour-of-chongming-island-lorena-wiebes-completes-clean-sweep-to-seal-overall-victory-on-stage-3/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Gravel World Championships: Magnus Bak Klaris sprints to huge victory in thrilling elite men's race",
+        "pubDate": "Sun, 11 Oct 2026 06:25:24 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/racing/gravel-world-championships-magnus-bak-klaris-sprints-to-huge-victory-in-thrilling-elite-mens-race/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "History made in Como: at 20 years and 16 days, Paul Seixas becomes the youngest Il Lombardia winner ever — and one of the most precocious Monument winners since the Second World War",
+        "pubDate": "Sun, 11 Oct 2026 06:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/history-made-in-como-at-20-years-and-16-days-paul-seixas-becomes-the-youngest-il-lombardia-winner-ever-and-one-of-the-most-precocious-monument-winners-since-the-second-world-war",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "As it happened: frantic finale in Western Australia as Denmark take the rainbow jersey",
         "pubDate": "Sun, 11 Oct 2026 01:32:03 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/live/uci-gravel-world-championships-2026-elite-men-live-florian-vermeersch-attempts-title-defence-in-western-australia/",
         "source": "Cyclingnews",
@@ -17,7 +87,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "'Biggest day out I've ever had, numerically ridiculous’ – George Bennett reveals power data from mega Il Lombardia breakaway",
+        "title": "'Biggest day out I've ever had, numerically ridiculous' – George Bennett reveals power data from mega Il Lombardia breakaway",
         "pubDate": "Sat, 10 Oct 2026 23:49:05 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/biggest-day-out-ive-ever-had-numerically-ridiculous-george-bennett-reveals-power-data-from-mega-il-lombardia-breakaway/",
         "source": "Cyclingnews",
@@ -66,24 +136,10 @@
         "sourceUrl": "https://velo.outsideonline.com"
       },
       {
-        "title": "“An incredible finale to my career” - Three-time Grand Tour stage winner bows out with stunning Il Lombardia top 10 in last-ever race",
-        "pubDate": "Sat, 10 Oct 2026 20:00:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/an-incredible-finale-to-my-career-three-time-grand-tour-stage-winner-bows-out-with-stunning-il-lombardia-top-10-in-last-ever-race",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "'I haven't found my top form since the Tour de France' – Remco Evenepoel comes up short at Il Lombardia",
         "pubDate": "Sat, 10 Oct 2026 17:20:50 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/i-havent-found-my-top-form-since-the-tour-de-france-remco-evenepoel-comes-up-short-at-il-lombardia/",
         "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "“If he asks to come to us, I wouldn’t say no” - UAE openly court Paul Seixas as battle for French superstar’s future intensifies",
-        "pubDate": "Sat, 10 Oct 2026 19:00:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/if-he-asks-to-come-to-us-i-wouldnt-say-no-uae-openly-court-paul-seixas-as-battle-for-french-superstars-future-intensifies",
-        "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
       {
@@ -120,13 +176,6 @@
         "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/it-hasnt-been-the-easiest-year-marianne-vos-finishes-a-tough-season-on-a-history-making-high-at-the-uci-gravel-world-championships/",
         "source": "Cyclingnews",
         "sourceUrl": ""
-      },
-      {
-        "title": "New to Escape Collective? - Escape Collective",
-        "pubDate": "Sat, 10 Oct 2026 15:51:31 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE1UZ2VaWFozbFo4ckFYQUNRY05DTDNWWXA3ajQtdU91SlAycnVEeVhoRE5zUzdDQU9EMlllbE1wNGFsM00?oc=5",
-        "source": "Escape Collective",
-        "sourceUrl": "https://escapecollective.com"
       },
       {
         "title": "“I don’t think I realise what I’ve done yet” - 20-year-old Paul Seixas rewrites Il Lombardia history with breathtaking Monument breakthrough",
@@ -178,39 +227,11 @@
         "sourceUrl": ""
       },
       {
-        "title": "“No other family should ever receive the phone call we received” - Finlay Tarling's father moved by Il Lombardia protest as Plugge demands ‘real action’",
-        "pubDate": "Sat, 10 Oct 2026 14:30:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/no-other-family-should-ever-receive-the-phone-call-we-received-finlay-tarlings-father-moved-by-il-lombardia-protest-as-plugge-demands-real-action",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "‘People Are Dying’: Riders Delay Il Lombardia in Rare Public Protest Over Safety - Outside Magazine",
-        "pubDate": "Sat, 10 Oct 2026 12:14:08 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNcjJ4V3o4cGJLRERIcnJqUWZQTFlDRlNzUnplZExuUlFfbFVTSW14TE1lMVVDTUhCZXlJUktpaFc3VHp1NEk3UjVLa1J4dU9pdGV0akxQR01uN2pUa0l3OVNIUUNFQ1VXTXlheWUzSmVDSjMwNk90a3BVX0pOQUFmdlpwcW9KYUVHVkRj?oc=5",
-        "source": "VELO",
-        "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
-        "title": "Pinarello Q36.5's incredible transfer window rolls on - Ten new signings as Tom Pidcock's team look set to top it off with blockbuster deal",
-        "pubDate": "Sat, 10 Oct 2026 13:45:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/pinarello-q365s-incredible-transfer-window-rolls-on-ten-new-signings-as-tom-pidcocks-team-look-set-to-top-it-off-with-blockbuster-deal",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "'We cannot keep accepting the fact that guys are literally dying' – peloton unites to delay Il Lombardia start - Escape Collective",
         "pubDate": "Sat, 10 Oct 2026 11:43:57 GMT",
         "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOdVIyeDhNLThPelVIbUppQWZBeVNvVFRvekRtOUhPbmhnNDJ6ZEpYZldvRlBwUEN5X1o4RW1TTzN1WDJVVGxIRDgxOEstbWlmN1FUXzlDUkc0bWZaNkhfTGZraGVvdDFKN3dFNFpDZ0xzTFd6dVdueG9TSXpzeTJXNXkwOWV3cGhNYUdfZDFFcVZDTHg5cThpbUdaZU5aRmFvWm5CcTlNd2xlbW5oc1A4OUNwbHNfVG9IN3RhT2VnREZuclNXamZiUFVKaXNUZDdKWEE?oc=5",
         "source": "Escape Collective",
         "sourceUrl": "https://escapecollective.com"
-      },
-      {
-        "title": "\"I've always been quite cooked and not motivated at the end of the season\" - Is Matteo Jorgenson's form a game-changer for Visma in Italian monument",
-        "pubDate": "Sat, 10 Oct 2026 13:00:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/ive-always-been-quite-cooked-and-not-motivated-at-the-end-of-the-season-is-matteo-jorgensons-form-a-game-changer-for-visma-in-italian-monument",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
       },
       {
         "title": "Bauke Mollema, Pello Bilbao and other retiring riders receive guard of honour send-off at Il Lombardia",
@@ -234,24 +255,10 @@
         "sourceUrl": ""
       },
       {
-        "title": "\"If you don’t let it out, it builds up inside you\" - Paul Seixas stands by his Montreal frustrated comments as he hopes to bounce back at Il Lombardia",
-        "pubDate": "Sat, 10 Oct 2026 12:15:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/if-you-dont-let-it-out-it-builds-up-inside-you-paul-seixas-stands-by-his-montreal-frustrated-comments-as-he-hopes-to-bounce-back-at-il-lombardia",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "'At the end of the day, you can only try' – Despite puncture and a late crash, Rosa Klöser claws back silver at UCI Gravel World Championships",
         "pubDate": "Sat, 10 Oct 2026 09:59:03 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/at-the-end-of-the-day-you-can-only-try-despite-puncture-and-a-late-crash-rosa-kloser-claws-back-silver-at-uci-gravel-world-championships/",
         "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"We will no longer tolerate this\" - Riders stage protest at Il Lombardia as Remco Evenepoel makes announcement and Tom Pidcock shares statement",
-        "pubDate": "Sat, 10 Oct 2026 11:41:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/we-will-no-longer-tolerate-this-riders-stage-protest-at-il-lombardia-as-remco-evenepoel-makes-announcement-and-tom-pidcock-releases-statement",
-        "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
       {
@@ -304,25 +311,11 @@
         "sourceUrl": ""
       },
       {
-        "title": "As it happened: Late crash sees Dutch dominance continue in women's UCI Gravel World Championships on muddy course",
-        "pubDate": "Sat, 10 Oct 2026 01:29:46 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/live/uci-gravel-world-championships-2026-elite-women-live-star-names-descend-on-nannup-australia-to-battle-for-rainbows/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "'I'm kind of nervous' – Will mystery knee injury hold Isaac del Toro back at Il Lombardia?",
-        "pubDate": "Fri, 09 Oct 2026 22:54:06 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/im-kind-of-nervous-will-mystery-knee-injury-hold-isaac-del-toro-back-at-il-lombardia/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Young USCX champion Tofik Beshir in ICU at Tennessee hospital after 'head-on crash' on gravel ride and 'needs another miracle'",
-        "pubDate": "Fri, 09 Oct 2026 21:37:54 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/young-uscx-champion-tofik-beshir-in-icu-at-tennessee-hospital-after-head-on-crash-on-gravel-ride/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
+        "title": "USCX series winner Tofik Beshir in intensive care after ‘head-on collision’ - Escape Collective",
+        "pubDate": "Fri, 09 Oct 2026 23:34:22 GMT",
+        "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPdnhyRFdHMzZOVWtNQUtpTU02Qk5rVG90LTJ3X2luSEt0Q1p3RGtIRlpFNTk2cFpITVFHbVk3ME9HU19BRVMxWDJDdVAzb1JKZTFXeDJYRVNWX0h5NEZjZXdkaTBVdlBIajFQaHp4VDUzaVpONFhsZHFvcHVlUE1MVWJlR21lTU56cDlrSV9uNzhUMmhVRGRYMHQwMHRlLXQwb2tWWGFR?oc=5",
+        "source": "Escape Collective",
+        "sourceUrl": "https://escapecollective.com"
       },
       {
         "title": "Tiffany Cromwell, Ashleigh Moolman-Pasio Call It a Career at UCI Gravel Worlds after 17-Years in the Peloton - Outside Magazine",
@@ -342,6 +335,13 @@
         "title": "Picnic-PostNL says it does not plan to leave the WorldTour - Escape Collective",
         "pubDate": "Fri, 09 Oct 2026 18:06:51 GMT",
         "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPR3B4MjhlVFdpT3BXTXBjOUxzMTRCZy1lVkY0WkJKZzJ1WFd1djlEY2k4c0djeTE3cXNfNzh5ZXB0ZWZkY242YUZCZ0RMRGpRclZXVnNBc1B1M1ltdkV1dE5lMWJkbldoVFZMd1NmcWhVektsWlBXQXVOMW9BLTNBWXBUWkpydEFHckZMVURzQnhQUQ?oc=5",
+        "source": "Escape Collective",
+        "sourceUrl": "https://escapecollective.com"
+      },
+      {
+        "title": "Lucinda Brand to depart Lidl-Trek - Escape Collective",
+        "pubDate": "Fri, 09 Oct 2026 15:05:30 GMT",
+        "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9XS3gxTGhGcW5KRnJjQkV0ckJPc0dpTWx6RHAyTDczNWFGUkZJXzctNktjREIyTU01S1NZT3Jrdk9Oc0cyX2U0dzFhX1d3Y0lBcHBKdEtVY2NTYWwtV3FocndlYldCLXU2UVVNZU1Pbjg?oc=5",
         "source": "Escape Collective",
         "sourceUrl": "https://escapecollective.com"
       },
@@ -388,19 +388,18 @@
         "sourceUrl": "https://velo.outsideonline.com"
       },
       {
+        "title": "How to Watch Il Lombardia 2026 in the USA, Canada, and Worldwide - Outside Magazine",
+        "pubDate": "Thu, 08 Oct 2026 09:58:06 GMT",
+        "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNOHU2dm80bHZtVUJ1VVZGUzRzSVlvWUJwUk1qYVVQTEg2ZDJOdEl0Tm4zVDltTmVHaENXQi1OakludWtmNUhEcXFIdm1KT1R0dmt0a0hKelhuWTlOa0JNWnh3dTViUVNUU0tzeTBPUG1HSHdZcVBQVFdGa1pVY2NOc3RxblktTERsV2lGMXNrcHFScHN3V1lZQmszMGk1RnBHTWhFMlh4OUZGU2wySVl1Vw?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
+      },
+      {
         "title": "2026 Il Lombardia Preview: A new winner in Pogačar's absence - Escape Collective",
         "pubDate": "Wed, 07 Oct 2026 20:37:48 GMT",
         "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFA4NE9UWFZxSHJEZUFqQlpwdWRCYXdfUGhybzd0NVFNVk1YNjc4SDR5cnc2eS1qY21QTkdYd3BTWGxHdU41RmNqU29XbnVKc0lMUDdaaFRGSWt0YktoQzdiNVZuZWRhQQ?oc=5",
         "source": "Escape Collective",
         "sourceUrl": "https://escapecollective.com"
-      },
-      {
-        "title": "Magnus Sheffield to leave Netcompany Ineos for four-year contract with Uno-X Mobility - Cyclingnews",
-        "pubDate": "Wed, 07 Oct 2026 19:40:32 GMT",
-        "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOY21KcVA0Tm9mWE4yNXNmNWhscFJFdnhTX3FKMHFPaVhUMDJpVmlNZnc3QnN6NzhYOFBRaVNaeVRYaldmYU9rQnNKd1FxZjg5X09SU05vRmdhTUJNSTFQMXJpZDNvNkphTWtQN2ItaTZ3cjVxS0xtMzBqb3RscmtUU1l0VTVFNVhzWWtleG9WSkNOblRGUmpVTlVYc2c0d0lyMnlTcXRZbmxsZ3lERjlfdDFSMGNnWm9MNllTUGRTUHBFQ2tHeml6LVhEanczcnVEYnc?oc=5",
-        "source": "Cyclingnews",
-        "sourceUrl": "https://www.cyclingnews.com",
-        "type": "transfers"
       },
       {
         "title": "Magnus Sheffield Embraces Norwegian Roots With Move to Uno-X - Outside Magazine",
@@ -410,21 +409,28 @@
         "sourceUrl": "https://velo.outsideonline.com"
       },
       {
+        "title": "Pogačar's Viral Booty Band Warm-Up Routine Might Just Be a Placebo, but Here's Why It Might Work for You - Outside Magazine",
+        "pubDate": "Wed, 07 Oct 2026 15:03:04 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQRjNDRC1wQUEyVklPdllhSVFWVHdpM2lwUHVZR3V3bGFXSDFNSjN3M3ZmMHlvS21RLXUwdF9ueDJkNkZFMWE1ZUpFRHYxaU1CWmV3MVp3Z3JSWUY0WFhEQjVNdHZscjJmZFRtMlZveGNvakF2N3RFdXB3WWhrY2JZdnlxZFhRT0ZQT2c?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
+      },
+      {
         "title": "‘Risk Your Life To Race’: Wrong-Way Police Motorbike Hits Pidcock’s Teammates - Outside Magazine",
         "pubDate": "Wed, 07 Oct 2026 13:43:04 GMT",
         "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPTTFwMmNwR18yb3FKWW9sWVhSM05MQWt3RzF0enZVNDgzVFVva05sQmMwdnNDYTVhWnhDSXZkTGw4WWZQZkhTRTVDT3VTbTRjazFESUk1WDNlUXU5dTQ4ejlFMjdfdmNmdFhQTGFIdWlEcEEtMmFMUHItQm9hUE5teDRtLU8xMTRYN3RDNTBmbFc?oc=5",
         "source": "VELO",
         "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
-        "title": "Il Lombardia 2026 Cheat Sheet: Route, Climbs, Favorites, Storylines for Final Monument of 2026 - Outside Magazine",
-        "pubDate": "Wed, 07 Oct 2026 10:18:04 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPWHJjeUJqTjh1dHd2SzR4Uk1XTF84eUlLNFVDMjZJcEpqcTEtVXJYTlZzd1hhNFRJcUUySDNwQ0tvTktCWnQzZEdVRE1zOXR6TXZqb2doMUQzV2FvRFkxRFpPcjdMN2d1Tk5OeFl4VjkwbGt0dHlIdmtEbklVVFNnMnB4Q1VuMzVjVGVxaTdRWUZrSTdwWDR5di1YR2cxTEVJOTRGdzZoZGY5UXc?oc=5",
-        "source": "VELO",
-        "sourceUrl": "https://velo.outsideonline.com"
       }
     ],
     "mtb": [
+      {
+        "title": "Video: 2026 Red Bull Rampage Men's Highlights",
+        "pubDate": "Sun, 11 Oct 2026 00:00:00 PDT",
+        "link": "https://www.pinkbike.com/news/video-2026-red-bull-rampage-mens-highlights.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
       {
         "title": "RESULTS - 2026 Red Bull Rampage Men's Competition - Vital MTB",
         "pubDate": "Sat, 10 Oct 2026 10:53:00 GMT",
@@ -471,6 +477,13 @@
         "title": "Sunrise Saves Bootleg Canyon’s Winter Gravity Series - Vital MTB",
         "pubDate": "Fri, 09 Oct 2026 19:19:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPUkpuczNCUjgyMXFSTS1UVjlwZm1Za056OTV4bUdydGVjaFd4Vk9oMXFBYWhYNzFpT21wb2xqM3RNM3lUaExSaGZ0MmdTQmU0MTZKRGZPMFBlUkU2OUd3NlpGZGUzYW5tMGNTbm54NnNTTDViQVFTbE5mRTZDb3VpdGxRX1l6dw?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
+        "title": "Bike Checks - Vital MTB",
+        "pubDate": "Fri, 09 Oct 2026 17:14:18 GMT",
+        "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQdVhrZUpqTkdIX0VNRWs0NU1VZnYxdi1xT0NSU05uVkRlVFZBT2UwWWNXMklHS04zMUVfdjNULVZ0SG1TS1JmV1p0cTVGZU1TUGVyWVNteXB0Q0lGTnFkb2JpWGd5TDVTdHJxMlVkM3VENlVJYTlCQkxFUU0zR3V2Xw?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
@@ -548,13 +561,6 @@
         "title": "New Competitions, New Names, New Era: The 2026 FMB World Tour in Review",
         "pubDate": "Fri, 9 Oct 2026 00:00:00 PDT",
         "link": "https://www.pinkbike.com/news/new-competitions-new-names-new-era-the-2026-fmb-world-tour-in-review.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Video: Big Sends at Mine 'N' Ride with Alessio Tonoli, Vinny T, Tim Bringer &amp; More",
-        "pubDate": "Fri, 9 Oct 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/video-big-sends-at-mine-n-ride-with-alessio-tonoli-vinny-t-tim-bringer-and-more.html?trk=rss",
         "source": "Pinkbike",
         "sourceUrl": ""
       },
@@ -659,6 +665,27 @@
         "sourceUrl": "https://cyclocross24.com"
       },
       {
+        "title": "UCI Cyclocross Kalender 2026-2027 - Men Junior - Cyclocross24.com",
+        "pubDate": "Sat, 10 Oct 2026 03:17:54 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE82RTRkLWM3OTg2WUExa1F5X0VhYVJaTF94OXc1OHJZam9PMVY1UW44OVFSQmpzakUzOS1RSExENTA4VTZxaWFudUR3ZVBkTE9LV2JrcGR3SXFJZkFaRHhv?oc=5",
+        "source": "Cyclocross24",
+        "sourceUrl": "https://cyclocross24.com"
+      },
+      {
+        "title": "Charles Liégeois CX Team 2026-2027 - Cyclocross24.com",
+        "pubDate": "Sat, 10 Oct 2026 00:32:33 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFAtMkVzMi1xUDBOSnpoOFZFa3BYQ0NsMG9SQzRpYWF2WTJTNnhYQy1ESUFiNlpPTlNNYlRXQVczdjFHbGlLLVpvY3dBRHdqdDhrVFRrUW5kRUZHdUhxanZEblpIU3JRQVE?oc=5",
+        "source": "Cyclocross24",
+        "sourceUrl": "https://cyclocross24.com"
+      },
+      {
+        "title": "Results Estonian National Championships Cyclocross Viljandi 2026 - Men Junior - Cyclocross24.com",
+        "pubDate": "Wed, 07 Oct 2026 10:40:10 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5oS29EZzJZMVJSLVdNLTBxRVhtX2k4OV9UcVhCUWVURUVCUG1JNzI3Q2lSeHNpUDQyZ1hweHFPZlNSSXRCb3B1dHBDUVY?oc=5",
+        "source": "Cyclocross24",
+        "sourceUrl": "https://cyclocross24.com"
+      },
+      {
         "title": "Results North Carolina Grand Prix - Day 1 2026 - Men Junior - Cyclocross24.com",
         "pubDate": "Wed, 07 Oct 2026 07:42:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE4zRHJCc0lubGJ5cjhfbHpaaUNaN2x3a3duQUMyQVlSX0paTHBjbnZTa0s1VnBUN3gweUtMXzlLaTFDZDVNRHRGZk81ZUQ?oc=5",
@@ -678,25 +705,18 @@
         "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9ha0NPdm5GX0ZPOXR2NG9uZzJ1eC1sd2FGMnJVZ1dJVTd4LWo5U0tpbzAxQzVfeUpZd0UyLUJ2YTNFMGktV0pvRUpUZmw?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
-      },
-      {
-        "title": "Results Brumath Bike Festival 2026 - Women Junior - Cyclocross24.com",
-        "pubDate": "Sun, 04 Oct 2026 07:00:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5RbndjRGJONlVQUHg5R2Nfc3djeU0xYVFPaF9zVVZPVWpMaWJNeDhfUktkTkdPT0NwQ2gtT3p0RWpjQ3dqT1JVZTgwU0g?oc=5",
-        "source": "Cyclocross24",
-        "sourceUrl": "https://cyclocross24.com"
-      },
-      {
-        "title": "Results Brumath Bike Festival 2026 - Women Elite - Cyclocross24.com",
-        "pubDate": "Sun, 04 Oct 2026 07:00:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBpRlRxUnd2aFplR2xtbkRQN2JZTWRwLVVTLVAzU1UyYTVjVGRuTXJLcXF4S0t2dWlHVlhQZFZwQ0YxbU52MklWLUNFMnY?oc=5",
-        "source": "Cyclocross24",
-        "sourceUrl": "https://cyclocross24.com"
       }
     ],
     "gravel": [
       {
-        "title": "UCI Gravel World Championships 2026 elite men LIVE - Florian Vermeersch attempts title defence in Western Australia",
+        "title": "Gravel World Championships: Magnus Bak Klaris sprints to huge victory in thrilling elite men's race",
+        "pubDate": "Sun, 11 Oct 2026 06:25:24 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/racing/gravel-world-championships-magnus-bak-klaris-sprints-to-huge-victory-in-thrilling-elite-mens-race/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "As it happened: frantic finale in Western Australia as Denmark take the rainbow jersey",
         "pubDate": "Sun, 11 Oct 2026 01:32:03 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/live/uci-gravel-world-championships-2026-elite-men-live-florian-vermeersch-attempts-title-defence-in-western-australia/",
         "source": "Cyclingnews",
@@ -778,13 +798,6 @@
         "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQT05hS2FzTVJGS1RGRkM0VGFUZVI2LVBjR0UwU2JpTm1sRDJvQ3RKMTI0dS1BX2RNODJoUmZmQ0s4NjEwZHlXUDhMb1NmMENRZkRXUU0tRkhwUmo1VURJdVNwbGpuSG51cjQ2dEZPYl9FeDM3c0R6SE53Y000aWxtQjhWV1NyYklQenFEd25xdHVMVHlpSnVMRXFmck96cHZQTTh1X2JoazdvRk1CT1oxSjl3UQ?oc=5",
         "source": "VELO",
         "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
-        "title": "How to watch the UCI Gravel World Championships 2026: Everything you need to live stream the action - Cycling Weekly",
-        "pubDate": "Fri, 09 Oct 2026 19:00:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPWjk0cHhUckdNZXRkVzdHdFlabDl2VUtkc21qRkQtSWM0aXR6Z0ZJOG1IODc0WDZNN3l0X0IweHB5QXBMMGVJZHBQcEFJQy1raXUtWUV4Ykh6VTh5TXBWcmlQTUhUY2dVcWJFVFp6VUI5VHVpWUtiOVRnQ2R1THlDY3JjNHFibDNEczR2Mm5ZdUJ2RVFwVTVYeWlnbzBXTkFKWkNiUmI2dm02TXpoQUlER0xyaEQ3QnRwZXc?oc=5",
-        "source": "Cycling Weekly",
-        "sourceUrl": "https://www.cyclingweekly.com"
       },
       {
         "title": "Apidura launches Expedition Series Long Top Tube Pack",
@@ -883,13 +896,6 @@
         "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE8wdnNLWU95ZHpsRUV5Rk9SZzRUT0JuNUJKal9vUV9kYmNLdno3MUdOLXVVSndmYWhteVFPeG1uSmdtRk1KeTlwRWgxY2VPWElpS3RfYjJyZVBhVHFTaGZmazZpQVZJc3FSV3dxQXNYaFY?oc=5",
         "source": "BikeRadar",
         "sourceUrl": "https://www.bikeradar.com"
-      },
-      {
-        "title": "'I don’t think it’s my responsibility to finance that' – Gravel pros forced to buy their own kit and fund travel to Australia for World Championships",
-        "pubDate": "Thu, 08 Oct 2026 11:30:00 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/i-dont-think-its-my-responsibility-to-finance-that-gravel-pros-forced-to-buy-their-own-kit-and-fund-travel-to-australia-for-world-championships/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
       },
       {
         "title": "T-Lab Bikes debuts the Limited Edition ’76 Legacy R3 Omni All-Road Bike",
