@@ -1,7 +1,21 @@
 {
-  "updatedAt": "2026-10-11T20:19:27.463Z",
+  "updatedAt": "2026-10-12T00:34:40.156Z",
   "disciplines": {
     "road": [
+      {
+        "title": "\"He shouldn't have raced Piemonte\" - Nibali blames UAE directors for \"wasting\" Del Toro's energy prior to Lombardia",
+        "pubDate": "Mon, 12 Oct 2026 01:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/he-shouldnt-have-raced-piemonte-nibali-blames-uae-directors-for-wasting-del-toros-energy-prior-to-lombardia",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Michael Vanthourenhout breaks a 24-year-long curse at Belgian cyclocross season opener in Dendermonde",
+        "pubDate": "Sun, 11 Oct 2026 23:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cyclocross/michael-vanthourenhout-breaks-a-24-year-long-curse-at-belgian-cyclocross-season-opener-in-dendermonde",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
       {
         "title": "“He’s so much better than Pogacar was at 20 years old” - Bruyneel, Hincapie and Martin heap praise on Paul Seixas after Il Lombardia",
         "pubDate": "Sun, 11 Oct 2026 20:45:00 +0200",
@@ -192,13 +206,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "Results UCI Gravel World Championships 2026 | Magnus Bak Klaris upsets Florian Vermeersch and Connor Swift after late crash drama",
-        "pubDate": "Sun, 11 Oct 2026 10:00:00 +0200",
-        "link": "https://cyclinguptodate.com/gravel/results-uci-gravel-world-championships-2026-magnus-bak-klaris-upsets-florian-vermeersch-and-connor-swift-after-late-crash-drama",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "Kit Nicholson - Escape Collective",
         "pubDate": "Sun, 11 Oct 2026 07:50:17 GMT",
         "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFA0dUx4S2RSNXItaldIc1JpWVVydEZMc1R6ZnZUQmxXT3BtVlZHUTU1cWFOQnRDZ2thM21abHVaOFVOT1JtdFlIc2RSQWRfV0Q2SFBGMmprTncwbzBuV1E?oc=5",
@@ -210,13 +217,6 @@
         "pubDate": "Sun, 11 Oct 2026 07:37:49 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/its-a-great-dream-to-really-be-able-to-compete-against-tadej-pogacar-paul-seixas-takes-another-step-towards-his-man-made-destiny-at-il-lombardia/",
         "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "“I will not miss the suffering anymore!”: Bauke Mollema brings 18-year professional career to an emotional close at Il Lombardia",
-        "pubDate": "Sun, 11 Oct 2026 09:00:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/i-will-not-miss-the-suffering-anymore-bauke-mollema-brings-18-year-professional-career-to-an-emotional-close-at-il-lombardia",
-        "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
       {
@@ -425,6 +425,13 @@
     ],
     "mtb": [
       {
+        "title": "2026 MTB Tech Rumors and Innovation - Longer and Slacker - The Hub - Mountain Biking Forums / Message Boards - Vital MTB",
+        "pubDate": "Sun, 11 Oct 2026 12:13:58 GMT",
+        "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPckx4ZkxMbDlldndCU1NxOU1idm1kWDc1blQxZ3J6MnZxM2tOZ1I0VThfMW5idDd6WWI4c1VWSEc2Q25PTzJOd2wwNkl2OThBNmRVUHAtUW1VS2N6aHFDb1hybjUxdGowWlJ5Y2piV3o2UkkwQWR0LWNqZkpxbHFPdlJPajNkVjlRNXVUSi13Q3pTX3FjMVVabWN1eVNEYWtH?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
         "title": "Peaty's Projects Ep. 1: Morg and Ffi Pickstock - iceman2058 - Mountain Biking Videos - Vital MTB",
         "pubDate": "Sun, 11 Oct 2026 09:52:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQb2diRUVLLWlwRVlNZktKM3F4UVI1c0prUnpmelViZlp6NDY0eDVoQlpITTAtdXoyU0FoS1l6NUNiMnBKMGZnTXRMYkNkenI4ckpSLXU1NnkxZG9zaUlGenRLZTE4UVlEYU9jUlRLUGpIVU1lSVBnWUpGdGdBM3luNEd0b1ljSkpCRFE?oc=5",
@@ -516,16 +523,16 @@
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "Bike Checks - Vital MTB",
-        "pubDate": "Fri, 09 Oct 2026 17:14:18 GMT",
-        "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQdVhrZUpqTkdIX0VNRWs0NU1VZnYxdi1xT0NSU05uVkRlVFZBT2UwWWNXMklHS04zMUVfdjNULVZ0SG1TS1JmV1p0cTVGZU1TUGVyWVNteXB0Q0lGTnFkb2JpWGd5TDVTdHJxMlVkM3VENlVJYTlCQkxFUU0zR3V2Xw?oc=5",
+        "title": "Enduro bikes for 5'5\" rider - The Hub - Mountain Biking Forums / Message Boards - Vital MTB",
+        "pubDate": "Fri, 09 Oct 2026 17:49:37 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5HakZnZGZVaHV1TFhfdGdMYVUtODViM2RqVTNBaWhSTmp6b0RTTFpJZnBybW1YV19IY29lRTM3VlNnaUpucGFFTnVuMkRQd2tBbUtoTW9XbnNPajhSOGl5bENBZzRfY2Q5?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "sspomer - Vital MTB",
-        "pubDate": "Fri, 09 Oct 2026 16:36:59 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE4tTjBtN2hORWVsTGV1SHYyZ2JTWTJxeTlNTi1wT0JEMDMxVDl1U205RFg4NjJBaTVKbzFmOFRYT3hLWEJCTXgzSF9SejNkY1FheEQ5Z1cyQ21LNWp0?oc=5",
+        "title": "Specialized Demo 10 + Dorado + Sramgura - Vital MTB",
+        "pubDate": "Fri, 09 Oct 2026 07:52:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOZDJXVWUyQnBvZXEtUUJXMXEwRmFvUFh0cU5Md1Jrd0xHY0VmZ1B6c0lXelFZT1pqSTJBY3NIdllzOUZiZlluOWhVcmQxMy1uQk9PUE82WUpoa2JPVDJhOWJsU090VHFSbGNrbnprOVJ5dXlzYWVDZmlpd0oyZ0VPYWJGYV8yWUk?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
@@ -647,16 +654,16 @@
         "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBmSzNXN08yQmZSNHZfek1ldDYyYnhkazRZZzdaaUNoQkw2cEdINGN3SUxLQjhtMmhrYS1BQ2N2a0d6ZVZjUWJuMlNFNFIwYmRlRWZ2NFFWTWducEt1Z1RPSjhNM1J3MkpfMzFLYjFKZjh5bU5DYWZSeTFUS3M?oc=5",
         "source": "Escape Collective",
         "sourceUrl": "https://escapecollective.com"
-      },
-      {
-        "title": "Mondraker Foxy Carbon RR - Vital MTB",
-        "pubDate": "Mon, 05 Oct 2026 17:32:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPOW92RGlINjZpTmN3NkljRXZDZGZ0VTRnbGk5R19xRjc4US03dXhTSVdfUGY2ZmF0ZDg0Y0dyNnQ3N1M5V3V1Z0pXMWx2bC0zV2lLaVd3QjBQZUtITUpmT0M5aV94dEQydmxodG5hd281cE9rQkxreEY3VmdXZVlYRDJRSHVJN0xDR2s3WGMydnY0ck5aQy1JYg?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
       }
     ],
     "cyclocross": [
+      {
+        "title": "Michael Vanthourenhout breaks a 24-year-long curse at Belgian cyclocross season opener in Dendermonde",
+        "pubDate": "Sun, 11 Oct 2026 23:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cyclocross/michael-vanthourenhout-breaks-a-24-year-long-curse-at-belgian-cyclocross-season-opener-in-dendermonde",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
       {
         "title": "Olivia Poole - Cyclocross24.com",
         "pubDate": "Sun, 11 Oct 2026 13:48:33 GMT",
@@ -672,9 +679,16 @@
         "sourceUrl": "https://cyclocross24.com"
       },
       {
-        "title": "De Ceuster Bouwkranen 2026-2027 - Cyclocross24.com",
-        "pubDate": "Sat, 10 Oct 2026 09:59:40 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1wNkhCQTl4c2lRSzdldGtWbTlGM2lYUlBpOUZQdjBkVHZ2R1lWTzlJLXFjb0gxSWdqYWFIRjNGdUU5ZHZ0SDE3WFhWcVl4a014VnM3T2kzRFFGXzQ0X0RNN1JmYw?oc=5",
+        "title": "Results X2O Trofee Hamme-Zogge - Bollekescross 2026 - Men U23 - Cyclocross24.com",
+        "pubDate": "Sat, 10 Oct 2026 21:11:28 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5CU2pJS0RGNTZIcENKUTc5WHpyQk01eFc5WGhXSFZVekxOYW9hZ2NPaTh4cVUwcmpHQVBaX2RlcjZQdmkxTHRQOHVtUkw?oc=5",
+        "source": "Cyclocross24",
+        "sourceUrl": "https://cyclocross24.com"
+      },
+      {
+        "title": "Results Copa de España #3 - Amurrioko Ziklokrossa 2026 - Women Junior - Cyclocross24.com",
+        "pubDate": "Sat, 10 Oct 2026 15:07:50 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBNc1ZHemNKajd3QUJXWEJtUHdfWmprWUlPdHJ5NHJzNlg0dDdkSnhVaFNNdDBfLW5PWlhLY1VpUzl4WkhnSkRfbWxKVnA?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
@@ -682,13 +696,6 @@
         "title": "Results Pan-American Championships Cyclocross Washington 2026 - Women U23 - Cyclocross24.com",
         "pubDate": "Sat, 10 Oct 2026 09:55:04 GMT",
         "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9OZFk0TExtWG9Zbk5ZQmtvWE5Fa2pUbTZkMVphVWdOZW9KNDhRRUJwcER4bUdUX1FQTmFsaGFHaU94Qk1CN1oyVnctbUc?oc=5",
-        "source": "Cyclocross24",
-        "sourceUrl": "https://cyclocross24.com"
-      },
-      {
-        "title": "Results North Carolina Grand Prix - Day 1 2026 - Men Junior - Cyclocross24.com",
-        "pubDate": "Wed, 07 Oct 2026 07:42:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE4zRHJCc0lubGJ5cjhfbHpaaUNaN2x3a3duQUMyQVlSX0paTHBjbnZTa0s1VnBUN3gweUtMXzlLaTFDZDVNRHRGZk81ZUQ?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
