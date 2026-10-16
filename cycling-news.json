@@ -1,7 +1,21 @@
 {
-  "updatedAt": "2026-10-15T22:22:01.021Z",
+  "updatedAt": "2026-10-16T01:23:10.362Z",
   "disciplines": {
     "road": [
+      {
+        "title": "OFFICIAL: Movistar Team locks in key workhorse through 2027, despite difficult season",
+        "pubDate": "Fri, 16 Oct 2026 03:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/official-movistar-team-locks-in-key-workhorse-through-2027-despite-difficult-season",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "ANALYSIS: Enric Mas has three major goals to confirm his new dimension in 2027",
+        "pubDate": "Fri, 16 Oct 2026 01:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/analysis-enric-mas-has-three-major-goals-to-confirm-his-new-dimension-in-2027",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
       {
         "title": "“You presume nowadays that he’s not a threat... but he has those days where he'll just destroy everyone” - British legend explains Remco Evenepoel's dangerous unpredictability",
         "pubDate": "Thu, 15 Oct 2026 23:00:00 +0200",
@@ -235,20 +249,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "OFFICIAL: INEOS go back to their roots as they sign two British riders - including exciting talent and former Tour de l'Avenir winner",
-        "pubDate": "Thu, 15 Oct 2026 09:33:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/official-ineos-go-back-to-their-roots-as-they-sign-two-british-riders-including-exciting-talent-and-former-tour-de-lavenir-winner",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"I'm not going to risk my life with those barriers there\" - Eneco Tour sprinter furious after dangerous finale and \"unsportsmanlike\" move",
-        "pubDate": "Thu, 15 Oct 2026 09:00:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/im-not-going-to-risk-my-life-with-those-barriers-there-eneco-tour-sprinter-furious-after-dangerous-finale-and-unsportsmanlike-move",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "Monumental year takes US rising star Ashlin Barry from 'I could barely walk' to 'memory that will last a lifetime'",
         "pubDate": "Wed, 14 Oct 2026 20:18:08 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/monumental-year-takes-us-rising-star-ashlin-barry-from-i-could-barely-walk-to-memory-that-will-last-a-lifetime/",
@@ -429,6 +429,13 @@
     ],
     "mtb": [
       {
+        "title": "E-bike talk: not tech rumor derailment - The Hub - Mountain Biking Forums / Message Boards - Vital MTB",
+        "pubDate": "Thu, 15 Oct 2026 16:24:25 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMzR3dFQtQlZhZWw5dmdBOVpVUDFtZGxxYUZFUUVFM3FnUGRKOGtPYVE4U3BqLUpIWWV5LXVjSHk5MnVURGdpZlFGNDA0b1E1RUNTWmtjd19Sa3AtWTFlUmV2OHl3UUdmc0xhTjNoOUwtY2tES19vc3dtaFJjODY1N1NvM3Y5V2Fv?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
         "title": "Stumpjumper EVO custom built - Vital MTB",
         "pubDate": "Thu, 15 Oct 2026 08:16:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5MbEdPV1JMcF9tRnZXR29rdkJmZ2VPS01Za0FQaE5zOWdjSDd4c2M0YWdFdUtNTVZmVWhEd2dWenR6SnQ3dG5QZ3V5dGlDOGRmQVNBN2JwMmJvUFdzQ0Z3Sk9JLWxlS2I0YVZlb0kycDRvSDA1RHlmTWNYQ28ySmc?oc=5",
@@ -436,9 +443,30 @@
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
+        "title": "Seeding Results: Red Bull Hardline BC 2026",
+        "pubDate": "Thu, 15 Oct 2026 00:00:00 PDT",
+        "link": "https://www.pinkbike.com/news/qualifying-results-red-bull-hardline-bc-2026.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
+      {
         "title": "Bike Check: Lachlan Stevens-McNab's Trek Session Prototype",
         "pubDate": "Thu, 15 Oct 2026 00:00:00 PDT",
         "link": "https://www.pinkbike.com/news/bike-check-lachlan-stevens-mcnabs-trek-session-prototype.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Velo Field Test Episode 2: Stress Testing 6 Completely Different Bikes to Find the Future of Gravel",
+        "pubDate": "Thu, 15 Oct 2026 00:00:00 PDT",
+        "link": "https://www.pinkbike.com/news/velo-field-test-episode-2-stress-testing-6-completely-different-bikes-to-find-the-future-of-gravel.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Randoms: Red Bull Hardline BC 2026",
+        "pubDate": "Thu, 15 Oct 2026 00:00:00 PDT",
+        "link": "https://www.pinkbike.com/news/randoms-red-bull-hardline-british-columbia.html?trk=rss",
         "source": "Pinkbike",
         "sourceUrl": ""
       },
@@ -474,13 +502,6 @@
         "title": "Bring On the Fender Weather - What We Do to Prep For Fall &amp; Winter Riding",
         "pubDate": "Thu, 15 Oct 2026 00:00:00 PDT",
         "link": "https://www.pinkbike.com/news/bring-on-the-fender-weather-what-we-do-to-prep-for-fall-and-winter-riding.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Velo Field Test Episode 2: Stress Testing 6 Completely Different Bikes to Find the Future of Gravel",
-        "pubDate": "Thu, 15 Oct 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/velo-field-test-episode-2-stress-testing-6-completely-different-bikes-to-find-the-future-of-gravel.html?trk=rss",
         "source": "Pinkbike",
         "sourceUrl": ""
       },
@@ -590,20 +611,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "Wolf Tooth Announces Limited Edition Camo-Ano Shift Pedals, Available at Dealers Only",
-        "pubDate": "Wed, 14 Oct 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/Wolf-Tooth-Announces-Limited-Edition-Camo-Ano-Shift-Pedals-Available-at-Dealers-Only.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Video: Hard MTB League Docuseries Episode 1",
-        "pubDate": "Wed, 14 Oct 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/hard-mountain-bike-league-drops-episode-1-of-its-docuseries-ahead-of-october-24-finals.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
         "title": "2026 MTB Tech Rumors and Innovation - Longer and Slacker - The Hub - Mountain Biking Forums / Message Boards - Vital MTB",
         "pubDate": "Tue, 13 Oct 2026 18:48:36 GMT",
         "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPckx4ZkxMbDlldndCU1NxOU1idm1kWDc1blQxZ3J6MnZxM2tOZ1I0VThfMW5idDd6WWI4c1VWSEc2Q25PTzJOd2wwNkl2OThBNmRVUHAtUW1VS2N6aHFDb1hybjUxdGowWlJ5Y2piV3o2UkkwQWR0LWNqZkpxbHFPdlJPajNkVjlRNXVUSi13Q3pTX3FjMVVabWN1eVNEYWtH?oc=5",
@@ -618,23 +625,9 @@
         "sourceUrl": "https://www.uci.org"
       },
       {
-        "title": "MARIN Alpine Trail XR 2025 - Vital MTB",
-        "pubDate": "Tue, 13 Oct 2026 11:13:49 GMT",
-        "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9oX2JEZ1RpOTJIMVVseDJJX2k2LVRScEh2RHJuSWM3eTI5dnNoYm9IeXZzaW9JNjBYVXNxX1dMN0MxU1B1emdLZlgtVlY3VjRsY2lTVFRzOXhQQTVCbUN4eVpjTS1QTG5QR0VyTlh5Qlc5RDdyZUpXTWd0NA?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
-      },
-      {
         "title": "Canyon Launches Spectral:ON 9 CF with Avinox M2S System - Vital MTB",
         "pubDate": "Tue, 13 Oct 2026 08:58:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPVjhfc2Z2a3pwZzh3ZTRITnV1UWdxb1Y3YUYxMHNSRHlSdU9NMm9QbzdWdHhDaVBOY3cwY21xUFc2dkVMT3FtN2hMeXFwMmRIblFfTUo3TW1WQ1YxVTFWM2pBWFl1SXdydnB2cnpodDhYanQ2TlY0YmJaWXA4bHhiMXNlNGplcTFEUXUzQUcyWEY0X1FYaXNVVA?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
-      },
-      {
-        "title": "2026 Race Talk - The Hub - Mountain Biking Forums / Message Boards - Vital MTB",
-        "pubDate": "Mon, 12 Oct 2026 20:00:27 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE92S3phZGVxWHJ5azlZbVNlaHlDTC1seUJlLXBaQzZuMFMzVnI1SnEtMHBZeUw2SV9RT1dBaUZrbjVkX09EWDNhelBxbmdCLTJU?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
@@ -644,6 +637,13 @@
         "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQam02dUJKby1Ta2djUm1rTUtFN0tOSnVmaVVRakZ2TU5mZGxlbjhLdFVQeUdPQVZTZWdNZjlWWnlGZUdJUExmQVpXc0E3UlZndWJvckVXZXR5WWRQWUkzb2ZKak1sRlhrb256T24zQzdISEJiaC1qaUZocWRFWHhLaUVQeFVaT1pOWXgwMXVGRWpVU1ZQbFZqQWJaWDVkT3M?oc=5",
         "source": "VELO",
         "sourceUrl": "https://velo.outsideonline.com"
+      },
+      {
+        "title": "MARIN Alpine Trail XR 2025 - Vital MTB",
+        "pubDate": "Sun, 11 Oct 2026 15:54:30 GMT",
+        "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9oX2JEZ1RpOTJIMVVseDJJX2k2LVRScEh2RHJuSWM3eTI5dnNoYm9IeXZzaW9JNjBYVXNxX1dMN0MxU1B1emdLZlgtVlY3VjRsY2lTVFRzOXhQQTVCbUN4eVpjTS1QTG5QR0VyTlh5Qlc5RDdyZUpXTWd0NA?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
       },
       {
         "title": "Peaty's Projects Ep. 1: Morg and Ffi Pickstock - iceman2058 - Mountain Biking Videos - Vital MTB",
@@ -660,9 +660,9 @@
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "RESULTS - 2026 Red Bull Rampage Women's Competition - Vital MTB",
-        "pubDate": "Thu, 08 Oct 2026 23:11:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOSXh6QWJuN0lIRzRVSGg0QllUZ2ZLT1JHU3lQWXNzVWZyejl1VVFIZlY2enY1dVRNbmR4VDBFN1pmYWg4RWpNWWdDcFAzMmk1YWRyVmVOUzlaeEN0MlNXRGxUdnl6VkFOWTlJTjA0NmhhazBOMGdqbS1VUmtIWC1GREJvQlZwZU1uN1lV?oc=5",
+        "title": "Specialized Demo 10 + Dorado + Sramgura - Vital MTB",
+        "pubDate": "Fri, 09 Oct 2026 07:52:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOZDJXVWUyQnBvZXEtUUJXMXEwRmFvUFh0cU5Md1Jrd0xHY0VmZ1B6c0lXelFZT1pqSTJBY3NIdllzOUZiZlluOWhVcmQxMy1uQk9PUE82WUpoa2JPVDJhOWJsU090VHFSbGNrbnprOVJ5dXlzYWVDZmlpd0oyZ0VPYWJGYV8yWUk?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       }
@@ -718,9 +718,9 @@
         "sourceUrl": "https://cyclocross24.com"
       },
       {
-        "title": "Results Copa de España #3 - Amurrioko Ziklokrossa 2026 - Women Junior - Cyclocross24.com",
-        "pubDate": "Sat, 10 Oct 2026 15:07:50 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBNc1ZHemNKajd3QUJXWEJtUHdfWmprWUlPdHJ5NHJzNlg0dDdkSnhVaFNNdDBfLW5PWlhLY1VpUzl4WkhnSkRfbWxKVnA?oc=5",
+        "title": "De Ceuster Bouwkranen 2026-2027 - Cyclocross24.com",
+        "pubDate": "Sat, 10 Oct 2026 09:59:40 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1wNkhCQTl4c2lRSzdldGtWbTlGM2lYUlBpOUZQdjBkVHZ2R1lWTzlJLXFjb0gxSWdqYWFIRjNGdUU5ZHZ0SDE3WFhWcVl4a014VnM3T2kzRFFGXzQ0X0RNN1JmYw?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
