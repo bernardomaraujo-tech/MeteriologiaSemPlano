@@ -1,7 +1,21 @@
 {
-  "updatedAt": "2026-10-18T20:46:59.912Z",
+  "updatedAt": "2026-10-18T23:15:26.865Z",
   "disciplines": {
     "road": [
+      {
+        "title": "\"I am very proud to finish this season with a victory for Specialized\" - Tim Merlier gives a special farewell to Soudal's bike supplier",
+        "pubDate": "Mon, 19 Oct 2026 01:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/i-am-very-proud-to-finish-this-season-with-a-victory-for-specialized-tim-merlier-gives-a-special-farewell-to-soudals-bike-supplier",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"The fans really embrace the Captain America\" - Quinn Simmons concludes his season with a trademark celebration",
+        "pubDate": "Sun, 18 Oct 2026 23:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/the-fans-really-embrace-the-captain-america-quinn-simmons-concludes-his-season-with-a-trademark-celebration",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
       {
         "title": "Fourth titles at Life Time Grand Prix for Keegan Swenson and Sofia Gomez Villafañe, but 'the one I had to work the hardest for' admits men's winner",
         "pubDate": "Sun, 18 Oct 2026 19:56:50 +0000",
@@ -150,13 +164,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "Tadej Pogačar's Secretive Lactate Energy Gel Hits the Market – But There’s a Catch - Outside Magazine",
-        "pubDate": "Sun, 18 Oct 2026 10:28:25 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOWWhULTV4U2NLVnlPX0dRdUpuOVZIdkpRbzhpcjU0S1hJcUhTTEFIS2xiOTlnNkYwQzQ3cVN3Zm9QQlFIdjlUc2l5WjNLM09EZDhvYUplVHM5TFlOZWJ5UjJRV3N4MHdid1VDQkVaMmVMc25TOE5haW1WUTdEYnFsRVVXb2ZVbjFZRktzSWtnSUJMYklqblpXNXUzOXlZZ3dLNUZKUGVDUzZmYWp4ZmkwdjJjUmFBdHJxc3RCNjFHU0ljZWs?oc=5",
-        "source": "VELO",
-        "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
         "title": "In disqualifying Lorena Wiebes, the Giro's commissaires, for once, applied the UCI’s rule exactly as written",
         "pubDate": "Sun, 18 Oct 2026 10:20:00 +0000",
         "link": "https://www.cyclingweekly.com/news/in-disqualifying-lorena-wiebes-the-giros-commissaires-for-once-applied-the-ucis-rule-exactly-as-written",
@@ -216,20 +223,6 @@
         "title": "Results Japan Cup 2026 - Quinn Simmons closes his season with a victory ahead of Ben Healy",
         "pubDate": "Sun, 18 Oct 2026 09:00:00 +0200",
         "link": "https://cyclinguptodate.com/cycling/results-japan-cup-2026-quinn-simmons-closes-his-season-with-a-victory-ahead-of-ben-healy",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Results Tour of Guangxi 2026 stage 6 - Jarno Widar beats Tom Pidcock to take GC win on queen stage",
-        "pubDate": "Sun, 18 Oct 2026 08:17:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/results-tour-of-guangxi-2026-stage-6-jarno-widar-beats-tom-pidcock-to-take-gc-win-on-queen-stage",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "British and American firepower added to Netcompany INEOS - What can they add to the team in 2027?",
-        "pubDate": "Sun, 18 Oct 2026 06:00:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/british-and-american-firepower-added-to-netcompany-ineos-what-can-they-add-to-the-team-in-2027",
         "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
@@ -363,6 +356,13 @@
         "type": "transfers"
       },
       {
+        "title": "VIDEO: Mass Crash Decimates Women's Omnium at UCI Track World Championships - Outside Magazine",
+        "pubDate": "Fri, 16 Oct 2026 12:56:44 GMT",
+        "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPdjZCRVVPYm9wT0dfTFR0NFZhUFlRLXBmSno0Y1pNbXJFM0YwemtzTjU2cFlKT3pURGlnZkl3WUs5MkVpMmJKZnZOXzJjWm1zS1hyRENEYmRTSDFKS0l1ODZnT2FWZGtmZjkxQVV3N0lkVmJCeGstellMcVBnbHJzSUcxMS1IbUtPdWtUUQ?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
+      },
+      {
         "title": "'My old gravel bike was a poor match for the island hills' – I rode round the sunniest place in the UK and hit the wall, but discovered a cycling paradise",
         "pubDate": "Fri, 16 Oct 2026 11:02:14 +0000",
         "link": "https://www.cyclingweekly.com/news/i-cycled-round-the-sunniest-place-in-the-uk-and-hit-the-wall-but-i-discovered-a-paradise-for-bike-riding",
@@ -428,6 +428,13 @@
     ],
     "mtb": [
       {
+        "title": "Frameworks Enduro - Vital MTB",
+        "pubDate": "Sun, 18 Oct 2026 08:47:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOTXotM3V5MEZETlVfTkxHYzhwWDRvYUhjR2R0M2FkNXpuaGhWR3dqNm1tUHFmcVNQeC1YUmd2RjBGVmJPTVRwbmdJX0cwNmpFOTdfNWtwemR0ZnE5V1d3Wm5welN1aWE1bUF4d0xsc1Z2Z3BkWDhoc0RyWjBPRmsyVTNSdVp3VENCcXdWSVB1MA?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
         "title": "Results: Raphaela Richter &amp; Ryan Gilchrist are the 2026 Enduro World Champions",
         "pubDate": "Sun, 18 Oct 2026 00:00:00 PDT",
         "link": "https://www.pinkbike.com/news/results-2026-enduro-world-championships.html?trk=rss",
@@ -454,13 +461,6 @@
         "link": "https://www.pinkbike.com/news/video-jesse-melameds-enduro-world-champs-follow-cam.html?trk=rss",
         "source": "Pinkbike",
         "sourceUrl": ""
-      },
-      {
-        "title": "Atherton A200 - Vital MTB",
-        "pubDate": "Sat, 17 Oct 2026 12:14:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQWmlUcXFGdURYQW9PSVNIdWVDVC1xMjAwbEpQaktuR091X3o5ZnNvMEd5N0owaUF2TUkyWGhTVE1FNmhwYmYxb1R4NThUTE5vOGw3SGRQYzlJVkxtOW9IX1JIWWE1YURPUk1kM2pwamM4bDF3cUMzZGgxOTZnamk2VFRHRFlQQVRjQ1E?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
       },
       {
         "title": "Race Analysis: Breaking Down the Numbers from Red Bull Hardline BC 2026",
@@ -510,13 +510,6 @@
         "link": "https://www.pinkbike.com/news/video-inside-the-2026-leadville-100-with-the-specialized-off-road-team.html?trk=rss",
         "source": "Pinkbike",
         "sourceUrl": ""
-      },
-      {
-        "title": "Dennis Enarson MTBMX II - sspomer - Mountain Biking Videos - Vital MTB",
-        "pubDate": "Fri, 16 Oct 2026 16:37:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5tMlVDSnEtMURDc1BVLWFUaFRJZUwyMjJvOXpySzltY2V4V0kzb19xUE5LMkNNX1RteFBnQ3Y5RlptMlNwbURzXzQ3Ql9NenFjQ0JNNUd2bEptTGJTbFlUWHIyQlFsQzNXVkl6eHNnUQ?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
       },
       {
         "title": "UCI Mountain Bike Enduro and E-Enduro World Championships: All set for a grand Finale - UCI.org",
@@ -596,6 +589,13 @@
         "sourceUrl": ""
       },
       {
+        "title": "bulletbass man - Vital MTB",
+        "pubDate": "Fri, 16 Oct 2026 03:55:52 GMT",
+        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE84VG4zbTktR0QyM3B4ZVZ3ZXd1ZjRjVHB1QncxSllzak5renh3dWNnSC1RV3B2dldFc2xZVnVZcnJULW03eFVReWx4RGpBd09td0VpZ2cwMUZiNW5jb2kxSXl6NExWVjBDT1M4?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
         "title": "E-bike talk: not tech rumor derailment - The Hub - Mountain Biking Forums / Message Boards - Vital MTB",
         "pubDate": "Thu, 15 Oct 2026 20:53:45 GMT",
         "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMzR3dFQtQlZhZWw5dmdBOVpVUDFtZGxxYUZFUUVFM3FnUGRKOGtPYVE4U3BqLUpIWWV5LXVjSHk5MnVURGdpZlFGNDA0b1E1RUNTWmtjd19Sa3AtWTFlUmV2OHl3UUdmc0xhTjNoOUwtY2tES19vc3dtaFJjODY1N1NvM3Y5V2Fv?oc=5",
@@ -620,13 +620,6 @@
         "title": "Product Guide: Compare Parts - Vital MTB",
         "pubDate": "Wed, 14 Oct 2026 19:40:29 GMT",
         "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNX3NMX0FwM0JIbHNfV0NCUXpoR0JIaWotb3A5Z2M1XzNwZUdtQld2clhoalc4QjVvWVR3QlViTWpDcVh6WFI0aVlOMUFkdVo0NTFiRkthZ3JGVEVpS3VZZ0xRVzJ5ZXFibVgteGhHT19DSjdzZ1gzanlKbkFJREZtdDZhNkpZM1habEY2YTRUZ3NJUQ?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
-      },
-      {
-        "title": "Introducing GRiTT by Leatt, a Full Bike Care Suite of Maintenance Products - Vital MTB",
-        "pubDate": "Wed, 14 Oct 2026 10:39:54 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPSV9nbXNqMHdiYnFaRTBYY3puVWlaNXpBdTlRY1VuX1lSZGoySlVlOHNqbXBjOXdZRnBqRktad2labzZQZUxTenFfNDlNYThDbVV4djAyQ1hFdUdmOE40RXd0LWFIdGdPMXdlVE1jNGRZX09TQlR5WmMxc2xmYWF2dE42dkVCWGxEbjRKYm1nWHFNdjBPTkxDRC1qX01LdGtEMkNz?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
@@ -675,25 +668,25 @@
     ],
     "cyclocross": [
       {
+        "title": "Kings CX Day 2 2026 Results – Elite Women, Elite Men – Deerfield Township, USA - Cyclocross Magazine",
+        "pubDate": "Sun, 18 Oct 2026 23:01:53 GMT",
+        "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOaEZpR1B2T0I1SEVFMkNJcUxyb3VaYl81TThXaWRXSmdYT2YtVTljYjEyU3pkbEYxVUtKVUh5VFFfcllYV2FqZWtzNGFhMG5ueUl4QjFYMnRlNUF4VGdsWkVBWWllTjRXTnNVZS1vNmtoRmlaUzBzNEpPOU15SGRDSm85YWluYnJkS2djdVNJQmRxMVVDN0VwWklVR0NTNFNf?oc=5",
+        "source": "Cyclocross Magazine",
+        "sourceUrl": "https://www.cxmagazine.com"
+      },
+      {
+        "title": "Kings CX: Manon Bakker wins fourth C1 race in US and pays tribute to fellow USCX champion Tofik Beshir - Cyclingnews",
+        "pubDate": "Sun, 18 Oct 2026 17:44:10 GMT",
+        "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNUTdqSnFZalVBM0ExN25kc3VGYlBWQmwxRWtRNno3QWZMUkZTbXlheElXUVdBMUNtdEhTSEhCTTZYa1V6cDZPbkhEdVNaODYxalVNa2JKa0xFdFZnSy1Iano2cE56bmRVOERQSnBsWVlKQlhySUVTVTN5cFYydU94Mi1lTnI2NW9OWTNmTjZSR3c4bHRsTGhmc0FNTjVzMU10akphU1RQSTU4eTdhYU55d2twQ0pqcGh5di1EdXNtekhPLVpyQzZGdTVQUTRwSW9hOXN6UGtwZlIzX19UWTdGdnZPbw?oc=5",
+        "source": "Cyclingnews",
+        "sourceUrl": "https://www.cyclingnews.com"
+      },
+      {
         "title": "Results Canadian National Championships Cyclocross Oro-Medonte 2026 - Women Junior - Cyclocross24.com",
         "pubDate": "Sun, 18 Oct 2026 10:21:30 GMT",
         "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE4xTzNfVC1rcUZ5THFUdkRkUGFHc2Z0em9sc25DSXdVSHNPU0dFak5rWVNUdVFTUXVnUDBCZFg4aV9oVjZZam5hekptQTA?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
-      },
-      {
-        "title": "Results Varberg Cyclocross Day 2 2026 - Women Junior - Cyclocross24.com",
-        "pubDate": "Sun, 18 Oct 2026 06:08:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBhQ21Yd09DdGRVOVFWWEwzRDJILXRMTDY4ZGwyQkNKS0lSbllZRTM1dDRxOHJEZ0ZrSFo0QzAwbHlaQWI5ZVlUb2szTnQ?oc=5",
-        "source": "Cyclocross24",
-        "sourceUrl": "https://cyclocross24.com"
-      },
-      {
-        "title": "Kings CX Day 1 2026 Results – Elite Women, Elite Men – Deerfield Township, USA - Cyclocross Magazine",
-        "pubDate": "Sun, 18 Oct 2026 01:44:42 GMT",
-        "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNSEVSNXpuYmJCZEY2SHpYd2NwOUVJd1F1VWZ3SE1tSjBvZm8zUkxEeXh4YTBobEtEbW5MdWVWd1NUVm0wVGNTYVRaRlZqa1psMDJ5TnVXUC1nRzdnaGdoNDhlT0c0TFZkWnRnZ3JSX01OS05EcDVkaV8tY0liajdPOW41ODNkdUlqTk1mWkwyekRCOERkNDd5Y2VuM2ZvOHNZ?oc=5",
-        "source": "Cyclocross Magazine",
-        "sourceUrl": "https://www.cxmagazine.com"
       },
       {
         "title": "HG Cross Berencross 2026 Results – Elite Women, Elite Men – Meulebeke, Belgium - Cyclocross Magazine",
@@ -731,13 +724,6 @@
         "sourceUrl": "https://cyclocross24.com"
       },
       {
-        "title": "Results Munich Super Cross 2026 - Cyclocross24.com",
-        "pubDate": "Fri, 16 Oct 2026 17:36:50 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9QUjd5NW00ZUtWQWl1cGxwaV94VTltbzdvRzJvbVREbHpBS012cXBzc0VpcHRjamRUZVl2TUdESERVcTFvb2pLODlyTkU?oc=5",
-        "source": "Cyclocross24",
-        "sourceUrl": "https://cyclocross24.com"
-      },
-      {
         "title": "Kermiscross 2026 Results – Elite Men, Elite Women – Ardooie, Belgium - Cyclocross Magazine",
         "pubDate": "Fri, 16 Oct 2026 15:52:05 GMT",
         "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQVkc2YnBzOW1pZWpyT28weVBnVkVHOWl0ZzFBdHNLQURuZTFGeTZHbUN5S21McFlXd0hIOTc5MWR5Z0lYd0RFYVVfUXRJbzBqZUJBQlBUYWRlQmJvRjR2V05lOWlCajVabzlPTXgxUlJ4Q3dfc015cGh5N1N2M1dxaS14UW4yNHpWT2EyaGhrU29zVGc?oc=5",
@@ -757,6 +743,13 @@
         "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNTkxfQzdqa2doM0FHQS1rRmNXZjY3ZzNZN1ctOG1vZExRZDBxMG1DZEYyTVJGVkQzY1ltNjhVZW5mV1NwOVNWQVlkWU9xcVdTOTNnZHFud3FiSTFjbl83OEpwUTQ5TndXYUJHQlI5QTV4NjNjSFJybEFRMjJ0ck5HRWNadENNcGxVRVMw?oc=5",
         "source": "Cyclocross Magazine",
         "sourceUrl": "https://www.cxmagazine.com"
+      },
+      {
+        "title": "Results NoLimited Cup #3 - Trnava 2026 - Men Junior - Cyclocross24.com",
+        "pubDate": "Mon, 12 Oct 2026 22:38:59 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBPRDBISUdNc2h6RWFRX2wzek5fdkxoUUZfc3RYOWE5OExrOGp1bnZhRnRQNTVxSVljV1FKdFBjcXcyeVFXNE1Ic3R0TC0?oc=5",
+        "source": "Cyclocross24",
+        "sourceUrl": "https://cyclocross24.com"
       }
     ],
     "gravel": [
