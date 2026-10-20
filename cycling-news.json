@@ -1,7 +1,35 @@
 {
-  "updatedAt": "2026-10-20T17:10:45.866Z",
+  "updatedAt": "2026-10-20T20:37:23.450Z",
   "disciplines": {
     "road": [
+      {
+        "title": "Olympic silver medallist breaks silence after receiving 18-month anti-doping ban",
+        "pubDate": "Tue, 20 Oct 2026 21:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/olympic-silver-medallist-breaks-silence-after-receiving-18-month-anti-doping-ban",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "'I don't want to be just going through the motions' – Lachlan Morton in search of even more freedom as he departs EF Education to go it alone",
+        "pubDate": "Tue, 20 Oct 2026 18:00:00 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/i-dont-want-to-be-just-going-through-the-motions-lachlan-morton-in-search-of-even-more-freedom-as-he-departs-ef-education-to-go-it-alone/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "'Maybe I'll take up gravel' - Still seeking a 2027 contract, Taco van der Hoorn weighs his future",
+        "pubDate": "Tue, 20 Oct 2026 17:29:10 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/maybe-ill-take-up-gravel-still-seeking-a-2027-contract-taco-van-der-hoorn-weighs-his-future/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Garmin quietly drops the most expensive bike computer on the market – the Edge 1060 features a new built-in microphone and speaker for voice control",
+        "pubDate": "Tue, 20 Oct 2026 17:13:09 +0000",
+        "link": "https://www.cyclingweekly.com/news/garmin-quietly-drops-the-most-expensive-bike-computer-on-the-market-the-edge-1060-features-a-new-built-in-microphone-and-speaker-for-voice-control",
+        "source": "Cycling Weekly",
+        "sourceUrl": ""
+      },
       {
         "title": "“Of course I’d like to beat Pogacar” - INEOS’ teenage world champion sets sights on cycling’s biggest star ahead of 2027 step-up",
         "pubDate": "Tue, 20 Oct 2026 19:00:00 +0200",
@@ -284,13 +312,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "\"There are more cowboys in the peloton\" - One of cycling's most experienced riders calls out young guns",
-        "pubDate": "Mon, 19 Oct 2026 21:30:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/there-are-more-cowboys-in-the-peloton-one-of-cyclings-most-experienced-riders-calls-out-young-guns",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "Escape Collective tire testing: A simple guide to picking the best road tire - Escape Collective",
         "pubDate": "Mon, 19 Oct 2026 18:58:17 GMT",
         "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQUlJiLUhTX2V2X29GTFQyZE53QkFQQ256TzhaQXJscHJJcHRMQnVUb2FTa0pNbGU0MzlpOWJMQkhCMGFfM2tkbGpLSGx4Ym1SeU9rM1l2UE1rQ2JFaHptLUd6bFJQTHZaU0lfZWRxQkxnMlNaYWdEOUYwTVFsdzRWaHlFMVlFRU9yOWhnYVczdFFIRWZEQlgwMmdneVNnNzZFbzFPY3Badkg?oc=5",
@@ -348,25 +369,11 @@
         "type": "transfers"
       },
       {
-        "title": "Tao Geoghegan Hart signs for EF Education-EasyPost in bid to 'refind the condition I had in my best years'",
-        "pubDate": "Mon, 19 Oct 2026 14:13:12 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/transfers/tao-geoghegan-hart-signs-for-ef-education-easypost-in-bid-to-refind-the-condition-i-had-in-my-best-years/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
         "title": "Tour de France 2027: The Biggest Rumors Before the Route Reveal - Outside Magazine",
         "pubDate": "Mon, 19 Oct 2026 14:07:34 GMT",
         "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNdXBoUEJkMEZzM1dkcGdTZGZRU3JOa1VBb3BlVVlCZnBFM3NvUWVsSG42dldlaUlLVURYanhGODVwU3FWRUtyMGN3ZGlfbFF6WGRxV0JXd01PVV9JcjdtRVphb2t5R0RkaW9QYmRxQndod0k2RjNDNVJtQTN3bzNnTjkxbzFyOGtsZEs1ZHhmUURlR01TZlNBMnhSYWh2UzZmbHpxaUxVZUktQkp5NTQzXzFSMVppR0k?oc=5",
         "source": "VELO",
         "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
-        "title": "'A new career as a professional grimacer awaits' – Ronan Augé suffering facial paralysis after horror crash at Tour de Langkawi",
-        "pubDate": "Mon, 19 Oct 2026 11:34:04 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/a-new-career-as-a-professional-grimacer-awaits-ronan-auge-suffering-facial-paralysis-after-horror-crash-at-tour-de-langkawi/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
       },
       {
         "title": "Gallery: McNulty closes the curtain on 2026 with first win in rainbow bands - Escape Collective",
@@ -417,27 +424,34 @@
         "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQUHh1bUZDb2xRd3RQVEFScHc5OU1PZy1yWThkWnJUcGFwRHVPV2JNUG01alNrdV9aR05yU0c5MDVPa1dDcUl4eHhuZkRuZjJWaHhhMHVUUU5xX29nN3JtbDh0VjNjWm0xNE5JU2ZjZHBIQmxRcGNVYWV3NDdvZjMxT2pZYTc2ajA4el9QWHFXY0hZZw?oc=5",
         "source": "VELO",
         "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
-        "title": "Bikepacking with purpose: How GRL PCK is getting more women into cycling - Escape Collective",
-        "pubDate": "Fri, 16 Oct 2026 19:03:42 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOU0o0T1k0aVE1UUFXYTlPb0R6bEFheWUtVlBXQUk2eHB6ckwzNk9hMkphTkRkRUdiclFqRXJQYjRVblBlMzU5ZzhLVk54am01TUVXdzlkMjlBdURMcWRwX0psMFZfLUFmUTIyLU9Wd3ctVnlpRG5nWWo5N1NZQjY3akZXRlJTTjNqRm5Bc3B2WmhXdzU1VXEtN1JWMF9aMTItQlY0?oc=5",
-        "source": "Escape Collective",
-        "sourceUrl": "https://escapecollective.com"
       }
     ],
     "mtb": [
       {
         "title": "Vital MTB - Mountain Bikes, Reviews, Videos, Races - Vital MTB",
-        "pubDate": "Tue, 20 Oct 2026 16:09:12 GMT",
+        "pubDate": "Tue, 20 Oct 2026 17:12:06 GMT",
         "link": "https://news.google.com/rss/articles/CBMiPkFVX3lxTE5JVzJ2YWFYZVJsR2hKRUVobUhnQ3h6OWp4WGdUbEh2Ty1ZUVRqLThSTElzOWh2NnB3OFFzOUR3?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
+        "title": "The Illume Awards 2026 Announce Bike Category Winner",
+        "pubDate": "Tue, 20 Oct 2026 00:00:00 PDT",
+        "link": "https://www.pinkbike.com/news/the-illume-awards-2026-announce-bike-category-winner.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
+      {
         "title": "9 Shimano CUES-Equipped Mountain Bikes That Won’t Burn Up Your Bank Account",
         "pubDate": "Tue, 20 Oct 2026 00:00:00 PDT",
         "link": "https://www.pinkbike.com/news/9-shimano-cues-equipped-mountain-bikes-that-wont-burn-up-your-bank-account.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
+      {
+        "title": "No Saw Needed: Newmen Releases Adjustable Width Phase Carbon Handlebars",
+        "pubDate": "Tue, 20 Oct 2026 00:00:00 PDT",
+        "link": "https://www.pinkbike.com/news/newmen-phase-carbon-handlebars-with-adjustable-width.html?trk=rss",
         "source": "Pinkbike",
         "sourceUrl": ""
       },
@@ -449,9 +463,9 @@
         "sourceUrl": ""
       },
       {
-        "title": "No Saw Needed: Newmen Releases Adjustable Width Phase Carbon Handlebars",
+        "title": "Video: Close Racing on a Technical Course at the 2026 Hard MTB Qualifier",
         "pubDate": "Tue, 20 Oct 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/newmen-phase-carbon-handlebars-with-adjustable-width.html?trk=rss",
+        "link": "https://www.pinkbike.com/news/video-close-racing-on-a-technical-course-at-the-2026-hard-mtb-qualifier.html?trk=rss",
         "source": "Pinkbike",
         "sourceUrl": ""
       },
@@ -540,6 +554,13 @@
         "sourceUrl": ""
       },
       {
+        "title": "E-bike talk: not tech rumor derailment - The Hub - Mountain Biking Forums / Message Boards - Vital MTB",
+        "pubDate": "Sun, 18 Oct 2026 18:13:52 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMzR3dFQtQlZhZWw5dmdBOVpVUDFtZGxxYUZFUUVFM3FnUGRKOGtPYVE4U3BqLUpIWWV5LXVjSHk5MnVURGdpZlFGNDA0b1E1RUNTWmtjd19Sa3AtWTFlUmV2OHl3UUdmc0xhTjNoOUwtY2tES19vc3dtaFJjODY1N1NvM3Y5V2Fv?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
         "title": "Frameworks Enduro - Vital MTB",
         "pubDate": "Sun, 18 Oct 2026 08:47:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOTXotM3V5MEZETlVfTkxHYzhwWDRvYUhjR2R0M2FkNXpuaGhWR3dqNm1tUHFmcVNQeC1YUmd2RjBGVmJPTVRwbmdJX0cwNmpFOTdfNWtwemR0ZnE5V1d3Wm5welN1aWE1bUF4d0xsc1Z2Z3BkWDhoc0RyWjBPRmsyVTNSdVp3VENCcXdWSVB1MA?oc=5",
@@ -575,6 +596,20 @@
         "sourceUrl": ""
       },
       {
+        "title": "Atherton A200 - Vital MTB",
+        "pubDate": "Sat, 17 Oct 2026 12:14:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQWmlUcXFGdURYQW9PSVNIdWVDVC1xMjAwbEpQaktuR091X3o5ZnNvMEd5N0owaUF2TUkyWGhTVE1FNmhwYmYxb1R4NThUTE5vOGw3SGRQYzlJVkxtOW9IX1JIWWE1YURPUk1kM2pwamM4bDF3cUMzZGgxOTZnamk2VFRHRFlQQVRjQ1E?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
+        "title": "Atherton A200 xx DH - Vital MTB",
+        "pubDate": "Sat, 17 Oct 2026 12:09:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNVDk5LWJWTWV6OEtad2tFNGxRSHJzR2h3NWs1THBoTE1RUVJ0WnRDVkFZRDZjSEsxejBmME9fN19kdWhjTDYyajdqRTVNZGFTNHJ5WnFhXzdqc1BIc1phS3paZjZsZDVEbThjaENTRXZyb3RKODdVbFJILXdIY2dTMVQwYw?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
         "title": "Race Analysis: Breaking Down the Numbers from Red Bull Hardline BC 2026",
         "pubDate": "Sat, 17 Oct 2026 00:00:00 PDT",
         "link": "https://www.pinkbike.com/news/race-analysis-breaking-down-the-numbers-from-red-bull-hardline-bc-2026.html?trk=rss",
@@ -582,46 +617,18 @@
         "sourceUrl": ""
       },
       {
-        "title": "Photo Epic: 2026 Red Bull Hardline BC Finals",
-        "pubDate": "Sat, 17 Oct 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/photo-epic-2026-red-bull-hardline-bc-finals.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Fox CEO Steps Down After Lower Than Expected Financial Results",
-        "pubDate": "Sat, 17 Oct 2026 00:00:00 PDT",
-        "link": "https://www.pinkbike.com/news/fox-ceo-steps-down-ahead-of-lower-than-expected-financial-results.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Specialized Levo 4/Evo - Vital MTB",
-        "pubDate": "Fri, 16 Oct 2026 16:11:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBXWDRrdDI5czVTWURBRjN2UjRmN3R5SktmMnVSVUczNmltT2lNUVV4ZUtOb0owZDFVTS1TS1VZMUctemdqeEpheUZMTlpXYl84V1o2SXR3aVlvMXdzSEluRThvS3gxVVFHb3cyM0ZKOFpISTFjLVE?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
-      },
-      {
-        "title": "2026 MTB Tech Rumors and Innovation - Longer and Slacker - The Hub - Mountain Biking Forums / Message Boards - Vital MTB",
-        "pubDate": "Fri, 16 Oct 2026 15:17:11 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5RbGhoZHZWdGJlTEZXYnpRa29rcWY2eFozMFFZakdSall1Tlk2M0RWRjdvWUZHZ0w0WUlvalRYN2hzaUJuNXdmOUtxZEEyeXBX?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
-      },
-      {
-        "title": "Sam f****** hill - The Hub - Mountain Biking Forums / Message Boards - Vital MTB",
-        "pubDate": "Fri, 16 Oct 2026 15:00:45 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5OSlN2ejJodFU0TTA0NFpGY3pPZ2RWVUx6WTV3QUNwWmd3OV9tT2wydFJfODYxc0VDRGcxOU01bGF2STZ1aWo2MUEzdUF3WVo4?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
-      },
-      {
         "title": "UCI Mountain Bike Enduro and E-Enduro World Championships: All set for a grand Finale - UCI.org",
         "pubDate": "Fri, 16 Oct 2026 14:27:55 GMT",
         "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPQ1NLaWhHeElqRnJBdVR0Y0FlaUlvamRFcVg5S1p0dW5XOHJ5TXhSbXd3a1llOFlwU2pNNVkzek1LTmw0dThjcmhtenRvR2tZelF5bXlEQTRBYmtCZXBmdy1MSm5YNmwyN3ZlNXUtVndRdFVRN1FWdWt4alc4bl9OSWphSk45X0wtTV96Y3lWQ3JlNGM3c0M1QklTbVh6NzMtNlFuUHcwcnk2VTlx?oc=5",
         "source": "UCI",
         "sourceUrl": "https://www.uci.org"
+      },
+      {
+        "title": "Red Bull Hardline British Columbia 2026 - The Hub - Mountain Biking Forums / Message Boards - Vital MTB",
+        "pubDate": "Fri, 16 Oct 2026 13:22:18 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNTWYtNWRqdXhnc2YtZE1wQUJ4WVdHX2Zya2kzMF9aOXZaaHpZai11ZGpnTDBBTWZHVEFXNGtTSzRTUk83RFd5bTlTZjUxUFFTOEJlWEZKTUlpLWZkR2tXLV9vb2tFTG9mOUFrUEludXhUQXZyLUF2REU3S2Z2ZEUyb1pOVDhac3BMVVE?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
       },
       {
         "title": "2026 Pivot Mach 4 SL Team XX Eagle Transmission Bike - Reviews, Comparisons, Specs - Bikes - Vital MTB",
@@ -657,16 +664,16 @@
         "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9GNUlKNGR1WE9fT2ttNUtsNEJaNUkyeThCRmFHOS1Wd1JaY3N5VmQzclotaWR2RjRpOE5ENzlOVTlndzFBSEdJbDZBWXU5bHNWc241Q3hITFRXTUs3QklvWnlWaW4xYXQxbWdUU05INmhDSXc0N1dj?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
-      },
-      {
-        "title": "UCI Mountain Bike Enduro and E-Enduro World Championships: a brief history and explainer - UCI.org",
-        "pubDate": "Tue, 13 Oct 2026 17:52:35 GMT",
-        "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNOVNsb2s3a3dVQmtXdEdKY0lFQlVHZEp5eVc4ZWl5R1h1cHptbVR1a0tnY3JXX1YyOHZvUExYZHZvQjVzelBWZzVfMXNDRk1CRk9fcnJJQ0dPS0Z3a0RwSzQ0cmM0cmJySkhKa3pfd0hVVFRzTm9aMGRXUTFEWWNEaXBXWV9NNHc0NXduMlkzd1V3UDBlRmNUUkg0ZVdmVXVVZXhjdF95TGo5ZW03Ql9VNGlLWlJIQi1NVGgzdy1VbE44MGpPNkQ4VVdjRHpfSUJGcTFNQw?oc=5",
-        "source": "UCI",
-        "sourceUrl": "https://www.uci.org"
       }
     ],
     "cyclocross": [
+      {
+        "title": "Results Grand Prix Samorín 2026 - Women Elite - Cyclocross24.com",
+        "pubDate": "Tue, 20 Oct 2026 02:28:50 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5sellSUG11UU1YQjNxeWVfRjRNN25YSmVNUkhJVkltSnN5R0tpcTJPczNVcGFaU25FeVVVSktzN0RCaFp2NWdJV0JOUWo?oc=5",
+        "source": "Cyclocross24",
+        "sourceUrl": "https://cyclocross24.com"
+      },
       {
         "title": "Decathlon CMA CGM women's team takes shape as riders make cyclo-cross debut",
         "pubDate": "Mon, 19 Oct 2026 10:26:30 +0000",
@@ -717,16 +724,16 @@
         "sourceUrl": ""
       },
       {
-        "title": "Results Janev Cup #2 - Hole Vrchy 2026 - Women Elite - Cyclocross24.com",
+        "title": "Results Varberg Cyclocross Day 1 2026 - Women Elite - Cyclocross24.com",
         "pubDate": "Sat, 17 Oct 2026 07:00:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1qY1BWVXYwUnlXSHVVX0VhUllmZko3TmJFcXpHTHA2N1ZGYzc5Mi0yaEVkWGo2dWZvUk9lcjJVckk5UnZWR1gwSER6UUc?oc=5",
+        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBtbFNvSmdwMldscjZpcUVWVDRjcmFtVm5xd1A3X25KUElXWkRNUjAwSzY2Z0lGRGJyVVVKT0dxR3d1a09BbEUzZjFUVko?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
       {
-        "title": "Results Varberg Cyclocross Day 1 2026 - Women Elite - Cyclocross24.com",
+        "title": "Results Janev Cup #2 - Hole Vrchy 2026 - Women Elite - Cyclocross24.com",
         "pubDate": "Sat, 17 Oct 2026 07:00:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBtbFNvSmdwMldscjZpcUVWVDRjcmFtVm5xd1A3X25KUElXWkRNUjAwSzY2Z0lGRGJyVVVKT0dxR3d1a09BbEUzZjFUVko?oc=5",
+        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1qY1BWVXYwUnlXSHVVX0VhUllmZko3TmJFcXpHTHA2N1ZGYzc5Mi0yaEVkWGo2dWZvUk9lcjJVckk5UnZWR1gwSER6UUc?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
@@ -746,6 +753,13 @@
       }
     ],
     "gravel": [
+      {
+        "title": "'Maybe I'll take up gravel' - Still seeking a 2027 contract, Taco van der Hoorn weighs his future",
+        "pubDate": "Tue, 20 Oct 2026 17:29:10 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/maybe-ill-take-up-gravel-still-seeking-a-2027-contract-taco-van-der-hoorn-weighs-his-future/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
       {
         "title": "Garmin launches Edge Explore 3 Cycling Computers: Tons of New Features to make your ride even more enjoyable",
         "pubDate": "Tue, 20 Oct 2026 16:47:17 +0000",
