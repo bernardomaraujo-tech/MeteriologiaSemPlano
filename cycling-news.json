@@ -1,20 +1,76 @@
 {
-  "updatedAt": "2026-10-22T04:51:54.052Z",
+  "updatedAt": "2026-10-22T10:14:03.108Z",
   "disciplines": {
     "road": [
+      {
+        "title": "Tour de France Femmes 2027 route revealed: Puy de Dome finale and historic London team time trial await",
+        "pubDate": "Thu, 22 Oct 2026 11:58:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/tour-de-france-femmes-2027-route-revealed-puy-de-dome-finale-and-historic-london-team-time-trial-await",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Tour de France Femmes 2027 route unveiled – Nine tough stages, a first-ever TTT, and a big Puy de Dôme finale",
+        "pubDate": "Thu, 22 Oct 2026 09:41:40 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/tour-de-france-femmes-2027-route-unveiled-nine-tough-stages-a-first-ever-ttt-and-a-big-puy-de-dome-finale/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "“A full circle moment” - INEOS leader Oscar Onley prepares for 2027 Tour de France on his childhood roads",
+        "pubDate": "Thu, 22 Oct 2026 11:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/a-full-circle-moment-ineos-leader-oscar-onley-prepares-for-2027-tour-de-france-on-his-childhood-roads",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "'This draws a line under the brand we knew and loved' – Cannondale to restructure and close US headquarters in move to Europe, with layoffs expected",
+        "pubDate": "Thu, 22 Oct 2026 08:52:23 +0000",
+        "link": "https://www.cyclingweekly.com/news/this-draws-a-line-under-the-brand-we-knew-and-loved-cannondale-to-restructure-and-close-us-headquarters-in-move-to-europe-with-layoffs-expected",
+        "source": "Cycling Weekly",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Tour de France route presentation live – The 2027 men's and women's routes are revealead",
+        "pubDate": "Thu, 22 Oct 2026 08:45:38 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/live/tour-de-france-route-presentation-live-the-2027-mens-and-womens-routes-are-unveiled/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Financial crisis forces closure of team behind Vuelta champion Paula Blasi's rise as eight-year project collapses",
+        "pubDate": "Thu, 22 Oct 2026 10:30:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/financial-crisis-forces-closure-of-team-behind-vuelta-champion-paula-blasis-rise-as-eight-year-project-collapses",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Tour de France 2027: The Biggest Rumors Before the Route Reveal - Outside Magazine",
+        "pubDate": "Thu, 22 Oct 2026 08:09:21 GMT",
+        "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNdXBoUEJkMEZzM1dkcGdTZGZRU3JOa1VBb3BlVVlCZnBFM3NvUWVsSG42dldlaUlLVURYanhGODVwU3FWRUtyMGN3ZGlfbFF6WGRxV0JXd01PVV9JcjdtRVphb2t5R0RkaW9QYmRxQndod0k2RjNDNVJtQTN3bzNnTjkxbzFyOGtsZEs1ZHhmUURlR01TZlNBMnhSYWh2UzZmbHpxaUxVZUktQkp5NTQzXzFSMVppR0k?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
+      },
+      {
+        "title": "'More pedestrians are killed each year by cows than by cyclists' – Presenting badly-behaved bike riders as the main offenders on roads is culture war nonsense",
+        "pubDate": "Thu, 22 Oct 2026 07:27:34 +0000",
+        "link": "https://www.cyclingweekly.com/news/presenting-badly-behaved-bike-riders-as-the-main-offenders-on-roads-is-culture-war-nonsense",
+        "source": "Cycling Weekly",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Demi Vollering's younger sister enters WorldTour with EF Education-Oatly!",
+        "pubDate": "Thu, 22 Oct 2026 09:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/demi-vollerings-younger-sister-enters-worldtour-with-ef-education-oatly",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
       {
         "title": "UCI World Tour Riders Ranking Update: Pidcock makes a late top-5 claim, Widar flies up the ranking, but Tadej Pogacar retains the crown",
         "pubDate": "Thu, 22 Oct 2026 06:00:00 +0200",
         "link": "https://cyclinguptodate.com/cycling/uci-world-tour-riders-ranking-update-pidcock-makes-a-late-top-5-claim-widar-flies-up-the-ranking-but-tadej-pogacar-retains-the-crown",
         "source": "CyclingUpToDate",
         "sourceUrl": ""
-      },
-      {
-        "title": "Tour de France 2027: The Biggest Rumors Before the Route Reveal - Outside Magazine",
-        "pubDate": "Thu, 22 Oct 2026 02:09:21 GMT",
-        "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNdXBoUEJkMEZzM1dkcGdTZGZRU3JOa1VBb3BlVVlCZnBFM3NvUWVsSG42dldlaUlLVURYanhGODVwU3FWRUtyMGN3ZGlfbFF6WGRxV0JXd01PVV9JcjdtRVphb2t5R0RkaW9QYmRxQndod0k2RjNDNVJtQTN3bzNnTjkxbzFyOGtsZEs1ZHhmUURlR01TZlNBMnhSYWh2UzZmbHpxaUxVZUktQkp5NTQzXzFSMVppR0k?oc=5",
-        "source": "VELO",
-        "sourceUrl": "https://velo.outsideonline.com"
       },
       {
         "title": "\"A race I dream of and am still missing\" - Wout van Aert states his major goal for 2027 season and confirms Cyclocross ambitions",
@@ -235,27 +291,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "Primoz Roglic to return to Visma? Dutch team reportedly interested in signing its former Grand Tour top draw",
-        "pubDate": "Wed, 21 Oct 2026 12:00:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/primoz-roglic-to-return-to-visma-dutch-team-reportedly-interested-in-signing-its-former-grand-tour-top-draw",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Visma's new classics specialist has proven himself - Now he wants to race the Tour de France",
-        "pubDate": "Wed, 21 Oct 2026 11:45:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/vismas-new-classics-specialist-has-proven-himself-now-he-wants-to-race-the-tour-de-france",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"It doesn't feel like INEOS aren't able to sign big leaders\" - Is the British team putting all its chips on Noval Jr.?",
-        "pubDate": "Wed, 21 Oct 2026 10:45:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/it-doesnt-feel-like-ineos-arent-able-to-sign-big-leaders-is-the-british-team-putting-all-its-chips-on-noval-jr",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "'Like towing a three-seater sofa' –I raced a hill-climb on a cheap single-speed bike, and just about didn't come last",
         "pubDate": "Wed, 21 Oct 2026 08:38:53 +0000",
         "link": "https://www.cyclingweekly.com/news/i-raced-a-hill-climb-on-a-cheap-single-speed-bike-and-just-about-didnt-come-last",
@@ -267,13 +302,6 @@
         "pubDate": "Wed, 21 Oct 2026 08:34:32 +0000",
         "link": "https://www.cyclingweekly.com/news/garmin-quietly-drops-the-most-expensive-bike-computer-on-the-market-the-edge-1060-features-a-new-built-in-microphone-and-speaker-for-voice-control",
         "source": "Cycling Weekly",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Joris Nieuwenhuis and Marie Schreiber take glory of the Nacht van Woerden night cross",
-        "pubDate": "Wed, 21 Oct 2026 10:13:00 +0200",
-        "link": "https://cyclinguptodate.com/cyclocross/joris-nieuwenhuis-and-marie-schreiber-take-glory-of-the-nacht-van-woerden-night-cross",
-        "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
       {
@@ -298,11 +326,33 @@
         "sourceUrl": ""
       },
       {
+        "title": "'Maybe I'll take up gravel' - Still seeking a 2027 contract, Taco van der Hoorn weighs his future - Cyclingnews",
+        "pubDate": "Tue, 20 Oct 2026 17:29:10 GMT",
+        "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNNFVxVndhR21LRWlxbFdvWDRZUVBNR2pMM20zanZkUWtzckZvVHhSRFhnLWI2U2JoTTJlUllNSGxFYk5nSXZvUzgzVnpuNEZTS29DUnJ6ZHNEQUc2SktFaFVYa1hCcnh2MDI4TVBvRy1UZkRWYm5RaThFeFJjLWpsalZrRkl5LS00OGQwNHhnTlRHblZuTDZIN21tSTVDWlFGZ2J4c2NrYlBhek4tMnMtVVBlUWVkSlVSaS1MejhncFRRY1Z4eEdBOVM4UDl4U3BsY0xwRF9LejdCakJUcXc?oc=5",
+        "source": "Cyclingnews",
+        "sourceUrl": "https://www.cyclingnews.com",
+        "type": "transfers"
+      },
+      {
+        "title": "You should bring your bike - Escape Collective",
+        "pubDate": "Tue, 20 Oct 2026 17:19:36 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBnX0NHOEJ4QUhkVmluQ0xxeHotaHo3VTFIcVBzSGJQSHBTeWtnbmVOZnNrRTBHSnVpZnBwRl9SQTV3b1pSVGRXVTZuM3dyZDMxVlg0b0JzSTFHSWdUeGlrVlhWNkhXX0k?oc=5",
+        "source": "Escape Collective",
+        "sourceUrl": "https://escapecollective.com"
+      },
+      {
         "title": "Belgian climber makes rare switch from Soudal-QuickStep to Lotto-Intermarché",
         "pubDate": "Tue, 20 Oct 2026 16:24:35 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/transfers/belgian-climber-makes-rare-switch-from-soudal-quickstep-to-lotto-intermarche/",
         "source": "Cyclingnews",
         "sourceUrl": ""
+      },
+      {
+        "title": "VELO - Competitive Cycling News, Race Results and Bike Reviews - Outside Magazine",
+        "pubDate": "Tue, 20 Oct 2026 15:50:31 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9pbk5sTzItcXZRSEQxdWRJeW5UcjRKck1xYlJnRUtDSUFEaFpVeVZMa2V3VjFUamdfSDNxOGg5M3ZudlA5UEE?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
       },
       {
         "title": "Tour de France route rumours – What is planned for the 2027 race?",
@@ -348,24 +398,10 @@
         "sourceUrl": ""
       },
       {
-        "title": "Visma-Lease a Bike continue backroom staff shakeup with two new race coach signings",
-        "pubDate": "Tue, 20 Oct 2026 11:13:40 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/visma-lease-a-bike-continue-backroom-staff-shakeup-with-two-new-race-coach-signings/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
         "title": "Fans asked to buy tickets for Tour de France 2027 team presentation in Edinburgh – here's how to get yours",
         "pubDate": "Tue, 20 Oct 2026 11:12:52 +0000",
         "link": "https://www.cyclingweekly.com/news/fans-asked-to-buy-tickets-for-tour-de-france-2027-team-presentation-in-edinburgh-heres-how-to-get-yours",
         "source": "Cycling Weekly",
-        "sourceUrl": ""
-      },
-      {
-        "title": "New name for Canyon-SRAM as sponsor steps up after zondacrypto termination",
-        "pubDate": "Tue, 20 Oct 2026 10:51:38 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/new-name-for-canyon-sram-as-sponsor-steps-up-after-zondacrypto-termination/",
-        "source": "Cyclingnews",
         "sourceUrl": ""
       },
       {
@@ -388,48 +424,20 @@
         "link": "https://www.cyclingweekly.com/news/winning-the-tour-de-france-paris-roubaix-and-more-this-bike-ruled-the-sport-for-decades",
         "source": "Cycling Weekly",
         "sourceUrl": ""
-      },
-      {
-        "title": "'We needed to make some hard decisions': Why EF let Richard Carapaz go - Escape Collective",
-        "pubDate": "Mon, 19 Oct 2026 22:57:13 GMT",
-        "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFA4U1dhbERuSHZqXzZnV29xc1o5YzBuRlp3akNwR3MyM0lpR3VKcmtORTl3UlA2c3kxMExiSldfbGxvUHYwdDUtbjZVaVJhX0NXQmEtMDNiTUNWUlc1cXVoM0dvSUNYQlpNLWJ0MVEtdw?oc=5",
-        "source": "Escape Collective",
-        "sourceUrl": "https://escapecollective.com"
-      },
-      {
-        "title": "Takeaways as Swenson and Gomez Villafañe take fourth Life Time Grand Prix titles - Escape Collective",
-        "pubDate": "Mon, 19 Oct 2026 21:37:23 GMT",
-        "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQMDMtSkVNWGhmMVdCZG9acXByS25laHMyNGlVSFU1WWZSWXdUSjdLdlpCSGpucXVYNTdCOS1ORWtOdVV5dkhSQkllYl9sZW1xT29PeE5RRUN0VThNNDhnLWo4ZTB1b1JyczR0YWZoWFlURWN0VWgycjlLQ1huN1lHR0h3dmVmLVdNYlZld0V3?oc=5",
-        "source": "Escape Collective",
-        "sourceUrl": "https://escapecollective.com"
-      },
-      {
-        "title": "Escape Collective tire testing: A simple guide to picking the best road tire - Escape Collective",
-        "pubDate": "Mon, 19 Oct 2026 18:58:17 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQUlJiLUhTX2V2X29GTFQyZE53QkFQQ256TzhaQXJscHJJcHRMQnVUb2FTa0pNbGU0MzlpOWJMQkhCMGFfM2tkbGpLSGx4Ym1SeU9rM1l2UE1rQ2JFaHptLUd6bFJQTHZaU0lfZWRxQkxnMlNaYWdEOUYwTVFsdzRWaHlFMVlFRU9yOWhnYVczdFFIRWZEQlgwMmdneVNnNzZFbzFPY3Badkg?oc=5",
-        "source": "Escape Collective",
-        "sourceUrl": "https://escapecollective.com"
-      },
-      {
-        "title": "Picnic-PostNL Among 2 WorldTour Teams to Miss First Registration Deadline for 2027 - Outside Magazine",
-        "pubDate": "Mon, 19 Oct 2026 18:08:34 GMT",
-        "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPMGpVR1NRRU1QbU5Mai1IR0QtZVVqbjZkSUtCWlBWeEtveVluS0hubEk2cjNPU1hnekhvbmM0b2FlaW4xRE5XYzduYzd6bEd4dzF5YVN0cWtZVWdZRzhLdlRqNnZTOE1RY2hoaTlyZzg1OUdRVFU3SUJRMlI2b3dCVjkxY2FXWmpOaGFsTHN0WU93aXpSX2lEYg?oc=5",
-        "source": "VELO",
-        "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
-        "title": "Spin Cycle: Still some fuel in the tank - Escape Collective",
-        "pubDate": "Mon, 19 Oct 2026 16:29:49 GMT",
-        "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE94UHpsT29CMTZtTU5vS0ZkTWZqZUJwX0lkTUNxUmQ3ZGh4QmRpdTd0N2ZCa0ItdTdjUjFOZHhDYTRoWEllV1VjcjcyQVkxOHZLOHJNU2l3Xzh2NWppM25jY3JvdWRCbGprdi01Z3M1aHAtdkpQNjdn?oc=5",
-        "source": "Escape Collective",
-        "sourceUrl": "https://escapecollective.com"
       }
     ],
     "mtb": [
       {
         "title": "Vital MTB - Mountain Bikes, Reviews, Videos, Races - Vital MTB",
-        "pubDate": "Wed, 21 Oct 2026 18:30:56 GMT",
+        "pubDate": "Wed, 21 Oct 2026 18:31:15 GMT",
         "link": "https://news.google.com/rss/articles/CBMiPkFVX3lxTE5JVzJ2YWFYZVJsR2hKRUVobUhnQ3h6OWp4WGdUbEh2Ty1ZUVRqLThSTElzOWh2NnB3OFFzOUR3?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
+        "title": "Scott Gambler 10 - Vital MTB",
+        "pubDate": "Wed, 21 Oct 2026 08:10:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOWHU5cEtvaVNTdFlsRk53eEZ0MkViQ1FNTGxHUE9TUlMtZFkzLTI5Q3BUQWFuR0pVVG5kUUtQZjBxWVhubXF6em1iLTZvZWJfekNpRW5VemRJUlRiYWdrVjJRUjFwSW1BYUEtNnpBYmVRTUdfb3RjbFFIZWNBb01qQ1FsYmR5c3hhVXlENDlB?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
@@ -649,13 +657,6 @@
         "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5mSC1HVDZuT0RuZDZrN0I4V2d0OEVXMUpBWEItTEdiaDhzaUVlb1pzS21tQnVNQldJcHNTNkk1SGMybU0zVUxhejdTcDNQRW9kRkMxNEN3bW50NGVJOTFWQktBZjgya1RmMmpNUTE3Tk1STWlo?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
-      },
-      {
-        "title": "Stumpjumper EVO custom built - Vital MTB",
-        "pubDate": "Thu, 15 Oct 2026 08:16:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5MbEdPV1JMcF9tRnZXR29rdkJmZ2VPS01Za0FQaE5zOWdjSDd4c2M0YWdFdUtNTVZmVWhEd2dWenR6SnQ3dG5QZ3V5dGlDOGRmQVNBN2JwMmJvUFdzQ0Z3Sk9JLWxlS2I0YVZlb0kycDRvSDA1RHlmTWNYQ28ySmc?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
       }
     ],
     "cyclocross": [
@@ -752,7 +753,7 @@
       },
       {
         "title": "HG Cross Berencross 2026 Results – Elite Women, Elite Men – Meulebeke, Belgium - Cyclocross Magazine",
-        "pubDate": "Sat, 17 Oct 2026 16:11:39 GMT",
+        "pubDate": "Sat, 17 Oct 2026 16:12:47 GMT",
         "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPWGZUaTBhYllIeFVGTzZuSGVYWXRDbUNQcWhQYS16SW1CcUtURHpXckMtLWZlYW80bWVreFZ3WUU1MmpXYl81NGZmdHhGa3hFa2h5TF85cEtPandOUHowU0tuNVlVdWItZmxfdmZzS0tpQ0duaDNVZWpQOWR3NUhROS1IdmlPU09Ec3BpRlBNMFdGOThMWnhmajc4Q29zRVAt?oc=5",
         "source": "Cyclocross Magazine",
         "sourceUrl": "https://www.cxmagazine.com"
