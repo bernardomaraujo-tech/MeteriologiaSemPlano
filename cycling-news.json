@@ -1,7 +1,14 @@
 {
-  "updatedAt": "2026-10-24T16:36:35.846Z",
+  "updatedAt": "2026-10-24T19:30:04.544Z",
   "disciplines": {
     "road": [
+      {
+        "title": "\"I was sad to see him go\" - Geraint Thomas explains why INEOS allowed Filippo Ganna to join Lidl-Trek in surprise transfer move",
+        "pubDate": "Sat, 24 Oct 2026 19:00:00 +0200",
+        "link": "https://cyclinguptodate.com/cycling/i-was-sad-to-see-him-go-geraint-thomas-explains-why-ineos-allowed-filippo-ganna-to-join-lidl-trek-in-surprise-transfer-move",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
       {
         "title": "Elisa Longo Borghini wins eighth Italian time trial title in Piasco",
         "pubDate": "Sat, 24 Oct 2026 16:25:52 +0000",
@@ -213,13 +220,6 @@
         "sourceUrl": "https://velo.outsideonline.com"
       },
       {
-        "title": "UCI World Tour Riders Ranking Update: Pidcock makes a late top-5 claim, Widar flies up the ranking, but Tadej Pogacar retains the crown",
-        "pubDate": "Fri, 23 Oct 2026 19:37:00 +0200",
-        "link": "https://cyclinguptodate.com/cycling/uci-world-tour-riders-ranking-update-pidcock-makes-a-late-top-5-claim-widar-flies-up-the-ranking-but-tadej-pogacar-retains-the-crown",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "'I will retire soon' – Marlen Reusser discusses future as she gives thumbs up to Paula Blasi's arrival at Movistar in 2027",
         "pubDate": "Fri, 23 Oct 2026 16:56:10 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/i-will-retire-soon-marlen-reusser-discusses-future-as-she-gives-thumbs-up-to-paula-blasis-arrival-at-movistar-in-2027/",
@@ -246,6 +246,14 @@
         "link": "https://news.google.com/rss/articles/CBMisAJBVV95cUxQUEo3Zk1ORzFkUUxFVnlrTkYyQklhWHR2NHBRS3BTNUFiTjhUTjlMVWt3M0xCdjh0MGJzQ285NF9mOGJaZEhVT3R4ZWh6MElQdC1TUldtMlgzZHFrUWZONzdiZXIzaDNFSDdqNkJPaUtyc3R6SjRlN1dXZ192VElMUUJNczBOTzBLTS1ORW15UE1zREMzVXRCX0lFdTdoUTBUTHVoWGszN0w2OTNVaHhXQ3ZoUmVsdHF1S1JsZlpoTWptYjJTRjZxVWVCYkRUUzFabmp0dG5pSDg3Mk5YWGt0cE1RbFB3Y0toQVJYYVM1SHlrYm81WGYtVlhTZ3Y1QTVhRGpqYm1uakNMMVVyTE5aVS1QNlljTXByc2l6Y3hqVF8tUjJjeHZPUzA3LXNFYnhx?oc=5",
         "source": "Cyclingnews",
         "sourceUrl": "https://www.cyclingnews.com",
+        "type": "transfers"
+      },
+      {
+        "title": "Netcompany-Ineos did not have a bad season, yet transfers point to more overhaul at the British squad – can they get back to former glories? - Cycling Weekly",
+        "pubDate": "Fri, 23 Oct 2026 15:06:30 GMT",
+        "link": "https://news.google.com/rss/articles/CBMigwJBVV95cUxQcUpnVGk2Ui1UTHVaUXd1R0pQVzE1NGxIUGlIb2oxWHlPbWV1RTRRNGVxTVNtQlBNc1NRSWN0SmhHWUdjVko0QzI4dFpfQWUxMU1rMGpxVzJBZW9ZZTd2aFhUSk1Gc2VTbmxMbm1ORlVYWnRJeHFpMnlydWZsdl9vdW5pZ3VGcFFBNF9RUmV0UXgtN2xzdGJsbGhHQWlrS05xeERPV25RVmZaMXBla3lHLUxHZk1uVU5TczUzMWxQaWI4XzJfbXpMMnd1YXVUTzR3Sks2V1Vadm9WOUwtaFo0N013TkFOYUhvZTJUaDRMaS1WbExYcm10MlJaUTJBeGFrNEFv?oc=5",
+        "source": "Cycling Weekly",
+        "sourceUrl": "https://www.cyclingweekly.com",
         "type": "transfers"
       },
       {
@@ -338,14 +346,6 @@
         "link": "https://www.cyclingnews.com/pro-cycling/racing/some-haggis-and-a-deep-fried-mars-bar-local-star-oscar-onley-highlights-scottish-specialities-ahead-of-2027-tour-de-france/",
         "source": "Cyclingnews",
         "sourceUrl": ""
-      },
-      {
-        "title": "'I will pour my heart and soul into becoming a better rider’ - Mountain bike star Jolanda Neff makes surprise move to Fenix-Premier Tech - Cyclingnews",
-        "pubDate": "Thu, 22 Oct 2026 15:04:24 GMT",
-        "link": "https://news.google.com/rss/articles/CBMilwJBVV95cUxQQWlhVUE1S0FidWd2SVRqNXpKQTk2aDhGUVRuX2ZjbnphTk5ycmhoeFBmaTFRTTZyc1JMdS1zSDlhRFZsSnhnZm0tNFZnQVdrd3hoSDMwdk5MYlc4RWt0QXA3LVYzWTRDckZWeFZwNFdxclpCcUN3RDlBUWlmWmtmcks2bm9fcG1nbllkYjRuazh0Y3l1WkxTWmZaelZjVDBsMVhGVGlJMFlNQzV2MHRfVVA2SDVMTU1vOGdqTm15aXdDZ1U2S1V4LU4xaUxfOTZZc3BNVmtKdXFKN05SUFk4T21KTnBNNTl6LTF2SllVVHlGVlZvMjhSUnpXYmlzWWVmNW1QUU1hZ2RvUC0zTXNyY3k5WTc4Zms?oc=5",
-        "source": "Cyclingnews",
-        "sourceUrl": "https://www.cyclingnews.com",
-        "type": "transfers"
       },
       {
         "title": "In 2027, Tour de France Femmes returns to its trusted formula - Escape Collective",
@@ -497,6 +497,13 @@
         "sourceUrl": ""
       },
       {
+        "title": "2026 RMU Outdoors Nighttrain 170mm Frameset Bike - Reviews, Comparisons, Specs - Bikes - Vital MTB",
+        "pubDate": "Thu, 22 Oct 2026 22:38:16 GMT",
+        "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNM1FsZUlHSlFTZWdqMV9Bczd2QkM0dHJCZkdvVTU3MzJuUUk1S0JRR1I4cFNHNVBiRmZ1MTZVVVFXNG45UUMtcWdydExjS0Vmd2ZiVDFhU0xabjZSdENIekJkZmFfOG9DX3RTM0piRTRyZGtWMzl6MnNYanZpZlJjcS1wY2Q5YXc?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
         "title": "Whats the cheapest place to live and mountain bike - Vital MTB",
         "pubDate": "Thu, 22 Oct 2026 17:03:42 GMT",
         "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNVjFPZ2JnOXFDaEQ0VWFSZ3ZIRDdnOTZmR1oyT1AtMlhoTHhPQzFJT1pPcDNxSTlSWlMtenBmS1YzTk9acDIyQVp2NUpuYTdZazk0MHlJWVQ2UzNyOXNLd2N0d09xLW1icXduLWZPbXQwNlZBeG1oOG5VWm5DQ2pMcVEwNHozdw?oc=5",
@@ -623,13 +630,6 @@
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "Mondraker Expands Zendit Range with Cheaper R and S Models - Vital MTB",
-        "pubDate": "Tue, 20 Oct 2026 14:00:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQdTk1U3pwQWQwODE4cERIbWZybGtWaThjRG0wZU1KYTIzUDF4Sld1WlRhVUptb3NXSVA3RUh4anhfVkdUdEdCMjNRR3Q4RHJ2dkN5T1Uxbkx5LVZaRU1BY1ppdHhRcjNBQzNITlFsZU1meTFXMUtJMmZzU2ltSXRWVGxhbmh4UXgtcHJHSG1rX0M2VUJ4d1pWcmlZZVJaUQ?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
-      },
-      {
         "title": "MUST WATCH: Anna Newkirk Rips up Lenzerheide with Stefan Garlicki in \"Swapping Lines Ep.8\" - Vital MTB",
         "pubDate": "Tue, 20 Oct 2026 13:26:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNYXo4RGdGR1ZMel9FUjNRXzgzWjU4dTBod0JaMmFGSmtiOTVEUjJVMC04MWdxNTd0TTlHaDVycmt5V2Z4dERXbEVocUFwU3lfMFBVTHc2bE9UMUF1b0RtOG8yN3NrODVOY0hPak1RNEdCNDg2b0JMaTBUS1Utc2cxczAxcw?oc=5",
@@ -681,7 +681,7 @@
         "sourceUrl": ""
       },
       {
-        "title": "Coupe de France Cyclo-Cross #1 - Nommay 2026 - Women Elite (C2) - Cyclocross24.com",
+        "title": "Results Coupe de France Cyclo-Cross #1 - Nommay 2026 - Women Elite - Cyclocross24.com",
         "pubDate": "Sat, 24 Oct 2026 12:22:53 GMT",
         "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1RTllJUk9FN0pQUnVaWmtpRHk2emZTNjBDaVZWS3o1RG00NXZKUUZfYzRvbmEwSnV5NDJFMkoxNUxfTWEzWUhYU0FYU2k?oc=5",
         "source": "Cyclocross24",
@@ -744,13 +744,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "Luc Bannerman - Cyclocross24.com",
-        "pubDate": "Wed, 21 Oct 2026 10:45:23 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9OS05vazdpdGEway1xMXBWVFc2WHoyUVpGQzNkNUtLcEx6MTdWTTdvaG82NHJ0VU9sZ1pKU2VWS2dOcVFTWi1kM2RSMzkwa2liRTVVRlI0NkY?oc=5",
-        "source": "Cyclocross24",
-        "sourceUrl": "https://cyclocross24.com"
-      },
-      {
         "title": "Joris Nieuwenhuis and Marie Schreiber take glory of the Nacht van Woerden night cross",
         "pubDate": "Wed, 21 Oct 2026 10:13:00 +0200",
         "link": "https://cyclinguptodate.com/cyclocross/joris-nieuwenhuis-and-marie-schreiber-take-glory-of-the-nacht-van-woerden-night-cross",
@@ -789,13 +782,6 @@
         "title": "Results Varberg Cyclocross Day 2 2026 - Cyclocross24.com",
         "pubDate": "Sun, 18 Oct 2026 07:00:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5oamRRYktXOTQtNDhVdXg4ck4wVEJqWXkyMmlEcEU4ZWhORjgxSnVsZFN5bm9pTS10cFdYaV8xX204VjRtdEhHeTE3RTQ?oc=5",
-        "source": "Cyclocross24",
-        "sourceUrl": "https://cyclocross24.com"
-      },
-      {
-        "title": "Results Kings CX - Day 2 2026 - Women Elite - Cyclocross24.com",
-        "pubDate": "Sun, 18 Oct 2026 07:00:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5MbWtzTklDdG4zaWo2WXZYZzJVUnhHYThpbGtPMUJmRmJ3eEc0NXhmVkJWZ3J0RmpoMTVJQ2I4TmlhMHdWbmk4bnVnelQ?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
