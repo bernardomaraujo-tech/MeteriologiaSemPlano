@@ -1,7 +1,21 @@
 {
-  "updatedAt": "2026-10-27T00:27:45.595Z",
+  "updatedAt": "2026-10-27T06:18:37.968Z",
   "disciplines": {
     "road": [
+      {
+        "title": "CyclingUpToDate Podcast: \"It's not an anti-Pogacar route, but it's certainly not one that's built for him\" - 2027 Tour de France route reviewed",
+        "pubDate": "Tue, 27 Oct 2026 06:00:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/cyclinguptodate-podcast-its-not-an-anti-pogacar-route-but-its-certainly-not-one-thats-built-for-him-2027-tour-de-france-route-reviewed",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "UCI Gravel World Series: Former junior Australian gravel champion steps up to claim elite women's win at a muddy Gravelista while rowing Olympic medallist sails away for elite men's victory",
+        "pubDate": "Tue, 27 Oct 2026 01:38:37 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/racing/uci-gravel-world-series-former-junior-australian-gravel-champion-steps-up-to-claim-elite-womens-win-at-a-muddy-gravelista-while-rowing-olympic-medallist-sails-away-for-elite-mens-victory/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
       {
         "title": "French pro stuns with sub-2:27 marathon debut after DNF-plagued end to season",
         "pubDate": "Tue, 27 Oct 2026 01:00:00 +0100",
@@ -220,13 +234,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "\"UAE and Jayco are different realities\" - Alessandro Covi re-learns how to take on responsibility on the biggest stage",
-        "pubDate": "Mon, 26 Oct 2026 01:00:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/uae-and-jayco-are-different-realities-alessandro-covi-re-learns-how-to-take-on-responsibility-on-the-biggest-stage",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "The 2027 Tour de France Femmes Route Design Beats the Men’s Race, and It’s Not Even Close - Outside Magazine",
         "pubDate": "Sun, 25 Oct 2026 18:54:30 GMT",
         "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQOXVYdkJpUmhDQzVET3pXUEJEN3ljX0c2SS1KZm5RaURhY2w0ODV1ZDkyWldjU3EtTzRYbEVrQ1AwSXl5bGZ4ZHBJZWdTVV82Ql85RlBsQi1qdWhXaVRZVUJiQWZ3T0hVa2VIX1lFcG1JOFNhQWVOZ2Rxdm5SV0tFS0ZXeE5WMFQxUXg4aE96RG9lSXpfYUd0S3hWOVh1V1k?oc=5",
@@ -332,13 +339,6 @@
         "sourceUrl": "https://velo.outsideonline.com"
       },
       {
-        "title": "HG Cross Heerderstrand: Joran Wyseure outpowers Joris Nieuwenhuis to claim first win of the season",
-        "pubDate": "Sat, 24 Oct 2026 14:51:19 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/racing/hg-cross-heerderstrand-joran-wyseure-outpowers-joris-nieuwenhuis-to-claim-first-win-of-the-season/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
         "title": "'You've got to challenge yourself' – 95-year-old smashes cycling Hour Record on birthday",
         "pubDate": "Sat, 24 Oct 2026 08:00:00 +0000",
         "link": "https://www.cyclingweekly.com/news/95-year-old-smashes-cycling-hour-record-on-birthday",
@@ -372,14 +372,6 @@
         "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPdUZzbzBybFNWdXhHXzdNQXRtamk4bU5HbEhKaFBwMTZyTlBiWWo1a2EyOVJnYUthckdnRC1nUVFvY2tlQkQ3bDJWTThKbElUMVBvcWRJTDllSUI1cXhXam01eEM3U1JHVkdON20wcWNaWFhrUmhRRUFNQWIzejZJZWo5c1hDZWprZVZmSkZBSWZJZDJrOWFxSEdJM2FidjJzem1Kb0RTTEM4aVA1a3BMVA?oc=5",
         "source": "Escape Collective",
         "sourceUrl": "https://escapecollective.com"
-      },
-      {
-        "title": "Netcompany-Ineos did not have a bad season, yet transfers point to more overhaul at the British squad – can they get back to former glories? - Cycling Weekly",
-        "pubDate": "Fri, 23 Oct 2026 15:06:30 GMT",
-        "link": "https://news.google.com/rss/articles/CBMigwJBVV95cUxQcUpnVGk2Ui1UTHVaUXd1R0pQVzE1NGxIUGlIb2oxWHlPbWV1RTRRNGVxTVNtQlBNc1NRSWN0SmhHWUdjVko0QzI4dFpfQWUxMU1rMGpxVzJBZW9ZZTd2aFhUSk1Gc2VTbmxMbm1ORlVYWnRJeHFpMnlydWZsdl9vdW5pZ3VGcFFBNF9RUmV0UXgtN2xzdGJsbGhHQWlrS05xeERPV25RVmZaMXBla3lHLUxHZk1uVU5TczUzMWxQaWI4XzJfbXpMMnd1YXVUTzR3Sks2V1Vadm9WOUwtaFo0N013TkFOYUhvZTJUaDRMaS1WbExYcm10MlJaUTJBeGFrNEFv?oc=5",
-        "source": "Cycling Weekly",
-        "sourceUrl": "https://www.cyclingweekly.com",
-        "type": "transfers"
       },
       {
         "title": "Jolanda Neff Follows Kate Courtney in Latest MTB-to-Road Pivot - Outside Magazine",
@@ -422,6 +414,13 @@
         "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNd0pUVU12QURiQ0pVakNCM3hWenlWTGpIU21aUlhRQVQweW9wbWlvT05uN2ZYZ3k0VUJKQkFrNHBobjM4UnhuNlN3Z1ctdGtVdFEwWkVqMEY2WGppWVJldTltLUxIem95a01SWWdhVDJuQURoZEZNRm9RazlJNVZJQldjd1ZobVZvMnpINGhKZW5xMkpIZ1hRRUlOUE15cDMzczUwZHJuTjMyVDd4Wm9uMHBka0ZDMjJnNTBYemFfMVBxT1pvUkNKYmd6SWpnQmFwcEJB?oc=5",
         "source": "VELO",
         "sourceUrl": "https://velo.outsideonline.com"
+      },
+      {
+        "title": "Blimey! The Tour de France 2027 route has been unveiled - Escape Collective",
+        "pubDate": "Thu, 22 Oct 2026 11:32:22 GMT",
+        "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQTnluMExnWXh3elJwVjBxYmxlQnFoVnVGV01MSnM1d283STZ6dnVZZHU1WkRaUlM0eVNobC04a1BacnpvaUZWcnRZMW1LMzAzV2JxZENHQmk1cFRiS3pyN18tLTJIUGR4UnJybERXRGhBaEg0Z3NhZ0RrSVJmdGVyTFZMMXlrM2dyQnNVVg?oc=5",
+        "source": "Escape Collective",
+        "sourceUrl": "https://escapecollective.com"
       }
     ],
     "mtb": [
@@ -529,6 +528,13 @@
         "link": "https://www.pinkbike.com/news/3-enduro-bikes-from-bespoked-osaka-2026.html?trk=rss",
         "source": "Pinkbike",
         "sourceUrl": ""
+      },
+      {
+        "title": "Moto and Mountain Bike Icon Öhlins Debuts a Lust-Worthy Gravel Fork - Outside Magazine",
+        "pubDate": "Fri, 23 Oct 2026 20:13:41 GMT",
+        "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOX3dNbXg1djlRS3pFbkNlR3l0ZmY2QjBuOU1hTV9odjVFU29FeEdTczI5dXJ1aVdkbHA4T0xlMWdFS3ZKWkl3VmgyZU96VkNLUW9IeHRBTDRoY3NYNTZvN0dYUFgza3dJdEJldng5VWZCNjY2SE9MMWpyLXNIU2Jsd1l4OEZ4MmZqX0tJYWgxRktpd3NFM2VYTDk2NlJudw?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
       },
       {
         "title": "Whats the cheapest place to live and mountain bike - Vital MTB",
@@ -793,6 +799,13 @@
       }
     ],
     "gravel": [
+      {
+        "title": "UCI Gravel World Series: Former junior Australian gravel champion steps up to claim elite women's win at a muddy Gravelista while rowing Olympic medallist sails away for elite men's victory",
+        "pubDate": "Tue, 27 Oct 2026 01:38:37 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/racing/uci-gravel-world-series-former-junior-australian-gravel-champion-steps-up-to-claim-elite-womens-win-at-a-muddy-gravelista-while-rowing-olympic-medallist-sails-away-for-elite-mens-victory/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
       {
         "title": "Challenge bumps up the versatile Getaway Gravel Tire to 50c",
         "pubDate": "Mon, 26 Oct 2026 17:46:43 +0000",
