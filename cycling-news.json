@@ -1,7 +1,21 @@
 {
-  "updatedAt": "2026-10-29T21:09:15.046Z",
+  "updatedAt": "2026-10-30T01:02:39.920Z",
   "disciplines": {
     "road": [
+      {
+        "title": "\"Whether you were menstruating was never a question\": Another former rider speaks out over medical neglect and toxic culture at Picnic-PostNL",
+        "pubDate": "Fri, 30 Oct 2026 01:00:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/whether-you-were-menstruating-was-never-a-question-another-former-rider-speaks-out-over-medical-neglect-and-toxic-culture-at-picnic-postnl",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Netcompany INEOS turns to AI-powered aerodynamics app as team prepares for 2027 season",
+        "pubDate": "Thu, 29 Oct 2026 23:00:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/netcompany-ineos-turns-to-ai-powered-aerodynamics-app-as-team-prepares-for-2027-season",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
       {
         "title": "Who can compete as a gravel pro in Unbound? Organisers of Life Time Grand Prix establish new 'Pro Number' qualification process",
         "pubDate": "Thu, 29 Oct 2026 20:48:02 +0000",
@@ -164,20 +178,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "Tadej Pogacar faces major 2027 calendar decision as Tour de France, Vuelta and Paris-Roubaix ambitions collide",
-        "pubDate": "Thu, 29 Oct 2026 13:11:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/tadej-pogacar-faces-major-2027-calendar-decision-as-tour-de-france-vuelta-and-paris-roubaix-ambitions-collide",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"A rider who is, in truth, too good for our team\" - Visma talent set to become leader for Dutch continental team",
-        "pubDate": "Thu, 29 Oct 2026 13:11:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/a-rider-who-is-in-truth-too-good-for-our-team-visma-talent-set-to-become-leader-for-dutch-continental-team",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "Thibau Nys to kick off cyclo-cross campaign at Koppenbergcross after challenging road season",
         "pubDate": "Thu, 29 Oct 2026 11:58:22 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/thibau-nys-to-kick-off-cyclo-cross-season-at-koppenbergcross-after-challenging-road-season/",
@@ -313,13 +313,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "Why Mads Pedersen is suing HBO Max - Escape Collective",
-        "pubDate": "Wed, 28 Oct 2026 01:29:09 GMT",
-        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1EeW9UeEJvZEtDTzJ2dGoxcTYxd0lDbnJyYWd3TElwTEEtbGtnWDh2RzMycmJDVXlTTm1rWmZab1F3ZmhGTXpGakdkcjJabUtocU4zcU4xb0VPbV9sQ3lBTDdoN2EzNW9CbVpBRDRUZXJfdw?oc=5",
-        "source": "Escape Collective",
-        "sourceUrl": "https://escapecollective.com"
-      },
-      {
         "title": "Lucinda Brand switches to Canyon-SRAM for the next two years with plans to end road cycling career at Paris-Roubaix",
         "pubDate": "Tue, 27 Oct 2026 19:45:39 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/lucinda-brand-switches-to-canyon-sram-for-the-next-two-years-with-plans-to-end-road-cycling-career-at-paris-roubaix/",
@@ -423,9 +416,23 @@
         "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1FaFhxOHlLMXRvR3MyZHJYSVZkUVd3NDZtRlZXend5eXhZckdoWEU0Sm9jeHFGNThLVXpLUEkweVlJbVJTUjBTQ3EzRFE2R19ib0w5RDN6SUNleHJjVHA5MWhQRDM2dENMNmJwNVJaSzFidWZIYkpn?oc=5",
         "source": "Escape Collective",
         "sourceUrl": "https://escapecollective.com"
+      },
+      {
+        "title": "'I feel guilty about the fact I don’t ride gravel races, I don’t even own a gravel bike'",
+        "pubDate": "Sun, 25 Oct 2026 15:20:00 +0000",
+        "link": "https://www.cyclingweekly.com/news/i-feel-guilty-about-the-fact-i-dont-ride-gravel-races-i-dont-even-own-a-gravel-bike",
+        "source": "Cycling Weekly",
+        "sourceUrl": ""
       }
     ],
     "mtb": [
+      {
+        "title": "Mountain Bikes, Reviews, Videos, Races - Vital MTB",
+        "pubDate": "Thu, 29 Oct 2026 19:22:35 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBHdV94QzR5M3d2cDJLcnZpa1NXaXJlT19CRjB0azNQeUMwRmNzR2dhUkJCaVh5T25ybWwwd2dyN0ljSTRYVkNYVThR?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
+      },
       {
         "title": "WHOOP UCI Mountain Bike World Series confirms 2027 calendar - UCI.org",
         "pubDate": "Thu, 29 Oct 2026 16:58:23 GMT",
@@ -602,9 +609,16 @@
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "Specialized Epic 9 Pro - Vital MTB",
-        "pubDate": "Tue, 27 Oct 2026 08:08:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5ORE9weWNfMXc0UERacHBNWDliS3B2VkQ1eXRPaFRTNWJSMWVRb3UycmVkclZQeFFYSlJWcGNBZkZnVWlWYW1jclhKbERWOTViQkc1ZmdTNHd1Zkgya1BfNTMtYmhTNW5QV2pyUG5R?oc=5",
+        "title": "Video: Tarek Rasouli Is Back at Whistler Bike Park After 24 Years - Vital MTB",
+        "pubDate": "Tue, 27 Oct 2026 09:15:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPMzVDTnFJQy1hSWJXMkd1TS1DTmdkODBWYUFUb3R2NUFZaWRHTUZ5NjhRZ1dVVGw0dUM4N0E4OGRrQ2RjejFkaHEyTklLak9FYTZrR3Ftc0pyd1VMbGVzY2VhR01EMW1GWmlKdWJPUVNmRnA1Zk5ONVhDY2JMbWJYYUZEV25jV1liaWgyTHRqSTZCNG83S29DbnFsUGhnMHFaX3EzdA?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
+        "title": "Slater Outlaw - Vital MTB",
+        "pubDate": "Mon, 26 Oct 2026 21:50:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9aNFFxSEdQMV9QUjZhTTBTQjhScExYLUVKOWpkZjFjYkdMU0RnbzFrT2JKNC1sQUVLWEdtOG5zRnJ5YzVtWldxcWh4aGpRUWI2UGtWazhGeV8zY0oyY0oxVWZWZ2RYZWVvUjR1aA?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
@@ -616,23 +630,9 @@
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "GRABEN | Canyon Torque AL - Lukas Schäfer - iceman2058 - Mountain Biking Videos - Vital MTB",
-        "pubDate": "Sun, 25 Oct 2026 09:42:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPMzRuZTI3QzVINGxoVXhIM1gwajRiWUNnbmtwdWpFRFJDa3VraE52RlVKVWpzTWZaNmlwa1RPc2JQeVNhTEpTS3ZPdDhuRFFJQ2ZKc1RhVmJ6NkdpaDJ1dHZhZnRfbkFLdFhGT01kSm9vWmx6NGFvR19tZmlrX1M0OE13?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
-      },
-      {
         "title": "2026 RMU Outdoors Nighttrain 170mm Frameset Bike - Reviews, Comparisons, Specs - Bikes - Vital MTB",
         "pubDate": "Sat, 24 Oct 2026 21:18:04 GMT",
         "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNM1FsZUlHSlFTZWdqMV9Bczd2QkM0dHJCZkdvVTU3MzJuUUk1S0JRR1I4cFNHNVBiRmZ1MTZVVVFXNG45UUMtcWdydExjS0Vmd2ZiVDFhU0xabjZSdENIekJkZmFfOG9DX3RTM0piRTRyZGtWMzl6MnNYanZpZlJjcS1wY2Q5YXc?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
-      },
-      {
-        "title": "Specialized P1 Restomod - Vital MTB",
-        "pubDate": "Sat, 24 Oct 2026 09:36:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5pLWxSVTBWa05rcEhXRFpMa19sUW5DUVpTcnBXbWJqT2hGczlVNE9KOTgxajVvc1VWMS1oa3BrYVVkdURXcFlRcEJsM2lhYWZEWF9pMG51NHVxY2JrMkhtV3pJR1VQYnpHRkxiWnBEMU9NNkxKR3dOakpZTlQ?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
@@ -751,25 +751,18 @@
         "sourceUrl": ""
       },
       {
-        "title": "\"I couldn't stand seeing someone else become world champion\" – Mathieu van der Poel tipped to chase ninth rainbow jersey despite retirement talk",
-        "pubDate": "Sun, 25 Oct 2026 18:00:00 +0100",
-        "link": "https://cyclinguptodate.com/cyclocross/i-couldnt-stand-seeing-someone-else-become-world-champion-mathieu-van-der-poel-tipped-to-chase-ninth-rainbow-jersey-despite-retirement-talk",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Alvaro Taramona San Juan - Cyclocross24.com",
-        "pubDate": "Sun, 25 Oct 2026 16:30:15 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBQYTNpbWhvSTNkQ2h0aDhIcnZ3Y3JadVpfQjhRUmNaVTl5UVJfUjVZZkp1WFhzUDg0NVpGMmttM19Wc3k0OEVKTmZkb1VjTDlrUGkxNnlxTzU5eFdRcTE0UDhvUFcyTW8?oc=5",
-        "source": "Cyclocross24",
-        "sourceUrl": "https://cyclocross24.com"
-      },
-      {
         "title": "Major Taylor Cross Cup Day Two 2026 Results – Indianapolis, USA – Elite Women, Elite Men - Cyclocross Magazine",
         "pubDate": "Sun, 25 Oct 2026 07:00:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNR2FUQU82OURVY1NWaGxpQ0c5LUdrRWtSRW1RMEdlMzNTT1NHanROQ0FqZkVEVDBKTzllTGRFVE85Mml0LXBvbVpFck0wWGdZVjYtQ1c3LV9rNFBpT1ZEeF9rOFJLU0F0M1VZSE5maGxWSVltR01zbzFETnpiWjB5ak5hREVhUUlhWmwta0hTYU1GaGY5STBXcmVXQTJUM0hzRHFYb1diMV9zV0tGOGc?oc=5",
         "source": "Cyclocross Magazine",
         "sourceUrl": "https://www.cxmagazine.com"
+      },
+      {
+        "title": "Results Ormaiztegiko Ziklokrossa 2026 - Women Elite - Cyclocross24.com",
+        "pubDate": "Sun, 25 Oct 2026 07:00:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFB2NzVnSTdtM2NySUt6SEpoYnFXbVJLZ3lYUXhpeDhSTWhXdFI2bjdaX1JQblFBSTVOdUs2Y1hENHZ3WDlmZUUtZ1lOWk0?oc=5",
+        "source": "Cyclocross24",
+        "sourceUrl": "https://cyclocross24.com"
       },
       {
         "title": "Results Coupe de France Cyclo-Cross #2 - Nommay 2026 - Men U23 - Cyclocross24.com",
@@ -782,6 +775,13 @@
         "title": "Results Swiss Cyclocross Cup #3 - Radquer Mettmenstetten 2026 - Women Elite - Cyclocross24.com",
         "pubDate": "Sun, 25 Oct 2026 07:00:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBya2NROFBLLUlialgxek80am5KdXdKZGxmV1dnTVJMMXJ4VFZTbGh0TV92MWdLOU1weE1DYTZqR21wdmtoZ1NHaTdhWmE?oc=5",
+        "source": "Cyclocross24",
+        "sourceUrl": "https://cyclocross24.com"
+      },
+      {
+        "title": "Results Munich Super Cross 2026 - Cyclocross24.com",
+        "pubDate": "Sun, 25 Oct 2026 07:00:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9QUjd5NW00ZUtWQWl1cGxwaV94VTltbzdvRzJvbVREbHpBS012cXBzc0VpcHRjamRUZVl2TUdESERVcTFvb2pLODlyTkU?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
@@ -807,9 +807,9 @@
         "sourceUrl": "https://www.uci.org"
       },
       {
-        "title": "Claire Rust - Cyclocross24.com",
-        "pubDate": "Sat, 24 Oct 2026 22:20:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9MaVFnUDVNajJDbElWMVdER2xKaGUyOFZCTVRVakJJRHNrcGdOV3h3M3pjejR6WWtqNGQ1VHBvZkNGem1OQWNjTUhzQ2pTaGdMel80YlJn?oc=5",
+        "title": "Leah Morozowich - Cyclocross24.com",
+        "pubDate": "Sat, 24 Oct 2026 22:20:01 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBEUFdPZElSbFF3SEFjWEQ0d2hqOUJHTXA5NHd4d2hIWWljQVc4VTZKX2Ywb00tOFpmWXl5anNBaXVUTTA0amMzdk01VVlldUxtWWNnVGgtLVJQMWc?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
