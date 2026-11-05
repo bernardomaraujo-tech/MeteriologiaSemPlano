@@ -1,13 +1,181 @@
 {
-  "updatedAt": "2026-11-05T06:51:00.941Z",
+  "updatedAt": "2026-11-05T15:29:37.536Z",
   "disciplines": {
     "road": [
+      {
+        "title": "Former Giro d'Italia stage winner who beat Greg LeMond dies aged 59 following long illness",
+        "pubDate": "Thu, 05 Nov 2026 16:15:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/former-giro-ditalia-stage-winner-who-beat-greg-lemond-dies-aged-59-following-long-illness",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "The Traka World Series 'natural evolution' of Gravel Earth Series with collection of seven races, €84,000 prize purse and promise of live streaming",
+        "pubDate": "Thu, 05 Nov 2026 14:40:50 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/racing/the-traka-world-series-natural-evolution-of-gravel-earth-series-with-collection-of-seven-races-eur84-000-prize-purse-and-promise-of-live-streaming/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"Watts per kilo don't count for everything\" - Former INEOS road captain Luke Rowe questions cycling's power obsession as Decathlon take on peloton's biggest teams",
+        "pubDate": "Thu, 05 Nov 2026 15:30:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/watts-per-kilo-dont-count-for-everything-former-ineos-road-captain-luke-rowe-questions-cyclings-power-obsession-as-decathlon-take-on-pelotons-biggest-teams",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Two Grand Tours, two abandonments: Cian Uijtdebroeks' troubled first year at Movistar raises big questions",
+        "pubDate": "Thu, 05 Nov 2026 14:45:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/two-grand-tours-two-abandonments-cian-uijtdebroeks-troubled-first-year-at-movistar-raises-big-questions",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "'I didn't agree with their way of working' – Ellen van Dijk critical of Picnic-PostNL management but says she didn't experience culture of fear",
+        "pubDate": "Thu, 05 Nov 2026 13:13:07 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/i-didnt-agree-with-their-way-of-working-ellen-van-dijk-critical-of-picnic-postnl-management-but-says-she-didnt-experience-culture-of-fear/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"Anatomy of a G.O.A.T.\" - 45-minute long film on Tadej Pogacar features praise from Merckx, Contador and Thomas",
+        "pubDate": "Thu, 05 Nov 2026 13:40:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/anatomy-of-a-goat-45-minute-long-film-on-tadej-pogacar-features-praise-from-merckx-contador-and-thomas",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "UAE Team Emirates-XRG manager reveals 'ambitious dream' to emulate Visma in 2027 Grand Tours, but Pogačar and Del Toro's schedules still under wraps",
+        "pubDate": "Thu, 05 Nov 2026 12:13:43 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/uae-team-emirates-xrg-manager-reveals-ambitious-dream-to-emulate-visma-in-2027-grand-tours-but-pogacar-and-del-toros-schedules-still-under-wraps/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Former Giro stage winner and Pogacar domestique to step away from the World Tour in favour of growing Italian team",
+        "pubDate": "Thu, 05 Nov 2026 12:57:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/former-giro-stage-winner-and-pogacar-domestique-to-step-away-from-the-world-tour-in-favour-of-growing-italian-team",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "'Not exactly how I had planned' – Geerike Schreurs finally home in the Netherlands after horror crash at Gravel World Championships",
+        "pubDate": "Thu, 05 Nov 2026 11:38:04 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/not-exactly-how-i-had-planned-geerike-schreurs-finally-home-in-the-netherlands-after-horror-crash-at-gravel-world-championships/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "'The Tour of Flanders is becoming increasingly difficult, especially with the presence of Pogačar and Evenepoel' – Wout van Aert realistic about chances of finally landing his home Monument",
+        "pubDate": "Thu, 05 Nov 2026 11:28:42 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/the-tour-of-flanders-is-becoming-increasingly-difficult-especially-with-the-presence-of-pogacar-and-evenepoel-wout-van-aert-realistic-about-chances-of-finally-landing-his-home-monument/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"He’ll give Pogacar a real run for his money\" - Former Decathlon manager believes Paul Seixas' evolution isn't stopping",
+        "pubDate": "Thu, 05 Nov 2026 12:17:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/hell-give-pogacar-a-real-run-for-his-money-former-decathlon-manager-believes-paul-seixas-evolution-isnt-stopping",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Who will actually ride the Giro d’Italia in 2027? Analysing the choices facing Pogačar, Vingegaard, Seixas, Evenepoel, Del Toro and more",
+        "pubDate": "Thu, 05 Nov 2026 11:04:40 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/who-will-actually-ride-the-giro-ditalia-in-2027-analysing-the-choices-facing-pogacar-vingegaard-seixas-evenepoel-del-toro-and-more/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"What Visma has achieved\" - Matxin admits UAE is now going after rival team's historical record",
+        "pubDate": "Thu, 05 Nov 2026 11:33:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/what-visma-has-achieved-matxin-admits-uae-is-now-going-after-rival-teams-historical-record",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"Purely from results, I'd say it definitely wasn't good\" - Geraint Thomas faces reality of rebuilding INEOS's fallen Tour de France empire",
+        "pubDate": "Thu, 05 Nov 2026 11:32:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/purely-from-results-id-say-it-definitely-wasnt-good-geraint-thomas-faces-reality-of-rebuilding-ineoss-fallen-tour-de-france-empire",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "CyclingUpToDate Podcast: \"It doesn't make any sense\" - Remco Evenepoel advised to choose classics-Tour combo over Giro",
+        "pubDate": "Thu, 05 Nov 2026 11:31:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/cyclinguptodate-podcast-it-doesnt-make-any-sense-remco-evenepoel-advised-to-choose-classics-tour-combo-over-giro",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"Even though I’ve had two difficult years due to crashes...\" - Mikel Landa reflects positively on his time with Quick-Step",
+        "pubDate": "Thu, 05 Nov 2026 10:07:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/even-though-ive-had-two-difficult-years-due-to-crashes-mikel-landa-reflects-positively-on-his-time-with-quick-step",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Giro d'Italia number 19 at age 44 - Domenico Pozzovivo wants to make cycling history in 2027",
+        "pubDate": "Thu, 05 Nov 2026 09:40:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/giro-ditalia-number-19-at-age-44-domenico-pozzovivo-wants-to-make-cycling-history-in-2027",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"Gift with the golden ribbon\" - Former pro argues Tour de France should be Remco Evenepoel's ultimate goal next year",
+        "pubDate": "Thu, 05 Nov 2026 09:30:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/gift-with-the-golden-ribbon-former-pro-argues-tour-de-france-should-be-remco-evenepoels-ultimate-goal-next-year",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"Seixas will also really like this route\" - Belgian pundit would not be surprised to see Paul Seixas Giro debut in 2027",
+        "pubDate": "Thu, 05 Nov 2026 09:20:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/seixas-will-also-really-like-this-route-belgian-pundit-would-not-be-surprised-to-see-paul-seixas-giro-debut-in-2027",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"The Giro d’Italia always has an element of surprise\" - Who will Visma choose to lead their Corsa Rosa lineup?",
+        "pubDate": "Thu, 05 Nov 2026 09:15:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/the-giro-ditalia-always-has-an-element-of-surprise-who-will-visma-choose-to-lead-their-corsa-rosa-lineup",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Paul Seixas might become one of the best paid pro riders - But the French law could get in the way",
+        "pubDate": "Thu, 05 Nov 2026 09:10:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/paul-seixas-might-become-one-of-the-best-paid-pro-riders-but-the-french-law-could-get-in-the-way",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Specialized Tarmac: the evolution of an icon",
+        "pubDate": "Thu, 05 Nov 2026 08:00:00 +0000",
+        "link": "https://www.cyclingweekly.com/news/specialized-tarmac-the-evolution-of-an-icon",
+        "source": "Cycling Weekly",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Architect of Biniam Girmay's success story joins Marcel Kittel at Unibet Rose Rockets from 2027 onwards",
+        "pubDate": "Thu, 05 Nov 2026 09:00:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/architect-of-biniam-girmays-success-story-joins-marcel-kittel-at-unibet-rose-rockets-from-2027-onwards",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
       {
         "title": "\"It's what he would want from a Grand Tour\" - Giro d'Italia signalled as the ideal route for Jonas Vingegaard",
         "pubDate": "Thu, 05 Nov 2026 06:00:00 +0100",
         "link": "https://cyclinguptodate.com/cycling/its-what-he-would-want-from-a-grand-tour-giro-ditalia-signalled-as-the-ideal-route-for-jonas-vingegaard",
         "source": "CyclingUpToDate",
         "sourceUrl": ""
+      },
+      {
+        "title": "The hammer on the wall - Escape Collective",
+        "pubDate": "Thu, 05 Nov 2026 01:25:49 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE4tem5GY296VER5eEJkZldJWkJtMW5UMGxDak41X2hqT01hSzMtR1I4RFNHRkxWU0pqckVNcEtKWlZxZVI3NFRtcUhPNXlWUXZEaEJxU3JneGRrZGxPU0lDOVJR?oc=5",
+        "source": "Escape Collective",
+        "sourceUrl": "https://escapecollective.com"
       },
       {
         "title": "Jayco AlUla confirms its \"exciting and refreshed roster\" for 2027, spearheaded by Matthews, Welsford and Plapp",
@@ -31,38 +199,10 @@
         "sourceUrl": ""
       },
       {
-        "title": "\"There's probably close to a 0% chance\" - Breakout WorldTour sprinter expects to miss 2027 Tour de France despite beating cycling's biggest names",
-        "pubDate": "Wed, 04 Nov 2026 20:00:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/theres-probably-close-to-a-0-chance-breakout-worldtour-sprinter-expects-to-miss-2027-tour-de-france-despite-beating-cyclings-biggest-names",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"Purely from results, I'd say it definitely wasn't good\" - Geraint Thomas faces reality of rebuilding INEOS's fallen Tour de France empire",
-        "pubDate": "Wed, 04 Nov 2026 19:00:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/purely-from-results-id-say-it-definitely-wasnt-good-geraint-thomas-faces-reality-of-rebuilding-ineoss-fallen-tour-de-france-empire",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"What do I want? What Visma achieved\" - Tadej Pogacar's UAE boss sets sights on historic Giro-Tour-Vuelta treble in 2027",
-        "pubDate": "Wed, 04 Nov 2026 18:00:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/what-do-i-want-what-visma-achieved-tadej-pogacars-uae-boss-sets-sights-on-historic-giro-tour-vuelta-treble-in-2027",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "'We have already taken some incredible steps, but we are far from finished' – Unibet Rose Rockets add new head of racing as invite to Tour de France targeted",
         "pubDate": "Wed, 04 Nov 2026 16:17:49 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/we-have-already-taken-some-incredible-steps-but-we-are-far-from-finished-unibet-rose-rockets-add-new-head-of-racing-as-invite-to-tour-de-france-targeted/",
         "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"You can't rule out he'll ride all four Monuments\" - Remco Evenepoel tipped to put unfinished Giro business aside for Sanremo and Roubaix debuts in 2027",
-        "pubDate": "Wed, 04 Nov 2026 17:00:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/you-cant-rule-out-hell-ride-all-four-monuments-remco-evenepoel-tipped-to-put-unfinished-giro-business-aside-for-sanremo-and-roubaix-debuts-in-2027",
-        "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
       {
@@ -80,32 +220,11 @@
         "sourceUrl": ""
       },
       {
-        "title": "\"He has unfinished business with the Vuelta\" - Slovenian cycling chiefs concede Tadej Pogacar could miss historic home Giro",
-        "pubDate": "Wed, 04 Nov 2026 16:15:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/he-has-unfinished-business-with-the-vuelta-slovenian-cycling-chiefs-concede-tadej-pogacar-could-miss-historic-home-giro",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"He's ready to fight for the overall victory\" - Vincenzo Nibali backs Paul Seixas for 2027 Giro glory with one major obstacle: Tadej Pogacar",
-        "pubDate": "Wed, 04 Nov 2026 15:30:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/hes-ready-to-fight-for-the-overall-victory-vincenzo-nibali-backs-paul-seixas-for-2027-giro-glory-with-one-major-obstacle-tadej-pogacar",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "Vingegaard’s Dilemma: Chase Another Giro or Risk Everything Against Pogačar? - Outside Magazine",
         "pubDate": "Wed, 04 Nov 2026 14:09:31 GMT",
         "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPR25LV3lPWkN3Z25reFgxVnNpNEI3dGRQUDgzNjJNdUhEWjM5LTVyUXVPN2k3MlRrdDF1QzdkT2ZYTVFCeTFUVnRUd2xqVDRNZW5DdzllVkp0UTUxMDVjMVNkTXRrQVdWa1NKY1pTU0o3Rl9jQUxVU2RIa3R6OXVaX1VGNkh6bG5zLWhoUEItMFJTWFY4WlFPMDI3LUQxNjlxMC0zOVhBcjljT0I0MndzTEpqQQ?oc=5",
         "source": "VELO",
         "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
-        "title": "“We’re already thinking in orange” - Mikel Landa has new goals in 2027 with Euskaltel Euskadi as Vuelta bid comes to forefront",
-        "pubDate": "Wed, 04 Nov 2026 14:45:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/were-already-thinking-in-orange-mikel-landa-has-new-goals-in-2027-with-euskaltel-euskadi-as-vuelta-bid-comes-to-forefront",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
       },
       {
         "title": "Is Bianchi in crisis? Italian bike brand restructures amid reports of €100m debt",
@@ -115,24 +234,10 @@
         "sourceUrl": ""
       },
       {
-        "title": "\"If Pogacar decides to ride the Giro, he'd be very welcome\" - New Giro boss Guercilena rolls out red carpet for UAE leader and cycling's big stars",
-        "pubDate": "Wed, 04 Nov 2026 14:00:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/if-pogacar-decides-to-ride-the-giro-hed-be-very-welcome-new-giro-boss-guercilena-rolls-out-red-carpet-for-uae-leader-and-cyclings-big-stars",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "The Giro d'Italia's most feared climb – A closer look at the mighty Monte Zoncolan ahead of its return in 2027",
         "pubDate": "Wed, 04 Nov 2026 12:40:12 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/racing/the-giro-d-italias-most-feared-climb-a-closer-look-at-the-mighty-monte-zoncolan-ahead-of-its-return-in-2027/",
         "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "OFFICIAL: World Tour riders from EF Education-EasyPost and Lotto-Intermarche among four new signings for emerging ProTeam as they target Giro d'Italia",
-        "pubDate": "Wed, 04 Nov 2026 13:30:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/official-world-tour-riders-from-ef-education-easypost-and-lotto-intermarche-among-four-new-signings-for-emerging-proteam-as-they-target-giro-ditalia",
-        "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
       {
@@ -150,24 +255,10 @@
         "sourceUrl": ""
       },
       {
-        "title": "UAE boss Matxin weighs-in on 2027 Tour de France amid 'anti-Pogacar' route labels - “I think the organisers want to make sure the race isn’t decided on stage four\"",
-        "pubDate": "Wed, 04 Nov 2026 13:00:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/uae-boss-matxin-weighs-in-on-2027-tour-de-france-amid-anti-pogacar-route-labels-i-think-the-organisers-want-to-make-sure-the-race-isnt-decided-on-stage-four",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "Vincenzo Nibali praises 'innovative' 2027 Giro d'Italia route and says Paul Seixas 'would do well to participate'",
         "pubDate": "Wed, 04 Nov 2026 11:22:20 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/racing/vincenzo-nibali-praises-innovative-2027-giro-d-italia-route-and-says-paul-seixas-would-do-well-to-participate/",
         "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"I've become more realistic\" - Wout van Aert's Tour of Flanders ambitions shaped by his Paris Roubaix masterpiece and rivals Pogacar and Evenepoel",
-        "pubDate": "Wed, 04 Nov 2026 12:22:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/ive-become-more-realistic-wout-van-aerts-tour-of-flanders-ambitions-shaped-by-his-paris-roubaix-masterpiece-and-rivals-pogacar-and-evenepoel",
-        "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
       {
@@ -178,45 +269,10 @@
         "sourceUrl": ""
       },
       {
-        "title": "Primoz Roglic transfer update as one team reportedly out of race to sign Slovenian - Red Bull rider's future remains unclear ahead of 2027 season",
-        "pubDate": "Wed, 04 Nov 2026 11:45:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/primoz-roglic-transfer-update-as-one-team-reportedly-out-of-race-to-sign-slovenian-red-bull-riders-future-remains-unclear-ahead-of-2027-season",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Could Decathlon CMA CGM's Swiss licence move savings be jeopardised? - French law could still spell tax complications for team",
-        "pubDate": "Wed, 04 Nov 2026 11:15:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/could-decathlon-cma-cgms-swiss-licence-move-savings-be-jeopardised-french-law-could-still-spell-tax-complications-for-team",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Isaac del Toro preparing for crucial 2027 season alongside Pogacar - UAE rider enjoys holiday as Giro speculations continues after route reveal",
-        "pubDate": "Wed, 04 Nov 2026 10:30:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/isaac-del-toro-preparing-for-crucial-2027-season-alongside-pogacar-uae-rider-enjoys-holiday-as-giro-speculations-continues-after-route-reveal",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "'This was definitely the place that I wanted to be' – 21-year-old British rider Tomos Pattinson steps up to WorldTour with EF Education-EasyPost",
         "pubDate": "Wed, 04 Nov 2026 09:11:16 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/this-was-definitely-the-place-that-i-wanted-to-be-21-year-old-british-rider-tomos-pattinson-steps-up-to-worldtour-with-ef-education-easypost/",
         "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"We will study the route carefully\" - Visma react to 2027 Giro d'Italia route; Will Jonas Vingegaard return to defend title?",
-        "pubDate": "Wed, 04 Nov 2026 09:45:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/we-will-study-the-route-carefully-visma-react-to-2027-giro-ditalia-route-will-jonas-vingegaard-return-to-defend-title",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"Paul Seixas will like this route if he chooses the Giro\" - French star faces 2027 Grand Tour dilemma after Tour de France breakthrough",
-        "pubDate": "Wed, 04 Nov 2026 09:00:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/paul-seixas-will-like-this-route-if-he-chooses-the-giro-french-star-faces-2027-grand-tour-dilemma-after-tour-de-france-breakthrough",
-        "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
       {
@@ -232,6 +288,13 @@
         "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/eric-brunner-finds-his-groove-and-a-little-bit-of-an-adrenaline-rush-with-pair-of-wins-ahead-of-pan-american-cyclo-cross-championships/",
         "source": "Cyclingnews",
         "sourceUrl": ""
+      },
+      {
+        "title": "Wheel Talk Newsletter: You, me, Tuscany, and a pink jersey - Escape Collective",
+        "pubDate": "Tue, 03 Nov 2026 20:00:27 GMT",
+        "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOaXhTVnVULVlWOGQyZzExQUVkdktpOERMTEN5b1U2T0tyLVNuTkg2aVJIaVlsSnAxUHY3UjhNQnJRa2ZBUkZiWXRDR2dDY1NaT181cG5pSEJKMncyQXc2LWFaY1ZUYTA3NTFkMDlhWUlNcTFzdDJscExIN19nWkNZWHRkQ0FiX3h3Qi04Zw?oc=5",
+        "source": "Escape Collective",
+        "sourceUrl": "https://escapecollective.com"
       },
       {
         "title": "Giro d'Italia boss says motor-racing circuit sprints will improve safety, but recent Tour de France evidence suggests otherwise",
@@ -304,13 +367,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "'Lack of funding' forces long-standing women's Continental team to close after 18 seasons",
-        "pubDate": "Tue, 03 Nov 2026 11:11:41 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/lack-of-funding-forces-long-standing-womens-continental-team-to-close-after-18-seasons/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
         "title": "Kasia Niewiadoma Phinney, Mathieu van der Poel and Marianne Vos headline Rouleur Live 2026",
         "pubDate": "Tue, 03 Nov 2026 10:42:50 +0000",
         "link": "https://www.cyclingweekly.com/news/kasia-niewiadoma-phinney-mathieu-van-der-poel-and-marianne-vos-headline-rouleur-live-2026",
@@ -339,32 +395,11 @@
         "sourceUrl": "https://escapecollective.com"
       },
       {
-        "title": "‘We have been too ambitious’ - Bianchi fights to survive after years of losses - Escape Collective",
-        "pubDate": "Mon, 02 Nov 2026 22:40:57 GMT",
-        "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1za3k1Z2xKb1E0WERZbXF4RFMtbmtFU2EzV0t0UlhXWHlxUW0tNHAxMkw5Zk1NVExuWndDSC1WbUNycDhwT2FTWUxLdXJSeF9nLUtNWjRTQV9FQjBfeVk4OVpJckp2N0RBOC16eENR?oc=5",
-        "source": "Escape Collective",
-        "sourceUrl": "https://escapecollective.com"
-      },
-      {
-        "title": "Gravel Burn sends competitors across the Great Karoo of South Africa past dazzles of zebras and towers of giraffes - Gallery",
-        "pubDate": "Mon, 02 Nov 2026 21:20:03 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/racing/gravel-burn-sends-competitors-across-the-great-karoo-of-south-africa-past-dazzles-of-zebras-and-towers-of-giraffes-gallery/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
         "title": "Lorenzo Finn Hits the WorldTour With Huge Hype as Cycling’s Latest Teen Signing - Outside Magazine",
         "pubDate": "Mon, 02 Nov 2026 19:09:11 GMT",
         "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOUGhWWWtHTmZkdk8yNjhaZEJqX203R1RfckFQUWV3aUtSNmJLUGc4R2tmbW9NTDBfaXRnUm8wNTlzNzMzWFZuT0lsR3JkU0ZBWVQtT3F3NGhRcTVUcVN0TmpJaWxLbTlTVWVvZTlNLXVqdnY2OWx1eHFfT18tcWxqTTl2amd2aXp3d3R2aFFBWEJneGhxQkU4U2tUVXQwaUlTQ25DeF9xY28yeWtRQTlqdWtsdDR5dkl1bFY1TQ?oc=5",
         "source": "VELO",
         "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
-        "title": "'I must not put too much pressure on myself' – Lorenzo Finn looks to temper expectations for WorldTour debut after spectacular U23 season",
-        "pubDate": "Mon, 02 Nov 2026 17:01:40 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/emerging-talents/i-must-not-put-too-much-pressure-on-myself-lorenzo-finn-looks-to-temper-expectations-for-worldtour-debut-after-spectacular-u23-season/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
       },
       {
         "title": "Ghost Bikes to close after failing to find new owner - Escape Collective",
@@ -381,49 +416,42 @@
         "sourceUrl": "https://escapecollective.com"
       },
       {
-        "title": "No rest for Remco Evenepoel as he keeps the off-season kilometres ticking over with his running shoes in Tokyo",
-        "pubDate": "Mon, 02 Nov 2026 14:24:57 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/no-rest-for-remco-evenepoel-as-he-keeps-the-off-season-kilometres-ticking-over-with-his-running-shoes-in-tokyo/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Over 40% of Women's WorldTour riders earn more than €100,000, survey finds",
-        "pubDate": "Mon, 02 Nov 2026 12:57:51 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/over-40-percent-of-womens-worldtour-riders-earn-more-than-eur100-000-survey-finds/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "EF Education-EasyPost's head sports director Charly Wegelius departs after 15 years with the team",
-        "pubDate": "Mon, 02 Nov 2026 12:43:31 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/ef-education-easyposts-head-sports-director-charly-wegelius-departs-after-15-years-with-the-team/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
         "title": "'Clear instructions lead to more enforcement – and that means fewer people killed on our roads': Eight things to know before you start using a helmet or bike camera",
         "pubDate": "Mon, 02 Nov 2026 12:23:30 +0000",
         "link": "https://www.cyclingweekly.com/news/clear-instructions-lead-to-more-enforcement-and-that-means-fewer-people-killed-on-our-roads-eight-things-to-know-before-you-start-using-a-helmet-or-bike-camera",
         "source": "Cycling Weekly",
         "sourceUrl": ""
-      },
-      {
-        "title": "2026 Big Ride Challenge finishers list",
-        "pubDate": "Mon, 02 Nov 2026 11:06:12 +0000",
-        "link": "https://www.cyclingweekly.com/news/2026-big-ride-challenge-finishers-list",
-        "source": "Cycling Weekly",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Bianchi Out, Chinese Carbon In, And So-Long Specialized: Big Changes Coming to Pro Team Bike Sponsorship - Outside Magazine",
-        "pubDate": "Mon, 02 Nov 2026 10:12:58 GMT",
-        "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOUEU2SmVJek1xZmozYnN0X3ZRTEVpQWZpaVJBMUx4ellEalpSOTEzdkZBdnVKYTlIbmRZaVFTOXVhVXUzSk9rNWZCaUNuVXdaSzFMdUJUUi1ONEdHbXo4MFc3eGFfR1FtbTkyRl9uX0Q5VWpLRjlpdU5GeExJdUpCMmUyMlozZFdGT2xNajExbG5WRWZSMUtmMU82aF9OS3pCR0JvUUpjbGNCbGRUczZnU3JrZnNLMjZkd3FMckhDaDBfcU9fZ1J1SURVTHZKYkoydlhHMHdKemgwdDdCek9PZ3hSbGg?oc=5",
-        "source": "VELO",
-        "sourceUrl": "https://velo.outsideonline.com"
       }
     ],
     "mtb": [
+      {
+        "title": "First Ride: Lightweight &amp; Full-Power eMTBs Converge with the New Orbea Rise",
+        "pubDate": "Thu, 5 Nov 2026 00:00:00 PST",
+        "link": "https://www.pinkbike.com/news/first-ride-lightweight-and-full-power-emtbs-converge-with-the-new-orbea-rise.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
+      {
+        "title": "The 6 Next MTB World Championships Venues",
+        "pubDate": "Thu, 5 Nov 2026 00:00:00 PST",
+        "link": "https://www.pinkbike.com/news/the-6-next-world-championships-venues.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Video: Hope Shares the Story behind the Return of Its 6-Piston Brakes",
+        "pubDate": "Thu, 5 Nov 2026 00:00:00 PST",
+        "link": "https://www.pinkbike.com/news/video-the-rebirth-of-a-legend-the-story-behind-the-v6ti-mono-edition.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Video: 'Out of Range' in Hidden Corner of the Pyrenees with the Jorba Brothers",
+        "pubDate": "Thu, 5 Nov 2026 00:00:00 PST",
+        "link": "https://www.pinkbike.com/news/video-out-of-range-in-a-hidden-corner-of-the-pyrenees-with-the-jorba-brothers.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
       {
         "title": "Greenzone Zalaegerszeg XCO - UCI.org",
         "pubDate": "Wed, 04 Nov 2026 18:35:38 GMT",
@@ -495,6 +523,13 @@
         "sourceUrl": ""
       },
       {
+        "title": "JankyEric - Vital MTB",
+        "pubDate": "Wed, 04 Nov 2026 06:37:30 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE4xVmFDWkZxWVVpM1J6QVNJY3BpMG5QdlhPSGw0LWlVR2piTkpYTExJT1I1aUVWQmRrUDZGLUEtT3pzam9XaHZ4NnNjaXAtZ0dVLXhrU2lab0hpTWhGVURnUmhyOEo?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
         "title": "2supple - Vital MTB",
         "pubDate": "Wed, 04 Nov 2026 04:35:46 GMT",
         "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5aa01YOXJrRUF6UVFaWVlVRjF6TVJGR0p0ejR0ay1tRmF1dXR0aFd5amR1MjNMdEU3MVU1Z3RibVU1SjBRR2xqWnBTYjJ2ZjcyWnExdVNkNng4aFRhTEdzUjVuVS1tREU?oc=5",
@@ -505,20 +540,6 @@
         "title": "Tire chat (nerds only) - The Hub - Mountain Biking Forums / Message Boards - Vital MTB",
         "pubDate": "Tue, 03 Nov 2026 20:02:54 GMT",
         "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE8wLUhyU2UyTTE4WFlTY2c0TXJkX0U4LU5pUjl1RTFETjZJeXI5Z1h2d05yQ1ltWjhpdWlzZTRoSm91VDN0RlZQUFdtbmc3cHUw?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
-      },
-      {
-        "title": "2027 Norco Team DH 2 FOX Bike - Reviews, Comparisons, Specs - Bikes - Vital MTB",
-        "pubDate": "Tue, 03 Nov 2026 19:13:29 GMT",
-        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1CSVViaC1sYS05dlNxVmpPdFJvV1UzSWJsUTNlV1g2Z2FWRE8zYWJ2X2RocjZ0RUxKZmxTeFBqWW4zUVdkZ2loWFV0Y1d2NS1oYVpXSWhlMEt1bVJNVTNkTWVNc05jN1kzd0JWR3dlTmFRQQ?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
-      },
-      {
-        "title": "Mountain Bike Press Releases - Vital MTB",
-        "pubDate": "Tue, 03 Nov 2026 10:00:31 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE8ydHkteVRaZzhsQnJlZjBfZkRFNlN5X1NBZC1sWmNUQWVoc3F4Q0NnTGZIY1gwQmowcWUwLTlMU2lYa2FBbTlTLUdxczVhdGpJTUJkc1p3WVVhS1ZS?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
@@ -572,37 +593,16 @@
         "sourceUrl": ""
       },
       {
-        "title": "Zwift Rider Spots ‘A Guy Taking a Dump’ in New Real-World Video Package",
-        "pubDate": "Tue, 3 Nov 2026 00:00:00 PST",
-        "link": "https://www.pinkbike.com/news/zwift-rider-spots-a-guy-taking-a-dump-in-new-real-world-video-package.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Video: Gracey Hemstreet Laps Coast Gravity Park on Her eMTB",
-        "pubDate": "Tue, 3 Nov 2026 00:00:00 PST",
-        "link": "https://www.pinkbike.com/news/video-emtb-lapping-coast-gravity-park-with-gracey-hemstreet.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Video: Evan Wall &amp; Lief Rodgers Wrap up Their First World Cup Season with the Priority Racing Team",
-        "pubDate": "Tue, 3 Nov 2026 00:00:00 PST",
-        "link": "https://www.pinkbike.com/news/video-evan-wall-and-lief-rodgers-wrap-up-their-first-world-cup-season-with-the-priority-racig-team.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Photo Story: Quereño - How a Village in Northwestern Spain is Recovering from Disaster Through Trail Building",
-        "pubDate": "Tue, 3 Nov 2026 00:00:00 PST",
-        "link": "https://www.pinkbike.com/news/photo-story-how-a-village-in-northwestern-spain-is-recovering-from-disaster-through-trail-building.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
         "title": "Latest Product Reviews - Vital MTB",
         "pubDate": "Tue, 03 Nov 2026 07:38:15 GMT",
         "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5HYXVJZ0dQWG92YUxxcmJqaXdFbFF0T1E4U2NXUm1pTjZvVV8wV3ZKVW1vZU1vaVcyRjhYcG5ZcFlsREp0LW5yY2gwaUZ2dEh0eFE?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
+        "title": "2027 Norco Team DH 2 FOX Bike - Reviews, Comparisons, Specs - Bikes - Vital MTB",
+        "pubDate": "Mon, 02 Nov 2026 23:21:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1CSVViaC1sYS05dlNxVmpPdFJvV1UzSWJsUTNlV1g2Z2FWRE8zYWJ2X2RocjZ0RUxKZmxTeFBqWW4zUVdkZ2loWFV0Y1d2NS1oYVpXSWhlMEt1bVJNVTNkTWVNc05jN1kzd0JWR3dlTmFRQQ?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
@@ -621,9 +621,16 @@
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "Vampire Vamborghini “The Eternal” #101 - Vital MTB",
-        "pubDate": "Sat, 31 Oct 2026 06:42:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPaF96anVXdW1YTGVXV01XS2YwQzdsTFowd3VfTHV3a01PRHJoalU5clowd1FTbVVZUlRObm02cmVCYmUxb3dQSWJjTXI5ck5rcy1qNGFtTUpHcmQzdTZaZGJ0cmR6MktiOWRvWU1VM3Y0VWRDNG96REJVbGktM0ozSmliUQ?oc=5",
+        "title": "casey79 - Vital MTB",
+        "pubDate": "Sun, 01 Nov 2026 16:10:23 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE8xMGNDZU9NSXFQVFlOS0F6OXRvamtBS0ZEcHV3TXpsMl9pY3lwVmVBeTNkTFhtV0hXUTJrNF80TW93ekpfWnRSY2U4RU1zYUctbjBQOU15akZEMEM5UDE1WQ?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
+        "title": "RadAxSmirch - Vital MTB",
+        "pubDate": "Fri, 30 Oct 2026 09:39:42 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1Gc2JDOExMSmlJV1lDSkk3MklhWk1BUExxOGpkT0U4b3NnVWgzU0xPbGFld2ZGdlhMZTZ6MXNSQnQtUVFKR1hvaXRIM3FjTXhRSHhTbFZWLXNuRFR5LWltcC05M2Rnbk0?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
@@ -657,6 +664,13 @@
       }
     ],
     "cyclocross": [
+      {
+        "title": "Get set for cyclo-cross season: Stream every race from anywhere with this early Black Friday VPN deal",
+        "pubDate": "Thu, 05 Nov 2026 10:21:16 +0000",
+        "link": "https://www.cyclingnews.com/cycling-culture/streaming/get-set-for-cyclo-cross-season-stream-every-race-from-anywhere-with-this-early-black-friday-vpn-deal/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
       {
         "title": "Felipe Orts spearheads Spain’s European Championship medal bid as full cyclocross squad confirmed",
         "pubDate": "Wed, 04 Nov 2026 01:00:00 +0100",
@@ -784,25 +798,11 @@
         "sourceUrl": "https://cyclocross24.com"
       },
       {
-        "title": "INEOS rider swaps the road for Cyclocross - Former double Tour de France stage winner heads for the mud and his cycling roots",
-        "pubDate": "Sun, 01 Nov 2026 13:30:00 +0100",
-        "link": "https://cyclinguptodate.com/cyclocross/ineos-rider-swaps-the-road-for-cyclocross-former-double-tour-de-france-stage-winner-heads-for-the-mud-and-his-cycling-roots",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "Sailor Verbeek - Cyclocross24.com",
         "pubDate": "Sun, 01 Nov 2026 08:10:37 GMT",
         "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBfbnFScmZaeW1jSmdKeUw3NjMybk1rSUhqYnlzb2JPczlROVctSnRucktHRTBwY2FTOEd4UkFmMjEwZTFpOGhmMEY0WDEtT0xTOTRodDlCcEt5UQ?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
-      },
-      {
-        "title": "“He should actually win, given this field”: Eli Iserbyt names Thibau Nys clear Koppenbergcross favorite despite form doubts",
-        "pubDate": "Sun, 01 Nov 2026 09:00:00 +0100",
-        "link": "https://cyclinguptodate.com/cyclocross/he-should-actually-win-given-this-field-eli-iserbyt-names-thibau-nys-clear-koppenbergcross-favorite-despite-form-doubts",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
       },
       {
         "title": "Northampton International Cyclocross Day One 2026 Results and Report – Northampton – Elite Women, Elite Men - Cyclocross Magazine",
@@ -817,20 +817,6 @@
         "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE4xT1dLTm1MODZQOFhUOTU4VjZSVHN0Q0g4dUtPVFA1dXExTXFtWnI3NmFHNEZzNlVmNjdUT0N2bXp6a2pwS0g2RlFOb1A?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
-      },
-      {
-        "title": "Canadian Cyclo-cross National Championships: Sidney McGill wins elite women's title",
-        "pubDate": "Sat, 31 Oct 2026 18:53:22 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/canadian-cyclo-cross-national-championships-sidney-mcgill-wins-elite-womens-title/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "'It really feels like a victory' - Belgian cyclo-cross champion returns to training following surgery for cardiac arrhythmias",
-        "pubDate": "Sat, 31 Oct 2026 13:24:35 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/it-really-feels-like-a-victory-belgian-cyclo-cross-champion-returns-to-training-following-surgery-for-cardiac-arrhythmias/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
       },
       {
         "title": "Swiss Cyclocross Cup 2026-2027 - Women Elite - Cyclocross24.com",
@@ -852,16 +838,23 @@
         "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9Db01mNG1KUDZCTTdxQlJQWVBmZDBVdWN0STFoWHA5ZXZTa1QzQWR5dzAyY2x0S3ZzVW9wY3drbVE5NkxkeVZCY1hhM2M?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
-      },
-      {
-        "title": "How to watch Cyclo-Cross: Live streams, TV channels and schedule for all races and major championships during the 2026-27 season",
-        "pubDate": "Fri, 30 Oct 2026 15:00:00 +0000",
-        "link": "https://www.cyclingnews.com/cycling-culture/streaming/how-to-watch-cyclo-cross-live-streams-tv-channels-and-schedule-for-all-races-and-major-championships-during-the-2026-27-season/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
       }
     ],
     "gravel": [
+      {
+        "title": "The Traka World Series 'natural evolution' of Gravel Earth Series with collection of seven races, €84,000 prize purse and promise of live streaming",
+        "pubDate": "Thu, 05 Nov 2026 14:40:50 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/racing/the-traka-world-series-natural-evolution-of-gravel-earth-series-with-collection-of-seven-races-eur84-000-prize-purse-and-promise-of-live-streaming/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "'Not exactly how I had planned' – Geerike Schreurs finally home in the Netherlands after horror crash at Gravel World Championships",
+        "pubDate": "Thu, 05 Nov 2026 11:38:04 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/not-exactly-how-i-had-planned-geerike-schreurs-finally-home-in-the-netherlands-after-horror-crash-at-gravel-world-championships/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
       {
         "title": "Could Spain's hardest climb be getting even tougher? Vuelta organisers receive proposal to add gravel sector to Alto de l'Angliru",
         "pubDate": "Wed, 04 Nov 2026 12:02:13 +0000",
