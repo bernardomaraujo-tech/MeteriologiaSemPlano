@@ -1,7 +1,28 @@
 {
-  "updatedAt": "2026-11-08T00:39:06.202Z",
+  "updatedAt": "2026-11-08T07:23:57.665Z",
   "disciplines": {
     "road": [
+      {
+        "title": "Pan-Am Cyclo-cross Championships: USA's Noah Scholnick and Lilliana O'Donnell win junior titles in Washington, DC",
+        "pubDate": "Sun, 08 Nov 2026 06:53:24 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/racing/pan-am-cyclo-cross-championships-usas-noah-scholnick-and-lilliana-odonnell-win-junior-titles-in-washington-dc/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "From concussion to backing Pogacar’s Tour de France win in two months - UAE’s veteran Briton continues to deliver",
+        "pubDate": "Sun, 08 Nov 2026 06:00:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/from-concussion-to-backing-pogacars-tour-de-france-win-in-two-months-uaes-veteran-briton-continues-to-deliver",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "‘Confident About the Future’: Seixas Addresses Post-2027 Questions - Outside Magazine",
+        "pubDate": "Sun, 08 Nov 2026 00:08:09 GMT",
+        "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOVmlWTVhNUFlxUHRqX1hVVFZpZWFxcmhmbVFJaDVpbFNmNGtWWjR4M1UxOEdQeEV2bFlzUktIM1VvdS14emh1ajJvTUdVaXF5T0tLT3FTWGlxclN4aWhWZmxKYkxwdXhhZzFrZDlXWFRIOFFLY1U3Z1h3QXBmaTF3bFd0djY?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
+      },
       {
         "title": "Newly crowned World Champion Brandon McNulty to debut rainbow jersey on home soil in Arizona",
         "pubDate": "Sun, 08 Nov 2026 01:00:00 +0100",
@@ -15,6 +36,13 @@
         "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/this-one-feels-different-lucinda-brand-on-winning-european-cyclo-cross-title-after-rival-was-relegated/",
         "source": "Cyclingnews",
         "sourceUrl": ""
+      },
+      {
+        "title": "Tour de France Singapore Criterium - Escape Collective",
+        "pubDate": "Sat, 07 Nov 2026 22:51:08 GMT",
+        "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE0tZjJTaEZzTmtTTTU5bE9YWjV2aEkyOEpCamNrZUgyRkk2bXBNTkk1dEJEY3NoWEJaOWJyMEFwZkw4RTlPcVJ6ajlfRWhnTWVFenhfbm5rZDN0bkpSYTlCU1FQb0ZPeWI4RU5jT2lpQVllVDQ3c05v?oc=5",
+        "source": "Escape Collective",
+        "sourceUrl": "https://escapecollective.com"
       },
       {
         "title": "Pan-Am Cyclo-cross Championships: Eric Brunner solos to fifth elite men’s title in Washington, DC",
@@ -171,13 +199,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "Velo Poll: What’s Your Verdict on the 2027 Tour de France and Giro d’Italia Routes? - Outside Magazine",
-        "pubDate": "Sat, 07 Nov 2026 12:09:21 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPZUpTdXg0Sko4U3FOLXJEbTRTS2VxbzNlaHpvVncyS0V3NGkxdFNDNF9VLTFSaldFU3B0dmlqR0hXeGc4Z0lWSjEtTjBSSEdWeEtXTUttSDRvMkVZcWV1MzFrSkVvWFp1TmxrUVNPd19YeDVkMXpaTlI3dVE3aW1XRkpWLU1fRm9q?oc=5",
-        "source": "VELO",
-        "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
         "title": "MTB World Champion, Pogacar's big rival and Tour de France frontrunner - Tom Pidcock's stellar 2026 season",
         "pubDate": "Sat, 07 Nov 2026 11:49:00 +0100",
         "link": "https://cyclinguptodate.com/cycling/mtb-world-champion-pogacars-big-rival-and-tour-de-france-frontrunner-tom-pidcocks-stellar-2026-season",
@@ -213,25 +234,11 @@
         "sourceUrl": ""
       },
       {
-        "title": "“Fatal accidents could have been prevented” – UCI medical chief delivers stark warning as cycling continues to delay mandatory GPS trackers",
-        "pubDate": "Sat, 07 Nov 2026 09:26:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/fatal-accidents-could-have-been-prevented-uci-medical-chief-delivers-stark-warning-as-cycling-continues-to-delay-mandatory-gps-trackers",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "Amani is shutting down its men's road team to focus on its women's squad, with a big sponsor boost - Escape Collective",
         "pubDate": "Fri, 06 Nov 2026 22:37:34 GMT",
         "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQNjF5cm41RDhRd1hzYUhBWkczMzRUT096UjFFbVpoMzEzV1dTUGpoVDdGamhpMG9WZkRvcnZ0TVplMFAwZklxQmcyTDA1QmVCTUE4dk1iTjR3RWQxWThsVUt1aGc2akZWVGI2WktORWxHcGctSFd0TllCRDQ4bmJmTDkzVm5yakNIZkV5UjBsWGU2bXJYR2oxb2lFR2xJTXpuakpvZ0ZjVXhKdm9IS1Jsd3U3ajJFQi1IZXJ2eU9rb1lJcnhOTV9qR19NRHA?oc=5",
         "source": "Escape Collective",
         "sourceUrl": "https://escapecollective.com"
-      },
-      {
-        "title": "Tour de France Archives - Outside Magazine",
-        "pubDate": "Fri, 06 Nov 2026 22:35:28 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTFA0SWhzb0VGSzFqVWRqODBSbzBSZ09UQ3VNd1V6OFk4LWo5YVM0TmQ1OEd2eEl5MEczd3NNUWtEOGo0QkdDZkhwS2lKRFVVRWM0bXkwUGl6dmtZalJTblpRWTdEN25oNFpLSkwyUXBFWEVhSndCSUU1OWNR?oc=5",
-        "source": "VELO",
-        "sourceUrl": "https://velo.outsideonline.com"
       },
       {
         "title": "Don't race what you can't afford to replace: US criterium racing looks to China for bikes - Escape Collective",
@@ -375,13 +382,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "'I felt the bone snap' - Hannah Otto survives 40% gradients, snowy summit and fracture to set epic one-day Kilimanjaro summit record",
-        "pubDate": "Thu, 05 Nov 2026 21:24:20 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/i-felt-the-bone-snap-hannah-otto-survives-40-percent-gradients-snowy-summit-and-fracture-to-set-epic-one-day-kilimanjaro-summit-record/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
         "title": "What Could Cervélo, Beats, Rapha, and Bose Tell Us About Cannondale’s Future? - Outside Magazine",
         "pubDate": "Thu, 05 Nov 2026 20:40:55 GMT",
         "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPakN1WEw5azV2V3d1aUFwTEt5amYwTG50Z0JKUUlqOGdUTThSRUZYZE51akEwSXctRUdVTWJJOVE5UjJ2ZWJEWE5RTHhBTV9jRTRGT0NPWXFWdExGck05dnRsc3ZJM3Z6VWtwdXZIREJXbzVkY1V2azVxSWhwYi0tTXBnYjRUTXVrZEphUEJfVGhBZWZtZ3lzQ0pNYkU?oc=5",
@@ -403,18 +403,18 @@
         "sourceUrl": ""
       },
       {
-        "title": "The hammer on the wall - Escape Collective",
-        "pubDate": "Thu, 05 Nov 2026 01:25:49 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE4tem5GY296VER5eEJkZldJWkJtMW5UMGxDak41X2hqT01hSzMtR1I4RFNHRkxWU0pqckVNcEtKWlZxZVI3NFRtcUhPNXlWUXZEaEJxU3JneGRrZGxPU0lDOVJR?oc=5",
-        "source": "Escape Collective",
-        "sourceUrl": "https://escapecollective.com"
-      },
-      {
         "title": "'Don't talk about points': How the promotion/relegation system has upended cycling - Escape Collective",
         "pubDate": "Wed, 04 Nov 2026 20:24:11 GMT",
         "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNM09jR1EyVXB4SklFWUVHSXkzNXVWclg2ZENrMjJ5YzNBMDAzbld4WTRQOUFoamZHdG9IR0VfNTdqNUNlZWhVcHNPX3h4eEVsdjhZMzVwZ2d4MGxseW9rSFVGNDlWelctS09qcC1LUW8xTnlRdFd4UEk1aTlvLTNUQ1VuM0hYNmVEaUpnTzJUaFBrVVU3X0dSRXh5SGlIYVlBT0N1TTV1SS1FcTdF?oc=5",
         "source": "Escape Collective",
         "sourceUrl": "https://escapecollective.com"
+      },
+      {
+        "title": "Bianchi's €100 Million Lesson: You Can't Mass-Produce Heritage - Outside Magazine",
+        "pubDate": "Wed, 04 Nov 2026 18:23:49 GMT",
+        "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOUmVaNkp6OG9zNDNzNUtaT0tUYWZSZzhqTG85S3VvcE1KOTNMUEJrd1RiUi1seHpHN21aT0lqUW5ZYThicTE4X282NWl3WW5YaVRqUGI0VDBPUFJxZXZtUnFId0ktT3NsRWl0X1dNWFgyU3U5b1MxQURmUmJ3RndqcF9sU3U3N2RZMWZSd2xxV0o?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
       },
       {
         "title": "Lidl ups investment in cycling with Vuelta deals - Escape Collective",
@@ -429,6 +429,13 @@
         "title": "First Ride: Trek's Unreleased 32\" Superfly",
         "pubDate": "Sat, 7 Nov 2026 00:00:00 PST",
         "link": "https://www.pinkbike.com/news/first-ride-treks-unreleased-32-superfly.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Randoms II - Sedona Mountain Bike Festival 2026",
+        "pubDate": "Sat, 7 Nov 2026 00:00:00 PST",
+        "link": "https://www.pinkbike.com/news/randoms-ii-sedona-mountain-bike-festival.html?trk=rss",
         "source": "Pinkbike",
         "sourceUrl": ""
       },
@@ -587,13 +594,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "Victor Koretzky Undergoes Second Surgery After Humeral Nonunion From April Crash",
-        "pubDate": "Thu, 5 Nov 2026 00:00:00 PST",
-        "link": "https://www.pinkbike.com/news/victor-koretzky-undergoes-surgery-after-humeral-nonunion-from-april-crash.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
         "title": "Greenzone Zalaegerszeg XCO - UCI.org",
         "pubDate": "Wed, 04 Nov 2026 18:35:38 GMT",
         "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBDQ3dBZ2Rtb0Q3VU5TbjM4QUxsMGZxenkwbndPQkFULWx3M0ZsRkxmb0tER0E3UEc5T244WUVNVll0V0N2QkdoUzBjQTZJRUctNWJEX2FYSnFsVDdhazRiQ3czNWo?oc=5",
@@ -666,6 +666,13 @@
     ],
     "cyclocross": [
       {
+        "title": "Pan-Am Cyclo-cross Championships: USA's Noah Scholnick and Lilliana O'Donnell win junior titles in Washington, DC",
+        "pubDate": "Sun, 08 Nov 2026 06:53:24 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/racing/pan-am-cyclo-cross-championships-usas-noah-scholnick-and-lilliana-odonnell-win-junior-titles-in-washington-dc/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
         "title": "'This one feels different' - Lucinda Brand on winning European cyclo-cross title after rival was relegated",
         "pubDate": "Sat, 07 Nov 2026 23:15:35 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/this-one-feels-different-lucinda-brand-on-winning-european-cyclo-cross-title-after-rival-was-relegated/",
@@ -701,9 +708,9 @@
         "sourceUrl": ""
       },
       {
-        "title": "Results North Carolina Grand Prix - Day 1 2026 - Women Elite - Cyclocross24.com",
-        "pubDate": "Sat, 07 Nov 2026 20:16:13 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1ON2kwc0lpa1haSmdzQ2RKZnRTMk44Vk5JMUJJaDgyeXlkbjV5T1laNzhIT2M3Qy03VGFfYWc0ZXp5azVOLVlnMldPaDA?oc=5",
+        "title": "Robin Veyrac - Cyclocross24.com",
+        "pubDate": "Sat, 07 Nov 2026 19:55:22 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE81bXc3ZGUtSXEtRDg4NWVaT05YcEhNQm5CYko1MjNiQlhEenUtUjE1OE5FZzN2NkJLekJlTG50czMyWC1HMUNjbzNRMVo5Z2JkWm9DMWNBSQ?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
@@ -736,6 +743,13 @@
         "sourceUrl": ""
       },
       {
+        "title": "Results Irish National Championships Cyclocross Co Kildare 2027 - Men Junior - Cyclocross24.com",
+        "pubDate": "Sat, 07 Nov 2026 14:45:39 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1DbGNFWG9hTE1OVkViZjU1NmVGNFJ5U3VieE0ySjZ5ZXNfSVlVdzhlRS1SOWlod0xFVDVKN1JpYVRKOFVmczZRdkZwUGw?oc=5",
+        "source": "Cyclocross24",
+        "sourceUrl": "https://cyclocross24.com"
+      },
+      {
         "title": "European Cyclo-cross Championships: Aubin Sparfel outsprints Belgian pair to seal under-23 men's title for France",
         "pubDate": "Sat, 07 Nov 2026 14:06:59 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/racing/european-cyclo-cross-championships-aubin-sparfel-outsprints-belgian-pair-to-seal-under-23-mens-title-for-france/",
@@ -750,18 +764,18 @@
         "sourceUrl": ""
       },
       {
+        "title": "Nicolas De Las Heras Pasandin - Cyclocross24.com",
+        "pubDate": "Sat, 07 Nov 2026 11:20:01 GMT",
+        "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBBc3huY2NLRGNJU095WWhvaDAxejlSZEpLS1pUa0oyLTZveFlLNmZkM0lwdnFPNjRaWW5NT3JKRmtoVXVaQ014alFyVUR2NnB3VFBLVXFmVHNyRHFNbmUyaFpic1ZjcWNreERJZGpB?oc=5",
+        "source": "Cyclocross24",
+        "sourceUrl": "https://cyclocross24.com"
+      },
+      {
         "title": "\"Cameron didn’t do anything wrong\" - Michael Vanthourenhout apologizes to Cameron Mason after Noordzeecross altercation",
         "pubDate": "Sat, 07 Nov 2026 11:00:00 +0100",
         "link": "https://cyclinguptodate.com/cyclocross/cameron-didnt-do-anything-wrong-michael-vanthourenhout-apologizes-to-cmaeron-mason-after-noordzeecross-altercation",
         "source": "CyclingUpToDate",
         "sourceUrl": ""
-      },
-      {
-        "title": "Results Irish National Championships Cyclocross Co Kildare 2027 - Women Elite - Cyclocross24.com",
-        "pubDate": "Sat, 07 Nov 2026 09:46:33 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5tRzJtNmFUbkhTbVhnRHJnM3l0U21OLUlDNnR2UmRXM1NtZjJtVG9TZnI0OTNnOGxWYWo2b0I1dlRQNk1hT2NvZFoyTlQ?oc=5",
-        "source": "Cyclocross24",
-        "sourceUrl": "https://cyclocross24.com"
       },
       {
         "title": "Results Coupe de France Cyclo-Cross #5 - Saint-Prouant 2026 - Men U23 - Cyclocross24.com",
@@ -771,9 +785,9 @@
         "sourceUrl": "https://cyclocross24.com"
       },
       {
-        "title": "History Cyclocross Trnava - Women Junior - Cyclocross24.com",
-        "pubDate": "Sat, 07 Nov 2026 01:56:39 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9ia09lOGVqNmNNZGZfUEZtNFRnZzNVVmtDdVV4ZEVEamVjdFlFaUNDeDBCS1RlX0xKbHdFMTgtSmdvY1BVMVRKUXdTSVlsMEtuUlhZTnpvX01ybkhC?oc=5",
+        "title": "Katixa Navarro Ezpeleta - Cyclocross24.com",
+        "pubDate": "Sat, 07 Nov 2026 00:44:36 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1yVEQxVTJtbXk1ZkNzYXRHMVNIajR1Zl9yMWM5NEVGREhXdHJvOThKalNYSEduWVpJdmtHeS05b244em5ST3VoQjRVbWFnRnZXbHhpZFJfU29jOVJYZ1B5WGQ5MU9DZw?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
@@ -846,20 +860,6 @@
         "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1CVmNkbUpaa01saFhrdGE0U2ZIZk05VXBfS3AwY1dkTEs1RHN1WDdJZ1dhVDZHZGp3d3M4dldkenJ1a0xxam9weHM0Y1hGT1FkN1luRDhYcXlmQQ?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
-      },
-      {
-        "title": "Matteo La Capria - Cyclocross24.com",
-        "pubDate": "Sun, 01 Nov 2026 07:00:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5HamQ0XzhFTUowU1paR0VnNlVEaHVtZDlaNTdzLTZOSTFGZ0JWby1vbnhQcXZKYmRqaXFadi11VDRQT0g5Ym9Rdzk2RHJtS2RnQkpNZTVUMTNKaHpl?oc=5",
-        "source": "Cyclocross24",
-        "sourceUrl": "https://cyclocross24.com"
-      },
-      {
-        "title": "Northampton International Cyclocross Day One 2026 Results and Report – Northampton – Elite Women, Elite Men - Cyclocross Magazine",
-        "pubDate": "Sun, 01 Nov 2026 06:41:47 GMT",
-        "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNOHRscFUySFFHcTc3dVVxM0lxWTBGNTQ4R3Bwcm5FQmltM19HakVNR3RuVXE0SnVYdFRjLWZZUkJtX3RNLThFcHRjOG16M0Rra0lvSy1SanpCWk9TbWUxUW1SdUl6NlVTUDJHdTY4VHpBM0FqV3diZnBlTlJkc052NXNzaVBVQjdaZXhwemJyVVZLR2NLLVc0M3lEYVg?oc=5",
-        "source": "Cyclocross Magazine",
-        "sourceUrl": "https://www.cxmagazine.com"
       }
     ],
     "gravel": [
