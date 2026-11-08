@@ -1,7 +1,126 @@
 {
-  "updatedAt": "2026-11-08T07:23:57.665Z",
+  "updatedAt": "2026-11-08T15:15:03.534Z",
   "disciplines": {
     "road": [
+      {
+        "title": "Results Cyclocross European Championships 2026 elite men and U23 women - Thibau Nys delivers in final surge as Celia Gery wins second U23 title",
+        "pubDate": "Sun, 08 Nov 2026 16:05:00 +0100",
+        "link": "https://cyclinguptodate.com/cyclocross/results-european-championships-2026-elite-men-and-u23-women-thibau-nys-delivers-in-final-surge-as-celia-gery-wins-second-u23-title",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Luxembourg file official complaint after controversial Schreiber relegation - Cyclocross European Championships saga set to continue",
+        "pubDate": "Sun, 08 Nov 2026 15:38:00 +0100",
+        "link": "https://cyclinguptodate.com/cyclocross/luxembourg-file-official-complaint-after-controversial-schreiber-relegation-cyclocross-european-championships-saga-set-to-continue",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Key INEOS rider has been misfiring over the past two seasons - One thing needs to change in bid to solve major issue",
+        "pubDate": "Sun, 08 Nov 2026 14:35:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/key-ineos-rider-has-been-misfiring-over-the-past-two-seasons-one-thing-needs-to-change-in-bid-to-solve-major-issue",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"Many riders today don’t dare to do that anymore\" - Eli Iserbyt believes most current riders are 'too well-behaved'",
+        "pubDate": "Sun, 08 Nov 2026 13:45:00 +0100",
+        "link": "https://cyclinguptodate.com/cyclocross/many-riders-today-dont-dare-to-do-that-anymore-eli-iserbyt-believes-most-current-riders-are-too-well-behaved",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Singapore Criterium: Isaac Del Toro takes surprise solo win as the sprinters miss out",
+        "pubDate": "Sun, 08 Nov 2026 12:14:49 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/racing/singapore-criterium-isaac-del-toro-takes-surprise-solo-win-as-the-sprinters-miss-out/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"One day he will win, and another one maybe it’s myself\" - Might Del Toro and Seixas headline Tour de France battles in the future?",
+        "pubDate": "Sun, 08 Nov 2026 13:12:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/one-day-he-will-win-and-another-one-maybe-its-myself-might-del-toro-and-seixas-headline-tour-de-france-battles-in-the-future",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"Why would you accept a medal that doesn’t belong to you?\" - Sanne Cant herself told Marie Schreiber not to attend podium at cyclocross Europeans",
+        "pubDate": "Sun, 08 Nov 2026 12:25:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/why-would-you-accept-a-medal-that-doesnt-belong-to-you-sanne-cant-herself-told-marie-schreiber-not-to-attend-podium-at-cyclocross-europeans",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Isaac del Toro beats Paul Seixas to win Tour de France-organized Singapore Criterium",
+        "pubDate": "Sun, 08 Nov 2026 11:49:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/isaac-del-toro-beats-paul-seixas-to-win-tour-de-france-organized-singapore-criterium",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"Everyone in cycling saw what happened\" - Johan Bruyneel baffled by UCI's decision to relegate Marie Schreiber at cyclocross European Championships",
+        "pubDate": "Sun, 08 Nov 2026 11:33:00 +0100",
+        "link": "https://cyclinguptodate.com/cyclocross/everyone-in-cycling-saw-what-happened-johan-bruyneel-baffled-by-ucis-decision-to-relegate-marie-schreiber-at-cyclocross-european-championships",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Most friends would rather die than tell me the price they paid for a bike",
+        "pubDate": "Sun, 08 Nov 2026 10:20:00 +0000",
+        "link": "https://www.cyclingweekly.com/news/most-friends-would-rather-die-than-tell-me-the-price-they-paid-for-a-bike",
+        "source": "Cycling Weekly",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"Not a single question has been answered\" - Team Picnic PostNL accusations left unanswered by team boss, says Zonneveld",
+        "pubDate": "Sun, 08 Nov 2026 11:08:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/not-a-single-question-has-been-answered-team-picnic-postnl-accusations-left-unanswered-by-team-boss-says-zonneveld",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "'It’s disrespectful to steal the biggest moment of my career' - Marie Schreiber condemns Euro cyclo-cross relegation",
+        "pubDate": "Sun, 08 Nov 2026 10:01:22 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/its-disrespectful-to-steal-the-biggest-moment-of-my-career-marie-schreiber-condemns-euro-cyclocross-relegation/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Analysing UAE Team Emirates - Which Grand Tours should Isaac del Toro race in 2027?",
+        "pubDate": "Sun, 08 Nov 2026 10:30:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/analysing-uae-team-emirates-which-grand-tours-should-isaac-del-toro-race-in-2027",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"We're seeing the emergence of teams backed by billionaires\" - Yet, Cofidis continue push for World Tour return",
+        "pubDate": "Sun, 08 Nov 2026 09:40:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/were-seeing-the-emergence-of-teams-backed-by-billionaires-yet-cofidis-continue-push-for-world-tour-return",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "The closest challenger to Tadej Pogacar in 2026 - He is Serbian and has won in 10 different countries",
+        "pubDate": "Sun, 08 Nov 2026 09:30:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/the-closest-challenger-to-tadej-pogacar-in-2026-he-is-serbian-and-has-won-in-10-different-countries",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"Any race will suit him in some way\" - However, Paul Seixas advised to choose Tour over Giro in 2027",
+        "pubDate": "Sun, 08 Nov 2026 09:20:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/any-race-will-suit-him-in-some-way-however-paul-seixas-advised-to-choose-tour-over-giro-in-2027",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "“You don’t get the feeling that feedback makes a big difference”: Slovenian sprinter calls for public rider protests to drive improvements in cycling safety",
+        "pubDate": "Sun, 08 Nov 2026 09:00:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/you-dont-get-the-feeling-that-feedback-makes-a-big-difference-slovenian-sprinter-calls-for-public-rider-protests-to-drive-improvements-in-cycling-safety",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
       {
         "title": "Pan-Am Cyclo-cross Championships: USA's Noah Scholnick and Lilliana O'Donnell win junior titles in Washington, DC",
         "pubDate": "Sun, 08 Nov 2026 06:53:24 +0000",
@@ -36,13 +155,6 @@
         "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/this-one-feels-different-lucinda-brand-on-winning-european-cyclo-cross-title-after-rival-was-relegated/",
         "source": "Cyclingnews",
         "sourceUrl": ""
-      },
-      {
-        "title": "Tour de France Singapore Criterium - Escape Collective",
-        "pubDate": "Sat, 07 Nov 2026 22:51:08 GMT",
-        "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE0tZjJTaEZzTmtTTTU5bE9YWjV2aEkyOEpCamNrZUgyRkk2bXBNTkk1dEJEY3NoWEJaOWJyMEFwZkw4RTlPcVJ6ajlfRWhnTWVFenhfbm5rZDN0bkpSYTlCU1FQb0ZPeWI4RU5jT2lpQVllVDQ3c05v?oc=5",
-        "source": "Escape Collective",
-        "sourceUrl": "https://escapecollective.com"
       },
       {
         "title": "Pan-Am Cyclo-cross Championships: Eric Brunner solos to fifth elite men’s title in Washington, DC",
@@ -101,48 +213,6 @@
         "sourceUrl": "https://velo.outsideonline.com"
       },
       {
-        "title": "\"Disrespectful to steal the biggest moment of my career\" - Devastated Marie Schreiber blasts European Championships relegation in emotional interview",
-        "pubDate": "Sat, 07 Nov 2026 17:55:00 +0100",
-        "link": "https://cyclinguptodate.com/cyclocross/disrespectful-to-steal-the-biggest-moment-of-my-career-devastated-marie-schreiber-blasts-european-championships-relegation-in-emotional-interview",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"I sometimes find it a bit pointless\" - Paul Seixas future saga rolls on as Decathlon sensation remains tight-lipped about transfer decision",
-        "pubDate": "Sat, 07 Nov 2026 17:30:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/i-sometimes-find-it-a-bit-pointless-paul-seixas-future-saga-rolls-on-as-decathlon-sensation-remains-tight-lipped-about-transfer-decision",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Dramatic relegation, podium no-show and subdued Lucinda Brand interview - Controversial jury decision as Marie Schreiber's European Championships victory overturned",
-        "pubDate": "Sat, 07 Nov 2026 16:53:00 +0100",
-        "link": "https://cyclinguptodate.com/cyclocross/dramatic-relegation-podium-no-show-and-subdued-lucinda-brand-interview-controversial-jury-decision-as-marie-schreibers-european-championships-victory-overturned",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"Anatomy of a G.O.A.T.\" - 45-minute long film on Tadej Pogacar features praise from Merckx, Contador and Thomas",
-        "pubDate": "Sat, 07 Nov 2026 16:41:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/anatomy-of-a-goat-45-minute-long-film-on-tadej-pogacar-features-praise-from-merckx-contador-and-thomas",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"Beat Pogacar in the Tour again\" - Johan Bruyneel says Jonas Vingegaard has one major goal left",
-        "pubDate": "Sat, 07 Nov 2026 16:40:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/beat-pogacar-in-the-tour-again-johan-bruyneel-says-jonas-vingegaard-has-one-major-goal-left",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Results European Championships 2026 elite women and U23 men - Major drama as Marie Schreiber RELEGATED after dramatic sprint as Lucinda Brand crowned European champion",
-        "pubDate": "Sat, 07 Nov 2026 16:16:00 +0100",
-        "link": "https://cyclinguptodate.com/cyclocross/results-european-championships-2026-elite-women-and-u23-men-major-drama-as-marie-schreiber-relegated-after-dramatic-sprint-as-lucinda-brand-crowned-european-champion",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "European Cyclo-cross Championships: Lucinda Brand wins elite women's title after Marie Schreiber is relegated",
         "pubDate": "Sat, 07 Nov 2026 15:02:10 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/european-cyclo-cross-championships-elite-women-marie-schreiber-surges-to-stunning-victory-to-deny-dutch-on-home-soil/",
@@ -150,21 +220,14 @@
         "sourceUrl": ""
       },
       {
-        "title": "\"It's quite a harrowing sight\" - Tadej Pogacar documentary pinpoints key quality in UAE rider that led to iconic Tour de France breakthrough",
-        "pubDate": "Sat, 07 Nov 2026 15:08:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/its-quite-a-harrowing-sight-tadej-pogacar-documentary-pinpoints-key-quality-in-uae-rider-that-led-to-iconic-tour-de-france-breakthrough",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "European Cyclo-cross Championships: Aubin Sparfel outsprints Belgian pair to seal under-23 men's title for France",
+        "title": "European Cyclo-cross Championships: French domination in the Under 23 category as Aubin Sparfel and Célia Gery seal the titles",
         "pubDate": "Sat, 07 Nov 2026 14:06:59 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/racing/european-cyclo-cross-championships-aubin-sparfel-outsprints-belgian-pair-to-seal-under-23-mens-title-for-france/",
         "source": "Cyclingnews",
         "sourceUrl": ""
       },
       {
-        "title": "European Cyclo-cross Championships: Lentel Huys takes glory for Belgium in junior women's race",
+        "title": "European Cyclo-cross Championships: Lars Peers and Lentel Huys take glory for Belgium in the men's and women's junior races",
         "pubDate": "Sat, 07 Nov 2026 13:58:31 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/european-cyclo-cross-championships-lentel-huys-takes-glory-for-belgium-in-junior-womens-race/",
         "source": "Cyclingnews",
@@ -178,59 +241,10 @@
         "sourceUrl": ""
       },
       {
-        "title": "“Why can’t a Mexican win the Tour de France?” - Isaac del Toro unsure what his 2027 role will be as he discusses Tadej Pogacar",
-        "pubDate": "Sat, 07 Nov 2026 14:30:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/why-cant-a-mexican-win-the-tour-de-france-isaac-del-toro-unsure-what-his-2027-role-will-be-as-he-discusses-tadej-pogacar",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Roglic and a group of breakaway specialists - Creating a Grand Tour team with riders out of contract for 2027",
-        "pubDate": "Sat, 07 Nov 2026 14:00:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/roglic-and-a-group-of-breakaway-specialists-creating-a-grand-tour-team-with-riders-out-of-contract-for-2027",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"Sometimes you have to disappoint people. Some deal with that better than others\" - Picnic PostNL boss reacts to 'culture of fear' accusations",
-        "pubDate": "Sat, 07 Nov 2026 13:10:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/sometimes-you-have-to-disappoint-people-some-deal-with-that-better-than-others-picnic-postnl-boss-reacts-to-culture-of-fear-accusations",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "MTB World Champion, Pogacar's big rival and Tour de France frontrunner - Tom Pidcock's stellar 2026 season",
-        "pubDate": "Sat, 07 Nov 2026 11:49:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/mtb-world-champion-pogacars-big-rival-and-tour-de-france-frontrunner-tom-pidcocks-stellar-2026-season",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Tadej Pogacar's closest rival in terms of victories in 2026 is from Serbia, has won in 10 countries, and might be a leader at the 2027 GIro d'Italia",
-        "pubDate": "Sat, 07 Nov 2026 11:30:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/tadej-pogacars-closest-rival-in-terms-of-victories-in-2026-is-from-serbia-has-won-in-10-countries-and-might-be-a-leader-at-the-2027-giro-ditalia",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"Cameron didn’t do anything wrong\" - Michael Vanthourenhout apologizes to Cameron Mason after Noordzeecross altercation",
-        "pubDate": "Sat, 07 Nov 2026 11:00:00 +0100",
-        "link": "https://cyclinguptodate.com/cyclocross/cameron-didnt-do-anything-wrong-michael-vanthourenhout-apologizes-to-cmaeron-mason-after-noordzeecross-altercation",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "'My earliest cycling memory is crashing my bike and ending up in hospital'; Alex Dowsett on his life on two wheels",
         "pubDate": "Sat, 07 Nov 2026 09:20:00 +0000",
         "link": "https://www.cyclingweekly.com/news/my-earliest-cycling-memory-is-crashing-my-bike-and-ending-up-in-hospital-alex-dowsett-on-his-life-on-two-wheels",
         "source": "Cycling Weekly",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"Seixas is still twenty, that will matter\" - French super talent warned to steer clear from 2027 Giro d'Italia",
-        "pubDate": "Sat, 07 Nov 2026 10:00:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/seixas-is-still-twenty-that-will-matter-french-super-talent-warned-to-steer-clear-from-2027-giro-ditalia",
-        "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
       {
@@ -354,13 +368,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "'I felt quite lost and desperate' – How Ashleigh Moolman Pasio re-wrote the ending of her 17-year career, and how she's re-writing the future for African cyclists",
-        "pubDate": "Fri, 06 Nov 2026 11:03:56 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/i-felt-quite-lost-and-desperate-how-ashleigh-moolman-pasio-re-wrote-the-ending-of-her-17-year-career-and-how-shes-re-writing-the-future-for-african-cyclists/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
         "title": "I raced my first cyclo-cross race at 40, and now I'm a convert",
         "pubDate": "Fri, 06 Nov 2026 11:02:09 +0000",
         "link": "https://www.cyclingweekly.com/news/i-raced-my-first-cyclo-cross-race-at-40-and-now-im-a-convert",
@@ -373,13 +380,6 @@
         "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNaTV3dTdEd0RwT2xMVThiWkpMc21LTzdNS3B3Z19DMC11Qy1HRzZwYUNYcGV6ZjQ0TDlEMTBjbXQ3eFZYazd1SkQxdXNaVTQ4cnI5bVg0Vm0tY2p4YzRqUk9ZUXloTmpWVFF5RnBjeW5WbWRaVnlqeXl2a0Z0bldIVDZSeFRFTjJaVTVaYmpnczNqZ3hicmVJY09tMk9LZlIyejhCZnp6R2hhNURkeUZmd3FTMHZwOGV4QUU4d2FJRWx5ZTJzXzk5T2hR?oc=5",
         "source": "VELO",
         "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
-        "title": "Outshining established players, mid-season promotions and Grand Tour victories – Taking a closer look at 10 stand-out neo-pros of 2026",
-        "pubDate": "Thu, 05 Nov 2026 22:37:15 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/outshining-established-players-mid-season-promotions-and-grand-tour-victories-taking-a-closer-look-at-10-stand-out-neo-pros-of-2026/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
       },
       {
         "title": "What Could Cervélo, Beats, Rapha, and Bose Tell Us About Cannondale’s Future? - Outside Magazine",
@@ -425,6 +425,20 @@
       }
     ],
     "mtb": [
+      {
+        "title": "bulletbass man - Vital MTB",
+        "pubDate": "Sun, 08 Nov 2026 13:28:58 GMT",
+        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE84VG4zbTktR0QyM3B4ZVZ3ZXd1ZjRjVHB1QncxSllzak5renh3dWNnSC1RV3B2dldFc2xZVnVZcnJULW03eFVReWx4RGpBd09td0VpZ2cwMUZiNW5jb2kxSXl6NExWVjBDT1M4?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
+        "title": "SylentK - Vital MTB",
+        "pubDate": "Sun, 08 Nov 2026 00:45:15 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBGaGs1aWpNUnZ4T3dhTVlKM0dPeWs1b2tsQXVOVl8yejEzb292Y2tITzNGc08wc01VX18wbHh2MF9aRHRBY3ZrNlRTUGtES3k1T0VGdDZvV1p5b01OdUxYSA?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
+      },
       {
         "title": "First Ride: Trek's Unreleased 32\" Superfly",
         "pubDate": "Sat, 7 Nov 2026 00:00:00 PST",
@@ -601,13 +615,6 @@
         "sourceUrl": "https://www.uci.org"
       },
       {
-        "title": "Raaw Madonna V3.2 Custom Geo/shock length - Vital MTB",
-        "pubDate": "Wed, 04 Nov 2026 11:02:07 GMT",
-        "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNekJPdExDNHM5b2o2bXppaVZveWNDdWhBZEs1VWJPdVVSZ2djZHJVaDVXNTVjNFNSaU02R1B4a2RPOTMyNzhlYmQ3by1HQ0JVSHVsSlEzV3ZDdW9QY2RQX0Z6bFZ3aTNvVHJGOUxQdFIwN0hidWV2c3JrbXNNZGNrVWhTdXhOaGNzb3BvSzNR?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
-      },
-      {
         "title": "JankyEric - Vital MTB",
         "pubDate": "Wed, 04 Nov 2026 06:37:30 GMT",
         "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE4xVmFDWkZxWVVpM1J6QVNJY3BpMG5QdlhPSGw0LWlVR2piTkpYTExJT1I1aUVWQmRrUDZGLUEtT3pzam9XaHZ4NnNjaXAtZ0dVLXhrU2lab0hpTWhGVURnUmhyOEo?oc=5",
@@ -636,13 +643,6 @@
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "Magura Introduces More Adjustable Ultra Lever for Gustav Elite and Pro Models - Vital MTB",
-        "pubDate": "Tue, 03 Nov 2026 10:00:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQNXE2VmRzWk91WmhwdmFQVUtLOU5JWVFkSnRLQ3MtOFRPaWxYS0tvby14MXlXaGRVVGVjM2xER0YxOThFSXE3QWgtOFhBUWE2MnNtVjhmUEJPV2x4SzdTbGZ2N1N3dTRaYmNFR0U4WmxvMEdXN2RRbE84cEZxV0loOXl1el9aRTUtSzJLNG1rQnl4QkNvSW5EQ3FueEp3U3NHVnM2MzZHMFdOQzVmc05zTmZWdnhqcEx0?oc=5",
-        "source": "Vital MTB",
-        "sourceUrl": "https://www.vitalmtb.com"
-      },
-      {
         "title": "Latest Product Reviews - Vital MTB",
         "pubDate": "Tue, 03 Nov 2026 07:38:15 GMT",
         "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5HYXVJZ0dQWG92YUxxcmJqaXdFbFF0T1E4U2NXUm1pTjZvVV8wV3ZKVW1vZU1vaVcyRjhYcG5ZcFlsREp0LW5yY2gwaUZ2dEh0eFE?oc=5",
@@ -665,6 +665,62 @@
       }
     ],
     "cyclocross": [
+      {
+        "title": "Results Cyclocross European Championships 2026 elite men and U23 women - Thibau Nys delivers in final surge as Celia Gery wins second U23 title",
+        "pubDate": "Sun, 08 Nov 2026 16:05:00 +0100",
+        "link": "https://cyclinguptodate.com/cyclocross/results-european-championships-2026-elite-men-and-u23-women-thibau-nys-delivers-in-final-surge-as-celia-gery-wins-second-u23-title",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Luxembourg file official complaint after controversial Schreiber relegation - Cyclocross European Championships saga set to continue",
+        "pubDate": "Sun, 08 Nov 2026 15:38:00 +0100",
+        "link": "https://cyclinguptodate.com/cyclocross/luxembourg-file-official-complaint-after-controversial-schreiber-relegation-cyclocross-european-championships-saga-set-to-continue",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"Many riders today don’t dare to do that anymore\" - Eli Iserbyt believes most current riders are 'too well-behaved'",
+        "pubDate": "Sun, 08 Nov 2026 13:45:00 +0100",
+        "link": "https://cyclinguptodate.com/cyclocross/many-riders-today-dont-dare-to-do-that-anymore-eli-iserbyt-believes-most-current-riders-are-too-well-behaved",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"Why would you accept a medal that doesn’t belong to you?\" - Sanne Cant herself told Marie Schreiber not to attend podium at cyclocross Europeans",
+        "pubDate": "Sun, 08 Nov 2026 12:25:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/why-would-you-accept-a-medal-that-doesnt-belong-to-you-sanne-cant-herself-told-marie-schreiber-not-to-attend-podium-at-cyclocross-europeans",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"Everyone in cycling saw what happened\" - Johan Bruyneel baffled by UCI's decision to relegate Marie Schreiber at cyclocross European Championships",
+        "pubDate": "Sun, 08 Nov 2026 11:33:00 +0100",
+        "link": "https://cyclinguptodate.com/cyclocross/everyone-in-cycling-saw-what-happened-johan-bruyneel-baffled-by-ucis-decision-to-relegate-marie-schreiber-at-cyclocross-european-championships",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "'It’s disrespectful to steal the biggest moment of my career' - Marie Schreiber condemns Euro cyclo-cross relegation",
+        "pubDate": "Sun, 08 Nov 2026 10:01:22 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/its-disrespectful-to-steal-the-biggest-moment-of-my-career-marie-schreiber-condemns-euro-cyclocross-relegation/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Results CX Ciudad de Avila Internacional 2026 - Women Elite - Cyclocross24.com",
+        "pubDate": "Sun, 08 Nov 2026 07:00:28 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9kbUd5THN4d1Z6Sjhlbl8wUmtfaGxjZUE2VWZFME5TNTFqTkRvOHFzb0dGSENrMFVKQ194dExQZ1Zud0ljQVZ1Qm45UWU?oc=5",
+        "source": "Cyclocross24",
+        "sourceUrl": "https://cyclocross24.com"
+      },
+      {
+        "title": "Results CX Ciudad de Avila Internacional 2026 - Men Junior - Cyclocross24.com",
+        "pubDate": "Sun, 08 Nov 2026 07:00:28 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1oV0xqekxScGZXR09TYjYwM1JCTzNSQlFBbzRYUjJkZklwR1Q2Um16NldKZTlXUUU3ZmlYVExvVkV1bGFuOG5VaHdPV3U?oc=5",
+        "source": "Cyclocross24",
+        "sourceUrl": "https://cyclocross24.com"
+      },
       {
         "title": "Pan-Am Cyclo-cross Championships: USA's Noah Scholnick and Lilliana O'Donnell win junior titles in Washington, DC",
         "pubDate": "Sun, 08 Nov 2026 06:53:24 +0000",
@@ -708,13 +764,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "Robin Veyrac - Cyclocross24.com",
-        "pubDate": "Sat, 07 Nov 2026 19:55:22 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE81bXc3ZGUtSXEtRDg4NWVaT05YcEhNQm5CYko1MjNiQlhEenUtUjE1OE5FZzN2NkJLekJlTG50czMyWC1HMUNjbzNRMVo5Z2JkWm9DMWNBSQ?oc=5",
-        "source": "Cyclocross24",
-        "sourceUrl": "https://cyclocross24.com"
-      },
-      {
         "title": "\"Disrespectful to steal the biggest moment of my career\" - Devastated Marie Schreiber blasts European Championships relegation in emotional interview",
         "pubDate": "Sat, 07 Nov 2026 17:55:00 +0100",
         "link": "https://cyclinguptodate.com/cyclocross/disrespectful-to-steal-the-biggest-moment-of-my-career-devastated-marie-schreiber-blasts-european-championships-relegation-in-emotional-interview",
@@ -743,21 +792,14 @@
         "sourceUrl": ""
       },
       {
-        "title": "Results Irish National Championships Cyclocross Co Kildare 2027 - Men Junior - Cyclocross24.com",
-        "pubDate": "Sat, 07 Nov 2026 14:45:39 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1DbGNFWG9hTE1OVkViZjU1NmVGNFJ5U3VieE0ySjZ5ZXNfSVlVdzhlRS1SOWlod0xFVDVKN1JpYVRKOFVmczZRdkZwUGw?oc=5",
-        "source": "Cyclocross24",
-        "sourceUrl": "https://cyclocross24.com"
-      },
-      {
-        "title": "European Cyclo-cross Championships: Aubin Sparfel outsprints Belgian pair to seal under-23 men's title for France",
+        "title": "European Cyclo-cross Championships: French domination in the Under 23 category as Aubin Sparfel and Célia Gery seal the titles",
         "pubDate": "Sat, 07 Nov 2026 14:06:59 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/racing/european-cyclo-cross-championships-aubin-sparfel-outsprints-belgian-pair-to-seal-under-23-mens-title-for-france/",
         "source": "Cyclingnews",
         "sourceUrl": ""
       },
       {
-        "title": "European Cyclo-cross Championships: Lentel Huys takes glory for Belgium in junior women's race",
+        "title": "European Cyclo-cross Championships: Lars Peers and Lentel Huys take glory for Belgium in the men's and women's junior races",
         "pubDate": "Sat, 07 Nov 2026 13:58:31 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/european-cyclo-cross-championships-lentel-huys-takes-glory-for-belgium-in-junior-womens-race/",
         "source": "Cyclingnews",
@@ -776,6 +818,20 @@
         "link": "https://cyclinguptodate.com/cyclocross/cameron-didnt-do-anything-wrong-michael-vanthourenhout-apologizes-to-cmaeron-mason-after-noordzeecross-altercation",
         "source": "CyclingUpToDate",
         "sourceUrl": ""
+      },
+      {
+        "title": "Aretx Tellaetxe Bertol - Cyclocross24.com",
+        "pubDate": "Sat, 07 Nov 2026 09:50:33 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1jamNraVhBWXBmMHFTdGRNcHpFalh4Yk92YkgyMUJtY0ppQmNRaldITDBMQy14UHVWaEZ4WTJsQWhUNlVPdnpjc2tPRFpYYWVCdDhOdVNKWGZKRVJTZjRfRkZwWno?oc=5",
+        "source": "Cyclocross24",
+        "sourceUrl": "https://cyclocross24.com"
+      },
+      {
+        "title": "Results Irish National Championships Cyclocross Co Kildare 2027 - Women Elite - Cyclocross24.com",
+        "pubDate": "Sat, 07 Nov 2026 09:46:33 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5tRzJtNmFUbkhTbVhnRHJnM3l0U21OLUlDNnR2UmRXM1NtZjJtVG9TZnI0OTNnOGxWYWo2b0I1dlRQNk1hT2NvZFoyTlQ?oc=5",
+        "source": "Cyclocross24",
+        "sourceUrl": "https://cyclocross24.com"
       },
       {
         "title": "Results Coupe de France Cyclo-Cross #5 - Saint-Prouant 2026 - Men U23 - Cyclocross24.com",
@@ -827,13 +883,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "Uku Järv - Cyclocross24.com",
-        "pubDate": "Mon, 02 Nov 2026 22:36:29 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9oRmZ5UmVSNEhGalFDU1V5cTJPZWdXak4zSHdnU1BfOVEyMHF4ajk1T2I1WVlGcDVLSFpwSkM1ZXNaSWZtNTYydkZmVHVTV1F4Q1E?oc=5",
-        "source": "Cyclocross24",
-        "sourceUrl": "https://cyclocross24.com"
-      },
-      {
         "title": "Northampton International Cyclocross Day Two 2026 Results and Report – Northampton – Elite Women, Elite Men - Cyclocross Magazine",
         "pubDate": "Mon, 02 Nov 2026 04:23:04 GMT",
         "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOajd2Ym1yZ0tORURWZTE0YWFFLXI1aGFtXzVkMnFMclZ1Ml9rWktSVEkzVXo5RUU0cXdnOFJvWnJzeG4wbGktTU5BaXRLckdYYmxKTGliQmV0b21mb0J3SWpzTF9fc1BieEpBOHg3SExtSng4YnhRRDlyMzlPUU9GRG1HSmhpVzRBNEVTRGRvR1JYeXphdHloT2NBemQ?oc=5",
@@ -846,20 +895,6 @@
         "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPR3RyQ0pRNzByc2Q5b2hTV0lvX1lTUTA0cjEtMkJqSmx2NTZEQWxzT1pIaE1sUVE3SVctMjZldEpkd19CWEJGV29LWm44dlBHWmgyNi1ZWkpNVFpZZUplOEk0ZzNVQmtKaXZqdDlVTXhWanZQRjVIYmdRYW1sSkF2NXY0aFN0ZmVBNWJxdU9sdzlybnhwdXc?oc=5",
         "source": "Cyclocross Magazine",
         "sourceUrl": "https://www.cxmagazine.com"
-      },
-      {
-        "title": "Results Cycle-Smart Northampton Cyclocross Day 2 2026 - Men Junior - Cyclocross24.com",
-        "pubDate": "Sun, 01 Nov 2026 14:29:27 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9oTHc2RFpSdWtPcmVjTEpkSk5mQmpTSGRSR1dsZmtfWDFvTFVpS2VCSFgtTnRrY1kxUXpzMnhOVmM0bWdWTG1ldmdxQlo?oc=5",
-        "source": "Cyclocross24",
-        "sourceUrl": "https://cyclocross24.com"
-      },
-      {
-        "title": "Ewan McFarlane - Cyclocross24.com",
-        "pubDate": "Sun, 01 Nov 2026 08:11:38 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1CVmNkbUpaa01saFhrdGE0U2ZIZk05VXBfS3AwY1dkTEs1RHN1WDdJZ1dhVDZHZGp3d3M4dldkenJ1a0xxam9weHM0Y1hGT1FkN1luRDhYcXlmQQ?oc=5",
-        "source": "Cyclocross24",
-        "sourceUrl": "https://cyclocross24.com"
       }
     ],
     "gravel": [
@@ -906,18 +941,18 @@
         "sourceUrl": ""
       },
       {
+        "title": "The best gravel bike tyres in 2026, and our in-depth buyer's guide - BikeRadar",
+        "pubDate": "Thu, 05 Nov 2026 14:00:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5oWTNjd3BzZnV4NlB6NVA4dHQ2Z1pRbTlPNTJnbGhCVFJMdmtHcVVTZ2NXcm5qNi10T0trUTdGQlJWQ0pyZFUwV3pVSWY0Ui1wS01FRTNPcFd3VlEwdWpWcGlZTTZaUmZKMGJ3LVVXR3Z0Zw?oc=5",
+        "source": "BikeRadar",
+        "sourceUrl": "https://www.bikeradar.com"
+      },
+      {
         "title": "'Not exactly how I had planned' – Geerike Schreurs finally home in the Netherlands after horror crash at Gravel World Championships",
         "pubDate": "Thu, 05 Nov 2026 11:38:04 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/not-exactly-how-i-had-planned-geerike-schreurs-finally-home-in-the-netherlands-after-horror-crash-at-gravel-world-championships/",
         "source": "Cyclingnews",
         "sourceUrl": ""
-      },
-      {
-        "title": "The best gravel bike tyres in 2026, and our in-depth buyer's guide - BikeRadar",
-        "pubDate": "Thu, 05 Nov 2026 08:00:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5oWTNjd3BzZnV4NlB6NVA4dHQ2Z1pRbTlPNTJnbGhCVFJMdmtHcVVTZ2NXcm5qNi10T0trUTdGQlJWQ0pyZFUwV3pVSWY0Ui1wS01FRTNPcFd3VlEwdWpWcGlZTTZaUmZKMGJ3LVVXR3Z0Zw?oc=5",
-        "source": "BikeRadar",
-        "sourceUrl": "https://www.bikeradar.com"
       },
       {
         "title": "Could Spain's hardest climb be getting even tougher? Vuelta organisers receive proposal to add gravel sector to Alto de l'Angliru",
