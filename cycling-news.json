@@ -1,7 +1,218 @@
 {
-  "updatedAt": "2026-11-26T08:24:04.449Z",
+  "updatedAt": "2026-11-26T19:03:16.480Z",
   "disciplines": {
     "road": [
+      {
+        "title": "“The Giro was tough, but I think I handled it well” - Giulio Ciccone reflects on his demanding 2026 season",
+        "pubDate": "Thu, 26 Nov 2026 20:00:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/the-giro-was-tough-but-i-think-i-handled-it-well-giulio-ciccone-reflects-on-his-demanding-2026-season",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Winning isn’t everything: Inside cycling’s high-stakes race for UCI points",
+        "pubDate": "Thu, 26 Nov 2026 18:12:00 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/racing/winning-isnt-everything-inside-cyclings-high-stakes-race-for-uci-points/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Eddy Merckx believes Tadej Pogacar faces weaker competition than his era – Names surprising world number two",
+        "pubDate": "Thu, 26 Nov 2026 18:40:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/eddy-merckx-believes-tadej-pogacar-faces-weaker-competition-than-his-era-names-surprising-world-number-two",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Cycling's 'crazy' kit and equipment rules could finally disappear as UCI outlines timeline for overhaul",
+        "pubDate": "Thu, 26 Nov 2026 17:48:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/uci-now-set-planned-date-for-an-end-to-cyclings-crazy-kit-and-equipment-rules-for-riders-joining-new-teams",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Francesco Moser and the extraordinary story of 273 victories, bitter rivalries and blood transfusion controversy",
+        "pubDate": "Thu, 26 Nov 2026 17:47:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/francesco-moser-and-the-extraordinary-story-of-273-victories-bitter-rivalries-and-blood-transfusion-controversy",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "'We're challenging the economics of the entire apparel industry' – British cycling kit brand launches second crowd investment round",
+        "pubDate": "Thu, 26 Nov 2026 16:22:35 +0000",
+        "link": "https://www.cyclingweekly.com/news/british-cycling-kit-brand-launches-second-crowd-investment-round",
+        "source": "Cycling Weekly",
+        "sourceUrl": ""
+      },
+      {
+        "title": "'When you see an opportunity, you have to act quickly' – Thibau Nys and Lucinda Brand's cyclo-cross team find new sponsorship from 2027 onwards",
+        "pubDate": "Thu, 26 Nov 2026 16:01:01 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/when-you-see-an-opportunity-you-have-to-act-quickly-thibau-nys-and-lucinda-brands-cyclo-cross-team-find-new-sponsorship-from-2027-onwards/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"These boys have a much higher ceiling than I have\" – Rory Townsend accepts new role at Unibet Rose Rockets",
+        "pubDate": "Thu, 26 Nov 2026 17:00:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/these-boys-have-a-much-higher-ceiling-than-i-have-rory-townsend-accepts-new-role-at-unibet-rose-rockets",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"Pogacar has gotten the message\" - Has Paul Seixas caught five-time Tour de France winner's eye after 2026 breakthrough?",
+        "pubDate": "Thu, 26 Nov 2026 16:15:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/pogacar-has-gotten-the-message-has-paul-seixas-caught-five-time-tour-de-france-winners-eye-after-2026-breakthrough",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "'We're fighting tooth and nail' – cycling taxi service facing closure over government clampdown",
+        "pubDate": "Thu, 26 Nov 2026 14:50:30 +0000",
+        "link": "https://www.cyclingweekly.com/news/were-fighting-tooth-and-nail-cycling-taxi-service-facing-closure-over-government-clampdown",
+        "source": "Cycling Weekly",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"If you believe you believe\" - Michael Rasmussen responds to Tadej Pogacar's comments about doping in cycling",
+        "pubDate": "Thu, 26 Nov 2026 15:30:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/if-you-believe-you-believe-michael-rasmussen-responds-to-tadej-pogacars-comments-about-doping-in-cycling",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "London sets record cycling figures – but there's a long way to go before more women feel safe riding a bike",
+        "pubDate": "Thu, 26 Nov 2026 14:12:19 +0000",
+        "link": "https://www.cyclingweekly.com/news/london-sets-record-cycling-figures-but-theres-a-long-way-to-go-before-more-women-feel-safe-riding-a-bike",
+        "source": "Cycling Weekly",
+        "sourceUrl": ""
+      },
+      {
+        "title": "'The only way for the race to grow' – Women’s Festival Elsy Jacobs race becomes part of themen'sTour of Luxembourg organisation",
+        "pubDate": "Thu, 26 Nov 2026 14:09:03 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/the-only-way-for-the-race-to-grow-womens-festival-elsy-jacobs-race-becomes-part-of-the-mens-tour-of-luxembourg-organisation/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "End of an era at Visma | Lease a Bike - Vingegaard and Van Aert's team set for new name in 2027",
+        "pubDate": "Thu, 26 Nov 2026 14:57:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/visma-lease-a-bike-no-more-company-steps-down-from-title-sponsorship-as-vingegaard-and-van-aert-to-ride-under-new-name-in-2027",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Six new deals and three key riders locked down - Bahrain Victorious make their intentions clear for 2027",
+        "pubDate": "Thu, 26 Nov 2026 14:34:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/mohoric-tiberi-and-eulalio-tied-down-to-long-term-contracts-bahrain-victorious-seal-new-contracts-for-six-riders",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Visma steps down as title sponsor of Visma-Lease a Bike team",
+        "pubDate": "Thu, 26 Nov 2026 13:24:13 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/visma-steps-down-as-title-sponsor-of-visma-lease-a-bike-team/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"They ran out of time\" - Delayed negotiations cost Netcompany INEOS one of its American talents",
+        "pubDate": "Thu, 26 Nov 2026 13:48:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/they-ran-out-of-time-delayed-negotiations-cost-netcompany-ineos-one-of-its-american-talents",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"Something inside me faded\" - INEOS development rider and former Seixas teammate leaves cycling at age 19",
+        "pubDate": "Thu, 26 Nov 2026 12:43:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/something-inside-me-faded-ineos-development-rider-and-former-seixas-teammate-leaves-cycling-at-age-19",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "The most dramatic moments of the 2026 cycling season – Shock retirements, nail-biting sprints and tense transfers",
+        "pubDate": "Thu, 26 Nov 2026 11:29:50 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/racing/the-most-dramatic-moments-of-the-2026-cycling-season-shock-retirements-nail-biting-sprints-and-tense-transfers/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "'Ridiculous and stupid' – Mads Pedersen hits out at UCI contract rules which sees riders wearing old teams' kit to new team training camps",
+        "pubDate": "Thu, 26 Nov 2026 11:23:17 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/ridiculous-and-stupid-mads-pedersen-hits-out-at-uci-contract-rules-which-sees-riders-wearing-old-teams-kit-to-new-team-training-camps/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Nike joins Team Visma | Lease a Bike in 2027 onwards - Tour de France collaboration sparked partnership expansion",
+        "pubDate": "Thu, 26 Nov 2026 12:19:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/nike-joins-team-visma-lease-a-bike-in-2027-onwards-tour-de-france-collaboration-sparked-partnership-expansion",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Primož Roglič tempted by each Grand Tour in 2027, but a decision is several weeks away",
+        "pubDate": "Thu, 26 Nov 2026 11:15:24 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/primoz-roglic-tempted-by-each-grand-tour-in-2027-but-a-decision-is-several-weeks-away/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "New to Escape Collective? - Escape Collective",
+        "pubDate": "Thu, 26 Nov 2026 11:10:10 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE1UZ2VaWFozbFo4ckFYQUNRY05DTDNWWXA3ajQtdU91SlAycnVEeVhoRE5zUzdDQU9EMlllbE1wNGFsM00?oc=5",
+        "source": "Escape Collective",
+        "sourceUrl": "https://escapecollective.com"
+      },
+      {
+        "title": "The UCI has changed one key rule - Because of it, an Italian ProTeam has signed a 37-year old Japanese track specialist",
+        "pubDate": "Thu, 26 Nov 2026 12:06:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/the-uci-has-changed-one-key-rule-because-of-it-an-italian-proteam-has-signed-a-37-year-old-japanese-track-specialist",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "'The simple advice rings as true today as it ever did' – What can we learn from a cycling manual from the 1950s?",
+        "pubDate": "Thu, 26 Nov 2026 10:57:22 +0000",
+        "link": "https://www.cyclingweekly.com/news/what-can-we-learn-from-a-cycling-manual-from-the-1950s",
+        "source": "Cycling Weekly",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"I literally couldn't walk\" - Thalita de Jong finished the Tour de France Femmes in 13th, but contracted rhabdomyolysis",
+        "pubDate": "Thu, 26 Nov 2026 11:37:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/i-literally-couldnt-walk-thalita-de-jong-finished-the-tour-de-france-femmes-in-13th-but-contracted-rhabdomyolysis",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "After Pidcock, Almeida, Onley and Mas... - Paul Seixas set to move into high-mountain haven of Andorra",
+        "pubDate": "Thu, 26 Nov 2026 11:09:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/after-pidcock-almeida-onley-and-mas-paul-seixas-set-to-move-into-high-mountain-haven-of-andorra",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "\"I wish those seven Tour victories had been entirely legitimate\" - Isaac del Toro criticizes Lance Armstrong's impact in cycling",
+        "pubDate": "Thu, 26 Nov 2026 10:40:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/i-wish-those-seven-tour-victories-had-been-entirely-legitimate-isaac-del-toro-criticizes-lance-armstrongs-impact-in-cycling",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Velo Poll: Ranking the Best (and Worst) of the 2025-26 Transfer Class - Outside Magazine",
+        "pubDate": "Thu, 26 Nov 2026 09:38:16 GMT",
+        "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPZ01sZmRlMGo2c1gwS0QtWElJUzlVbFo0SzFaSXdROENFTHEwVm1KU3Q0VHhFUGY0TjhmVzE3Y2tNbWFTQ29UZ2VHU2VWQk9JeVplT1BUNU5wVjF3b1lzVUpPRnRsMnFvaXZuS1UwX2FRWjBoOFJqbmJtM1AxN2wtaERTMkZHbUprVlBjVktVMzB1UnJwdnJ1eTAtLVpyQWNoSUVVUTF3?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com",
+        "type": "transfers"
+      },
+      {
+        "title": "'It's Not Going to Be Just Sole Leadership': Quinn Simmons Campaigns for Tour of Flanders - Outside Magazine",
+        "pubDate": "Thu, 26 Nov 2026 09:13:19 GMT",
+        "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNZ1pxLU9XMDRENGtobmMxcVFIbVc3bEhUTDVjQU5mTU5OOWpNQmkyOTRVOTUtUUpmNml4Tlg0cE5JamZUOHEzRXVTYjBMc3dVM2hFSlFmVGlSMDhqU1RBeHZfUFg0THJfVExFNUViZWlEaVlfZXFpbnFMLU9kb2JmTEJhUQ?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
+      },
       {
         "title": "Cycling's richest teams could face a major blow as Movistar boss calls for introduction of budget caps",
         "pubDate": "Thu, 26 Nov 2026 09:00:00 +0100",
@@ -10,23 +221,23 @@
         "sourceUrl": ""
       },
       {
-        "title": "\"He probably still wouldn't go to the Giro d'Italia\" - Is there any scenario in which Pogacar does Italian Grand Tour in 2027?",
-        "pubDate": "Thu, 26 Nov 2026 06:00:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/he-probably-still-wouldnt-go-to-the-giro-ditalia-is-there-any-scenario-in-which-pogacar-does-italian-grand-tour-in-2027",
+        "title": "Netcompany INEOS secure their future - Egan Bernal pushes away potential retirement and signs a new contract",
+        "pubDate": "Thu, 26 Nov 2026 08:40:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/netcompany-ineos-secure-their-future-egan-bernal-pushes-away-potential-retirement-and-signs-a-new-contract",
         "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
       {
-        "title": "New to Escape Collective? - Escape Collective",
-        "pubDate": "Thu, 26 Nov 2026 02:26:15 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE1UZ2VaWFozbFo4ckFYQUNRY05DTDNWWXA3ajQtdU91SlAycnVEeVhoRE5zUzdDQU9EMlllbE1wNGFsM00?oc=5",
-        "source": "Escape Collective",
-        "sourceUrl": "https://escapecollective.com"
+        "title": "1,651-watts at 18 years of age - Stan Vernaillen outsprints top classics rider and makes a name for himself",
+        "pubDate": "Thu, 26 Nov 2026 08:30:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/1651-watts-at-18-years-of-age-stan-vernaillen-outsprints-top-classics-rider-and-makes-a-name-for-himself",
+        "source": "CyclingUpToDate",
+        "sourceUrl": ""
       },
       {
-        "title": "Belgian cyclocross faces another fierce selection battle as Tim Merlier targets home World Championships",
-        "pubDate": "Thu, 26 Nov 2026 01:00:00 +0100",
-        "link": "https://cyclinguptodate.com/cyclocross/belgian-cyclocross-faces-another-fierce-selection-battle-as-tim-merlier-targets-home-world-championships",
+        "title": "He rode in pink at the Giro d'Italia, now he aims for Tour de France - Afonso Eulálio aims big in 2027",
+        "pubDate": "Thu, 26 Nov 2026 08:20:00 +0100",
+        "link": "https://cyclinguptodate.com/cycling/he-rode-in-pink-at-the-giro-ditalia-now-he-aims-for-tour-de-france-afonso-eulalio-aims-big-in-2027",
         "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
@@ -38,53 +249,11 @@
         "sourceUrl": "https://escapecollective.com"
       },
       {
-        "title": "\"He always looked like he was suffering immensely\": Toms Skujins explains what made Mollema so difficult to beat",
-        "pubDate": "Wed, 25 Nov 2026 23:26:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/he-always-looked-like-he-was-suffering-immensely-toms-skujins-explains-what-made-mollema-so-difficult-to-beat",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "Big money, big plans, zero votes: The rise and fall of One Cycling - Escape Collective",
         "pubDate": "Wed, 25 Nov 2026 21:25:09 GMT",
         "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQWU9pV2xwQWktaUZpaGp6QUx2dm1PWlpPNTQ2NXpQdHB2OGo0TlhPbVZOcTNHMXdfVERuWnlmMmNMa3JsYUdNNlAzMGtGUnctRzlfcjdIWXNXSHVnOEpwQmVwNGFKbEFnbWZKbHFWTXlPZUZsTmdNSVFoOURwSlRTdHBmekZ6ZjV2ZFoza0tHREJLd1dNMmJzeA?oc=5",
         "source": "Escape Collective",
         "sourceUrl": "https://escapecollective.com"
-      },
-      {
-        "title": "He's been denied a World title by Tom Pidcock - Now, he looks set to join UAE Team Emirates and Tadej Pogacar",
-        "pubDate": "Wed, 25 Nov 2026 21:07:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/hes-been-snubbed-off-a-world-title-by-tom-pidcock-now-he-looks-set-to-join-uae-team-emirates-and-tadej-pogacar",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"My mistake was forgetting that Van Aert was out in front\" - Isaac del Toro admits error cost him 2025 Giro d'Italia",
-        "pubDate": "Wed, 25 Nov 2026 20:33:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/my-mistake-was-forgetting-that-van-aert-was-out-in-front-isaac-del-toro-admits-error-cost-him-2025-giro-ditalia",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"It can be a little harder to make a place for yourself\" - Why Giro d'Italia stage winner Igor Arrieta is leaving UAE",
-        "pubDate": "Wed, 25 Nov 2026 20:00:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/it-can-be-a-little-harder-to-make-a-place-for-yourself-why-giro-ditalia-stage-winner-igor-arrieta-is-leaving-uae",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"I needed a change” - Mathieu van der Poel will be joined by Spain's best at the cobbled classics in 2027",
-        "pubDate": "Wed, 25 Nov 2026 19:50:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/i-needed-a-change-mathieu-van-der-poel-will-be-joined-by-spains-best-at-the-cobbled-classics-in-2027",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "After crashes, concussions and heartbreak: Santiago Buitrago seeks redemption alongside Richard Carapaz and Primoz Roglic at NSN",
-        "pubDate": "Wed, 25 Nov 2026 18:36:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/after-crashes-concussions-and-heartbreak-santiago-buitrago-seeks-redemption-alongside-richard-carapaz-and-primoz-roglic-at-nsn",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
       },
       {
         "title": "'The more I was thinking, the more I didn't know what to do' – Primož Roglič on looking retirement in the eye, his 'really fast' move to NSN, and why he could even race beyond 2027",
@@ -101,24 +270,10 @@
         "sourceUrl": "https://velo.outsideonline.com"
       },
       {
-        "title": "\"I would have liked to have a stronger team\" - Richard Carapaz recalls La Vuelta limitations and confirms Giro d'Italia return",
-        "pubDate": "Wed, 25 Nov 2026 16:56:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/i-would-have-liked-to-have-a-stronger-team-richard-carapaz-recalls-la-vuelta-limitations-and-confirms-giro-ditalia-return",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "The UCI's registration rules strike again, delaying Shirin van Anrooij's debut with Canyon-SRAM",
         "pubDate": "Wed, 25 Nov 2026 15:38:41 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/the-ucis-registration-rules-strike-again-delaying-shirin-van-anrooijs-debut-with-canyon-sram/",
         "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"I still have unfinished businesses\" – Primoz Roglic opens up on retirement doubts and his decision to join NSN",
-        "pubDate": "Wed, 25 Nov 2026 16:16:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/i-still-have-unfinished-businesses-primoz-roglic-opens-up-on-retirement-doubts-and-his-decision-to-join-nsn",
-        "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
       {
@@ -144,24 +299,10 @@
         "type": "transfers"
       },
       {
-        "title": "Riders training with new teams in old jerseys and hidden equipment - Mads Pedersen calls out cycling's contract absurdity",
-        "pubDate": "Wed, 25 Nov 2026 14:30:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/its-crazy-with-these-contracts-mads-pedersen-takes-aim-at-uci-regulation-about-riders-using-equipment-of-new-team-in-pre-season",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "Nike logo to appear on Visma-Lease a Bike kit, but the sportswear giant won't actually be making it",
         "pubDate": "Wed, 25 Nov 2026 13:13:54 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/nike-logo-to-appear-on-visma-lease-a-bike-kit-but-the-sportswear-giant-wont-actually-be-making-it/",
         "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "The Russian who devoured legendary Miguel Induráin and held off Marco Pantani at the Giro d’Italia - “I beat a monster”",
-        "pubDate": "Wed, 25 Nov 2026 14:00:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/the-russian-who-devoured-legendary-miguel-indurain-and-held-off-marco-pantani-at-the-giro-ditalia-i-beat-a-monster",
-        "source": "CyclingUpToDate",
         "sourceUrl": ""
       },
       {
@@ -179,20 +320,6 @@
         "sourceUrl": "https://velo.outsideonline.com"
       },
       {
-        "title": "\"I hope to win a Monument\" – Maxim Van Gils reveals ambitions beyond supporting Remco Evenepoel",
-        "pubDate": "Wed, 25 Nov 2026 13:15:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/its-my-dream-remco-evenepoels-right-hand-man-maxim-van-gils-admits-monument-desire",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "A new Milano-Sanremo outsider? - Giro history-maker Thomas Silva eyes cycling's most unpredictable Monument",
-        "pubDate": "Wed, 25 Nov 2026 12:30:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/an-under-the-radar-milano-sanremo-contender-giro-ditalia-stage-winner-and-pink-jersey-declares-iconic-monument-ambition",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "Tudor Pro Cycling bring Charly Wegelius on board as directeur sportif after EF departure",
         "pubDate": "Wed, 25 Nov 2026 11:15:21 +0000",
         "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/tudor-pro-cycling-bring-charly-wegelius-on-board-as-directeur-sportif-after-ef-departure/",
@@ -200,39 +327,11 @@
         "sourceUrl": ""
       },
       {
-        "title": "British sports director who helped Oscar Onley to fourth at the Tour de France joins Paul Seixas at Decathlon for 2027",
-        "pubDate": "Wed, 25 Nov 2026 11:51:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/british-sports-director-who-helped-oscar-onley-to-fourth-at-the-tour-de-france-joins-paul-seixas-at-decathlon-for-2027",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Tim Merlier wants to keep the door open – but Paul Magnier has other ideas about the 2027 Tour de France",
-        "pubDate": "Wed, 25 Nov 2026 11:45:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/we-are-not-going-together-paul-magnier-casts-doubt-on-tour-de-france-partnership-with-tim-merlier",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Nine days in pink, then goodbye to the Giro? Afonso Eulálio has ambitious plans for 2027 after breakthrough season",
-        "pubDate": "Wed, 25 Nov 2026 11:00:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/nine-days-in-pink-then-goodbye-to-the-giro-afonso-eulalio-has-ambitious-plans-for-2027-after-breakthrough-season",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"Without that protest, he would still be second\" – Visma sports director reveals role in Van Aert's victory",
-        "pubDate": "Wed, 25 Nov 2026 10:16:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/without-that-protest-he-would-still-be-second-visma-sports-director-reveals-role-in-van-aerts-victory",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
-        "title": "\"The point is not that it’s Tadej. The point is that I would want to be number one regardless\" - Isaac del Toro wants what Pogacar has",
-        "pubDate": "Wed, 25 Nov 2026 09:30:00 +0100",
-        "link": "https://cyclinguptodate.com/cycling/the-point-is-not-that-its-tadej-the-point-is-that-i-would-want-to-be-number-one-regardless-isaac-del-toro-admits-he-wants-what-pogacar-has",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
+        "title": "These Are the Biggest Changes Coming to Pro Cycling in 2027 - Outside Magazine",
+        "pubDate": "Wed, 25 Nov 2026 07:38:14 GMT",
+        "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNZE5UMXhpcFNsOFg0cHBrOFVfN1JwdzNvNGw5dUFZZndsd2hQdzNiQkt4WjZ2WVFPZlM3dXlFRkpGMll5b2ZEQV9NU0hETFZCTVYtVV95Rm9EakJTeW5xNm1sOWJqQmYwenRMQ0lycW1rU05zWEhFY2wtdkN2TzlpRGRIamlFdHJKS2d1SDIwS3ZBNFph?oc=5",
+        "source": "VELO",
+        "sourceUrl": "https://velo.outsideonline.com"
       },
       {
         "title": "No two off-seasons are the same - Escape Collective",
@@ -325,119 +424,69 @@
         "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOenBRdUlVWnRnTU5McVJnZ0VMMWNocGhoc1o0ajFYNjFWb2lYZm1sUHNNa1hjU1J3d0N1U1ZPb1VDWTRoM1ZoZklwem53UG05WGNZNENiR1phUVhiYTR0NUUxRmhPemNuS3RBcEEtYjNpR3ExQWc4RW5TVlZXeUNrd1hsZGE2TEtoM2YwM3B0R2VlYm9LRDlUODlhM3VvbnZQSmFGbXVyUURkdEVFa1IwRHI0SkZHUHpoMEM1b1lyOGZXTTQ?oc=5",
         "source": "VELO",
         "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
-        "title": "'For the vast majority of the peloton, doping simply doesn’t exist' - Doping almost eradicated from pro peloton says Tadej Pogačar",
-        "pubDate": "Tue, 24 Nov 2026 12:19:10 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/doping/for-the-vast-majority-of-the-peloton-doping-simply-doesnt-exist-doping-almost-eradicated-from-pro-peloton-says-tadej-pogacar/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Chinese Carbon Isn't Leaving Pro Cycling Any Time Soon - Outside Magazine",
-        "pubDate": "Tue, 24 Nov 2026 11:21:45 GMT",
-        "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPZVNWbUJibnc5ekxYYjQ1RTI2aUtYS2N0QktfLTI5andKYkl4QUxPcXN5ZVVQSWlBSTJwZzYtbHFGbGZyWld5S2Mzbk9YM0MxdEJyMTIweDZRQ2VrYUFGRTltVXVmbFVxemxoM1YwTlIwNVM2NXMzV3lUMm8zdzZRTA?oc=5",
-        "source": "VELO",
-        "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
-        "title": "A Few of My Favourite Things 2026: Iain Treloar - Escape Collective",
-        "pubDate": "Mon, 23 Nov 2026 22:53:14 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPV2ZyTHh3b1RXSEx5WTNDaEY5dDJrdFdGMFd2YzYxXzhqRThrOUNYeEFiVFdocTlyQXI5eGNxSHdPZFdVYlVnVXFDYTQ3a0JRRDVndzA5aFE4SHVQeklJem8wcm8xa3JpZWZPWVFtempaaGtwejFVNHl6blZqUkY3OGtn?oc=5",
-        "source": "Escape Collective",
-        "sourceUrl": "https://escapecollective.com"
-      },
-      {
-        "title": "From Roglič to Niewiadoma-Phinney: How key transfers could shake up the power balance in the pro peloton in 2027",
-        "pubDate": "Mon, 23 Nov 2026 20:59:18 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/transfers/from-roglic-to-niewiadoma-phinney-how-key-transfers-could-shake-up-the-power-balance-in-the-pro-peloton-in-2027/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "From Roglič to Niewiadoma-Phinney: How key transfers could shake up the power balance in the pro peloton in 2027 - Cyclingnews",
-        "pubDate": "Mon, 23 Nov 2026 20:59:18 GMT",
-        "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQMWhHOHRpNEZmeXl5ZUN6LWVSU0RHem1hbTFUU0FBYmgyd1dVRGt1M3F6RW1RWkxsNGpCTWVDS2MwUzZJQlZiNmdHNGozZ09qUmJWUHpvSlluQ3lZX3dzWENlU2Z5cm1IR3J2dzRjZHNwYXc5N3k4YmVlclduaUZaZzYxNXZMYnd6S1BHY1ZqbFRZWjBBbjU5SmVUUHNJanFOZjdMY082dkNxUWFXWXFFeDVtOXh2QUNGeTRJLW9jQlVuT0pXR094QUdQakxWU3VDLW1iT3E2SlJnRDVUUnFOeGdFTzB5ZGVDV0MwYy1JQ1kxUDhh?oc=5",
-        "source": "Cyclingnews",
-        "sourceUrl": "https://www.cyclingnews.com",
-        "type": "transfers"
-      },
-      {
-        "title": "'My body can respond to a greater load than we have given it' – Mads Pedersen steps up the work in search of Monument win",
-        "pubDate": "Mon, 23 Nov 2026 16:07:44 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/my-body-can-respond-to-a-greater-load-than-we-have-given-it-mads-pedersen-steps-up-the-work-in-search-of-monument-win/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Beloved bike brand Raleigh set to be rescued by former pro cyclist",
-        "pubDate": "Mon, 23 Nov 2026 16:05:35 +0000",
-        "link": "https://www.cyclingweekly.com/news/beloved-bike-brand-raleigh-set-to-be-rescued-by-former-pro-cyclist",
-        "source": "Cycling Weekly",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Wild card fortunes for Cameron Jones, Mārtinš Blūms in Life Time Grand Prix path for adjusted 'Challenger' Sea Otter call-ups for 2027 series",
-        "pubDate": "Mon, 23 Nov 2026 14:11:26 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/racing/wild-card-fortunes-for-cameron-smith-martins-blums-in-life-time-grand-prix-path-for-adjusted-challenger-sea-otter-call-ups-for-2027-series/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "The Fight for the Yellow Jersey Starts Behind Closed Doors in Spanish Hotels - Outside Magazine",
-        "pubDate": "Mon, 23 Nov 2026 14:02:39 GMT",
-        "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQQmJWYnhKUURWUGhGMmd2d0hqZmRBdWp0MmhzWWptX1NQV2ZVYlF2Rk91UUpxV1hQMmNSQnVzZHZOaWNZVGdEaGc3UTRNYV9IU2dWcjJ6dWw5dm15R1dCeXNTMnBsa1pNTTdfSkYtOUFvVU9aMmR0cm1CLTl6Rm1iYmVFZXoxTElVTmhoOHgzNEVWOVU3SDAzcUQtOWdjbzQ?oc=5",
-        "source": "VELO",
-        "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
-        "title": "Maryland Cycling Classic stops for good with lack of funding preventing its return after years of turmoil",
-        "pubDate": "Mon, 23 Nov 2026 13:37:15 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/racing/maryland-cycling-classic-hits-the-buffers-with-lack-of-funding-preventing-its-return-after-years-of-turmoil/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Bizarre anti-doping outcome as banned Miguel Angel López inherits Tour of Austria victory from newly-banned Delio Fernández",
-        "pubDate": "Mon, 23 Nov 2026 11:04:05 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/doping/delio-fernandez-handed-four-year-ban-loses-tour-of-austria-title-over-biological-passport-violations/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Primož Roglič Has Much to Offer, but Only If He Truly Commits - Outside Magazine",
-        "pubDate": "Sun, 22 Nov 2026 18:56:48 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNbXBQb3ptQ2FJSnMyWnB6ZHNCQVUzQ2FUc2l2dHppbF9fc0oybXZvdGk0X0J1VjhYcC1DMnZzZXFFVWZ6bDBsWEEycHFsd1dsd1ZBSGFvVl9jRVJIX2swd0gtOTdSeC1DYm15dE0xMnFTRFZFNTNsQlBBN1B6Wjd5d2ZR?oc=5",
-        "source": "VELO",
-        "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
-        "title": "'One of my dreams to ride with him' – Lennert Van Eetvelt thrilled to link up with Primož Roglič aboard new team NSN",
-        "pubDate": "Sun, 22 Nov 2026 18:11:24 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/primoz-roglic-joining-nsn-is-very-good-for-me-lennert-van-eetvelt/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
-        "title": "'I'm quite close to winning a big race' - Quinn Simmons confirms he can keep departed Lidl-Trek director Stephen de Jongh as his coach for 2027",
-        "pubDate": "Sun, 22 Nov 2026 16:38:51 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/im-quite-close-to-winning-a-big-race-quinn-simmons-confirms-he-can-keep-departed-lidl-trek-director-stephen-de-jongh-as-his-coach-for-2027/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
       }
     ],
     "mtb": [
       {
-        "title": "Hampton Racing Products Launches range of UK made, super lightweight, pedal friendly chain devices. - Vital MTB",
-        "pubDate": "Wed, 25 Nov 2026 14:29:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQazJTNzl0SFNMNERoeG9xdE5uem02NGlGQ3VaMVZyOGswQzc4dzRoV1dfb1Q3MXZ0SUNuSjNsUk9mQU5yWS1vZmo1T1BmaVhGelRoeWZtU1pQUGc2SVd1X2x0QW1leHBuVEFRaWh0REE0bWY1RHNSVEFhdU00VGlVSjBTc1dlQnBXSEZaUkViNUM2aGFhOENxMlV2NGd4djI4MkpnbnYyOWFTZmpjelhTYV9qUlNMSUYyenFlWmg2M3dKSENtcFdJRjU0R1lkSEN4UjRr?oc=5",
+        "title": "2026 Mondraker Anark XR - Vital MTB",
+        "pubDate": "Thu, 26 Nov 2026 13:13:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBDUjlIcWZKUDFhTkJWQzNlU2hyUUxzQmlZUDJGY29BZ2VKU1lmajRRMXl5SEVpY3owNWN6cjdJS0E3NWZZdUFqWFFtSUFpSWs3cHItTkxYX1lLY3loaHBsSnltTkQwT3p2Z0I3OTNaZ0RobTA?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
       {
-        "title": "UNpaved VerTigo - Vital MTB",
-        "pubDate": "Wed, 25 Nov 2026 12:25:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBocGt3RG8zRVFsM3VxWXMxckZSbUFBTEZ6RlY4enBaTmZhS1h4UmlicTFUdy0zRGlRRWNDVWpmQnBOeC1Vem5SSDBxOTFZNGc3dmxUeE01NUhHYkpZMW9JZHRBNGRnTFFLQmpN?oc=5",
+        "title": "adidas x Pinkbike Line of the Year 2026: Winners Announced",
+        "pubDate": "Thu, 26 Nov 2026 00:00:00 PST",
+        "link": "https://www.pinkbike.com/news/adidas-x-pinkbike-line-of-the-year-2026-winners-announced.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Must Watch: Gee Atherton's 'Ridgeline VIII - Into Bolivia'",
+        "pubDate": "Thu, 26 Nov 2026 00:00:00 PST",
+        "link": "https://www.pinkbike.com/news/must-watch-gee-athertons-ridgeline-viii-into-bolivia.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Which of the Field Test Trail Bikes Do You Want to Ride?",
+        "pubDate": "Thu, 26 Nov 2026 00:00:00 PST",
+        "link": "https://www.pinkbike.com/news/which-of-the-field-test-trail-bikes-do-you-want-to-ride.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Hope Releases 10mm Gravity Stem With 35mm Stack",
+        "pubDate": "Thu, 26 Nov 2026 00:00:00 PST",
+        "link": "https://www.pinkbike.com/news/hope-releases-10mm-gravity-stem-with-35mm-stack.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Photo Story: The Crew Finds Out Just How Far They Are Willing to Go for Gee Atherton's 'Ridgeline VIII - Into Bolivia'",
+        "pubDate": "Thu, 26 Nov 2026 00:00:00 PST",
+        "link": "https://www.pinkbike.com/news/photo-story-gee-athertons-ridgeline-viii-into-bolivia.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Charlie Aldridge Reportedly Set to Experiment With Road Racing at UAE Team Emirates",
+        "pubDate": "Thu, 26 Nov 2026 00:00:00 PST",
+        "link": "https://www.pinkbike.com/news/charlie-aldridge-reportedly-set-to-experiment-with-road-racing-at-uae-team-emirates.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Video: Soren Farenholtz Tears Up Kamloops in 'Still Soarin''",
+        "pubDate": "Thu, 26 Nov 2026 00:00:00 PST",
+        "link": "https://www.pinkbike.com/news/still-soarin-featuring-soren-farenholtz.html?trk=rss",
+        "source": "Pinkbike",
+        "sourceUrl": ""
+      },
+      {
+        "title": "Hampton Racing Products Launches range of UK made, super lightweight, pedal friendly chain devices. - Vital MTB",
+        "pubDate": "Wed, 25 Nov 2026 14:29:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQazJTNzl0SFNMNERoeG9xdE5uem02NGlGQ3VaMVZyOGswQzc4dzRoV1dfb1Q3MXZ0SUNuSjNsUk9mQU5yWS1vZmo1T1BmaVhGelRoeWZtU1pQUGc2SVd1X2x0QW1leHBuVEFRaWh0REE0bWY1RHNSVEFhdU00VGlVSjBTc1dlQnBXSEZaUkViNUM2aGFhOENxMlV2NGd4djI4MkpnbnYyOWFTZmpjelhTYV9qUlNMSUYyenFlWmg2M3dKSENtcFdJRjU0R1lkSEN4UjRr?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
@@ -512,6 +561,13 @@
         "sourceUrl": "https://www.uci.org"
       },
       {
+        "title": "Yeti SB160 - Vital MTB",
+        "pubDate": "Tue, 24 Nov 2026 18:01:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBsYkhxeDRFTzZ3YTc4N1hVa1NpZTBXaE9aVjJXSEpjZzA3LTIzRU5zWm5fM2N3N3pLMUl1YUdKZXo1dnlXYmRtX1B3UFlIWGFxVDE1dXIzdTUyVlhfVDN5X1pn?oc=5",
+        "source": "Vital MTB",
+        "sourceUrl": "https://www.vitalmtb.com"
+      },
+      {
         "title": "Natasha Bradley Shares Another Angle of Her 60 Foot Canyon Gap Crash &amp; Injury Update",
         "pubDate": "Tue, 24 Nov 2026 00:00:00 PST",
         "link": "https://www.pinkbike.com/news/natasha-bradley-shares-another-angle-of-her-60-foot-canyon-gap-crash-and-injury-update.html?trk=rss",
@@ -536,55 +592,6 @@
         "title": "Scott Built a Custom Step-Through Electric Hardtail for Pope Leo XIV",
         "pubDate": "Tue, 24 Nov 2026 00:00:00 PST",
         "link": "https://www.pinkbike.com/news/the-new-popemobile-scott-built-a-custom-step-through-electric-hardtail-for-pope-leo-xiv.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Video: No Spot is Safe in Christian Rigal’s 'Modifying America'",
-        "pubDate": "Tue, 24 Nov 2026 00:00:00 PST",
-        "link": "https://www.pinkbike.com/news/video-christian-rigal-in-modifying-america.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Circuit Board Shortages Could Cause Component Delays For The Bike Industry",
-        "pubDate": "Tue, 24 Nov 2026 00:00:00 PST",
-        "link": "https://www.pinkbike.com/news/shimano-says-circuit-board-shortage-will-cause-delays.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
-        "title": "You Don't Need to Spin at 90 RPM. That's a '90s Myth.",
-        "pubDate": "Tue, 24 Nov 2026 00:00:00 PST",
-        "link": "https://www.pinkbike.com/news/you-dont-need-to-spin-at-90-rpm-thats-a-90s-myth.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Must Watch: Matt MacDuff Goes Huge in 'Big Air Forever'",
-        "pubDate": "Mon, 23 Nov 2026 00:00:00 PST",
-        "link": "https://www.pinkbike.com/news/video-matt-macduff-goes-huge-in-big-air-forever.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Review: The Revel Ranger V3 Shines on Techy Climbs",
-        "pubDate": "Mon, 23 Nov 2026 00:00:00 PST",
-        "link": "https://www.pinkbike.com/news/review-revel-ranger-v3-field-test.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Lapierre &amp; Raleigh Reportedly Acquired by Former Pro Cyclist's Investment Firm",
-        "pubDate": "Mon, 23 Nov 2026 00:00:00 PST",
-        "link": "https://www.pinkbike.com/news/lapierre-and-raleigh-reportedly-acquired-by-former-pro-cyclists-investment-firm.html?trk=rss",
-        "source": "Pinkbike",
-        "sourceUrl": ""
-      },
-      {
-        "title": "Round Up: 10 Bike Industry Jobs Available Right Now",
-        "pubDate": "Mon, 23 Nov 2026 00:00:00 PST",
-        "link": "https://www.pinkbike.com/news/round-up-10-bike-industry-jobs-available-right-now.html?trk=rss",
         "source": "Pinkbike",
         "sourceUrl": ""
       },
@@ -634,7 +641,7 @@
       {
         "title": "Face Off: The Best MTB Clipless Pedals Tested - Vital MTB",
         "pubDate": "Fri, 20 Nov 2026 17:14:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1MLThxYjl2bVdQQ0RJNVBzUFNKemFTalo5NW0tVl9KeFpSV20yd2VvYmd2SFBweU9tUEJCZFVkMk9LNExRdFFFaTQ5TEk2ZlJoQlVpRlN5bElTSDZmcENnaVNwOU9POVdqMUlETVdxa3hXLWFUM0pBcllB?oc=5",
+        "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9MejB3bWFsNmxWSUVTM1EtUzQ5MVdOaXc3ZUxKRVg4eFlzX0M3US1kTEo1YXZBSGpjRUx6NmJWRC1udzRSSDBRVHRBeEx0UmhCYmdzYnZvNHk3aUVOcHZzZ0MxM0JRc1g4b21rcERKNkoyZEdfRlV3?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       },
@@ -647,26 +654,33 @@
       },
       {
         "title": "Mountain Bike Parts - Vital MTB",
-        "pubDate": "Thu, 19 Nov 2026 16:06:06 GMT",
-        "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQWjFWdFdBeFA5Tjg1U0pLNkU5YWJNVGhCbHlBOV9rR2tBTW9CM3c2X2diMXRTZFIwZE1nTVJSblJxSEEySktia0ZnVWVreUdwTXo5YUFHaXpad0xyX3pqRHBZMkpIQW9JcVd0bkhaYUpSUkFFSVl1WEJDUGNyS2VwNld6OGxoMFFFU2w1SWJTc1VSNnJ5RFk3WVJ0UzFuRVRnWU1USDBfNmlVbmctS0VfdUhWMHNjdEJtdmJRTVZ2aGd2cllPbjBjNXpOV1QxcDBBaHdwYXNBQ3g?oc=5",
+        "pubDate": "Fri, 20 Nov 2026 03:25:31 GMT",
+        "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNZ3VrRUNsazROVGw3OU9naDNCZS1iNkFiSVBDWmZLVmRjQzF4eUVCWHYyTXJQc2g4QVpJNlZFQ2U0Q1VKSGdxVDFEU25IWUJUaWI1SUd3cjBESnJUMGF5eUM5ampXVlNTNklLcUxTd0ppLVpjaENtcF9MVFhoSThuMXlESTZ4MVhGanRRQ1RKQ3d4Uk9xa1RxbzNTUjU1T2ZmOTFqRjBsOG5Wb2NTZ0ROYWtOQ25Qa2FLRlp4Vjd4LWV0NXVyeE5QVHNPVnRRVEdR?oc=5",
         "source": "Vital MTB",
         "sourceUrl": "https://www.vitalmtb.com"
       }
     ],
     "cyclocross": [
       {
+        "title": "'When you see an opportunity, you have to act quickly' – Thibau Nys and Lucinda Brand's cyclo-cross team find new sponsorship from 2027 onwards",
+        "pubDate": "Thu, 26 Nov 2026 16:01:01 +0000",
+        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/when-you-see-an-opportunity-you-have-to-act-quickly-thibau-nys-and-lucinda-brands-cyclo-cross-team-find-new-sponsorship-from-2027-onwards/",
+        "source": "Cyclingnews",
+        "sourceUrl": ""
+      },
+      {
+        "title": "What is cyclo-cross? - UCI.ORG",
+        "pubDate": "Thu, 26 Nov 2026 14:03:39 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1jVUtQNGpWbzZmRDJ5ci1sZ2FuS2VTNVdyd1VJcmNEZ2FZekxwUk82THlMbG1LU0Q1SHJRRnJpaWN5N1dVSXhvNHNwU01Udk9PRG9KS19scHRfZlFiTE9rSDh6OGl5UThENHpHR2U0UnVkdzBRekFxVnZn?oc=5",
+        "source": "UCI",
+        "sourceUrl": "https://www.uci.org"
+      },
+      {
         "title": "Belgian cyclocross faces another fierce selection battle as Tim Merlier targets home World Championships",
         "pubDate": "Thu, 26 Nov 2026 01:00:00 +0100",
         "link": "https://cyclinguptodate.com/cyclocross/belgian-cyclocross-faces-another-fierce-selection-battle-as-tim-merlier-targets-home-world-championships",
         "source": "CyclingUpToDate",
         "sourceUrl": ""
-      },
-      {
-        "title": "2026-2027 UCI Cyclo-cross World Cup: intense action from Ostrava to Hoogerheide - UCI.ORG",
-        "pubDate": "Tue, 24 Nov 2026 19:42:23 GMT",
-        "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPYU50clBTdC1YT3E5cGRURU1LY0hORTluaEZQQXRVLVV2aEg1ZmtSTmpxSlBEVVA5c2JjT2FNRkdibVluRlhKVU43aFhjUWZsTXB5YkJmNDd4WFVhSEE3cGlBbjhabDRBWXY5bDdzOXE4SFFxZ0REM3ZZNzBRb1YxRU5wVlBEMjlVdGlrbU1PblBNUXB5TGJSVXFvenk5R282ZHJZMDJrQW9pZUxmOWdwNjZ4OWZVdE1taEJ6Q2NTcTdZbldZVUVz?oc=5",
-        "source": "UCI",
-        "sourceUrl": "https://www.uci.org"
       },
       {
         "title": "\"I would rather have broken both legs\" - Pim Ronhaar takes a break from cyclocross amidst lingering health problems",
@@ -690,13 +704,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "Sara Casasola admits she was \"lucky\" as Lucinda Brand's costly mistake changes everything in Beringen",
-        "pubDate": "Mon, 23 Nov 2026 01:00:00 +0100",
-        "link": "https://cyclinguptodate.com/cyclocross/sara-casasola-admits-she-was-lucky-as-lucinda-brands-costly-mistake-changes-everything-in-beringen",
-        "source": "CyclingUpToDate",
-        "sourceUrl": ""
-      },
-      {
         "title": "X2O Badkamers Trofee BE-Mine Cross 2026 Results – Beringen, Belgium – Elite Women, Elite Men",
         "pubDate": "Sun, 22 Nov 2026 16:44:09 +0000",
         "link": "https://www.cxmagazine.com/x2o-badkamers-trofee-be-mine-cross-2026-results-beringen?utm_source=rss&utm_medium=rss&utm_campaign=x2o-badkamers-trofee-be-mine-cross-2026-results-beringen",
@@ -707,6 +714,13 @@
         "title": "Results Swiss Cyclocross Cup #4 - Radquer Hittnau 2026 - Women Elite - Cyclocross24.com",
         "pubDate": "Sun, 22 Nov 2026 08:00:00 GMT",
         "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBnU003cWFIWF83dG1ENmhTSHFoekNSeU9RT0hpdzBjVUljRTVVYVFldDlybzJqSE8zMW5NbEwxLWttMTNsZnMzblI2N1k?oc=5",
+        "source": "Cyclocross24",
+        "sourceUrl": "https://cyclocross24.com"
+      },
+      {
+        "title": "Results X2O Trofee Beringen - be-MINE Cross 2026 - Men U23 - Cyclocross24.com",
+        "pubDate": "Sun, 22 Nov 2026 08:00:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBxdHdBMmFFeHBkYTgyTGFCaXM2TlViYmx6UzBNU25HMkkxdkU1eGVDWFUyRjlWTmRQMlJUOHRHdWo1ZjNLdUJNdzNlWlY?oc=5",
         "source": "Cyclocross24",
         "sourceUrl": "https://cyclocross24.com"
       },
@@ -725,13 +739,6 @@
         "sourceUrl": ""
       },
       {
-        "title": "'It has a star next to it on my calendar' - Cameron Mason is first rider announced for Glasgow Cyclo-cross World Cup",
-        "pubDate": "Sat, 21 Nov 2026 18:24:15 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/teams-riders/it-has-a-star-next-to-it-on-my-calendar-cameron-mason-is-first-rider-announced-for-glasgow-cyclo-cross-world-cup/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
-      },
-      {
         "title": "Results NoLimited Cup #5 - Samorín 2026 - Women Elite - Cyclocross24.com",
         "pubDate": "Sat, 21 Nov 2026 13:55:36 GMT",
         "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9vOVJJSF9LR1BvamdzMzFkVHlTRS1mUDdrS0dhRmJBQW4tZGkzWkRQdGw4NThtX1hmSmlHQmxlMlBaMTA1WWlXSkFtOTU?oc=5",
@@ -746,18 +753,18 @@
         "sourceUrl": ""
       },
       {
-        "title": "Shirin van Anrooij to make cyclo-cross debut with Canyon-SRAM alongside Zoe Backstedt next week",
-        "pubDate": "Fri, 20 Nov 2026 16:54:56 +0000",
-        "link": "https://www.cyclingnews.com/pro-cycling/womens-cycling/shirin-van-anrooij-to-make-cyclo-cross-debut-with-canyon-sram-alongside-zoe-backstedt-next-week/",
-        "source": "Cyclingnews",
-        "sourceUrl": ""
+        "title": "Results HG Cross Lokeren - Rapencross 2026 - Women Elite - Cyclocross24.com",
+        "pubDate": "Sat, 21 Nov 2026 08:00:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFB1VmFJOUUxdWZFWTlnY3FiODdwY0ZuTXBQZHBSZlpoWFBJMzZURlMyQTNnY2I3OW9VMDBSTjJEbDZlVUdDQVEyU1dWYm0?oc=5",
+        "source": "Cyclocross24",
+        "sourceUrl": "https://cyclocross24.com"
       },
       {
-        "title": "Throwback Thursday: Eddy Merckx Titane Vintage Titanium Cyclocross Bike",
-        "pubDate": "Thu, 19 Nov 2026 13:00:58 +0000",
-        "link": "https://www.cxmagazine.com/eddy-merckx-titane-vintage-titanium-cyclocross-bike?utm_source=rss&utm_medium=rss&utm_campaign=eddy-merckx-titane-vintage-titanium-cyclocross-bike",
-        "source": "Cyclocross Magazine",
-        "sourceUrl": ""
+        "title": "Results North Carolina Grand Prix - Day 1 2026 - Women Elite - Cyclocross24.com",
+        "pubDate": "Sat, 21 Nov 2026 08:00:00 GMT",
+        "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1ON2kwc0lpa1haSmdzQ2RKZnRTMk44Vk5JMUJJaDgyeXlkbjV5T1laNzhIT2M3Qy03VGFfYWc0ZXp5azVOLVlnMldPaDA?oc=5",
+        "source": "Cyclocross24",
+        "sourceUrl": "https://cyclocross24.com"
       }
     ],
     "gravel": [
@@ -809,13 +816,6 @@
         "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQcl9lYzRSTDRqdG9DRnJyM2RhTVF4cXYzRmJSaHJGbzVmM3Rva014SkRnVGFXcFNmR043TlBVNnBSTkx1Y29fSGZCczlOV0VtMW5iSUM0cHMyMHk2TGZwb3B2ak5iWXZ0NFpBbWhfQ01UaEVzZ0dPa1U0X094RDI2VU9DbmcyR3ZN?oc=5",
         "source": "VELO",
         "sourceUrl": "https://velo.outsideonline.com"
-      },
-      {
-        "title": "Polygon's Tambora gravel bike gets all the modcons without the high price - Cycling Weekly",
-        "pubDate": "Thu, 19 Nov 2026 15:00:00 GMT",
-        "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxPZzlNNVJpUUZxYTEza3JRbXUwakJfclBkd2tnU3dOenBKZV9JT0Q5aVZWbXFDMUp2ek55amZKM24xdzZJTHdtODBXdDJvUmJkT0h5aHNiSnhNYUN6NHVSbFM4N1ZzbTd1M3VNelVpRFM0YUN4Y05CY3pfZi02TUUtT3B5dElGYVdPRjFIazBGME1nLW5HUWJFckg2Qi1rOUYyQV9GWDl2elBTMWNQWXpNQTAyMFlpRkRpTkZYWTlUUG40d3lmNnZrNTlEZ2Q1S3ljOWZsdTc1dHd4R2w2WGlYc2NSUTgxZzR5THlnZkUzTjJGUEFFVzNZNm1DeXB6NWdYdGc?oc=5",
-        "source": "Cycling Weekly",
-        "sourceUrl": "https://www.cyclingweekly.com"
       }
     ]
   }
